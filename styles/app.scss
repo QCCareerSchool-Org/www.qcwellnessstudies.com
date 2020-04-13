@@ -1,0 +1,89 @@
+@import '~bootstrap';
+
+h1,.h1{font-size:2.5rem}
+h2,.h2{font-size:2rem}
+main{margin-top:59px;min-height: 500px}
+.no-nav main{margin-top:0}
+section{padding:48px 0}
+.subNav section:first-of-type{padding-top:105px}
+#footer{padding:48px 0 96px;font-size:14px;color:#ccc}
+#footer strong{font-weight:700}
+#footer a:link,#footer a:visited{color:#ccc}
+#footer hr{border-color:#6b6b6b;margin:48px 0 24px}
+#mainNav.fixed-top{z-index:1040}
+#mainNav .nav-link, #mainNav .btn{text-transform:uppercase;font-size:14px!important}
+#pageNav .nav-link, #pageNav .btn{text-transform:uppercase;font-size:14px!important}
+#pageNav .navbar-brand{font-size:14px;font-weight:400;text-transform:uppercase}
+#pageNav{top:60px}
+@media (min-width: 576px) {
+  #pageNav{top:64px}
+}
+.header-logo{height:32px}
+#header-logo{display:inline}
+#header-logo-md{display:none}
+#footer-logo{width:100%;max-width:100px}
+td{vertical-align:top}
+.container > p:last-child, .container > ul:last-child, .container > ol:last-child,
+.col > p:last-child, .col > ul:last-child, .col > ol:last-child,
+.col-1 > p:last-child, .col-1 > ul:last-child, .col-1 > ol:last-child,
+.col-2 > p:last-child, .col-2 > ul:last-child, .col-2 > ol:last-child,
+.col-3 > p:last-child, .col-3 > ul:last-child, .col-3 > ol:last-child,
+.col-4 > p:last-child, .col-4 > ul:last-child, .col-4 > ol:last-child,
+.col-5 > p:last-child, .col-5 > ul:last-child, .col-5 > ol:last-child,
+.col-6 > p:last-child, .col-6 > ul:last-child, .col-6 > ol:last-child,
+.col-7 > p:last-child, .col-7 > ul:last-child, .col-7 > ol:last-child,
+.col-8 > p:last-child, .col-8 > ul:last-child, .col-8 > ol:last-child,
+.col-9 > p:last-child, .col-9 > ul:last-child, .col-9 > ol:last-child,
+.col-10 > p:last-child, .col-10 > ul:last-child, .col-10 > ol:last-child,
+.col-11 > p:last-child, .col-11 > ul:last-child, .col-11 > ol:last-child,
+.col-12 > p:last-child, .col-12 > ul:last-child, .col-12 > ol:last-child{margin-bottom:0}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-weight:400}
+
+.price{font-size:48px;line-height:48px;font-family:Lato}
+
+.anchor{display:block;position:relative;top:-60px;visibility: hidden}
+.subNav .anchor{top:-116px}
+
+#navbarCollapse.collapsing,#navbarCollapse.show{padding-top:1rem;padding-bottom:1rem}
+#navbarCollapse.collapsing li,#navbarCollapse.show li{padding-bottom:0.5rem}
+#navbarCollapse.collapsing .btn,#navbarCollapse.show .btn{margin-top:0.5rem}
+
+/* sm */
+@media (min-width: 576px) {
+  main{margin-top:63px}
+  .no-nav main{margin-top:0}
+  .header-logo{height:38px}
+  .anchor{top:-64px}
+  .subNav .anchor{top:-120px}
+}
+
+/* md */
+@media (min-width: 768px) {
+  section{padding:52px 0}
+  .subNav section:first-of-type{padding-top:105px}
+  #navList{margin-right:1rem;}
+  .navbar-nav .nav-link{padding-left:1.5rem!important;padding-right:1.5rem!important}
+  #header-logo{display:none}
+  #header-logo-md{display:inline}
+
+  #navbarCollapse.collapsing,#navbarCollapse.show{padding-top:0;padding-bottom:0}
+  #navbarCollapse.collapsing li,#navbarCollapse.show li{padding-bottom:0}
+  #navbarCollapse.collapsing .btn,#navbarCollapse.show .btn{margin-top:0}
+
+}
+
+/* lg */
+@media (min-width: 992px) {
+  h1,.h1{font-size:3.75rem;font-weight:400}
+  h2,.h2{font-size:2.75rem}
+  section{padding:58px 0}
+  .subNav section:first-of-type{padding-top:101px}
+  #navList{margin-right:2rem;}
+  .navbar-nav .nav-link{padding-left:2rem!important;padding-right:2rem!important}
+  #header-logo{display:inline}
+  #header-logo-md{display:none}
+}
+
+/* xl */
+@media (min-width: 1200px) {
+}
