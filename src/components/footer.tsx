@@ -8,7 +8,7 @@ export const Footer: React.FC = () => (
     <div className="container">
       <div className="row text-center text-lg-left">
         <div className="col-12 col-lg-3 text-center pb-5 pb-lg-0">
-          <img id="footer-logo" src="/images/logo-footer.svg" alt="QC Wellness Studies" />
+          <img id="footer-logo" src={require('../images/logo-footer.svg')} alt="QC Wellness Studies" />
         </div>
         <div className="col-12 col-md-4 col-lg-3 mb-4 mb-md-0">
           <p className="text-light"><strong>AVAILABLE CERTIFICATIONS:</strong></p>

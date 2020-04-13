@@ -1,5 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/js/bootstrap.bundle';
 
 import '../styles/app.scss';
 import { ScreenWidthProvider } from '../providers/screen-width';
