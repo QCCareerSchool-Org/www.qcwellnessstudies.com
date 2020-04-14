@@ -489,9 +489,9 @@ const Page: React.FC = () => {
       </section>
 
       <style jsx>{`
-        #heroSection{color:white;background-color:#449;background-image:url(${require('../../images/top-image-sleep.jpg')});background-size:cover;background-position:center;}
+        #heroSection{color:white;background-color:#449;background-image:url(${require('../../images/sl-hero.jpg')});background-size:cover;background-position:center;}
         #certificationSection{background-image:url(${require('../../images/bg-dark-green-navy.jpg')});background-size:cover}
-        #requirementsSection{background-image:url(${require('../../images/basic-requirements-bg-2.jpg')});background-size:cover}
+        #requirementsSection{background-image:url(${require('../../images/sl-requirements.jpg')});background-size:cover}
         #paymentPlansSection{background-image:url(${require('../../images/bg-white-green-light.jpg')});background-size:cover}
         #includedSection{background-image:url(${require('../../images/bg-white-green-light.jpg')});background-size:cover}
         #enrollSection{background-image:url(${require('../../images/bg-enrollment.jpg')});background-size:cover}
