@@ -140,3 +140,10 @@ export function nl2br(str?: string | null, xhtml?: boolean) {
 export function needsProvince(countryCode: string): boolean {
   return [ 'CA', 'US', 'AU' ].includes(countryCode);
 }
+
+export const formatPrice = (value?: number, precision: number = 2): string => {
+  if (typeof value === 'undefined') {
+    return '';
+  }
+  return Math.round(value) === value ? value.toString() : value.toFixed(precision);
+};

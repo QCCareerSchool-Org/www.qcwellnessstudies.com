@@ -21,9 +21,9 @@ export const Header: React.FC = () => {
             </a>
           </Link>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto mr-md-3 mr-lg-4">
+        <Navbar.Toggle aria-controls="main-navbar-nav" />
+        <Navbar.Collapse id="main-navbar-nav">
+          <Nav className="ml-auto mr-md-2 mr-lg-4">
             <NavDropdown title="Courses &amp; Tuition" id="coursesDropdown">
               <Link href="/courses-and-tuition/"><a className="dropdown-item">All Courses &amp; Tuition</a></Link>
               <NavDropdown.Divider />

@@ -98,7 +98,7 @@ const Page: React.FC = () => (
 
     <style jsx>{`
       #heroSection{background-image:url(${require('../../images/bg-white-green-light.jpg')});background-size:cover}
-      #enrollSection{background-image:url(${require('../../images/enrollment-bg.jpg')});background-size:cover}
+      #enrollSection{background-image:url(${require('../../images/bg-enrollment.jpg')});background-size:cover}
     `}</style>
   </DefaultLayout>
 );

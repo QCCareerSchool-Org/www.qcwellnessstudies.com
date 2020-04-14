@@ -1,37 +1,278 @@
 import React from 'react';
-import { IoMdBook, IoMdDocument, IoMdPeople, IoMdTimer, IoMdSchool } from 'react-icons/io';
 
 import { DefaultLayout } from '../../layouts/default';
-import { usePrice } from '../../hooks/usePrice';
-import { useLocation } from '../../providers/location';
-
-const SecondaryNav: React.FC = () => (
-  <nav id="pageNav" className="navbar navbar-expand-md navbar-light bg-light fixed-top shadow">
-    <a className="navbar-brand" href="#">Infant Sleep Consultant Course</a>
-    <button className="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#pageNavbarCollapse" aria-controls="pageNavbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="pageNavbarCollapse">
-      <ul className="navbar-nav ml-auto">
-        <li className="nav-item">
-          <a className="nav-link" href="#paymentPlans">Tuition</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#outline">Course Outline</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#tutors">Tutors</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-);
+import { Subnav } from '../../components/subnav';
+import { WhyChoose } from '../../components/why-chose';
+import { OutlineData, UnitOutline } from '../../components/unit-outline';
+import { PaymentPlans } from '../../components/payment-plans';
+import { Included } from '../../components/included';
+import { Guarantee } from '../../components/guarantee';
+import { Certification } from '../../components/certification';
 
 const Page: React.FC = () => {
-  const location = useLocation();
-  const price = usePrice(['sl'], location?.countryCode, location?.provinceCode);
+  const doubleGuarantee = true;
+  const units: { [key: string]: OutlineData[] } = {
+    a: [
+      {
+        title: 'Introduction to sleep consulting',
+        topics: [
+          'Industry history',
+          'Roles and responsibilities',
+          'Required skills',
+          'Communication skills',
+          'Planning & organizing',
+          'Common misconceptions about sleep consulting',
+          {
+            title: 'Becoming a sleep consultant:',
+            topics: [
+              'Licensing requirements',
+              'Business needs',
+              'Expansion opportunities',
+              'Additional certifications to consider'
+            ]
+          },
+          'Sleep consulting services',
+          'Associations & organizations'
+        ]
+      },
+      {
+        title: 'Infant & toddler sleep habits & behaviors',
+        topics: [
+          'Human brain development',
+          'Habit and behavior formulation',
+          'Changing behavior through habits',
+          'Common myths about behaviors and habits',
+          'Fostering healthy habits',
+          'Understanding age groups',
+          'Development of the child in each age group',
+          'Types of sleep',
+          'Ideal sleep schedules for infants',
+          'Understanding the effects of sleep',
+          'A holistic vision of sleep habits and behaviors'
+        ]
+      },
+      {
+        title: 'Sleep training methods & philosophies',
+        topics: [
+          'How sleep training works',
+          'Key methods and their development',
+          'Statistics on different method types',
+          'The "cry it out" / "Extinction" method',
+          'The "Check and Console" / "Ferber" method',
+          'The "Chair" method',
+          'The "Fading" method',
+          'The "Pick Up Put Down" method',
+          'The "No cry" method(s)'
+        ]
+      },
+      {
+        title: 'Sleep spaces',
+        topics: [
+          'Co-sleeping: from healthy co-sleeping for newborns to sleep training after co-sleeping',
+          'Creating a quiet and peaceful environment for sleep',
+          'White noise generators',
+          'Using other ambient noises',
+          'Sleep training alarm clocks',
+          'Night light pros and cons',
+          'Daylight simulation',
+          'Essential oils and diffusers for infants: calming scents, oils to avoid, and safety tips',
+          'Creating the perfect room for sleep: From nursery décor to choosing the right crib/bed',
+          'The home environment: beyond the nursery',
+          'Starting & following a sleep routine',
+          'Changing & modifying a routine'
+        ]
+      }
+    ],
+    b: [
+      {
+        title: 'Individualized sleep plans',
+        topics: [
+          'Using your intake survey to build a sleep plan',
+          'Key questions to ask during an interview',
+          'Identifying client needs',
+          'Creating a sleep plan',
+          'Fostering healthy habits',
+          'Key components of every sleep plan',
+          'Development of the child in each age group',
+          'Tracking a sleep plan',
+          'Components of an effective sleep log',
+          'Evaluating a sleep plan based on feedback from the caregiver',
+          'Revising a sleep plan once it\'s been implemented'
+        ]
+      },
+      {
+        title: 'Implementation of sleep training',
+        topics: [
+          'Program considerations for each age group (from newborns to toddlers)',
+          'Types of client plans, from "skeleton plans" to "premium plans", upgrades, follow-ups, and how to offer discounts',
+          'Creating templates for different sleep consulting methods',
+          'Creating templates to match common parental needs',
+          'Using accessible terminology to communicate your sleep plan',
+          'Identifying appropriate methods in every situation',
+          'Using questionnaires and surveys to determine client needs',
+          'Identifying client concerns during intake',
+          'Materials to provide clients at the start of a sleep plan',
+          'Providing feedback during the first days of the plan',
+          'Creating and reviewing sleep logs',
+          'Conducting a follow-up to sleep training'
+        ]
+      },
+      {
+        title: 'Special situations',
+        topics: [
+          'How to prepare for different families',
+          'Sleep training multiple infants of the same age ',
+          'Training one infant that is a twin or triplet',
+          'Sleep training multiple infants of different ages',
+          'Training one infant that has a sibling in the house',
+          'How physical disabilities can affect sleep ',
+          'Working with parents and medical professionals ',
+          'Understanding limitations for infants with disabilities',
+          'How different mental conditions affect sleep ',
+          'Sleep training methods for infants with special needs',
+          'Understanding limitations for infants with special needs',
+          'Understanding different medical issues and how it might affect sleep',
+          'Working with infants who have diagnosed medical issues',
+          'Creating effective solutions for a single caregiver using a dual parent model',
+          'Adapting sleep training plans for one caregiver',
+          'Adapting sleep training plans for single parent households with multiple children',
+          'Working with multiple non-parent caregivers'
+        ]
+      }
+    ],
+    c: [
+      {
+        title: 'Troubleshooting',
+        topics: [
+          'Case Study: Parental conflict',
+          'Case Study: Baby isn\'t responding ',
+          'Case Study: Rejection of methods by parents',
+          'Case Study: Lifestyle changes',
+          'Cast Study: Other medical issues',
+          'Case Study: Competition '
+        ]
+      },
+      {
+        title: 'Getting to know your clients',
+        topics: [
+          'Initial outreach: When you contact a client and when a client contacts you',
+          'Onboarding clients',
+          'Conducting client consultations',
+          'Client intake',
+          'Fostering healthy habits',
+          'Client follow-up',
+          'Development of the child in each age group',
+          'Tracking and analysis: tools, templates, and how to use client data',
+          'Ideal sleep schedules for infants',
+          'Client feedback: Getting and using honest feedback from clients'
+        ]
+      },
+      {
+        title: 'Effective consulting',
+        topics: [
+          'How to coach effectively',
+          'Working with caregivers: Giving caregivers the tools to help their own children',
+          'Communication skills: Listening',
+          'Communication skills: Delivering your message',
+          'Patience and support: Positive feedback, reinforcement, and understanding',
+          'Understanding age groups',
+          'Development of the child in each age group',
+          'Planning, setting goals, and creating strategies',
+          'Implementing feedback to encourage growth & change behavior',
+          'Working with limitations (your own and your clients\')'
+        ]
+      }
+    ],
+    d: [
+      {
+        title: 'Launching your business',
+        topics: [
+          {
+            title: 'Creating a business model',
+            topics: [
+              'Identifying the services you will provide',
+              'Identifying the core values of your business',
+              'Naming your business',
+              'Creating a business plan',
+            ]
+          },
+          'Assessing needs in your community: Needs, competition, and gaps in the market',
+          'Defining your methods and plans',
+          'Setting your prices, packages, and now to incentivize returning customers or customer referrals',
+          {
+            title: 'Setting up business infrastructure',
+            topics: [
+              'Creating your website',
+              'Your social media presence',
+              'Traditional print resources (books, pamphlets, etc.)',
+              'Setting up your business space',
+              'Creating materials'
+            ]
+          },
+          'Setting limits: Minimum/maximum number of clients, outlining your budget and expected income',
+          'Creating realistic business goals',
+
+        ]
+      },
+      {
+        title: 'Licensing, restrictions & legal aspects',
+        topics: [
+          'Ethical considerations & legal obligations of reporting suspected abuse',
+          'Certification requirements & service restrictions',
+          'Professional associations & organizations',
+          'Client contracts & other legal documents',
+          'Insurance considerations',
+          'Health care training: CPR, first aid, and other certifications to consider'
+        ]
+
+      },
+      {
+        title: 'Marketing your business',
+        topics: [
+          'Branding: Creating an effective brand, personalizing your brand, and using your brand to sell your business',
+          {
+            title: 'Finding clients',
+            topics: [
+              'How clients find you (Print/Web/Social Media)',
+              'How to advertise your services',
+              'How to find clients (online and in person)',
+            ]
+          },
+          {
+            title: 'Tips for advertising',
+            topics: [
+              'Learning your clientele',
+              'Where to advertise',
+              'Effective advertising for small businesses',
+              'Advertising budgets',
+            ]
+          },
+          {
+            title: 'Your website and social media presence',
+            topics: [
+              'How to build an effective website',
+              'How to start a business using social media',
+              'Keys to an effective online presence',
+            ]
+          },
+          'Community outreach: Community events, groups, and online groups and events',
+          'Partnering: Identifying key partners, developing relationships with local businesses, and creating joint advertising with other small businesses'
+        ]
+      }
+    ],
+  };
+
   return (
-    <DefaultLayout SecondaryNav={SecondaryNav}>
+    <DefaultLayout SecondaryNav={() => (
+      <Subnav
+        heading="Infant Sleep Consultant Course"
+        items={[
+          { name: 'Tuition', url: '#paymentPlans' },
+          { name: 'Course Outline', url: '#outline' },
+          { name: 'Tutors', url: '#tutors' },
+        ]}
+      />
+    )}>
 
       <section id="heroSection">
         <div className="container">
@@ -50,67 +291,9 @@ const Page: React.FC = () => {
         </div>
       </section>
 
-      <div className="modal fade" id="exampleModalCenter" tabIndex={-1} role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title text-center text-dark" id="exampleModalCenterTitle">Double Money-Back Guarantee!</h5>
-              <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
-            <div className="modal-body px-4">
-              <div className="row text-center">
-                <div className="col-12 col-md-6">
-                  <p><img src="/images/21-day-guarentee.svg" alt="21 day guarantee" /></p>
-                  <h3 className="text-dark">21-Day Guarantee</h3>
-                  <p>Once your enrollment has been processed, you have 21 days to review the course materials and decide whether you want to take the course. If you decide this course isn't the right course for you, simply contact the school for a refund! As long as you haven't submitted any work to your tutor yet, your tuition will be refunded in full!</p>
-                </div>
-                <div className="col-12 col-md-6">
-                  <p><img src="/images/1-year-guarentee.svg" alt="1 year guarantee" /></p>
-                  <h3 className="text-dark">1-Year Guarantee</h3>
-                  <p>You'll succeed in your new career, and that's a promise! If you don't earn the equivalent of your tuition within one year after graduating from the sleep consultant course, you'll be eligible for a full refund of your tuition. Simply contact the school, and provide proof that you've made a reasonable effort to gain clients.</p>
-                </div>
-              </div>
-            </div>
-            <div className="modal-footer">
-              <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 col-lg-4 text-center text-lg-left mb-4 mb-lg-0">
-              <h2 className="text-dark">Tuition &amp;<br />Payment Plans</h2>
-              <p className="text-dark">Includes everything you need to get certified!<br />All prices are in {price?.currency.name}</p>
-              <button type="button" className="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter">Double Money-Back Guarantee!</button>
-            </div>
-            <div className="col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-4 mb-4 mb-lg-0">
-              <div className="card shadow text-center">
-                <div className="card-body">
-                  <p className="card-text">PAY IN FULL</p>
-                  <p className="small text-muted mb-0"><del>{price?.currency.symbol}{price?.discountedCost}</del></p>
-                  <p className="card-text price text-dark"><small>{price?.currency.symbol}</small>{price?.plans.full.total}</p>
-                  <p className="card-text"><a href="https://enroll.qcwellnessstudies.com/?c[]=sl" className="btn btn-secondary">ENROLL NOW</a></p>
-                  <p className="card-text"><strong><mark>SAVE {price?.currency.symbol}{price?.plans.full.discount}</mark></strong><br />when you pay in full.</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-4">
-              <div className="card shadow text-center">
-                <div className="card-body">
-                  <p className="card-text">INSTALLMENT PLAN</p>
-                  <p className="small text-muted mb-0">&nbsp;</p>
-                  <p className="card-text price text-dark"><small>{price?.currency.symbol}</small>{price?.plans.part.installmentSize} <small className="text-muted">/ mo</small></p>
-                  <p className="card-text"><a href="https://enroll.qcwellnessstudies.com/?c[]=sl" className="btn btn-secondary">ENROLL NOW</a></p>
-                  <p className="card-text"><strong>Deposit of {price?.currency.symbol}{price?.plans.part.deposit}</strong><br />then {price?.plans.part.installments} monthly payments of {price?.currency.symbol}{price?.plans.part.installmentSize}.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <PaymentPlans courses={[ 'sl' ]} doubleGuarantee={doubleGuarantee} />
       </section>
 
       <section id="whatSection">
@@ -133,18 +316,10 @@ const Page: React.FC = () => {
             <div className="col-12 col-md-10 offset-md-1 col-lg-7 offset-lg-0">
               <h2>Basic Requirements for Becoming a Sleep Consultant</h2>
               <ul className="mb-4">
-                <li>
-                  <p><strong>Patience</strong> &mdash; Babies are babies. They won't always cooperate, and that's why you're there. You need to be able to keep your cool under stressful conditions.</p>
-                </li>
-                <li>
-                  <p><strong>Flexibility</strong> &mdash; Similarly, you need to be able to adapt your approach to the child's needs and to the caregiver's preferences. Sometimes that means putting your own preferences aside!</p>
-                </li>
-                <li>
-                  <p><strong>Reliability</strong> &mdash; As a professional, you'll be expected to adhere to a set schedule. Time management skills are essential to succeed in this career.</p>
-                </li>
-                <li>
-                  <p><strong>Care &amp; Compassion</strong> &mdash; You're going to be working with babies, infants and toddlers every day. You'll need to be empathetic as they adjust to their new routines.</p>
-                </li>
+                <li><p><strong>Patience</strong> &mdash; Babies are babies. They won't always cooperate, and that's why you're there. You need to be able to keep your cool under stressful conditions.</p></li>
+                <li><p><strong>Flexibility</strong> &mdash; Similarly, you need to be able to adapt your approach to the child's needs and to the caregiver's preferences. Sometimes that means putting your own preferences aside!</p></li>
+                <li><p><strong>Reliability</strong> &mdash; As a professional, you'll be expected to adhere to a set schedule. Time management skills are essential to succeed in this career.</p></li>
+                <li><p><strong>Care &amp; Compassion</strong> &mdash; You're going to be working with babies, infants and toddlers every day. You'll need to be empathetic as they adjust to their new routines.</p></li>
               </ul>
               <p className="text-center"><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c[]=sl">ENROLL NOW</a></p>
             </div>
@@ -173,7 +348,7 @@ const Page: React.FC = () => {
               <a className="btn btn-dark" href="#outline" role="button">Read the Full Course Outline</a>
             </div>
             <div className="col-12 col-md-6 col-lg-4">
-              <p className="d-none d-lg-block"><img src="/images/what-youl-learn.jpg" className="text-center" alt="What you'll learn in the sleep consultant course" /></p>
+              <p className="d-none d-lg-block"><img src={require('../../images/sl-what-youll-learn.jpg')} className="text-center" alt="What you'll learn in the sleep consultant course" /></p>
             </div>
           </div>
         </div>
@@ -198,53 +373,17 @@ const Page: React.FC = () => {
       </section>
 
       <section id="whyChooseQCSection">
-        <div className="container text-center">
-          <h2 className="text-dark">Why Choose QC?</h2>
-          <p className="lead mb-5">Get certified faster with a FULLY ONLINE sleep consultant course!</p>
-          <div className="row mb-5">
-            <div className="col-12 col-lg-4 mb-5 mb-lg-0">
-              <p><img src="/images/affordable-icon.svg" className="text-center" alt="Affordable" /></p>
-              <h3 className="text-dark text-center">Affordable</h3>
-              <p className="text-dark text-center">Since QC's course is fully online, you don't have to pay surcharges for attending lectures or webinars. You complete the full course from home.</p>
-            </div>
-            <div className="col-12 col-lg-4 mb-5 mb-lg-0">
-              <p><img src="/images/flexible-icon.svg" className="img-fluid" alt="Flexible" /></p>
-              <h3 className="text-dark text-center">Flexible</h3>
-              <p className="text-dark text-center">No start dates, no deadlines, no mandatory webinars! This course is completely self-directed and self-paced. Get certified quickly, or take your time.</p>
-            </div>
-            <div className="col-12 col-lg-4">
-              <p><img src="/images/comprehensive-icon.svg" className="img-fluid" alt="Comprehensive" /></p>
-              <h3 className="text-dark text-center">Comprehensive</h3>
-              <p className="text-dark text-center">You won't just learn one proprietary method of sleep coaching. You'll learn every method of sleep consulting, so that you can offer the best service!</p>
-            </div>
-          </div>
-          <p><a href="https://enroll.qcwellnessstudies.com/?c[]=sl" className="btn btn-secondary">GET STARTED TODAY!</a></p>
-        </div>
+        <WhyChoose
+          subheader="Get certified faster with a FULLY ONLINE sleep consultant course!"
+          affordable="Since QC's course is fully online, you don't have to pay surcharges for attending lectures or webinars. You complete the full course from home."
+          flexible="No start dates, no deadlines, no mandatory webinars! This course is completely self-directed and self-paced. Get certified quickly, or take your time."
+          comprehensive="You won't just learn one proprietary method of sleep coaching. You'll learn every method of sleep consulting, so that you can offer the best service!"
+          courses={[ 'sl' ]}
+        />
       </section>
 
       <section id="includedSection" className="bg-light text-dark">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">
-              <h2>Included In Your Course</h2>
-              <p><IoMdBook size={40} /></p>
-              <h3>Newest Course Materials</h3>
-              <p>You’ll have online access to all your course books and guides, which are constantly being updated with the newest and most up-to-date content!</p>
-              <p><IoMdDocument size={40} /></p>
-              <h3>Assignments &map; Templates</h3>
-              <p>Download assignment templates to quickly and efficiently complete all your course work. Then, upload your work to the Online Student Center where your tutor will evaluate you and provide personalized audio feedback for each unit!</p>
-              <p><IoMdPeople size={40} /></p>
-              <h3>Personalized Tutor Feedback</h3>
-              <p>Once you submit all your assignments for a unit, your tutor will evaluate and grade your work, and provide you with detailed audio feedback highlighting what you did well and where you need to improve. Use this feedback to enhance your skills in the next unit!</p>
-              <p><IoMdTimer size={40} /></p>
-              <h3>Extended-Hours Access to your Student Advisor</h3>
-              <p>Any time you have a question about your course, your student account, your certification, or anything else, you can reach out to your QC Student Advisor. Advisors are available 7 days/week to help you through your course!</p>
-              <p><IoMdSchool size={40} /></p>
-              <h3>Certification &amp; Professional Designation</h3>
-              <p>Once you graduate, you’ll be sent your certification by mail. The certification allows you to use the trademarked Infant Sleep Consulting Professional (ISCP) designation on your business cards, website, resume, and more. Get a certification that’s noticed and respected!</p>
-            </div>
-          </div>
-        </div>
+        <Included certification="Infant Sleep Consulting Professional (ISCP™)" />
       </section>
 
       <a className="anchor" id="outline"></a>
@@ -258,50 +397,50 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitA">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src="/images/unit-a-course-outline.jpg" className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit A" />
+              <img src={require('../../images/sl-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit A" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit A: Sleep Consulting Practices</h3>
               <p className="mb-0">In this first unit, you'll explore the basics of sleep consulting. You'll learn the science of sleep, how children sleep, and how you can help caregivers promote healthy sleep habits. You'll learn every method of sleep consulting, including the advantages and disadvantages of each. You'll learn to use various tools of the trade to help create an optimal sleep space and promote healthy sleep.</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
-              <div id="accordionUnitA"></div>
+              <UnitOutline data={units.a} />
             </div>
           </div>
           <div className="row my-5" id="unitB">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src="/images/unit-b-course-outline.jpg" className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit B" />
+              <img src={require('../../images/sl-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit B" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit B: Sleep Consulting Application</h3>
               <p className="mb-0">Now that you have a good foundation of knowledge as a sleep consultant, you'll start learning how to apply those practices to provide the best service possible to clients. You'll learn how to create, implement and adapt individualized sleep plans unique to each client.</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
-              <div id="accordionUnitB"></div>
+              <UnitOutline data={units.b} />
             </div>
           </div>
           <div className="row my-5" id="unitC">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src="/images/unit-c-course-outline.jpg" className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit C" />
+              <img src={require('../../images/sl-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit C" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit C: Professional Sleep Consulting &amp; Coaching</h3>
               <p className="mb-0">In this unit, you'll start putting into practice the knowledge you've acquired over the past two units. You'll go over a number of case studies of unique situations you're likely to encounter as a sleep consultant. You'll start learning how to best work with different clients, and how to turn your new skills and knowledge into a rewarding career.</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
-              <div id="accordionUnitC"></div>
+              <UnitOutline data={units.c} />
             </div>
           </div>
           <div className="row my-5" id="unitD">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src="/images/unit-d-course-outline.jpg" className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit D" />
+              <img src={require('../../images/sl-outline-d.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit D" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit D: Business Training (optional)</h3>
               <p className="mb-0">If you plan on launching your own sleep consulting business, don't skip this essential final unit! You'll work on getting your business on its feet, and gain invaluable feedback from your tutor in the process!</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
-              <div id="accordionUnitD"></div>
+              <UnitOutline data={units.d} />
             </div>
           </div>
           <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/" className="btn btn-secondary">ENROLL ONLINE</a></p>
@@ -315,12 +454,12 @@ const Page: React.FC = () => {
           <p className="lead mb-5 mx-lg-5">When you enroll, you'll be paired up with one of QC's expert sleep consulting tutors. Your tutor will be responsible for grading your work and providing feedback on your assignments.</p>
           <div className="row text-center">
             <div className="col-12 mb-5 col-md-6 mb-md-0 col-lg-5 offset-lg-1">
-              <p><img className="img-fluid" src="/images/tutor-rosalee.jpg" alt="Rosalee Lahaie Hera" /></p>
+              <p><img className="img-fluid" src={require('../../images/tutor-rosalee.jpg')} alt="Rosalee Lahaie Hera" /></p>
               <h3 className="text-dark">Rosalee Lahaie Hera</h3>
               <p>Rosalee is a mother of two, a certified sleep consultant and owner of Baby Sleep Love. With a background in health services, Rosalee turned to sleep consulting after having to hire a sleep consultant for her own daughter. Since then, she’s worked with hundreds of families to provide completely customized sleep plans for their children. Rosalee specializes in tailoring her services for each family, and will be an invaluable resource to you when starting your sleep consulting business!</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5">
-              <p><img className="img-fluid" src="/images/tutor-elisa.jpg" alt="Eliza Constanza" /></p>
+              <p><img className="img-fluid" src={require('../../images/tutor-elisa.jpg')} alt="Eliza Constanza" /></p>
               <h3 className="text-dark">Elisa Constanza</h3>
               <p>Elisa has over 15 years of experience working with children and their parents. As an early childhood educator and child sleep consultant, she understands how healthy sleep is paramount to healthy development of the child. As a sleep consultant, she offers both in-person consultations as well as virtual consultations over the phone or Skype. Use her mentorship to help build your ideal sleep consulting business!</p>
             </div>
@@ -329,43 +468,16 @@ const Page: React.FC = () => {
       </section>
 
       <section id="certificationSection" className="bg-dark text-light">
-        <div className="container">
-          <div className="row d-flex align-items-center">
-            <div className="col-12 col-md-6 col-lg-5 offset-lg-1">
-              <img src="/images/certificate.png" className="img-fluid text-center" alt="Sleep Consultant Certification" />
-            </div>
-            <div className="col-12 col-md-6 col-lg-5">
-              <h2 className="text-light">Your Sleep Consulting Certification</h2>
-              <p>Upon successful completion of this course, you'll receive your <strong>Infant Sleep Consulting Professional (ISCP™)</strong> certification. This certification is yours forever and doesn't expire. Use it as proof of competency with future clients and/or employers. Your professional designation is a great way to set yourself from the competition. Display it proudly on your business cards, marketing materials, website, and anywhere else you advertise your services!</p>
-            </div>
-          </div>
-        </div>
+        <Certification
+          shortName="Sleep Consulting"
+          fullName="Infant Sleep Consulting Professional"
+          abbr="ISCP"
+          registered={false}
+        />
       </section>
 
       <section id="guaranteeSection">
-        <div className="container text-center">
-          <h2 className="text-center text-dark">Your Guarantee</h2>
-          <p className="lead mb-5">
-            Starting a new career can be scary. But don't worry!
-            <br />
-            Once you enroll in QC's Sleep Consultant Course, you'll be protected by a
-            <br />
-            <strong>double money-back guarantee!</strong>
-          </p>
-          <div className="row text-center">
-            <div className="col-12 mb-5 col-md-6 mb-md-0 col-lg-5 offset-lg-1">
-              <p><img src="/images/21-day-guarentee.svg" alt="21 day guarantee" /></p>
-              <h3 className="text-dark">21-Day Guarantee</h3>
-              <p>Once your enrollment has been processed, you have 21 days to review the course materials and decide whether you want to take the course. If you decide this course isn't the right course for you, simply contact the school for a refund! As long as you haven't submitted any work to your tutor yet, your tuition will be refunded in full!</p>
-            </div>
-            <div className="col-12 col-md-6 col-lg-5">
-              <p><img src="/images/1-year-guarentee.svg" alt="1 year guarantee" /></p>
-              <h3 className="text-dark">1-Year Guarantee</h3>
-              <p>You'll succeed in your new career, and that's a promise! If you don't earn the equivalent of your tuition within one year after graduating from the sleep consultant course, you'll be eligible for a full refund of your tuition. Simply contact the school and provide proof that you've made a reasonable effort to gain clients.</p>
-            </div>
-          </div>
-          <p className="text-center mt-3">Additional information on QC's money back guarantees is available in your enrollment agreement.</p>
-        </div>
+        <Guarantee courseName="Sleep Consultant" doubleGuarantee={doubleGuarantee} />
       </section>
 
       <section id="enrollSection" className="text-light text-center">
@@ -382,7 +494,7 @@ const Page: React.FC = () => {
         #requirementsSection{background-image:url(${require('../../images/basic-requirements-bg-2.jpg')});background-size:cover}
         #paymentPlansSection{background-image:url(${require('../../images/bg-white-green-light.jpg')});background-size:cover}
         #includedSection{background-image:url(${require('../../images/bg-white-green-light.jpg')});background-size:cover}
-        #enrollSection{background-image:url(${require('../../images/enrollment-bg.jpg')});background-size:cover}
+        #enrollSection{background-image:url(${require('../../images/bg-enrollment.jpg')});background-size:cover}
         section:first-of-type {
           padding-top: 105px;
         }

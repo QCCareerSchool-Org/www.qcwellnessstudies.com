@@ -183,7 +183,7 @@ const Page: NextPage = () => (
     </section>
 
     <style jsx>{`
-      #enrollToday{background-image:url(${require('../images/enrollment-bg.jpg')});background-size:cover}
+      #enrollToday{background-image:url(${require('../images/bg-enrollment.jpg')});background-size:cover}
       #howOnlineWorks{background-image:url(${require('../images/bg-white-green-light.jpg')});background-size:cover}
       #heroSection{background-image:url(${require('../images/bg-home-top.jpg')});background-size:cover;background-position:center}
       .course-icon{width:80px}
