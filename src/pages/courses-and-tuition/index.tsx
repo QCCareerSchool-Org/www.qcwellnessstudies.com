@@ -1,0 +1,106 @@
+import React from 'react';
+
+import { DefaultLayout } from '../../layouts/default';
+import { PriceCard } from '../../components/price-card';
+
+const Page: React.FC = () => (
+  <DefaultLayout>
+
+    <section id="heroSection" className="bg-light">
+      <div className="container">
+        <h1 className="text-dark text-center mb-5">Wellness Training<br />Courses &amp; Tuition</h1>
+        <hr className="mt-5" />
+        <div className="row">
+          <div className="col-12 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-4">
+            <PriceCard courses={[ 'pc' ]} />
+          </div>
+          <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
+            <h2 className="text-dark">Personal Care Aide Course (Professional Caregiver)</h2>
+            <p>Professional caregivers are in extremely high demand and the industry is expected to grow very quickly over the next few years! As a professional personal care aide, you'll help your clients remain independent by providing companionship and helping them with daily tasks they may find difficult to do on their own.</p>
+            <p>In this interactive course, you'll learn the soft and practical skills you need to be a professional caregiver. You'll also learn how to run your own caregiving business so that you can bill clients directly instead of working through an agency. This is a great way to get paid what you're actually worth as a professional!</p>
+            <a className="btn btn-secondary" href="/courses-and-tuition/personal-care-aide/">LEARN MORE</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sleepSection">
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-4">
+          <PriceCard courses={[ 'sl' ]} />
+          </div>
+          <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
+            <h2 className="text-dark">Sleep Consultant Course</h2>
+            <p>Help parents and caregivers set healthy long term sleep habits for their newborns and young children. Sleep consulting is a booming industry and can either be a full-time job or a source of additional income for anyone in the child care industry!</p>
+            <p>Learn the science of sleep and all different methods used to help infants and toddlers sleep, from “no cry” to “cry it out” methods. Learn how to turn these skills into a thriving business with QC's business start-up training, and start booking clients quickly!</p>
+            <a className="btn btn-secondary" href="/courses-and-tuition/sleep-consultant/">LEARN MORE</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skincareSection">
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-4">
+            <PriceCard courses={[ 'sk' ]} />
+          </div>
+          <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
+            <h2 className="text-dark">Skincare Consultant Course</h2>
+            <p>Work with clients to build a skincare routine that will give them healthy, glowing skin. Add skincare as a revenue stream to an existing business, such as a makeup & hair studio or spa, or start your own skincare consulting business.</p>
+            <p>You'll learn the anatomy of skin, products to use and avoid based on different skin conditions, how to build a skincare routine your clients will follow, how to launch your own business, and much more!</p>
+            <a className="btn btn-secondary" href="/courses-and-tuition/skincare-consultant/">LEARN MORE</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="organizingSection">
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-4">
+            <PriceCard courses={[ 'po' ]} />
+          </div>
+          <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
+            <h2 className="text-dark">Professional Organizing Course</h2>
+            <p>Help clients declutter and organize their home or office for a healthier mental state and overall wellbeing. Becoming a professional organizer is a great way to build a full time career or to boost your income with fun and fulfilling part-time work!</p>
+            <p>You'll learn how to help different clients meet their organizing goals, the factors that create organization challenges and how to overcome them, how to create a plan that works for every type of client, storage solutions, and as always, how to turn all these skills into a thriving business!</p>
+            <a className="btn btn-secondary" href="/courses-and-tuition/professional-organizing/">LEARN MORE</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="agingSection">
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-4">
+            <PriceCard courses={[ 'ap' ]} />
+          </div>
+          <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
+            <h2 className="text-dark">Aging in Place Course</h2>
+            <p>Work with clients who want to keep their independence and stay in their homes for as long as possible. The amount of senior citizens is increasing and they'll be looking for help to either stay in their home or downsize to a more manageable home. Help these clients with a specialized design service catered just for them!</p>
+            <p>Youl'll learn how to safely design a space with the unique challenges and special requirements that come with aging. With safety and convenience as your top priority, you'll create a solution that helps your client (and their family) feel safe in their home and avoid having to relocate to assisted living facilities.</p>
+            <a className="btn btn-secondary" href="/courses-and-tuition/professional-organizing/">LEARN MORE</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="enrollSection" className="text-light text-center">
+      <div className="container">
+        <h2>Enroll Today</h2>
+        <p className="lead mb-5">With QC's flexible online training, enroll and start your course(s) at any time. There are no start dates or deadlines to worry about. Complete your training as quickly as you'd like, or take your time. The choice is yours!</p>
+        <p><a href="https://enroll.qcwellnessstudies.com/" className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
+      </div>
+    </section>
+
+    <style jsx>{`
+      #heroSection{background-image:url(${require('../../images/bg-white-green-light.jpg')});background-size:cover}
+      #enrollSection{background-image:url(${require('../../images/enrollment-bg.jpg')});background-size:cover}
+    `}</style>
+  </DefaultLayout>
+);
+
+export default Page;

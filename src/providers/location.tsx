@@ -3,21 +3,28 @@ import fetch from 'isomorphic-unfetch';
 
 export interface Location {
   countryCode: string;
+  countryName: string;
   provinceCode: string | null;
+  provinceName: string | null;
 }
 
 const LocationStateContext = React.createContext<Location | null | undefined>(undefined);
 const LocationDispatchContext = React.createContext<((location: Location) => void) | undefined>(undefined);
 
 export const LocationProvider: React.FC = ({ children }) => {
-  const [ state, dispatch ] = useState<Location|null>(null);
+  const [ state, dispatch ] = useState<Location | null>(null);
   useEffect(() => {
     (async () => {
       const url = 'https://api.qccareerschool.com/geoLocation/ip';
-      const response = await fetch(url);
-      if (response.ok) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw Error('bad response from geoLocation');
+        }
         const location: Location = await response.json();
         dispatch(location);
+      } catch (err) {
+        dispatch({ countryCode: 'US', countryName: 'United States', provinceCode: 'MD', provinceName: 'Maryland' });
       }
     })();
   }, []);
