@@ -4,7 +4,7 @@ import { Address } from './address';
 import { TelephoneNumber } from './telephone-number';
 
 export const Footer: React.FC = () => (
-  <footer id="footer" className="bg-dark mt-auto">
+  <footer id="footer" className="footer bg-dark mt-auto">
     <div className="container">
       <div className="row text-center text-lg-left">
         <div className="col-12 col-lg-3 text-center pb-5 pb-lg-0">

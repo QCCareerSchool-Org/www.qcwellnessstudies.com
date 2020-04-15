@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 interface Props {
@@ -6,13 +7,14 @@ interface Props {
   flexible: string;
   comprehensive: string;
   courses: string[];
+  hideButton?: boolean;
 }
 
-export const WhyChoose: React.FC<Props> = ({ subheader, affordable, flexible, comprehensive, courses }) => (
+export const WhyChoose: React.FC<Props> = ({ subheader, affordable, flexible, comprehensive, courses, hideButton }) => (
   <div className="container text-center">
     <h2 className="text-dark">Why Choose QC?</h2>
     <p className="lead mb-5">{subheader}</p>
-    <div className="row mb-5">
+    <div className="row">
       <div className="col-12 col-lg-4 mb-5 mb-lg-0">
         <p><img src={require('../images/icon-affordable.svg')} className="text-center" alt="Affordable" /></p>
         <h3 className="text-dark text-center">Affordable</h3>
@@ -29,6 +31,15 @@ export const WhyChoose: React.FC<Props> = ({ subheader, affordable, flexible, co
         <p className="text-dark text-center">{comprehensive}</p>
       </div>
     </div>
-    <p><a href={`https://enroll.qcwellnessstudies.com/?${courses.map(c => `c[]=${c}`).join('&')}`} className="btn btn-secondary">GET STARTED TODAY!</a></p>
+    {!hideButton && <p className="mt-5"><a href={`https://enroll.qcwellnessstudies.com/?${courses.map(c => `c[]=${c}`).join('&')}`} className="btn btn-secondary">GET STARTED TODAY!</a></p>}
   </div>
 );
+
+WhyChoose.propTypes = {
+  subheader: PropTypes.string.isRequired,
+  affordable: PropTypes.string.isRequired,
+  flexible: PropTypes.string.isRequired,
+  comprehensive: PropTypes.string.isRequired,
+  courses: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  hideButton: PropTypes.bool,
+};
