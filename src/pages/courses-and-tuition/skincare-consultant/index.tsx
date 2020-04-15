@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { DefaultLayout } from '../../layouts/default';
-import { Subnav } from '../../components/subnav';
-import { PaymentPlans } from '../../components/payment-plans';
-import { WhyChoose } from '../../components/why-chose';
-import { Included } from '../../components/included';
-import { UnitOutline, OutlineData } from '../../components/unit-outline';
-import { Certification } from '../../components/certification';
-import { Guarantee } from '../../components/guarantee';
+import { DefaultLayout } from '../../../layouts/default';
+import { Subnav } from '../../../components/subnav';
+import { PaymentPlans } from '../../../components/payment-plans';
+import { WhyChoose } from '../../../components/why-chose';
+import { Included } from '../../../components/included';
+import { UnitOutline, OutlineData } from '../../../components/unit-outline';
+import { Certification } from '../../../components/certification';
+import { Guarantee } from '../../../components/guarantee';
 
 const Page: React.FC = () => {
   const doubleGuarantee = false;
@@ -263,7 +263,7 @@ const Page: React.FC = () => {
               <a className="btn btn-dark" href="#outline" role="button">Read the Full Course Outline</a>
             </div>
             <div className="col-12 col-md-6 col-lg-4">
-              <p className="d-none d-lg-block"><img src={require('../../images/sk-what-youll-learn.jpg')} className="text-center" alt="What You'll Learn in the Skincare Consultant Course" /></p>
+              <p className="d-none d-lg-block"><img src={require('../../../images/sk-what-youll-learn.jpg')} className="text-center" alt="What You'll Learn in the Skincare Consultant Course" /></p>
             </div>
           </div>
         </div>
@@ -314,7 +314,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitA">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../images/sk-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit A" />
+              <img src={require('../../../images/sk-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit A" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit A: Introduction to Skincare</h3>
@@ -326,7 +326,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitB">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../images/sk-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit B" />
+              <img src={require('../../../images/sk-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit B" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit B: Skincare Products, Tools &amp; Treatments</h3>
@@ -338,7 +338,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitC">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../images/sk-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit C" />
+              <img src={require('../../../images/sk-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit C" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit C: Workng with Skin Conditions</h3>
@@ -350,7 +350,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitD">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../images/sk-outline-d.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit D" />
+              <img src={require('../../../images/sk-outline-d.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit D" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit D: Anti-Aging Skincare</h3>
@@ -362,7 +362,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitE">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../images/sk-outline-e.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit E" />
+              <img src={require('../../../images/sk-outline-e.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit E" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit E: Natural Skincare &amp; The Skincare Consultation Process</h3>
@@ -382,7 +382,7 @@ const Page: React.FC = () => {
           <div className="row text-center">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
               <h2 className="text-dark text-center">Your Skincare Consultant Tutor</h2>
-              <p><img src={require('../../images/tutor-nathan.jpg')} alt="Nathan Johnson" /></p>
+              <p><img src={require('../../../images/tutor-nathan.jpg')} alt="Nathan Johnson" /></p>
               <h3 className="text-dark">Nathan Johnson</h3>
               <p>With over 18 years of experience as an executive makeup artist and skincare consultant, Nathan is excited to share that knowledge with you and help you advance your skillset. Nathan is featured in QC Makeup Academy's instructional videos, and will be the expert to mentor you through your learning journey!</p>
             </div>
@@ -412,12 +412,12 @@ const Page: React.FC = () => {
       </section>
 
       <style jsx>{`
-        #heroSection{color:white;background-color:#449;background-image:url(${require('../../images/sk-hero.jpg')});background-size:cover;background-position:center;}
-        #certificationSection{background-image:url(${require('../../images/bg-dark-green-navy.jpg')});background-size:cover}
-        #requirementsSection{background-image:url(${require('../../images/sk-requirements.jpg')});background-size:cover}
-        #paymentPlansSection{background-image:url(${require('../../images/bg-white-green-light.jpg')});background-size:cover}
-        #includedSection{background-image:url(${require('../../images/bg-white-green-light.jpg')});background-size:cover}
-        #enrollSection{background-image:url(${require('../../images/bg-enrollment.jpg')});background-size:cover}
+        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../images/sk-hero.jpg')});background-size:cover;background-position:center;}
+        #certificationSection{background-image:url(${require('../../../images/bg-dark-green-navy.jpg')});background-size:cover}
+        #requirementsSection{background-image:url(${require('../../../images/sk-requirements.jpg')});background-size:cover}
+        #paymentPlansSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
+        #includedSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
+        #enrollSection{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}
         section:first-of-type {
           padding-top: 105px;
         }

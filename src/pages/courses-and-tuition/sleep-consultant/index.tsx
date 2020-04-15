@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { DefaultLayout } from '../../layouts/default';
-import { Subnav } from '../../components/subnav';
-import { WhyChoose } from '../../components/why-chose';
-import { OutlineData, UnitOutline } from '../../components/unit-outline';
-import { PaymentPlans } from '../../components/payment-plans';
-import { Included } from '../../components/included';
-import { Guarantee } from '../../components/guarantee';
-import { Certification } from '../../components/certification';
+import { DefaultLayout } from '../../../layouts/default';
+import { Subnav } from '../../../components/subnav';
+import { WhyChoose } from '../../../components/why-chose';
+import { OutlineData, UnitOutline } from '../../../components/unit-outline';
+import { PaymentPlans } from '../../../components/payment-plans';
+import { Included } from '../../../components/included';
+import { Guarantee } from '../../../components/guarantee';
+import { Certification } from '../../../components/certification';
 
 const Page: React.FC = () => {
   const doubleGuarantee = true;
@@ -348,7 +348,7 @@ const Page: React.FC = () => {
               <a className="btn btn-dark" href="#outline" role="button">Read the Full Course Outline</a>
             </div>
             <div className="col-12 col-md-6 col-lg-4">
-              <p className="d-none d-lg-block"><img src={require('../../images/sl-what-youll-learn.jpg')} className="text-center" alt="What you'll learn in the sleep consultant course" /></p>
+              <p className="d-none d-lg-block"><img src={require('../../../images/sl-what-youll-learn.jpg')} className="text-center" alt="What you'll learn in the sleep consultant course" /></p>
             </div>
           </div>
         </div>
@@ -397,7 +397,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitA">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../images/sl-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit A" />
+              <img src={require('../../../images/sl-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit A" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit A: Sleep Consulting Practices</h3>
@@ -409,7 +409,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitB">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../images/sl-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit B" />
+              <img src={require('../../../images/sl-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit B" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit B: Sleep Consulting Application</h3>
@@ -421,7 +421,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitC">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../images/sl-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit C" />
+              <img src={require('../../../images/sl-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit C" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit C: Professional Sleep Consulting &amp; Coaching</h3>
@@ -433,7 +433,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitD">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../images/sl-outline-d.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit D" />
+              <img src={require('../../../images/sl-outline-d.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit D" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit D: Business Training (optional)</h3>
@@ -454,12 +454,12 @@ const Page: React.FC = () => {
           <p className="lead mb-5 mx-lg-5">When you enroll, you'll be paired up with one of QC's expert sleep consulting tutors. Your tutor will be responsible for grading your work and providing feedback on your assignments.</p>
           <div className="row text-center">
             <div className="col-12 mb-5 col-md-6 mb-md-0 col-lg-5 offset-lg-1">
-              <p><img className="img-fluid" src={require('../../images/tutor-rosalee.jpg')} alt="Rosalee Lahaie Hera" /></p>
+              <p><img className="img-fluid" src={require('../../../images/tutor-rosalee.jpg')} alt="Rosalee Lahaie Hera" /></p>
               <h3 className="text-dark">Rosalee Lahaie Hera</h3>
               <p>Rosalee is a mother of two, a certified sleep consultant and owner of Baby Sleep Love. With a background in health services, Rosalee turned to sleep consulting after having to hire a sleep consultant for her own daughter. Since then, she’s worked with hundreds of families to provide completely customized sleep plans for their children. Rosalee specializes in tailoring her services for each family, and will be an invaluable resource to you when starting your sleep consulting business!</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5">
-              <p><img className="img-fluid" src={require('../../images/tutor-elisa.jpg')} alt="Eliza Constanza" /></p>
+              <p><img className="img-fluid" src={require('../../../images/tutor-elisa.jpg')} alt="Eliza Constanza" /></p>
               <h3 className="text-dark">Elisa Constanza</h3>
               <p>Elisa has over 15 years of experience working with children and their parents. As an early childhood educator and child sleep consultant, she understands how healthy sleep is paramount to healthy development of the child. As a sleep consultant, she offers both in-person consultations as well as virtual consultations over the phone or Skype. Use her mentorship to help build your ideal sleep consulting business!</p>
             </div>
@@ -489,12 +489,12 @@ const Page: React.FC = () => {
       </section>
 
       <style jsx>{`
-        #heroSection{color:white;background-color:#449;background-image:url(${require('../../images/sl-hero.jpg')});background-size:cover;background-position:center;}
-        #certificationSection{background-image:url(${require('../../images/bg-dark-green-navy.jpg')});background-size:cover}
-        #requirementsSection{background-image:url(${require('../../images/sl-requirements.jpg')});background-size:cover}
-        #paymentPlansSection{background-image:url(${require('../../images/bg-white-green-light.jpg')});background-size:cover}
-        #includedSection{background-image:url(${require('../../images/bg-white-green-light.jpg')});background-size:cover}
-        #enrollSection{background-image:url(${require('../../images/bg-enrollment.jpg')});background-size:cover}
+        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../images/sl-hero.jpg')});background-size:cover;background-position:center;}
+        #certificationSection{background-image:url(${require('../../../images/bg-dark-green-navy.jpg')});background-size:cover}
+        #requirementsSection{background-image:url(${require('../../../images/sl-requirements.jpg')});background-size:cover}
+        #paymentPlansSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
+        #includedSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
+        #enrollSection{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}
         section:first-of-type {
           padding-top: 105px;
         }

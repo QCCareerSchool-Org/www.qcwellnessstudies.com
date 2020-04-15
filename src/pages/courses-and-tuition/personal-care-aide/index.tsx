@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { DefaultLayout } from '../../layouts/default';
-import { PaymentPlans } from '../../components/payment-plans';
-import { WhyChoose } from '../../components/why-chose';
-import { OutlineData, UnitOutline } from '../../components/unit-outline';
-import { Included } from '../../components/included';
-import { Guarantee } from '../../components/guarantee';
-import { Certification } from '../../components/certification';
-import { Subnav } from '../../components/subnav';
+import { DefaultLayout } from '../../../layouts/default';
+import { PaymentPlans } from '../../../components/payment-plans';
+import { WhyChoose } from '../../../components/why-chose';
+import { OutlineData, UnitOutline } from '../../../components/unit-outline';
+import { Included } from '../../../components/included';
+import { Guarantee } from '../../../components/guarantee';
+import { Certification } from '../../../components/certification';
+import { Subnav } from '../../../components/subnav';
 
 const Page: React.FC = () => {
   const doubleGuarantee = false;
@@ -437,7 +437,7 @@ const Page: React.FC = () => {
               <a className="btn btn-dark" href="#outline" role="button">Read the Full Course Outline</a>
             </div>
             <div className="col-12 col-md-6 col-lg-4">
-              <p className="d-none d-lg-block"><img src={require('../../images/pc-what-youll-learn.jpg')} className="text-center" alt="What you'll learn in the personal care aide course" /></p>
+              <p className="d-none d-lg-block"><img src={require('../../../images/pc-what-youll-learn.jpg')} className="text-center" alt="What you'll learn in the personal care aide course" /></p>
             </div>
           </div>
         </div>
@@ -486,7 +486,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitA">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../images/pc-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Personal Care Aide Course Unit A" />
+              <img src={require('../../../images/pc-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Personal Care Aide Course Unit A" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit A: Introduction to Caregiving</h3>
@@ -498,7 +498,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitB">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../images/pc-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Personal Care Aide Course Unit B" />
+              <img src={require('../../../images/pc-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Personal Care Aide Course Unit B" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit B: Working with Clients</h3>
@@ -510,7 +510,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitC">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../images/pc-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Personal Care Aide Course Unit C" />
+              <img src={require('../../../images/pc-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Personal Care Aide Course Unit C" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit C: Working as a PCA</h3>
@@ -522,7 +522,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitD">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../images/pc-outline-d.jpg')} className="rounded img-fluid mt-2" alt="Personal Care Aide Course Unit D" />
+              <img src={require('../../../images/pc-outline-d.jpg')} className="rounded img-fluid mt-2" alt="Personal Care Aide Course Unit D" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit D: Technical Skills</h3>
@@ -535,7 +535,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitE">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../images/pc-outline-e.jpg')} className="rounded img-fluid mt-2" alt="Personal Care Aide Course Unit E" />
+              <img src={require('../../../images/pc-outline-e.jpg')} className="rounded img-fluid mt-2" alt="Personal Care Aide Course Unit E" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit E: (Optional) Business Training Unit</h3>
@@ -592,12 +592,12 @@ const Page: React.FC = () => {
       </section>
 
       <style jsx>{`
-        #heroSection{color:white;background-color:#449;background-image:url(${require('../../images/pc-hero.jpg')});background-size:cover;background-position:center;}
-        #certificationSection{background-image:url(${require('../../images/bg-dark-green-navy.jpg')});background-size:cover}
-        #requirementsSection{background-image:url(${require('../../images/pc-requirements.jpg')});background-size:cover}
-        #paymentPlansSection{background-image:url(${require('../../images/bg-white-green-light.jpg')});background-size:cover}
-        #includedSection{background-image:url(${require('../../images/bg-white-green-light.jpg')});background-size:cover}
-        #enrollSection{background-image:url(${require('../../images/bg-enrollment.jpg')});background-size:cover}
+        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../images/pc-hero.jpg')});background-size:cover;background-position:center;}
+        #certificationSection{background-image:url(${require('../../../images/bg-dark-green-navy.jpg')});background-size:cover}
+        #requirementsSection{background-image:url(${require('../../../images/pc-requirements.jpg')});background-size:cover}
+        #paymentPlansSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
+        #includedSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
+        #enrollSection{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}
         section:first-of-type {
           padding-top: 105px;
         }

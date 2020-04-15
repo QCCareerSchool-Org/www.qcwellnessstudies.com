@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { DefaultLayout } from '../../layouts/default';
-import { Subnav } from '../../components/subnav';
-import { WhyChoose } from '../../components/why-chose';
-import { UnitOutline, OutlineData } from '../../components/unit-outline';
-import { PaymentPlans } from '../../components/payment-plans';
-import { Included } from '../../components/included';
-import { Certification } from '../../components/certification';
-import { Guarantee } from '../../components/guarantee';
+import { DefaultLayout } from '../../../layouts/default';
+import { Subnav } from '../../../components/subnav';
+import { WhyChoose } from '../../../components/why-chose';
+import { UnitOutline, OutlineData } from '../../../components/unit-outline';
+import { PaymentPlans } from '../../../components/payment-plans';
+import { Included } from '../../../components/included';
+import { Certification } from '../../../components/certification';
+import { Guarantee } from '../../../components/guarantee';
 
 const Page: React.FC = () => {
   const doubleGuarantee = false;
@@ -174,7 +174,7 @@ const Page: React.FC = () => {
               <a className="btn btn-dark" href="#outline" role="button">Read the Full Course Outline</a>
             </div>
             <div className="col-12 col-md-6 col-lg-4">
-              <p className="d-none d-lg-block"><img src={require('../../images/ap-what-youll-learn.jpg')} className="text-center" alt="What You'll Learn in the Skincare Consultant Course" /></p>
+              <p className="d-none d-lg-block"><img src={require('../../../images/ap-what-youll-learn.jpg')} className="text-center" alt="What You'll Learn in the Skincare Consultant Course" /></p>
             </div>
           </div>
         </div>
@@ -225,7 +225,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitA">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../images/ap-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit A" />
+              <img src={require('../../../images/ap-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit A" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit A: Introduction to Aging in Place</h3>
@@ -237,7 +237,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitB">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../images/ap-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit B" />
+              <img src={require('../../../images/ap-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit B" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit B: Aging in Place Practices</h3>
@@ -249,7 +249,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitC">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../images/ap-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit C" />
+              <img src={require('../../../images/ap-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit C" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit C: Final Project</h3>
@@ -269,7 +269,7 @@ const Page: React.FC = () => {
           <div className="row text-center">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
               <h2 className="text-dark text-center">Your Aging in Place Tutor</h2>
-              <p><img src={require('../../images/tutor-tammy.jpg')} alt="Tammy Hart" /></p>
+              <p><img src={require('../../../images/tutor-tammy.jpg')} alt="Tammy Hart" /></p>
               <h3 className="text-dark">Tammy Hart</h3>
               <p>Tammy Hart, IDDP, CAPS, is a graduate and tutor of QC Design School. She is a Certified Aging-in-Place Specialist from the National Association of Home Builders. She is the owner and award-winning designer for Designer Chick Co. and is the previous director on the National Board for DDA (formerly CDECA).</p>
               <p>She is a professional speaker, speaking at venues like IIDEXCanada and The Small Business Forum. She’s been featured in East of the City Magazine, as a guest spot on the Rogers Daytime Durham talk show and has won the HOUZZ Service Award 2017. She works to empower young women to become successful future leaders and supports ocean clean-up efforts.</p>
@@ -300,12 +300,12 @@ const Page: React.FC = () => {
       </section>
 
       <style jsx>{`
-        #heroSection{color:white;background-color:#449;background-image:url(${require('../../images/ap-hero.jpg')});background-size:cover;background-position: center;}
-        #certificationSection{background-image:url(${require('../../images/bg-dark-green-navy.jpg')});background-size:cover}
-        #requirementsSection{background-image:url(${require('../../images/bg-basic-require-aip.jpg')});background-size:cover}
-        #paymentPlansSection{background-image:url(${require('../../images/bg-white-green-light.jpg')});background-size:cover}
-        #includedSection{background-image:url(${require('../../images/bg-white-green-light.jpg')});background-size:cover}
-        #enrollSection{background-image:url(${require('../../images/bg-enrollment.jpg')});background-size:cover}
+        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../images/ap-hero.jpg')});background-size:cover;background-position: center;}
+        #certificationSection{background-image:url(${require('../../../images/bg-dark-green-navy.jpg')});background-size:cover}
+        #requirementsSection{background-image:url(${require('../../../images/bg-basic-require-aip.jpg')});background-size:cover}
+        #paymentPlansSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
+        #includedSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
+        #enrollSection{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}
         section:first-of-type {
           padding-top: 105px;
         }
