@@ -2,10 +2,18 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
+import { SEO } from '../components/seo';
 import { DefaultLayout } from '../layouts/default';
 
 const Page: NextPage = () => (
   <DefaultLayout>
+
+    <SEO
+      title="Frequently Asked Questions"
+      description="Find answers to the most frequently asked questions about QC's online training, tuition, and certification courses."
+      canonical="/faq"
+      schemaType="FAQPage"
+    />
 
     <section id="heroSection">
       <div className="container">

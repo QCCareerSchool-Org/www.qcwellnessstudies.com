@@ -4,6 +4,7 @@ import { Certification } from '../../../components/certification';
 import { Guarantee } from '../../../components/guarantee';
 import { Included } from '../../../components/included';
 import { PaymentPlans } from '../../../components/payment-plans';
+import { SEO } from '../../../components/seo';
 import { Subnav } from '../../../components/subnav';
 import { OutlineData, UnitOutline } from '../../../components/unit-outline';
 import { WhyChoose } from '../../../components/why-chose';
@@ -317,6 +318,12 @@ const Page: React.FC = () => {
         ]}
       />
     )}>
+
+      <SEO
+        title="Personal Care Aide Course"
+        description="Become a certified professional caregiver with QC's online training. QC offers a fully-online personal care aide course. Get certified faster and launch your own business!"
+        canonical="/courses-and-tuition/aging-in-place"
+      />
 
       <section id="heroSection">
         <div className="container">

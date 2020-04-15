@@ -4,6 +4,7 @@ import { Certification } from '../../../components/certification';
 import { Guarantee } from '../../../components/guarantee';
 import { Included } from '../../../components/included';
 import { PaymentPlans } from '../../../components/payment-plans';
+import { SEO } from '../../../components/seo';
 import { Subnav } from '../../../components/subnav';
 import { OutlineData, UnitOutline } from '../../../components/unit-outline';
 import { WhyChoose } from '../../../components/why-chose';
@@ -188,6 +189,12 @@ const Page: React.FC = () => {
         ]}
       />
     )}>
+
+      <SEO
+        title="Skincare Consultant Course"
+        description="Become a professional skincare consultant with QC's interactive online course. Study at your own pace and learn to launch your own skincare business!"
+        canonical="/courses-and-tutition/skincare-consultant"
+      />
 
       <section id="heroSection">
         <div className="container">

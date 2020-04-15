@@ -2,11 +2,18 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
+import { SEO } from '../../../components/seo';
 import { WhyChoose } from '../../../components/why-chose';
 import { LandingPageLayout } from '../../../layouts/landing-page';
 
 const Page: NextPage = () => (
   <LandingPageLayout>
+
+    <SEO
+      title="Get a Personal Care Aide Course Preview"
+      description="If you're interested in becoming a personal care aide, get a preview of QC's PCA certifiation course here!"
+      canonical="/courses-and-tuition/personal-care-aide/get-a-preview"
+    />
 
     <section id="formSection">
       <div className="container text-light">
@@ -54,7 +61,6 @@ const Page: NextPage = () => (
         </div>
       </div>
     </section>
-
 
     <section id="requireSection" className="bg-light">
       <div className="container">

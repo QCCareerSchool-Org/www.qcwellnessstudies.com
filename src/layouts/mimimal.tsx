@@ -22,7 +22,7 @@ export const MinimalLayout: React.FC<Props> = ({ children, SecondaryNav }) => {
 };
 
 MinimalLayout.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([ PropTypes.element, PropTypes.arrayOf(PropTypes.element.isRequired) ]).isRequired,
   SecondaryNav: PropTypes.func,
 };
 

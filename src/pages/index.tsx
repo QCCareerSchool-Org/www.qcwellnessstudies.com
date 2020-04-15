@@ -1,10 +1,17 @@
 import { NextPage } from 'next';
 import React from 'react';
 
+import { SEO } from '../components/seo';
 import { DefaultLayout } from '../layouts/default';
 
 const Page: NextPage = () => (
   <DefaultLayout>
+
+    <SEO
+      title="QC Wellness Studies"
+      description="QC Wellness Studies is the only fully online school for professional wellness training. Whether you want to be a sleep consultant, a professional skincare consultant or an aging in place designer, QC has an online course for your future career!"
+      canonical=""
+    />
 
     <section id="heroSection">
       <div className="container">

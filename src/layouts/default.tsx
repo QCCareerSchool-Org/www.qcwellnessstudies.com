@@ -24,7 +24,7 @@ export const DefaultLayout: React.FC<Props> = ({ children, SecondaryNav }) => {
 };
 
 DefaultLayout.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([ PropTypes.element, PropTypes.arrayOf(PropTypes.element.isRequired) ]).isRequired,
   SecondaryNav: PropTypes.func,
 };
 

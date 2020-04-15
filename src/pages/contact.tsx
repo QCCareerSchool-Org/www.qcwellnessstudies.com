@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 import React from 'react';
 
+import { SEO } from '../components/seo';
 import { DefaultLayout } from '../layouts/default';
 
 declare global {
@@ -16,6 +17,13 @@ const Page: NextPage = () => {
 
   return (
     <DefaultLayout>
+
+      <SEO
+        title="Contact Us"
+        description="You can contact QC at any time by phone, email or live chat.  Or, schedule a call with a student advisor and we'll call you!"
+        canonical="/contact"
+        schemaType="ContactPage"
+      />
 
       <section id="heroSection">
         <div className="container text-center">

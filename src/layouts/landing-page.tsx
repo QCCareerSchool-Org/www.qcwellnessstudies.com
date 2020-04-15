@@ -24,7 +24,7 @@ export const LandingPageLayout: React.FC<Props> = ({ children, SecondaryNav }) =
 };
 
 LandingPageLayout.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([ PropTypes.element, PropTypes.arrayOf(PropTypes.element.isRequired) ]).isRequired,
   SecondaryNav: PropTypes.func,
 };
 

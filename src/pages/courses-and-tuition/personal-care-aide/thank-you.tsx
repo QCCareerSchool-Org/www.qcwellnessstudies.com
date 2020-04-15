@@ -3,10 +3,18 @@ import Link from 'next/link';
 import React from 'react';
 import { IoMdBook, IoMdEye, IoMdLaptop, IoMdSchool } from 'react-icons/io';
 
+import { SEO } from '../../../components/seo';
 import { DefaultLayout } from '../../../layouts/default';
 
 const Page: NextPage = () => (
   <DefaultLayout>
+
+    <SEO
+      title="Thank You For Your Interest"
+      description="More information about the Personal Care Aide course"
+      canonical="/courses-and-tuition/personal-care-aide/thank-you"
+      noIndex={true}
+    />
 
     <section id="heroSection">
       <div className="container">

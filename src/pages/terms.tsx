@@ -1,10 +1,18 @@
 import { NextPage } from 'next';
 import React from 'react';
 
+import { SEO } from '../components/seo';
 import { TermsLayout } from '../layouts/terms';
 
 const Page: NextPage = () => (
   <TermsLayout>
+
+    <SEO
+      title="Privacy Policy"
+      description="QC Wellness Studies's comprehensive privacy policy"
+      canonical="/terms"
+    />
+
     <h1>Privacy Policy</h1>
     <h2>What Information Do We Collect?</h2>
     <p>We collect information from you when you register on our site, place an order, subscribe to our newsletter or respond to a survey.</p>

@@ -2,11 +2,18 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
+import { SEO } from '../../../components/seo';
 import { WhyChoose } from '../../../components/why-chose';
 import { LandingPageLayout } from '../../../layouts/landing-page';
 
 const Page: NextPage = () => (
   <LandingPageLayout>
+
+    <SEO
+      title="Get a Sleep Consultant Course Preview"
+      description="If you're interested in becoming a professional sleep consultant, get a preview of QC's sleep consultant certifiation course here!"
+      canonical="/courses-and-tuition/sleep-consultant/get-a-preview"
+    />
 
     <section id="formSection">
       <div className="container text-light">

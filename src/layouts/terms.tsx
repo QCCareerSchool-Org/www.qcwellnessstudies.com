@@ -12,5 +12,5 @@ export const TermsLayout: React.FC = ({ children }) => {
 };
 
 TermsLayout.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([ PropTypes.element, PropTypes.arrayOf(PropTypes.element.isRequired) ]).isRequired,
 };

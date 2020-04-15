@@ -1,10 +1,17 @@
 import { NextPage } from 'next';
 import React from 'react';
 
+import { SEO } from '../components/seo';
 import { DefaultLayout } from '../layouts/default';
 
 const Page: NextPage = () => (
   <DefaultLayout>
+
+    <SEO
+      title="How Online Learning Works"
+      description="Discover how QC's online learning system will help you become a fully certified wellness professional from the comfort of home!"
+      canonical="/how-it-works"
+    />
 
     <section id="heroSection">
       <div className="container">
