@@ -25,20 +25,20 @@ export const Header: React.FC = () => {
         <Navbar.Collapse id="main-navbar-nav">
           <Nav className="ml-auto mr-md-2 mr-lg-4">
             <NavDropdown title="Courses &amp; Tuition" id="coursesDropdown">
-              <Link href="/courses-and-tuition/"><a className="dropdown-item">All Courses &amp; Tuition</a></Link>
+              <Link href="/courses-and-tuition"><a className="dropdown-item">All Courses &amp; Tuition</a></Link>
               <NavDropdown.Divider />
-              <Link href="/courses-and-tuition/personal-care-aide/"><a className="dropdown-item"><strong>Personal Care Aide</strong>&nbsp;&nbsp;<span className="badge badge-secondary">New</span></a></Link>
-              <Link href="/courses-and-tuition/sleep-consultant/"><a className="dropdown-item">Sleep Consultant</a></Link>
-              <Link href="/courses-and-tuition/skincare-consultant/"><a className="dropdown-item">Skincare Consultant</a></Link>
-              <Link href="/courses-and-tuition/aging-in-place/"><a className="dropdown-item">Aging in Place</a></Link>
+              <Link href="/courses-and-tuition/personal-care-aide"><a className="dropdown-item"><strong>Personal Care Aide</strong>&nbsp;&nbsp;<span className="badge badge-secondary">New</span></a></Link>
+              <Link href="/courses-and-tuition/sleep-consultant"><a className="dropdown-item">Sleep Consultant</a></Link>
+              <Link href="/courses-and-tuition/skincare-consultant"><a className="dropdown-item">Skincare Consultant</a></Link>
+              <Link href="/courses-and-tuition/aging-in-place"><a className="dropdown-item">Aging in Place</a></Link>
             </NavDropdown>
             <NavDropdown title="How It Works" id="howItWorksDropdown">
-              <Link href="/how-it-works/"><a className="dropdown-item">How Online Learning Works</a></Link>
-              <Link href="/faq/"><a className="dropdown-item">FAQ</a></Link>
+              <Link href="/how-it-works"><a className="dropdown-item">How Online Learning Works</a></Link>
+              <Link href="/faq"><a className="dropdown-item">FAQ</a></Link>
             </NavDropdown>
             <NavDropdown title="About" id="aboutDropdown">
-              <Link href="/about/"><a className="dropdown-item">About QC</a></Link>
-              <Link href="/contact/"><a className="dropdown-item">Contact</a></Link>
+              <Link href="/about"><a className="dropdown-item">About QC</a></Link>
+              <Link href="/contact"><a className="dropdown-item">Contact</a></Link>
             </NavDropdown>
           </Nav>
           <a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com">Enroll Online</a>

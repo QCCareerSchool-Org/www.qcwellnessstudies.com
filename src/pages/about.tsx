@@ -23,7 +23,7 @@ const Page: React.FC = () => (
       <hr />
       <div className="text-center">
         <p className="lead">QC Wellness Studies’ premium online course content and outstanding student support system give you access to help and learning tools 24/7. Reach student support specialists by email, phone, or Live Chat. Students and graduates can contact the support team for questions or advice at any time!</p>
-        <p><Link href="/courses-and-tuition/"><a className="btn btn-outline-info">VIEW COURSES</a></Link></p>
+        <p><Link href="/courses-and-tuition"><a className="btn btn-outline-info">VIEW COURSES</a></Link></p>
       </div>
     </div>
   </section>

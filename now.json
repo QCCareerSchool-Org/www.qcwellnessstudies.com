@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "trailingSlash": false,
   "redirects": [
     { "source": "/get-a-personal-care-aide-course-preview", "destination": "/courses-and-tuition/personal-care-aide/get-a-preview" },
     { "source": "/get-a-sleep-consultant-course-preview", "destination": "/courses-and-tuition/sleep-consultant/get-a-preview" },
