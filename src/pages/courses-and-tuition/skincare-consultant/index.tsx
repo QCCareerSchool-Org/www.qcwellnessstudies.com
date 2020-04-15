@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { DefaultLayout } from '../../../layouts/default';
-import { Subnav } from '../../../components/subnav';
-import { PaymentPlans } from '../../../components/payment-plans';
-import { WhyChoose } from '../../../components/why-chose';
-import { Included } from '../../../components/included';
-import { UnitOutline, OutlineData } from '../../../components/unit-outline';
 import { Certification } from '../../../components/certification';
 import { Guarantee } from '../../../components/guarantee';
+import { Included } from '../../../components/included';
+import { PaymentPlans } from '../../../components/payment-plans';
+import { Subnav } from '../../../components/subnav';
+import { OutlineData, UnitOutline } from '../../../components/unit-outline';
+import { WhyChoose } from '../../../components/why-chose';
+import { DefaultLayout } from '../../../layouts/default';
 
 const Page: React.FC = () => {
   const doubleGuarantee = false;
@@ -178,7 +178,7 @@ const Page: React.FC = () => {
   };
 
   return (
-    <DefaultLayout SecondaryNav={() => (
+    <DefaultLayout SecondaryNav={(): React.ReactElement => (
       <Subnav
         heading="Skincare Consultant Course"
         items={[
@@ -209,7 +209,7 @@ const Page: React.FC = () => {
 
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
-        <PaymentPlans courses={['sk']} doubleGuarantee={doubleGuarantee} />
+        <PaymentPlans courses={[ 'sk' ]} doubleGuarantee={doubleGuarantee} />
       </section>
 
       <section id="whatSection">
@@ -295,7 +295,7 @@ const Page: React.FC = () => {
           affordable="Since QC's course is fully online, you don't have to pay surcharges for attending lectures or webinars. You complete the full course from home."
           flexible="No start dates, no deadlines, no mandatory webinars! This course is completely self-directed and self-paced. Get certified quickly, or take your time."
           comprehensive="You'll learn many different facets of skincare to ensure you'll be prepared to work with any client that walks through your doors!"
-          courses={['sk']}
+          courses={[ 'sk' ]}
         />
       </section>
 

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 
 const ScreenWidthStateContext = React.createContext<number | undefined>(undefined);
@@ -6,12 +7,12 @@ const ScreenWidthDispatchContext = React.createContext<((width: number) => void)
 export const ScreenWidthProvider: React.FC = ({ children }) => {
   const [ state, dispatch ] = useState<number>(0);
   useEffect(() => {
-    const handler = () => { dispatch(window.innerWidth); }
+    const handler = (): void => { dispatch(window.innerWidth); };
     window.addEventListener('resize', handler);
     handler();
-    return () => {
+    return (): void => {
       window.removeEventListener('resize', handler);
-    }
+    };
   }, []);
   return (
     <ScreenWidthStateContext.Provider value={state}>
@@ -19,13 +20,17 @@ export const ScreenWidthProvider: React.FC = ({ children }) => {
         {children}
       </ScreenWidthDispatchContext.Provider>
     </ScreenWidthStateContext.Provider>
-  )
+  );
 };
 
-export function useScreenWidth() {
+ScreenWidthProvider.propTypes = {
+  children: PropTypes.node,
+};
+
+export const useScreenWidth = (): number => {
   const context = React.useContext(ScreenWidthStateContext);
   if (context === undefined) {
     throw new Error('useScreenWidth must be used within a ScreenWidthProvider');
   }
   return context;
-}
+};

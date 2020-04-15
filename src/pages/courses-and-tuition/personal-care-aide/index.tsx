@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { DefaultLayout } from '../../../layouts/default';
-import { PaymentPlans } from '../../../components/payment-plans';
-import { WhyChoose } from '../../../components/why-chose';
-import { OutlineData, UnitOutline } from '../../../components/unit-outline';
-import { Included } from '../../../components/included';
-import { Guarantee } from '../../../components/guarantee';
 import { Certification } from '../../../components/certification';
+import { Guarantee } from '../../../components/guarantee';
+import { Included } from '../../../components/included';
+import { PaymentPlans } from '../../../components/payment-plans';
 import { Subnav } from '../../../components/subnav';
+import { OutlineData, UnitOutline } from '../../../components/unit-outline';
+import { WhyChoose } from '../../../components/why-chose';
+import { DefaultLayout } from '../../../layouts/default';
 
 const Page: React.FC = () => {
   const doubleGuarantee = false;
@@ -307,7 +307,7 @@ const Page: React.FC = () => {
   };
 
   return (
-    <DefaultLayout SecondaryNav={() => (
+    <DefaultLayout SecondaryNav={(): React.ReactElement => (
       <Subnav
         heading="Personal Care Aide Course"
         items={[
@@ -336,7 +336,7 @@ const Page: React.FC = () => {
 
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
-        <PaymentPlans courses={['pc']} doubleGuarantee={doubleGuarantee} />
+        <PaymentPlans courses={[ 'pc' ]} doubleGuarantee={doubleGuarantee} />
       </section>
 
       <section id="whatSection">
@@ -467,7 +467,7 @@ const Page: React.FC = () => {
           affordable="Since QC's course is fully online, you don't have to pay surcharges for attending lectures or classroom sessions. You complete the full course from home."
           flexible="No start dates, no deadlines, no mandatory attendance! This course is completely self-directed and self-paced. Get certified quickly, or take your time."
           comprehensive="you're not just learning how one caregiving company wants you do do things. You're getting a foundation of knowledge in caregiving that will be useful no natter where you work!"
-          courses={['pc']}
+          courses={[ 'pc' ]}
         />
       </section>
 

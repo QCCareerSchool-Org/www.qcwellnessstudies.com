@@ -1,9 +1,11 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
-import { Header } from '../components/header';
 import { Footer } from '../components/footer';
+import { Header } from '../components/header';
 
 interface Props {
+  children: React.ReactElement | React.ReactElement[];
   SecondaryNav?: React.FC;
 }
 
@@ -20,3 +22,9 @@ export const DefaultLayout: React.FC<Props> = ({ children, SecondaryNav }) => {
     </>
   );
 };
+
+DefaultLayout.propTypes = {
+  children: PropTypes.element.isRequired,
+  SecondaryNav: PropTypes.func,
+};
+

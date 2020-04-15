@@ -1,8 +1,8 @@
-import React from 'react';
 import { NextPage } from 'next';
+import Link from 'next/link';
+import React from 'react';
 
 import { DefaultLayout } from '../layouts/default';
-import Link from 'next/link';
 
 const Page: NextPage = () => (
   <DefaultLayout>
@@ -179,6 +179,6 @@ const Page: NextPage = () => (
     `}</style>
 
   </DefaultLayout>
-)
+);
 
 export default Page;

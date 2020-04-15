@@ -1,5 +1,5 @@
-import React from 'react';
 import { NextPage } from 'next';
+import React from 'react';
 
 import { TermsLayout } from '../layouts/terms';
 
@@ -44,7 +44,7 @@ const Page: NextPage = () => (
     <p>QC Career School<br />38 McArthur Ave<br />Ottawa ON &nbsp;K1L 6R2<br />Canada</p>
     <p>Email: info@qccareerschool.com<br />Phone: 1-613-749-8248</p>
     <p><em>This policy is powered by Free Privacy Policy and Rhino Support helpdesk software.</em></p>
-    <p><a onClick={() => { window.print(); return false; }} href="#">Print This Page</a></p>
+    <p><a onClick={(): false => { window.print(); return false; }} href="#">Print This Page</a></p>
   </TermsLayout>
 );
 

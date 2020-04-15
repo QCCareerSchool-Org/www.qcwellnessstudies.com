@@ -3,8 +3,10 @@ import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import { useAccordionToggle } from 'react-bootstrap/AccordionToggle';
 import { IoMdAddCircle, IoMdRemoveCircle } from 'react-icons/io';
+import PropTypes from 'prop-types';
 
 interface CustomToggleProps {
+  children: React.ReactNode;
   eventKey: string;
   expanded: boolean;
   onClick: () => void;
@@ -16,28 +18,35 @@ const CustomToggle: React.FC<CustomToggleProps> = ({ children, eventKey, expande
   return (
     <div className="my-1 d-flex align-items-center">
       {expanded ? <IoMdRemoveCircle size={iconSize} /> : <IoMdAddCircle size={iconSize} />}
-      <a className="ml-2" href="#" onClick={(e) => { e.preventDefault(); decoratedOnClick(e); }}>{children}</a>
+      <a className="ml-2" href="#" onClick={(e): void => { e.preventDefault(); decoratedOnClick(e); }}>{children}</a>
     </div>
   );
-}
+};
+
+CustomToggle.propTypes = {
+  children: PropTypes.node,
+  eventKey: PropTypes.string.isRequired,
+  expanded: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
 
 export interface OutlineData {
   title: string;
   topics: Array<string | { title: string; topics: string[] }>;
-};
+}
 
 interface Props {
   data: OutlineData[];
 }
 
 export const UnitOutline: React.FC<Props> = ({ data }) => {
-  const [open, setOpen] = useState<number>();
+  const [ open, setOpen ] = useState<number>();
   return (
     <Accordion>
       {data.map((d, i) => (
         <Card key={i}>
           <Card.Header>
-            <CustomToggle onClick={() => { setOpen((prev) => prev === i ? undefined : i) }} eventKey={i.toString()} expanded={open === i}>{d.title}</CustomToggle>
+            <CustomToggle onClick={(): void => { setOpen((prev) => prev === i ? undefined : i); }} eventKey={i.toString()} expanded={open === i}>{d.title}</CustomToggle>
           </Card.Header>
           <Accordion.Collapse eventKey={i.toString()}>
             <Card.Body>
@@ -65,3 +74,8 @@ export const UnitOutline: React.FC<Props> = ({ data }) => {
     </Accordion>
   );
 };
+
+UnitOutline.propTypes = {
+  data: PropTypes.array.isRequired,
+};
+

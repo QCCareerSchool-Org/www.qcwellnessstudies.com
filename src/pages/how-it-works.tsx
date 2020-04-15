@@ -1,5 +1,5 @@
-import React from 'react';
 import { NextPage } from 'next';
+import React from 'react';
 
 import { DefaultLayout } from '../layouts/default';
 
@@ -111,6 +111,6 @@ const Page: NextPage = () => (
       #certificationSection{background-image: url(${require('../images/bg-white-green-light.jpg')});background-size: cover;}
     `}</style>
   </DefaultLayout>
-)
+);
 
 export default Page;

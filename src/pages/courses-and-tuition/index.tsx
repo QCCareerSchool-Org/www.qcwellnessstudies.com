@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { DefaultLayout } from '../../layouts/default';
 import { PriceCard } from '../../components/price-card';
+import { DefaultLayout } from '../../layouts/default';
 
 const Page: React.FC = () => (
   <DefaultLayout>

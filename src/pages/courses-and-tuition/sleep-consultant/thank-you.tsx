@@ -1,6 +1,7 @@
-import React from 'react';
-import { DefaultLayout } from '../../../layouts/default';
 import { NextPage } from 'next';
+import React from 'react';
+
+import { DefaultLayout } from '../../../layouts/default';
 
 const Page: NextPage = () => (
   <DefaultLayout>

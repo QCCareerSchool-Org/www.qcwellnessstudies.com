@@ -1,7 +1,7 @@
+import Link from 'next/link';
 import React from 'react';
 
 import { DefaultLayout } from '../layouts/default';
-import Link from 'next/link';
 
 const Page: React.FC = () => (
   <DefaultLayout>

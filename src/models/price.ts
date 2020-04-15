@@ -23,7 +23,7 @@ interface Price {
   /** the discounted price (before payment plan discount) */
   discountedCost: number;
   /** the payment plans */
-  plans: { full: Plan; part: Plan; }
+  plans: { full: Plan; part: Plan };
 }
 
 /**

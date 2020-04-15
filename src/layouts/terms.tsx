@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 export const TermsLayout: React.FC = ({ children }) => {
@@ -8,4 +9,8 @@ export const TermsLayout: React.FC = ({ children }) => {
       </div>
     </main>
   );
+};
+
+TermsLayout.propTypes = {
+  children: PropTypes.element,
 };

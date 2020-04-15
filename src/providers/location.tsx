@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
 import fetch from 'isomorphic-unfetch';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
 
 export interface Location {
   countryCode: string;
@@ -14,7 +15,7 @@ const LocationDispatchContext = React.createContext<((location: Location) => voi
 export const LocationProvider: React.FC = ({ children }) => {
   const [ state, dispatch ] = useState<Location | null>(null);
   useEffect(() => {
-    (async () => {
+    (async (): Promise<void> => {
       const url = 'https://api.qccareerschool.com/geoLocation/ip';
       try {
         const response = await fetch(url);
@@ -34,13 +35,17 @@ export const LocationProvider: React.FC = ({ children }) => {
         {children}
       </LocationDispatchContext.Provider>
     </LocationStateContext.Provider>
-  )
+  );
 };
 
-export function useLocation() {
+LocationProvider.propTypes = {
+  children: PropTypes.node,
+};
+
+export const useLocation = (): Location | null => {
   const context = React.useContext(LocationStateContext);
   if (context === undefined) {
     throw new Error('useLocation must be used within a LocationProvider');
   }
   return context;
-}
+};
