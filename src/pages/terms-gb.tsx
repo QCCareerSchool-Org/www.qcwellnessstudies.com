@@ -28,21 +28,16 @@ const Page: NextPage = () => (
     <p>Yes. Cookies are small files that a site or its service provider transfers to your computer's hard drive through your web browser (if you allow) that enables the sites or service providers systems to recognize your browser and capture and remember certain information</p>
     <p>We use cookies to keep track of advertisements and compile aggregate data about site traffic and site interaction so that we can offer better site experiences and tools in the future. We may contract with third-party service providers to assist us in better understanding our site visitors. These service providers are not permitted to use the information collected on our behalf except to help us conduct and improve our business.</p>
     <h2>Do We Disclose any Information to Outside Parties?</h2>
-    <p>We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others rights, property, or safety. However, non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.</p>
-    <h2>California Online Privacy Protection Act Compliance</h2>
-    <p>Because we value your privacy we have taken the necessary precautions to be in compliance with the California Online Privacy Protection Act. We therefore will not distribute your personal information to outside parties without your consent.</p>
-    <p>As part of the California Online Privacy Protection Act, all users of our site may make any changes to their information at anytime by logging into their personal website and going to the ‘Edit Profile' page.</p>
-    <h2>Children's Online Privacy Protection Act Compliance</h2>
-    <p>We are in compliance with the requirements of COPPA (Children's Online Privacy Protection Act), we do not collect any information from anyone under 13 years of age. Our website, products and services are all directed to people who are at least 13 years old or older.</p>
+    <p>We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information. This does not include our parent company, QC Quality of Course Inc, or trusted third parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others rights, property, or safety. However, non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.</p>
     <h2>Your Consent</h2>
     <p>By using our site, you consent to our web site privacy policy.</p>
     <h2>Changes to our Privacy Policy</h2>
     <p>If we decide to change our privacy policy, we will update the Privacy Policy modification date below.</p>
-    <p>This policy was last modified on March 28, 2019.</p>
+    <p>This policy was last modified on June 12, 2019.</p>
     <h2>Contacting Us</h2>
     <p>If there are any questions regarding this privacy policy you may contact us using the information below.</p>
-    <p>QC Career School<br />38 McArthur Ave<br />Ottawa ON &nbsp;K1L 6R2<br />Canada</p>
-    <p>Email: info@qccareerschool.com<br />Phone: 1-613-749-8248</p>
+    <p>QC Quality of Course Ltd<br />R+<br />2 Blagrave Street<br />READING<br />RG1 1AZ</p>
+    <p>Email: info@qccareerschool.com<br />Phone: 0800 066 4734</p>
     <p><em>This policy is powered by Free Privacy Policy and Rhino Support helpdesk software.</em></p>
     <p><a onClick={() => { window.print(); return false; }} href="#">Print This Page</a></p>
   </TermsLayout>

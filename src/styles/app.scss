@@ -133,3 +133,40 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-weight:400}
 }
 
 .price-card .nav-item.nav-link { padding-top: 0.25rem }
+
+
+.terms {
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: black;
+  margin: 0 0 1rem;
+
+  h1, h2, h3 {
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 0 0 1rem;
+  }
+
+  h1 {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid black;
+  }
+
+  h2 {
+    font-weight: 600;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  p,
+  li {
+    margin: 0 0 1rem;
+  }
+}
