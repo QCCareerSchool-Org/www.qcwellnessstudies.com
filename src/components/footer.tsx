@@ -26,13 +26,13 @@ export const Footer: React.FC = () => (
           <p className="text-light"><strong>GETTING STARTED:</strong></p>
           <p><Link href="/faq"><a>Frequently Asked Questions</a></Link></p>
           <p><Link href="/courses-and-tuition"><a>Tuition</a></Link></p>
-          <p><Link href="/about/#guarantee"><a>Money-Back Guarantee</a></Link></p>
+          <p><Link href="/about#guarantee"><a>Money-Back Guarantee</a></Link></p>
           <p className="text-secondary"><strong><a href="https://enroll.qcwellnessstudies.com/">ENROLL NOW</a></strong></p>
         </div>
         <div className="col-12 col-md-4 col-lg-3 mb-4 mb-md-0">
           <p className="text-light"><strong>CONTACT US:</strong></p>
           <p><a href="mailto:info@qcwellnessstudies.com">Send Us a Message</a></p>
-          <p><a href="#" onClick={(): false => { window.LC_API?.open_chat_window(); return false; }}>Click Here to Chat</a></p>
+          <p><a href="#" onClick={(e): void => { e.preventDefault(); window.LC_API?.open_chat_window(); }}>Click Here to Chat</a></p>
           <p><TelephoneNumber /></p>
           <p><a target="_blank" href="/terms" className="termsLink">Privacy Policy</a></p>
         </div>

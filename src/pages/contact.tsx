@@ -10,9 +10,9 @@ declare global {
 
 const Page: NextPage = () => {
 
-  const openLiveChat = (): false => {
+  const openLiveChat = (e: React.MouseEvent): void => {
+    e.preventDefault();
     window?.LC_API?.open_chat_window();
-    return false;
   };
 
   return (
