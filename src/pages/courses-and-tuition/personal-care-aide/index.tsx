@@ -351,7 +351,7 @@ const Page: React.FC = () => {
           <h2 className="text-dark text-center">What Is a Personal Care Aide?</h2>
           <div className="row">
             <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-3 mb-md-0">
-              <p>Personal Care Aides go by many names, depending on your location. As a PCA, you’ll be a part of your client’s wellness team and provide assistance with daily living activities that help your client live a normal and productive life. </p>
+              <p>Personal Care Aides go by many names, depending on your location. As a PCA, you’ll be a part of your client’s wellness team and provide assistance with daily living activities that help your client live a normal and productive life.</p>
               <p>As a PCA, your duties can include any or all of the following:</p>
               <ul>
                 <li>Provide companionship and help keep clients engaged in their community</li>
@@ -407,8 +407,8 @@ const Page: React.FC = () => {
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-7 offset-lg-0">
               <h2>Basic Requirements for Becoming a Personal Care Aide</h2>
-              <p>It’s always a good idea to check local regulations before starting a new profession. </p>
-              <p>Currently in the United States, there are <a className="text-dark" href="https://www.bls.gov/OOH/healthcare/home-health-aides-and-personal-care-aides.htm#tab-4" target="blank">no licensing requirements</a> or training regulations for Personal Care Aides work independently (are employed directly by their client) and bill clients directly. </p>
+              <p>It’s always a good idea to check local regulations before starting a new profession.</p>
+              <p>Currently in the United States, there are <a className="text-dark" href="https://www.bls.gov/OOH/healthcare/home-health-aides-and-personal-care-aides.htm#tab-4" target="blank">no licensing requirements</a> or training regulations for Personal Care Aides work independently (are employed directly by their client) and bill clients directly.</p>
               <p>Personal Care Aide can be an extremely rewarding career but it’s also a very demanding one and not suited to everybody. All successful personal care aides exhibit these basic traits:</p>
               <ul className="mb-4">
                 <li><p><strong>Empathy &amp; Compassion</strong> &mdash; You should be able to put yourself in your clients’ shoes in order to understand their situation. A good Personal Care Aide genuinely cares about people and wants to help their clients in any way they can.</p></li>
@@ -533,8 +533,7 @@ const Page: React.FC = () => {
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit D: Technical Skills</h3>
-              <p className="mb-0">This highly practical unit is where you'll learn the core technical skills any PCA needs to have. When working with individuals who have limited independence, caregivers are sometimes required to help with basic daily tasks such as dressing, toileting, bathing/showering, or helping their client move around, for example. There are very specific methods to follow that are safe and ensure you preserve your client's dignity as you perform these delicate tasks.
-          </p>
+              <p className="mb-0">This highly practical unit is where you'll learn the core technical skills any PCA needs to have. When working with individuals who have limited independence, caregivers are sometimes required to help with basic daily tasks such as dressing, toileting, bathing/showering, or helping their client move around, for example. There are very specific methods to follow that are safe and ensure you preserve your client's dignity as you perform these delicate tasks.</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
               <UnitOutline data={units.d} />
@@ -546,8 +545,7 @@ const Page: React.FC = () => {
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit E: (Optional) Business Training Unit</h3>
-              <p className="mb-0">If you plan on launching your own caregiving business, don't skip this essential final unit! You'll work through the specific elements of getting your business off the ground: from setting your prices to finding your first clients, building your website, marketing your services and much more. This unit can help your career launch in high gear!
-          </p>
+              <p className="mb-0">If you plan on launching your own caregiving business, don't skip this essential final unit! You'll work through the specific elements of getting your business off the ground: from setting your prices to finding your first clients, building your website, marketing your services and much more. This unit can help your career launch in high gear!</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
               <UnitOutline data={units.e} />
@@ -564,12 +562,12 @@ const Page: React.FC = () => {
           <p className="lead mb-5 mx-lg-5">When you enroll, you'll be paired up with one of QC's expert tutors. Your tutor will be responsible for grading your work and providing feedback on your assignments.</p>
           <div className="row text-center">
             <div className="col-12 mb-5 col-md-6 mb-md-0 col-lg-5 offset-lg-1">
-              <p><img className="img-fluid" src="/images/pca-tutor-suzanne-irvine.jpg" alt="Suzanne Irvine" /></p>
+              <p><img className="img-fluid" src={require('../../../images/tutor-suzanne.jpg')} alt="Suzanne Irvine" /></p>
               <h3 className="text-dark">Suzanne Irvine</h3>
               <p>Suzanne is a retired registered nurse with over 35 years of experience in the health care sector. She has extensive experience teaching caregivers of all kinds including nurses, personal support workers and more. During her career in the wellness industry, Suzanne also worked as a disability case manager, assisting clients to return to work when ready. She's excited to assist you in your journey!</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5">
-              <p><img className="img-fluid" src="/images/pca-tutor-aly-lalonde.jpg" alt="Aly Lalonde" /></p>
+              <p><img className="img-fluid" src={require('../../../images/tutor-aly.jpg')} alt="Aly Lalonde" /></p>
               <h3 className="text-dark">Aly Lalonde</h3>
               <p>Aly is a registered nurse who has worked in many areas including emergency medicine, dialysis, and public health. Before completing her studies, Aly worked as a personal support worker in the community as well as in a residence. Having done the job herself, Aly understands just how important and curical PCAs are to the health field and the positive impact these professionals have on patient care. She will be a valuable resource for you as you transition into this important role!</p>
             </div>
