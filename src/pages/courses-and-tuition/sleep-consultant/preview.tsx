@@ -140,7 +140,7 @@ const Page: NextPage = () => {
         <Modal.Body className="p-0">
           <img className="img-fluid d-block" src={require('../../../images/A4.jpg')} alt="Sample Assignment A4" />
         </Modal.Body>
-        <Modal.Footer className="bg-dark text-white justify-content-between">
+        <Modal.Footer className="bg-dark text-white justify-content-between border-0">
           <a href="/sample-assignments/A4.pdf" className="ml-1"><IoMdDownload className="mr-1" />Download A4.pdf</a>
           <button type="button" className="btn btn-secondary" onClick={toggle1}>Close</button>
         </Modal.Footer>
