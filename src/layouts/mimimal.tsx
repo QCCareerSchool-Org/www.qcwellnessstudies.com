@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import { Footer } from '../components/footer';
 import { Header } from '../components/header';
 
 interface Props {
@@ -17,6 +18,7 @@ export const MinimalLayout: React.FC<Props> = ({ children, SecondaryNav }) => {
       <main role="main" className="flex-shrink-0">
         {children}
       </main>
+      <Footer />
     </>
   );
 };

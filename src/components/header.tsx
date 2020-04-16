@@ -23,7 +23,7 @@ export const Header: React.FC<Props> = ({ nav }) => {
         <Navbar.Brand>
           <Link href="/">
             <a>
-              {(screenWidth >= 768 || !nav) && screenWidth < 992
+              {(nav && (screenWidth < 576 || screenWidth >= 768 && screenWidth < 992) || !nav && screenWidth < 768)
                 ? <img className="header-logo" src={require('../images/logo.svg')} />
                 : <img className="header-logo" src={require('../images/logo-lg.svg')} />
               }
