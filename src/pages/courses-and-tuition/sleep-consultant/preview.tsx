@@ -11,10 +11,10 @@ import { HowItWorks } from '../../../components/how-it-works';
 import { PriceCard } from '../../../components/price-card';
 import { SEO } from '../../../components/seo';
 import { Subnav } from '../../../components/subnav';
-import { formatPrice } from '../../../functions';
 import { usePrice } from '../../../hooks/usePrice';
 import { useToggle } from '../../../hooks/useToggle';
 import { MinimalLayout } from '../../../layouts/mimimal';
+import { formatPrice } from '../../../lib/functions';
 import { useLocation } from '../../../providers/location';
 
 const Page: NextPage = () => {

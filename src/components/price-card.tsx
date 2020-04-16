@@ -1,10 +1,11 @@
+import PropTypes from 'prop-types';
 import React, { useRef } from 'react';
+import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import Tab from 'react-bootstrap/Tab'
 
 import { usePrice } from '../hooks/usePrice';
+import { formatPrice } from '../lib/functions';
 import { useLocation } from '../providers/location';
-import { formatPrice } from '../functions';
 
 interface Props {
   courses: string[];
@@ -37,4 +38,8 @@ export const PriceCard: React.FC<Props> = ({ courses }) => {
       </div>
     </div>
   );
-}
+};
+
+PriceCard.propTypes = {
+  courses: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+};

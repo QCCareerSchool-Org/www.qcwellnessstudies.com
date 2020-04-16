@@ -1,7 +1,7 @@
 import React from 'react';
 
+import { getAddress } from '../lib/functions';
 import { useLocation } from '../providers/location';
-import { getAddress } from '../functions';
 
 export const Address: React.FC = () => {
   const location = useLocation();

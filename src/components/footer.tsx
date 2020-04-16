@@ -4,10 +4,6 @@ import React from 'react';
 import { Address } from './address';
 import { TelephoneNumber } from './telephone-number';
 
-declare global {
-  interface Window { LC_API: { open_chat_window: () => void } }
-}
-
 export const Footer: React.FC = () => (
   <footer id="footer" className="footer bg-dark mt-auto">
     <div className="container">

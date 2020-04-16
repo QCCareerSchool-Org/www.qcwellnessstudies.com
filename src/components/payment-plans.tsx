@@ -1,10 +1,11 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
-import { useToggle } from '../hooks/useToggle';
-import { useLocation } from '../providers/location';
 import { usePrice } from '../hooks/usePrice';
+import { useToggle } from '../hooks/useToggle';
+import { formatPrice } from '../lib/functions';
+import { useLocation } from '../providers/location';
 import { GuaranteeModal } from './guarantee-modal';
-import { formatPrice } from '../functions';
 
 interface Props {
   courses: string[];
@@ -53,3 +54,9 @@ export const PaymentPlans: React.FC<Props> = ({ courses, doubleGuarantee }) => {
     </>
   );
 };
+
+PaymentPlans.propTypes = {
+  courses: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  doubleGuarantee: PropTypes.bool.isRequired,
+};
+

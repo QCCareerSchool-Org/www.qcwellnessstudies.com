@@ -4,10 +4,6 @@ import React from 'react';
 import { SEO } from '../components/seo';
 import { DefaultLayout } from '../layouts/default';
 
-declare global {
-  interface Window { LC_API: { open_chat_window: () => void } }
-}
-
 const Page: NextPage = () => {
 
   const openLiveChat = (e: React.MouseEvent): void => {

@@ -1,7 +1,7 @@
 import React from 'react';
 
+import { getTelephoneNumber } from '../lib/functions';
 import { useLocation } from '../providers/location';
-import { getTelephoneNumber } from '../functions';
 
 interface Props {
   link?: boolean;
