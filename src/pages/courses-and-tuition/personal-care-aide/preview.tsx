@@ -61,7 +61,7 @@ const Page: NextPage = () => {
               <h2 className="text-dark">Personal Care Aide Certification Course</h2>
               <p>Sometimes people just need a little extra help in their daily lives. That's where you come in! As a professional personal caer aide, you'll offer your clients assistance in their daily activities, allowing them to maintain their independence and wellbeing. This is an ever in-demand industry with a growing client base for obvious reasons. Experienced PCAs are in incredibly high demand!</p>
               <p>While you can work for an agency, the reality is that you can make a lot more money as a PCA by working independently. QC's online course equips you with everything you need to begin your career as an independent personal care aide. To run an effective caregiving business you must learn about best practices and techniques. You must also know how to communicate with clients and develop the management expertise needed to run a profitable company.</p>
-              <p>This course is perfect for anyone who loves helping people and want to work in the caregiving industry, either part-time or full-time.<strong> This includes:</strong></p>
+              <p>This course is perfect for anyone who loves helping people and want to work in the caregiving industry, either part-time or full-time.<strong> This includes</strong></p>
               <ul>
                 <li>Young professionals looking to enter the caregiving/medical industry</li>
                 <li>Individuals with prior caregiving experience looking for steady work/income</li>
