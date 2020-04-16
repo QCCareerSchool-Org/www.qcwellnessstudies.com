@@ -1,0 +1,48 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "commonjs": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "import/order": ["error", {"alphabetize": { "order": "asc", "caseInsensitive": true }}],
+    "brace-style": ["error", "1tbs", {"allowSingleLine": true}],
+    "object-curly-spacing": ["error", "always"],
+    "array-bracket-spacing": ["error", "always"],
+    "computed-property-spacing": "error",
+    "space-in-parens": "error",
+    "comma-spacing": "error",
+    "comma-dangle": ["error", "only-multiline"],
+    "quotes": ["error", "single"],
+    "quote-props": ["error", "consistent-as-needed"],
+    "semi": "error",
+    "jsx-quotes": "error",
+    "sort-imports": ["error", {
+      "ignoreCase": true,
+      "ignoreDeclarationSort": true,
+      "ignoreMemberSort": false,
+      "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+    }],
+    "react/no-unescaped-entities": 0
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

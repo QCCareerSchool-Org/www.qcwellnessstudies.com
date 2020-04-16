@@ -1,11 +1,19 @@
-import React from 'react';
 import { NextPage } from 'next';
-
-import { DefaultLayout } from '../layouts/default';
 import Link from 'next/link';
+import React from 'react';
+
+import { SEO } from '../components/seo';
+import { DefaultLayout } from '../layouts/default';
 
 const Page: NextPage = () => (
   <DefaultLayout>
+
+    <SEO
+      title="Frequently Asked Questions"
+      description="Find answers to the most frequently asked questions about QC's online training, tuition, and certification courses."
+      canonical="/faq"
+      schemaType="FAQPage"
+    />
 
     <section id="heroSection">
       <div className="container">
@@ -19,7 +27,7 @@ const Page: NextPage = () => (
               <div className="card-body">
                 <h2 className="h4 card-title text-dark sans-serif">Have a question that isn't listed here?</h2>
                 <p className="card-text">Contact QC at any time to speak to a student advisor!</p>
-                <Link href="/contact/"><a className="btn btn-primary">Contact Us</a></Link>
+                <Link href="/contact"><a className="btn btn-primary">Contact Us</a></Link>
               </div>
             </div>
           </div>
@@ -72,12 +80,12 @@ const Page: NextPage = () => (
             <p><i>No! Your certification is yours forever, and you have access to all course resources for life, no extra charge!</i></p>
             <h3 className="h4 text-dark">How much money can I make as a personal care aide?</h3>
             <p><i>That depends on many factors, including your area, the types of services you offer, and your level of experience. PCAs that work for caregiving agencies usually make little above minimum wage. However by providing freelance services you're able to skip the agency "middle man" and charge your clients directly. This allows you to earn a much higher salary! Independent PCAs are often paid as much as $20-$25/hour however some experienced caregivers earn as high as $35-$40 per hour!</i></p>
-            <Link href="/courses-and-tuition/personal-care-aide/"><a className="btn btn-secondary mt-3 mb-3">View Course</a></Link>
+            <Link href="/courses-and-tuition/personal-care-aide"><a className="btn btn-secondary mt-3 mb-3">View Course</a></Link>
             <div className="card">
               <div className="card-body">
                 <h2 className="h4 card-title text-dark sans-serif">Do you have questions not covered above?</h2>
                 <p className="card-text">Contact QC with any questions and concerns you might have! Your student advisor will be happy to assist you.</p>
-                <Link href="/contact/"><a className="btn btn-primary">Contact Us</a></Link>
+                <Link href="/contact"><a className="btn btn-primary">Contact Us</a></Link>
               </div>
             </div>
           </div>
@@ -103,12 +111,12 @@ const Page: NextPage = () => (
             <h3 className="h4 text-dark">How much money can I make as a sleep consultant?</h3>
             <p><i>That depends on many factors, including your area, the types of services you offer, and your level of experience. For example, a sleep consulting professional with several years of experience might earn ~$500 for a remote consultation, to several thousand dollars for a premium package that includes several in-person consultations.</i></p>
             <p><i>There's no question, a qualified sleep consultant in an unsaturated market can make a very comfortable annual salary, even working part-time!</i></p>
-            <Link href="/courses-and-tuition/sleep-consultant/"><a className="btn btn-secondary mt-3 mb-3">View Course</a></Link>
+            <Link href="/courses-and-tuition/sleep-consultant"><a className="btn btn-secondary mt-3 mb-3">View Course</a></Link>
             <div className="card">
               <div className="card-body">
                 <h2 className="h4 card-title text-dark sans-serif">Do you have questions not covered above?</h2>
                 <p className="card-text">Contact QC with any questions and concerns you might have! Your student advisor will be happy to assist you.</p>
-                <Link href="/contact/"><a className="btn btn-primary">Contact Us</a></Link>
+                <Link href="/contact"><a className="btn btn-primary">Contact Us</a></Link>
               </div>
             </div>
           </div>
@@ -127,7 +135,7 @@ const Page: NextPage = () => (
             <p><i>Yes. The Aging in Place course is an advanced course for certified or experienced interior decorating professionals. It is highly suggested that students of the aging in place course either hold an Interior Decorating Certification from a credible institution, or have several years of experience as a professional interior decorator before starting this course.</i></p>
             <h3 className="h4 text-dark">How long will it take me to complete the course?</h3>
             <p><i>Since the Aging in Place course is an advanced training course for experienced designers, you'll be able to get through the course fairly quickly. Most students complete the course within 2-3 months.</i></p>
-            <p className="lead text-dark">You can find more information about the online aging in place course offered through QC Design School <a href="https://www.qcdesignschool.com/online-courses/aging-in-place/">here</a>.</p>
+            <p className="lead text-dark">You can find more information about the online aging in place course offered through QC Design School <a href="https://www.qcdesignschool.com/online-courses/aging-in-place">here</a>.</p>
           </div>
         </div>
       </div>
@@ -143,7 +151,7 @@ const Page: NextPage = () => (
             <p><i>The average time completion for a typical student in the professional organizing course is 3-5 months. However the course is completely self-paced, so a motivated student can complete the course much faster, or you can take as much time as you'd like. It's up to you!</i></p>
             <h3 className="h4 text-dark">How much money can I make as a professional organizer?</h3>
             <p><i>Full-time professional organizers can charge several hundred dollars per hour, depending on the services they offer. Typically an organizer will either work part-time, or will offer additional services such as downsizing/transitional services, interior decorating or home staging services, etc.</i></p>
-            <p className="lead text-dark">You can find more information about the online professional organizing course offered through QC Design School <a href="https://www.qcdesignschool.com/online-courses/professional-organizing/">here</a>.</p>
+            <p className="lead text-dark">You can find more information about the online professional organizing course offered through QC Design School <a href="https://www.qcdesignschool.com/online-courses/professional-organizing">here</a>.</p>
           </div>
         </div>
       </div>
@@ -159,7 +167,7 @@ const Page: NextPage = () => (
             <p><i>Once you graduate, you will be certified to offer consultations on your client's skincare routines, and recommend personalized routines based on their skin types and specific dermatological conditions.</i></p>
             <h3 className="h4 text-dark">Is the skincare certification the same as a cosmetology license?</h3>
             <p><i>No. The skincare course offers a specialized certification in the makeup artistry field. A cosmetology license requires you to attend a full-time in-person program that teaches esthetics for skin, hair, nails, and etc.</i></p>
-            <p className="lead text-dark">You can learn more about the skincare course at QC Makeup Academy <a href="https://www.qcmakeupacademy.com/online-makeup-courses/skincare-course/">here</a>.</p>
+            <p className="lead text-dark">You can learn more about the skincare course at QC Makeup Academy <a href="https://www.qcmakeupacademy.com/online-makeup-courses/skincare-course">here</a>.</p>
           </div>
         </div>
       </div>
@@ -169,7 +177,7 @@ const Page: NextPage = () => (
       <div className="container">
         <h2>Enroll Online!</h2>
         <p className="lead mb-5">Are you ready to start your training in professional wellness?<br />Enroll online today and get started!</p>
-        <p><a href="https://enroll.qcwellnessstudies.com/" className="btn btn-secondary btn-lg">ENROLL NOW</a></p>
+        <p><a href="https://enroll.qcwellnessstudies.com" className="btn btn-secondary btn-lg">ENROLL NOW</a></p>
       </div>
     </section>
 
@@ -179,6 +187,6 @@ const Page: NextPage = () => (
     `}</style>
 
   </DefaultLayout>
-)
+);
 
 export default Page;

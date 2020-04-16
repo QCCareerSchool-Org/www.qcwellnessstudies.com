@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 interface Props {
@@ -20,3 +21,10 @@ export const Certification: React.FC<Props> = ({ shortName, fullName, abbr, regi
     </div>
   </div>
 );
+
+Certification.propTypes = {
+  shortName: PropTypes.string.isRequired,
+  fullName: PropTypes.string.isRequired,
+  abbr: PropTypes.string.isRequired,
+  registered: PropTypes.bool.isRequired,
+};

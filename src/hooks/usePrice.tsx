@@ -1,33 +1,31 @@
 import fetch from 'isomorphic-unfetch';
 import { useEffect, useState } from 'react';
 
-import { getQueryString } from '../functions';
+import { getQueryString } from '../lib/functions';
 import { PriceResult } from '../models/price';
 
-export const usePrice = (courses: string | string[], countryCode?: string, provinceCode?: string | null) => {
+export const usePrice = (courses: string | string[], countryCode?: string, provinceCode?: string | null): PriceResult | undefined => {
   const [ price, setPrice ] = useState<PriceResult>();
 
   useEffect(() => {
     if (countryCode) {
-      fetchPrices();
+      (async (): Promise<void> => {
+        const url = 'https://api.qccareerschool.com/prices';
+        const params = { courses, countryCode, provinceCode };
+        const queryString = getQueryString(params);
+        try {
+          const response = await fetch(`${url}?${queryString}`, {
+            headers: { 'X-API-Version': '2' },
+          });
+          if (response.ok) {
+            setPrice(await response.json());
+          }
+        } catch (err) {
+          console.error('Unable to look up prices', err);
+        }
+      })();
     }
-  }, [ countryCode, provinceCode ]);
-
-  async function fetchPrices() {
-    const url = 'https://api.qccareerschool.com/prices';
-    const params = { courses, countryCode, provinceCode };
-    const queryString = getQueryString(params);
-    try {
-      const response = await fetch(`${url}?${queryString}`, {
-        headers: { 'X-API-Version': '2' },
-      });
-      if (response.ok) {
-        setPrice(await response.json());
-      }
-    } catch (err) {
-      console.error('Unable to look up prices', err);
-    }
-  }
+  }, [ courses, countryCode, provinceCode ]);
 
   return price;
 };

@@ -1,13 +1,14 @@
 import React from 'react';
 
-import { DefaultLayout } from '../../../layouts/default';
-import { Subnav } from '../../../components/subnav';
-import { WhyChoose } from '../../../components/why-chose';
-import { OutlineData, UnitOutline } from '../../../components/unit-outline';
-import { PaymentPlans } from '../../../components/payment-plans';
-import { Included } from '../../../components/included';
-import { Guarantee } from '../../../components/guarantee';
 import { Certification } from '../../../components/certification';
+import { Guarantee } from '../../../components/guarantee';
+import { Included } from '../../../components/included';
+import { PaymentPlans } from '../../../components/payment-plans';
+import { SEO } from '../../../components/seo';
+import { Subnav } from '../../../components/subnav';
+import { OutlineData, UnitOutline } from '../../../components/unit-outline';
+import { WhyChoose } from '../../../components/why-chose';
+import { DefaultLayout } from '../../../layouts/default';
 
 const Page: React.FC = () => {
   const doubleGuarantee = true;
@@ -263,7 +264,7 @@ const Page: React.FC = () => {
   };
 
   return (
-    <DefaultLayout SecondaryNav={() => (
+    <DefaultLayout SecondaryNav={(): React.ReactElement => (
       <Subnav
         heading="Infant Sleep Consultant Course"
         items={[
@@ -273,6 +274,12 @@ const Page: React.FC = () => {
         ]}
       />
     )}>
+
+      <SEO
+        title="Sleep Consultant Course"
+        description="Become a certified professional sleep consultant with QC's online training. QC offers a fully-online sleep consultant course. Get certified faster and launch your own sleep consulting business!"
+        canonical="/courses-and-tuition/sleep-consultant"
+      />
 
       <section id="heroSection">
         <div className="container">

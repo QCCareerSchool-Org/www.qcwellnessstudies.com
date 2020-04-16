@@ -51,8 +51,9 @@ main{margin-top:59px;min-height: 500px}
 .no-nav main{margin-top:0}
 section{padding:48px 0}
 .subNav section:first-of-type{padding-top:105px}
-#footer{padding:48px 0 96px;font-size:14px;color:#ccc}
-#footer strong{font-weight:700}
+.footer{padding:48px 0 96px;color:#ccc}
+.footer strong{font-weight:700}
+#footer{font-size:14px}
 #footer a:link,#footer a:visited{color:#ccc}
 #footer hr{border-color:#6b6b6b;margin:48px 0 24px}
 #mainNav.fixed-top{z-index:1040}
@@ -72,20 +73,20 @@ section{padding:48px 0}
 .header-logo{height:38px}
 #footer-logo{width:100%;max-width:100px}
 td{vertical-align:top}
-.container > p:last-child, .container > ul:last-child, .container > ol:last-child,
-.col > p:last-child, .col > ul:last-child, .col > ol:last-child,
-.col-1 > p:last-child, .col-1 > ul:last-child, .col-1 > ol:last-child,
-.col-2 > p:last-child, .col-2 > ul:last-child, .col-2 > ol:last-child,
-.col-3 > p:last-child, .col-3 > ul:last-child, .col-3 > ol:last-child,
-.col-4 > p:last-child, .col-4 > ul:last-child, .col-4 > ol:last-child,
-.col-5 > p:last-child, .col-5 > ul:last-child, .col-5 > ol:last-child,
-.col-6 > p:last-child, .col-6 > ul:last-child, .col-6 > ol:last-child,
-.col-7 > p:last-child, .col-7 > ul:last-child, .col-7 > ol:last-child,
-.col-8 > p:last-child, .col-8 > ul:last-child, .col-8 > ol:last-child,
-.col-9 > p:last-child, .col-9 > ul:last-child, .col-9 > ol:last-child,
-.col-10 > p:last-child, .col-10 > ul:last-child, .col-10 > ol:last-child,
-.col-11 > p:last-child, .col-11 > ul:last-child, .col-11 > ol:last-child,
-.col-12 > p:last-child, .col-12 > ul:last-child, .col-12 > ol:last-child{margin-bottom:0}
+// .container > p:last-child, .container > ul:last-child, .container > ol:last-child,
+// .col > p:last-child, .col > ul:last-child, .col > ol:last-child,
+// .col-1 > p:last-child, .col-1 > ul:last-child, .col-1 > ol:last-child,
+// .col-2 > p:last-child, .col-2 > ul:last-child, .col-2 > ol:last-child,
+// .col-3 > p:last-child, .col-3 > ul:last-child, .col-3 > ol:last-child,
+// .col-4 > p:last-child, .col-4 > ul:last-child, .col-4 > ol:last-child,
+// .col-5 > p:last-child, .col-5 > ul:last-child, .col-5 > ol:last-child,
+// .col-6 > p:last-child, .col-6 > ul:last-child, .col-6 > ol:last-child,
+// .col-7 > p:last-child, .col-7 > ul:last-child, .col-7 > ol:last-child,
+// .col-8 > p:last-child, .col-8 > ul:last-child, .col-8 > ol:last-child,
+// .col-9 > p:last-child, .col-9 > ul:last-child, .col-9 > ol:last-child,
+// .col-10 > p:last-child, .col-10 > ul:last-child, .col-10 > ol:last-child,
+// .col-11 > p:last-child, .col-11 > ul:last-child, .col-11 > ol:last-child,
+// .col-12 > p:last-child, .col-12 > ul:last-child, .col-12 > ol:last-child{margin-bottom:0}
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-weight:400}
 
 .price{font-size:48px;line-height:48px;font-family:Lato}

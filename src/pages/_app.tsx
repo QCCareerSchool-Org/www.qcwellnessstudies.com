@@ -1,13 +1,16 @@
+import { AppProps } from 'next/app';
 import React from 'react';
 
 import '../styles/app.scss';
-import { ScreenWidthProvider } from '../providers/screen-width';
+import GoogleTagManager from '../components/google-tag-manager';
 import { LocationProvider } from '../providers/location';
+import { ScreenWidthProvider } from '../providers/screen-width';
 
-const MyApp = ({ Component, pageProps }: { Component: any, pageProps: any }) => {
+const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <ScreenWidthProvider>
       <LocationProvider>
+        <GoogleTagManager gtmId="GTM-P9J948Z" />
         <Component {...pageProps} />
       </LocationProvider>
     </ScreenWidthProvider>
@@ -26,4 +29,4 @@ const MyApp = ({ Component, pageProps }: { Component: any, pageProps: any }) => 
 //   return { ...appProps }
 // }
 
-export default MyApp
+export default MyApp;

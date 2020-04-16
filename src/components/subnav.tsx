@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
 import Link from 'next/link';
-import Navbar from 'react-bootstrap/Navbar';
+import PropTypes from 'prop-types';
+import React, { useRef } from 'react';
 import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 interface Props {
   heading: string;
@@ -31,4 +32,12 @@ export const Subnav: React.FC<Props> = ({ heading, items }) => {
       `}</style>
     </Navbar>
   );
+};
+
+Subnav.propTypes = {
+  heading: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+  }).isRequired).isRequired,
 };

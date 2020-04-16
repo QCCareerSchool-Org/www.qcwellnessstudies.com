@@ -1,10 +1,17 @@
 import React from 'react';
 
-import { DefaultLayout } from '../../layouts/default';
 import { PriceCard } from '../../components/price-card';
+import { SEO } from '../../components/seo';
+import { DefaultLayout } from '../../layouts/default';
 
 const Page: React.FC = () => (
   <DefaultLayout>
+
+    <SEO
+      title="Courses &amp; Tuition"
+      description="QC offers many courses in the wellness industry. Whether you want to become a sleep consultant, skincare consultant, aging in place designer or other wellness professional, you'll find your dream career with QC's training!"
+      canonical="/courses-and-tuition"
+    />
 
     <section id="heroSection" className="bg-light">
       <div className="container">

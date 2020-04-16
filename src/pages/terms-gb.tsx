@@ -1,10 +1,18 @@
-import React from 'react';
 import { NextPage } from 'next';
+import React from 'react';
 
+import { SEO } from '../components/seo';
 import { TermsLayout } from '../layouts/terms';
 
 const Page: NextPage = () => (
   <TermsLayout>
+
+    <SEO
+      title="Privacy Policy"
+      description="QC Wellness Studies's comprehensive privacy policy"
+      canonical="/terms"
+    />
+
     <h1>Privacy Policy</h1>
     <h2>What Information Do We Collect?</h2>
     <p>We collect information from you when you register on our site, place an order, subscribe to our newsletter or respond to a survey.</p>
@@ -39,7 +47,7 @@ const Page: NextPage = () => (
     <p>QC Quality of Course Ltd<br />R+<br />2 Blagrave Street<br />READING<br />RG1 1AZ</p>
     <p>Email: info@qccareerschool.com<br />Phone: 0800 066 4734</p>
     <p><em>This policy is powered by Free Privacy Policy and Rhino Support helpdesk software.</em></p>
-    <p><a onClick={() => { window.print(); return false; }} href="#">Print This Page</a></p>
+    <p><a onClick={(): false => { window.print(); return false; }} href="#">Print This Page</a></p>
   </TermsLayout>
 );
 

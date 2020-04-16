@@ -1,11 +1,14 @@
 {
   "version": 2,
+  "trailingSlash": false,
   "redirects": [
-    { "source": "/get-a-personal-care-aide-course-preview", "destination": "/courses-and-tuition/personal-care-aide/get-a-preview" },
-    { "source": "/get-a-sleep-consultant-course-preview", "destination": "/courses-and-tuition/sleep-consultant/get-a-preview" },
     { "source": "/personal-care-aide-course-preview", "destination": "/courses-and-tuition/personal-care-aide/preview" },
     { "source": "/sleep-consultant-course-preview", "destination": "/courses-and-tuition/sleep-consultant/preview" },
     { "source": "/thank-you-personal-care-aide-course", "destination": "/courses-and-tuition/personal-care-aide/thank-you" },
     { "source": "/thank-you-sleep-consultant-course", "destination": "/courses-and-tuition/sleep-consultant/thank-you" }
+  ],
+  "rewrites": [
+    { "source": "/get-a-personal-care-aide-course-preview", "destination": "/courses-and-tuition/personal-care-aide/get-a-preview" },
+    { "source": "/get-a-sleep-consultant-course-preview", "destination": "/courses-and-tuition/sleep-consultant/get-a-preview" }
   ]
 }

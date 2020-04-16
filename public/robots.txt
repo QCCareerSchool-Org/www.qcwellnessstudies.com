@@ -1,0 +1,4 @@
+Sitemap: https://www.qcwellnessstudies.com/sitemap.xml
+
+User-agent:*
+Disallow:
