@@ -1,2 +1,25 @@
 const withImages = require('next-images');
-module.exports = withImages();
+const withPurgeCss = require('next-purgecss');
+module.exports = withPurgeCss(withImages({
+  purgeCssPaths: [
+    'src/**/*',
+    // 'src/pages/**/*',
+    // 'src/components/**/*',
+    // 'src/layouts/**/*',
+  ],
+  purgeCss: {
+    whitelistPatterns: () => [ /^nav-/, /^navbar-/, /^dropdown-/ ],
+    whitelist: () => [
+      'nav',
+      'navbar',
+      'dropdown',
+      'tab-content',
+      'tab-pane',
+      'fade',
+      'active',
+      'collapsing',
+      'collapse',
+      'show'
+    ],
+  }
+}));
