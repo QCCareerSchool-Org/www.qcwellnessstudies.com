@@ -3,6 +3,7 @@ import { NextPage } from 'next';
 import ErrorPage from 'next/error';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { SEO } from '../components/seo';
 import { TelephoneNumber } from '../components/telephone-number';
 import { DefaultLayout } from '../layouts/default';
 
@@ -75,6 +76,13 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
 
   return (
     <DefaultLayout>
+
+      <SEO
+        title="Welcome to the School"
+        description="Your enrollment has been received and will be processed quickly. You will receive an email within the next business day containing login information to your online student center."
+        canonical="/welcome-to-the-school"
+        noIndex={true}
+      />
 
       <section id="thankyouSection">
         <div className="container">
