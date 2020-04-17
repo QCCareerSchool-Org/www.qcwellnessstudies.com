@@ -32,9 +32,9 @@ export const Header: React.FC<Props> = ({ nav }) => {
         </Navbar.Brand>
         {nav
           ? (
-            <div data-testid="main-nav">
+            <>
               <Navbar.Toggle aria-controls="main-navbar-nav" />
-              <Navbar.Collapse id="main-navbar-nav">
+              <Navbar.Collapse id="main-navbar-nav" data-testid="main-nav">
                 <Nav className="ml-auto mr-md-2 mr-lg-4">
                   <NavDropdown title="Courses &amp; Tuition" id="coursesDropdown">
                     <Link href="/courses-and-tuition"><a className="dropdown-item">All Courses &amp; Tuition</a></Link>
@@ -55,7 +55,7 @@ export const Header: React.FC<Props> = ({ nav }) => {
                 </Nav>
                 <a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com">Enroll Online</a>
               </Navbar.Collapse>
-            </div>
+            </>
           )
           : (
             <div className="ml-auto text-muted">Call Us Toll Free:&nbsp; <a className="text-white" href={`tel:${telephoneNumber}`}>{telephoneNumber}</a></div>
