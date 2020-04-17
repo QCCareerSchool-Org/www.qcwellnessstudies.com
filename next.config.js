@@ -19,7 +19,8 @@ module.exports = withPurgeCss(withImages({
       'active',
       'collapsing',
       'collapse',
-      'show'
+      'show',
+      'fixed-top',
     ],
-  }
+  },
 }));
