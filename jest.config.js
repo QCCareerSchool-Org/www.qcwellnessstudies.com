@@ -11,7 +11,7 @@ module.exports = {
   ],
   moduleNameMapper: {
     '\.(css|less|scss)$': require.resolve('./test/style.module.js'),
-    '\.(jpg|svg)$': require.resolve('./test/style.module.js'),
-    '\.(jpg|svg)\?webp$': require.resolve('./test/style.module.js'),
+    '\.(jpg|svg|png)$': require.resolve('./test/style.module.js'),
+    '\.(jpg|svg|png)\?webp$': require.resolve('./test/style.module.js'),
   },
 };

@@ -1,3 +1,4 @@
+// needed for jest
 {
   "presets": [
     "next/babel"

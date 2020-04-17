@@ -113,5 +113,4 @@ describe('<Header>', () => {
     const { queryByTestId } = render(<Header nav={false} />);
     expect(queryByTestId(/main-nav/i)).toBeFalsy();
   });
-
 });
