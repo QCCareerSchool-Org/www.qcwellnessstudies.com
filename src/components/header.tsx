@@ -24,15 +24,15 @@ export const Header: React.FC<Props> = ({ nav }) => {
           <Link href="/">
             <a>
               {(nav && (screenWidth < 576 || screenWidth >= 768 && screenWidth < 992) || !nav && screenWidth < 768)
-                ? <img className="header-logo" src={require('../images/logo.svg')} />
-                : <img className="header-logo" src={require('../images/logo-lg.svg')} />
+                ? <img data-testid="header-logo-sm" className="header-logo" src={require('../images/logo.svg')} alt="QC Wellness Studies" />
+                : <img data-testid="header-logo-lg" className="header-logo" src={require('../images/logo-lg.svg')} alt="QC Wellness Studies" />
               }
             </a>
           </Link>
         </Navbar.Brand>
         {nav
           ? (
-            <>
+            <div data-testid="main-nav">
               <Navbar.Toggle aria-controls="main-navbar-nav" />
               <Navbar.Collapse id="main-navbar-nav">
                 <Nav className="ml-auto mr-md-2 mr-lg-4">
@@ -55,7 +55,7 @@ export const Header: React.FC<Props> = ({ nav }) => {
                 </Nav>
                 <a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com">Enroll Online</a>
               </Navbar.Collapse>
-            </>
+            </div>
           )
           : (
             <div className="ml-auto text-muted">Call Us Toll Free:&nbsp; <a className="text-white" href={`tel:${telephoneNumber}`}>{telephoneNumber}</a></div>

@@ -5,7 +5,7 @@ import gtmParts from 'react-google-tag-manager';
 interface Props {
   gtmId: string;
   dataLayerName?: string;
-  additionalEvents?: any;
+  additionalEvents?: any; // eslint-disable-line @typescript-eslint/no-explicit-any
   previewVariables?: string;
   scriptId?: string;
 }
