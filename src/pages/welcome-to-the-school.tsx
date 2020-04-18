@@ -1,3 +1,4 @@
+import * as HttpStatus from '@qccareerschool/http-status';
 import fetch from 'isomorphic-unfetch';
 import { NextPage } from 'next';
 import ErrorPage from 'next/error';
@@ -20,11 +21,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
   }
 
   if (!enrollment) {
-    return <ErrorPage statusCode={500} />;
-  }
-
-  if (!enrollment.complete || !enrollment.success) {
-    return <ErrorPage statusCode={400} />;
+    return null;
   }
 
   const paymentDate = new Date(enrollment.paymentDate);
@@ -169,19 +166,28 @@ Page.propTypes = {
   errorCode: PropTypes.number,
 };
 
-Page.getInitialProps = async ({ query }): Promise<Props> => {
+Page.getInitialProps = async ({ res, query }): Promise<Props> => {
   const url = `https://api.qccareerschool.com/enrollments/${query.enrollmentId}?code=${query.code}`;
   try {
     const response = await fetch(url, {
       headers: { 'X-API-Version': '2' },
     });
     if (!response.ok) {
-      return { errorCode: response.status };
+      console.log(response.statusText);
+      throw new HttpStatus.HttpResponse(response.status, response.statusText);
     }
     const enrollment: Enrollment = await response.json();
+    if (!enrollment.complete || !enrollment.success) {
+      throw new HttpStatus.NotFound();
+    }
     return { enrollment };
   } catch (err) {
-    return { errorCode: 500 };
+    console.log(err);
+    const errorCode = typeof err.statusCode === 'undefined' ? 500 : err.statusCode;
+    if (res) {
+      res.statusCode = errorCode;
+    }
+    return { errorCode };
   }
 };
 

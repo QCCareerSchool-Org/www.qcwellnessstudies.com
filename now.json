@@ -1,6 +1,11 @@
 {
   "version": 2,
   "trailingSlash": false,
+  "build": {
+    "env": {
+      "NPM_TOKEN": "@npm_token"
+    }
+  },
   "redirects": [
     { "source": "/personal-care-aide-course-preview", "destination": "/courses-and-tuition/personal-care-aide/preview" },
     { "source": "/sleep-consultant-course-preview", "destination": "/courses-and-tuition/sleep-consultant/preview" },
