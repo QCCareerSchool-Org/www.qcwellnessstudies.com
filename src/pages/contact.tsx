@@ -16,8 +16,12 @@ const Page: NextPage = () => {
 
       <SEO
         title="Contact Us"
-        description="You can contact QC at any time by phone, email or live chat.  Or, schedule a call with a student advisor and we'll call you!"
+        description="You can contact QC at any time by phone, email or live chat. Or, schedule a call with a student advisor and we'll call you!"
         canonical="/contact"
+        image={{
+          src: require('../images/feature/contact.png'),
+          alt: 'lady in a black and white checkered dress leaning back on the floor with her hands resting on a laptop',
+        }}
         schemaType="ContactPage"
       />
 
