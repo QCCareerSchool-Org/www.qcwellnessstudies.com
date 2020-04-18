@@ -31,17 +31,17 @@ const Page: NextPage = () => {
           <p className="lead">Our student advisors are happy to answer all of your questions!</p>
           <div className="row mb-4">
             <div className="col-12 mb-4 col-lg-4 mb-lg-0">
-              <a className="telephone-link" href="tel:1-800-267-1829"><img src={require('../images/icon-phone.svg')} className="img-fluid" alt="Phone" /></a>
+              <a className="telephone-link" href="tel:1-800-267-1829"><img src={require('../images/icon-phone.svg')} className="img-fluid" alt="cell phone" /></a>
               <h3 className="text-dark text-center">By Phone</h3>
               <p className="text-dark text-center"><a className="telephone-link" href="tel:1-800-267-1829"><span className="telephone-text">1-800-267-1829</span></a></p>
             </div>
             <div className="col-12 mb-4 col-lg-4 mb-lg-0">
-              <a href="mailto:info@qcwellnessstudies.com"><img src={require('../images/icon-email.svg')} className="text-center" alt="Email" /></a>
+              <a href="mailto:info@qcwellnessstudies.com"><img src={require('../images/icon-email.svg')} className="text-center" alt="paper envelope with @ symbol" /></a>
               <h3 className="text-dark text-center">By Email</h3>
               <p className="text-dark text-center"><a href="mailto:info@qcwellnessstudies.com">info@qcwellnessstudies.com</a></p>
             </div>
             <div className="col-12 mb-4 col-lg-4 mb-lg-0">
-              <a href="#" onClick={openLiveChat}><img src={require('../images/icon-live-chat.svg')} className="img-fluid" alt="Live Chat" /></a>
+              <a href="#" onClick={openLiveChat}><img src={require('../images/icon-live-chat.svg')} className="img-fluid" alt="two overlapping speach bubbles" /></a>
               <h3 className="text-dark text-center">Live Chat</h3>
               <p className="text-dark text-center"><a href="#" onClick={openLiveChat}>Chat with a Student Support Specialist</a></p>
             </div>
@@ -54,7 +54,7 @@ const Page: NextPage = () => {
         <div className="container">
           <div className="row">
             <div className="text-center text-dark col-lg-10 offset-lg-1">
-              <img src={require('../images/icon-schedule.svg')} className="text-center" alt="Calendar icon" />
+              <img src={require('../images/icon-schedule.svg')} className="text-center" alt="calendar with clock" />
               <h2>Schedule a Call with a Student Advisor</h2>
               <p className="lead">Would you like to speak to a student advisor about your options in online wellness training? Fill out this form and we'll call you at your convenience!</p>
               <p><strong>Please note:</strong> QC's offices are not open 24/7. We'll do our best to call you at the specific times you request, but if our offices will be closed at the time you request, we'll contact you via e-mail to reschedule!</p>
