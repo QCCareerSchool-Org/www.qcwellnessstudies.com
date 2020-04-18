@@ -2,7 +2,8 @@
   "env": {
     "node": true,
     "browser": true,
-    "commonjs": true
+    "commonjs": true,
+    "jest/globals": true
   },
   "parser": "@typescript-eslint/parser",
   "extends": [
@@ -11,6 +12,9 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:import/recommended",
     "plugin:import/typescript"
+  ],
+  "plugins": [
+    "jest"
   ],
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -38,8 +42,19 @@
       "ignoreMemberSort": false,
       "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
     }],
-    "react/no-unescaped-entities": 0
+    "react/no-unescaped-entities": 0,
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-var-requires": "off"
   },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": ["error"],
+        "@typescript-eslint/no-var-requires": ["error"]
+      }
+    }
+  ],
   "settings": {
     "react": {
       "version": "detect"

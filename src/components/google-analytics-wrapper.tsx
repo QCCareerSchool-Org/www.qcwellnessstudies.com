@@ -8,7 +8,7 @@ router.events.on('routeChangeComplete', (url) => {
   gtag.pageview(url);
 });
 
-export const GoogleAnalyticsWrapper: React.FC = ({ children }) => (<>{children}</>);
+export const GoogleAnalyticsWrapper: React.FC = ({ children }) => <>{children}</>;
 
 GoogleAnalyticsWrapper.propTypes = {
   children: PropTypes.oneOfType([ PropTypes.element, PropTypes.arrayOf(PropTypes.element) ]),

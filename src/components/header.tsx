@@ -24,8 +24,8 @@ export const Header: React.FC<Props> = ({ nav }) => {
           <Link href="/">
             <a>
               {(nav && (screenWidth < 576 || screenWidth >= 768 && screenWidth < 992) || !nav && screenWidth < 768)
-                ? <img className="header-logo" src={require('../images/logo.svg')} />
-                : <img className="header-logo" src={require('../images/logo-lg.svg')} />
+                ? <img data-testid="header-logo-sm" className="header-logo" src={require('../images/logo.svg')} alt="QC Wellness Studies" />
+                : <img data-testid="header-logo-lg" className="header-logo" src={require('../images/logo-lg.svg')} alt="QC Wellness Studies" />
               }
             </a>
           </Link>
@@ -34,7 +34,7 @@ export const Header: React.FC<Props> = ({ nav }) => {
           ? (
             <>
               <Navbar.Toggle aria-controls="main-navbar-nav" />
-              <Navbar.Collapse id="main-navbar-nav">
+              <Navbar.Collapse id="main-navbar-nav" data-testid="main-nav">
                 <Nav className="ml-auto mr-md-2 mr-lg-4">
                   <NavDropdown title="Courses &amp; Tuition" id="coursesDropdown">
                     <Link href="/courses-and-tuition"><a className="dropdown-item">All Courses &amp; Tuition</a></Link>
