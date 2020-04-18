@@ -1,6 +1,6 @@
 {
   "name": "www.qcwellnessstudies.com",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,8 +11,8 @@
     "start": "next start"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "QC Career School",
+  "license": "UNLICENSED",
   "dependencies": {
     "@types/prop-types": "^15.7.3",
     "@types/react": "^16.9.34",
