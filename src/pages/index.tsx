@@ -33,22 +33,22 @@ const Page: NextPage = () => (
           <div className="col-12 mb-5 col-md-6 mb-md-0 col-lg-5 offset-lg-1 mb-5">
             <h3 className="h4 text-dark">Personal Care Aide <span className="badge badge-secondary text sans-serif">NEW</span></h3>
             <p>A personal care aide is a caregiving professional who helps clients keep their independence by helping them with daily activities and tasks they have difficulties completing on their own. This is a thriving industry!</p>
-            <p className="text-uppercase"><Link href="/courses-and-tuition/personal-care-aide/"><a className="text-info"><strong>view course</strong></a></Link></p>
+            <p className="text-uppercase"><Link href="/courses-and-tuition/personal-care-aide"><a className="text-info"><strong>view course</strong></a></Link></p>
           </div>
           <div className="col-12 col-md-6 col-lg-5 mb-5 ">
             <h3 className="h4 text-dark">Sleep Consultant </h3>
             <p>A professional sleep consultant helps parents and caregivers set healthy and save sleep habits for their infants and toddlers, contributing to every family member's physical, mental and emotional wellness!</p>
-            <p className="text-uppercase"><Link href="/courses-and-tuition/sleep-consultant/"><a className="text-info"><strong>view course</strong></a></Link></p>
+            <p className="text-uppercase"><Link href="/courses-and-tuition/sleep-consultant"><a className="text-info"><strong>view course</strong></a></Link></p>
           </div>
           <div className="col-12 mb-5 col-md-6 mb-md-0 col-lg-5 offset-lg-1">
             <h3 className="h4 text-dark">Skincare Consultant</h3>
             <p>Skincare consultants help improve clients' emotional and physical wellness by working with them to gain healthy, glowing skin with the help of a personalized skincare plan designed for the client's unique needs.</p>
-            <p className="text-uppercase"><Link href="/courses-and-tuition/skincare-consultant/"><a className="text-info"><strong>view course</strong></a></Link></p>
+            <p className="text-uppercase"><Link href="/courses-and-tuition/skincare-consultant"><a className="text-info"><strong>view course</strong></a></Link></p>
           </div>
           <div className="col-12 col-md-6 col-lg-5">
             <h3 className="h4 text-dark">Aging in Place Designer</h3>
             <p>An aging in place designer specializes in helping clients with aging concerns maintain their independence as long as possible, which is beneficial to clients' physical, emotional and environmental wellness.</p>
-            <p className="text-uppercase"><Link href="/courses-and-tuition/aging-in-place/"><a className="text-info"><strong>view course</strong></a></Link></p>
+            <p className="text-uppercase"><Link href="/courses-and-tuition/aging-in-place"><a className="text-info"><strong>view course</strong></a></Link></p>
           </div>
         </div>
       </div>
