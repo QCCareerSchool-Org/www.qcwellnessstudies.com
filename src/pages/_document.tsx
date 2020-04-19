@@ -19,7 +19,7 @@ class MyDocument extends Document {
           <script src="/scripts.js" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Playfair+Display:400,700,900"></link>
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
-          <script dangerouslySetInnerHTML={{ __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${GA_TRACKING_ID}'); gtag('config', 'AW-1071836607');` }} />
+          <script dangerouslySetInnerHTML={{ __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${GA_TRACKING_ID}', {'send_page_view': window.location.hostname !== 'localhost'}); gtag('config', 'AW-1071836607');` }} />
         </Head>
         <body className="d-flex flex-column h-100">
           <Main />

@@ -5,8 +5,9 @@ import React from 'react';
 import * as gtag from '../lib/gtag';
 
 router.events.on('routeChangeComplete', (url) => {
-  if (window?.location?.hostname !== 'localhost') {
-    gtag.pageview(url);
+  if (window.location.hostname !== 'localhost') {
+    const pageview = `${window.location.protocol}//${window.location.hostname}${url}`;
+    gtag.pageview(pageview);
   }
 });
 
