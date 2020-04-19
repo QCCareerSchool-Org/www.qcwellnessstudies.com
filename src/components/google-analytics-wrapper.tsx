@@ -5,7 +5,9 @@ import React from 'react';
 import * as gtag from '../lib/gtag';
 
 router.events.on('routeChangeComplete', (url) => {
-  gtag.pageview(url);
+  if (window?.location?.hostname !== 'localhost') {
+    gtag.pageview(url);
+  }
 });
 
 export const GoogleAnalyticsWrapper: React.FC = ({ children }) => <>{children}</>;
