@@ -29,12 +29,12 @@ const Page: React.FC = () => {
               'Licensing requirements',
               'Business needs',
               'Expansion opportunities',
-              'Additional certifications to consider'
-            ]
+              'Additional certifications to consider',
+            ],
           },
           'Sleep consulting services',
-          'Associations & organizations'
-        ]
+          'Associations & organizations',
+        ],
       },
       {
         title: 'Infant & toddler sleep habits & behaviors',
@@ -49,8 +49,8 @@ const Page: React.FC = () => {
           'Types of sleep',
           'Ideal sleep schedules for infants',
           'Understanding the effects of sleep',
-          'A holistic vision of sleep habits and behaviors'
-        ]
+          'A holistic vision of sleep habits and behaviors',
+        ],
       },
       {
         title: 'Sleep training methods & philosophies',
@@ -63,8 +63,8 @@ const Page: React.FC = () => {
           'The "Chair" method',
           'The "Fading" method',
           'The "Pick Up Put Down" method',
-          'The "No cry" method(s)'
-        ]
+          'The "No cry" method(s)',
+        ],
       },
       {
         title: 'Sleep spaces',
@@ -80,9 +80,9 @@ const Page: React.FC = () => {
           'Creating the perfect room for sleep: From nursery décor to choosing the right crib/bed',
           'The home environment: beyond the nursery',
           'Starting & following a sleep routine',
-          'Changing & modifying a routine'
-        ]
-      }
+          'Changing & modifying a routine',
+        ],
+      },
     ],
     b: [
       {
@@ -98,8 +98,8 @@ const Page: React.FC = () => {
           'Tracking a sleep plan',
           'Components of an effective sleep log',
           'Evaluating a sleep plan based on feedback from the caregiver',
-          'Revising a sleep plan once it\'s been implemented'
-        ]
+          'Revising a sleep plan once it\'s been implemented',
+        ],
       },
       {
         title: 'Implementation of sleep training',
@@ -115,8 +115,8 @@ const Page: React.FC = () => {
           'Materials to provide clients at the start of a sleep plan',
           'Providing feedback during the first days of the plan',
           'Creating and reviewing sleep logs',
-          'Conducting a follow-up to sleep training'
-        ]
+          'Conducting a follow-up to sleep training',
+        ],
       },
       {
         title: 'Special situations',
@@ -137,9 +137,9 @@ const Page: React.FC = () => {
           'Creating effective solutions for a single caregiver using a dual parent model',
           'Adapting sleep training plans for one caregiver',
           'Adapting sleep training plans for single parent households with multiple children',
-          'Working with multiple non-parent caregivers'
-        ]
-      }
+          'Working with multiple non-parent caregivers',
+        ],
+      },
     ],
     c: [
       {
@@ -150,8 +150,8 @@ const Page: React.FC = () => {
           'Case Study: Rejection of methods by parents',
           'Case Study: Lifestyle changes',
           'Cast Study: Other medical issues',
-          'Case Study: Competition '
-        ]
+          'Case Study: Competition ',
+        ],
       },
       {
         title: 'Getting to know your clients',
@@ -165,8 +165,8 @@ const Page: React.FC = () => {
           'Development of the child in each age group',
           'Tracking and analysis: tools, templates, and how to use client data',
           'Ideal sleep schedules for infants',
-          'Client feedback: Getting and using honest feedback from clients'
-        ]
+          'Client feedback: Getting and using honest feedback from clients',
+        ],
       },
       {
         title: 'Effective consulting',
@@ -180,9 +180,9 @@ const Page: React.FC = () => {
           'Development of the child in each age group',
           'Planning, setting goals, and creating strategies',
           'Implementing feedback to encourage growth & change behavior',
-          'Working with limitations (your own and your clients\')'
-        ]
-      }
+          'Working with limitations (your own and your clients\')',
+        ],
+      },
     ],
     d: [
       {
@@ -195,7 +195,7 @@ const Page: React.FC = () => {
               'Identifying the core values of your business',
               'Naming your business',
               'Creating a business plan',
-            ]
+            ],
           },
           'Assessing needs in your community: Needs, competition, and gaps in the market',
           'Defining your methods and plans',
@@ -207,13 +207,13 @@ const Page: React.FC = () => {
               'Your social media presence',
               'Traditional print resources (books, pamphlets, etc.)',
               'Setting up your business space',
-              'Creating materials'
-            ]
+              'Creating materials',
+            ],
           },
           'Setting limits: Minimum/maximum number of clients, outlining your budget and expected income',
           'Creating realistic business goals',
 
-        ]
+        ],
       },
       {
         title: 'Licensing, restrictions & legal aspects',
@@ -223,8 +223,8 @@ const Page: React.FC = () => {
           'Professional associations & organizations',
           'Client contracts & other legal documents',
           'Insurance considerations',
-          'Health care training: CPR, first aid, and other certifications to consider'
-        ]
+          'Health care training: CPR, first aid, and other certifications to consider',
+        ],
 
       },
       {
@@ -237,7 +237,7 @@ const Page: React.FC = () => {
               'How clients find you (Print/Web/Social Media)',
               'How to advertise your services',
               'How to find clients (online and in person)',
-            ]
+            ],
           },
           {
             title: 'Tips for advertising',
@@ -246,7 +246,7 @@ const Page: React.FC = () => {
               'Where to advertise',
               'Effective advertising for small businesses',
               'Advertising budgets',
-            ]
+            ],
           },
           {
             title: 'Your website and social media presence',
@@ -254,12 +254,12 @@ const Page: React.FC = () => {
               'How to build an effective website',
               'How to start a business using social media',
               'Keys to an effective online presence',
-            ]
+            ],
           },
           'Community outreach: Community events, groups, and online groups and events',
-          'Partnering: Identifying key partners, developing relationships with local businesses, and creating joint advertising with other small businesses'
-        ]
-      }
+          'Partnering: Identifying key partners, developing relationships with local businesses, and creating joint advertising with other small businesses',
+        ],
+      },
     ],
   };
 

@@ -29,10 +29,10 @@ const Page: React.FC = () => {
               'Certifications & education',
               'Career paths',
               'Expanding into healthcare',
-              'Where to begin'
-            ]
+              'Where to begin',
+            ],
           },
-        ]
+        ],
       },
       {
         title: 'Evaluating Your Role',
@@ -43,8 +43,8 @@ const Page: React.FC = () => {
               'Information to gather',
               'Building a connection',
               'Handling personal information',
-              'Evaluating safety requirements & identifying concerns'
-            ]
+              'Evaluating safety requirements & identifying concerns',
+            ],
           },
           {
             title: 'Working with a Care Plan:',
@@ -52,9 +52,9 @@ const Page: React.FC = () => {
               'Working with an established care plan',
               'Creating a care plan with your client',
               'Working without a care plan',
-            ]
+            ],
           },
-        ]
+        ],
       },
     ],
     b: [
@@ -70,10 +70,10 @@ const Page: React.FC = () => {
               'Using inclusive language',
               'Using "people first" language',
               'Exclusionary language to avoid',
-            ]
+            ],
           },
           'Discrimination',
-        ]
+        ],
       },
       {
         title: 'Understanding your Client\'s Needs',
@@ -87,7 +87,7 @@ const Page: React.FC = () => {
           'Working with clients recovering from injuries or surgery',
           'Working with clients with mental health issues or special needs',
           'Working with new mothers',
-        ]
+        ],
       },
     ],
     c: [
@@ -107,7 +107,7 @@ const Page: React.FC = () => {
               'General hygiene',
               'Toileting',
               'Eating',
-            ]
+            ],
           },
           {
             title: 'Instrumental activities of daily living (ADLs)',
@@ -119,13 +119,13 @@ const Page: React.FC = () => {
               'Household supply management',
               'Financial management',
               'Communication',
-            ]
+            ],
           },
           'End of life care',
           'Holistic health & wellness',
           'Keeping a care log',
           'Maintaining your own health & wellness',
-        ]
+        ],
       },
       {
         title: 'Workplace Settings',
@@ -138,7 +138,7 @@ const Page: React.FC = () => {
               'Working with community-based programs',
               'Challenges and safety considerations',
               'Outings in the community',
-            ]
+            ],
           },
           {
             title: 'Facility-based settings',
@@ -146,9 +146,9 @@ const Page: React.FC = () => {
               'Working in a facility-based setting',
               'Challenges and safety considerations',
               'Types of facilities',
-            ]
+            ],
           },
-        ]
+        ],
       },
     ],
     d: [
@@ -164,7 +164,7 @@ const Page: React.FC = () => {
               'Helping a client who uses a walker',
               'Transferring a client to a wheelchair or scooter',
               'Moving your client in bed',
-            ]
+            ],
           },
           {
             title: 'Dressing',
@@ -173,7 +173,7 @@ const Page: React.FC = () => {
               'Helping your client put on/take off socks and shoes',
               'Helping your client put on/take off pants',
               'Helping your client put on/take off underwear',
-            ]
+            ],
           },
           {
             title: 'Toileting',
@@ -182,7 +182,7 @@ const Page: React.FC = () => {
               'Helping your client use a portable commode',
               'Helping your client use a bedpan',
               'Helping your client who wears protective underwear',
-            ]
+            ],
           },
           {
             title: 'Bathing and Showering',
@@ -191,7 +191,7 @@ const Page: React.FC = () => {
               'Helping your client have a shower',
               'Helping your client have a bed bath (sponge bath)',
               'Helping your client shampoo their hair',
-            ]
+            ],
           },
           {
             title: 'Bathing and Showering',
@@ -201,7 +201,7 @@ const Page: React.FC = () => {
               'Shaving',
               'Brushing, combing, styling your client\'s hair',
               'Nail and foot care',
-            ]
+            ],
           },
           'Eating',
         ],
@@ -221,11 +221,11 @@ const Page: React.FC = () => {
               'Grieving clients',
               'Difficult clients',
               'Setting professional boundaries',
-            ]
+            ],
           },
           'Dealing with discrimination',
           'Dealing with suspected abuse',
-        ]
+        ],
       },
     ],
     e: [
@@ -239,7 +239,7 @@ const Page: React.FC = () => {
               'Identifying the core values of your business',
               'Naming your business',
               'Creating a business plan',
-            ]
+            ],
           },
           'Assessing needs in your community: Needs, competition, and gaps in the market',
           'Defining your methods and plans',
@@ -251,13 +251,13 @@ const Page: React.FC = () => {
               'Your social media presence',
               'Traditional print resources (books, pamphlets, etc.)',
               'Setting up your business space',
-              'Creating materials'
-            ]
+              'Creating materials',
+            ],
           },
           'Setting limits: Minimum/maximum number of clients, outlining your budget and expected income',
           'Creating realistic business goals',
 
-        ]
+        ],
       },
       {
         title: 'Licensing, restrictions & legal aspects',
@@ -267,8 +267,8 @@ const Page: React.FC = () => {
           'Professional associations & organizations',
           'Client contracts & other legal documents',
           'Insurance considerations',
-          'Health care training: CPR, first aid, and other certifications to consider'
-        ]
+          'Health care training: CPR, first aid, and other certifications to consider',
+        ],
 
       },
       {
@@ -281,7 +281,7 @@ const Page: React.FC = () => {
               'How clients find you (Print/Web/Social Media)',
               'How to advertise your services',
               'How to find clients (online and in person)',
-            ]
+            ],
           },
           {
             title: 'Tips for advertising',
@@ -290,7 +290,7 @@ const Page: React.FC = () => {
               'Where to advertise',
               'Effective advertising for small businesses',
               'Advertising budgets',
-            ]
+            ],
           },
           {
             title: 'Your website and social media presence',
@@ -298,12 +298,12 @@ const Page: React.FC = () => {
               'How to build an effective website',
               'How to start a business using social media',
               'Keys to an effective online presence',
-            ]
+            ],
           },
           'Community outreach: Community events, groups, and online groups and events',
-          'Partnering: Identifying key partners, developing relationships with local businesses, and creating joint advertising with other small businesses'
-        ]
-      }
+          'Partnering: Identifying key partners, developing relationships with local businesses, and creating joint advertising with other small businesses',
+        ],
+      },
     ],
   };
 

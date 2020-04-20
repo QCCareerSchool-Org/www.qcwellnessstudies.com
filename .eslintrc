@@ -31,7 +31,7 @@
     "computed-property-spacing": "error",
     "space-in-parens": "error",
     "comma-spacing": "error",
-    "comma-dangle": ["error", "only-multiline"],
+    "comma-dangle": ["error", "always-multiline"],
     "quotes": ["error", "single"],
     "quote-props": ["error", "consistent-as-needed"],
     "semi": "error",

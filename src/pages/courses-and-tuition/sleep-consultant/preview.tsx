@@ -2,8 +2,8 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
-
 import { IoMdDownload, IoMdFiling } from 'react-icons/io';
+
 import { About } from '../../../components/about';
 import { Contact } from '../../../components/contact';
 import { Guarantee } from '../../../components/guarantee';
