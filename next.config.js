@@ -8,7 +8,7 @@ module.exports = withPurgeCss(withImages({
     // 'src/layouts/**/*',
   ],
   purgeCss: {
-    whitelistPatterns: () => [ /^nav-/, /^navbar-/, /^dropdown-/ ],
+    whitelistPatterns: () => [ /^nav-/, /^navbar-/, /^dropdown-/, /^modal-/ ],
     whitelist: () => [
       'nav',
       'navbar',
@@ -21,6 +21,9 @@ module.exports = withPurgeCss(withImages({
       'collapse',
       'show',
       'fixed-top',
+      'modal',
+      'close',
+      'sr-only',
     ],
   },
 }));
