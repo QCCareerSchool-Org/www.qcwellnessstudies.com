@@ -16,7 +16,7 @@ const Page: NextPage = () => (
     <section id="heroSection">
       <div className="container">
         <div className="row d-flex align-items-center">
-          <div className="col-12 col-sm-10 col-md-8 col-lg-6 ">
+          <div className="col-12 col-sm-10 col-md-8 col-lg-6">
             <h1 className="text-dark">How Online Learning Works</h1>
             <p className="lead">QC's unique approach to online training will provide you with the knowledge and practical skills to succeed in your chosen industry!</p>
             <p>Online learning can be hit or miss. You have to choose a school that will do more than just give you books and make you answer multiple choice quizzes. If you want to succeed, you need a school that will push you to achieve your goals. That means practical hands-on training, even when you're studying from home. Welcome to QC!</p>
