@@ -443,11 +443,20 @@ const Page: React.FC = () => {
               <img src={require('../../../images/sl-outline-d.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit D" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit D: Business Training (optional)</h3>
+              <h3 className="text-dark">Unit D: Business Training</h3>
               <p className="mb-0">If you plan on launching your own sleep consulting business, don't skip this essential final unit! You'll work on getting your business on its feet, and gain invaluable feedback from your tutor in the process!</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
               <UnitOutline data={units.d} />
+            </div>
+          </div>
+          <div className="row my-5" id="unitE">
+            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+              <img src={require('../../../images/sl-outline-e.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit E" />
+            </div>
+            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+              <h3 className="text-dark">Unit E: Final Project</h3>
+              <p className="mb-0">This unit is composed of a final project where you will create a full sleep plan for a real client. You'll practice interacting with new clients, filling out an intake questionnaire, and developing a full sleep plan with feedback from your tutor.</p>
             </div>
           </div>
           <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/" className="btn btn-secondary">ENROLL ONLINE</a></p>
@@ -484,7 +493,22 @@ const Page: React.FC = () => {
       </section>
 
       <section id="guaranteeSection">
-        <Guarantee courseName="Sleep Consultant" doubleGuarantee={doubleGuarantee} />
+        <Guarantee
+          courseName="Sleep Consultant"
+          doubleGuarantee={doubleGuarantee}
+          twentyOneDays={(
+            <>
+              <p>Once your enrollment has been processed and you gain access to the online student center, you have 21 days to review the course materials and decide whether you want to take the course.</p>
+              <p>This is your chance to inspect the entire course, risk-free! If you decide this course isn't the right fit for you, simply contact your student advisor to withdraw from the course. As long as you haven't submitted any work to your tutor yet, your tuition will be refunded in full!</p>
+            </>
+          )}
+          oneYear={(
+            <>
+              <p>You'll succeed in your new career, and that's a promise! If you don't earn the equivalent of your tuition within one year after graduating from the sleep consultant course, you'll be eligible for a full refund of your tuition. Simply contact the school, and provide proof that you've made a reasonable effort to gain clients.</p>
+              <p><strong>Note:</strong> the 1-year guarantee is only available to graduates of the course. This means you must have successfully completed each unit and have paid your tuition in full.</p>
+            </>
+          )}
+        />
       </section>
 
       <section id="enrollSection" className="text-light text-center">
