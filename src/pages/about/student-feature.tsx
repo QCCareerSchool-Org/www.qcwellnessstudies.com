@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
 
-import { SEO } from '../components/seo';
-import { DefaultLayout } from '../layouts/default';
+import { SEO } from '../../components/seo';
+import { DefaultLayout } from '../../layouts/default';
 
 const Page: React.FC = () => (
   <DefaultLayout>
@@ -48,10 +48,10 @@ const Page: React.FC = () => (
           </div>    
         
           <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-            <p><img className="img-fluid" src={require('../images/student-feature/sarah-pashniak-family.jpg')} alt="Sarah Pashniak Family" /></p>
+            <p><img className="img-fluid" src={require('../../images/student-feature/sarah-pashniak-family.jpg')} alt="Sarah Pashniak Family" /></p>
           </div>
           <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-            <p><img className="img-fluid" src={require('../images/student-feature/sarah-pashniak-family-lake.jpg')} alt="Sarah Pashniak Family in the Lake" /></p>
+            <p><img className="img-fluid" src={require('../../images/student-feature/sarah-pashniak-family-lake.jpg')} alt="Sarah Pashniak Family in the Lake" /></p>
           </div>
           <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6 mb-lg-0">
             <hr />
@@ -89,7 +89,7 @@ const Page: React.FC = () => (
             <p>I would definitely recommend that you take the additional business training, especially if you have any goals of starting your own business. After all, how you market your business is key to your success! If you have no business training, how can you ever hope to run one?</p>
           </div>
           <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-            <p><img className="img-fluid" src={require('../images/student-feature/sarah-pashniak-office.jpg')} alt="Sarah Pashniak Office" /></p>
+            <p><img className="img-fluid" src={require('../../images/student-feature/sarah-pashniak-office.jpg')} alt="Sarah Pashniak Office" /></p>
           </div>       
           <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-12 mb-lg-0">
             <hr />
@@ -132,10 +132,10 @@ const Page: React.FC = () => (
     </section>
 
     <style jsx>{`
-      #enrollSection{background-image: url(${require('../images/bg-enrollment.jpg')});background-size: cover;}
-      #guaranteeSection{background-image: url(${require('../images/bg-white-green-light.jpg')});background-size: cover;}
-      #partnerSection{background-image: url(${require('../images/bg-dark-green-navy.jpg')});background-size: cover;}
-      #heroSection{background-image:url(${require('../images/student-feature/sarah-pashniak-cover.jpg')});background-size:cover;background-position:center}
+      #enrollSection{background-image: url(${require('../../images/bg-enrollment.jpg')});background-size: cover;}
+      #guaranteeSection{background-image: url(${require('../../images/bg-white-green-light.jpg')});background-size: cover;}
+      #partnerSection{background-image: url(${require('../../images/bg-dark-green-navy.jpg')});background-size: cover;}
+      #heroSection{background-image:url(${require('../../images/student-feature/sarah-pashniak-cover.jpg')});background-size:cover;background-position:center}
       .course-icon{width:80px}
     `}</style>
 
