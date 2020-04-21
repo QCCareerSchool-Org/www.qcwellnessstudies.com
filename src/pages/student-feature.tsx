@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
 
-import { SEO } from '../../components/seo';
-import { DefaultLayout } from '../../layouts/default';
+import { SEO } from '../components/seo';
+import { DefaultLayout } from '../layouts/default';
 
 const Page: React.FC = () => (
   <DefaultLayout>
@@ -10,7 +10,7 @@ const Page: React.FC = () => (
     <SEO
       title="Student Feature - Sarah Pashniak"
       description="QC graduate, Sarah Pashniak, discusses her sleep consultant journey, her passion about sleep, how QC fine-tuned her skills as a professional, and more!"
-      canonical="about/student-feature"
+      canonical="/student-feature"
     />
 
     <section id="heroSection">
@@ -41,22 +41,21 @@ const Page: React.FC = () => (
             <p>There are SO many reasons why I took the plunge and decided to become a Sleep Coach.</p>
             <p>After the birth of our twin boys, I suffered with postpartum depression and anxiety. Having twins is wonderful in so many ways, but it was also a major life adjustment. I felt like my world was turned upside down; I had difficulty coping. The lack of sleep made my anxiety and depression worse.</p>
             <p>My mind was filled with spiraling thoughts and “what ifs”. When one baby was awake, the other was sleeping, and vice-versa. I barely slept for 4 months! I knew I needed something to change. So I read books and spent hours (in the middle of the night), learning about sleep.</p>
-            <p>I used this knowledge to sleep train the boys. After that, things started looking up! The boys started sleeping regularly, and at the same time – which meant that I could as well. Slowly but surely, I felt the fog lift. I began to feel more and more like myself, and was able to better manage my emotions. I could also finally receive help for my PPA / PPD.</p>
+            <p>I used this knowledge to sleep train the boys. After that, things started looking up! The boys started sleeping regularly, and at the same time—which meant that I could as well. Slowly but surely, I felt the fog lift. I began to feel more and more like myself, and was able to better manage my emotions. I could also finally receive help for my PPA / PPD.</p>
             <p>Sleep had such an incredible impact on my mental health! I’d suffered for a few months with my postpartum depression and anxiety, but I know some women struggle for much longer. I wanted to help other parents who were struggling with a lack of sleep.</p>
             <p>After that, when my daughter was 4 months old, I actually worked with a Sleep Consultant for her. It was this individual who inspired me to get my certification as well! We became instant best friends. Along the way, she’s also been my mentor. She recognized my passion and desire to not only help babies, but to help the whole family get the sleep they need and deserve.</p>
             <hr/>
-          </div>    
-        
+          </div>        
           <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-            <p><img className="img-fluid" src={require('../../images/student-feature/sarah-pashniak-family.jpg')} alt="Sarah Pashniak Family" /></p>
+            <p><img className="img-fluid" src={require('../images/student-feature/sarah-pashniak-family.jpg')} alt="Sarah Pashniak Family" /></p>
           </div>
           <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-            <p><img className="img-fluid" src={require('../../images/student-feature/sarah-pashniak-family-lake.jpg')} alt="Sarah Pashniak Family in the Lake" /></p>
+            <p><img className="img-fluid" src={require('../images/student-feature/sarah-pashniak-family-lake.jpg')} alt="Sarah Pashniak Family in the Lake" /></p>
           </div>
           <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6 mb-lg-0">
             <hr />
             <h2 className="h3">Starting a Sleep Consulting Business</h2>
-            <p>Starting and then running my own business has been very challenging – yet extremely rewarding. This time last year, I never would have imagined that I’d have a successful business that’s all mine!</p>
+            <p>Starting and then running my own business has been very challenging—yet extremely rewarding. This time last year, I never would have imagined that I’d have a successful business that’s all mine!</p>
             <p>Sleep, and the benefits of sleep, has always been an interest of mine. But I was always afraid of taking the plunge. I was hesitant about the “what ifs”! I am SO glad that I took a leap of faith and pursued my goals, because I’m extremely proud of my business. I take great pride in the work I’ve done, and the parents I’ve been able to help and get to know along the way.</p>
             <p>I’m truly passionate about what I do. That, in large part, has fueled my motivation to be persistent! That being said, there was a lot of work involved. (I cannot stress this enough!) But if you are truly dedicated to helping your clients get the rest they need, and improving their mental health, then all of the hard work is worth it.</p>
             <p>The most rewarding part of my job is receiving messages of gratitude from clients who were once sleep-deprived and exhausted. Helping parents get their babies to sleep is only one part of this job. The ripple effects that come AFTER baby is sleeping trained is what I love the most about what I do.</p>
@@ -65,18 +64,17 @@ const Page: React.FC = () => (
             <p>The Sleep Consultant Course divides the learning into easy-to-digest portions. The assignments effectively reflect the information taught in each section, and there’s a variety of different types of assignments to test and apply your knowledge.</p>
             <p>Quick assessments throughout the program allow you to regularly check in on your progress, and keep track of where your strengths and weaknesses are. There are also smaller assignments as well, which gradually build towards one larger, final assignment at the end of every Unit.</p>
             <p>I really enjoyed that I received thorough feedback after each assignment from my tutor. I was able to learn from it and refer back to it as often as needed, in order to improve my work and grade. I also found that the course includes sample materials that you can adapt and make your own. </p>
-            <p>By the time you complete the course, you’ll have so many materials that you’ll be able to use in your actual career, such as:
+            <p>By the time you complete the course, you’ll have so many materials that you’ll be able to use in your actual career, such as</p>
             <ul>
                 <li>Intake forms</li>
                 <li>Sleep plans</li>
                 <li>A business logo</li>
                 <li>And so much more! </li>
               </ul>
-            </p>
+            
             <Link href="/courses-and-tuition/sleep-consultant"><a className="btn btn-secondary mt-3 mb-3">Course Overview</a></Link>
             <hr/>
-          </div>
-        
+          </div>        
           <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6 mb-lg-0">
             <hr />
             <h2 className="h3">Life as a QC Student</h2>
@@ -89,7 +87,7 @@ const Page: React.FC = () => (
             <p>I would definitely recommend that you take the additional business training, especially if you have any goals of starting your own business. After all, how you market your business is key to your success! If you have no business training, how can you ever hope to run one?</p>
           </div>
           <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-            <p><img className="img-fluid" src={require('../../images/student-feature/sarah-pashniak-office.jpg')} alt="Sarah Pashniak Office" /></p>
+            <p><img className="img-fluid" src={require('../images/student-feature/sarah-pashniak-office.jpg')} alt="Sarah Pashniak Office" /></p>
           </div>       
           <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-12 mb-lg-0">
             <hr />
@@ -132,10 +130,10 @@ const Page: React.FC = () => (
     </section>
 
     <style jsx>{`
-      #enrollSection{background-image: url(${require('../../images/bg-enrollment.jpg')});background-size: cover;}
-      #guaranteeSection{background-image: url(${require('../../images/bg-white-green-light.jpg')});background-size: cover;}
-      #partnerSection{background-image: url(${require('../../images/bg-dark-green-navy.jpg')});background-size: cover;}
-      #heroSection{background-image:url(${require('../../images/student-feature/sarah-pashniak-cover.jpg')});background-size:cover;background-position:center}
+      #enrollSection{background-image: url(${require('../images/bg-enrollment.jpg')});background-size: cover;}
+      #guaranteeSection{background-image: url(${require('../images/bg-white-green-light.jpg')});background-size: cover;}
+      #partnerSection{background-image: url(${require('../images/bg-dark-green-navy.jpg')});background-size: cover;}
+      #heroSection{background-image:url(${require('../images/student-feature/sarah-pashniak-cover.jpg')});background-size:cover;background-position:center}
       .course-icon{width:80px}
     `}</style>
 

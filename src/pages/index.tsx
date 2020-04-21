@@ -11,7 +11,7 @@ const Page: NextPage = () => (
     <SEO
       title="QC Wellness Studies"
       description="QC Wellness Studies is the only fully online school for professional wellness training. Whether you want to be a sleep consultant, a professional skincare consultant or an aging in place designer, QC has an online course for your future career!"
-      canonical=""
+      canonical="/"
     />
 
     <section id="heroSection">
@@ -35,7 +35,7 @@ const Page: NextPage = () => (
             <p>A personal care aide is a caregiving professional who helps clients keep their independence by helping them with daily activities and tasks they have difficulties completing on their own. This is a thriving industry!</p>
             <p className="text-uppercase"><Link href="/courses-and-tuition/personal-care-aide"><a className="text-info"><strong>view course</strong></a></Link></p>
           </div>
-          <div className="col-12 col-md-6 col-lg-5 mb-5 ">
+          <div className="col-12 col-md-6 col-lg-5 mb-5">
             <h3 className="h4 text-dark">Sleep Consultant </h3>
             <p>A professional sleep consultant helps parents and caregivers set healthy and save sleep habits for their infants and toddlers, contributing to every family member's physical, mental and emotional wellness!</p>
             <p className="text-uppercase"><Link href="/courses-and-tuition/sleep-consultant"><a className="text-info"><strong>view course</strong></a></Link></p>
