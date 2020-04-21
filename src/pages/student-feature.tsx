@@ -70,8 +70,7 @@ const Page: React.FC = () => (
                 <li>Sleep plans</li>
                 <li>A business logo</li>
                 <li>And so much more! </li>
-              </ul>
-            
+              </ul>            
             <Link href="/courses-and-tuition/sleep-consultant"><a className="btn btn-secondary mt-3 mb-3">Course Overview</a></Link>
             <hr/>
           </div>        
@@ -121,6 +120,7 @@ const Page: React.FC = () => (
         </div>
       </div>
     </section>
+    
     <section id="enrollSection" className="text-light text-center">
       <div className="container">
         <h2>Enroll Online Today!</h2>

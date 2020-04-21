@@ -11,7 +11,7 @@ const Page: NextPage = () => (
     <SEO
       title="QC Wellness Studies"
       description="QC Wellness Studies is the only fully online school for professional wellness training. Whether you want to be a sleep consultant, a professional skincare consultant or an aging in place designer, QC has an online course for your future career!"
-      canonical="/"
+      canonical=""
     />
 
     <section id="heroSection">
