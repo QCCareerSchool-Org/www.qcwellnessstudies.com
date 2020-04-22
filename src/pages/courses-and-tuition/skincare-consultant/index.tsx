@@ -22,8 +22,8 @@ const Page: React.FC = () => {
           'What skincare consultants do, and where they work',
           'What skincare consultants DON\'T do',
           'The difference between skincare consultants, dermatologists and estheticians',
-          'Required characteristics to succeed as a skincare consultant'
-        ]
+          'Required characteristics to succeed as a skincare consultant',
+        ],
       },
       {
         title: 'Skin anatomy and skin types',
@@ -35,9 +35,9 @@ const Page: React.FC = () => {
           'The six FPS types',
           'The five major skin types: from dry to sensitive',
           'How to classify skin types',
-          'Common issues & concerns related to different skin types'
-        ]
-      }
+          'Common issues & concerns related to different skin types',
+        ],
+      },
     ],
     b: [
       {
@@ -54,8 +54,8 @@ const Page: React.FC = () => {
               'Sunscreen',
               'Eye cream',
               'Spot treatments',
-              'Face masks'
-            ]
+              'Face masks',
+            ],
           },
           'Day products vs. night products',
           'Ingredients in skincare products',
@@ -63,9 +63,9 @@ const Page: React.FC = () => {
           'Skincare tools: Safety and effectiveness',
           'Common skincare treatments: what to recommend',
           'How nutrition affects the skin',
-          'How the environment (and environmental changes) affect the skin'
-        ]
-      }
+          'How the environment (and environmental changes) affect the skin',
+        ],
+      },
     ],
     c: [
       {
@@ -86,8 +86,8 @@ const Page: React.FC = () => {
               'Post-inflammatory hyperpigmentation',
               'Stretch marks',
               'Birth marks',
-              'Scarring'
-            ]
+              'Scarring',
+            ],
           },
           'Skincare and facial hair (working with clients with beards & mustaches)',
           {
@@ -110,11 +110,11 @@ const Page: React.FC = () => {
               'Pseudofolliculitis barbae',
               'Keloids',
               'Keratosis pilaris',
-              'Melasma'
-            ]
-          }
-        ]
-      }
+              'Melasma',
+            ],
+          },
+        ],
+      },
     ],
     d: [
       {
@@ -130,13 +130,13 @@ const Page: React.FC = () => {
             topics: [
               'Decoding product marketing and product claims',
               'Popular anti-aging products, ingredients and treatments',
-              'What anti-aging products actually do'
-            ]
+              'What anti-aging products actually do',
+            ],
           },
           'Creating a skincare routine for aging skin',
-          'Working with clients who have aging concerns'
-        ]
-      }
+          'Working with clients who have aging concerns',
+        ],
+      },
     ],
     e: [
       {
@@ -148,11 +148,11 @@ const Page: React.FC = () => {
             topics: [
               'Sourcing ingredients',
               'Common recipes',
-              'Storing your products'
-            ]
+              'Storing your products',
+            ],
           },
-          'Complying with regional and national health standards'
-        ]
+          'Complying with regional and national health standards',
+        ],
       },
       {
         title: 'The Skincare Consultation',
@@ -165,16 +165,16 @@ const Page: React.FC = () => {
               'Assessing the skin',
               'Important questions to ask',
               'Building a nonjudgmental rapport',
-              'Building a skincare regime and recommending products'
-            ]
+              'Building a skincare regime and recommending products',
+            ],
           },
           'Building positive client relationships',
           'How to manage difficult or challenging clients',
           'Marketing your skincare services',
           'Pricing and selling your skincare services',
-          'Promoting your skincare services through your makeup artistry business.'
-        ]
-      }
+          'Promoting your skincare services through your makeup artistry business.',
+        ],
+      },
     ],
   };
 
