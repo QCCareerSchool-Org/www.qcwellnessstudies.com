@@ -43,6 +43,7 @@
       "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
     }],
     "react/no-unescaped-entities": 0,
+    "react/jsx-space-before-closing": "error",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-var-requires": "off"
   },
