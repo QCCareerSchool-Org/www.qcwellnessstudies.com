@@ -29,11 +29,11 @@ const Page: React.FC = () => (
 
     <section>
       <div className="container">
-        <div className="row d-flex align-items-center">     
+        <div className="row d-flex align-items-center">
           <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6 mb-lg-0">
             <hr />
             <h2 className="h3">About Sarah</h2>
-            <p>My name is Sarah Pashniak, and I am passionate about sleep! (Hence the fun little pun in my business name!)  I am the mama of three children: twin boys (age 4) and a 1-year-old daughter. I’ve also been a kindergarten teacher for the past 7 years.</p>
+            <p>My name is Sarah Pashniak, and I am passionate about sleep! (Hence the fun little pun in my business name!) I am the mama of three children: twin boys (age 4) and a 1-year-old daughter. I’ve also been a kindergarten teacher for the past 7 years.</p>
             <p>When I was in University to complete my education degree, I majored in Psychology. I’m fascinated by human behavior and how the mind works! I love my little family, and feel like I truly enjoy my children because we’re always feeling well-rested and happy.</p>
             <p>This is a huge reason why I’m so passionate about sleep!</p>
             <hr />
@@ -44,8 +44,8 @@ const Page: React.FC = () => (
             <p>I used this knowledge to sleep train the boys. After that, things started looking up! The boys started sleeping regularly, and at the same time—which meant that I could as well. Slowly but surely, I felt the fog lift. I began to feel more and more like myself, and was able to better manage my emotions. I could also finally receive help for my PPA / PPD.</p>
             <p>Sleep had such an incredible impact on my mental health! I’d suffered for a few months with my postpartum depression and anxiety, but I know some women struggle for much longer. I wanted to help other parents who were struggling with a lack of sleep.</p>
             <p>After that, when my daughter was 4 months old, I actually worked with a Sleep Consultant for her. It was this individual who inspired me to get my certification as well! We became instant best friends. Along the way, she’s also been my mentor. She recognized my passion and desire to not only help babies, but to help the whole family get the sleep they need and deserve.</p>
-            <hr/>
-          </div>        
+            <hr />
+          </div>
           <div className="col-12 col-sm-10 col-md-8 col-lg-6">
             <p><img className="img-fluid" src={require('../images/student-feature/sarah-pashniak-family.jpg')} alt="Sarah Pashniak Family" /></p>
           </div>
@@ -66,14 +66,14 @@ const Page: React.FC = () => (
             <p>I really enjoyed that I received thorough feedback after each assignment from my tutor. I was able to learn from it and refer back to it as often as needed, in order to improve my work and grade. I also found that the course includes sample materials that you can adapt and make your own. </p>
             <p>By the time you complete the course, you’ll have so many materials that you’ll be able to use in your actual career, such as</p>
             <ul>
-                <li>Intake forms</li>
-                <li>Sleep plans</li>
-                <li>A business logo</li>
-                <li>And so much more! </li>
-              </ul>            
+              <li>Intake forms</li>
+              <li>Sleep plans</li>
+              <li>A business logo</li>
+              <li>And so much more! </li>
+            </ul>
             <Link href="/courses-and-tuition/sleep-consultant"><a className="btn btn-secondary mt-3 mb-3">Course Overview</a></Link>
-            <hr/>
-          </div>        
+            <hr />
+          </div>
           <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6 mb-lg-0">
             <hr />
             <h2 className="h3">Life as a QC Student</h2>
@@ -81,13 +81,13 @@ const Page: React.FC = () => (
             <p>I also found the turnaround rate (from when I’d submit my Unit to when I’d receive my tutor’s feedback) to be exceptionally fast. If I needed any support or had questions about my assignment, I could ask my tutor. They were always there to help!</p>
             <p>Not to mention, there was also the Student Support Team. I was always able to reach out to them by phone, email, or live chat. The entire QC staff supports you, helps you with assignments, and answers any questions you may have!</p>
             <Link href="/courses-and-tuition/sleep-consultant#tutors"><a className="btn btn-secondary mt-3 mb-3">Meet Your Tutor</a></Link>
-            <hr/>
+            <hr />
             <h2 className="h3">Business Training</h2>
             <p>I would definitely recommend that you take the additional business training, especially if you have any goals of starting your own business. After all, how you market your business is key to your success! If you have no business training, how can you ever hope to run one?</p>
           </div>
           <div className="col-12 col-sm-10 col-md-8 col-lg-6">
             <p><img className="img-fluid" src={require('../images/student-feature/sarah-pashniak-office.jpg')} alt="Sarah Pashniak Office" /></p>
-          </div>       
+          </div>
           <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-12 mb-lg-0">
             <hr />
             <h2 className="h3">The Challenges of a Sleep Consultant</h2>
@@ -103,7 +103,7 @@ const Page: React.FC = () => (
           <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-12 mb-lg-0">
             <hr />
             <h2 className="h3">Why Choose QC?</h2>
-            <p>I chose an online school because I have three children at home and I needed flexibility.  I liked that I was able to dedicate chunks of time whenever I had a spare hour or two. I chose QC Wellness Studies to complete my certification because it offered a number of different perks that worked for my budget and busy lifestyle. In particular</p>
+            <p>I chose an online school because I have three children at home and I needed flexibility. I liked that I was able to dedicate chunks of time whenever I had a spare hour or two. I chose QC Wellness Studies to complete my certification because it offered a number of different perks that worked for my budget and busy lifestyle. In particular</p>
             <ol>
               <li>I found the course to be very affordable.</li>
               <li>I liked how my questions were responded to quickly by the staff, and always in a friendly manner.</li>
@@ -120,7 +120,7 @@ const Page: React.FC = () => (
         </div>
       </div>
     </section>
-    
+
     <section id="enrollSection" className="text-light text-center">
       <div className="container">
         <h2>Enroll Online Today!</h2>
