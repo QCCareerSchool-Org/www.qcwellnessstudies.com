@@ -117,13 +117,13 @@ const Page: NextPage = () => {
             </div>
             <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-5">
               <p><img className="img-fluid" src={require('../../../images/pc-outline-c.jpg')} alt="Personal Care Aide Course Unit C" /></p>
-              <h3 className="text-dark">Unit C: Working as a PCA</h3>
+              <h3 className="text-dark">Unit C: Working as a Caregiver</h3>
               <p>In this next unit, you'll dive into the specific services you'll offer as a caregiver, and start developing those skills. Whether you plan on providing all these services once you start your business, it's important to have the full range of skills required to be a successful caregiver. This unit will also allow you to explore the different workplace settings available to you, should you choose to work for a caregiving agency instead of starting your own business.</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 mb-5">
-              <p><img className="img-fluid" src={require('../../../images/pc-outline-d.jpg')} alt="Personal Care Aide Course Unit D" /></p>
+              <p><img className="img-fluid" src={require('../../../images/pc-outline-d.jpg')} alt="Caregiver Unit D" /></p>
               <h3 className="text-dark">Unit D: Technical Skills</h3>
-              <p>This highly practical unit is where you'll learn the core technical skills any PCA needs to have. When working with individuals who have limited independence, caregivers are sometimes required to help with basic daily tasks such as dressing, toileting, bathing/showering, or helping their client move around, for example. There are very specific methods to follow that are safe and ensure you preserve your client's dignity as you perform these delicate tasks.</p>
+              <p>This highly practical unit is where you'll learn the core technical skills any Caregiver needs to have. When working with individuals who have limited independence, caregivers are sometimes required to help with basic daily tasks such as dressing, toileting, bathing/showering, or helping their client move around, for example. There are very specific methods to follow that are safe and ensure you preserve your client's dignity as you perform these delicate tasks.</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-2 mb-md-5">
               <p><img className="img-fluid" src={require('../../../images/pc-outline-e.jpg')} alt="Personal Care Aide Course Unit E" /></p>
