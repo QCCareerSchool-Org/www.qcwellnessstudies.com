@@ -20,7 +20,8 @@ const Page: NextPage = () => (
         <div className="row">
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-0 text-center">
             <img src={require('../../../images/certification-pcgp.png')} className="d-none d-sm-inline mb-3 mb-md-4" alt="ISCP logo" />
-            <h1 className="text-light mb-5">Become a Personal Care Aide<span className="d-none d-md-inline"> Online</span></h1>
+            <h1 className="text-light mb-5">Online Caregiver Course<span className="d-none d-md-inline"></span></h1>
+            <h2>Get Certified From Home</h2>
           </div>
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-0">
             <a className="anchor" id="form"></a>
@@ -66,15 +67,15 @@ const Page: NextPage = () => (
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-            <p className="h3 text-dark">In this course preview, you’ll learn</p>
+            <p className="h3 text-dark">Join one of the fastest-growing industries in North America!</p>
             <ul>
-              <li>Why starting a personal caregiving business can be a lucrative career path</li>
-              <li>How QC's online learning system works, and why it's perfect for you</li>
-              <li>How you can get certified as a PCA without ever leaving home</li>
-              <li>Your career opportunities, including how you can launch your own caregiving business</li>
-              <li>A full outline of the online personal care aide course, including sample assignments</li>
-              <li>A full breakdown of the course’s tuition and available payment plans</li>
+              <li>Caregivers are in high demand. Caregiving jobs are everywhere!</li>
+              <li>An Independent caregiver can earn a very good salary by direct billing clients.</li>
+              <li>Most certified caregivers are eligible for billing certain Medicaid programs.</li>
+              <li>Work in a field where you get to help people every single day.</li>
+              <li>Get certified online without having to leave your home!</li>                          
             </ul>
+            <p className="h3 text-dark">Get a free course preview to learn more!</p>  
           </div>
         </div>
       </div>
@@ -82,7 +83,7 @@ const Page: NextPage = () => (
 
     <section id="whySection">
       <WhyChoose
-        subheader="Get certified faster with a fully online personal care aide course!"
+        subheader="Get certified faster with a fully online caregiving course!"
         affordable="Since QC's course is fully online, you don't have to pay surcharges for attending lectures or webinars. You complete the full course from home."
         flexible="No start dates, no deadlines, no mandatory webinars! This course is completely self-directed and self-paced. Get certified quickly, or take your time."
         comprehensive="This course will prepare you to work in a number of different environments and with a wide range of clients. Get a better idea of the types of PCA services you want to offer by experiencing them all during your online training!"
