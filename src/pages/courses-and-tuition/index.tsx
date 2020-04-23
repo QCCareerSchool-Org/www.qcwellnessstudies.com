@@ -23,9 +23,9 @@ const Page: React.FC = () => (
             <PriceCard courses={[ 'pc' ]} />
           </div>
           <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
-            <h2 className="text-dark">Personal Care Aide Course (Professional Caregiver)</h2>
-            <p>Professional caregivers are in extremely high demand and the industry is expected to grow very quickly over the next few years! As a professional personal care aide, you'll help your clients remain independent by providing companionship and helping them with daily tasks they may find difficult to do on their own.</p>
-            <p>In this interactive course, you'll learn the soft and practical skills you need to be a professional caregiver. You'll also learn how to run your own caregiving business so that you can bill clients directly instead of working through an agency. This is a great way to get paid what you're actually worth as a professional!</p>
+            <h2 className="text-dark">Caregiver</h2>
+            <p>Professional caregivers are in extremely high demand and the industry is expected to grow very quickly over the next few years!  As a caregiver, you’ll help your clients maintain their independence by providing companionship and helping them with daily tasks they may find difficult to do on their own.</p>
+            <p>In the professional course, you’ll learn the soft and practical skills you need to be a professional caregiver. You'll also learn how to run your own caregiving business so that you can bill clients directly instead of working through an agency. This is a great way to earn more income!</p>
             <Link href="/courses-and-tuition/personal-care-aide"><a className="btn btn-secondary">LEARN MORE</a></Link>
           </div>
         </div>
