@@ -31,8 +31,8 @@ const Page: NextPage = () => (
         <h2 className="text-dark mb-5">Certifications</h2>
         <div className="row">
           <div className="col-12 mb-5 col-md-6 mb-md-0 col-lg-5 offset-lg-1 mb-5">
-            <h3 className="h4 text-dark">Personal Care Aide <span className="badge badge-secondary text sans-serif">NEW</span></h3>
-            <p>A personal care aide is a caregiving professional who helps clients keep their independence by helping them with daily activities and tasks they have difficulties completing on their own. This is a thriving industry!</p>
+            <h3 className="h4 text-dark">Caregiver <span className="badge badge-secondary text sans-serif">NEW</span></h3>
+            <p>Help clients keep their independence by helping with daily activities and tasks. Caregiving is one of the fastest growing industries in the world!</p>
             <p className="text-uppercase"><Link href="/courses-and-tuition/personal-care-aide"><a className="text-info"><strong>view course</strong></a></Link></p>
           </div>
           <div className="col-12 col-md-6 col-lg-5 mb-5">
