@@ -10,8 +10,8 @@ const Page: NextPage = () => (
   <LandingPageLayout>
 
     <SEO
-      title="Get a Personal Care Aide Course Preview"
-      description="If you're interested in becoming a personal care aide, get a preview of QC's PCA certifiation course here!"
+      title="Get a Caregiver Course Preview"
+      description="If you're interested in becoming a caregiver, get a preview of QC's Caregiver certifiation course here!"
       canonical="/courses-and-tuition/personal-care-aide/get-a-preview"
     />
 
@@ -86,7 +86,7 @@ const Page: NextPage = () => (
         subheader="Get certified faster with a fully online caregiving course!"
         affordable="Since QC's course is fully online, you don't have to pay surcharges for attending lectures or webinars. You complete the full course from home."
         flexible="No start dates, no deadlines, no mandatory webinars! This course is completely self-directed and self-paced. Get certified quickly, or take your time."
-        comprehensive="This course will prepare you to work in a number of different environments and with a wide range of clients. Get a better idea of the types of PCA services you want to offer by experiencing them all during your online training!"
+        comprehensive="This course will prepare you to work in a number of different environments and with a wide range of clients. Get a better idea of the types of caregiver services you want to offer by experiencing them all during your online training!"
         courses={[ 'pc' ]}
         hideButton={true}
       />
