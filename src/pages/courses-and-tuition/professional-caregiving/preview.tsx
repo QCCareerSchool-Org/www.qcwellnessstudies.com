@@ -46,7 +46,7 @@ const Page: NextPage = () => {
         <div className="container text-center">
           <div className="row mt-5">
             <div className="col-12 col-md-10 offset-md-1">
-              <p><img src={require('../../../images/certification-pcgp.png')} alt="Infant Sleep Consulting Professional Certification" /></p>
+              <p><img src={require('../../../images/icon-fcgp.png')} alt="Infant Sleep Consulting Professional Certification" /></p>
               <h1>PROFESSIONAL CAREGIVING<br />CERTIFICATION COURSE</h1>
               <h2 className="h3">Course Preview</h2>
             </div>
@@ -133,7 +133,7 @@ const Page: NextPage = () => {
               <p>In Unit E, you’ll read a variety of hypothetical challenging situations and learn how to handle each one. You'll use the scenarios outlined in your course text as a guide to help you start thinking like a Formal Caregiver. Then you'll complete scenario-based assignments to practice interacting with clients in challenging situations.</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-2 mb-md-5">
-              <p><img className="img-fluid" src={require('../../../images/pc-outline-e.jpg')} alt="Personal Care Aide Course Unit E" /></p>
+              <p><img className="img-fluid" src={require('../../../images/fcg-unit-f-course-outline.jpg')} alt="Personal Care Aide Course Unit F" /></p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 mb-5">
               <h3 className="text-dark">Unit F: Business Training Unit</h3>

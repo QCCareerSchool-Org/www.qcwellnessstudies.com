@@ -536,7 +536,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitF">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/pc-outline-e.jpg')} className="rounded img-fluid mt-2" alt="Caregiver Unit F" />
+              <img src={require('../../../images/fcg-unit-f-course-outline.jpg')} className="rounded img-fluid mt-2" alt="Caregiver Unit F" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit F: (Optional) Business Training Unit</h3>
