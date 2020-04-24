@@ -348,7 +348,7 @@ const Page: React.FC = () => {
 
       <section id="whatSection">
         <div className="container">
-          <h2 className="text-dark text-center">What is a Caregiver?</h2>
+          <h2 className="text-dark text-center">What Is a Caregiver?</h2>
           <div className="row">
             <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-3 mb-md-0">
               <p>Caregivers are a very important part of a person’s home care team. You’ll be on the front lines every day to help your client maintain their independence and wellbeing by helping them with daily tasks they may have trouble completing on their own.</p>
@@ -366,7 +366,7 @@ const Page: React.FC = () => {
             <div className="col-12 col-md-6 col-lg-5">
               <p>Depending on your location, a caregiver might be called something different. Other common job titles include, but are not limited to:</p>
               <ul>
-                <li>Attendant Care Worker</li>            
+                <li>Attendant Care Worker</li>
                 <li>Direct Care Worker</li>
                 <li>Direct Service Worker</li>
                 <li>Home Attendant</li>
@@ -383,7 +383,7 @@ const Page: React.FC = () => {
           </div>
         </div>
       </section>
-   
+
       <section id="requirementsSection" className="bg-dark text-light">
         <div className="container">
           <div className="row">
@@ -392,7 +392,7 @@ const Page: React.FC = () => {
               <p>Caregiving is a highly rewarding career. As an integral part of someone’s wellness team, you’re there every day to put a smile on their face and help them maintain a healthy and productive life. If you genuinely enjoy helping people and are willing to advocate for your clients at every turn, this can be the perfect career for you.</p>
               <p>It’s always a good idea to check local regulations before starting a new profession. Currently in the United States, there are <a className="text-dark" href="https://www.bls.gov/OOH/healthcare/home-health-aides-and-personal-care-aides.htm#tab-4" target="blank">no licensing requirements</a> or training regulations for caregivers who work independently (are employed directly by their client) and bill clients directly.
               </p>
-              <p>Successful caregivers all exhibit similar traits.  Do you have what it takes?</p>             
+              <p>Successful caregivers all exhibit similar traits.  Do you have what it takes?</p>
               <ul className="mb-4">
                 <li><p><strong>Empathy &amp; Compassion</strong> &mdash; ou’re always able to put yourself in your clients’ shoes in order to understand their situation. You genuinely care about people and want to help in any way you can.</p></li>
                 <li><p><strong>Good Communication Skills</strong> &mdash; You’re able to clearly and effectively communicate with clients, family members, and other professionals in order to advocate for your client’s best interest. You’re patient and careful when you choose your words.</p></li>
