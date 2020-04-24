@@ -20,7 +20,7 @@ const Page: NextPage = () => (
         <div className="row">
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-0 text-center">
             <img src={require('../../../images/certification-pcgp.png')} className="d-none d-sm-inline mb-3 mb-md-4" alt="ISCP logo" />
-            <h1 className="text-light mb-5">Online Caregiver Course<span className="d-none d-md-inline"></span></h1>
+            <h1 className="text-light mb-5">Online Caregiver Course</h1>
             <h2>Get Certified From Home</h2>
           </div>
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-0">
