@@ -586,7 +586,7 @@ const Page: React.FC = () => {
       <section id="enrollSection" className="text-light text-center">
         <div className="container">
           <h2>Enroll Today</h2>
-          <p className="lead mb-5">Start your personal care aide training today<br />and launch an exciting, rewarding career!</p>
+          <p className="lead mb-5">Start your caregiving training today<br />and launch an exciting, rewarding career!</p>
           <p><a href="https://enroll.qcwellnessstudies.com/" className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
         </div>
       </section>
