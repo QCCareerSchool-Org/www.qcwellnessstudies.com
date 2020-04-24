@@ -106,17 +106,17 @@ const Page: NextPage = () => {
               <p>The professional caregiver course is divided into six units. You'll start by learning the basics of caregiving, and then build on that knowledge as you work your way through the course. Once you've completed the course, you'll be fully qualified to work as an independent professional caregiver!</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-5">
-              <p><img className="img-fluid" src={require('../../../images/pc-outline-a.jpg')} alt="Personal Care Aide Course Unit A" /></p>
+              <p><img className="img-fluid" src={require('../../../images/pc-outline-a.jpg')} alt="Caregiver Course Unit A" /></p>
               <h3 className="text-dark">Unit A: Introduction to<br />Caregiving</h3>
               <p>In this first unit, you'll learn what it means to be a professional caregiver. You'll learn the details of the job, how you'll interact with clients, and (just as importantly) what types of duties you WON'T be expected to complete. You'll then learn how to perform your initial client consultation, including what information you'll need to collect, and how to evaluate safety requirements for each client. Finally, you'll learn how to establish and work with a detailed care plan for every client you take on.</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 mb-5">
-              <p><img className="img-fluid" src={require('../../../images/pc-outline-b.jpg')} alt="Personal Care Aide Course Unit B" /></p>
+              <p><img className="img-fluid" src={require('../../../images/pc-outline-b.jpg')} alt="Caregiver Course Unit B" /></p>
               <h3 className="text-dark">Unit B: Working with<br />Clients</h3>
               <p>Now that you have a good idea of your role as a caregiver, you'll start to learn how to put that knowledge to use when working with clients. Your clients will have a number of different challenges they face every day. As a caregiver, you'll have to work hard at remaining professional and establishing healthy boundaries with your clients while still developing meaningful relationships. This can be a tricky skill to master! Later in the unit, you'll focus on understanding your client's unique needs based on their own challenges.</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-5">
-              <p><img className="img-fluid" src={require('../../../images/pc-outline-c.jpg')} alt="Personal Care Aide Course Unit C" /></p>
+              <p><img className="img-fluid" src={require('../../../images/pc-outline-c.jpg')} alt="Caregiver Course Unit C" /></p>
               <h3 className="text-dark">Unit C: Working as a Caregiver</h3>
               <p>In this next unit, you'll dive into the specific services you'll offer as a caregiver, and start developing those skills. Whether you plan on providing all these services once you start your business, it's important to have the full range of skills required to be a successful caregiver. This unit will also allow you to explore the different workplace settings available to you, should you choose to work for a caregiving agency instead of starting your own business.</p>
             </div>
@@ -152,7 +152,7 @@ const Page: NextPage = () => {
             </div>
             <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
               <h2 className="text-dark">Tuition &amp; Payment Plans</h2>
-              <p>The personal care aide course has a tuition of {price?.currency.symbol}{formatPrice(price?.discountedCost)}, or <mark>{price?.currency.symbol}{formatPrice(price?.plans.full.total)} with the pay-in-full discount</mark>. This cost includes everything that has to do with your training, tutorial, and certification!</p>
+              <p>The caregiver course has a tuition of {price?.currency.symbol}{formatPrice(price?.discountedCost)}, or <mark>{price?.currency.symbol}{formatPrice(price?.plans.full.total)} with the pay-in-full discount</mark>. This cost includes everything that has to do with your training, tutorial, and certification!</p>
               <h3>Choose Your Payment Date</h3>
               <p>As an added level of convenience, if you choose to pay your tuition on an installment plan, you'll be able to select the date your payments start and on which of the month your tuition payments will be processed. If you're on a fixed budget or would like to sync your tuition payments with other monthly expenses, there's no easier way to do it!</p>
             </div>
