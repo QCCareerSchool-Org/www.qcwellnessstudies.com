@@ -125,20 +125,16 @@ const Page: NextPage = () => {
               <h3 className="text-dark">Unit D: Technical Skills</h3>
               <p>This highly practical unit is where you'll learn the core technical skills any Caregiver needs to have. When working with individuals who have limited independence, caregivers are sometimes required to help with basic daily tasks such as dressing, toileting, bathing/showering, or helping their client move around, for example. There are very specific methods to follow that are safe and ensure you preserve your client's dignity as you perform these delicate tasks.</p>
             </div>
-            <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-2 mb-md-5">
-              <p><img className="img-fluid" src={require('../../../images/pc-outline-e.jpg')} alt="Personal Care Aide Course Unit E" /></p>
-            </div>
-            <div className="col-12 col-md-6 col-lg-5 mb-5">
+            <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-5">
+              <p><img className="img-fluid" src={require('../../../images/pc-outline-e.jpg')} alt="Caregiver Unit E" /></p>
               <h3 className="text-dark">Unit E: Client Scenarios</h3>
               <p>In Unit E, you’ll read a variety of hypothetical challenging situations and learn how to handle each one. You'll use the scenarios outlined in your course text as a guide to help you start thinking like a Formal Caregiver. Then you'll complete scenario-based assignments to practice interacting with clients in challenging situations.</p>
             </div>
-            <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-2 mb-md-5">
-              <p><img className="img-fluid" src={require('../../../images/fcg-unit-f-course-outline.jpg')} alt="Personal Care Aide Course Unit F" /></p>
-            </div>
             <div className="col-12 col-md-6 col-lg-5 mb-5">
+              <p><img className="img-fluid" src={require('../../../images/fcg-unit-f-course-outline.jpg')} alt="Caregiver Unit F" /></p>
               <h3 className="text-dark">Unit F: Business Training Unit</h3>
               <p>Wrap up your course with this interactive business training unit. You'll work through the specific elements of getting your business off the ground: from setting your prices to finding your first clients, building your website, marketing your services and much more. This unit can help your career launch in high gear!</p>
-            </div>
+            </div>         
             <div className="text-center col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
               <p className="lead"><strong>Note:</strong> Above is an overview of the professional caregiver course curriculum. For a full and detailed course outline, click below.</p>
               <Link href="/courses-and-tuition/personal-care-aide#outline"><a className="btn btn-outline-secondary text-uppercase">Full Course Outline</a></Link>
