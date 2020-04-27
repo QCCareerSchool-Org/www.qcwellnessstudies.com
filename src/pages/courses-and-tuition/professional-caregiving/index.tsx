@@ -205,7 +205,9 @@ const Page: React.FC = () => {
           },
           'Eating',
         ],
-      },
+      },      
+    ],
+    e: [
       {
         title: 'Client Scenarios',
         topics: [
@@ -228,7 +230,7 @@ const Page: React.FC = () => {
         ],
       },
     ],
-    e: [
+    f: [
       {
         title: 'Launching your business',
         topics: [
@@ -305,6 +307,8 @@ const Page: React.FC = () => {
         ],
       },
     ],
+
+
   };
 
   return (
@@ -539,11 +543,11 @@ const Page: React.FC = () => {
               <img src={require('../../../images/fcg-unit-f-course-outline.jpg')} className="rounded img-fluid mt-2" alt="Caregiver Unit F" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit F: (Optional) Business Training Unit</h3>
+              <h3 className="text-dark">Unit F: Business Training Unit</h3>
               <p className="mb-0">If you plan on launching your own caregiving business, don't skip this essential final unit! You'll work through the specific elements of getting your business off the ground: from setting your prices to finding your first clients, building your website, marketing your services and much more. This unit can help your career launch in high gear!</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.e} />
+              <UnitOutline data={units.f} />
             </div>
           </div>
           <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c[]=pc" className="btn btn-secondary">ENROLL ONLINE</a></p>
