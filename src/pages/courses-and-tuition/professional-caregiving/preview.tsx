@@ -4,7 +4,7 @@ import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 
 import { IoMdDownload, IoMdFiling } from 'react-icons/io';
-import { About } from '../../../components/about';
+import { AboutCaregiver } from '../../../components/about-caregiver';
 import { Contact } from '../../../components/contact';
 import { Guarantee } from '../../../components/guarantee';
 import { HowItWorksCaregiver } from '../../../components/how-it-works-caregiver';
@@ -221,7 +221,7 @@ const Page: NextPage = () => {
 
       <a className="anchor" id="about"></a>
       <section id="aboutSection">
-        <About />
+        <AboutCaregiver />
       </section>
 
       <section id="contactSection">
