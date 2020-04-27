@@ -15,16 +15,16 @@ const Page: React.FC = () => {
   const units: { [key: string]: OutlineData[] } = {
     a: [
       {
-        title: 'Becoming a Personal Care Aide',
+        title: 'Becoming a Caregiver',
         topics: [
-          'What is a Personal Care Aide?',
-          'Key skills & personality traits for personal care aides',
+          'What is a caregiver',
+          'Key skills & personality traits for caregivers',
           'Workplaces you\'ll encounter',
-          'Roles & responsibilities of a PCA',
+          'Roles & responsibilities of a caregiver',
           'Types of clients',
           'Client care models',
           {
-            title: 'Working as a PCA:',
+            title: 'Working as a caregiver:',
             topics: [
               'Certifications & education',
               'Career paths',
@@ -79,7 +79,7 @@ const Page: React.FC = () => {
         title: 'Understanding your Client\'s Needs',
         topics: [
           'Working with aging clients',
-          'Common PCA tasks for aging clients',
+          'Common caregiver tasks for aging clients',
           'Challenges of Aging',
           'Common conditions you\'ll encounter (dementia, arthritis, etc.)',
           'Working with clients with disabilities, medical conditions or impairments',
@@ -92,12 +92,12 @@ const Page: React.FC = () => {
     ],
     c: [
       {
-        title: 'Working as a Personal Care Aide',
+        title: 'Working as a Caregiver',
         topics: [
           'Defining your scope of practice',
           'Medical support & dealing with medical emergencies',
           'Providing companionship',
-          'Soft skills for PCAs',
+          'Soft skills for caregivers',
           {
             title: 'Activities of daily living (ADLs)',
             topics: [
@@ -153,7 +153,7 @@ const Page: React.FC = () => {
     ],
     d: [
       {
-        title: 'Technical Skills for Personal Care Aides',
+        title: 'Technical Skills for Caregivers',
         topics: [
           {
             title: 'Mobility',
@@ -314,7 +314,7 @@ const Page: React.FC = () => {
   return (
     <DefaultLayout SecondaryNav={(): React.ReactElement => (
       <Subnav
-        heading="Personal Care Aide Course"
+        heading="Caregiver Course"
         items={[
           { name: 'Tuition', url: '#paymentPlans' },
           { name: 'Course Outline', url: '#outline' },
@@ -543,7 +543,7 @@ const Page: React.FC = () => {
               <img src={require('../../../images/fcg-unit-f-course-outline.jpg')} className="rounded img-fluid mt-2" alt="Caregiver Unit F" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit F: Business Training Unit</h3>
+              <h3 className="text-dark">Unit F: (Optional) Business Training Unit</h3>
               <p className="mb-0">If you plan on launching your own caregiving business, don't skip this essential final unit! You'll work through the specific elements of getting your business off the ground: from setting your prices to finding your first clients, building your website, marketing your services and much more. This unit can help your career launch in high gear!</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
