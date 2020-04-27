@@ -137,7 +137,7 @@ const Page: NextPage = () => {
             </div>         
             <div className="text-center col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
               <p className="lead"><strong>Note:</strong> Above is an overview of the professional caregiver course curriculum. For a full and detailed course outline, click below.</p>
-              <Link href="/courses-and-tuition/personal-care-aide#outline"><a className="btn btn-outline-secondary text-uppercase">Full Course Outline</a></Link>
+              <Link href="/courses-and-tuition/professional-caregiving#outline"><a className="btn btn-outline-secondary text-uppercase">Full Course Outline</a></Link>
             </div>
           </div>
         </div>
