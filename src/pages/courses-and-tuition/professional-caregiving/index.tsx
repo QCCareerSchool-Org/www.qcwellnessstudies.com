@@ -347,7 +347,7 @@ const Page: React.FC = () => {
 
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
-        <PaymentPlans courses={[ 'pc' ]} doubleGuarantee={doubleGuarantee} />
+        <PaymentPlans courses={[ 'fc' ]} doubleGuarantee={doubleGuarantee} />
       </section>
 
       <section id="whatSection">
@@ -403,7 +403,7 @@ const Page: React.FC = () => {
                 <li><p><strong>Physical Stamina</strong> &mdash; You’re ready to work on your feet for long hours and have the physical strength to help your clients with mobility issues. You know your own limitations and are ready to decline a client if you know you won’t have the physical ability to properly care for them.</p></li>
                 <li><p><strong>Integrity &amp; Discretion</strong> &mdash; You understand the importance of respecting your client’s privacy while working in their home and helping them with sensitive tasks. You’re discreet and would never dream of betraying a client’s trust!</p></li>
               </ul>
-              <p className="text-center"><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c[]=pc">ENROLL NOW</a></p>
+              <p className="text-center"><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>
             </div>
           </div>
         </div>
@@ -461,7 +461,7 @@ const Page: React.FC = () => {
           affordable="Since QC's course is fully online, you don't have to pay surcharges for attending lectures or classroom sessions. You complete the full course from home."
           flexible="No start dates, no deadlines, no mandatory attendance! This course is completely self-directed and self-paced. Get certified quickly, or take your time."
           comprehensive="you're not just learning how one caregiving company wants you do do things. You're getting a foundation of knowledge in caregiving that will be useful no natter where you work!"
-          courses={[ 'pc' ]}
+          courses={[ 'fc' ]}
         />
       </section>
 
@@ -550,7 +550,7 @@ const Page: React.FC = () => {
               <UnitOutline data={units.f} />
             </div>
           </div>
-          <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c[]=pc" className="btn btn-secondary">ENROLL ONLINE</a></p>
+          <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c[]=fc" className="btn btn-secondary">ENROLL ONLINE</a></p>
         </div>
       </section>
 
@@ -591,7 +591,7 @@ const Page: React.FC = () => {
         <div className="container">
           <h2>Enroll Today</h2>
           <p className="lead mb-5">Start your caregiving training today<br />and launch an exciting, rewarding career!</p>
-          <p><a href="https://enroll.qcwellnessstudies.com/" className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
+          <p><a href="https://enroll.qcwellnessstudies.com/?c[]=fc" className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
         </div>
       </section>
 

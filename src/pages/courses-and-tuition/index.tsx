@@ -20,7 +20,7 @@ const Page: React.FC = () => (
         <hr className="mt-5" />
         <div className="row">
           <div className="col-12 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-4">
-            <PriceCard courses={[ 'pc' ]} />
+            <PriceCard courses={[ 'fc' ]} />
           </div>
           <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
             <h2 className="text-dark">Caregiver</h2>

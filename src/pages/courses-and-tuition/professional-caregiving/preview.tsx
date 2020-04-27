@@ -148,7 +148,7 @@ const Page: NextPage = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-4">
-              <PriceCard courses={[ 'pc' ]} />
+              <PriceCard courses={[ 'fc' ]} />
             </div>
             <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
               <h2 className="text-dark">Tuition &amp; Payment Plans</h2>
@@ -232,7 +232,7 @@ const Page: NextPage = () => {
         <div className="container">
           <h2>Enroll Today</h2>
           <p className="lead mb-5">Start your online caregiver training today<br />and launch an exciting, rewarding career!</p>
-          <p><a href="https://enroll.qcwellnessstudies.com/" className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
+          <p><a href="https://enroll.qcwellnessstudies.com/?c[]=fc" className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
         </div>
       </section>
 
