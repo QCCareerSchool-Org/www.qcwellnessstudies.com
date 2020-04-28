@@ -271,7 +271,7 @@ const Page: NextPage = () => {
 
       <a className="anchor" id="about"></a>
       <section id="aboutSection">
-        <About />
+        <About Profession="professional sleep consultant" />
       </section>
 
       <section id="contactSection">

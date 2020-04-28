@@ -4,7 +4,7 @@ import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 
 import { IoMdDownload, IoMdFiling } from 'react-icons/io';
-import { AboutCaregiver } from '../../../components/about-caregiver';
+import { About } from '../../../components/about';
 import { Contact } from '../../../components/contact';
 import { Guarantee } from '../../../components/guarantee';
 import { HowItWorksCaregiver } from '../../../components/how-it-works-caregiver';
@@ -18,10 +18,10 @@ import { formatPrice } from '../../../lib/functions';
 import { useLocation } from '../../../providers/location';
 
 const Page: NextPage = () => {
-  const [ popup1, toggle1 ] = useToggle();
-  const [ popup2, toggle2 ] = useToggle();
+  const [popup1, toggle1] = useToggle();
+  const [popup2, toggle2] = useToggle();
   const location = useLocation();
-  const price = usePrice([ 'pc' ], location?.countryCode, location?.provinceCode);
+  const price = usePrice(['pc'], location?.countryCode, location?.provinceCode);
 
   return (
     <MinimalLayout SecondaryNav={(): React.ReactElement => (
@@ -134,7 +134,7 @@ const Page: NextPage = () => {
               <p><img className="img-fluid" src={require('../../../images/fcg-unit-f-course-outline.jpg')} alt="Caregiver Unit F" /></p>
               <h3 className="text-dark">Unit F: Business Training Unit</h3>
               <p>Wrap up your course with this interactive business training unit. You'll work through the specific elements of getting your business off the ground: from setting your prices to finding your first clients, building your website, marketing your services and much more. This unit can help your career launch in high gear!</p>
-            </div>         
+            </div>
             <div className="text-center col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
               <p className="lead"><strong>Note:</strong> Above is an overview of the professional caregiver course curriculum. For a full and detailed course outline, click below.</p>
               <Link href="/courses-and-tuition/professional-caregiving#outline"><a className="btn btn-outline-secondary text-uppercase">Full Course Outline</a></Link>
@@ -148,7 +148,7 @@ const Page: NextPage = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-4">
-              <PriceCard courses={[ 'fc' ]} />
+              <PriceCard courses={['fc']} />
             </div>
             <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
               <h2 className="text-dark">Tuition &amp; Payment Plans</h2>
@@ -221,7 +221,7 @@ const Page: NextPage = () => {
 
       <a className="anchor" id="about"></a>
       <section id="aboutSection">
-        <AboutCaregiver />
+        <About Profession="caregiver" />
       </section>
 
       <section id="contactSection">
