@@ -6,7 +6,6 @@ interface Props {
 }
 
 export const About: React.FC<Props> = ({ profession }) => (
-
   <div className="container text-light">
     <div className="row col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
       <div className="">
