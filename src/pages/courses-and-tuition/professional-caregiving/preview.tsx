@@ -1,9 +1,8 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
-import Modal from 'react-bootstrap/Modal';
 
-import { IoMdDownload, IoMdFiling } from 'react-icons/io';
+import { IoMdFiling } from 'react-icons/io';
 import { About } from '../../../components/about';
 import { Contact } from '../../../components/contact';
 import { Guarantee } from '../../../components/guarantee';
@@ -12,16 +11,13 @@ import { PriceCard } from '../../../components/price-card';
 import { SEO } from '../../../components/seo';
 import { Subnav } from '../../../components/subnav';
 import { usePrice } from '../../../hooks/usePrice';
-import { useToggle } from '../../../hooks/useToggle';
 import { MinimalLayout } from '../../../layouts/mimimal';
 import { formatPrice } from '../../../lib/functions';
 import { useLocation } from '../../../providers/location';
 
 const Page: NextPage = () => {
-  const [popup1, toggle1] = useToggle();
-  const [popup2, toggle2] = useToggle();
   const location = useLocation();
-  const price = usePrice(['pc'], location?.countryCode, location?.provinceCode);
+  const price = usePrice([ 'pc' ], location?.countryCode, location?.provinceCode);
 
   return (
     <MinimalLayout SecondaryNav={(): React.ReactElement => (
@@ -47,7 +43,7 @@ const Page: NextPage = () => {
           <div className="row mt-5">
             <div className="col-12 col-md-10 offset-md-1">
               <p><img src={require('../../../images/icon-fcgp.png')} alt="Infant Sleep Consulting Professional Certification" /></p>
-              <h1>PROFESSIONAL CAREGIVING<br />CERTIFICATION COURSE</h1>
+              <h1 className="text-uppercase">Professional Caregiving Certification Course</h1>
               <h2 className="h3">Course Preview</h2>
             </div>
           </div>
@@ -221,7 +217,7 @@ const Page: NextPage = () => {
 
       <a className="anchor" id="about"></a>
       <section id="aboutSection">
-        <About Profession="caregiver" />
+        <About profession="a caregiver" />
       </section>
 
       <section id="contactSection">
