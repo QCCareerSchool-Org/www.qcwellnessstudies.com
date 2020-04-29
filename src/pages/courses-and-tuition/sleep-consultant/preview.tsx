@@ -48,7 +48,7 @@ const Page: NextPage = () => {
           <div className="row mt-5">
             <div className="col-12 col-md-10 offset-md-1">
               <p><img src={require('../../../images/certification-iscp.png')} alt="Infant Sleep Consulting Professional Certification" /></p>
-              <h1>INFANT SLEEP<br />CONSULTANT COURSE</h1>
+              <h1 className="text-uppercase">Infant Sleep Consultant Course</h1>
               <h2 className="h3">Course Preview</h2>
             </div>
           </div>
