@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 interface Props {
@@ -10,7 +11,7 @@ export const About: React.FC<Props> = ({ profession }) => (
       <div className="">
         <p><img src={require('../images/logo-footer.svg')} alt="About QC Wellness Studies" /></p>
         <h2 className="text-light">About QC Wellness Studies</h2>
-        <p>QC Wellness Studies is a faculty of QC Career School, a distance learning institution that has been providing quality career training since 1984! With 35 years of successful graduates launching profitable businesses in their desired fields, QC's course developers are confident you'll achieve success as a {profession}.</p>
+        <p>QC Wellness Studies is a faculty of QC Career School, a distance learning institution that has been providing quality career training since 1984! With 35 years of successful graduates launching profitable businesses in their desired fields, QC's course developers are confident you'll achieve success as {profession}.</p>
         <p>QC provides even better training than what you'd receive at a brick and mortar school. You'll benefit from regular one-on-one instruction and access to help whenever you need it. QC will help you to build a successful career from the ground up!</p>
       </div>
       <div className="card mb-3">
@@ -22,3 +23,7 @@ export const About: React.FC<Props> = ({ profession }) => (
     </div>
   </div>
 );
+
+About.propTypes = {
+  profession: PropTypes.string.isRequired,
+};

@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
-import { IoMdChatboxes, IoMdCheckbox, IoMdFiling, IoMdHome, IoMdSchool, IoMdTime } from 'react-icons/io';
 
+import { IoMdFiling, IoMdTime, IoMdHome, IoMdCheckbox, IoMdChatboxes, IoMdSchool } from 'react-icons/io';
 import { About } from '../../../components/about';
 import { Contact } from '../../../components/contact';
 import { Guarantee } from '../../../components/guarantee';
@@ -11,14 +11,11 @@ import { PriceCard } from '../../../components/price-card';
 import { SEO } from '../../../components/seo';
 import { Subnav } from '../../../components/subnav';
 import { usePrice } from '../../../hooks/usePrice';
-import { useToggle } from '../../../hooks/useToggle';
 import { MinimalLayout } from '../../../layouts/mimimal';
 import { formatPrice } from '../../../lib/functions';
 import { useLocation } from '../../../providers/location';
 
 const Page: NextPage = () => {
-  const [popup1, toggle1] = useToggle();
-  const [popup2, toggle2] = useToggle();
   const location = useLocation();
   const price = usePrice(['fc'], location?.countryCode, location?.provinceCode);
 
@@ -262,7 +259,7 @@ const Page: NextPage = () => {
 
       <a className="anchor" id="about"></a>
       <section id="aboutSection">
-        <About profession="caregiver" />
+        <About profession="a caregiver" />
       </section>
 
       <section id="contactSection">
