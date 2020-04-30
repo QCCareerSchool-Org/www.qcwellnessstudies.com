@@ -205,7 +205,7 @@ const Page: React.FC = () => {
           },
           'Eating',
         ],
-      },      
+      },
     ],
     e: [
       {
@@ -466,7 +466,7 @@ const Page: React.FC = () => {
       </section>
 
       <section id="includedSection" className="bg-light text-dark">
-        <Included certification="Personal Caregiving Professional (PCGP™)" />
+        <Included certification="Formal Caregiving Professional (FCGP™)" />
       </section>
 
       <a className="anchor" id="outline"></a>

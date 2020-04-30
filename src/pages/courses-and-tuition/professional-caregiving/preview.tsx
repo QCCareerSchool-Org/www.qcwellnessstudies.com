@@ -94,7 +94,7 @@ const Page: NextPage = () => {
           courseName="Professional Caregiving Course"
           adjective="practical caregiver"
           tutorOccupation="professional caregiver"
-          certification="Personal Caregiving Professional (PCGP™)"
+          certification="Formal Caregiving Professional (FCGP™)"
           tutor={(
             <>
               <p>When you enroll in the caregiver course, you're assigned a personal tutor who is responsible for evaluating/grading your work and providing detailed feedback on your assignments. After you submit a unit for grading, you'll receive detailed audio feedback from your tutor who will explain exactly where you excelled and where you need some improvement.</p>
