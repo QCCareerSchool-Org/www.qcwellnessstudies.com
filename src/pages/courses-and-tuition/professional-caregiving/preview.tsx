@@ -3,11 +3,11 @@ import Link from 'next/link';
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 
-import { IoMdDownload, IoMdFiling } from 'react-icons/io';
+import { IoMdChatboxes, IoMdCheckbox, IoMdDownload, IoMdFiling, IoMdHome, IoMdSchool, IoMdTime } from 'react-icons/io';
 import { About } from '../../../components/about';
 import { Contact } from '../../../components/contact';
 import { Guarantee } from '../../../components/guarantee';
-import { HowItWorksCaregiver } from '../../../components/how-it-works-caregiver';
+import { HowItWorks } from '../../../components/how-it-works';
 import { PriceCard } from '../../../components/price-card';
 import { SEO } from '../../../components/seo';
 import { Subnav } from '../../../components/subnav';
@@ -94,7 +94,10 @@ const Page: NextPage = () => {
 
       <a className="anchor" id="howItWorks"></a>
       <section id="howItWorksSection">
-        <HowItWorksCaregiver />
+        <HowItWorks
+          profession="Professional Caregiver"
+          sleepConsultantBoolean={false}            
+        />
       </section>
 
       <a className="anchor" id="curriculum"></a>

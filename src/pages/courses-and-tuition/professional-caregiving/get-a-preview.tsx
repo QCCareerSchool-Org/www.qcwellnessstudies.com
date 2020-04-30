@@ -87,7 +87,7 @@ const Page: NextPage = () => (
         affordable="Since QC's course is fully online, you don't have to pay surcharges for attending lectures or webinars. You complete the full course from home."
         flexible="No start dates, no deadlines, no mandatory webinars! This course is completely self-directed and self-paced. Get certified quickly or take your time."
         comprehensive="The course prepares you to work in different environments with all types of people. Experience the full range of caregiving services to be better prepared for starting your career!"
-        courses={[ 'pc' ]}
+        courses={[ 'fc' ]}
         hideButton={true}
       />
     </section>
