@@ -18,8 +18,7 @@ export const HowItWorks: React.FC<Props> = ({ profession, sleepConsultantBoolean
         {sleepConsultantBoolean
           ? (
             <>
-              <div className="col-12 col-md-6 col-lg-5">
-                <h2 className="text-dark mb-4">How Online Training Works</h2>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mb-4">                
                 {sleepConsultant ? sleepConsultant :
                   <div className="container text-center">
                     <div className="col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 mb-4">

@@ -1,9 +1,8 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
-import Modal from 'react-bootstrap/Modal';
+import { IoMdChatboxes, IoMdCheckbox, IoMdFiling, IoMdHome, IoMdSchool, IoMdTime } from 'react-icons/io';
 
-import { IoMdChatboxes, IoMdCheckbox, IoMdDownload, IoMdFiling, IoMdHome, IoMdSchool, IoMdTime } from 'react-icons/io';
 import { About } from '../../../components/about';
 import { Contact } from '../../../components/contact';
 import { Guarantee } from '../../../components/guarantee';
@@ -21,12 +20,12 @@ const Page: NextPage = () => {
   const [popup1, toggle1] = useToggle();
   const [popup2, toggle2] = useToggle();
   const location = useLocation();
-  const price = usePrice(['pc'], location?.countryCode, location?.provinceCode);
+  const price = usePrice(['fc'], location?.countryCode, location?.provinceCode);
 
   return (
     <MinimalLayout SecondaryNav={(): React.ReactElement => (
       <Subnav
-        heading="Sleep Consultant Course Preview"
+        heading="Professional Caregiver Course Preview"
         items={[
           { name: 'Curriculum', url: '#curriculum' },
           { name: 'Tuition', url: '#tuition' },
@@ -46,7 +45,7 @@ const Page: NextPage = () => {
         <div className="container text-center">
           <div className="row mt-5">
             <div className="col-12 col-md-10 offset-md-1">
-              <p><img src={require('../../../images/icon-fcgp.png')} alt="Infant Sleep Consulting Professional Certification" /></p>
+              <p><img src={require('../../../images/icon-fcgp.png')} alt="Formal Caregiving Professional Certification" /></p>
               <h1>PROFESSIONAL CAREGIVING<br />CERTIFICATION COURSE</h1>
               <h2 className="h3">Course Preview</h2>
             </div>
@@ -96,7 +95,46 @@ const Page: NextPage = () => {
       <section id="howItWorksSection">
         <HowItWorks
           profession="Professional Caregiver"
-          sleepConsultantBoolean={false}            
+          sleepConsultantBoolean={false}
+          otherProfessions={(
+            <>
+              <div className="container text-center">
+                <div className="col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 mb-4">
+                  <IoMdTime size={40} />
+                  <h3 className="text-dark">Enroll Online at Any Time</h3>
+                  <p>With no enrollment or study deadlines, you can enroll in the caregiver course whenever you're ready, and start working on your course right away. Within a day of enrolling, you'll receive access to your online student center, course materials, and assignment templates.</p>
+                  <hr className="my-4" />
+                  <IoMdHome size={40} />
+                  <h3 className="text-dark">Study Your Course Materials from Home</h3>
+                  <p>You'll follow your detailed course guide that explains when you need to read a text and when to complete your assignments. Your books are all available online as PDF downloads, so you can study from home or download them to take with you anywhere!</p>
+                  <p><strong>Have questions while studying?</strong></p>
+                  <p>Just like in the classroom, sometimes you'll have a question about your course or assignment instructions. You can always reach out to your student advisor for help, either by phone, email or via Live Chat. If your advisor cannot answer your question, they will pass your request along to your tutor who will get back to you as quickly as they can!</p>
+                  <hr className="my-4" />
+                  <IoMdCheckbox size={40} />
+                  <h3 className="text-dark ">Complete &amp; Submit Your Assignments</h3>
+                  <p>Your assignments are completed at your leisure, and submitted to your tutor for grading via the online student center. As part of your practical caregiver training, you'll complete different types of assignments that are designed to test your knowledge and challenge your skills.</p>
+                  <ul className="text-left">
+                    <li><strong>Quizzes</strong> are used to evaluate your core knowledge on a number of topics.</li>
+                    <li><strong>Long-answer or “discussion” questions</strong> challenge you to think through various scenarios and provide detailed answers where you can take the time to explain your reasoning.</li>
+                    <li><strong>Case studies</strong> and other <strong>practical assignments</strong> allow you to experience real-world scenarios. As part of this course, you'll be presented with a number of practical assignments and case studies that will put you in the shoes of a professional caregiver to test your technical skills and practical knowledge.</li>
+                  </ul>
+                  <p className="text-dark"><strong>Pro tip:</strong> Students who treat their case studies and practical assignments like they're dealing with an actual paying client are those who are the most successful upon graduation. Don't skimp on your practical assignments!</p>
+                  <hr className="my-4" />
+                  <IoMdChatboxes size={40} />
+                  <h3 className="text-dark">Listen to Feedback from Your Tutor</h3>
+                  <p>When you enroll in the caregiver course, you're assigned a personal tutor who is responsible for evaluating/grading your work and providing detailed feedback on your assignments. After you submit a unit for grading, you'll receive detailed audio feedback from your tutor who will explain exactly where you excelled and where you need some improvement.</p>
+                  <p>Your tutor is your best resource throughout the course! They've taken the journey you're taking now and have done it successfully. Take their feedback to heart. They want to see you succeed!</p>
+                  <hr className="my-4" />
+                  <IoMdSchool size={40} />
+                  <h3 className="text-dark">Graduate &amp; Start Working</h3>
+                  <p>Once you've completed all your course units and your tuition has been paid in full, you'll graduate from QC Wellness Studies and receive your Personal Caregiving Professional (PCGP™) certification. With this certification, and the business training you've received as part of your course, you'll have all the knowledge and skills you need to launch your business!</p>
+                  <hr className="my-4" />
+                  <h3 className="text-center text-dark">Want to know more about how online learning can work?</h3>
+                  <p className="text-center"><Link href="/how-it-works"><a className="btn btn-secondary">LEARN MORE</a></Link></p>
+                </div>
+              </div>
+            </>
+          )}
         />
       </section>
 
@@ -224,7 +262,7 @@ const Page: NextPage = () => {
 
       <a className="anchor" id="about"></a>
       <section id="aboutSection">
-        <About Profession="caregiver" />
+        <About profession="caregiver" />
       </section>
 
       <section id="contactSection">
