@@ -11,8 +11,8 @@ const Page: NextPage = () => (
 
     <SEO
       title="Thank You For Your Interest"
-      description="More information about the Personal Care Aide course"
-      canonical="/courses-and-tuition/personal-care-aide/thank-you"
+      description="More information about the Caregiver course"
+      canonical="/courses-and-tuition/professional-caregiving/thank-you"
       noIndex={true}
     />
 
@@ -21,7 +21,7 @@ const Page: NextPage = () => (
         <div className="row d-flex align-items-center">
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-7 offset-lg-0">
             <h1 className="text-dark">Your Course Preview</h1>
-            <p><strong>Thank you for your interest in QC Wellness School's Personal Care Aide Course!</strong>The course preview should help answer most questions you have about becoming a professional caregiver from the comfort of home including</p>
+            <p><strong>Thank you for your interest in QC Wellness School's Caregiver Course!</strong>The course preview should help answer most questions you have about becoming a professional caregiver from the comfort of home including</p>
             <ul>
               <li>What exactly am I going to learn in this course?</li>
               <li>What is the tuition for the course and what do those fees cover?</li>
@@ -43,8 +43,8 @@ const Page: NextPage = () => (
           <div className="col-12 col-md-8 offset-md-2 col-lg-4 offset-lg-0 mb-5 mb-lg-0">
             <IoMdBook size={30} />
             <h3 className="text-dark text-center">Course Overview</h3>
-            <p className="text-dark text-center">Learn more about the personal care aide course. View tuition options, and read a detailed course outline.</p>
-            <p><Link href="/courses-and-tuition/personal-care-aide"><a className="btn btn-dark btn-md text-uppercase mt-auto">Learn More</a></Link></p>
+            <p className="text-dark text-center">Learn more about the caregiver course. View tuition options, and read a detailed course outline.</p>
+            <p><Link href="/courses-and-tuition/professional-caregiving"><a className="btn btn-dark btn-md text-uppercase mt-auto">Learn More</a></Link></p>
           </div>
           <div className="col-12 col-md-8 offset-md-2 col-lg-4 offset-lg-0 mb-5 mb-lg-0">
             <IoMdSchool size={30} />

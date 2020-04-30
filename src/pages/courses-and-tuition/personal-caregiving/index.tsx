@@ -329,12 +329,11 @@ const Page: React.FC = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-sm-10 col-md-8 col-lg-7">
-              <h1>Become a Certified Caregiving Professional</h1>
-              <h2 className="h5">Get certified with a fully-online personal care aide course</h2>
+              <h1>Personal (Informal) Caregiving Course</h1>
+              <h2 className="h5">Learn how to properly take care of your loved ones as their personal caregiver.</h2>
               <ul>
-                <li>Study from home on your own schedule!</li>
-                <li>Learn how to freelance or run your own business.</li>
-                <li>Get a complete education and become certified in as little as three months!</li>
+                <li>Graduate quickly with this condensed course</li>
+                <li>Learn the tools and techniques you need to care for your loved one safely</li>               
               </ul>
             </div>
           </div>
