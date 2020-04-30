@@ -18,10 +18,10 @@ import { formatPrice } from '../../../lib/functions';
 import { useLocation } from '../../../providers/location';
 
 const Page: NextPage = () => {
-  const [popup1, toggle1] = useToggle();
-  const [popup2, toggle2] = useToggle();
+  const [ popup1, toggle1 ] = useToggle();
+  const [ popup2, toggle2 ] = useToggle();
   const location = useLocation();
-  const price = usePrice(['sl'], location?.countryCode, location?.provinceCode);
+  const price = usePrice([ 'sl' ], location?.countryCode, location?.provinceCode);
 
   return (
     <MinimalLayout SecondaryNav={(): React.ReactElement => (
@@ -95,9 +95,12 @@ const Page: NextPage = () => {
       <a className="anchor" id="howItWorks"></a>
       <section id="howItWorksSection">
         <HowItWorks
-        profession="Sleep Consultant"
-        sleepConsultantBoolean={true}
-         />
+          courseName="Sleep Consultant Course"
+          adjective="sleep-consultant"
+          tutorOccupation="professional sleep consultant"
+          certification="Infant Sleep Consultant Professional (ISCP™)"
+          caseStudiesExtended="As part of this course, you'll be presented with a number of case studies and will be asked to create full sleep plans to address unique circumstances."
+        />
       </section>
 
       <a className="anchor" id="curriculum"></a>
@@ -195,7 +198,7 @@ const Page: NextPage = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-4">
-              <PriceCard courses={['sl']} />
+              <PriceCard courses={[ 'sl' ]} />
             </div>
             <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
               <h2 className="text-dark">Tuition &amp; Payment Plans</h2>
