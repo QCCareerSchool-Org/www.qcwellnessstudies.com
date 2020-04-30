@@ -13,7 +13,7 @@ export const Footer: React.FC = () => (
         </div>
         <div className="col-12 col-md-4 col-lg-3 mb-4 mb-md-0">
           <p className="text-light"><strong>AVAILABLE CERTIFICATIONS:</strong></p>
-          <p><Link href="/courses-and-tuition/personal-care-aide"><a>Personal Care Aide</a></Link></p>
+          <p><Link href="/courses-and-tuition/professional-caregiving"><a>Caregiver</a></Link></p>
           <p><Link href="/courses-and-tuition/sleep-consultant"><a> Sleep Consultant</a></Link></p>
           <p><Link href="/courses-and-tuition/skincare-consultant"><a>Skincare Consultant</a></Link></p>
           <p><Link href="/courses-and-tuition/aging-in-place"><a>Aging in Place</a></Link></p>

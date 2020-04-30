@@ -11,7 +11,7 @@ const Page: NextPage = () => (
 
     <SEO
       title="Get a Sleep Consultant Course Preview"
-      description="If you're interested in becoming a professional sleep consultant, get a preview of QC's sleep consultant certifiation course here!"
+      description="If you're interested in becoming a professional sleep consultant, get a preview of QC's sleep consultant certification course here!"
       canonical="/courses-and-tuition/sleep-consultant/get-a-preview"
     />
 

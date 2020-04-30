@@ -48,7 +48,7 @@ const Page: NextPage = () => {
           <div className="row mt-5">
             <div className="col-12 col-md-10 offset-md-1">
               <p><img src={require('../../../images/certification-iscp.png')} alt="Infant Sleep Consulting Professional Certification" /></p>
-              <h1>INFANT SLEEP<br />CONSULTANT COURSE</h1>
+              <h1 className="text-uppercase">Infant Sleep Consultant Course</h1>
               <h2 className="h3">Course Preview</h2>
             </div>
           </div>
@@ -94,7 +94,13 @@ const Page: NextPage = () => {
 
       <a className="anchor" id="howItWorks"></a>
       <section id="howItWorksSection">
-        <HowItWorks />
+        <HowItWorks
+          courseName="Sleep Consultant Course"
+          adjective="sleep-consultant"
+          tutorOccupation="professional sleep consultant"
+          certification="Infant Sleep Consultant Professional (ISCP™)"
+          caseStudiesExtended="As part of this course, you'll be presented with a number of case studies and will be asked to create full sleep plans to address unique circumstances."
+        />
       </section>
 
       <a className="anchor" id="curriculum"></a>
@@ -271,7 +277,7 @@ const Page: NextPage = () => {
 
       <a className="anchor" id="about"></a>
       <section id="aboutSection">
-        <About />
+        <About profession="professional sleep consultant" />
       </section>
 
       <section id="contactSection">

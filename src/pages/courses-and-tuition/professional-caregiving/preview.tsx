@@ -1,9 +1,8 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
-import Modal from 'react-bootstrap/Modal';
 
-import { IoMdDownload, IoMdFiling } from 'react-icons/io';
+import { IoMdChatboxes, IoMdCheckbox, IoMdFiling, IoMdHome, IoMdSchool, IoMdTime } from 'react-icons/io';
 import { About } from '../../../components/about';
 import { Contact } from '../../../components/contact';
 import { Guarantee } from '../../../components/guarantee';
@@ -12,21 +11,18 @@ import { PriceCard } from '../../../components/price-card';
 import { SEO } from '../../../components/seo';
 import { Subnav } from '../../../components/subnav';
 import { usePrice } from '../../../hooks/usePrice';
-import { useToggle } from '../../../hooks/useToggle';
 import { MinimalLayout } from '../../../layouts/mimimal';
 import { formatPrice } from '../../../lib/functions';
 import { useLocation } from '../../../providers/location';
 
 const Page: NextPage = () => {
-  const [ popup1, toggle1 ] = useToggle();
-  const [ popup2, toggle2 ] = useToggle();
   const location = useLocation();
-  const price = usePrice([ 'pc' ], location?.countryCode, location?.provinceCode);
+  const price = usePrice([ 'fc' ], location?.countryCode, location?.provinceCode);
 
   return (
     <MinimalLayout SecondaryNav={(): React.ReactElement => (
       <Subnav
-        heading="Sleep Consultant Course Preview"
+        heading="Professional Caregiver Course Preview"
         items={[
           { name: 'Curriculum', url: '#curriculum' },
           { name: 'Tuition', url: '#tuition' },
@@ -37,17 +33,17 @@ const Page: NextPage = () => {
     )}>
 
       <SEO
-        title="Personal Care Aide Course Preview"
-        description="Preview the online personal care aide course offered by QC. Read a detailed course overview, sample some assignments, meet your tutors, and more!"
-        canonical="/courses-and-tuition/personal-care-aide/preview"
+        title="Professional Caregiver Course Preview"
+        description="Preview the online professional caregiver course offered by QC. Read a detailed course overview, sample some assignments, meet your tutors, and more!"
+        canonical="/courses-and-tuition/professional-caregiving/preview"
       />
 
       <section id="heroSection">
         <div className="container text-center">
           <div className="row mt-5">
             <div className="col-12 col-md-10 offset-md-1">
-              <p><img src={require('../../../images/certification-pcgp.png')} alt="Infant Sleep Consulting Professional Certification" /></p>
-              <h1>PERSONAL CARE AIDE<br />CERTIFICATION COURSE</h1>
+              <p><img src={require('../../../images/icon-fcgp.png')} alt="Formal Caregiving Professional Certification" /></p>
+              <h1>PROFESSIONAL CAREGIVING<br />CERTIFICATION COURSE</h1>
               <h2 className="h3">Course Preview</h2>
             </div>
           </div>
@@ -58,10 +54,10 @@ const Page: NextPage = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 mb-3">
-              <h2 className="text-dark">Personal Care Aide Certification Course</h2>
-              <p>Sometimes people just need a little extra help in their daily lives. That's where you come in! As a professional personal caer aide, you'll offer your clients assistance in their daily activities, allowing them to maintain their independence and wellbeing. This is an ever in-demand industry with a growing client base for obvious reasons. Experienced PCAs are in incredibly high demand!</p>
-              <p>While you can work for an agency, the reality is that you can make a lot more money as a PCA by working independently. QC's online course equips you with everything you need to begin your career as an independent personal care aide. To run an effective caregiving business you must learn about best practices and techniques. You must also know how to communicate with clients and develop the management expertise needed to run a profitable company.</p>
-              <p>This course is perfect for anyone who loves helping people and want to work in the caregiving industry, either part-time or full-time.<strong> This includes</strong></p>
+              <h2 className="text-dark">Professional Caregiver Course</h2>
+              <p>Sometimes people just need a little extra help in their daily lives. That's where you come in! As a professional caregiver, you'll offer your clients assistance in their daily activities, allowing them to maintain their independence and wellbeing. This is an ever in-demand industry with a growing client base for obvious reasons. Experienced caregivers are in incredibly high demand!</p>
+              <p>While you can work for an agency, the reality is that you can make a lot more money as a caregiver by working independently. QC's online course equips you with everything you need to begin your career as an independent professional caregiver. To run an effective caregiving business you must learn about best practices and techniques. You must also know how to communicate with clients and develop the management expertise needed to run a profitable company.</p>
+              <p>This course is perfect for anyone who loves helping people and wants to work in the caregiving industry, either part-time or full-time.<strong> This includes</strong></p>
               <ul>
                 <li>Young professionals looking to enter the caregiving/medical industry</li>
                 <li>Individuals with prior caregiving experience looking for steady work/income</li>
@@ -78,15 +74,15 @@ const Page: NextPage = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-              <h2 className="text-light">Why become a Freelance Personal Care Aide?</h2>
-              <p className="text-light">PCAs are in high demand! Freelancing as a PCA allows you the flexibility to make your own professional choices!</p>
+              <h2 className="text-light">Why become an Independent Professional Caregiver?</h2>
+              <p className="text-light">Caregiving professionals are in high demand! Operating as an independent (or “freelance”) professional caregiver allows you the flexibility to make your own professional choices!</p>
               <ul className="text-light">
-                <li><p><strong>Choose your own clients:</strong> Pick the types of clients you're willing to work with, and the ones you want to avoid.</p></li>
-                <li><p><strong>Set your rates:</strong> You don't have to be paid minimum wage for this important work! As a freelance PCA, you set your salary.</p></li>
+                <li><p><strong>Choose your own clients:</strong> Pick the types of clients you’d like to work with.</p></li>
+                <li><p><strong>Set your rates:</strong> You don't have to be paid minimum wage for this important work! As an independent professional caregiver, you set your salary.</p></li>
                 <li><p><strong>Establish a network:</strong> By providing excellent service at competitive prices, you can quickly grow a network of clients who trust you.</p></li>
-                <li><p><strong>Earn a good living:</strong> PCAs earn just as much as other caregivers including Home Health Aides and Nursing Assistants, without the medical tasks.</p></li>
+                <li><p><strong>Earn a good living:</strong> Caregivers  earn just as much as other home care professionals including Home Health Aides and Nursing Assistants, without the medical tasks.</p></li>
               </ul>
-              <p className="text-light">Running your own PCA business is a great way to turn a rewarding job into a fulfilling career!</p>
+              <p className="text-light">Running your own business is a great way to turn a rewarding job into a fulfilling career!</p>
             </div>
           </div>
         </div>
@@ -94,7 +90,19 @@ const Page: NextPage = () => {
 
       <a className="anchor" id="howItWorks"></a>
       <section id="howItWorksSection">
-        <HowItWorks />
+        <HowItWorks
+          courseName="Professional Caregiving Course"
+          adjective="practical caregiver"
+          tutorOccupation="professional caregiver"
+          certification="Personal Caregiving Professional (PCGP™)"
+          tutor={(
+            <>
+              <p>When you enroll in the caregiver course, you're assigned a personal tutor who is responsible for evaluating/grading your work and providing detailed feedback on your assignments. After you submit a unit for grading, you'll receive detailed audio feedback from your tutor who will explain exactly where you excelled and where you need some improvement.</p>
+              <p>Your tutor is your best resource throughout the course! They've taken the journey you're taking now and have done it successfully. Take their feedback to heart. They want to see you succeed!</p>
+            </>
+          )}
+          caseStudiesExtended="As part of this course, you'll be presented with a number of practical assignments and case studies that will put you in the shoes of a professional caregiver to test your technical skills and practical knowledge."
+        />
       </section>
 
       <a className="anchor" id="curriculum"></a>
@@ -103,38 +111,41 @@ const Page: NextPage = () => {
           <div className="row">
             <div className="text-center col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 mb-5">
               <h2 className="text-dark mb-4 text-center">Course Curriculum</h2>
-              <p>The personal care aide course is divided into five units. You'll start by learning the basics of caregiving, and then build on that knowledge as you work your way through the course. Once you've completed the course, you'll be fully qualified to work as a freelance personal care aide!</p>
+              <p>The professional caregiver course is divided into six units. You'll start by learning the basics of caregiving, and then build on that knowledge as you work your way through the course. Once you've completed the course, you'll be fully qualified to work as an independent professional caregiver!</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-5">
-              <p><img className="img-fluid" src={require('../../../images/pc-outline-a.jpg')} alt="Personal Care Aide Course Unit A" /></p>
+              <p><img className="img-fluid" src={require('../../../images/pc-outline-a.jpg')} alt="Caregiver Course Unit A" /></p>
               <h3 className="text-dark">Unit A: Introduction to<br />Caregiving</h3>
-              <p>In this first unit, you'll learn what it means to be a personal care aide. You'll learn the details of the job, how you'll interact with clients, and (just as importantly) what types of duties you WON'T be expected to complete as a PCA.  You'll then learn how to perform your initial client consultation, including what information you'll need to collect, and how to evaluate safety requirements for each client. Finally, you'll learn how to establish and work with a detailed care plan for every client you take on.</p>
+              <p>In this first unit, you'll learn what it means to be a professional caregiver. You'll learn the details of the job, how you'll interact with clients, and (just as importantly) what types of duties you WON'T be expected to complete. You'll then learn how to perform your initial client consultation, including what information you'll need to collect, and how to evaluate safety requirements for each client. Finally, you'll learn how to establish and work with a detailed care plan for every client you take on.</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 mb-5">
-              <p><img className="img-fluid" src={require('../../../images/pc-outline-b.jpg')} alt="Personal Care Aide Course Unit B" /></p>
+              <p><img className="img-fluid" src={require('../../../images/pc-outline-b.jpg')} alt="Caregiver Course Unit B" /></p>
               <h3 className="text-dark">Unit B: Working with<br />Clients</h3>
-              <p>Now that you have a good idea of your role as a caregiver, you'll start to learn how to put that knowledge to use when working with clients. Your clients will have a number of different challenges they face every day. As a PCA, you'll have to work hard at remaining professional and establishing healthy boundaries with your clients while still developing meaningful relationships. This can be a tricky skill to master!  Later in the unit, you'll focus on understanding your client's unique needs based on their own challenges.</p>
+              <p>Now that you have a good idea of your role as a caregiver, you'll start to learn how to put that knowledge to use when working with clients. Your clients will have a number of different challenges they face every day. As a caregiver, you'll have to work hard at remaining professional and establishing healthy boundaries with your clients while still developing meaningful relationships. This can be a tricky skill to master! Later in the unit, you'll focus on understanding your client's unique needs based on their own challenges.</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-5">
-              <p><img className="img-fluid" src={require('../../../images/pc-outline-c.jpg')} alt="Personal Care Aide Course Unit C" /></p>
-              <h3 className="text-dark">Unit C: Working as a PCA</h3>
-              <p>In this next unit, you'll dive into the specific services you'll offer as a PCA, and start developing those skills. Whether you plan on providing all these services once you start your business, it's important to have the full range of skills required to be a successful PCA. This unit will also allow you to explore the different workplace settings available to you as a PCA, should you choose to work for a caregiving agency instead of starting your own PCA business.</p>
+              <p><img className="img-fluid" src={require('../../../images/pc-outline-c.jpg')} alt="Caregiver Course Unit C" /></p>
+              <h3 className="text-dark">Unit C: Working as a Caregiver</h3>
+              <p>In this next unit, you'll dive into the specific services you'll offer as a caregiver, and start developing those skills. Whether you plan on providing all these services once you start your business, it's important to have the full range of skills required to be a successful caregiver. This unit will also allow you to explore the different workplace settings available to you, should you choose to work for a caregiving agency instead of starting your own business.</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 mb-5">
-              <p><img className="img-fluid" src={require('../../../images/pc-outline-d.jpg')} alt="Personal Care Aide Course Unit D" /></p>
+              <p><img className="img-fluid" src={require('../../../images/pc-outline-d.jpg')} alt="Caregiver Unit D" /></p>
               <h3 className="text-dark">Unit D: Technical Skills</h3>
-              <p>This highly practical unit is where you'll learn the core technical skills any PCA needs to have. When working with individuals who have limited independence, caregivers are sometimes required to help with basic daily tasks such as dressing, toileting, bathing/showering, or helping their client move around, for example. There are very specific methods to follow that are safe and ensure you preserve your client's dignity as you perform these delicate tasks.</p>
+              <p>This highly practical unit is where you'll learn the core technical skills any Caregiver needs to have. When working with individuals who have limited independence, caregivers are sometimes required to help with basic daily tasks such as dressing, toileting, bathing/showering, or helping their client move around, for example. There are very specific methods to follow that are safe and ensure you preserve your client's dignity as you perform these delicate tasks.</p>
             </div>
-            <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-2 mb-md-5">
-              <p><img className="img-fluid" src={require('../../../images/pc-outline-e.jpg')} alt="Personal Care Aide Course Unit E" /></p>
+            <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-5">
+              <p><img className="img-fluid" src={require('../../../images/pc-outline-e.jpg')} alt="Caregiver Unit E" /></p>
+              <h3 className="text-dark">Unit E: Client Scenarios</h3>
+              <p>In Unit E, you’ll read a variety of hypothetical challenging situations and learn how to handle each one. You'll use the scenarios outlined in your course text as a guide to help you start thinking like a Formal Caregiver. Then you'll complete scenario-based assignments to practice interacting with clients in challenging situations.</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 mb-5">
-              <h3 className="text-dark">Unit E: (Optional) Business Training Unit</h3>
-              <p>If you plan on launching your own caregiving business, don't skip this essential final unit! You'll work through the specific elements of getting your business off the ground: from setting your prices to finding your first clients, building your website, marketing your services and much more. This unit can help your career launch in high gear!</p>
+              <p><img className="img-fluid" src={require('../../../images/fcg-unit-f-course-outline.jpg')} alt="Caregiver Unit F" /></p>
+              <h3 className="text-dark">Unit F: Business Training Unit</h3>
+              <p>Wrap up your course with this interactive business training unit. You'll work through the specific elements of getting your business off the ground: from setting your prices to finding your first clients, building your website, marketing your services and much more. This unit can help your career launch in high gear!</p>
             </div>
             <div className="text-center col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
-              <p className="lead"><strong>Note:</strong> Above is an overview of the personal care aide course curriculum. For a full and detailed course outline, click below.</p>
-              <Link href="/courses-and-tuition/personal-care-aide#outline"><a className="btn btn-outline-secondary text-uppercase">Full Course Outline</a></Link>
+              <p className="lead"><strong>Note:</strong> Above is an overview of the professional caregiver course curriculum. For a full and detailed course outline, click below.</p>
+              <Link href="/courses-and-tuition/professional-caregiving#outline"><a className="btn btn-outline-secondary text-uppercase">Full Course Outline</a></Link>
             </div>
           </div>
         </div>
@@ -145,11 +156,11 @@ const Page: NextPage = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-4">
-              <PriceCard courses={[ 'pc' ]} />
+              <PriceCard courses={[ 'fc' ]} />
             </div>
             <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
               <h2 className="text-dark">Tuition &amp; Payment Plans</h2>
-              <p>The personal care aide course has a tuition of {price?.currency.symbol}{formatPrice(price?.discountedCost)}, or <mark>{price?.currency.symbol}{formatPrice(price?.plans.full.total)} with the pay-in-full discount</mark>. This cost includes everything that has to do with your training, tutorial, and certification!</p>
+              <p>The caregiver course has a tuition of {price?.currency.symbol}{formatPrice(price?.discountedCost)}, or <mark>{price?.currency.symbol}{formatPrice(price?.plans.full.total)} with the pay-in-full discount</mark>. This cost includes everything that has to do with your training, tutorial, and certification!</p>
               <h3>Choose Your Payment Date</h3>
               <p>As an added level of convenience, if you choose to pay your tuition on an installment plan, you'll be able to select the date your payments start and on which of the month your tuition payments will be processed. If you're on a fixed budget or would like to sync your tuition payments with other monthly expenses, there's no easier way to do it!</p>
             </div>
@@ -178,7 +189,7 @@ const Page: NextPage = () => {
               <p><img className="img-fluid" src={require('../../../images/tutor.jpg')} alt="tutor" /></p>
               <h3 className="text-dark">Your Tutor</h3>
               <p>Your personal tutor will be responsible for grading your work and providing detailed audio feedback on all your assignments. Use this feedback to gain encouragement and inspiration in the areas where you excel, and also to help improve skills you haven't quite mastered yet.</p>
-              <p>All of QC's sleep consulting tutors are working, certified professional sleep consultants. They're uniquely equipped to challenge you in your studies and launch your own business because they've done this successfully themselves!</p>
+              <p>All of QC's tutors are professionals with years of experience in the caregiving industry. They’re uniquely qualified to help you along your journey because they’ve been in your shoes and they understand the value you will have as a professional caregiver.</p>
             </div>
             <div className="mt-4 mt-lg-0 col-12 col-lg-5">
               <p><img className="img-fluid" src={require('../../../images/student-advisor.jpg')} alt="student advisor" /></p>
@@ -205,7 +216,7 @@ const Page: NextPage = () => {
       <a className="anchor" id="guarantee"></a>
       <section id="guaranteeSection">
         <Guarantee
-          courseName="Sleep Consultant"
+          courseName="Caregiver"
           doubleGuarantee={false}
           twentyOneDays={(
             <>
@@ -218,7 +229,7 @@ const Page: NextPage = () => {
 
       <a className="anchor" id="about"></a>
       <section id="aboutSection">
-        <About />
+        <About profession="a caregiver" />
       </section>
 
       <section id="contactSection">
@@ -228,8 +239,8 @@ const Page: NextPage = () => {
       <section id="enrollSection" className="text-light text-center">
         <div className="container">
           <h2>Enroll Today</h2>
-          <p className="lead mb-5">Start your online personal care aide training today<br />and launch an exciting, rewarding career!</p>
-          <p><a href="https://enroll.qcwellnessstudies.com/" className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
+          <p className="lead mb-5">Start your online caregiver training today<br />and launch an exciting, rewarding career!</p>
+          <p><a href="https://enroll.qcwellnessstudies.com/?c[]=fc" className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
         </div>
       </section>
 
