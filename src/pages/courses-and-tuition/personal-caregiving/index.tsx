@@ -145,7 +145,7 @@ const Page: React.FC = () => {
   return (
     <DefaultLayout SecondaryNav={(): React.ReactElement => (
       <Subnav
-        heading="Personal Care Aide Course"
+        heading="Personal Caregiving Course"
         items={[
           { name: 'Tuition', url: '#paymentPlans' },
           { name: 'Course Outline', url: '#outline' },
@@ -203,7 +203,7 @@ const Page: React.FC = () => {
               <a className="btn btn-dark" href="#outline" role="button">Read the Full Course Outline</a>
             </div>
             <div className="col-12 col-md-6 col-lg-4">
-              <p className="d-none d-lg-block"><img src={require('../../../images/pc-what-youll-learn.jpg')} className="text-center" alt="What you'll learn in the personal care aide course" /></p>
+              <p className="d-none d-lg-block"><img src={require('../../../images/pc-what-youll-learn.jpg')} className="text-center" alt="What you'll learn in the personal caregiving course" /></p>
             </div>
           </div>
         </div>
@@ -238,7 +238,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitA">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/pc-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Personal Care Aide Course Unit A" />
+              <img src={require('../../../images/pc-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Personal Caregiving Course Unit A" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit A: Introduction to Caregiving</h3>
@@ -250,7 +250,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitB">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/pc-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Personal Care Aide Course Unit B" />
+              <img src={require('../../../images/pc-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Personal Caregiving Course Unit B" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit B: Care Needs</h3>
@@ -262,7 +262,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitC">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/pc-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Personal Care Aide Course Unit C" />
+              <img src={require('../../../images/pc-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Personal Caregiving Course Unit C" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit C: Technical Skills</h3>
