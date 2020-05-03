@@ -283,6 +283,11 @@ const Page: React.FC = () => {
           fullName="Personal Caregiving Professional"
           abbr="PCGP"
           registered={false}
+          graduation={(
+            <>
+              <p>Upon graduation, you’ll receive a certificate of completion indicating that you have successfully completed the Personal Caregiver Course.  Note that this is not a professional certification.</p>              
+            </>
+          )}
         />
       </section>   
 

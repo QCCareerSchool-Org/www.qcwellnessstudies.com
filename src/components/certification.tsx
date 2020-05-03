@@ -6,9 +6,10 @@ interface Props {
   fullName: string;
   abbr: string;
   registered: boolean;
+  graduation?: JSX.Element;
 }
 
-export const Certification: React.FC<Props> = ({ shortName, fullName, abbr, registered }) => (
+export const Certification: React.FC<Props> = ({ shortName, fullName, abbr, registered, graduation}) => (
   <div className="container">
     <div className="row d-flex align-items-center">
       <div className="col-12 col-md-6 col-lg-5 offset-lg-1">
@@ -16,7 +17,7 @@ export const Certification: React.FC<Props> = ({ shortName, fullName, abbr, regi
       </div>
       <div className="col-12 col-md-6 col-lg-5">
         <h2 className="text-light">Your {shortName} Certification</h2>
-        <p>Upon successful completion of this course, you'll receive your <strong>{fullName} ({abbr}{registered ? '®' : '™'})</strong> certification. This certification is yours forever and doesn't expire. Use it as proof of competency with future clients and/or employers. Your professional designation is a great way to set yourself from the competition. Display it proudly on your business cards, marketing materials, website, and anywhere else you advertise your services!</p>
+        {graduation ? graduation : <p>Upon successful completion of this course, you'll receive your <strong>{fullName} ({abbr}{registered ? '®' : '™'})</strong> certification. This certification is yours forever and doesn't expire. Use it as proof of competency with future clients and/or employers. Your professional designation is a great way to set yourself from the competition. Display it proudly on your business cards, marketing materials, website, and anywhere else you advertise your services!</p>}     
       </div>
     </div>
   </div>
@@ -27,4 +28,5 @@ Certification.propTypes = {
   fullName: PropTypes.string.isRequired,
   abbr: PropTypes.string.isRequired,
   registered: PropTypes.bool.isRequired,
+  graduation: PropTypes.element,
 };
