@@ -200,7 +200,7 @@ const Page: React.FC = () => {
             <div className="col-12 col-md-10 offset-md-1 col-lg-5">
               <h2 className="text-dark">What You'll Learn</h2>
               <p>In this highly interactive, self-paced course, you'll learn how to properly care for your loved one in an informal setting.  You’ll learn how to work with a care plan, health and safety considerations, how to best care for different conditions and illnesses, specific technical skills you might need to help your loved one with Activities of Daily Life (ADLs) and Instrumental Activities of Daily Living (IADLs) and more.</p>
-              <p>This course is a condensed version of the Professional Caregiving Course offered by QC and does not contain information about working in professional settings, starting a caregiving business, etc.  If you are interested in working as a professional caregiver, visit the <Link href="/courses-and-tuition/professional-caregiving"><a className="text-info"><strong><u>professional caregiver course page.</u></strong></a></Link></p>             
+              <p>This course is a condensed version of the Professional Caregiving Course offered by QC and does not contain information about working in professional settings, starting a caregiving business, etc.  If you are interested in working as a professional caregiver, visit the <Link href="/courses-and-tuition/professional-caregiving"><a className="text-info"><u></u>professional caregiver course page.</a></Link></p>             
               <a className="btn btn-dark" href="#outline" role="button">Read the Full Course Outline</a>
             </div>
             <div className="col-12 col-md-6 col-lg-4">
@@ -273,7 +273,7 @@ const Page: React.FC = () => {
               <UnitOutline data={units.c} />
             </div>
           </div>        
-          <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c[]=pc" className="btn btn-secondary">ENROLL ONLINE</a></p>
+          <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c[]=ic" className="btn btn-secondary">ENROLL ONLINE</a></p>
         </div>
       </section>      
 
@@ -290,7 +290,7 @@ const Page: React.FC = () => {
         <div className="container">
           <h2>Enroll Online Today</h2>
           <p className="lead mb-5">If you’re ready to learn important skills to be the personal caregiver your loved ones deserve, enroll today!<br />Complete the course in as little as one month!</p>
-          <p><a href="https://enroll.qcwellnessstudies.com/" className="btn btn-secondary btn-lg">ENROLL NOW</a></p>
+          <p><a href="https://enroll.qcwellnessstudies.com/?c[]=ic" className="btn btn-secondary btn-lg">ENROLL NOW</a></p>
         </div>
       </section>
 
