@@ -294,7 +294,7 @@ const Page: React.FC = () => {
       </section>
 
       <style jsx>{`
-        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../images/pc-hero.jpg')});background-size:cover;background-position:center;}
+        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../images/top-image-ic.jpg')});background-size:cover;background-position:center;}
         #certificationSection{background-image:url(${require('../../../images/bg-dark-green-navy.jpg')});background-size:cover}
         #requirementsSection{background-image:url(${require('../../../images/pc-requirements.jpg')});background-size:cover}
         #paymentPlansSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
