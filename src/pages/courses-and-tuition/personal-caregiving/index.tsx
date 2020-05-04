@@ -185,7 +185,7 @@ const Page: React.FC = () => {
         <div className="container">
           <h2 className="text-dark text-center">What is a <strong>Personal</strong> Caregiver?</h2>
           <div className="row">
-            <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-3 mb-md-0">
+            <div className="col-12 col-md-12 col-lg-12 mb-3 mb-md-0">
               <p>Personal (or “informal) Caregivers provide care and support to their loved ones. This support allows friends and family members in their care to maintain independence. You’ll be an important part of your loved one’s wellness team and provide assistance with daily living activities that help your loved one live a happy and productive life.</p>
               <p>Personal caregivers provide the same types of services as professional caregivers, however they typically only care for a single loved one for a limited period of time, likely have a separate career, and usually are not paid for this work.  Some personal caregivers can bill their loved one as a “client” and be reimbursed by their loved one’s insurance or by certain government programs. However, this requires careful research as regulations are different in every state/province.</p>
               <p>Remember, as a caregiver you are a member of your loved one’s overall wellness team, but you are not a medical professional and are not expected to provide medical services for your loved one.</p>           
