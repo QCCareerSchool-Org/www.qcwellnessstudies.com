@@ -7,6 +7,7 @@ import { SEO } from '../../../components/seo';
 import { Subnav } from '../../../components/subnav';
 import { OutlineData, UnitOutline } from '../../../components/unit-outline';
 import { DefaultLayout } from '../../../layouts/default';
+import { Guarantee } from '../../../components/guarantee';
 
 const Page: React.FC = () => {
   const doubleGuarantee = false;
@@ -290,6 +291,10 @@ const Page: React.FC = () => {
           )}
         />
       </section>   
+
+      <section id="guaranteeSection">
+        <Guarantee courseName="Personal Caregiver" doubleGuarantee={doubleGuarantee} />
+      </section>
 
       <section id="enrollSection" className="text-light text-center">
         <div className="container">
