@@ -2,12 +2,12 @@ import Link from 'next/link';
 import React from 'react';
 
 import { Certification } from '../../../components/certification';
+import { Guarantee } from '../../../components/guarantee';
 import { PaymentPlans } from '../../../components/payment-plans';
 import { SEO } from '../../../components/seo';
 import { Subnav } from '../../../components/subnav';
 import { OutlineData, UnitOutline } from '../../../components/unit-outline';
 import { DefaultLayout } from '../../../layouts/default';
-import { Guarantee } from '../../../components/guarantee';
 
 const Page: React.FC = () => {
   const doubleGuarantee = false;
@@ -150,8 +150,7 @@ const Page: React.FC = () => {
         heading="Personal Caregiving Course"
         items={[
           { name: 'Tuition', url: '#paymentPlans' },
-          { name: 'Course Outline', url: '#outline' },
-          { name: 'Tutors', url: '#tutors' },
+          { name: 'Course Outline', url: '#outline' },         
         ]}
       />
     )}>
@@ -205,7 +204,7 @@ const Page: React.FC = () => {
               <a className="btn btn-dark" href="#outline" role="button">Read the Full Course Outline</a>
             </div>
             <div className="col-12 col-md-6 col-lg-4">
-              <p className="d-none d-lg-block"><img src={require('../../../images/pc-what-youll-learn.jpg')} className="text-center" alt="What you'll learn in the personal caregiving course" /></p>
+              <p className="d-none d-lg-block"><img src={require('../../../images/icg-what-youll-learn.jpg')} className="text-center" alt="What you'll learn in the personal caregiving course" /></p>
             </div>
           </div>
         </div>
@@ -240,7 +239,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitA">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/pc-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Personal Caregiving Course Unit A" />
+              <img src={require('../../../images/icg-unit-a-course-outline.jpg')} className="rounded img-fluid mt-2" alt="Personal Caregiving Course Unit A" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit A: Introduction to Caregiving</h3>
@@ -252,7 +251,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitB">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/pc-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Personal Caregiving Course Unit B" />
+              <img src={require('../../../images/icg-unit-b-course-outline.jpg')} className="rounded img-fluid mt-2" alt="Personal Caregiving Course Unit B" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit B: Care Needs</h3>
@@ -286,7 +285,7 @@ const Page: React.FC = () => {
           registered={false}
           graduation={(
             <>
-              <p>Upon graduation, you’ll receive a certificate of completion indicating that you have successfully completed the Personal Caregiver Course.  Note that this is not a professional certification.</p>              
+              <p>Upon graduation, you’ll receive a certificate of completion indicating that you have successfully completed the Personal Caregiver Course. Note that this is not a professional certification.</p>              
             </>
           )}
         />
