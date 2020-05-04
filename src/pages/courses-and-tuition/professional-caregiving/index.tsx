@@ -612,7 +612,7 @@ const Page: React.FC = () => {
         }
       `}</style>
 
-    </DefaultLayout >
+    </DefaultLayout>
   );
 };
 

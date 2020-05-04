@@ -19,7 +19,7 @@ const Page: React.FC = () => {
           'What is an Informal Caregiver?',
           'Key skills & personality traits for informal caregivers',
           'Roles & responsibilities of an informal caregiver',
-          'Using care plans and care logs',         
+          'Using care plans and care logs',
         ],
       },
       {
@@ -31,7 +31,7 @@ const Page: React.FC = () => {
           'Working with a care plan',
           'Using inclusive and empowering language',
           'Protecting your loved one from abuse and neglect',
-          'Caregiver burnout and self-care for caregivers',        
+          'Caregiver burnout and self-care for caregivers',
         ],
       },
     ],
@@ -43,7 +43,7 @@ const Page: React.FC = () => {
           'Challenges of aging',
           'Common conditions youll encounter (dementia, arthritis, etc.)',
           'Working with loved ones who have disabilities, medical conditions or impairments',
-          'Working with children',             
+          'Working with children',
         ],
       },
       {
@@ -61,7 +61,7 @@ const Page: React.FC = () => {
               'Bathing & showering',
               'General hygiene',
               'Toileting',
-              'Eating',              
+              'Eating',
             ],
           },
           {
@@ -78,14 +78,14 @@ const Page: React.FC = () => {
           },
           'Holistic health & wellness',
           'Keeping a care log',
-          'How to handle abusive behavior from loved ones',         
+          'How to handle abusive behavior from loved ones',
         ],
       },
     ],
     c: [
       {
         title: 'Technical Skills for Informal Caregivers',
-        topics: [                  
+        topics: [
           {
             title: 'Mobility',
             topics: [
@@ -103,7 +103,7 @@ const Page: React.FC = () => {
               'Helping your loved one put on/take off a shirt',
               'Helping your loved one put on/take off socks and shoes',
               'Helping your loved one put on/take off pants',
-              'Helping your loved one put on/take off underwear',          
+              'Helping your loved one put on/take off underwear',
             ],
           },
           {
@@ -112,7 +112,7 @@ const Page: React.FC = () => {
               'Helping your loved one use a toilet',
               'Helping your loved one use a portable commode',
               'Helping your loved one use a bedpan',
-              'Helping your loved one who wears protective underwear',          
+              'Helping your loved one who wears protective underwear',
             ],
           },
           {
@@ -121,7 +121,7 @@ const Page: React.FC = () => {
               'Helping your loved one have a bath',
               'Helping your loved one have a shower',
               'Helping your loved one have a bed bath (sponge bath)',
-              'Helping your loved one shampoo their hair',          
+              'Helping your loved one shampoo their hair',
             ],
           },
           {
@@ -130,17 +130,17 @@ const Page: React.FC = () => {
               'Hand washing',
               'Oral hygiene',
               'Shaving',
-              'Brushing, combing, styling your loved one’s hair',  
-              'Nail and foot care',         
+              'Brushing, combing, styling your loved one’s hair',
+              'Nail and foot care',
             ],
           },
           {
             title: 'Eating',
-            topics: [                    
+            topics: [
             ],
-          },       
+          },
         ],
-      },     
+      },
     ],
   };
 
@@ -150,7 +150,7 @@ const Page: React.FC = () => {
         heading="Personal Caregiving Course"
         items={[
           { name: 'Tuition', url: '#paymentPlans' },
-          { name: 'Course Outline', url: '#outline' },         
+          { name: 'Course Outline', url: '#outline' },
         ]}
       />
     )}>
@@ -169,7 +169,7 @@ const Page: React.FC = () => {
               <h2 className="h5">Learn how to properly take care of your loved ones as their personal caregiver.</h2>
               <ul>
                 <li>Graduate quickly with this condensed course</li>
-                <li>Learn the tools and techniques you need to care for your loved one safely</li>               
+                <li>Learn the tools and techniques you need to care for your loved one safely</li>
               </ul>
             </div>
           </div>
@@ -178,7 +178,7 @@ const Page: React.FC = () => {
 
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
-        <PaymentPlans courses={[ 'ic' ]} doubleGuarantee={doubleGuarantee} />
+        <PaymentPlans courses={['ic']} doubleGuarantee={doubleGuarantee} />
       </section>
 
       <section id="whatSection" className="bg-light">
@@ -188,19 +188,19 @@ const Page: React.FC = () => {
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
               <p>Personal (or “informal) Caregivers provide care and support to their loved ones. This support allows friends and family members in their care to maintain independence. You’ll be an important part of your loved one’s wellness team and provide assistance with daily living activities that help your loved one live a happy and productive life.</p>
               <p>Personal caregivers provide the same types of services as professional caregivers, however they typically only care for a single loved one for a limited period of time, likely have a separate career, and usually are not paid for this work.  Some personal caregivers can bill their loved one as a “client” and be reimbursed by their loved one’s insurance or by certain government programs. However, this requires careful research as regulations are different in every state/province.</p>
-              <p>Remember, as a caregiver you are a member of your loved one’s overall wellness team, but you are not a medical professional and are not expected to provide medical services for your loved one.</p>           
-            </div>          
+              <p>Remember, as a caregiver you are a member of your loved one’s overall wellness team, but you are not a medical professional and are not expected to provide medical services for your loved one.</p>
+            </div>
           </div>
         </div>
       </section>
-   
-      <section id="whatYoullLearnSection" >
+
+      <section id="whatYoullLearnSection">
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-5">
               <h2 className="text-dark">What You'll Learn</h2>
               <p>In this highly interactive, self-paced course, you'll learn how to properly care for your loved one in an informal setting.  You’ll learn how to work with a care plan, health and safety considerations, how to best care for different conditions and illnesses, specific technical skills you might need to help your loved one with Activities of Daily Life (ADLs) and Instrumental Activities of Daily Living (IADLs) and more.</p>
-              <p>This course is a condensed version of the Professional Caregiving Course offered by QC and does not contain information about working in professional settings, starting a caregiving business, etc.  If you are interested in working as a professional caregiver, visit the <Link href="/courses-and-tuition/professional-caregiving"><a className="text-info"><u></u>professional caregiver course page.</a></Link></p>             
+              <p>This course is a condensed version of the Professional Caregiving Course offered by QC and does not contain information about working in professional settings, starting a caregiving business, etc.  If you are interested in working as a professional caregiver, visit the <Link href="/courses-and-tuition/professional-caregiving"><a className="text-info"><u></u>professional caregiver course page.</a></Link></p>
               <a className="btn btn-dark" href="#outline" role="button">Read the Full Course Outline</a>
             </div>
             <div className="col-12 col-md-6 col-lg-4">
@@ -226,7 +226,7 @@ const Page: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>     
+      </section>
 
       <a className="anchor" id="outline"></a>
       <section id="outlineSection">
@@ -272,10 +272,10 @@ const Page: React.FC = () => {
             <div className="col-12 col-md-10 offset-md-1">
               <UnitOutline data={units.c} />
             </div>
-          </div>        
+          </div>
           <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c[]=ic" className="btn btn-secondary">ENROLL ONLINE</a></p>
         </div>
-      </section>      
+      </section>
 
       <section id="certificationSection" className="bg-dark text-light">
         <Certification
@@ -285,11 +285,11 @@ const Page: React.FC = () => {
           registered={false}
           graduation={(
             <>
-              <p>Upon graduation, you’ll receive a certificate of completion indicating that you have successfully completed the Personal Caregiver Course. Note that this is not a professional certification.</p>              
+              <p>Upon graduation, you’ll receive a certificate of completion indicating that you have successfully completed the Personal Caregiver Course. Note that this is not a professional certification.</p>
             </>
           )}
         />
-      </section>   
+      </section>
 
       <section id="guaranteeSection">
         <Guarantee courseName="Personal Caregiver" doubleGuarantee={doubleGuarantee} />
@@ -320,7 +320,7 @@ const Page: React.FC = () => {
         }
       `}</style>
 
-    </DefaultLayout >
+    </DefaultLayout>
   );
 };
 
