@@ -50,6 +50,7 @@ export const Header: React.FC<Props> = ({ nav }) => {
                   </NavDropdown>
                   <NavDropdown title="About" id="aboutDropdown">
                     <Link href="/about"><a className="dropdown-item">About QC</a></Link>
+                    <Link href="/student-features/sarah-pashniak"><a className="dropdown-item">Student Feature</a></Link>
                     <Link href="/contact"><a className="dropdown-item">Contact</a></Link>
                   </NavDropdown>
                 </Nav>
