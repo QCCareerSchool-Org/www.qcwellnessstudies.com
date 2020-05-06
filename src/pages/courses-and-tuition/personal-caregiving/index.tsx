@@ -311,8 +311,18 @@ const Page: React.FC = () => {
           shortName="Personal Caregiver"
           fullName="Personal Caregiving Professional"
           abbr="PCGP"
-          registered={false}
+          registered={false}                
+          logo={(
+            <>
+             <img src={require('../../../images/qc-wellness-logo.svg')} className="img-fluid text-center" alt="Wellnes logo" />
+            </>
+          )}
           graduation={(
+            <>
+              <h2 className="text-light">Graduating as a Personal Caregiver</h2>
+            </>
+          )}
+          completion={(
             <>
               <p>Upon graduation, you’ll receive a certificate of completion indicating that you have successfully completed the Personal Caregiver Course. Note that this is not a professional certification.</p>
             </>
