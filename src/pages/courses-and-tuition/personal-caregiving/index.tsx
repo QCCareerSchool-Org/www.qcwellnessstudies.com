@@ -212,7 +212,7 @@ const Page: React.FC = () => {
               <a className="btn btn-dark" href="#outline" role="button">Read the Full Course Outline</a>
             </div>
             <div className="col-12 col-md-6 col-lg-4">
-              <p className="d-none d-lg-block"><img src={require('../../../images/icg-what-youll-learn.jpg')} className="text-center" alt="What you'll learn in the personal caregiving course" /></p>
+              <p className="d-none d-lg-block"><img src={require('../../../images/ic-what-youll-learn.jpg')} className="text-center" alt="What you'll learn in the personal caregiving course" /></p>
             </div>
           </div>
         </div>
@@ -248,7 +248,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitA">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/icg-unit-a-course-outline.jpg')} className="rounded img-fluid mt-2" alt="Personal Caregiving Course Unit A" />
+              <img src={require('../../../images/ic-unit-a-course-outline.jpg')} className="rounded img-fluid mt-2" alt="Personal Caregiving Course Unit A" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit A: Introduction to Caregiving</h3>
@@ -260,7 +260,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitB">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/icg-unit-b-course-outline.jpg')} className="rounded img-fluid mt-2" alt="Personal Caregiving Course Unit B" />
+              <img src={require('../../../images/ic-unit-b-course-outline.jpg')} className="rounded img-fluid mt-2" alt="Personal Caregiving Course Unit B" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit B: Care Needs</h3>
@@ -343,7 +343,7 @@ const Page: React.FC = () => {
       </section>
 
       <style jsx>{`
-        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../images/top-image-ic.jpg')});background-size:cover;background-position:center;}
+        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../images/ic-top-image.jpg')});background-size:cover;background-position:center;}
         #certificationSection{background-image:url(${require('../../../images/bg-dark-green-navy.jpg')});background-size:cover}
         #requirementsSection{background-image:url(${require('../../../images/pc-requirements.jpg')});background-size:cover}
         #paymentPlansSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
