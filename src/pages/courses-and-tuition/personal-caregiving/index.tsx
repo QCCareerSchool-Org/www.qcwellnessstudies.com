@@ -166,10 +166,11 @@ const Page: React.FC = () => {
           <div className="row">
             <div className="col-12 col-sm-10 col-md-8 col-lg-7">
               <h1>Personal (Informal) Caregiving Course</h1>
-              <h2 className="h5">Learn how to properly take care of your loved ones as their personal caregiver.</h2>
+              <h2 className="h5">Learn how to properly support your loved one as a personal caregiver.</h2>
               <ul>
-                <li>Graduate quickly with this condensed course</li>
-                <li>Learn the tools and techniques you need to care for your loved one safely</li>
+                <li>Feel confident in the care you’re providing</li>
+                <li>Quickly learn the tools and techniques you need to care for your loved one safely</li>
+                <li>Receive personalized advice from your tutor to address your unique situation</li>
               </ul>
             </div>
           </div>
@@ -186,9 +187,9 @@ const Page: React.FC = () => {
           <h2 className="text-dark text-center">What is a <strong>Personal</strong> Caregiver?</h2>
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-              <p>Personal (or “informal) Caregivers provide care and support to their loved ones. This support allows friends and family members in their care to maintain independence. You’ll be an important part of your loved one’s wellness team and provide assistance with daily living activities that help your loved one live a happy and productive life.</p>
-              <p>Personal caregivers provide the same types of services as professional caregivers, however they typically only care for a single loved one for a limited period of time, likely have a separate career, and usually are not paid for this work.  Some personal caregivers can bill their loved one as a “client” and be reimbursed by their loved one’s insurance or by certain government programs. However, this requires careful research as regulations are different in every state/province.</p>
-              <p>Remember, as a caregiver you are a member of your loved one’s overall wellness team, but you are not a medical professional and are not expected to provide medical services for your loved one.</p>
+              <p>A personal (or “informal”) caregiver provides care and support to a loved one. As a personal caregiver, you’ll be an important part of your loved one’s wellness team. Your support can help a friend or family member maintain his or her independence. You’ll help your loved one perform daily living activities to promote a happy and productive life.</p>
+              <p>A personal caregiver provides the same types of support as a professional caregiver. However, a personal caregiver typically only cares for a single loved one for a limited period of time. A personal caregiver likely has a separate career and usually is not paid for providing care. Some personal caregivers can bill their loved ones as “clients” and be reimbursed by their loved ones’ insurance or by certain government programs. However, this requires careful research as regulations are different in every state/province.</p>
+              <p>Remember, as a caregiver you are a member of your loved one’s overall wellness team but you are not a medical professional. You should not be expected to provide medical services for your loved one.</p>
             </div>
           </div>
         </div>
@@ -199,8 +200,15 @@ const Page: React.FC = () => {
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-5">
               <h2 className="text-dark">What You'll Learn</h2>
-              <p>In this highly interactive, self-paced course, you'll learn how to properly care for your loved one in an informal setting.  You’ll learn how to work with a care plan, health and safety considerations, how to best care for different conditions and illnesses, specific technical skills you might need to help your loved one with Activities of Daily Life (ADLs) and Instrumental Activities of Daily Living (IADLs) and more.</p>
-              <p>This course is a condensed version of the Professional Caregiving Course offered by QC and does not contain information about working in professional settings, starting a caregiving business, etc.  If you are interested in working as a professional caregiver, visit the <Link href="/courses-and-tuition/professional-caregiving"><a className="text-info"><u></u>professional caregiver course page.</a></Link></p>
+              <p>In this highly interactive, self-paced course, you'll learn how to properly care for your loved one in an informal capacity. You’ll learn about:</p>
+              <ul>
+                <li>The roles and responsibilities of a Caregiver</li>
+                <li>Working with a care plan</li>
+                <li>Health and safety considerations</li>
+                <li>Caring for a loved one who has a condition or illness</li>
+                <li>Technical skills to help a loved one with Activities of Daily Living (ADLs) and Instrumental Activities of Daily Living (IADLs) and more!</li>
+              </ul>
+              <p>This course is a condensed version of the Professional Caregiving Course offered by QC. This course does not contain information about working with clients in professional settings, starting a caregiving business, etc. If you are interested in working as a professional caregiver, visit the <Link href="/courses-and-tuition/professional-caregiving"><a className="text-info"><u></u>professional caregiver course page.</a></Link></p>
               <a className="btn btn-dark" href="#outline" role="button">Read the Full Course Outline</a>
             </div>
             <div className="col-12 col-md-6 col-lg-4">
@@ -215,10 +223,11 @@ const Page: React.FC = () => {
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
               <h2>How You'll Learn</h2>
-              <p>QC's signature online learning experience is made for highly motivated and ambitious individuals! You'll learn at your own pace, with the help of your student advisor and expert tutor who will be with you every step of the way!</p>
+              <p>QC's online learning experience is designed to help you succeed. We work with students to make sure they successfully complete their courses. As far as we are concerned, failing is not an option!</p>
+              <p>You'll learn at your own pace, with the help of your student advisor and your expert tutor. They will be with you every step of the way!</p>
               <ul>
-                <li>Follow the course guide that will tell you when you need to read a course book, watch a video or complete your assignment.</li>
-                <li>Complete a variety of quizzes and a practical assignment where you experience what it's like to be a personal caregiver.</li>
+                <li>Follow the course guide, which will tell you when you need to read a course book, watch a video or complete your assignment.</li>
+                <li>Complete a variety of quizzes and assignments that allow you to experience what it's like to be a personal caregiver.</li>
                 <li>Upload your completed assignment to the Online Student Center.</li>
                 <li>Your tutor will grade your work and provide personalized feedback on your assignment.</li>
                 <li>Graduate once you've completed all your course units and your tuition has been paid in full.</li>
@@ -234,7 +243,7 @@ const Page: React.FC = () => {
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1">
               <h2 className="text-dark text-center">Full Course Outline</h2>
-              <p className="lead text-center">Here's a detailed outline of all topics you'll learn in the Personal Caregiving certification course.</p>
+              <p className="lead text-center">Here's a detailed outline of the topics you'll learn in the Personal Caregiving certification course.</p>
             </div>
           </div>
           <div className="row my-5" id="unitA">
@@ -243,7 +252,7 @@ const Page: React.FC = () => {
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit A: Introduction to Caregiving</h3>
-              <p className="mb-0">In this first unit, you'll learn what it means to be a caregiver. You'll learn the details of the role and tips to help you maintain a positive relationship with your loved one as you help them through difficult times. Finally, you'll learn how to understand your loved one’s care plan and become an advocate for his or her health and wellbeing.</p>
+              <p className="mb-0">In this first unit, you'll learn what it means to be a caregiver. We’ll discuss the details of the role and provide tips to help you maintain a positive relationship with your loved one as you help him or her through difficult times. Finally, you'll learn how to understand your loved one’s care plan and become an advocate for his or her health and wellbeing.</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
               <UnitOutline data={units.a} />
@@ -255,7 +264,7 @@ const Page: React.FC = () => {
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit B: Care Needs</h3>
-              <p className="mb-0">Now that you have a good idea of your role as a caregiver, you'll start to learn how to put that knowledge to use when caring for your loved one. Your loved one will have specific challenges they face every day. In this unit, you'll focus on understanding your loved one’s unique needs based on their own challenges.</p>
+              <p className="mb-0">Now that you have a good idea of your role as a caregiver, you'll start to learn how to put that knowledge to use when caring for your loved one. Your loved one will have specific challenges he or she faces every day. In this unit, you'll focus on understanding your loved one’s unique needs and providing personalized support.</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
               <UnitOutline data={units.b} />
@@ -267,7 +276,7 @@ const Page: React.FC = () => {
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit C: Technical Skills</h3>
-              <p className="mb-0">This highly practical unit is where you'll learn core technical skills any informal caregiver needs to have. When working with individuals who have limited independence, caregivers are sometimes required to help with basic daily tasks such as dressing, toileting, bathing/showering or helping their loved one move around. There are very specific methods to follow that are safe and ensure you preserve your loved one’s dignity as you perform these practical tasks.</p>
+              <p className="mb-0">This highly practical unit is where you'll learn the details of the technical skills any personal caregiver needs to have. When working with individuals who have limited independence, caregivers are sometimes required to help with basic daily tasks such as dressing, toileting, bathing/showering or helping their loved ones move around. You’ll learn to follow procedures that keep you safe and that ensure you preserve your loved one’s dignity as you perform these practical tasks.</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
               <UnitOutline data={units.c} />
@@ -275,21 +284,7 @@ const Page: React.FC = () => {
           </div>
           <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c[]=ic" className="btn btn-secondary">ENROLL ONLINE</a></p>
         </div>
-      </section>
-
-      <section id="certificationSection" className="bg-dark text-light">
-        <Certification
-          shortName="Personal Caregiver"
-          fullName="Personal Caregiving Professional"
-          abbr="PCGP"
-          registered={false}
-          graduation={(
-            <>
-              <p>Upon graduation, you’ll receive a certificate of completion indicating that you have successfully completed the Personal Caregiver Course. Note that this is not a professional certification.</p>
-            </>
-          )}
-        />
-      </section>
+      </section>   
 
       <section id="guaranteeSection">
         <Guarantee courseName="Personal Caregiver" doubleGuarantee={doubleGuarantee} />
@@ -298,7 +293,7 @@ const Page: React.FC = () => {
       <section id="enrollSection" className="text-light text-center">
         <div className="container">
           <h2>Enroll Online Today</h2>
-          <p className="lead mb-5">If you’re ready to learn important skills to be the personal caregiver your loved ones deserve, enroll today!<br />Complete the course in as little as one month!</p>
+          <p className="lead mb-5">If you’re ready to learn important skills to be the personal caregiver your loved one deserves, enroll today!<br />Complete the course in as little as one month!</p>
           <p><a href="https://enroll.qcwellnessstudies.com/?c[]=ic" className="btn btn-secondary btn-lg">ENROLL NOW</a></p>
         </div>
       </section>
