@@ -289,7 +289,7 @@ const Page: React.FC = () => {
       <a className="anchor" id="tutors"></a>
       <section id="tutorsSection" className="bg-light">
         <div className="container text-center">
-          <h2 className="text-dark text-center">Your Caregiving Tutor</h2>
+          <h2 className="text-dark text-center">Your Caregiving Tutors</h2>
           <p className="lead mb-5 mx-lg-5">QC’s expert tutors will be an invaluable resource as you learn to be a caregiver for your loved one. After each unit, you’ll have a chance to ask them questions about your specific situation. Receive guidance on how to best care for your loved one from someone who has years of experience in caregiving!</p>
           <div className="row text-center">
             <div className="col-12 mb-5 col-md-6 mb-md-0 col-lg-5 offset-lg-1">
