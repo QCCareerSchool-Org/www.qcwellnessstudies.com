@@ -40,9 +40,9 @@ const Page: React.FC = () => {
         title: 'Understanding Care Needs',
         topics: [
           'Working with an aging loved one',
-          'Challenges of aging',
-          'Common conditions youll encounter (dementia, arthritis, etc.)',
-          'Working with loved ones who have disabilities, medical conditions or impairments',
+          'The challenges of aging',
+          'Common health conditions, such as dementia, arthritis, etc.',
+          'Working with a loved one who has a disability, medical condition or impairment',
           'Working with children',
         ],
       },
