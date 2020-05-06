@@ -284,7 +284,41 @@ const Page: React.FC = () => {
           </div>
           <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c[]=ic" className="btn btn-secondary">ENROLL ONLINE</a></p>
         </div>
-      </section>   
+      </section>
+
+      <a className="anchor" id="tutors"></a>
+      <section id="tutorsSection" className="bg-light">
+        <div className="container text-center">
+          <h2 className="text-dark text-center">Your Caregiving Tutor</h2>
+          <p className="lead mb-5 mx-lg-5">QC’s expert tutors will be an invaluable resource as you learn to be a caregiver for your loved one. After each unit, you’ll have a chance to ask them questions about your specific situation. Receive guidance on how to best care for your loved one from someone who has years of experience in caregiving!</p>
+          <div className="row text-center">
+            <div className="col-12 mb-5 col-md-6 mb-md-0 col-lg-5 offset-lg-1">
+              <p><img className="img-fluid" src={require('../../../images/tutor-suzanne.jpg')} alt="Suzanne Irvine" /></p>
+              <h3 className="text-dark">Suzanne Irvine</h3>
+              <p>Suzanne is a retired registered nurse with over 35 years of experience in the health care sector. She has extensive experience teaching caregivers of all kinds including nurses, personal support workers and more. During her career in the wellness industry, Suzanne also worked as a disability case manager, assisting clients to return to work when ready. She’s happy to help you care for your loved one!</p>
+            </div>
+            <div className="col-12 col-md-6 col-lg-5">
+              <p><img className="img-fluid" src={require('../../../images/tutor-aly.jpg')} alt="Aly Lalonde" /></p>
+              <h3 className="text-dark">Aly Lalonde</h3>
+              <p>Aly worked extensively as a personal support worker in the community as well as in a residence. She is also a registered nurse with expertise in emergency medicine, dialysis, and public health.  Aly understands how caregiving and healthcare professionals work together to help their clients and loved ones. She has an amazing breadth of hands-on experience and is a trusted advisor to QC students.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="certificationSection" className="bg-dark text-light">
+        <Certification
+          shortName="Personal Caregiver"
+          fullName="Personal Caregiving Professional"
+          abbr="PCGP"
+          registered={false}
+          graduation={(
+            <>
+              <p>Upon graduation, you’ll receive a certificate of completion indicating that you have successfully completed the Personal Caregiver Course. Note that this is not a professional certification.</p>
+            </>
+          )}
+        />
+      </section>
 
       <section id="guaranteeSection">
         <Guarantee courseName="Personal Caregiver" doubleGuarantee={doubleGuarantee} />
