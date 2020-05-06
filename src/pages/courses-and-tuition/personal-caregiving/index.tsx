@@ -331,7 +331,14 @@ const Page: React.FC = () => {
       </section>
 
       <section id="guaranteeSection">
-        <Guarantee courseName="Personal Caregiver" doubleGuarantee={doubleGuarantee} />
+        <Guarantee 
+        courseName="Personal Caregiver" 
+        doubleGuarantee={doubleGuarantee}
+        starting={(
+          <>            
+          </>
+        )} 
+         />
       </section>
 
       <section id="enrollSection" className="text-light text-center">
