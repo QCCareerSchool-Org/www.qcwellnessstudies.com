@@ -348,7 +348,7 @@ const Page: React.FC = () => {
 
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
-        <PaymentPlans courses={[ 'fc' ]} doubleGuarantee={doubleGuarantee} />
+        <PaymentPlans courses={['fc']} doubleGuarantee={doubleGuarantee} />
       </section>
 
       <section id="whatSection">
@@ -384,7 +384,7 @@ const Page: React.FC = () => {
                 <li>Personal Support Specialist</li>
                 <li>Supportive Home Assistant</li>
               </ul>
-              <p>Also, you may  be interested in becoming an informal caregiver. An informal caregiver provides care and support to a loved one. QC also offers an informal caregiver course. This course is a condensed version of the Professional Caregiving Course. If you are interested in working as a personal caregiver, visit the <Link href="/courses-and-tuition/personal-caregiving"><a className="text-info">informal caregiver course page.</a></Link></p>
+              <p>If you are looking to become a temporary caregiver for your loved one and not a professional caregiver, QC also offers an informal caregiver course. You can view the course <Link href="/courses-and-tuition/personal-caregiving"><a className="text-info">here.</a></Link></p>
             </div>
           </div>
         </div>
@@ -463,7 +463,7 @@ const Page: React.FC = () => {
           affordable="Since QC's course is fully online, you don't have to pay surcharges for attending lectures or classroom sessions. You complete the full course from home."
           flexible="No start dates, no deadlines, no mandatory attendance! This course is completely self-directed and self-paced. Get certified quickly, or take your time."
           comprehensive="you're not just learning how one caregiving company wants you do do things. You're getting a foundation of knowledge in caregiving that will be useful no natter where you work!"
-          courses={[ 'fc' ]}
+          courses={['fc']}
         />
       </section>
 
