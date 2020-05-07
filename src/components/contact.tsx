@@ -18,7 +18,7 @@ export const Contact: React.FC = () => (
       <div className="col-12 mb-4 col-lg-4 mb-lg-0">
         <img src={require('../images/icon-live-chat.svg')} className="img-fluid" alt="Live Chat" />
         <h3 className="text-dark text-center">Live Chat</h3>
-        <p className="text-dark text-center"><a href="#" onClick={(): false => { window.LC_API.open_chat_window(); return false; }}>Chat with a Student Support Specialist</a></p>
+        <p className="text-dark text-center"><a href="#" onClick={(): false => { window.LC_API?.open_chat_window(); return false; }}>Chat with a Student Support Specialist</a></p>
       </div>
     </div>
     <p><a className="btn btn-sm btn-outline-primary" href="/contact#form">&nbsp;Schedule a Call with a Student Advisor</a></p>
