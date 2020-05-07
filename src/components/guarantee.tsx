@@ -6,12 +6,13 @@ interface Props {
   doubleGuarantee: boolean;
   twentyOneDays?: React.ReactElement;
   oneYear?: React.ReactElement;
+  starting?: React.ReactElement;
 }
 
-export const Guarantee: React.FC<Props> = ({ courseName, doubleGuarantee, twentyOneDays, oneYear }) => (
+export const Guarantee: React.FC<Props> = ({ courseName, doubleGuarantee, twentyOneDays, oneYear, starting }) => (
   <div className="container text-center">
     <h2 className="text-dark">Your Guarantee</h2>
-    <p className="lead mb-5">Starting a new career can be scary. But don't worry!<br />Once you enroll in QC's {courseName} Course, you'll be protected by a<br /><strong>{doubleGuarantee ? 'double' : '21-day'} money-back guarantee!</strong></p>
+    {starting ? starting : <p className="lead mb-5">Starting a new career can be scary. But don't worry!<br />Once you enroll in QC's {courseName} Course, you'll be protected by a<br /><strong>{doubleGuarantee ? 'double' : '21-day'} money-back guarantee!</strong></p>}
     <div className="row">
       {doubleGuarantee
         ? (
@@ -45,4 +46,5 @@ Guarantee.propTypes = {
   doubleGuarantee: PropTypes.bool.isRequired,
   twentyOneDays: PropTypes.element,
   oneYear: PropTypes.element,
+  starting: PropTypes.element,
 };

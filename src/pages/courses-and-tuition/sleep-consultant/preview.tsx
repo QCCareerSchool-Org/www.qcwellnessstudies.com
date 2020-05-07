@@ -69,6 +69,7 @@ const Page: NextPage = () => {
                 <li>Professionals already working in the child care industry</li>
                 <li>Professionals already working in the healthcare and/or wellness industries</li>
               </ul>
+              <p>Do you want to learn more about the course from the point of view of our graduates?<Link href="/student-features/sarah-pashniak"><a> Meet Sarah Pashniak, a QC graduate, who now runs a successful sleep consulting business!</a></Link></p>
             </div>
           </div>
         </div>
