@@ -14,7 +14,8 @@
     { "source": "/courses-and-tuition/personal-care-aide", "destination": "/courses-and-tuition/professional-caregiving" },
     { "source": "/courses-and-tuition/personal-care-aide/preview", "destination": "/courses-and-tuition/professional-caregiving/preview" },
     { "source": "/courses-and-tuition/personal-care-aide/get-a-preview", "destination": "/courses-and-tuition/professional-caregiving/get-a-preview" },
-    { "source": "/courses-and-tuition/personal-care-aide/thank-you", "destination": "/courses-and-tuition/professional-caregiving/thank-you" }
+    { "source": "/courses-and-tuition/personal-care-aide/thank-you", "destination": "/courses-and-tuition/professional-caregiving/thank-you" },
+    { "source": "/courses-and-tuition/professional-organizing(/.*)?", "destination": "https://www.qcdesignschool.com/online-courses/professional-organizing/" }
   ],
   "rewrites": [
     { "source": "/get-a-personal-care-aide-course-preview", "destination": "/courses-and-tuition/personal-care-aide/get-a-preview" },
