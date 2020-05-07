@@ -15,7 +15,7 @@ export const Footer: React.FC = () => (
           <p className="text-light"><strong>AVAILABLE CERTIFICATIONS:</strong></p>
           <p><Link href="/courses-and-tuition/professional-caregiving"><a>Professional Caregiver</a></Link></p>
           <p><Link href="/courses-and-tuition/personal-caregiving"><a>Personal Caregiver</a></Link></p>
-          <p><Link href="/courses-and-tuition/sleep-consultant"><a> Sleep Consultant</a></Link></p>
+          <p><Link href="/courses-and-tuition/sleep-consultant"><a>Sleep Consultant</a></Link></p>
           <p><Link href="/courses-and-tuition/skincare-consultant"><a>Skincare Consultant</a></Link></p>
           <p><Link href="/courses-and-tuition/aging-in-place"><a>Aging in Place</a></Link></p>
         </div>
