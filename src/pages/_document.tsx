@@ -2,7 +2,10 @@ import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, Next
 import React from 'react';
 
 declare global {
-  interface Window { LC_API?: { open_chat_window: () => void } }
+  interface Window {
+    LC_API?: { open_chat_window: () => void };
+    dataLayer: any[];
+  }
 }
 
 class MyDocument extends Document {

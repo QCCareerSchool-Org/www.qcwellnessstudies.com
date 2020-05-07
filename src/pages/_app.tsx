@@ -7,12 +7,6 @@ import { BannerProvider } from '../providers/banner';
 import { LocationProvider } from '../providers/location';
 import { ScreenWidthProvider } from '../providers/screen-width';
 
-declare global {
-  interface Window {
-    dataLayer: any[];
-  }
-}
-
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <ScreenWidthProvider>

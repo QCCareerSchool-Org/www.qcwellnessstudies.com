@@ -5,12 +5,6 @@ import { IoMdCloseCircle } from 'react-icons/io';
 
 import { useBanner } from '../providers/banner';
 
-declare global {
-  interface Window {
-    dataLayer: any[];
-  }
-}
-
 export interface Props {
   delay?: number;
 }
@@ -31,7 +25,6 @@ export const ConsentBanner: React.FC<Props> = ({ delay = 1000 }) => {
       }, delay);
     } else if (consentCookie) {
       setConsent(true);
-      console.log('track');
       window.dataLayer.push({ event: 'track' });
       tracking.current = true;
     }
@@ -52,7 +45,6 @@ export const ConsentBanner: React.FC<Props> = ({ delay = 1000 }) => {
 
   const acceptClick = (): void => {
     if (!tracking.current) {
-      console.log('track');
       window.dataLayer.push({ event: 'track' });
     }
     setConsent(true);
