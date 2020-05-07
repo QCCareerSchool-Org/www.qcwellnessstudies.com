@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
-import { IoMdChatboxes, IoMdCheckbox, IoMdFiling, IoMdHome, IoMdSchool, IoMdTime } from 'react-icons/io';
+import { IoMdFiling } from 'react-icons/io';
 import { About } from '../../../components/about';
 import { Contact } from '../../../components/contact';
 import { Guarantee } from '../../../components/guarantee';
@@ -36,6 +36,7 @@ const Page: NextPage = () => {
         title="Professional Caregiver Course Preview"
         description="Preview the online professional caregiver course offered by QC. Read a detailed course overview, sample some assignments, meet your tutors, and more!"
         canonical="/courses-and-tuition/professional-caregiving/preview"
+        noIndex={true}
       />
 
       <section id="heroSection">
