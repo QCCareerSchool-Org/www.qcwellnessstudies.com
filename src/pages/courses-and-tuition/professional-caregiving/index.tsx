@@ -402,7 +402,7 @@ const Page: React.FC = () => {
               <ul className="mb-4">
                 <li><p><strong>Empathy &amp; Compassion</strong> &mdash; You’re always able to put yourself in your clients’ shoes to understand their situations. You genuinely care about people and want to help in any way you can.</p></li>
                 <li><p><strong>Good Communication Skills</strong> &mdash; You’re able to clearly and effectively communicate with clients, family members and other professionals. You advocate in your clients’ best interests. You’re patient and careful when you choose your words.</p></li>
-                <li><p><strong>Physical Stamina</strong> &mdash; You’re ready to work hard and have the physical strength to help your clients with mobility issues. You know your own limitations. You are ready to turn down a client if you know you won’t have the physical ability to properly care for him or her</p></li>
+                <li><p><strong>Physical Stamina</strong> &mdash; You’re ready to work hard and have the physical strength to help your clients with mobility issues. You know your own limitations. You are ready to turn down a client if you know you won’t have the physical ability to properly care for him or her.</p></li>
                 <li><p><strong>Integrity &amp; Discretion</strong> &mdash; You understand the importance of respecting your clients’ privacy while working in their homes and helping them with sensitive tasks. You’re discreet and would never dream of betraying a client’s trust!</p></li>
               </ul>
               <p className="text-center"><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>
@@ -463,7 +463,7 @@ const Page: React.FC = () => {
           subheader="Get certified faster and start a fulfilling career!"
           affordable="QC's course is fully online. You don't have to pay surcharges for attending lectures or classroom sessions. You complete the full course from home."
           flexible="No start dates, no deadlines, no mandatory attendance! This course is completely self-directed and self-paced. Get certified quickly or take your time. The choice is yours."
-          comprehensive="You're not just learning how one caregiving company wants you do things. You're getting a foundation of knowledge in caregiving that will be useful no matter where you work!!"
+          comprehensive="You're not just learning how one caregiving company wants you do things. You're getting a foundation of knowledge in caregiving that will be useful no matter where you work!"
           courses={['fc']}
         />
       </section>
