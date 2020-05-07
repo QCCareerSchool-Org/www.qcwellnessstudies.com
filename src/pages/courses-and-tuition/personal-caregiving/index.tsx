@@ -179,12 +179,12 @@ const Page: React.FC = () => {
 
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
-        <PaymentPlans courses={['ic']} doubleGuarantee={doubleGuarantee} />
+        <PaymentPlans courses={[ 'ic' ]} doubleGuarantee={doubleGuarantee} />
       </section>
 
       <section id="whatSection" className="bg-light">
         <div className="container">
-          <h2 className="text-dark text-center">What is a <strong>Personal</strong> Caregiver?</h2>
+          <h2 className="text-dark text-center">What Is a <strong>Personal</strong> Caregiver?</h2>
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
               <p>A personal (or “informal”) caregiver provides care and support to a loved one. As a personal caregiver, you’ll be an important part of your loved one’s wellness team. Your support can help a friend or family member maintain his or her independence. You’ll help your loved one perform daily living activities to promote a happy and productive life.</p>
@@ -248,7 +248,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitA">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/ic-unit-a-course-outline.jpg')} className="rounded img-fluid mt-2" alt="Personal Caregiving Course Unit A" />
+              <img src={require('../../../images/ic-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Informal Caregiving Course Unit A" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit A: Introduction to Caregiving</h3>
@@ -260,7 +260,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitB">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/ic-unit-b-course-outline.jpg')} className="rounded img-fluid mt-2" alt="Personal Caregiving Course Unit B" />
+              <img src={require('../../../images/ic-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Informal Caregiving Course Unit B" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit B: Care Needs</h3>
@@ -272,7 +272,7 @@ const Page: React.FC = () => {
           </div>
           <div className="row my-5" id="unitC">
             <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/pc-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Personal Caregiving Course Unit C" />
+              <img src={require('../../../images/pc-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Informal Caregiving Course Unit C" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit C: Technical Skills</h3>
@@ -311,34 +311,19 @@ const Page: React.FC = () => {
           shortName="Personal Caregiver"
           fullName="Personal Caregiving Professional"
           abbr="PCGP"
-          registered={false}                
-          logo={(
-            <>
-             <img src={require('../../../images/qc-wellness-logo.svg')} className="img-fluid text-center" alt="Wellnes logo" />
-            </>
-          )}
-          graduation={(
-            <>
-              <h2 className="text-light">Graduating as a Personal Caregiver</h2>
-            </>
-          )}
-          completion={(
-            <>
-              <p>Upon graduation, you’ll receive a certificate of completion indicating that you have successfully completed the Personal Caregiver Course. Note that this is not a professional certification.</p>
-            </>
-          )}
+          registered={false}
+          logo={<img src={require('../../../images/qc-wellness-logo.svg')} className="img-fluid text-center" alt="Wellnes logo" />}
+          graduation={<h2 className="text-light">Graduating as a Personal Caregiver</h2>}
+          completion={<p>Upon graduation, you’ll receive a certificate of completion indicating that you have successfully completed the Personal Caregiver Course. Note that this is not a professional certification.</p>}
         />
       </section>
 
       <section id="guaranteeSection">
-        <Guarantee 
-        courseName="Personal Caregiver" 
-        doubleGuarantee={doubleGuarantee}
-        starting={(
-          <>            
-          </>
-        )} 
-         />
+        <Guarantee
+          courseName="Personal Caregiver"
+          doubleGuarantee={doubleGuarantee}
+          starting={<></>}
+        />
       </section>
 
       <section id="enrollSection" className="text-light text-center">
@@ -350,7 +335,7 @@ const Page: React.FC = () => {
       </section>
 
       <style jsx>{`
-        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../images/ic-top-image.jpg')});background-size:cover;background-position:center;}
+        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../images/ic-hero.jpg')});background-size:cover;background-position:center;}
         #certificationSection{background-image:url(${require('../../../images/bg-dark-green-navy.jpg')});background-size:cover}
         #requirementsSection{background-image:url(${require('../../../images/pc-requirements.jpg')});background-size:cover}
         #paymentPlansSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}

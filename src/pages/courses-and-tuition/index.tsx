@@ -64,22 +64,6 @@ const Page: React.FC = () => (
       </div>
     </section>
 
-    <section id="organizingSection">
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-4">
-            <PriceCard courses={[ 'po' ]} />
-          </div>
-          <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
-            <h2 className="text-dark">Professional Organizing Course</h2>
-            <p>Help clients declutter and organize their home or office for a healthier mental state and overall wellbeing. Becoming a professional organizer is a great way to build a full time career or to boost your income with fun and fulfilling part-time work!</p>
-            <p>You'll learn how to help different clients meet their organizing goals, the factors that create organization challenges and how to overcome them, how to create a plan that works for every type of client, storage solutions, and as always, how to turn all these skills into a thriving business!</p>
-            <Link href="/courses-and-tuition/professional-organizing"><a className="btn btn-secondary">LEARN MORE</a></Link>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="agingSection">
       <div className="container">
         <div className="row">
