@@ -580,8 +580,8 @@ const Page: React.FC = () => {
       <section id="certificationSection" className="bg-dark text-light">
         <Certification
           shortName="Professional Caregiver"
-          fullName="Personal Caregiving Professional"
-          abbr="PCGP"
+          fullName="Formal Caregiving Professional"
+          abbr="FCGP"
           registered={false}
         />
       </section>
