@@ -356,20 +356,20 @@ const Page: React.FC = () => {
           <h2 className="text-dark text-center">What Is a Caregiver?</h2>
           <div className="row">
             <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-3 mb-md-0">
-              <p>Caregivers are a very important part of a person’s home care team. You’ll be on the front lines every day to help your client maintain their independence and wellbeing by helping them with daily tasks they may have trouble completing on their own.</p>
+              <p>A caregiver is a very important part of a person’s homecare team. You’ll be on the front lines every day to help clients maintain their independence and wellbeing. You’ll help them with daily tasks they may have trouble completing on their own.</p>
               <p>As a caregiver, your duties can include any or all of the following:</p>
               <ul>
-                <li>Provide companionship and help keep clients engaged in their community</li>
+                <li>Providing companionship and helping to keep clients engaged in their communities</li>
                 <li>Helping clients with daily personal care tasks including bathing and dressing</li>
-                <li>General housekeeping duties including cleaning, laundry, dishes, etc.</li>
+                <li>Helping clients perform general housekeeping duties including cleaning, laundry, dishes, etc.</li>
                 <li>Organizing and/or providing transportation to appointments, outings, etc.</li>
-                <li>Grocery shopping and/or meal preparation based on dietary specifications</li>
+                <li>Grocery shopping and/or meal preparation</li>
               </ul>
               <p>Note that caregivers are not healthcare professionals and do not provide medical services.</p>
             </div>
 
             <div className="col-12 col-md-6 col-lg-5">
-              <p>Depending on your location, a caregiver might be called something different. Other common job titles include, but are not limited to:</p>
+              <p>You might hear different terms used to refer to caregivers, depending on where you live. Other common job titles for “caregiver" include, but are not limited to:</p>
               <ul>
                 <li>Attendant Care Worker</li>
                 <li>Direct Care Worker</li>
@@ -395,15 +395,15 @@ const Page: React.FC = () => {
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-7 offset-lg-0">
               <h2>Basic Requirements for Becoming a Caregiver</h2>
-              <p>Caregiving is a highly rewarding career. As an integral part of someone’s wellness team, you’re there every day to put a smile on their face and help them maintain a healthy and productive life. If you genuinely enjoy helping people and are willing to advocate for your clients at every turn, this can be the perfect career for you.</p>
-              <p>It’s always a good idea to check local regulations before starting a new profession. Currently in the United States, there are <a className="text-dark" href="https://www.bls.gov/OOH/healthcare/home-health-aides-and-personal-care-aides.htm#tab-4" target="blank">no licensing requirements</a> or training regulations for caregivers who work independently (are employed directly by their client) and bill clients directly.
+              <p>Caregiving is a highly rewarding career. As an integral part of your clients’ wellness teams, you’re there every day to put smiles on their faces and to help them maintain healthy and productive lives. If you genuinely enjoy helping people and are willing to advocate for your clients at every turn, this can be the perfect career for you.</p>
+              <p>It’s always a good idea to check local regulations before starting a new profession. Currently, the United States has <a className="text-dark" href="https://www.bls.gov/OOH/healthcare/home-health-aides-and-personal-care-aides.htm#tab-4" target="blank">no licensing requirements</a> or training regulations for caregivers who work independently. “Independent” means that they are employed directly by their clients and bill clients directly.
               </p>
-              <p>Successful caregivers all exhibit similar traits.  Do you have what it takes?</p>
+              <p>Successful caregivers all exhibit similar traits. Do you have what it takes?</p>
               <ul className="mb-4">
-                <li><p><strong>Empathy &amp; Compassion</strong> &mdash; ou’re always able to put yourself in your clients’ shoes in order to understand their situation. You genuinely care about people and want to help in any way you can.</p></li>
-                <li><p><strong>Good Communication Skills</strong> &mdash; You’re able to clearly and effectively communicate with clients, family members, and other professionals in order to advocate for your client’s best interest. You’re patient and careful when you choose your words.</p></li>
-                <li><p><strong>Physical Stamina</strong> &mdash; You’re ready to work on your feet for long hours and have the physical strength to help your clients with mobility issues. You know your own limitations and are ready to decline a client if you know you won’t have the physical ability to properly care for them.</p></li>
-                <li><p><strong>Integrity &amp; Discretion</strong> &mdash; You understand the importance of respecting your client’s privacy while working in their home and helping them with sensitive tasks. You’re discreet and would never dream of betraying a client’s trust!</p></li>
+                <li><p><strong>Empathy &amp; Compassion</strong> &mdash; You’re always able to put yourself in your clients’ shoes to understand their situations. You genuinely care about people and want to help in any way you can.</p></li>
+                <li><p><strong>Good Communication Skills</strong> &mdash; You’re able to clearly and effectively communicate with clients, family members and other professionals. You advocate in your clients’ best interests. You’re patient and careful when you choose your words.</p></li>
+                <li><p><strong>Physical Stamina</strong> &mdash; You’re ready to work hard and have the physical strength to help your clients with mobility issues. You know your own limitations. You are ready to turn down a client if you know you won’t have the physical ability to properly care for him or her</p></li>
+                <li><p><strong>Integrity &amp; Discretion</strong> &mdash; You understand the importance of respecting your clients’ privacy while working in their homes and helping them with sensitive tasks. You’re discreet and would never dream of betraying a client’s trust!</p></li>
               </ul>
               <p className="text-center"><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>
             </div>
@@ -416,19 +416,19 @@ const Page: React.FC = () => {
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-5">
               <h2 className="text-dark">What You'll Learn</h2>
-              <p className="lead">In this highly interactive self-paced training course, you'll learn:</p>
+              <p className="lead">In this highly interactive self-paced training course, you'll learn about:</p>
               <ul className="mb-4">
                 <li>The roles &amp; responsibilities of a Caregiver</li>
                 <li>Performing a client consultation</li>
                 <li>Working with a care plan</li>
                 <li>Health &amp; safety considerations</li>
                 <li>Special considerations for different types of clients</li>
-                <li>Using a holistic approach to a client’s health &amp; wellness</li>
+                <li>Using a holistic approach to improve a client’s health &amp; wellness</li>
                 <li>Maintaining your own physical &amp; emotional health</li>
                 <li>Activities of Daily Life (ADLs) and Instrumental Activities of Daily Living (IADLs)</li>
                 <li>Identifying &amp; dealing with signs of abuse</li>
                 <li>Understanding the human body, disabilities, and impairments</li>
-                <li>How to start your own caregiving business</li>
+                <li>Starting your own caregiving business</li>
               </ul>
               <a className="btn btn-dark" href="#outline" role="button">Read the Full Course Outline</a>
             </div>
@@ -444,10 +444,11 @@ const Page: React.FC = () => {
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
               <h2>How You'll Learn</h2>
-              <p>QC's signature online learning experience is made for highly motivated and ambitious individuals! You'll learn at your own pace, with the help of your student advisor and expert tutor who will be with you every step of the way!</p>
+              <p>QC's signature online learning experience is designed for highly motivated and ambitious individuals!</p>
+              <p>You'll learn at your own pace, with the help of your student advisor and your expert tutor. They will be with you every step of the way!</p>
               <ul>
-                <li>Follow the course guide that will tell you when you need to read a course book, watch a video, or complete an assignment.</li>
-                <li>Complete a variety of assignments including knowledge quizzes, open-ended discussions, and comprehensive real-world case studies where you experience what it's like to be a professional caregiver.</li>
+                <li>Follow the course guide, which will tell you when you need to read a course book, watch a video or complete an assignment.</li>
+                <li>Complete a variety of assignments including knowledge quizzes, open-ended discussions and comprehensive real-world case studies where you experience what it's like to be a professional caregiver.</li>
                 <li>Upload your completed assignments to the Online Student Center.</li>
                 <li>Your tutor will grade your work and provide feedback on every assignment.</li>
                 <li>Graduate once you've completed all your course units and your tuition has been paid in full.</li>
@@ -460,9 +461,9 @@ const Page: React.FC = () => {
       <section id="whyChooseQCSection">
         <WhyChoose
           subheader="Get certified faster and start a fulfilling career!"
-          affordable="Since QC's course is fully online, you don't have to pay surcharges for attending lectures or classroom sessions. You complete the full course from home."
-          flexible="No start dates, no deadlines, no mandatory attendance! This course is completely self-directed and self-paced. Get certified quickly, or take your time."
-          comprehensive="you're not just learning how one caregiving company wants you do do things. You're getting a foundation of knowledge in caregiving that will be useful no natter where you work!"
+          affordable="QC's course is fully online. You don't have to pay surcharges for attending lectures or classroom sessions. You complete the full course from home."
+          flexible="No start dates, no deadlines, no mandatory attendance! This course is completely self-directed and self-paced. Get certified quickly or take your time. The choice is yours."
+          comprehensive="You're not just learning how one caregiving company wants you do things. You're getting a foundation of knowledge in caregiving that will be useful no matter where you work!!"
           courses={['fc']}
         />
       </section>
@@ -477,7 +478,7 @@ const Page: React.FC = () => {
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1">
               <h2 className="text-dark text-center">Full Course Outline</h2>
-              <p className="lead text-center">Here's a detailed outline of all topics you'll learn in the caregiver certification course.</p>
+              <p className="lead text-center">Here's a detailed outline of all topics you'll learn in your caregiver certification course.</p>
             </div>
           </div>
           <div className="row my-5" id="unitA">
@@ -486,7 +487,7 @@ const Page: React.FC = () => {
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit A: Introduction to Caregiving</h3>
-              <p className="mb-0">In this first unit, you'll learn what it means to be a caregiver. You'll learn the details of the job, how you'll interact with clients, and (just as importantly) what types of duties you WON'T be expected to complete as a caregiver. You'll then learn how to perform your initial client consultation, including what information you'll need to collect, and how to evaluate safety requirements for each client. Finally, you'll learn how to establish and work with a detailed care plan for every client you take on.</p>
+              <p className="mb-0">In this first unit, you'll learn what it means to be a caregiver. You'll learn the details of the job, and how you'll interact with clients. Just as importantly, you’ll see the duties you WON'T be expected to complete as a caregiver. You'll then learn how to perform your initial client consultation. You’ll focus on the information you'll need to collect, and how to evaluate safety needs for each client. Finally, you'll learn how to establish and work with a detailed care plan for every client you take on.</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
               <UnitOutline data={units.a} />
@@ -498,7 +499,7 @@ const Page: React.FC = () => {
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit B: Working with Clients</h3>
-              <p className="mb-0">Now that you have a good idea of your role as a caregiver, you'll start to learn how to put that knowledge to use when working with clients. Your clients will have a number of different challenges they face every day. As a caregiver, you'll have to work hard at remaining professional and establishing healthy boundaries with your clients while still developing meaningful relationships. This can be a tricky skill to master! Later in the unit, you'll focus on understanding your client's unique needs based on their own challenges.</p>
+              <p className="mb-0">Now that you have a good idea of your role as a caregiver, you'll start to learn how to put that knowledge to use when working with clients. You’ll see how to help clients with everyday challenges. You’ll learn how to establish professional boundaries with your clients while still developing meaningful relationships. These can be tricky skills to master! Later in the unit, you'll focus on understanding a client's unique needs based on his or her personal challenges.</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
               <UnitOutline data={units.b} />
@@ -510,7 +511,7 @@ const Page: React.FC = () => {
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit C: Working as a Caregiver</h3>
-              <p className="mb-0">In this next unit, you'll dive into the specific services you'll offer as a caregiver, and start developing those skills. Whether you plan on providing all these services once you start your business, it's important to have the full range of skills required to be a successful caregiver. This unit will also allow you to explore the different workplace settings available to you as a caregiver, should you choose to work for a caregiving agency instead of starting your own caregiver business.</p>
+              <p className="mb-0">In Unit C, you'll dive into the services you'll offer as a caregiver and you’ll start developing the skills you need. Whether you plan on providing all these services once you start your business, it's important to have the full range of skills you’ll need as a successful caregiverYou’ll also explore the different workplace settings available to you as a caregiver. For example, you might choose to work for a caregiving agency, a retirement home or to start your own caregiving business.</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
               <UnitOutline data={units.c} />
@@ -522,7 +523,7 @@ const Page: React.FC = () => {
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit D: Technical Skills</h3>
-              <p className="mb-0">This highly practical unit is where you'll learn the core technical skills any caregiver needs to have. When working with individuals who have limited independence, caregivers are sometimes required to help with basic daily tasks such as dressing, toileting, bathing/showering, or helping their client move around, for example. There are very specific methods to follow that are safe and ensure you preserve your client's dignity as you perform these delicate tasks.</p>
+              <p className="mb-0">This highly practical unit is where you'll learn about the technical skills any caregiver needs before helping a client with personal care tasks. Caregivers are sometimes required to help with basic daily tasks such as dressing, toileting, bathing/showering or helping their client move around. You’ll learn methods that will keep you safe and that ensure you preserve your client's dignity as you perform these delicate tasks.</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
               <UnitOutline data={units.d} />
@@ -534,7 +535,7 @@ const Page: React.FC = () => {
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit E: Client Scenarios</h3>
-              <p className="mb-0">In Unit E, you’ll read a variety of hypothetical challenging situations and learn how to handle each one. You'll use the scenarios outlined in your course text as a guide to help you start thinking like a Formal Caregiver. Then you'll complete scenario-based assignments to practice interacting with clients in challenging situations.</p>
+              <p className="mb-0">In Unit E, you’ll learn about challenging situations and how to handle each one. You'll use the scenarios outlined in your course text as a guide to help you start thinking like a professional caregiver. Then you'll complete scenario-based assignments to practice interacting with clients in challenging situations..</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
               <UnitOutline data={units.e} />
@@ -545,8 +546,8 @@ const Page: React.FC = () => {
               <img src={require('../../../images/fcg-unit-f-course-outline.jpg')} className="rounded img-fluid mt-2" alt="Caregiver Unit F" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit F: (Optional) Business Training Unit</h3>
-              <p className="mb-0">If you plan on launching your own caregiving business, don't skip this essential final unit! You'll work through the specific elements of getting your business off the ground: from setting your prices to finding your first clients, building your website, marketing your services and much more. This unit can help your career launch in high gear!</p>
+              <h3 className="text-dark">Unit F: Business Training Unit</h3>
+              <p className="mb-0">If you plan on launching your own caregiving business, don't skip this essential final unit! You'll work through the specific elements of getting your business off the ground. You’ll learn how to set your prices and how to find your first clients. You’ll also learn how to build your website, market your services and much more. This unit will help you launch your career in high gear!</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
               <UnitOutline data={units.f} />
@@ -559,18 +560,18 @@ const Page: React.FC = () => {
       <a className="anchor" id="tutors"></a>
       <section id="tutorsSection" className="bg-light">
         <div className="container text-center">
-          <h2 className="text-dark text-center">Your Caregiving Tutor</h2>
-          <p className="lead mb-5 mx-lg-5">When you enroll, you'll be paired up with one of QC's expert tutors. Your tutor will be responsible for grading your work and providing feedback on your assignments.</p>
+          <h2 className="text-dark text-center">Your Caregiving Tutors</h2>
+          <p className="lead mb-5 mx-lg-5">When you enroll, you'll be assigned one of QC's expert tutors. Your tutor will be responsible for grading your work and providing feedback on your assignments</p>
           <div className="row text-center">
             <div className="col-12 mb-5 col-md-6 mb-md-0 col-lg-5 offset-lg-1">
               <p><img className="img-fluid" src={require('../../../images/tutor-suzanne.jpg')} alt="Suzanne Irvine" /></p>
               <h3 className="text-dark">Suzanne Irvine</h3>
-              <p>Suzanne is a retired registered nurse with over 35 years of experience in the health care sector. She has extensive experience teaching caregivers of all kinds including nurses, personal support workers and more. During her career in the wellness industry, Suzanne also worked as a disability case manager, assisting clients to return to work when ready. She's excited to assist you in your journey!</p>
+              <p>Suzanne is a retired registered nurse with over 35 years of experience in the health care sector. She has extensive experience teaching caregivers of all kinds, including nurses, personal support workers and more. During her career in the wellness industry, Suzanne also worked as a disability case manager, assisting clients to return to work when ready. She loves to help students develop successful careers!</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5">
               <p><img className="img-fluid" src={require('../../../images/tutor-aly.jpg')} alt="Aly Lalonde" /></p>
               <h3 className="text-dark">Aly Lalonde</h3>
-              <p>Aly is a registered nurse who has worked in many areas including emergency medicine, dialysis, and public health. Before completing her studies, Aly worked as a personal support worker in the community as well as in a residence. Having done the job herself, Aly understands just how important and crucial caregivers are to the health field and the positive impact these professionals have on patient care. She will be a valuable resource for you as you transition into this important role!</p>
+              <p>Aly worked extensively as a personal support worker in the community as well as in a residence. She is also a registered nurse with expertise in emergency medicine, dialysis, and public health. Aly understands how caregiving and healthcare professionals work together to help their clients. She’ll help you with your career as a caregiver and she’ll show you how to work effectively with healthcare professionals. She has an amazing breadth of hands-on experience and is a trusted advisor to QC students.</p>
             </div>
           </div>
         </div>
