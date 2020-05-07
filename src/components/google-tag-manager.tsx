@@ -16,7 +16,7 @@ class GoogleTagManager extends React.Component<Props> {
     dataLayerName: PropTypes.string,
     additionalEvents: PropTypes.object,
     previewVariables: PropTypes.string,
-    scriptId: PropTypes.string
+    scriptId: PropTypes.string,
   };
 
   componentDidMount(): void {

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { Footer } from '../components/footer';
 import { Header } from '../components/header';
@@ -10,6 +10,10 @@ interface Props {
 }
 
 export const MinimalLayout: React.FC<Props> = ({ children, SecondaryNav }) => {
+  useEffect(() => {
+    window.dataLayer.push({ event: 'track' });
+  }, []);
+
   return (
     <>
       <Header nav={false} />
