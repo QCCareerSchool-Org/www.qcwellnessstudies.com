@@ -384,7 +384,7 @@ const Page: React.FC = () => {
                 <li>Personal Support Specialist</li>
                 <li>Supportive Home Assistant</li>
               </ul>
-              <p>If you are looking to become a temporary caregiver for your loved one and not a professional caregiver, QC also offers an informal caregiver course. You can view the course <Link href="/courses-and-tuition/personal-caregiving"><a className="text-info">here.</a></Link></p>
+              {/* <p>If you are looking to become a temporary caregiver for your loved one and not a professional caregiver, QC also offers an informal caregiver course. You can view the course <Link href="/courses-and-tuition/personal-caregiving"><a className="text-info">here.</a></Link></p> */}
             </div>
           </div>
         </div>
