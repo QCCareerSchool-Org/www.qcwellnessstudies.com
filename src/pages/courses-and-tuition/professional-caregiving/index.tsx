@@ -535,7 +535,7 @@ const Page: React.FC = () => {
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit E: Client Scenarios</h3>
-              <p className="mb-0">In Unit E, you’ll learn about challenging situations and how to handle each one. You'll use the scenarios outlined in your course text as a guide to help you start thinking like a professional caregiver. Then you'll complete scenario-based assignments to practice interacting with clients in challenging situations..</p>
+              <p className="mb-0">In Unit E, you’ll learn about challenging situations and how to handle each one. You'll use the scenarios outlined in your course text as a guide to help you start thinking like a professional caregiver. Then you'll complete scenario-based assignments to practice interacting with clients in challenging situations.</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
               <UnitOutline data={units.e} />
@@ -561,7 +561,7 @@ const Page: React.FC = () => {
       <section id="tutorsSection" className="bg-light">
         <div className="container text-center">
           <h2 className="text-dark text-center">Your Caregiving Tutors</h2>
-          <p className="lead mb-5 mx-lg-5">When you enroll, you'll be assigned one of QC's expert tutors. Your tutor will be responsible for grading your work and providing feedback on your assignments</p>
+          <p className="lead mb-5 mx-lg-5">When you enroll, you'll be assigned one of QC's expert tutors. Your tutor will be responsible for grading your work and providing feedback on your assignments.</p>
           <div className="row text-center">
             <div className="col-12 mb-5 col-md-6 mb-md-0 col-lg-5 offset-lg-1">
               <p><img className="img-fluid" src={require('../../../images/tutor-suzanne.jpg')} alt="Suzanne Irvine" /></p>
