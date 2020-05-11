@@ -22,7 +22,7 @@ const Page: React.FC = () => {
           'When are Aging in Place services required',
           'Types of Aging in Place services offered',
           'The role of the Aging in Place Decorator/Designer',
-        ]
+        ],
       },
       {
         title: 'The Aging Body',
@@ -32,8 +32,8 @@ const Page: React.FC = () => {
           'Options for accommodating the challenges of aging',
           'Cultural stigma surrounding aging',
           'Planning for aging: steps to take at different ages to prepare for aging',
-        ]
-      }
+        ],
+      },
     ],
     b: [
       {
@@ -45,8 +45,8 @@ const Page: React.FC = () => {
           'The principles of accessibility design',
           'Why accessibility is important to design',
           'Types of disabilities and how to design to accommodate for them',
-          'Designing room-by-room with a focus on function, ease of use, and safety'
-        ]
+          'Designing room-by-room with a focus on function, ease of use, and safety',
+        ],
       },
       {
         title: 'Conducting an Aging in Place Needs Assessment',
@@ -67,7 +67,7 @@ const Page: React.FC = () => {
               'Identifying risks',
               'Room by room assessment',
               'Prioritizing upgrades, renovations and adjustments',
-            ]
+            ],
           },
           {
             title: 'Project funding and resources:',
@@ -75,7 +75,7 @@ const Page: React.FC = () => {
               'Loans, grants and tax credits for Aging in Place renovations',
               'Non-profit groups and government resources',
               'Reverse mortgages',
-            ]
+            ],
           },
           'The aging in place team: designers, contractors, physiotherapists, occupational therapists and more',
           {
@@ -84,10 +84,10 @@ const Page: React.FC = () => {
               'When parents become the ones cared for',
               'When children have a new role as the caregiver',
               'When opinions differ',
-            ]
-          }
-        ]
-      }
+            ],
+          },
+        ],
+      },
     ],
   };
 

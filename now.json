@@ -7,13 +7,19 @@
     }
   },
   "redirects": [
-    { "source": "/personal-care-aide-course-preview", "destination": "/courses-and-tuition/personal-care-aide/preview" },
+    { "source": "/personal-care-aide-course-preview", "destination": "/courses-and-tuition/professional-caregiving/preview" },
     { "source": "/sleep-consultant-course-preview", "destination": "/courses-and-tuition/sleep-consultant/preview" },
-    { "source": "/thank-you-personal-care-aide-course", "destination": "/courses-and-tuition/personal-care-aide/thank-you" },
-    { "source": "/thank-you-sleep-consultant-course", "destination": "/courses-and-tuition/sleep-consultant/thank-you" }
+    { "source": "/thank-you-personal-care-aide-course", "destination": "/courses-and-tuition/professional-caregiving/thank-you" },
+    { "source": "/thank-you-sleep-consultant-course", "destination": "/courses-and-tuition/sleep-consultant/thank-you" },
+    { "source": "/courses-and-tuition/personal-care-aide", "destination": "/courses-and-tuition/professional-caregiving" },
+    { "source": "/courses-and-tuition/personal-care-aide/preview", "destination": "/courses-and-tuition/professional-caregiving/preview" },
+    { "source": "/courses-and-tuition/personal-care-aide/get-a-preview", "destination": "/courses-and-tuition/professional-caregiving/get-a-preview" },
+    { "source": "/courses-and-tuition/personal-care-aide/thank-you", "destination": "/courses-and-tuition/professional-caregiving/thank-you" },
+    { "source": "/courses-and-tuition/professional-organizing(/.*)?", "destination": "https://www.qcdesignschool.com/online-courses/professional-organizing/" }
   ],
   "rewrites": [
     { "source": "/get-a-personal-care-aide-course-preview", "destination": "/courses-and-tuition/personal-care-aide/get-a-preview" },
-    { "source": "/get-a-sleep-consultant-course-preview", "destination": "/courses-and-tuition/sleep-consultant/get-a-preview" }
+    { "source": "/get-a-sleep-consultant-course-preview", "destination": "/courses-and-tuition/sleep-consultant/get-a-preview" },
+    { "source": "/student-features", "destination": "/student-features/sarah-pashniak" }
   ]
 }

@@ -2,8 +2,8 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
-
 import { IoMdDownload, IoMdFiling } from 'react-icons/io';
+
 import { About } from '../../../components/about';
 import { Contact } from '../../../components/contact';
 import { Guarantee } from '../../../components/guarantee';
@@ -48,7 +48,7 @@ const Page: NextPage = () => {
           <div className="row mt-5">
             <div className="col-12 col-md-10 offset-md-1">
               <p><img src={require('../../../images/certification-iscp.png')} alt="Infant Sleep Consulting Professional Certification" /></p>
-              <h1>INFANT SLEEP<br />CONSULTANT COURSE</h1>
+              <h1 className="text-uppercase">Infant Sleep Consultant Course</h1>
               <h2 className="h3">Course Preview</h2>
             </div>
           </div>
@@ -69,6 +69,7 @@ const Page: NextPage = () => {
                 <li>Professionals already working in the child care industry</li>
                 <li>Professionals already working in the healthcare and/or wellness industries</li>
               </ul>
+              <p>Do you want to learn more about the course from the point of view of our graduates?<Link href="/student-features/sarah-pashniak"><a> Meet Sarah Pashniak, a QC graduate, who now runs a successful sleep consulting business!</a></Link></p>
             </div>
           </div>
         </div>
@@ -94,7 +95,13 @@ const Page: NextPage = () => {
 
       <a className="anchor" id="howItWorks"></a>
       <section id="howItWorksSection">
-        <HowItWorks />
+        <HowItWorks
+          courseName="Sleep Consultant Course"
+          adjective="sleep-consultant"
+          tutorOccupation="professional sleep consultant"
+          certification="Infant Sleep Consultant Professional (ISCP™)"
+          caseStudiesExtended="As part of this course, you'll be presented with a number of case studies and will be asked to create full sleep plans to address unique circumstances."
+        />
       </section>
 
       <a className="anchor" id="curriculum"></a>
@@ -271,7 +278,7 @@ const Page: NextPage = () => {
 
       <a className="anchor" id="about"></a>
       <section id="aboutSection">
-        <About />
+        <About profession="professional sleep consultant" />
       </section>
 
       <section id="contactSection">

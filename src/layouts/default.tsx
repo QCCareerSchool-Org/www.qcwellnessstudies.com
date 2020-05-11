@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { Footer } from '../components/footer';
-import { GoogleAnalyticsWrapper } from '../components/google-analytics-wrapper';
 import { Header } from '../components/header';
 
 interface Props {
@@ -11,15 +10,19 @@ interface Props {
 }
 
 export const DefaultLayout: React.FC<Props> = ({ children, SecondaryNav }) => {
+  useEffect(() => {
+    window.dataLayer.push({ event: 'track' });
+  }, []);
+
   return (
-    <GoogleAnalyticsWrapper>
+    <>
       <Header nav={true} />
       {SecondaryNav && <SecondaryNav />}
       <main role="main" className="flex-shrink-0">
         {children}
       </main>
       <Footer />
-    </GoogleAnalyticsWrapper>
+    </>
   );
 };
 

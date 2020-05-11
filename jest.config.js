@@ -7,7 +7,7 @@ module.exports = {
     // '<rootDir>/test/scrollto.js'
   // ],
   setupFilesAfterEnv: [
-    '@testing-library/jest-dom/extend-expect'
+    '@testing-library/jest-dom/extend-expect',
   ],
   moduleNameMapper: {
     '\.(css|less|scss)$': require.resolve('./test/style.module.js'),

@@ -13,15 +13,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.qcwellnessstudies.com/courses-and-tuition/personal-care-aide</loc>
+    <loc>https://www.qcwellnessstudies.com/courses-and-tuition/professional-caregiving</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.qcwellnessstudies.com/courses-and-tuition/professional-organizing</loc>
+    <loc>https://www.qcwellnessstudies.com/courses-and-tuition/personal-caregiving</loc>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.qcwellnessstudies.com/courses-and-tuition/skincare-consultant</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.qcwellnessstudies.com/courses-and-tuition/aging-in-place</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -49,19 +53,11 @@
     <priority>0.1</priority>
   </url>
   <url>
-    <loc>https://www.qcwellnessstudies.com/sleep-consultant-course/get-a-preview</loc>
+    <loc>https://www.qcwellnessstudies.com/courses-and-tuition/sleep-consultant-course/get-a-preview</loc>
     <priority>0.1</priority>
   </url>
   <url>
-    <loc>https://www.qcwellnessstudies.com/sleep-consultant-course/preview</loc>
-    <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://www.qcwellnessstudies.com/personal-care-aide/get-a-preview</loc>
-    <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://www.qcwellnessstudies.com/personal-care-aide/preview</loc>
+    <loc>https://www.qcwellnessstudies.com/courses-and-tuition/professional-caregiving/get-a-preview</loc>
     <priority>0.1</priority>
   </url>
 </urlset>
