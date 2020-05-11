@@ -24,7 +24,7 @@ export const Footer: React.FC = () => (
           <p><Link href="/faq"><a>Frequently Asked Questions</a></Link></p>
           <p><Link href="/courses-and-tuition"><a>Tuition</a></Link></p>
           <p><Link href="/about#guarantee"><a>Money-Back Guarantee</a></Link></p>
-          <p><Link href="/student-features/sarah-pashniak"><a>Student Feature</a></Link></p>
+          <p><Link href="/student-features"><a>Student Features</a></Link></p>
           <p className="text-secondary"><strong><a href="https://enroll.qcwellnessstudies.com/">ENROLL NOW</a></strong></p>
         </div>
         <div className="col-12 col-md-4 col-lg-3 mb-4 mb-md-0">
