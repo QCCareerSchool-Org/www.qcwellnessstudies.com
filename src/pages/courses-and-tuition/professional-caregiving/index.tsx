@@ -308,8 +308,6 @@ const Page: React.FC = () => {
         ],
       },
     ],
-
-
   };
 
   return (
@@ -384,7 +382,7 @@ const Page: React.FC = () => {
                 <li>Personal Support Specialist</li>
                 <li>Supportive Home Assistant</li>
               </ul>
-              <p>If you are looking to become a temporary caregiver for your loved one and not a professional caregiver, QC also offers an informal caregiver course. You can view the course <Link href="/courses-and-tuition/personal-caregiving"><a className="text-info">here.</a></Link></p>
+              {/* <p>If you are looking to become a temporary caregiver for your loved one and not a professional caregiver, QC also offers an informal caregiver course. You can view the course <Link href="/courses-and-tuition/personal-caregiving"><a className="text-info">here.</a></Link></p> */}
             </div>
           </div>
         </div>
@@ -396,8 +394,7 @@ const Page: React.FC = () => {
             <div className="col-12 col-md-10 offset-md-1 col-lg-7 offset-lg-0">
               <h2>Basic Requirements for Becoming a Caregiver</h2>
               <p>Caregiving is a highly rewarding career. As an integral part of your clients’ wellness teams, you’re there every day to put smiles on their faces and to help them maintain healthy and productive lives. If you genuinely enjoy helping people and are willing to advocate for your clients at every turn, this can be the perfect career for you.</p>
-              <p>It’s always a good idea to check local regulations before starting a new profession. Currently, the United States has <a className="text-dark" href="https://www.bls.gov/OOH/healthcare/home-health-aides-and-personal-care-aides.htm#tab-4" target="blank">no licensing requirements</a> or training regulations for caregivers who work independently. “Independent” means that they are employed directly by their clients and bill clients directly.
-              </p>
+              <p>It’s always a good idea to check local regulations before starting a new profession. In the United States, each state has different training regulations for caregivers. Currently, the United States has no standardized <a className="text-dark" href="https://www.bls.gov/OOH/healthcare/home-health-aides-and-personal-care-aides.htm#tab-4" target="blank">licensing requirements</a> for caregivers.</p>
               <p>Successful caregivers all exhibit similar traits. Do you have what it takes?</p>
               <ul className="mb-4">
                 <li><p><strong>Empathy &amp; Compassion</strong> &mdash; You’re always able to put yourself in your clients’ shoes to understand their situations. You genuinely care about people and want to help in any way you can.</p></li>
@@ -511,7 +508,7 @@ const Page: React.FC = () => {
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
               <h3 className="text-dark">Unit C: Working as a Caregiver</h3>
-              <p className="mb-0">In Unit C, you'll dive into the services you'll offer as a caregiver and you’ll start developing the skills you need. Whether you plan on providing all these services once you start your business, it's important to have the full range of skills you’ll need as a successful caregiverYou’ll also explore the different workplace settings available to you as a caregiver. For example, you might choose to work for a caregiving agency, a retirement home or to start your own caregiving business.</p>
+              <p className="mb-0">In Unit C, you'll dive into the services you'll offer as a caregiver and you’ll start developing the skills you need. Whether you plan on providing all these services once you start your business, it's important to have the full range of skills you’ll need as a successful caregiver. You’ll also explore the different workplace settings available to you as a caregiver. For example, you might choose to work for a caregiving agency, a retirement home or to start your own caregiving business.</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
               <UnitOutline data={units.c} />
