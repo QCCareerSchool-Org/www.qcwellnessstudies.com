@@ -27,7 +27,7 @@ const Page: React.FC = () => {
       <section>
         <div className="container">
           <div className="row">
-            <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-3 mb-md-0">
+            <div className="col-12 col-md-6 col-lg-5 mb-3 mb-md-0">
               <p>HCAs in California are regulated by the state.</p>
               <ul>
                 <li>You must have five hours of training in your field to become an HCA</li>
@@ -45,7 +45,7 @@ const Page: React.FC = () => {
 
       <section className="bg-light text-dark">
         <div className="container">
-          <div className="col-12 col-lg-8 offset-lg-2 mb-6 mb-md-0">
+          <div className="col-12 col-lg-10 mb-6 mb-md-0">
             <h2>Funding</h2>
             <p>Please note that, while these regulations are accurate at time of publication, laws can change quickly. It’s always a good idea to check on government websites or contact public health representatives to get the most up-to-date information.</p>
             <p>If your client has served in the US Military and sustained a serious injury in the line of duty on or after September 11th, 2001, a Caregiver may be partially or fully reimbursed by <a className="text-info" href="https://www.benefits.gov/benefit/5918">Veteran’s’ Affairs</a>. Serious injuries include traumatic brain injury, psychological trauma, and other mental disorders.</p>
