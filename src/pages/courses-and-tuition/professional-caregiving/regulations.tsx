@@ -99,7 +99,14 @@ const Page: React.FC = () => {
                     <div className="col-12 col-lg-6 offset-lg-3 mb-6 mb-md-0">
                         <h2 className="text-dark">Find Your State Regulations</h2>
                         <p>Please note that, while these regulations are accurate at time of publication, laws can change quickly. It’s always a good idea to check on government websites or contact public health representatives to get the most up-to-date information.</p>
-                    </div>                    
+                    </div>
+                    <br /> 
+                    <div className="text-dark"> FIND YOUR STATE
+                    </div>
+                    <br /> 
+                    <div>
+                    <Link href="/courses-and-tuition/professional-caregiving/regulations/california"><a className="text-info">California</a></Link>
+                    </div>                   
                 </div>
             </section>
 
