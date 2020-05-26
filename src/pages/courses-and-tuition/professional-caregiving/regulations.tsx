@@ -32,17 +32,17 @@ const Page: React.FC = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col-12 mb-4 col-sm-6 col-md-4 mb-md-0">
-                                <p><a href="https://www.qcmakeupacademy.com/" target="_blank" rel="noopener noreferrer" ><img src={require('../../../images/fc-regulations-icon-difference.svg')} alt="Difference Icon" /></a></p>
+                                <p><img src={require('../../../images/fc-regulations-icon-difference.svg')} alt="Difference Icon" width="60" height="60" /></p>
                                 <h3 className="h5">What’s the Difference?</h3>
                                 <p>Learn the difference between a Caregiver, Home Health Aide, and Certified Nursing Assistant.</p>
                             </div>
                             <div className="col-12 mb-4 col-sm-6 col-md-4 mb-md-0">
-                                <p><a href="https://www.qceventplanning.com/" target="_blank" rel="noopener noreferrer" ><img src={require('../../../images/fc-regulations-icon-state-regulations.svg')} alt="State Icon" /></a></p>
+                                <p><img src={require('../../../images/fc-regulations-icon-state-regulations.svg')} alt="State Icon" width="60" height="60" /></p>
                                 <h3 className="h5">Regulations by State</h3>
                                 <p>Learn the regulations for Professional Caregivers in your specific state.</p>
                             </div>
                             <div className="col-12 mb-4 col-sm-6 col-md-4 mb-md-0">
-                                <p><a href="https://www.qcdesignschool.com/" target="_blank" rel="noopener noreferrer" ><img src={require('../../../images/fc-regulations-icon-medicaid.svg')} alt="Medicaid Icon" /></a></p>
+                                <p><img src={require('../../../images/fc-regulations-icon-medicaid.svg')} alt="Medicaid Icon" width="60" height="60" /></p>
                                 <h3 className="h5">Do My Services Qualify for Medicaid Reimbursement?</h3>
                                 <p>Find out whether your clients can be reimbursed by Medicaid to pay for your services.</p>
                             </div>
@@ -84,7 +84,6 @@ const Page: React.FC = () => {
                         </div>
                     </div>
                 </div>
-
             </section>
 
             <section>
