@@ -2,8 +2,8 @@ import Link from 'next/link';
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 
-import { SEO } from '../../../components/seo';
-import { DefaultLayout } from '../../../layouts/default';
+import { SEO } from '../../../../components/seo';
+import { DefaultLayout } from '../../../../layouts/default';
 
 const Page: React.FC = () => {
 
@@ -32,17 +32,17 @@ const Page: React.FC = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col-12 mb-4 col-sm-6 col-md-4 mb-md-0">
-                                <p><img src={require('../../../images/fc-regulations-icon-difference.svg')} alt="Difference Icon" width="60" height="60" /></p>
+                                <p><img src={require('../../../../images/fc-regulations-icon-difference.svg')} alt="Difference Icon" width="60" height="60" /></p>
                                 <h3 className="h5">What’s the Difference?</h3>
                                 <p>Learn the difference between a Caregiver, Home Health Aide, and Certified Nursing Assistant.</p>
                             </div>
                             <div className="col-12 mb-4 col-sm-6 col-md-4 mb-md-0">
-                                <p><img src={require('../../../images/fc-regulations-icon-state-regulations.svg')} alt="State Icon" width="60" height="60" /></p>
+                                <p><img src={require('../../../../images/fc-regulations-icon-state-regulations.svg')} alt="State Icon" width="60" height="60" /></p>
                                 <h3 className="h5">Regulations by State</h3>
                                 <p>Learn the regulations for Professional Caregivers in your specific state.</p>
                             </div>
                             <div className="col-12 mb-4 col-sm-6 col-md-4 mb-md-0">
-                                <p><img src={require('../../../images/fc-regulations-icon-medicaid.svg')} alt="Medicaid Icon" width="60" height="60" /></p>
+                                <p><img src={require('../../../../images/fc-regulations-icon-medicaid.svg')} alt="Medicaid Icon" width="60" height="60" /></p>
                                 <h3 className="h5">Do My Services Qualify for Medicaid Reimbursement?</h3>
                                 <p>Find out whether your clients can be reimbursed by Medicaid to pay for your services.</p>
                             </div>
@@ -111,7 +111,7 @@ const Page: React.FC = () => {
             </section>
 
             <style jsx>{`
-        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../images/fc-regulations-top-image-caregiver-regulations.jpg')});background-size:cover;background-position:center;}              
+        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../../images/fc-regulations-top-image-caregiver-regulations.jpg')});background-size:cover;background-position:center;}              
         section:first-of-type {
           padding-top: 105px;
         }
