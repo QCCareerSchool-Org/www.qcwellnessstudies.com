@@ -8,7 +8,7 @@ const Page: React.FC = () => {
     <DefaultLayout>
       <SEO
         title="Professional Caregiver Regulations - By State - California"
-        description="Different states have different regulations for professional caregivers. Before you begin your training, make sure you understand the regulations in California!"
+        description="Different states have different regulations for professional caregivers. Before you begin your training, make sure you understand these regulations!"
         canonical="/courses-and-tuition/professional-caregiver/regulations/california"
       />
 
