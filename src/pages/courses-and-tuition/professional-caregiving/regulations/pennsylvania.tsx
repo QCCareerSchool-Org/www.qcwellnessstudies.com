@@ -46,7 +46,7 @@ const Page: React.FC = () => {
 					<div className="col-12 col-lg-10 offset-lg-1 mb-6 mb-md-0">
 						<h2>Funding</h2>
 						<p>Medicaid programs to support caregiving are available to qualifying residents of Pennsylvania. However, to qualify for these programs, clients must require a nursing-home level of care. Your clients would probably not be reimbursed by Medicaid for your services.</p>
-						<p>If your client has served in the US Military and sustained a serious injury in the line of duty on or after September 11th, 2001, a Caregiver may be partially or fully reimbursed by <a className="text-info" href="https://www.benefits.gov/benefit/5918">Veteran’s’ Affairs</a>. Serious injuries include traumatic brain injury, psychological trauma, and other mental disorders.</p>
+						<p>If your client has served in the US Military and sustained a serious injury in the line of duty on or after September 11th, 2001, a Caregiver may be partially or fully reimbursed by <a className="text-info" href="https://www.benefits.gov/benefit/5918">Veteran’s’ Affairs.</a> Serious injuries include traumatic brain injury, psychological trauma, and other mental disorders.</p>
 						<p>Sources:</p>
 						<p><a className="text-info" href="https://www.health.pa.gov/topics/Documents/Facilities%20and%20Licensing/Chapter611.pdf">https://www.health.pa.gov/topics/Documents/Facilities%20and%20Licensing/Chapter611.pdf</a></p>
 						<p><a className="text-info" href="https://www.benefits.gov/benefit/5918">https://www.benefits.gov/benefit/5918</a></p>

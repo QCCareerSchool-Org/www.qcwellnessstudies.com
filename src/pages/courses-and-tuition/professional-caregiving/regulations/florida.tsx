@@ -46,7 +46,7 @@ const Page: React.FC = () => {
 					<div className="col-12 col-lg-10 offset-lg-1 mb-6 mb-md-0">
 						<h2>Funding</h2>
 						<p>Florida’s Statewide Medicaid Managed Care Long-Term Care Program (SMMC LTC) covers home care including meal delivery, companion care, and homemaker services. Generally speaking, your clients should be eligible to be reimbursed by Medicaid for your services.</p>
-						<p>If your client has served in the US Military and sustained a serious injury in the line of duty on or after September 11th, 2001, a Caregiver may be partially or fully reimbursed by <a className="text-info" href="https://www.benefits.gov/benefit/5918">Veteran’s’ Affairs</a>. Serious injuries include traumatic brain injury, psychological trauma, and other mental disorders.</p>
+						<p>If your client has served in the US Military and sustained a serious injury in the line of duty on or after September 11th, 2001, a Caregiver may be partially or fully reimbursed by <a className="text-info" href="https://www.benefits.gov/benefit/5918">Veteran’s’ Affairs.</a> Serious injuries include traumatic brain injury, psychological trauma, and other mental disorders.</p>
 						<p>Sources:</p>
 						<p><a className="text-info" href="https://www.floridahealthfinder.gov/reports-guides/home-health.aspx">https://www.floridahealthfinder.gov/reports-guides/home-health.aspx</a></p>
 						<p><a className="text-info" href="https://www.payingforseniorcare.com/florida/medicaid-waivers/smmc-ltc">https://www.payingforseniorcare.com/florida/medicaid-waivers/smmc-ltc</a></p>

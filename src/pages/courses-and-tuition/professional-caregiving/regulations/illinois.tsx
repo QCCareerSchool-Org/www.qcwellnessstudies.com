@@ -47,7 +47,7 @@ const Page: React.FC = () => {
 					<div className="col-12 col-lg-10 offset-lg-1 mb-6 mb-md-0">
 						<h2>Funding</h2>
 						<p>The HCBS Waiver in Illinois allows eligible residents to receive care at home under strict requirements. If your client is between the ages of 60 and 64 and has a disability recognized by the Social Security Administration, the costs of caregiving may be partially or fully reimbursed by this reimbursement.</p>
-						<p>If your client has served in the US Military and sustained a serious injury in the line of duty on or after September 11th, 2001, a Caregiver may be partially or fully reimbursed by <a className="text-info" href="https://www.benefits.gov/benefit/5918">Veteran’s’ Affairs.</a></p>
+						<p>If your client has served in the US Military and sustained a serious injury in the line of duty on or after September 11th, 2001, a Caregiver may be partially or fully reimbursed by <a className="text-info" href="https://www.benefits.gov/benefit/5918">Veteran’s’ Affairs.</a> Serious injuries include traumatic brain injury, psychological trauma, and other mental disorders.</p>
 						<p>Sources:</p>
 						<p><a className="text-info" href="http://www.ilga.gov/commission/jcar/admincode/077/077002450B00710R.html">http://www.ilga.gov/commission/jcar/admincode/077/077002450B00710R.html</a></p>
 						<p><a className="text-info" href="https://www.payingforseniorcare.com/illinois/medicaid-waivers/hcbs-waiver-for-the-elderly">https://www.payingforseniorcare.com/illinois/medicaid-waivers/hcbs-waiver-for-the-elderly</a></p>
