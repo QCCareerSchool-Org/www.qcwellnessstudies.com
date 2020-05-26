@@ -36,6 +36,7 @@ const Page: React.FC = () => {
               </ul>
             </div>
             <div className="col-12 col-md-6 col-lg-5">
+              <p><img src={require('../../../../images/fc-regulations-icon-take-this-course.svg')} alt="Take This Course Icon" /></p>
               <p>Take this course if: you would like to begin your career as a Caregiver, to receive higher pay in your current caregiving career, or to complete additional training.</p>
               <p><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>
             </div>
@@ -65,7 +66,7 @@ const Page: React.FC = () => {
       </section>
 
       <style jsx>{`
-        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../../images/fc-regulations-top-image-caregiver-regulations.jpg')});background-size:cover;background-position:center;}      
+        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../..//images/fc-regulations-top-image-states.jpg')});background-size:cover;background-position:center;}      
         #enrollSection{background-image:url(${require('../../../../images/bg-enrollment.jpg')});background-size:cover}
         section:first-of-type {
           padding-top: 105px;
