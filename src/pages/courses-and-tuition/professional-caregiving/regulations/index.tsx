@@ -105,7 +105,22 @@ const Page: React.FC = () => {
                     </div>
 					<br />
 					<div>
+						<Link href="/courses-and-tuition/professional-caregiving/regulations/new-york"><a className="text-info">New York</a></Link>
+					</div>
+					<div>
 						<Link href="/courses-and-tuition/professional-caregiving/regulations/california"><a className="text-info">California</a></Link>
+					</div>			
+					<div>
+						<Link href="/courses-and-tuition/professional-caregiving/regulations/florida"><a className="text-info">Florida</a></Link>
+					</div>
+					<div>
+						<Link href="/courses-and-tuition/professional-caregiving/regulations/texas"><a className="text-info">Texas</a></Link>
+					</div>
+					<div>
+						<Link href="/courses-and-tuition/professional-caregiving/regulations/pennsylvania"><a className="text-info">Pennsylvania</a></Link>
+					</div>
+					<div>
+						<Link href="/courses-and-tuition/professional-caregiving/regulations/illinois"><a className="text-info">Illinois</a></Link>
 					</div>
 				</div>
 			</section>
