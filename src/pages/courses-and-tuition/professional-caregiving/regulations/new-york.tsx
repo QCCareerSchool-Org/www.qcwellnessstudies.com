@@ -49,9 +49,7 @@ const Page: React.FC = () => {
 						<p>If your clients can demonstrate the need for assistance with activities of daily living and are eligible to receive New York Medicaid, they can be partially or fully reimbursed by Medicaid through New York’s Consumer-Directed Personal Assistance Program (CDPAP).</p>
 						<p>If your client has served in the US Military and sustained a serious injury in the line of duty on or after September 11th, 2001, a Caregiver may be partially or fully reimbursed by <a className="text-info" href="https://www.benefits.gov/benefit/5918">Veteran’s’ Affairs</a>. Serious injuries include traumatic brain injury, psychological trauma, and other mental disorders.</p>
 						<p>Sources:</p>
-						<p><a className="text-info" href="https://www.health.ny.gov/professionals/home_care/hhtap_training_program_faq.htm
-">https://www.health.ny.gov/professionals/home_care/hhtap_training_program_faq.htm
-</a></p>
+						<p><a className="text-info" href="https://www.health.ny.gov/professionals/home_care/hhtap_training_program_faq.htm">https://www.health.ny.gov/professionals/home_care/hhtap_training_program_faq.htm</a></p>
 						<p><a className="text-info" href="https://www.payingforseniorcare.com/new-york/personal-assistance-program">https://www.payingforseniorcare.com/new-york/personal-assistance-program</a></p>
 						<p><a className="text-info" href="https://www.benefits.gov/benefit/5918">https://www.benefits.gov/benefit/5918</a></p>
 					</div>
