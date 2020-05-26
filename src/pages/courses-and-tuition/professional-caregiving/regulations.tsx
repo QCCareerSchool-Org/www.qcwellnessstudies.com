@@ -67,13 +67,13 @@ const Page: React.FC = () => {
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Job Description</td>
+                                            <td>JOB DESCRIPTION</td>
                                             <td>Caring for elderly or disabled people through housework, errands, and other day-to-day tasks</td>
                                             <td>Caring for clients at home through day-to-day tasks and some medical monitoring/care</td>
                                             <td>Caring for clients through medical care and daily tasks such as bathing, dressing, etc.</td>
                                         </tr>
                                         <tr>
-                                            <td>Required Education</td>
+                                            <td>REQUIRED EDUCATION</td>
                                             <td>Depends on your state. Some Caregivers require basic training, while others must be officially licenced.</td>
                                             <td>No specific degree is required, but Home Health Aides must be professionally certified by state-accredited facilities.</td>
                                             <td>Nursing Assistant Training through an approved college or medical institution.</td>
@@ -87,8 +87,8 @@ const Page: React.FC = () => {
             </section>
 
             <section>
-                <div className="container text-center">
-                    <div className="col-12 col-lg-8 offset-lg-2 mb-6 mb-md-0">
+                <div className="container">
+                    <div className="col-12 col-lg-12 mb-6 mb-md-0">
                         <p>*There are many terms that refer to caregivers. These include, but are not limited to: Attendant Care Worker, Direct Care Worker, Direct Service Worker, Home Attendant, Home Care Aide, Home Services Worker, In-Home Aide, Personal Care Services Worker, Personal Services Attendant, Personal Support Specialist, and Supportive Home Assistant.</p>
                     </div>
                 </div>
@@ -96,7 +96,7 @@ const Page: React.FC = () => {
 
             <section>
                 <div className="container text-center">
-                    <div className="col-12 col-lg-8 offset-lg-2 mb-6 mb-md-0">
+                    <div className="col-12 col-lg-6 offset-lg-3 mb-6 mb-md-0">
                         <h2 className="text-dark">Find Your State Regulations</h2>
                         <p>Please note that, while these regulations are accurate at time of publication, laws can change quickly. It’s always a good idea to check on government websites or contact public health representatives to get the most up-to-date information.</p>
                     </div>                    
@@ -104,12 +104,7 @@ const Page: React.FC = () => {
             </section>
 
             <style jsx>{`
-        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../images/fc-regulations-top-image-caregiver-regulations.jpg')});background-size:cover;background-position:center;}      
-        #certificationSection{background-image:url(${require('../../../images/bg-dark-green-navy.jpg')});background-size:cover}
-        #requirementsSection{background-image:url(${require('../../../images/pc-requirements.jpg')});background-size:cover}
-        #paymentPlansSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
-        #includedSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
-        #enrollSection{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}
+        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../images/fc-regulations-top-image-caregiver-regulations.jpg')});background-size:cover;background-position:center;}              
         section:first-of-type {
           padding-top: 105px;
         }
