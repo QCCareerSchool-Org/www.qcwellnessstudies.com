@@ -51,11 +51,11 @@ const Page: React.FC = () => {
 				</div>
 			</section>
 
-			<section>
+			<section className="bg-light">
 				<div className="container text-center text-light">
 					<div className="container">
 						<div className="row">
-							<div className="col-12 mb-4 col-sm-6 col-md-12 mb-md-0">
+							<div className="col-12 mb-4 col-sm-12 col-md-12 mb-md-0">
 								<Table responsive>
 									<thead>
 										<tr>
@@ -80,18 +80,16 @@ const Page: React.FC = () => {
 										</tr>
 									</tbody>
 								</Table>
-							</div>
-						</div>
-					</div>
+							</div>						
+						</div>					
+					</div>					
 				</div>
-			</section>
-
-			<section>
+				<br />				
 				<div className="container">
 					<div className="col-12 col-lg-12 mb-6 mb-md-0">
 						<p>*There are many terms that refer to caregivers. These include, but are not limited to: Attendant Care Worker, Direct Care Worker, Direct Service Worker, Home Attendant, Home Care Aide, Home Services Worker, In-Home Aide, Personal Care Services Worker, Personal Services Attendant, Personal Support Specialist, and Supportive Home Assistant.</p>
 					</div>
-				</div>
+				</div>	
 			</section>
 
 			<section>
