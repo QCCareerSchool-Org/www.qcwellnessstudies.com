@@ -27,8 +27,8 @@ const Page: React.FC = () => {
                 </div>
             </section>
 
-            <section id="differenceSection">
-                <div className="container text-center text-light">
+            <section>
+                <div className="container text-center">
                     <div className="container">
                         <div className="row">
                             <div className="col-12 mb-4 col-sm-6 col-md-4 mb-md-0">
@@ -100,13 +100,12 @@ const Page: React.FC = () => {
                     <div className="col-12 col-lg-8 offset-lg-2 mb-6 mb-md-0">
                         <h2 className="text-dark">Find Your State Regulations</h2>
                         <p>Please note that, while these regulations are accurate at time of publication, laws can change quickly. It’s always a good idea to check on government websites or contact public health representatives to get the most up-to-date information.</p>
-                    </div>
+                    </div>                    
                 </div>
             </section>
 
             <style jsx>{`
-        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../images/fc-regulations-top-image-caregiver-regulations.jpg')});background-size:cover;background-position:center;}
-        #differenceSection{background-image: url(${require('../../../images/bg-dark-green-navy.jpg')});background-size: cover;}
+        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../images/fc-regulations-top-image-caregiver-regulations.jpg')});background-size:cover;background-position:center;}      
         #certificationSection{background-image:url(${require('../../../images/bg-dark-green-navy.jpg')});background-size:cover}
         #requirementsSection{background-image:url(${require('../../../images/pc-requirements.jpg')});background-size:cover}
         #paymentPlansSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
