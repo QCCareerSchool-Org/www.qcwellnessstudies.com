@@ -3,8 +3,7 @@ import React from 'react';
 import { SEO } from '../../../../components/seo';
 import { DefaultLayout } from '../../../../layouts/default';
 
-const Page: React.FC = () => {
-
+const Page: React.FC = () => {  
   return (
     <DefaultLayout>
       <SEO
@@ -36,7 +35,7 @@ const Page: React.FC = () => {
               </ul>
             </div>
             <div className="col-12 col-md-6 col-lg-5">
-              <p><img src={require('../../../../images/fc-regulations-icon-take-this-course.svg')} alt="Take This Course Icon" /></p>
+              <p><img src={require('../../../../images/fc-regulations-icon-take-this-course.svg')} alt="Take This Course Icon" width="60" height="60" /></p>
               <p>Take this course if: you would like to begin your career as a Caregiver, to receive higher pay in your current caregiving career, or to complete additional training.</p>
               <p><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>
             </div>
