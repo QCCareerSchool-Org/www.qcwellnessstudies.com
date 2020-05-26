@@ -30,7 +30,7 @@ const Page: React.FC = () => {
 							<p>The state of New York regulates all professional caregivers. To become a Personal Care Aide, you must register with the New York State Department of Public Health by taking an approved class or a competency exam.</p>
 							<ul>
 								<li>Caregivers must complete 40 hours of training.</li>
-								<li>Caregivers must also complete an additional 6 hours of training per year</li>						
+								<li>Caregivers must also complete an additional 6 hours of training per year</li>
 							</ul>
 						</div>
 						<div className="col-12 col-md-6 col-lg-5">
