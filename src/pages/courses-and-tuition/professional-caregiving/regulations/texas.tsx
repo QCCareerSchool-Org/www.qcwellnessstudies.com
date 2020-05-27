@@ -34,13 +34,13 @@ const Page: React.FC = () => {
 						</div>
 						<div className="col-12 col-md-6 col-lg-5">
 						<p className="text-center"><img src={require('../../../../images/fc-regulations-icon-take-this-course.svg')} alt="Take This Course Icon" width="60" height="60" /></p>
-              <h2 className="h5 text-center">Take this course if:</h2>
+              <h2 className="h5 text-center">Take this course:</h2>
               <ul>
-                <li>You would like to begin your career as a Caregiver</li>
+                <li>If you would like to begin your career as a Caregiver</li>
                 <li>To receive higher pay in your current caregiving career</li>
                 <li>To complete additional training</li>             
               </ul>                    
-							<p><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>                   
+              <p className="text-center"><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>               
 						</div>
 					</div>
 				</div>

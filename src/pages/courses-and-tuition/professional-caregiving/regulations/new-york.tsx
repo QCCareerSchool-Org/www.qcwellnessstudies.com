@@ -40,7 +40,7 @@ const Page: React.FC = () => {
                 <li>To receive higher pay in your current caregiving career</li>
                 <li>To complete additional training</li>             
               </ul>                    
-							<p><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>
+							<p className="text-center"><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>
 						</div>
 					</div>
 				</div>
