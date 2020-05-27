@@ -66,20 +66,20 @@ const Page: NextPage = () => (
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-10 offset-md-1">
-            <h2 className="text-dark">Questions About the Personal Care Aide Course</h2>
+            <h2 className="text-dark">Questions About the Professional Caregiver Course</h2>
             <hr />
             <h3 className="h4 text-dark">How long will it take me to complete the course?</h3>
-            <p><i>Courses are self-paced, so you can complete the PCA/Caregiving course as quickly as you want, or take your time. The choice is yours! On average, the course takes a typical student 3-5 months to complete, working on their studies part-time, for a few hours each week.</i></p>
+            <p><i>Courses are self-paced, so you can complete the Professional Caregiver course as quickly as you want, or take your time. The choice is yours! On average, the course takes a typical student 3-5 months to complete, working on their studies part-time, for a few hours each week.</i></p>
             <h3 className="h4 text-dark">Do I need to follow a set schedule to complete the course?</h3>
             <p><i>Nope. That's the beauty of online learning! The course is entirely self-paced. You can enroll online whenever you're ready, and complete the course whenever you have the time. There are no deadlines to worry about!</i></p>
-            <h3 className="h4 text-dark">Do I need some sort of license or other qualification to be a Personal Care Aide?</h3>
-            <p><i>Local regulations are always changing, so it's a good idea to check before you embark on a new business endeavor. In most places, you do not require any kind of license to be a privately-employed personal care aide, billing your clients directly. In many states, you also don't need a license if you bill through medicaid. Be sure to research your local regulations!</i></p>
-            <p><i>That said, if you're planning on working as a personal care aide through an agency, many states do have some licensing requirements. Often the requirements are more on your employer's side; having to provide you with a certain amount of additional training each year.</i></p>
+            <h3 className="h4 text-dark">Do I need some sort of license or other qualification to be a Professional Caregiver?</h3>
+            <p><i>Local regulations are always changing, so it's a good idea to check before you embark on a new business endeavor. In most places, you do not require any kind of license to be a privately-employed professional caregiver, billing your clients directly. In many states, you also don't need a license if you bill through medicaid. Be sure to research your local regulations!</i></p>
+            <p><i>That said, if you're planning on working as a professional caregiver through an agency, many states do have some licensing requirements. Often the requirements are more on your employer's side; having to provide you with a certain amount of additional training each year.</i></p>
             <p><i>For many private clients, a certification will prove that you have the knowledge and skills to practice caregiving effectively and professionally. Depending on your clients and the types of services you offer, you might also have to provide a criminal records check or proof of a CPR/First Aid certification.</i></p>
             <h3 className="h4 text-dark">Do I have to pay ongoing fees to use the school's templates or keep my certification up to date?</h3>
             <p><i>No! Your certification is yours forever, and you have access to all course resources for life, no extra charge!</i></p>
-            <h3 className="h4 text-dark">How much money can I make as a personal care aide?</h3>
-            <p><i>That depends on many factors, including your area, the types of services you offer, and your level of experience. PCAs that work for caregiving agencies usually make little above minimum wage. However by providing freelance services you're able to skip the agency "middle man" and charge your clients directly. This allows you to earn a much higher salary! Independent PCAs are often paid as much as $20-$25/hour however some experienced caregivers earn as high as $35-$40 per hour!</i></p>
+            <h3 className="h4 text-dark">How much money can I make as a professional caregiver?</h3>
+            <p><i>That depends on many factors, including your area, the types of services you offer, and your level of experience. Professional caregivers that work for caregiving agencies usually make little above minimum wage. However by providing freelance services you're able to skip the agency "middle man" and charge your clients directly. This allows you to earn a much higher salary! Independent caregivers are often paid as much as $20-$25/hour however some experienced caregivers earn as high as $35-$40 per hour!</i></p>
             <Link href="/courses-and-tuition/personal-care-aide"><a className="btn btn-secondary mt-3 mb-3">View Course</a></Link>
             <div className="card">
               <div className="card-body">
