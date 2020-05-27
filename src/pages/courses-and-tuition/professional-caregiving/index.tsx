@@ -259,7 +259,6 @@ const Page: React.FC = () => {
           },
           'Setting limits: Minimum/maximum number of clients, outlining your budget and expected income',
           'Creating realistic business goals',
-
         ],
       },
       {
@@ -272,7 +271,6 @@ const Page: React.FC = () => {
           'Insurance considerations',
           'Health care training: CPR, first aid, and other certifications to consider',
         ],
-
       },
       {
         title: 'Marketing your business',
@@ -346,7 +344,7 @@ const Page: React.FC = () => {
 
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
-        <PaymentPlans courses={[ 'fc' ]} doubleGuarantee={doubleGuarantee} />
+        <PaymentPlans courses={['fc']} doubleGuarantee={doubleGuarantee} />
       </section>
 
       <section id="whatSection">
@@ -365,7 +363,6 @@ const Page: React.FC = () => {
               </ul>
               <p>Note that caregivers are not healthcare professionals and do not provide medical services.</p>
             </div>
-
             <div className="col-12 col-md-6 col-lg-5">
               <p>You might hear different terms used to refer to caregivers, depending on where you live. Other common job titles for “caregiver" include, but are not limited to:</p>
               <ul>
@@ -461,7 +458,7 @@ const Page: React.FC = () => {
           affordable="QC's course is fully online. You don't have to pay surcharges for attending lectures or classroom sessions. You complete the full course from home."
           flexible="No start dates, no deadlines, no mandatory attendance! This course is completely self-directed and self-paced. Get certified quickly or take your time. The choice is yours."
           comprehensive="You're not just learning how one caregiving company wants you do things. You're getting a foundation of knowledge in caregiving that will be useful no matter where you work!"
-          courses={[ 'fc' ]}
+          courses={['fc']}
         />
       </section>
 
