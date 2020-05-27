@@ -28,7 +28,7 @@ const Page: React.FC = () => {
 					<div className="row">
 						<div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-3 mb-md-0">
 							<p className="text-center"><img src={require('../../../../images/fc-regulations-icon-state-regulations.svg')} alt="State Icon" width="60" height="60" /></p>
-							<h2 className="h5 text-center">Regulations by State</h2>
+							<h2 className="h5 text-center">State Requirements</h2>
 							<p>The state of New York regulates all professional caregivers. To become a Personal Care Aide, you must register with the New York State Department of Public Health by taking an approved class or a competency exam.</p>
 							<ul>
 								<li>Caregivers must complete 40 hours of training.</li>

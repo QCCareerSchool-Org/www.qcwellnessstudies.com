@@ -27,7 +27,7 @@ const Page: React.FC = () => {
 					<div className="row">
 						<div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-3 mb-md-0">
 							<p className="text-center"><img src={require('../../../../images/fc-regulations-icon-state-regulations.svg')} alt="State Icon" width="60" height="60" /></p>
-							<h2 className="h5 text-center">Regulations by State</h2>
+							<h2 className="h5 text-center">State Requirements</h2>
 							<p>Florida has two career paths for professional caregivers. They can become Personal Care Aides or Agency-Employed Personal Care Aides.</p>
 							<ul>
 								<li>Personal Care Aides not working through an agency do not need to be licensed in Florida</li>

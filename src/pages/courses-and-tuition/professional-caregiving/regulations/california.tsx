@@ -28,7 +28,7 @@ const Page: React.FC = () => {
           <div className="row">
             <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-3 mb-md-0">
               <p className="text-center"><img src={require('../../../../images/fc-regulations-icon-state-regulations.svg')} alt="State Icon" width="60" height="60" /></p>
-              <h2 className="h5 text-center">Regulations by State</h2>
+              <h2 className="h5 text-center">State Requirements</h2>
               <p>HCAs in California are regulated by the state.</p>
               <ul>
                 <li>You must have five hours of training in your field to become an HCA</li>

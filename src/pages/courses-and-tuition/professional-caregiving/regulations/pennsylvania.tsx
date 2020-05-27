@@ -28,7 +28,7 @@ const Page: React.FC = () => {
 					<div className="row">
 						<div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-3 mb-md-0">
 							<p className="text-center"><img src={require('../../../../images/fc-regulations-icon-state-regulations.svg')} alt="State Icon" width="60" height="60" /></p>
-							<h2 className="h5 text-center">Regulations by State</h2>
+							<h2 className="h5 text-center">State Requirements</h2>
 							<p>Direct Care Workers are regulated by the state of Pennsylvania, but there is no official training Caregivers must take. Instead, all Caregivers must pass a competency exam to practice in Pennsylvania.</p>
 							<ul>
 								<li>Licensing for Caregivers in Pennsylvania is competency-based.</li>
