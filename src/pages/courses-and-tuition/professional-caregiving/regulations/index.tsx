@@ -21,7 +21,7 @@ const Page: React.FC = () => {
 						<div className="col-12 col-sm-10 col-md-8 col-lg-7">
 							<h1>Professional Caregiver Courses</h1>
 							<h2 className="h5">Do you need a degree to be a professional caregiver?</h2>
-							<p>Considering a fulfilling new career as a professional caregiver? If caring for others and assisting with daily tasks sounds like a career you’d enjoy, there are plenty of opportunities! </p>							
+							<p>Considering a fulfilling new career as a professional caregiver? If caring for others and assisting with daily tasks sounds like a career you’d enjoy, there are plenty of opportunities! </p>
 							<p>Caregiving is one of the fastest growing careers in North America. However, different states have different regulations to protect the safety of you and your clients. Before you begin training for your new career, make sure you understand these regulations!</p>
 						</div>
 					</div>
@@ -81,16 +81,16 @@ const Page: React.FC = () => {
 										</tr>
 									</tbody>
 								</Table>
-							</div>						
-						</div>					
-					</div>					
+							</div>
+						</div>
+					</div>
 				</div>
-				<br />				
+				<br />
 				<div className="container">
 					<div className="col-12 col-lg-12 mb-6 mb-md-0">
 						<p className="font-italic">*There are many terms that refer to caregivers. These include, but are not limited to: Attendant Care Worker, Direct Care Worker, Direct Service Worker, Home Attendant, Home Care Aide, Home Services Worker, In-Home Aide, Personal Care Services Worker, Personal Services Attendant, Personal Support Specialist, and Supportive Home Assistant.</p>
 					</div>
-				</div>	
+				</div>
 			</section>
 
 			<section>
@@ -117,15 +117,15 @@ const Page: React.FC = () => {
 					</div>
 					<div>
 						<Link href="/courses-and-tuition/professional-caregiving/regulations/pennsylvania"><a className="text-info">Pennsylvania</a></Link>
-					</div>				
+					</div>
 					<div>
 						<Link href="/courses-and-tuition/professional-caregiving/regulations/texas"><a className="text-info">Texas</a></Link>
-					</div>			
+					</div>
 				</div>
 			</section>
 
 			<style jsx>{`
-        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../../images/fc-regulations-top-image-caregiver-regulations.jpg')});background-size:cover;background-position:center;}              
+        #heroSection{color:white;background-color:#449;background-image:url(${require('../../../../images/fc-regulations-top-image-caregiver-regulations.jpg')});background-size:cover;background-position:center;}
         section:first-of-type {
           padding-top: 105px;
         }
