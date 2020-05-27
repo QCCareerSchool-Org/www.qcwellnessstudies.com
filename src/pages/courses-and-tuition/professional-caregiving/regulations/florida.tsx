@@ -26,6 +26,8 @@ const Page: React.FC = () => {
 				<div className="container">
 					<div className="row">
 						<div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-3 mb-md-0">
+							<p className="text-center"><img src={require('../../../../images/fc-regulations-icon-state-regulations.svg')} alt="State Icon" width="60" height="60" /></p>
+							<h2 className="h5 text-center">Regulations by State</h2>
 							<p>Florida has two career paths for professional caregivers. They can become Personal Care Aides or Agency-Employed Personal Care Aides.</p>
 							<ul>
 								<li>Personal Care Aides not working through an agency do not need to be licensed in Florida</li>
@@ -33,14 +35,14 @@ const Page: React.FC = () => {
 							</ul>
 						</div>
 						<div className="col-12 col-md-6 col-lg-5">
-						<p className="text-center"><img src={require('../../../../images/fc-regulations-icon-take-this-course.svg')} alt="Take This Course Icon" width="60" height="60" /></p>
-              <h2 className="h5 text-center">Take this course:</h2>
-              <ul>
-                <li>If you would like to begin your career as a Caregiver</li>
-                <li>To receive higher pay in your current caregiving career</li>
-                <li>To complete additional training</li>             
-              </ul>                    
-              <p className="text-center"><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>
+							<p className="text-center"><img src={require('../../../../images/fc-regulations-icon-take-this-course.svg')} alt="Take This Course Icon" width="60" height="60" /></p>
+							<h2 className="h5 text-center">Take this course:</h2>
+							<ul>
+								<li>If you would like to begin your career as a Caregiver</li>
+								<li>To receive higher pay in your current caregiving career</li>
+								<li>To complete additional training</li>
+							</ul>
+							<p className="text-center"><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>
 						</div>
 					</div>
 				</div>
