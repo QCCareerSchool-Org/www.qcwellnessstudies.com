@@ -17,26 +17,20 @@ const Page: React.FC = () => (
     <section id="heroSection">
       <div className="container">
         <h1 className="text-dark text-center">Online Caregiver Courses</h1>
-        <h2 className="text-dark text-center h3">QC has 2 courses to meet your needs</h2>
-        <br />
-        <hr />
+        <h2 className="text-dark text-center h3 mb-5">QC has 2 courses to meet your needs</h2>        <hr />
         <div className="row d-flex align-items-center">
           <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6 mb-lg-0 text-center">
             <p className="lead">PROFESSIONAL CAREGIVER</p>
             <p>Join one of the world’s fastest growing industries! Work for established caregiving agencies or freelance as an independent caregiver.</p>
             <p>This course includes a professional certification!</p>
-            <Link href="/courses-and-tuition/professional-caregiving"><a className="btn btn-secondary">LEARN MORE</a></Link>
-            <br />
-            <br />
+            <Link href="/courses-and-tuition/professional-caregiving"><a className="btn btn-secondary mb-4">LEARN MORE</a></Link>
             <PriceCard courses={['fc']} />
           </div>
           <div className="col-12 col-sm-10 col-md-8 col-lg-6 text-center">
             <p className="lead">PERSONAL CAREGIVER</p>
             <p>Gain the skills you need to safely care for your loved ones at home.</p>
             <p>This course includes a certificate of completion but not a professional certification.</p>
-            <Link href="/courses-and-tuition/personal-caregiving"><a className="btn btn-secondary">LEARN MORE</a></Link>
-            <br />
-            <br />
+            <Link href="/courses-and-tuition/personal-caregiving"><a className="btn btn-secondary mb-4">LEARN MORE</a></Link>
             <PriceCard courses={['ic']} />
           </div>
         </div>
