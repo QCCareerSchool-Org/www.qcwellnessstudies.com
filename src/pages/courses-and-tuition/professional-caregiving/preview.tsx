@@ -65,6 +65,7 @@ const Page: NextPage = () => {
                 <li>Retired individuals who are looking to provide companionship services</li>
                 <li>Professionals already working in the healthcare and/or wellness industries</li>
               </ul>
+              <p><em>Are you looking for training to care for your loved ones at home? QC’s Personal Caregiver course could be for you! <Link href="/courses-and-tuition/personal-caregiving"><a className="text-info">Learn more about Personal Caregiving</a></Link>.</em></p>
             </div>
           </div>
         </div>
