@@ -39,7 +39,7 @@ export const Header: React.FC<Props> = ({ nav }) => {
                   <NavDropdown title="Courses &amp; Tuition" id="coursesDropdown">
                     <Link href="/courses-and-tuition"><a className="dropdown-item">All Courses &amp; Tuition</a></Link>
                     <NavDropdown.Divider />
-                    <Link href="/courses-and-tuition/professional-caregiving"><a className="dropdown-item"><strong>Caregiver</strong>&nbsp;&nbsp;<span className="badge badge-secondary">New</span></a></Link>
+                    <Link href="/caregiver"><a className="dropdown-item"><strong>Caregiver</strong>&nbsp;&nbsp;<span className="badge badge-secondary">New</span></a></Link>
                     <Link href="/courses-and-tuition/sleep-consultant"><a className="dropdown-item">Sleep Consultant</a></Link>
                     <Link href="/courses-and-tuition/skincare-consultant"><a className="dropdown-item">Skincare Consultant</a></Link>
                     <Link href="/courses-and-tuition/aging-in-place"><a className="dropdown-item">Aging in Place</a></Link>
