@@ -16,7 +16,8 @@ const Page: React.FC = () => (
     <section id="heroSection">
       <div className="container">
         <h1 className="text-dark text-center">Online Caregiver Courses</h1>
-        <h2 className="text-dark text-center h3 mb-5">QC has 2 courses to meet your needs</h2>        <hr />
+        <h2 className="text-dark text-center h3 mb-5">QC has 2 courses to meet your needs</h2>
+        <hr />
         <div className="row d-flex align-items-center">
           <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6 mb-lg-0 text-center">
             <p className="lead">PROFESSIONAL CAREGIVER</p>
