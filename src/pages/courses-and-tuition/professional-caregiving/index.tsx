@@ -344,7 +344,7 @@ const Page: React.FC = () => {
 
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
-        <PaymentPlans courses={['fc']} doubleGuarantee={doubleGuarantee} />
+        <PaymentPlans courses={[ 'fc' ]} doubleGuarantee={doubleGuarantee} />
       </section>
 
       <section id="whatSection">
@@ -458,7 +458,7 @@ const Page: React.FC = () => {
           affordable="QC's course is fully online. You don't have to pay surcharges for attending lectures or classroom sessions. You complete the full course from home."
           flexible="No start dates, no deadlines, no mandatory attendance! This course is completely self-directed and self-paced. Get certified quickly or take your time. The choice is yours."
           comprehensive="You're not just learning how one caregiving company wants you do things. You're getting a foundation of knowledge in caregiving that will be useful no matter where you work!"
-          courses={['fc']}
+          courses={[ 'fc' ]}
         />
       </section>
 

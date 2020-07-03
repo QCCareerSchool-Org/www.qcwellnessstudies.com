@@ -32,8 +32,8 @@ const Page: NextPage = () => (
         <div className="row">
           <div className="col-12 mb-5 col-md-6 mb-md-0 col-lg-5 offset-lg-1 mb-5">
             <h3 className="h4 text-dark">Caregiver <span className="badge badge-secondary text sans-serif">NEW</span></h3>
-            <p>Help clients keep their independence by helping with daily activities and tasks. Caregiving is one of the fastest growing industries in the world!</p>
-            <p className="text-uppercase"><Link href="/courses-and-tuition/professional-caregiving"><a className="text-info"><strong>view course</strong></a></Link></p>
+            <p>Help vulnerable people maintain their independence by assisting them with daily activities and tasks. Work as a professional caregiver or care for your loved ones as a personal caregiver.</p>
+            <p className="text-uppercase"><Link href="/caregiver"><a className="text-info"><strong>view courses</strong></a></Link></p>
           </div>
           <div className="col-12 col-md-6 col-lg-5 mb-5">
             <h3 className="h4 text-dark">Sleep Consultant </h3>
