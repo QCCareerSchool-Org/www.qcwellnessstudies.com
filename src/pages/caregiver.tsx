@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
 
-import { PriceCard } from '../components/price-card';
 import { SEO } from '../components/seo';
 import { DefaultLayout } from '../layouts/default';
 
@@ -24,14 +23,12 @@ const Page: React.FC = () => (
             <p>Join one of the world’s fastest growing industries! Work for established caregiving agencies or freelance as an independent caregiver.</p>
             <p>This course includes a professional certification!</p>
             <Link href="/courses-and-tuition/professional-caregiving"><a className="btn btn-secondary mb-4">LEARN MORE</a></Link>
-            <PriceCard courses={['fc']} />
           </div>
           <div className="col-12 col-sm-10 col-md-8 col-lg-6 text-center">
             <p className="lead">PERSONAL CAREGIVER</p>
             <p>Gain the skills you need to safely care for your loved ones at home.</p>
             <p>This course includes a certificate of completion but not a professional certification.</p>
             <Link href="/courses-and-tuition/personal-caregiving"><a className="btn btn-secondary mb-4">LEARN MORE</a></Link>
-            <PriceCard courses={['ic']} />
           </div>
         </div>
         <hr />
