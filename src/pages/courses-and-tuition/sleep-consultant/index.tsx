@@ -304,9 +304,9 @@ const Page: React.FC = () => {
             <div className="col-12 text-center">
             <hr />
               <h2 className="text-dark text-center">LIMITED TIME OFFER</h2>           
-              <p><img className="img-fluid mw-50" src={require('../../../images/promo-save-100.svg')} alt="About QC Wellness Studies" /></p>
+              <p><img className="img-fluid mw-50" src={require('../../../images/promo-save-100.svg')} alt="Promo Save 100" /></p>
               <h2 className="text-dark text-center h3 mb-5">Until August 17th, save an extra $100 on your sleep consultant course tuition. This discount will be automatically applied when you enroll.</h2>
-              <p className="text-center"><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c[]=sl">ENROLL NOW</a></p>
+              <p className="text-center"><a className="btn btn-secondary btn-lg" href="https://enroll.qcwellnessstudies.com/?c[]=sl">ENROLL NOW</a></p>
               <hr />
             </div>
           </div>         
