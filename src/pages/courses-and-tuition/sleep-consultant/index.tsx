@@ -281,9 +281,6 @@ const Page: React.FC = () => {
         canonical="/courses-and-tuition/sleep-consultant"
       />
 
-
-
-
       <section id="heroSection">
         <div className="container">
           <div className="row">
@@ -303,17 +300,18 @@ const Page: React.FC = () => {
 
       <section>
         <div className="container text-light align-items-center"> 
-          <div className="row d-flex align-items-center">
+          <div className="row d-flex align-items-center">          
             <div className="col-12 text-center">
-              <h2 className="text-dark text-center">Limited Time Offer - Save $100</h2>
+            <hr />
+              <h2 className="text-dark text-center">LIMITED TIME OFFER</h2>           
+              <p><img className="img-fluid mw-50" src={require('../../../images/promo-save-100.svg')} alt="About QC Wellness Studies" /></p>
               <h2 className="text-dark text-center h3 mb-5">Until August 17th, save an extra $100 on your sleep consultant course tuition. This discount will be automatically applied when you enroll.</h2>
               <p className="text-center"><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c[]=sl">ENROLL NOW</a></p>
+              <hr />
             </div>
-          </div>
-          <hr />
+          </div>         
         </div>
       </section>
-
 
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
