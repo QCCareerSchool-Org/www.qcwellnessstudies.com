@@ -299,24 +299,24 @@ const Page: React.FC = () => {
       </section>
 
       <section>
-        <div className="container text-light align-items-center"> 
-          <div className="row d-flex align-items-center">          
+        <div className="container text-light align-items-center">
+          <div className="row d-flex align-items-center">      
             <div className="col-12 text-center">
             <hr />
-              <h2 className="text-dark text-center">LIMITED TIME OFFER</h2>           
+              <h2 className="text-dark text-center">LIMITED TIME OFFER</h2>          
               <p><img className="img-fluid mw-50" src={require('../../../images/promo-save-100.svg')} alt="Promo Save 100" /></p>
               <h2 className="text-dark text-center h3 mb-5">Until August 17th, save an extra $100 on your sleep consultant course tuition. This discount will be automatically applied when you enroll.</h2>
               <p className="text-center"><a className="btn btn-secondary btn-lg" href="https://enroll.qcwellnessstudies.com/?c[]=sl">ENROLL NOW</a></p>
               <hr />
             </div>
-          </div>         
+          </div>      
         </div>
       </section>
 
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
-        <PaymentPlans courses={['sl']} doubleGuarantee={doubleGuarantee} />
-      </section>   
+        <PaymentPlans courses={[ 'sl' ]} doubleGuarantee={doubleGuarantee} />
+      </section>
 
       <section id="whatSection">
         <div className="container">
@@ -330,7 +330,7 @@ const Page: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>   
+      </section>
 
       <section id="requirementsSection" className="bg-dark text-light">
         <div className="container">
@@ -400,7 +400,7 @@ const Page: React.FC = () => {
           affordable="Since QC's course is fully online, you don't have to pay surcharges for attending lectures or webinars. You complete the full course from home."
           flexible="No start dates, no deadlines, no mandatory webinars! This course is completely self-directed and self-paced. Get certified quickly, or take your time."
           comprehensive="You won't just learn one proprietary method of sleep coaching. You'll learn every method of sleep consulting, so that you can offer the best service!"
-          courses={['sl']}
+          courses={[ 'sl' ]}
         />
       </section>
 
