@@ -298,6 +298,15 @@ const Page: React.FC = () => {
         </div>
       </section>
 
+      <section>
+        <div className="container text-dark text-center">
+           <h2>LIMITED TIME OFFER</h2>
+           <p><img className="img-fluid" src={require('../../../images/promo-save-100.svg')} alt="Promo Save 100" /></p>
+           <p className="lead mb-5">Until August 19th, save an extra $100 on your sleep consultant course tuition. This discount will be automatically applied when you enroll.</p>
+           <p><a className="btn btn-secondary btn-lg" href="https://enroll.qcwellnessstudies.com/?c[]=sl">ENROLL NOW</a></p>
+        </div>        
+      </section>
+
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
         <PaymentPlans courses={[ 'sl' ]} doubleGuarantee={doubleGuarantee} />
