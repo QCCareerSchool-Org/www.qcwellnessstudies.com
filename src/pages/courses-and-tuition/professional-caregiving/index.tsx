@@ -342,7 +342,7 @@ const Page: React.FC = () => {
         </div>
       </section>
 
-     
+      <a className="anchor" id="promo"></a>
       <section>
         <div className="container text-dark text-center">
            <h2>LIMITED TIME OFFER</h2>
