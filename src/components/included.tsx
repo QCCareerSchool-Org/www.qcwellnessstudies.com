@@ -1,5 +1,6 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import { IoMdBook, IoMdDocument, IoMdPeople, IoMdTimer, IoMdSchool } from 'react-icons/io';
+import { IoMdBook, IoMdDocument, IoMdPeople, IoMdSchool, IoMdTimer } from 'react-icons/io';
 
 interface Props {
   certification: string;
@@ -9,7 +10,7 @@ export const Included: React.FC<Props> = ({ certification }) => (
   <div className="container">
     <div className="row">
       <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">
-        <h2>Included In Your Course</h2>
+        <h2>Included in Your Course</h2>
         <p><IoMdBook size={40} /></p>
         <h3>Newest Course Materials</h3>
         <p>You’ll have online access to all your course books and guides, which are regularly updated with the newest and most up-to-date content!</p>
@@ -29,3 +30,7 @@ export const Included: React.FC<Props> = ({ certification }) => (
     </div>
   </div>
 );
+
+Included.propTypes = {
+  certification: PropTypes.string.isRequired,
+};
