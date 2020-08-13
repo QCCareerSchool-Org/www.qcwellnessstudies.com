@@ -2,25 +2,25 @@
  * Returns whether the country is a country with a +44 country dialing code. E.g., United Kingdom
  * @param countryCode the two-letter iso-3166-1 alpha-2 country code
  */
-export const isCallingCode44 = (countryCode: string) => [ 'GB', 'IM', 'GG', 'JE' ].indexOf(countryCode) !== -1;
+export const isCallingCode44 = (countryCode: string): boolean => [ 'GB', 'IM', 'GG', 'JE' ].indexOf(countryCode) !== -1;
 
 /**
  * Returns whether the country is a country with a +61 country dialing code. E.g., Australia
  * @param countryCode the two-letter iso-3166-1 alpha-2 country code
  */
-export const isCallingCode61 = (countryCode: string) => [ 'AU', 'CX', 'CC' ].indexOf(countryCode) !== -1;
+export const isCallingCode61 = (countryCode: string): boolean => [ 'AU', 'CX', 'CC' ].indexOf(countryCode) !== -1;
 
 /**
  * Returns whether the country is a country with a +64 country dialing code. E.g., New Zealand
  * @param countryCode the two-letter iso-3166-1 alpha-2 country code
  */
-export const isCallingCode64 = (countryCode: string) => [ 'NZ', 'PN' ].indexOf(countryCode) !== -1;
+export const isCallingCode64 = (countryCode: string): boolean => [ 'NZ', 'PN' ].indexOf(countryCode) !== -1;
 
 /**
  * Returns whether the country is a country with a +1 country dialing code. E.g., Canada, United States, Jamaica
  * @param countryCode the two-letter iso-3166-1 alpha-2 country code
  */
-export const isCallingCode1 = (countryCode: string) => [ 'CA', 'US', 'AG', 'AI', 'AS', 'BB', 'BM', 'BS', 'DM', 'DO', 'GD', 'GU', 'JM', 'KN', 'KY', 'LC', 'MP', 'MS', 'PR', 'SX', 'TC', 'TT', 'VC', 'VG', 'VI', 'UM' ].indexOf(countryCode) !== -1;
+export const isCallingCode1 = (countryCode: string): boolean => [ 'CA', 'US', 'AG', 'AI', 'AS', 'BB', 'BM', 'BS', 'DM', 'DO', 'GD', 'GU', 'JM', 'KN', 'KY', 'LC', 'MP', 'MS', 'PR', 'SX', 'TC', 'TT', 'VC', 'VG', 'VI', 'UM' ].indexOf(countryCode) !== -1;
 
 /**
  * Returns the country dialing code for a particular country. Only supports +1, +44, +61, and +64.
@@ -120,7 +120,7 @@ export const getAddress = (countryCode: string): string[] => {
  * Creates a query string from an object
  * @param params the query string values
  */
-export function getQueryString(params: any) {
+export function getQueryString(params: any): string {
   return Object.keys(params).map(k => {
     if (Array.isArray(params[k])) {
       return params[k].map((val: any) => `${encodeURIComponent(k)}[]=${encodeURIComponent(val)}`).join('&');
@@ -129,7 +129,7 @@ export function getQueryString(params: any) {
   }).join('&');
 }
 
-export function nl2br(str?: string | null, xhtml?: boolean) {
+export function nl2br(str?: string | null, xhtml?: boolean): string {
   if (typeof str === 'undefined' || str === null) {
     return '';
   }
@@ -141,7 +141,7 @@ export function needsProvince(countryCode: string): boolean {
   return [ 'CA', 'US', 'AU' ].includes(countryCode);
 }
 
-export const formatPrice = (value?: number, precision: number = 2): string => {
+export const formatPrice = (value?: number, precision = 2): string => {
   if (typeof value === 'undefined') {
     return '';
   }
