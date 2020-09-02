@@ -346,8 +346,8 @@ const Page: React.FC = () => {
       <section>
         <div className="container text-dark text-center">
            <h2>LIMITED TIME OFFER</h2>
-           <p><img className="img-fluid" src={require('../../../images/promo-save-100.svg')} alt="Promo Save $100" /></p>
-           <p className="lead mb-5">Until August 31st, save an extra $100 on your professional caregiver course tuition. This discount will be automatically applied when you enroll.</p>
+           <p><img className="img-fluid" src={require('../../../images/promo-inlay.png')} alt="Promo Save $100" /></p>
+           <p className="lead mb-5">Until September 18th, save an extra $100 on your professional caregiver course tuition. This discount will be automatically applied when you enroll.</p>
            <p><a className="btn btn-secondary btn-lg" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>
         </div>        
       </section>
