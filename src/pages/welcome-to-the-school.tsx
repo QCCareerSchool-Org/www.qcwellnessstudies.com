@@ -42,7 +42,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
             <div className="col-12 col-sm-10 col-md-8 col-lg-8">
               <h1 className="text-dark">Thank You for Enrolling with QC Wellness Studies!</h1>
               <p>Your enrollment has been received and will be processed quickly. You will receive an email within the next business day containing login information to your online student center. If you don't see an email from us, please check your spam folder.</p>
-              <p>If you have any questions regarding the course, or if you want to discuss your goals, our friendly and knowledgeable student support advisors are available 7 days a week by email at <a href="mailto:info@qcwellnessstudies.com">info@qcwellnessstudies.com</a> or by phone at <TelephoneNumber/>. We would be delighted to speak with you and assist you in any way we can. We hope your learning experience with us will be enjoyable, interesting, and valuable.</p>
+              <p>If you have any questions regarding the course, or if you want to discuss your goals, our friendly and knowledgeable student support advisors are available 7 days a week by email at <a href="mailto:info@qcwellnessstudies.com">info@qcwellnessstudies.com</a> or by phone at <TelephoneNumber />. We would be delighted to speak with you and assist you in any way we can. We hope your learning experience with us will be enjoyable, interesting, and valuable.</p>
               <p className="lead">Remember, we want to develop a personal relationship with you and be readily available for you whenever you need us.</p>
               <p className="text-dark"><strong>Best of luck with your studies!</strong></p>
               <p className="lead">Sincerely,</p>
@@ -173,16 +173,28 @@ Page.getInitialProps = async ({ res, query }): Promise<Props> => {
       headers: { 'X-API-Version': '2' },
     });
     if (!response.ok) {
-      console.log(response.statusText);
       throw new HttpStatus.HttpResponse(response.status, response.statusText);
     }
     const enrollment: Enrollment = await response.json();
     if (!enrollment.complete || !enrollment.success) {
       throw new HttpStatus.NotFound();
     }
+    if (!enrollment.emailed) {
+      try {
+        fetch(`https://api.qccareerschool.com/enrollments/${query.enrollmentId}/email`, {
+          method: 'post',
+          headers: {
+            'X-API-Version': '2',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ code: query.code }),
+        });
+      } catch (err) {
+        //
+      }
+    }
     return { enrollment };
   } catch (err) {
-    console.log(err);
     const errorCode = typeof err.statusCode === 'undefined' ? 500 : err.statusCode;
     if (res) {
       res.statusCode = errorCode;
