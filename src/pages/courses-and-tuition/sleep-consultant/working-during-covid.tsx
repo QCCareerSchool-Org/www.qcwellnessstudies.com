@@ -19,16 +19,7 @@ const Page: React.FC = () => (
           <div className="col-12 col-sm-10 col-md-8 col-lg-6">
             <h1 className="text-light">Learning &amp; Working as a Sleep Consultant During COVID-19</h1>
             <p className="text-light">See how you can earn your certification and run your very sleep consulting business safely during COVID-19!</p>
-            <p className="text-light">Learn from the safety of home with QC’s online courses.</p>
-            <div className="card">
-              <div className="card-body">
-                <table>
-                  <tr><td className="text-right pr-2">Website:</td><td><a target="_blank" rel="noopener noreferrer" href="https://www.pashionateaboutsleep.com/">Pashionate About Sleep</a></td></tr>
-                  <tr><td className="text-right pr-2">Facebook:</td><td><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Sarahpashniak/">@Sarahpashniak</a></td></tr>
-                  <tr><td className="text-right pr-2">Instagram:</td><td><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/pashionateaboutsleep/">@pashionateaboutsleep</a></td></tr>
-                </table>
-              </div>
-            </div>
+            <p className="text-light">Learn from the safety of home with QC’s online courses.</p>            
           </div>
         </div>
       </div>
