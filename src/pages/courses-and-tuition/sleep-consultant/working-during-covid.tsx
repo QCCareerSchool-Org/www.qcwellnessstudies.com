@@ -8,9 +8,9 @@ const Page: React.FC = () => (
     <DefaultLayout>
 
         <SEO
-            title="Student Feature - Sarah Pashniak"
-            description="QC graduate, Sarah Pashniak, discusses her sleep consultant journey, her passion about sleep, how QC fine-tuned her skills as a professional, and more!"
-            canonical="/student-feature"
+            title="Learning &amp; Working as a Sleep Consultant During COVID-19"
+            description="See how you can earn your certification and run your very sleep consulting business safely during COVID-19!"
+            canonical="/courses-and-tuition/sleep-consultant/working-during-covid"
         />
 
         <section id="heroSection">
