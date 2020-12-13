@@ -15,7 +15,7 @@ const Page: React.FC = () => (
         <section id="heroSection">
             <div className="container">
                 <div className="row">
-                    <div className="col-12 col-sm-10 col-md-8 col-lg-8 offset-4 sm-offset-0">
+                    <div className="col-12 col-sm-10 col-md-8 col-lg-8 offset-lg-4">
                         <div className="card">
                             <div className="card-body">
                                 <h1 className="h2">Learning &amp; Working as a Sleep Consultant During COVID-19</h1>
