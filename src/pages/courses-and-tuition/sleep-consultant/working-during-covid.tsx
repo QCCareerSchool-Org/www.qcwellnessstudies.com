@@ -31,7 +31,7 @@ const Page: React.FC = () => (
         <section>
             <div className="container">
                 <div className="row">
-                    <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-12">
+                    <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-8">
                         <h2 className="h3">How QC Sets You Up to Succeed</h2>
                         <ul>
                             <li>Study from the comfort of home with a fully online course</li>
@@ -44,25 +44,26 @@ const Page: React.FC = () => (
                         </ul>
                         <p><a href="/courses-and-tuition/sleep-consultant">Learn more about QC Wellness Studies' Sleep Consultant Course!</a></p>
                     </div>
-                </div>      
+                </div>
                 <div className="row">
-                    <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-12">
+                    <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-8">
                         <p><img className="img-fluid" src={require('../../../images/sleep-consultant-home-office.jpg')} alt="Sleep Consultant Home Office" /></p>
                     </div>
                 </div>
+
                 <div className="row">
-                    <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-12">
-                        <h2 className="h3">*****</h2>
-                        <p>“The Sleep Consultant Course divides the learning into easy-to-digest portions. The assignments effectively reflect the information taught in each section, and there’s a variety of different types of assignments to test and apply your knowledge. I had a wonderful experience as a student at QC Wellness School! My favorite thing about my program was the quick feedback from my instructor. I enjoyed that it was always provided to me in a detailed audio message. It felt so personal!”</p>
-                        <p>-Sarah Pashniak, ISCP™</p>
-                        <p>QC Graduate</p>
-                        <p>Learn more about Sarah’s experience with QC’s Sleep Consultant Course <a href="/student-features">here</a></p>
+                    <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-8">
+                        <h2 className="h3">Reviews &amp; Testimonials</h2>                  
+                        <p className="lead font-italic">“The Sleep Consultant Course divides the learning into easy-to-digest portions. The assignments effectively reflect the information taught in each section, and there’s a variety of different types of assignments to test and apply your knowledge. I had a wonderful experience as a student at QC Wellness School! My favorite thing about my program was the quick feedback from my instructor. I enjoyed that it was always provided to me in a detailed audio message. It felt so personal!”</p>
+                        <p className="lead font-italic">-Sarah Pashniak, ISCP™</p>
+                        <p className="lead font-italic">QC Graduate</p>
+                        <p className="lead font-italic">Learn more about Sarah’s experience with QC’s Sleep Consultant Course <a href="/student-features">here</a></p>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-12">
+                    <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-8">
                         <h2 className="h3">You Can Still Earn an Income for Your Sleep Consultant Business During COVID-19</h2>
-                        <p className="lead">Continue to book clients and make a profit by adding any of the following services to your business:</p>
+                        <p>Continue to book clients and make a profit by adding any of the following services to your business:</p>
                         <ul>
                             <li>Introduce virtual services to your business, such as virtual sleep consultations</li>
                             <li>When it’s safe to meet with clients in-person, insist that everyone wear a mask</li>
@@ -73,15 +74,15 @@ const Page: React.FC = () => (
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-12">
+                    <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-8">
                         <p><img className="img-fluid" src={require('../../../images/baby-girl-sleeping.jpg')} alt="Baby Girl Sleeping" /></p>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-12">
+                    <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-8">
                         <h2 className="h3">Tips for Keeping Yourself and Clients Safe</h2>
-                        <p className="lead">When working with clients and their infants in person, you should follow strict practices to keep everyone safe.</p>
-                        <p className="lead">COVID-19 Safety Protocols for Sleep Consultants:</p>
+                        <p>When working with clients and their infants in person, you should follow strict practices to keep everyone safe.</p>
+                        <p>COVID-19 Safety Protocols for Sleep Consultants:</p>
                         <ul>
                             <li>Reschedule or cancel appointments if you, your client, or anyone in their household is feeling ill or has been exposed to someone who has tested positive for COVID-19</li>
                             <li>Insist that clients (and if applicable, their children) wear masks during all in-person appointments</li>
@@ -96,20 +97,20 @@ const Page: React.FC = () => (
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-12">
+                    <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-8">
                         <p><img className="img-fluid" src={require('../../../images/little-boy-medical-mask.jpg')} alt="Little boy with a mask" /></p>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-12 mb-lg-0">
                         <h2 className="h3">Start Your Journey</h2>
-                        <p className="lead">It’s never too early or too late to begin a career you’ll love.</p>
-                        <p className="lead">Enroll in QC’s Sleep Consultant Course today and launch a successful career in as little as 3-6 months!</p>
+                        <p>It’s never too early or too late to begin a career you’ll love.</p>
+                        <p>Enroll in QC’s Sleep Consultant Course today and launch a successful career in as little as 3-6 months!</p>
                         <a href="https://enroll.qcwellnessstudies.com/" className="btn btn-secondary btn-lg mt-4">ENROLL NOW</a>
                     </div>
-                </div>              
+                </div>
             </div>
-        </section>       
+        </section>
 
         <style jsx>{`       
       #heroSection{background-image:url(${require('../../../images/sleep-consultant-remote-work.jpg')});background-size:cover;background-position:center}
