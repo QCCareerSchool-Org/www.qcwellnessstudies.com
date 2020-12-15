@@ -8,7 +8,7 @@ const Page: React.FC = () => (
 
         <SEO
             title="Learning &amp; Working as a Sleep Consultant During COVID-19"
-            description="See how you can earn your certification and run your very sleep consulting business safely during COVID-19!"
+            description="See how you can earn your certification and run your very own sleep consulting business safely during COVID-19"
             canonical="/courses-and-tuition/sleep-consultant/working-during-covid"
         />
 
@@ -19,7 +19,7 @@ const Page: React.FC = () => (
                         <div className="card">
                             <div className="card-body">
                                 <h1 className="h2">Learning &amp; Working as a Sleep Consultant During COVID-19</h1>
-                                <p className="lead">See how you can earn your certification and run your very sleep consulting business safely during COVID-19!</p>
+                                <p className="lead">See how you can earn your certification and run your very own sleep consulting business safely during COVID-19</p>
                                 <p className="lead">Learn from the safety of home with QC’s online courses.</p>
                             </div>
                         </div>
