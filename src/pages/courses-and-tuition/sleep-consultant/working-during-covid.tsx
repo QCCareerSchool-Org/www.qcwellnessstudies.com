@@ -120,8 +120,7 @@ const Page: React.FC = () => (
 
         <style jsx>{`       
       #enrollSection{background-image: url(${require('../../../images/bg-enrollment.jpg')});background-size: cover;}
-      #heroSection{background-image:url(${require('../../../images/sleep-consultant-remote-work.jpg')});background-size:cover;background-position:center}
-      .course-icon{width:80px}
+      #heroSection{background-image:url(${require('../../../images/sleep-consultant-remote-work.jpg')});background-size:cover;background-position:center} 
     `}</style>
 
     </DefaultLayout>
