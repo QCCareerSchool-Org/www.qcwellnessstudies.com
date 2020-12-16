@@ -11,6 +11,7 @@ const Page: React.FC = () => (
             title="Learning &amp; Working as a Sleep Consultant During COVID-19"
             description="See how you can earn your certification and run your very own sleep consulting business safely during COVID-19"
             canonical="/courses-and-tuition/sleep-consultant/working-during-covid"
+            image="../../../images/bg-enrollment.jpg"
         />
 
         <section id="heroSection">
