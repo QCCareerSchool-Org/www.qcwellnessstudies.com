@@ -42,7 +42,7 @@ const Page: React.FC = () => (
             </div>
         </section>
 
-        <section>
+        <section id="whySection">
             <div className="container">
                 <div className="row">
                     <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6">
@@ -104,7 +104,8 @@ const Page: React.FC = () => (
             </div>
         </section>
 
-        <style jsx>{`       
+        <style jsx>{`
+      #whySection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}       
       #enrollSection{background-image: url(${require('../../../images/bg-enrollment.jpg')});background-size: cover;}
       #heroSection{background-image:url(${require('../../../images/cute-baby-boy-hero.jpg')});background-size:cover;background-position:center} 
     `}</style>
