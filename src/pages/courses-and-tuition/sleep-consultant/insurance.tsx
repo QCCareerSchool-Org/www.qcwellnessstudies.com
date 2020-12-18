@@ -20,12 +20,10 @@ const Page: React.FC = () => (
         <section id="heroSection">
             <div className="container">
                 <div className="row">
-                    <div className="col-12 col-sm-10 col-md-8 col-lg-8 offset-lg-4">
+                    <div className="col-12 col-sm-10 col-md-8 col-lg-8">
                         <div className="card">
                             <div className="card-body">
-                                <h1 className="h2">Learning &amp; Working as a Sleep Consultant During COVID-19</h1>
-                                <p className="lead">See how you can earn your certification and run your very own sleep consulting business safely during COVID-19</p>
-                                <p className="lead">Learn from the safety of home with QC’s online courses.</p>
+                                <h1 className="h2">The Different Types of Insurance Recommended for Sleep Consultants</h1>                              
                             </div>
                         </div>
                     </div>
@@ -36,37 +34,11 @@ const Page: React.FC = () => (
         <section>
             <div className="container">
                 <div className="row">
-                    <div className="col-12 col-sm-10 col-md-8 col-lg-7">
-                        <h2 className="h3">How QC Sets You Up to Succeed</h2>
-                        <ul>
-                            <li>Study from the comfort of home with a fully online course</li>
-                            <li>Receive virtual one-on-one support from your tutor</li>
-                            <li>Reach out to the Student Support Team 7 days a week for assistance</li>
-                            <li>Access your course materials any time in the online student center</li>
-                            <li>Choose from flexible, affordable tuition payment options</li>
-                            <li>Get up to 2 full years to complete your course</li>
-                            <li>Become a certified Infant Sleep Consulting Professional (ISCP™) upon successful completion of the course</li>
-                        </ul>
-                        <p className="lead"><a href="/courses-and-tuition/sleep-consultant">Learn more about QC Wellness Studies' Sleep Consultant Course!</a>                       
-                        </p>
-                    </div>
-                    <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-5">
-                        <p><img className="img-fluid" src={require('../../../images/sleep-consultant-home-office.jpg')} alt="Sleep Consultant Home Office" /></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="enrollSection" className="text-light text-center">
-            <div className="container">
-                <div className="row">
-                    <div className="col-12 col-sm-10 col-md-8 col-lg-12 text-center">
-                        <h2 className="h3">Reviews &amp; Testimonials</h2>
-                        <p className="lead font-italic">“The Sleep Consultant Course divides the learning into easy-to-digest portions. The assignments effectively reflect the information taught in each section, and there’s a variety of different types of assignments to test and apply your knowledge. I had a wonderful experience as a student at QC Wellness School! My favorite thing about my program was the quick feedback from my instructor. I enjoyed that it was always provided to me in a detailed audio message. It felt so personal!”</p>
-                        <p className="lead font-italic">-Sarah Pashniak, ISCP™</p>
-                        <p className="lead font-italic">QC Graduate</p>
-                        <p className="lead font-italic">Learn more about Sarah’s experience with QC’s Sleep Consultant Course <a href="/student-features">here</a></p>
-                    </div>
+                    <div className="col-12 col-sm-10 col-md-8 col-lg-12">
+                        <h2 className="h3">Sleep consulting can be an incredibly rewarding career. To many parents, your advice will be life-changing; to them, you’re a superhero!</h2>
+                        <p>People become sleep consultants for different reasons. You may choose to train to be a sleep consultant so that you can help parents and parents-to-be better adjust to changes in their life. You may be a parent yourself, looking for ways to help your children sleep better at night. You may just have a calling for helping others. Regardless of why you’re interested in becoming a sleep consultant, there’s a major perk to the job: the potential to start your own business.</p>
+                        <p>Before you begin your exciting new career, you’ll have a lot to think about and plan for. One consideration that may be overlooked at first is insurance. While some types of insurance are optional, there are certain types of insurance that are strongly recommended to operate a sleep consulting business. Before you set out on your sleep consultant journey, read up about the types of insurance you should consider for your business!</p>             
+                    </div>                 
                 </div>
             </div>
         </section>
@@ -75,43 +47,54 @@ const Page: React.FC = () => (
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-                        <h2 className="h3">You Can Still Earn an Income for Your Sleep Consultant Business During COVID-19</h2>
-                        <p>Continue to book clients and make a profit by adding any of the following services to your business:</p>
-                        <ul>
-                            <li>Introduce virtual services to your business, such as virtual sleep consultations</li>
-                            <li>When it’s safe to meet with clients in-person, insist that everyone wear a mask</li>
-                            <li>Start your own sleep consulting blog or write as a subject-matter expert for other blogs/publications</li>
-                            <li>Become an authority on infant sleep consulting on social media</li>
-                            <li>Teach clients about sleep training through virtual classes (i.e. one-on-one, group classes, etc.)</li>
-                        </ul>
-                    </div>
-                    <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-                        <p><img className="img-fluid" src={require('../../../images/baby-girl-sleeping.jpg')} alt="Sleep Consultant Home Office" /></p>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-12 col-sm-10 col-md-8 col-lg-6 order-lg-2">
-                        <h2 className="h3">Tips for Keeping Yourself and Clients Safe</h2>
-                        <p>When working with clients and their infants in person, you should follow strict practices to keep everyone safe.</p>
-                        <p>COVID-19 Safety Protocols for Sleep Consultants:</p>
-                        <ul>
-                            <li>Reschedule or cancel appointments if you, your client, or anyone in their household is feeling ill or has been exposed to someone who has tested positive for COVID-19</li>
-                            <li>Insist that clients (and if applicable, their children) wear masks during all in-person appointments</li>
-                            <li>Maintain a distance of at least 6 feet during appointments</li>
-                            <li>Socially distance when not working and enforce a maximum occupancy limit</li>
-                            <li>Offer your services online whenever possible</li>
-                            <li>Wash your hands before and after working with a client or touching communal surfaces</li>
-                            <li>Work in a clean, sanitized space</li>
-                            <li>Encourage the client to prepare a sanitized space for the meeting to take place in, if meeting within their own home</li>
-                            <li>Receive the proper COVID-19 vaccine(s), once publicly available</li>
-                        </ul>
+                        <h2 className="h3">Why Do You Need Insurance as a Sleep Consultant?</h2>
+                        <p>Insurance will protect the physical parts of your business, such as your office, computer and car, as well as the services you provide, like your consulting advice. The sleep consulting industry isn’t governed by a professional body, which means that you don’t need specific types of insurance in order to be a licensed sleep consultant. Sleep consultants should then make their own decisions about what types of insurance they purchase. You should always consult an insurance broker before making a final decision on purchasing insurance, and deciding which types of insurance are best for you and your business.</p>
+                        <p>You may think that because there isn’t a governing body regulating the sleep consulting industry, you don’t need any insurance at all. However, since you’ll be working directly with very young children and families, it’s always a good idea to protect yourself against potential lawsuits or other challenges that could occur over the course of your career.</p>             
                     </div>
                     <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6">
-                        <p><img className="img-fluid" src={require('../../../images/little-boy-medical-mask.jpg')} alt="Sleep Consultant Home Office" /></p>
+                        <p><img className="img-fluid" src={require('../../../images/yawning-baby-girl.jpg')} alt="Yawning Baby Girl" /></p>
+                    </div>            
+                    <div className="col-12 col-sm-10 col-md-8 col-lg-6 order-lg-6">
+                        <h2 className="h3">What Could Happen Without Insurance?</h2>
+                        <p>Not having insurance leaves you vulnerable to having to pay out of pocket for large, unexpected expenses. Say, for example, that as you’re driving to a client’s home for a consultation, you’re rear-ended by another car. If you don’t have business car insurance, you may have to pay for the repairs out of your own pocket, even though you weren’t at fault.</p>
+                        <p>In a worst-case scenario, forgoing insurance could mean that your business is forced to close if you’re sued by a client. If the amount of damages the client is seeking is more than what your business is worth, your business may be forced to file for bankruptcy and you may not be able to continue practicing as a sleep consultant. If you have liability insurance, you’d be in a better position to defend yourself in the suit, as at least some of your legal fees should be covered by the insurance.</p>             
                     </div>
+                    <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6">
+                        <p><img className="img-fluid" src={require('../../../images/close-handshake.jpg')} alt="Closed handshake" /></p>
+                    </div>         
                 </div>
             </div>
         </section>
+
+        <section>
+            <div className="container">
+                <div className="row">
+                    <div className="col-12 col-sm-10 col-md-8 col-lg-12 text-center">
+                        <h2 className="h3">Types of Insurance Recommended for Sleep Consultants</h2>
+                        <p>You’ll explore different types of insurance when you begin your business as a sleep consultant. Remember that you should always consult an insurance broker and investigate the local laws and regulations that may be in place in your area before making any final decisions regarding insurance.</p>
+                        <p>If you already know you’re interested in covering yourself as much as possible, here are a few insurance policies you should consider.</p>             
+                    </div>        
+                    <div className="col-12 col-sm-10 col-md-8 col-lg-4">
+                        <h2 className="h3">Public and Professional Liability Insurance</h2>
+                        <p>Public and professional liability insurance was created specifically for business owners, which makes it broader in scope than personal liability. You’ll be covered if you are accused of doing something to a client, such as causing an injury, damaging property, or putting your client in danger. All physical aspects of your business will be protected during a related consultant. Your legal expenses as well as defense and settlements outside of court can be covered with public and professional liability insurance.</p>                                
+                    </div>               
+                    <div className="col-12 col-sm-10 col-md-8 col-lg-4">
+                        <h2 className="h3">Professional Indemnity Insurance</h2>
+                        <p>Often overlooked, professional indemnity insurance protects you if someone is dissatisfied with your advice and decides to file a lawsuit. For example, if a client’s baby doesn’t take to your sleep consulting advice, your client can try to sue you for damages. Since no physical harm was done to the client, your legal fees would only be covered by indemnity insurance.</p>                                
+                    </div>               
+                    <div className="col-12 col-sm-10 col-md-8 col-lg-4">
+                        <h2 className="h3">Specialized Insurance</h2>
+                        <p>You may be offered specific insurance packages that seem to cover everything you need in a business. These packages could be sold as “coaching insurance,” “consulting insurance,” or similar. While these packages can work for you and your business, they may come at a higher cost than other types of insurance. They may not also be as complete as you think they are – many packages don’t include professional indemnity insurance, for example. Always read the fine print of your insurance policy to determine exactly what is and isn’t covered.</p>                                
+                    </div>                
+                    <div className="col-12 col-sm-10 col-md-8 col-lg-12 text-center">
+                        <h2 className="h3">Other Types of Insurance</h2>
+                        <p>Depending on how you run your business, you may be interested in exploring other types of insurance. For example, if you’re running your sleep consulting business from your home you should check your home or mortgage insurance to see what is or isn’t covered. If you’re going to be using your car to travel to clients’ houses, you should check with your auto insurance provider to make sure you’re still covered even when you’re using your car for business.</p>
+                        <p>As a small business owner, you may consider self-employment insurance if sleep consulting is your primary form of employment. This will protect you in the case of serious illness or injury. If you’re not able to work for any length of time, self-employment insurance can cover some of your income and loan repayments, such as mortgage payments or a small business loan repayment.</p>  
+                        <p>Any business needs insurance, but when you’re working with families and children as a sleep consultant it’s usually a good idea to look into many different types of insurance. When you start out as a sleep consultant, you may feel overwhelmed by all of the decisions you’ll have to make, and insurance will almost definitely be one of those decisions. But taking a moment to carefully consider your options and make the best choice for your own business will go a long way in making your business stay the course and continue for years to come!</p> 
+                    </div>                 
+                </div>
+            </div>
+        </section>        
 
         <section id="enrollSection" className="text-light text-center">
             <div className="container">
@@ -124,7 +107,7 @@ const Page: React.FC = () => (
 
         <style jsx>{`       
       #enrollSection{background-image: url(${require('../../../images/bg-enrollment.jpg')});background-size: cover;}
-      #heroSection{background-image:url(${require('../../../images/sleep-consultant-remote-work.jpg')});background-size:cover;background-position:center} 
+      #heroSection{background-image:url(${require('../../../images/cute-baby-boy.jpg')});background-size:cover;background-position:center} 
     `}</style>
 
     </DefaultLayout>
