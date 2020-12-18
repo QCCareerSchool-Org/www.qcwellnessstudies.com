@@ -8,12 +8,12 @@ const Page: React.FC = () => (
     <DefaultLayout>
 
         <SEO
-            title="Learning &amp; Working as a Sleep Consultant During COVID-19"
-            description="See how you can earn your certification and run your very own sleep consulting business safely during COVID-19"
-            canonical="/courses-and-tuition/sleep-consultant/working-during-covid"
+            title="The Different Types of Insurance Recommended for Sleep Consultants"
+            description="Learn about the different types of insurance recommended for sleep consultants"
+            canonical="/courses-and-tuition/sleep-consultant/insurance"
             image={{
-                src: require('../../../images/sleep-consultant-remote-work.jpg'),
-                alt: 'sleep consultant working remotely',
+                src: require('../../../images/cute-baby-boy.jpg'),
+                alt: 'cute baby boy',
               }}
         />
 
