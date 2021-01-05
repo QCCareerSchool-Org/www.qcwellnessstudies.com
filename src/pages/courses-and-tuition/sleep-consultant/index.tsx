@@ -272,6 +272,7 @@ const Page: React.FC = () => {
           { name: 'Tuition', url: '#paymentPlans' },
           { name: 'Course Outline', url: '#outline' },
           { name: 'Tutors', url: '#tutors' },
+          { name: 'Working During Covid-19', url: '#working' },
         ]}
       />
     )}>
@@ -393,6 +394,7 @@ const Page: React.FC = () => {
         </div>
       </section>
 
+      <a className="anchor" id="working"></a>
       <section id="workingSection">
         <div className="row">
           <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">

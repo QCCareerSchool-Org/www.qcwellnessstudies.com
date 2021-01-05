@@ -32,6 +32,7 @@ const Page: NextPage = () => {
           { name: 'Tuition', url: '#tuition' },
           { name: 'Support', url: '#support' },
           { name: 'Guarantee', url: '#guarantee' },
+          { name: 'Working During Covid-19', url: '#working' },
         ]}
       />
     )}>
@@ -104,6 +105,7 @@ const Page: NextPage = () => {
         />
       </section>
 
+      <a className="anchor" id="working"></a>
       <section id="workingSection">
         <div className="row">
           <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
