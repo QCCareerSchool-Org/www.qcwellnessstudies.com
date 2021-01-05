@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 import { Certification } from '../../../components/certification';
@@ -491,6 +492,19 @@ const Page: React.FC = () => {
               <p><img className="img-fluid" src={require('../../../images/tutor-elisa.jpg')} alt="Eliza Constanza" /></p>
               <h3 className="text-dark">Elisa Constanza</h3>
               <p>Elisa has over 15 years of experience working with children and their parents. As an early childhood educator and child sleep consultant, she understands how healthy sleep is paramount to healthy development of the child. As a sleep consultant, she offers both in-person consultations as well as virtual consultations over the phone or Skype. Use her mentorship to help build your ideal sleep consulting business!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="row">
+          <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+            <div className="container text-dark text-center">
+            <h2 className="text-dark text-center">Learning &amp; Working During Covid-19</h2>              
+              <p className="lead">See how you can earn your certification and run your very own sleep consulting business safely during COVID-19</p>
+              <p className="lead mb-4">Learn from the safety of home with QC’s online courses.</p>          
+              <Link href="/courses-and-tuition/sleep-consultant/working-during-covid"><a className="btn btn-lg btn-secondary mt-3 mb-3">Learn More</a></Link>
             </div>
           </div>
         </div>
