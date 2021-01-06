@@ -113,7 +113,7 @@ const Page: NextPage = () => {
             <h2 className="text-dark text-center">Learning &amp; Working During Covid-19</h2>              
               <p className="lead">See how you can earn your certification and run your very own sleep consulting business safely during COVID-19.</p>
               <p className="lead mb-4">Learn from the safety of home with QC’s online courses.</p>          
-              <Link href="/courses-and-tuition/sleep-consultant/working-during-covid"><a className="btn btn-lg btn-secondary mt-3 mb-3">Learn More</a></Link>
+              <Link href="/courses-and-tuition/sleep-consultant/working-during-covid"><a className="btn btn-secondary" rel="noopener noreferrer" target="_blank">LEARN MORE</a></Link>
             </div>
           </div>
         </div>
