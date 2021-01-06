@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 import { Certification } from '../../../components/certification';
@@ -271,6 +272,7 @@ const Page: React.FC = () => {
           { name: 'Tuition', url: '#paymentPlans' },
           { name: 'Course Outline', url: '#outline' },
           { name: 'Tutors', url: '#tutors' },
+          { name: 'Working During Covid-19', url: '#working' },
         ]}
       />
     )}>
@@ -374,7 +376,7 @@ const Page: React.FC = () => {
         </div>
       </section>
 
-      <section id="howYoullLearnSection" className="bg-light text-dark">
+      <section className="bg-light text-dark">
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
@@ -392,7 +394,21 @@ const Page: React.FC = () => {
         </div>
       </section>
 
-      <section id="whyChooseQCSection">
+      <a className="anchor" id="working"></a>
+      <section id="workingSection">
+        <div className="row">
+          <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+            <div className="container text-dark text-center">
+            <h2 className="text-dark text-center">Learning &amp; Working During Covid-19</h2>              
+              <p className="lead">See how you can earn your certification and run your very own sleep consulting business safely during COVID-19.</p>
+              <p className="lead mb-4">Learn from the safety of home with QC’s online courses.</p>          
+              <Link href="/courses-and-tuition/sleep-consultant/working-during-covid"><a className="btn btn-lg btn-secondary mt-3 mb-3 " rel="noopener noreferrer" target="_blank">LEARN MORE</a></Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-light text-dark">
         <WhyChoose
           subheader="Get certified faster with a FULLY ONLINE sleep consultant course!"
           affordable="Since QC's course is fully online, you don't have to pay surcharges for attending lectures or webinars. You complete the full course from home."
@@ -402,7 +418,7 @@ const Page: React.FC = () => {
         />
       </section>
 
-      <section id="includedSection" className="bg-light text-dark">
+      <section className="text-dark">
         <Included certification="Infant Sleep Consulting Professional (ISCP™)" />
       </section>
 
@@ -494,7 +510,7 @@ const Page: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>  
 
       <section id="certificationSection" className="bg-dark text-light">
         <Certification
@@ -538,7 +554,8 @@ const Page: React.FC = () => {
         #requirementsSection{background-image:url(${require('../../../images/sl-requirements.jpg')});background-size:cover}
         #paymentPlansSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
         #includedSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
-        #enrollSection{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}
+        #whyChooseQCSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
+        #enrollSection{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}           
         section:first-of-type {
           padding-top: 105px;
         }

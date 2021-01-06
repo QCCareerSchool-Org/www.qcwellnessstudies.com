@@ -32,6 +32,7 @@ const Page: NextPage = () => {
           { name: 'Tuition', url: '#tuition' },
           { name: 'Support', url: '#support' },
           { name: 'Guarantee', url: '#guarantee' },
+          { name: 'Working During Covid-19', url: '#working' },
         ]}
       />
     )}>
@@ -94,7 +95,7 @@ const Page: NextPage = () => {
       </section>
 
       <a className="anchor" id="howItWorks"></a>
-      <section id="howItWorksSection">
+      <section>
         <HowItWorks
           courseName="Sleep Consultant Course"
           adjective="sleep-consultant"
@@ -102,6 +103,20 @@ const Page: NextPage = () => {
           certification="Infant Sleep Consultant Professional (ISCP™)"
           caseStudiesExtended="As part of this course, you'll be presented with a number of case studies and will be asked to create full sleep plans to address unique circumstances."
         />
+      </section>
+
+      <a className="anchor" id="working"></a>
+      <section id="workingSection">
+        <div className="row">
+          <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+            <div className="container text-dark text-center">
+            <h2 className="text-dark text-center">Learning &amp; Working During Covid-19</h2>              
+              <p className="lead">See how you can earn your certification and run your very own sleep consulting business safely during COVID-19.</p>
+              <p className="lead mb-4">Learn from the safety of home with QC’s online courses.</p>          
+              <Link href="/courses-and-tuition/sleep-consultant/working-during-covid"><a className="btn btn-secondary" rel="noopener noreferrer" target="_blank">LEARN MORE</a></Link>
+            </div>
+          </div>
+        </div>
       </section>
 
       <a className="anchor" id="curriculum"></a>
@@ -254,7 +269,7 @@ const Page: NextPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>      
 
       <a className="anchor" id="guarantee"></a>
       <section id="guaranteeSection">
@@ -300,6 +315,7 @@ const Page: NextPage = () => {
         #aboutSection{background-image:url(${require('../../../images/bg-about-qc.jpg')});background-size:cover}
         #sampleAssignmentSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
         #enrollSection{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}
+        #workingSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
         #onlineSection{background-image:url(${require('../../../images/bg-fully-online.jpg')});background-size:cover;background-position: center}
       `}</style>
 
