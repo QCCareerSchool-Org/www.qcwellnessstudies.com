@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../../../components/seo';
@@ -7,24 +8,22 @@ const Page: React.FC = () => (
     <DefaultLayout>
 
         <SEO
-            title="Learning &amp; Working as a Sleep Consultant During COVID-19"
-            description="See how you can earn your certification and run your very own sleep consulting business safely during COVID-19"
-            canonical="/courses-and-tuition/sleep-consultant/working-during-covid"
+            title="Baby Sign Language for Beginners: When (and How) to Start"
+            description="Baby sign language can prove to be a useful tool to recommend to your clients!"
+            canonical="/courses-and-tuition/sleep-consultant/baby-sign-language-for-beginners"
             image={{
-                src: require('../../../images/sleep-consultant-remote-work.jpg'),
-                alt: 'sleep consultant working remotely',
-              }}
+                src: require('../../../images/sl-baby-sign-language-cover.jpg'),
+                alt: 'baby sign language',
+            }}
         />
 
         <section id="heroSection">
             <div className="container">
                 <div className="row">
-                    <div className="col-12 col-sm-10 col-md-8 col-lg-8 offset-lg-4">
+                    <div className="col-12 col-sm-10 col-md-8 col-lg-5">
                         <div className="card">
                             <div className="card-body">
-                                <h1 className="h2">Learning &amp; Working as a Sleep Consultant During COVID-19</h1>
-                                <p className="lead">See how you can earn your certification and run your very own sleep consulting business safely during COVID-19</p>
-                                <p className="lead">Learn from the safety of home with QC’s online courses.</p>
+                                <h1 className="h2">Baby Sign Language for Beginners: When (and How) to Start</h1>
                             </div>
                         </div>
                     </div>
@@ -35,78 +34,73 @@ const Page: React.FC = () => (
         <section>
             <div className="container">
                 <div className="row">
-                    <div className="col-12 col-sm-10 col-md-8 col-lg-7">
-                        <h2 className="h3">How QC Sets You Up to Succeed</h2>
-                        <ul>
-                            <li>Study from the comfort of home with a fully online course</li>
-                            <li>Receive virtual one-on-one support from your tutor</li>
-                            <li>Reach out to the Student Support Team 7 days a week for assistance</li>
-                            <li>Access your course materials any time in the online student center</li>
-                            <li>Choose from flexible, affordable tuition payment options</li>
-                            <li>Get up to 2 full years to complete your course</li>
-                            <li>Become a certified Infant Sleep Consulting Professional (ISCP™) upon successful completion of the course</li>
-                        </ul>
-                        <p className="lead"><a href="/courses-and-tuition/sleep-consultant">Learn more about QC Wellness Studies' Sleep Consultant Course!</a>                       
-                        </p>
-                    </div>
-                    <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-5">
-                        <p><img className="img-fluid" src={require('../../../images/sleep-consultant-home-office.jpg')} alt="Sleep Consultant Home Office" /></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="enrollSection" className="text-light text-center">
-            <div className="container">
-                <div className="row">
-                    <div className="col-12 col-sm-10 col-md-8 col-lg-12 text-center">
-                        <h2 className="h3">Reviews &amp; Testimonials</h2>
-                        <p className="lead font-italic">“The Sleep Consultant Course divides the learning into easy-to-digest portions. The assignments effectively reflect the information taught in each section, and there’s a variety of different types of assignments to test and apply your knowledge. I had a wonderful experience as a student at QC Wellness School! My favorite thing about my program was the quick feedback from my instructor. I enjoyed that it was always provided to me in a detailed audio message. It felt so personal!”</p>
-                        <p className="lead font-italic">-Sarah Pashniak, ISCP™</p>
-                        <p className="lead font-italic">QC Graduate</p>
-                        <p className="lead font-italic">Learn more about Sarah’s experience with QC’s Sleep Consultant Course <a href="/student-features">here</a></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div className="container">
-                <div className="row">
                     <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-                        <h2 className="h3">You Can Still Earn an Income for Your Sleep Consultant Business During COVID-19</h2>
-                        <p>Continue to book clients and make a profit by adding any of the following services to your business:</p>
-                        <ul>
-                            <li>Introduce virtual services to your business, such as virtual sleep consultations</li>
-                            <li>When it’s safe to meet with clients in-person, insist that everyone wear a mask</li>
-                            <li>Start your own sleep consulting blog or write as a subject-matter expert for other blogs/publications</li>
-                            <li>Become an authority on infant sleep consulting on social media</li>
-                            <li>Teach clients about sleep training through virtual classes (i.e. one-on-one, group classes, etc.)</li>
-                        </ul>
+                        <h2 className="h3">Useful Tool</h2>
+                        <p>As a certified Sleep Consultant, you will not be required to know baby sign language. However, this can prove to be a useful tool to recommend to your clients!</p>
+                        <p> Not a certified Sleep Consultant yet? Enroll today in <a href="/courses-and-tuition/sleep-consultant">QC Wellness Studies’ online Sleep Consultant Course!</a></p>
                     </div>
                     <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-                        <p><img className="img-fluid" src={require('../../../images/baby-girl-sleeping.jpg')} alt="Sleep Consultant Home Office" /></p>
+                        <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-what-is.jpg')} alt="happy baby with raised arms" /></p>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-12 col-sm-10 col-md-8 col-lg-6 order-lg-2">
-                        <h2 className="h3">Tips for Keeping Yourself and Clients Safe</h2>
-                        <p>When working with clients and their infants in person, you should follow strict practices to keep everyone safe.</p>
-                        <p>COVID-19 Safety Protocols for Sleep Consultants:</p>
+                        <h2 className="h3">What is Baby Sign Language?</h2>
+                        <p>Until they are old enough to communicate with words, baby sign language provides young children with a way to express their emotions and needs. By teaching a baby how to sign, they can successfully tell others when they’re:</p>
                         <ul>
-                            <li>Reschedule or cancel appointments if you, your client, or anyone in their household is feeling ill or has been exposed to someone who has tested positive for COVID-19</li>
-                            <li>Insist that clients (and if applicable, their children) wear masks during all in-person appointments</li>
-                            <li>Maintain a distance of at least 6 feet during appointments</li>
-                            <li>Socially distance when not working and enforce a maximum occupancy limit</li>
-                            <li>Offer your services online whenever possible</li>
-                            <li>Wash your hands before and after working with a client or touching communal surfaces</li>
-                            <li>Work in a clean, sanitized space</li>
-                            <li>Encourage the client to prepare a sanitized space for the meeting to take place in, if meeting within their own home</li>
-                            <li>Receive the proper COVID-19 vaccine(s), once publicly available</li>
+                            <li>Tired</li>
+                            <li>Hungry</li>
+                            <li>Thirsty</li>
+                            <li>In pain</li>
+                            <li>Frustrated</li>
+                            <li>Grateful</li>
+                            <li>And much more!</li>
                         </ul>
+                        <p>Plus, research indicates that baby sign language can be beneficial for verbal development. Learn more about this <Link href="https://www.nbcnews.com/id/wbna8060750"><a>here!</a></Link>
+                        </p>
                     </div>
                     <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6">
-                        <p><img className="img-fluid" src={require('../../../images/little-boy-medical-mask.jpg')} alt="Sleep Consultant Home Office" /></p>
+                        <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-hands.jpg')} alt="baby smiling and covering mouth with hands" /></p>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-12 col-sm-10 col-md-8 col-lg-6">
+                        <h2 className="h3">When to Teach Baby Sign Language</h2>
+                        <p>Your client might wonder when it’s appropriate (or effective) to start teaching their infant sign language. While most babies won’t be able to sign until they’re anywhere from 8 to 14 months old, parents can introduce signing at as early as 6 months. The earlier your client starts to teach it, the better. So, as soon as their baby shows an interest in communicating, they can begin.</p>
+                    </div>
+                    <div className="col-12 col-sm-10 col-md-8 col-lg-6">
+                        <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-arms.jpg')} alt="baby communicating with his mother" /></p>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-12 col-sm-10 col-md-8 col-lg-6 order-lg-2">
+                        <h2 className="h3">How to Get Started</h2>
+                        <p>If your clients are unsure where to begin, here are a few tips you can suggest:</p>
+                        <ul>
+                            <li>Choose signs that are meaningful and relevant to the child</li>
+                            <li>Signs should express common, everyday needs (i.e. being hungry, being sleepy, etc.)</li>
+                            <li>To be most effective, signing should be consistent</li>
+                            <li>Speak AND sign at the same time so the baby can establish a connection between the sign and the spoken word</li>
+                            <li>Make signs as close to your face as possible</li>
+                            <li>If the baby creates their own sign, use it</li>
+                            <li>Reward the baby whenever they successfully use the right sign</li>
+                        </ul>
+                        <p>
+                        <Link href="https://www.youtube.com/watch?v=MchIPOm2G0Q"><a>Watch this informative video</a></Link> on the Top 15 signs your clients should teach their infants!</p>
+                    </div>
+                    <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6">
+                        <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-thirsty.jpg')} alt="thirsty baby moving towards baby bottle" /></p>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-12 col-sm-10 col-md-8 col-lg-6">
+                        <h2 className="h3">How This Affects You as the Sleep Consultant</h2>
+                        <p>Your job is to help parents create a safe, healthy routine for their infant’s sleep schedule. While you personally won’t be expected to teach your clients baby sign language, you can ultimately make their lives easier by bringing this option to their attention and providing helpful tips for getting started.
+                        After all, a sleepy baby might not be able to say they’re tired with actual words – but this way, they’ll have a way of saying it with signs. Thus, your clients can gain an even better understanding of their baby’s needs and more efficiently implement a plan of action.
+</p>
+                    </div>
+                    <div className="col-12 col-sm-10 col-md-8 col-lg-6">
+                        <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-crawl.jpg')} alt="smiling baby crawling in bed" /></p>
                     </div>
                 </div>
             </div>
@@ -114,16 +108,16 @@ const Page: React.FC = () => (
 
         <section id="enrollSection" className="text-light text-center">
             <div className="container">
-                <h2>Start Your Journey</h2>
-                <p className="h5 sans-serif">It’s never too early or too late to begin a career you’ll love.</p>
-                <p className="h5 sans-serif">Enroll in QC’s Sleep Consultant Course today and launch a successful career in as little as 3-6 months!</p>
+                <h2>Become a Certified Sleep Consultant Today!</h2>
+                <p className="h5 sans-serif">Train at your own pace, in your own space.</p>
+                <p className="h5 sans-serif">Be ready to launch your career and even start your very own business in as little as 3-6 months!</p>
                 <a href="https://enroll.qcwellnessstudies.com/" className="btn btn-secondary btn-lg mt-4">ENROLL NOW</a>
             </div>
         </section>
 
         <style jsx>{`       
       #enrollSection{background-image: url(${require('../../../images/bg-enrollment.jpg')});background-size: cover;}
-      #heroSection{background-image:url(${require('../../../images/sleep-consultant-remote-work.jpg')});background-size:cover;background-position:center} 
+      #heroSection{background-image:url(${require('../../../images/sl-baby-sign-language-cover.jpg')});background-size:cover;background-position:center} 
     `}</style>
 
     </DefaultLayout>
