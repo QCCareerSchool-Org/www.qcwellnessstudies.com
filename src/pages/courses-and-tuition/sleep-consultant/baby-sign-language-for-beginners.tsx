@@ -43,6 +43,11 @@ const Page: React.FC = () => (
                         <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-what-is.jpg')} alt="happy baby with raised arms" /></p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section className="bg-light">
+            <div className="container">
                 <div className="row">
                     <div className="col-12 col-sm-10 col-md-8 col-lg-6 order-lg-2">
                         <h2 className="h3">What is Baby Sign Language?</h2>
@@ -62,15 +67,18 @@ const Page: React.FC = () => (
                         <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-hands.jpg')} alt="baby smiling and covering mouth with hands" /></p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-                        <h2 className="h3">When to Teach Baby Sign Language</h2>
-                        <p>Your client might wonder when it’s appropriate (or effective) to start teaching their infant sign language. While most babies won’t be able to sign until they’re anywhere from 8 to 14 months old, parents can introduce signing at as early as 6 months. The earlier your client starts to teach it, the better. So, as soon as their baby shows an interest in communicating, they can begin.</p>
-                    </div>
-                    <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-                        <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-arms.jpg')} alt="baby communicating with his mother" /></p>
-                    </div>
-                </div>
+            </div>
+        </section>
+
+        <section>
+            <div className="container">
+                <h2 className="h3">When to Teach Baby Sign Language</h2>
+                <p>Your client might wonder when it’s appropriate (or effective) to start teaching their infant sign language. While most babies won’t be able to sign until they’re anywhere from 8 to 14 months old, parents can introduce signing at as early as 6 months. The earlier your client starts to teach it, the better. So, as soon as their baby shows an interest in communicating, they can begin.</p>
+            </div>
+        </section>
+
+        <section className="bg-light">
+            <div className="container">
                 <div className="row">
                     <div className="col-12 col-sm-10 col-md-8 col-lg-6 order-lg-2">
                         <h2 className="h3">How to Get Started</h2>
@@ -91,13 +99,19 @@ const Page: React.FC = () => (
                         <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-thirsty.jpg')} alt="thirsty baby moving towards baby bottle" /></p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section>
+            <div className="container">
+
                 <div className="row">
                     <div className="col-12 col-sm-10 col-md-8 col-lg-6">
                         <h2 className="h3">How This Affects You as the Sleep Consultant</h2>
                         <p>Your job is to help parents create a safe, healthy routine for their infant’s sleep schedule. While you personally won’t be expected to teach your clients baby sign language, you can ultimately make their lives easier by bringing this option to their attention and providing helpful tips for getting started. After all, a sleepy baby might not be able to say they’re tired with actual words – but this way, they’ll have a way of saying it with signs. Thus, your clients can gain an even better understanding of their baby’s needs and more efficiently implement a plan of action.</p>
                     </div>
                     <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-                        <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-crawl.jpg')} alt="smiling baby crawling in bed" /></p>
+                        <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-arms.jpg')} alt="smiling baby crawling in bed" /></p>
                     </div>
                 </div>
             </div>
