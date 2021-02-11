@@ -35,7 +35,7 @@ const Page: React.FC = () => (
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-                        <h2 className="h3">Useful Tool</h2>
+                        <h2 className="h3">A Useful Tool</h2>
                         <p>As a certified Sleep Consultant, you will not be required to know baby sign language. However, this can prove to be a useful tool to recommend to your clients!</p>
                         <p> Not a certified Sleep Consultant yet? Enroll today in <a href="/courses-and-tuition/sleep-consultant">QC Wellness Studies’ online Sleep Consultant Course!</a></p>
                     </div>
@@ -61,7 +61,7 @@ const Page: React.FC = () => (
                             <li>Grateful</li>
                             <li>And much more!</li>
                         </ul>
-                        <p>Plus, research indicates that baby sign language can be beneficial for verbal development. Learn more about this <Link href="https://www.nbcnews.com/id/wbna8060750"><a>here!</a></Link></p>
+                        <p>Plus, research indicates that baby sign language can be beneficial for verbal development. Learn more about this <Link href="https://www.nbcnews.com/id/wbna8060750"><a rel="noopener noreferrer" target="_blank">here!</a></Link></p>
                     </div>
                     <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6">
                         <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-hands.jpg')} alt="baby smiling and covering mouth with hands" /></p>
@@ -93,7 +93,7 @@ const Page: React.FC = () => (
                             <li>Reward the baby whenever they successfully use the right sign</li>
                         </ul>
                         <p>
-                            <Link href="https://www.youtube.com/watch?v=MchIPOm2G0Q"><a>Watch this informative video</a></Link> on the Top 15 signs your clients should teach their infants!</p>
+                            <Link href="https://www.youtube.com/watch?v=MchIPOm2G0Q"><a rel="noopener noreferrer" target="_blank">Watch this informative video</a></Link> on the Top 15 signs your clients should teach their infants!</p>
                     </div>
                     <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6">
                         <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-thirsty.jpg')} alt="thirsty baby moving towards baby bottle" /></p>
