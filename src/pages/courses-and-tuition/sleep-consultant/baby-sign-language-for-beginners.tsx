@@ -56,8 +56,7 @@ const Page: React.FC = () => (
                             <li>Grateful</li>
                             <li>And much more!</li>
                         </ul>
-                        <p>Plus, research indicates that baby sign language can be beneficial for verbal development. Learn more about this <Link href="https://www.nbcnews.com/id/wbna8060750"><a>here!</a></Link>
-                        </p>
+                        <p>Plus, research indicates that baby sign language can be beneficial for verbal development. Learn more about this <Link href="https://www.nbcnews.com/id/wbna8060750"><a>here!</a></Link></p>
                     </div>
                     <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6">
                         <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-hands.jpg')} alt="baby smiling and covering mouth with hands" /></p>
@@ -86,7 +85,7 @@ const Page: React.FC = () => (
                             <li>Reward the baby whenever they successfully use the right sign</li>
                         </ul>
                         <p>
-                        <Link href="https://www.youtube.com/watch?v=MchIPOm2G0Q"><a>Watch this informative video</a></Link> on the Top 15 signs your clients should teach their infants!</p>
+                            <Link href="https://www.youtube.com/watch?v=MchIPOm2G0Q"><a>Watch this informative video</a></Link> on the Top 15 signs your clients should teach their infants!</p>
                     </div>
                     <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6">
                         <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-thirsty.jpg')} alt="thirsty baby moving towards baby bottle" /></p>
@@ -95,9 +94,7 @@ const Page: React.FC = () => (
                 <div className="row">
                     <div className="col-12 col-sm-10 col-md-8 col-lg-6">
                         <h2 className="h3">How This Affects You as the Sleep Consultant</h2>
-                        <p>Your job is to help parents create a safe, healthy routine for their infant’s sleep schedule. While you personally won’t be expected to teach your clients baby sign language, you can ultimately make their lives easier by bringing this option to their attention and providing helpful tips for getting started.
-                        After all, a sleepy baby might not be able to say they’re tired with actual words – but this way, they’ll have a way of saying it with signs. Thus, your clients can gain an even better understanding of their baby’s needs and more efficiently implement a plan of action.
-</p>
+                        <p>Your job is to help parents create a safe, healthy routine for their infant’s sleep schedule. While you personally won’t be expected to teach your clients baby sign language, you can ultimately make their lives easier by bringing this option to their attention and providing helpful tips for getting started. After all, a sleepy baby might not be able to say they’re tired with actual words – but this way, they’ll have a way of saying it with signs. Thus, your clients can gain an even better understanding of their baby’s needs and more efficiently implement a plan of action.</p>
                     </div>
                     <div className="col-12 col-sm-10 col-md-8 col-lg-6">
                         <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-crawl.jpg')} alt="smiling baby crawling in bed" /></p>
