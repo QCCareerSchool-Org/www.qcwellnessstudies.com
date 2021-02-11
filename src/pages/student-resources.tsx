@@ -9,7 +9,7 @@ const Page: NextPage = () => (
   <DefaultLayout>
 
     <SEO
-      title="QC Wellness Studies"
+      title="QC Student Resources"
       description="QC Wellness Studies is the only fully online school for professional wellness training. Whether you want to be a sleep consultant, a professional skincare consultant or an aging in place designer, QC has an online course for your future career!"
       canonical=""
     />
@@ -18,8 +18,7 @@ const Page: NextPage = () => (
       <div className="container">
         <div className="row d-flex align-items-center">
           <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-            <h1 className="text-light">Start an Exciting Career in the Wellness Industry</h1>
-            <p className="text-light">Training for a new career isn't always easy, but when you enroll with QC you'll gain the knowledge, support, and flexibility you need to succeed in your studies!</p>
+            <h1 className="text-light">Student Resources</h1>    
           </div>
         </div>
       </div>
