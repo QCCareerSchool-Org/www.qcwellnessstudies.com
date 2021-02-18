@@ -2,10 +2,10 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
-import { ArticleCard } from '../components/article-card';
-import { CardColumn } from '../components/card-column';
-import { SEO } from '../components/seo';
-import { DefaultLayout } from '../layouts/default';
+import { ArticleCard } from '../../components/article-card';
+import { CardColumn } from '../../components/card-column';
+import { SEO } from '../../components/seo';
+import { DefaultLayout } from '../../layouts/default';
 
 const Page: NextPage = () => (
   <DefaultLayout>
@@ -33,8 +33,8 @@ const Page: NextPage = () => (
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
-                { src: require('../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
+                { src: require('../../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
+                { src: require('../../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
@@ -47,8 +47,8 @@ const Page: NextPage = () => (
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
-                { src: require('../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
+                { src: require('../../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
+                { src: require('../../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
@@ -61,8 +61,8 @@ const Page: NextPage = () => (
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
-                { src: require('../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
+                { src: require('../../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
+                { src: require('../../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
@@ -79,8 +79,8 @@ const Page: NextPage = () => (
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
-                { src: require('../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
+                { src: require('../../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
+                { src: require('../../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
@@ -93,8 +93,8 @@ const Page: NextPage = () => (
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
-                { src: require('../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
+                { src: require('../../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
+                { src: require('../../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
@@ -107,8 +107,8 @@ const Page: NextPage = () => (
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
-                { src: require('../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
+                { src: require('../../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
+                { src: require('../../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
@@ -125,8 +125,8 @@ const Page: NextPage = () => (
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
-                { src: require('../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
+                { src: require('../../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
+                { src: require('../../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
@@ -139,8 +139,8 @@ const Page: NextPage = () => (
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
-                { src: require('../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
+                { src: require('../../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
+                { src: require('../../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
@@ -153,8 +153,8 @@ const Page: NextPage = () => (
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
-                { src: require('../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
+                { src: require('../../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
+                { src: require('../../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
@@ -181,9 +181,9 @@ const Page: NextPage = () => (
     </section>
 
     <style jsx>{`
-      #enrollToday{background-image:url(${require('../images/bg-enrollment.jpg')});background-size:cover}
-      #howOnlineWorks{background-image:url(${require('../images/bg-white-green-light.jpg')});background-size:cover}
-      #heroSection{background-image:url(${require('../images/bg-home-top.jpg')});background-size:cover;background-position:center}
+      #enrollToday{background-image:url(${require('../../images/bg-enrollment.jpg')});background-size:cover}
+      #howOnlineWorks{background-image:url(${require('../../images/bg-white-green-light.jpg')});background-size:cover}
+      #heroSection{background-image:url(${require('../../images/bg-home-top.jpg')});background-size:cover;background-position:center}
       .course-icon{width:80px}
 
       /* sm */
