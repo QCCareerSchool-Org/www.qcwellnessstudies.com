@@ -9,7 +9,7 @@ const Page: React.FC = () => (
       <h1>Enrollment Agreement</h1>
 
       <h2>1. Shipping Policy</h2>
-      <p>All course materials are shipped within 2 business days from the date of enrollment. Materials are shipped via courier, and are expected to be delivered within 10 business days.</p>
+      <p>All course materials will be shipped within two business days of the date of enrollment. Materials will be shipped via courier, and are expected to be delivered within 10 business days.</p>
 
       <h2>2. Money-Back Guarantee</h2>
       <h3>21-Day Money-Back Guarantee</h3>
