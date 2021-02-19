@@ -27,7 +27,7 @@ const Page: NextPage = () => (
 
         <section>
             <div className="container col-12 mb-4 col-sm-10 col-md-8 col-lg-6 mb-lg-0">
-                <div className="row mb-4">
+                <div className="row">
                     <p className="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <h2>Plan Accomodation in Advance.</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -37,11 +37,9 @@ const Page: NextPage = () => (
                     <h4>Plan Accomodation in Advance.</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <p className="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p className="lead mb-4">Download a free tip sheet on 7 Tips for Travelling with a Baby</p>
+                    <p className="lead">Download a free tip sheet on 7 Tips for Travelling with a Baby</p>
                 </div>
-            </div>
-            <div className="container col-12 mb-4 col-sm-10 col-md-8 col-lg-6 mb-lg-0">
-                <div className="row mb-4">
+                <div className="row">
                     <p><Link href="/tip-sheets/7-tips-travelling-baby.pdf"><a className="btn btn-primary"><strong>Download Tipsheet</strong></a></Link></p>
                 </div>
             </div>
