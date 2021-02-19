@@ -15,19 +15,19 @@ const Page: NextPage = () => (
         />
 
         <section id="heroSection">
-            <div className="container">
+            <div className="container col-12  mb-4 col-sm-10 col-md-8 col-lg-6 mb-lg-0">
                 <div className="row d-flex align-items-center">
-                    <div>
-                        <h1 className="text-light text-center">7 Tips for Travelling with a Baby</h1>
+                    <div className="text-light text-center">
+                        <h1>7 Tips for Travelling with a Baby</h1>                    
                     </div>
                 </div>
             </div>
-        </section> 
+        </section>
 
         <section>
             <div className="container col-12 mb-4 col-sm-10 col-md-8 col-lg-6 mb-lg-0">
                 <div className="row mb-4">
-                    <p className="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>               
+                    <p className="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <h2>Plan Accomodation in Advance.</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <div>
