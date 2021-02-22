@@ -2,8 +2,8 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
-import { SEO } from '../../components/seo';
-import { DefaultLayout } from '../../layouts/default';
+import { SEO } from '../../../components/seo';
+import { DefaultLayout } from '../../../layouts/default';
 
 const Page: NextPage = () => (
     <DefaultLayout>
@@ -31,7 +31,7 @@ const Page: NextPage = () => (
                     <h2>Plan Accomodation in Advance.</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <div>
-                        <p><img className="img-fluid" src={require('../../images/sl-baby-sleeping-in-crib.jpg')} alt="Baby sleeping in a crib" /></p>
+                        <p><img className="img-fluid" src={require('../../../images/sl-baby-sleeping-in-crib.jpg')} alt="Baby sleeping in a crib" /></p>
                     </div>
                     <h4>Plan Accomodation in Advance.</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -53,9 +53,9 @@ const Page: NextPage = () => (
         </section>
 
         <style jsx>{`
-      #enrollToday{background-image:url(${require('../../images/bg-enrollment.jpg')});background-size:cover}
-      #howOnlineWorks{background-image:url(${require('../../images/bg-white-green-light.jpg')});background-size:cover}
-      #heroSection{background-image:url(${require('../../images/bg-home-top.jpg')});background-size:cover;background-position:center}
+      #enrollToday{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}
+      #howOnlineWorks{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
+      #heroSection{background-image:url(${require('../../../images/bg-home-top.jpg')});background-size:cover;background-position:center}
       .course-icon{width:80px}
 
       /* sm */
