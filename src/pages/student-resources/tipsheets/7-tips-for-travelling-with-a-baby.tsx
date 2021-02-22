@@ -12,7 +12,7 @@ const Page: NextPage = () => (
         <SEO
             title="7 Tips for Travelling with a Baby"
             description=""
-            canonical="/student-resources/7-tips-for-travelling-with-a-baby"
+            canonical="/student-resources/tipsheet/7-tips-for-travelling-with-a-baby"
         />
 
         <section id="heroSection">
@@ -58,8 +58,7 @@ const Page: NextPage = () => (
         </section>
 
         <style jsx>{`
-      #enrollToday{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}
-      #howOnlineWorks{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
+      #enrollToday{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}     
       #heroSection{background-image:url(${require('../../../images/bg-home-top.jpg')});background-size:cover;background-position:center}
       .course-icon{width:80px}
 
