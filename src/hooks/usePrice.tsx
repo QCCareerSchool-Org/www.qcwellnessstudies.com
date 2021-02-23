@@ -4,6 +4,12 @@ import { useEffect, useState } from 'react';
 import { getQueryString } from '../lib/functions';
 import { PriceResult } from '../models/price';
 
+type Request = {
+  courses: string | string[];
+  countryCode: string;
+  provinceCode?: string;
+}
+
 export const usePrice = (courses: string | string[], countryCode?: string, provinceCode?: string | null): PriceResult | undefined => {
   const [ price, setPrice ] = useState<PriceResult>();
 
@@ -11,7 +17,10 @@ export const usePrice = (courses: string | string[], countryCode?: string, provi
     if (countryCode) {
       (async (): Promise<void> => {
         const url = 'https://api.qccareerschool.com/prices';
-        const params = { courses, countryCode, provinceCode };
+        const params: Request = { courses, countryCode };
+        if (provinceCode) {
+          params.provinceCode = provinceCode;
+        }
         const queryString = getQueryString(params);
         try {
           const response = await fetch(`${url}?${queryString}`, {

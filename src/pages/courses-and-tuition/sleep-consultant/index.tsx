@@ -317,7 +317,7 @@ const Page: React.FC = () => {
 
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
-        <PaymentPlans courses={['sl']} doubleGuarantee={doubleGuarantee} />
+        <PaymentPlans courses={[ 'sl' ]} doubleGuarantee={doubleGuarantee} />
       </section>
 
       <section id="whatSection">
@@ -418,7 +418,7 @@ const Page: React.FC = () => {
           affordable="Since QC's course is fully online, you don't have to pay surcharges for attending lectures or webinars. You complete the full course from home."
           flexible="No start dates, no deadlines, no mandatory webinars! This course is completely self-directed and self-paced. Get certified quickly, or take your time."
           comprehensive="You won't just learn one proprietary method of sleep coaching. You'll learn every method of sleep consulting, so that you can offer the best service!"
-          courses={['sl']}
+          courses={[ 'sl' ]}
         />
       </section>
 
