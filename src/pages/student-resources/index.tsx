@@ -33,42 +33,42 @@ const Page: NextPage = () => (
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
-                { src: require('../../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
               buttonText="READ THE ARTICLE"
-              link="https://www.google.com/"
+              link="/student-resources/blog/7-tips-for-travelling-with-a-baby"
               externalLink={true}
             />
           </CardColumn>
           <CardColumn>
-            <ArticleCard
+          <ArticleCard
               images={[
-                { src: require('../../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
-                { src: require('../../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
               buttonText="READ THE ARTICLE"
-              link="https://www.google.com/"
+              link="/student-resources/blog/7-tips-for-travelling-with-a-baby"
               externalLink={true}
             />
           </CardColumn>
           <CardColumn>
-            <ArticleCard
+          <ArticleCard
               images={[
-                { src: require('../../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
-                { src: require('../../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
               buttonText="READ THE ARTICLE"
-              link="https://www.google.com/"
+              link="/student-resources/blog/7-tips-for-travelling-with-a-baby"
               externalLink={true}
             />
           </CardColumn>
@@ -77,44 +77,44 @@ const Page: NextPage = () => (
       <div className="container">
         <div className="row mb-4">
           <CardColumn>
-            <ArticleCard
+          <ArticleCard
               images={[
-                { src: require('../../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
-                { src: require('../../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
               buttonText="READ THE ARTICLE"
-              link="https://www.google.com/"
+              link="/student-resources/blog/7-tips-for-travelling-with-a-baby"
               externalLink={true}
             />
           </CardColumn>
           <CardColumn>
-            <ArticleCard
+          <ArticleCard
               images={[
-                { src: require('../../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
-                { src: require('../../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
               buttonText="READ THE ARTICLE"
-              link="https://www.google.com/"
+              link="/student-resources/blog/7-tips-for-travelling-with-a-baby"
               externalLink={true}
             />
           </CardColumn>
           <CardColumn>
-            <ArticleCard
+          <ArticleCard
               images={[
-                { src: require('../../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
-                { src: require('../../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
               buttonText="READ THE ARTICLE"
-              link="https://www.google.com/"
+              link="/student-resources/blog/7-tips-for-travelling-with-a-baby"
               externalLink={true}
             />
           </CardColumn>
@@ -123,44 +123,44 @@ const Page: NextPage = () => (
         <div className="container">
         <div className="row mb-4">
           <CardColumn>
-            <ArticleCard
+          <ArticleCard
               images={[
-                { src: require('../../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
-                { src: require('../../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
               buttonText="READ THE ARTICLE"
-              link="https://www.google.com/"
+              link="/student-resources/blog/7-tips-for-travelling-with-a-baby"
               externalLink={true}
             />
           </CardColumn>
           <CardColumn>
-            <ArticleCard
+          <ArticleCard
               images={[
-                { src: require('../../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
-                { src: require('../../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
               buttonText="READ THE ARTICLE"
-              link="https://www.google.com/"
+              link="/student-resources/blog/7-tips-for-travelling-with-a-baby"
               externalLink={true}
             />
           </CardColumn>
           <CardColumn>
-            <ArticleCard
+          <ArticleCard
               images={[
-                { src: require('../../images/sleep-consultant-home-office.jpg'), type: 'image/jpg' },
-                { src: require('../../images/sleep-consultant-home-office.jpg?webp'), type: 'image/webp' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
               buttonText="READ THE ARTICLE"
-              link="https://www.google.com/"
+              link="/student-resources/blog/7-tips-for-travelling-with-a-baby"
               externalLink={true}
             />
           </CardColumn>
