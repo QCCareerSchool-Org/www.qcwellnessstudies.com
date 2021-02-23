@@ -74,6 +74,8 @@ const Page: NextPage = () => (
           </CardColumn>
         </div>
       </div>
+      </section>
+      <section>
       <div className="container">
         <div className="row mb-4">
           <CardColumn>
@@ -85,8 +87,8 @@ const Page: NextPage = () => (
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
-              buttonText="READ THE ARTICLE"
-              link="/student-resources/blog/7-tips-for-travelling-with-a-baby"
+              buttonText="DOWNLOAD TIPSHEET"
+              link="/student-resources/tipsheets/7-tips-for-travelling-with-a-baby"
               externalLink={true}
             />
           </CardColumn>
@@ -99,8 +101,8 @@ const Page: NextPage = () => (
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
-              buttonText="READ THE ARTICLE"
-              link="/student-resources/blog/7-tips-for-travelling-with-a-baby"
+              buttonText="DOWNLOAD TIPSHEET"
+              link="/student-resources/tipsheets/7-tips-for-travelling-with-a-baby"
               externalLink={true}
             />
           </CardColumn>
@@ -113,59 +115,13 @@ const Page: NextPage = () => (
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
-              buttonText="READ THE ARTICLE"
-              link="/student-resources/blog/7-tips-for-travelling-with-a-baby"
+              buttonText="DOWNLOAD TIPSHEET"
+              link="/student-resources/tipsheets/7-tips-for-travelling-with-a-baby"
               externalLink={true}
             />
           </CardColumn>
         </div>
-      </div>
-      <div className="container">
-        <div className="row mb-4">
-          <CardColumn>
-            <ArticleCard
-              images={[
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
-              ]}
-              alt="7 Tips for Travelling with a Baby"
-              title="7 Tips for Travelling with a Baby"
-              body=""
-              buttonText="READ THE ARTICLE"
-              link="/student-resources/blog/7-tips-for-travelling-with-a-baby"
-              externalLink={true}
-            />
-          </CardColumn>
-          <CardColumn>
-            <ArticleCard
-              images={[
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
-              ]}
-              alt="7 Tips for Travelling with a Baby"
-              title="7 Tips for Travelling with a Baby"
-              body=""
-              buttonText="READ THE ARTICLE"
-              link="/student-resources/blog/7-tips-for-travelling-with-a-baby"
-              externalLink={true}
-            />
-          </CardColumn>
-          <CardColumn>
-            <ArticleCard
-              images={[
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
-              ]}
-              alt="7 Tips for Travelling with a Baby"
-              title="7 Tips for Travelling with a Baby"
-              body=""
-              buttonText="READ THE ARTICLE"
-              link="/student-resources/blog/7-tips-for-travelling-with-a-baby"
-              externalLink={true}
-            />
-          </CardColumn>
-        </div>
-      </div>
+      </div>     
     </section>
 
     <section id="enrollToday" className="text-light">
