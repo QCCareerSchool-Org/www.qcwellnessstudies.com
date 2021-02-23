@@ -302,16 +302,15 @@ const Page: React.FC = () => {
       </section>
 
       <a className="anchor" id="promo"></a>
-      <section>
+      <section className="text-dark text-center">
         <div className="container">
           <div className="row">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-              <div className="container text-dark text-center">
+            <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">        
                 <p><img className="img-fluid" src={require('../../../images/promo-inlay-december.png')} alt="December Promo" /></p>
                 <p className="lead mb-5">Save an extra $100 on your sleep consultant course tuition.<br />This discount will be automatically applied when you enroll.</p>
                 <p><a className="btn btn-secondary btn-lg" href="https://enroll.qcwellnessstudies.com/?c[]=sl">ENROLL NOW</a></p>
               </div>
-            </div>
+    
           </div>
         </div>
       </section>
