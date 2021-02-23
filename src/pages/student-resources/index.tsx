@@ -45,7 +45,7 @@ const Page: NextPage = () => (
             />
           </CardColumn>
           <CardColumn>
-          <ArticleCard
+            <ArticleCard
               images={[
                 { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
                 { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
@@ -59,7 +59,7 @@ const Page: NextPage = () => (
             />
           </CardColumn>
           <CardColumn>
-          <ArticleCard
+            <ArticleCard
               images={[
                 { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
                 { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
@@ -77,7 +77,7 @@ const Page: NextPage = () => (
       <div className="container">
         <div className="row mb-4">
           <CardColumn>
-          <ArticleCard
+            <ArticleCard
               images={[
                 { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
                 { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
@@ -91,7 +91,7 @@ const Page: NextPage = () => (
             />
           </CardColumn>
           <CardColumn>
-          <ArticleCard
+            <ArticleCard
               images={[
                 { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
                 { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
@@ -105,7 +105,7 @@ const Page: NextPage = () => (
             />
           </CardColumn>
           <CardColumn>
-          <ArticleCard
+            <ArticleCard
               images={[
                 { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
                 { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
@@ -119,11 +119,11 @@ const Page: NextPage = () => (
             />
           </CardColumn>
         </div>
-        </div>
-        <div className="container">
+      </div>
+      <div className="container">
         <div className="row mb-4">
           <CardColumn>
-          <ArticleCard
+            <ArticleCard
               images={[
                 { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
                 { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
@@ -137,7 +137,7 @@ const Page: NextPage = () => (
             />
           </CardColumn>
           <CardColumn>
-          <ArticleCard
+            <ArticleCard
               images={[
                 { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
                 { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
@@ -151,7 +151,7 @@ const Page: NextPage = () => (
             />
           </CardColumn>
           <CardColumn>
-          <ArticleCard
+            <ArticleCard
               images={[
                 { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
                 { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
@@ -165,8 +165,8 @@ const Page: NextPage = () => (
             />
           </CardColumn>
         </div>
-        </div>      
-    </section>  
+      </div>
+    </section>
 
     <section id="enrollToday" className="text-light">
       <div className="container text-center">
