@@ -216,7 +216,7 @@ const Page: React.FC = () => {
 
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
-        <PaymentPlans courses={[ 'sk' ]} doubleGuarantee={doubleGuarantee} />
+        <PaymentPlans courses={['sk']} doubleGuarantee={doubleGuarantee} />
       </section>
 
       <section id="whatSection">
@@ -270,7 +270,7 @@ const Page: React.FC = () => {
               <a className="btn btn-dark" href="#outline" role="button">Read the Full Course Outline</a>
             </div>
             <div className="col-12 col-md-6 col-lg-4">
-              <p className="d-none d-lg-block"><img src={require('../../../images/sk-what-youll-learn.jpg')} className="text-center" alt="What You'll Learn in the Skincare Consultant Course" /></p>
+              <p className="d-none d-lg-block"><img src={require('../../../images/sk-what-youll-learn.jpg')} className="text-center img-fluid" alt="What You'll Learn in the Skincare Consultant Course" /></p>
             </div>
           </div>
         </div>
@@ -302,7 +302,7 @@ const Page: React.FC = () => {
           affordable="Since QC's course is fully online, you don't have to pay surcharges for attending lectures or webinars. You complete the full course from home."
           flexible="No start dates, no deadlines, no mandatory webinars! This course is completely self-directed and self-paced. Get certified quickly, or take your time."
           comprehensive="You'll learn many different facets of skincare to ensure you'll be prepared to work with any client that walks through your doors!"
-          courses={[ 'sk' ]}
+          courses={['sk']}
         />
       </section>
 
@@ -319,64 +319,74 @@ const Page: React.FC = () => {
               <p className="lead text-center">Here's a detailed outline of all topics you'll learn in the skincare consultant certification course.</p>
             </div>
           </div>
-          <div className="row my-5" id="unitA">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/sk-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit A" />
-            </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit A: Introduction to Skincare</h3>
-              <p className="mb-0">In this first unit, you'll explore the basics of skincare consulting. You'll get a thorough understanding of why skincare is so important, and why makeup artists in particular should all be trained in skincare as well. You'll then dive into what you need to succeed as a skincare consultant, and get a deep dive into skin anatomy, and how to identify the five major skin types. </p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.a} />
-            </div>
-          </div>
-          <div className="row my-5" id="unitB">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/sk-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit B" />
-            </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit B: Skincare Products, Tools &amp; Treatments</h3>
-              <p className="mb-0">Now that you have a good basic understanding of skin, and of your specific role as a skincare consultant, you'll start learning about the products, tools, and treatments you can recommend to your clients based on their needs. You'll learn to read labels and identify key ingredients, and build a personalized skincare routine tailor-made to your client.</p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.b} />
+          <div className="container">
+            <div className="row my-5" id="unitA">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/sk-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit A" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit A: Introduction to Skincare</h3>
+                <p className="mb-0">In this first unit, you'll explore the basics of skincare consulting. You'll get a thorough understanding of why skincare is so important, and why makeup artists in particular should all be trained in skincare as well. You'll then dive into what you need to succeed as a skincare consultant, and get a deep dive into skin anatomy, and how to identify the five major skin types. </p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.a} />
+              </div>
             </div>
           </div>
-          <div className="row my-5" id="unitC">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/sk-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit C" />
-            </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit C: Workng with Skin Conditions</h3>
-              <p className="mb-0">In this unit you'll learn about specific skin conditions and skin concerns that you'll encounter as a skincare professional. You'll learn how to assess these conditions, and what products/tools to specifically recommend or stay away from based on the client's unique needs. You'll also learn what serious but rare conditions to look out for, and when you should refer a client to a dermatologist or other healthcare professional.</p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.c} />
-            </div>
-          </div>
-          <div className="row my-5" id="unitD">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/sk-outline-d.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit D" />
-            </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit D: Anti-Aging Skincare</h3>
-              <p className="mb-0">As a skincare consultant, you’ll probably see your fair share of clients who are looking for aging cures. This is a high demand industry so you’ll be expected to be well versed in anti-aging treatments, tools and products. Be sure to also keep up with the latest trends and gimmicks so that you can advise your clients!</p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.d} />
+          <div className="container">
+            <div className="row my-5" id="unitB">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/sk-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit B" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit B: Skincare Products, Tools &amp; Treatments</h3>
+                <p className="mb-0">Now that you have a good basic understanding of skin, and of your specific role as a skincare consultant, you'll start learning about the products, tools, and treatments you can recommend to your clients based on their needs. You'll learn to read labels and identify key ingredients, and build a personalized skincare routine tailor-made to your client.</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.b} />
+              </div>
             </div>
           </div>
-          <div className="row my-5" id="unitE">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/sk-outline-e.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit E" />
+          <div className="container">
+            <div className="row my-5" id="unitC">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/sk-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit C" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit C: Workng with Skin Conditions</h3>
+                <p className="mb-0">In this unit you'll learn about specific skin conditions and skin concerns that you'll encounter as a skincare professional. You'll learn how to assess these conditions, and what products/tools to specifically recommend or stay away from based on the client's unique needs. You'll also learn what serious but rare conditions to look out for, and when you should refer a client to a dermatologist or other healthcare professional.</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.c} />
+              </div>
             </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit E: Natural Skincare &amp; The Skincare Consultation Process</h3>
-              <p className="mb-0">Some clients will insist on going “all natural” and you'll quickly learn that this term can mean different things to different people. In the first part of this final unit, you'll learn how to make your own skincare products safely and naturally. In your final section of the unit, you'll put together everything you've learned so far and apply it to the skincare consultation process.</p>
+          </div>
+          <div className="container">
+            <div className="row my-5" id="unitD">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/sk-outline-d.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit D" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit D: Anti-Aging Skincare</h3>
+                <p className="mb-0">As a skincare consultant, you’ll probably see your fair share of clients who are looking for aging cures. This is a high demand industry so you’ll be expected to be well versed in anti-aging treatments, tools and products. Be sure to also keep up with the latest trends and gimmicks so that you can advise your clients!</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.d} />
+              </div>
             </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.e} />
+          </div>
+          <div className="container">
+            <div className="row my-5" id="unitE">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/sk-outline-e.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit E" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit E: Natural Skincare &amp; The Skincare Consultation Process</h3>
+                <p className="mb-0">Some clients will insist on going “all natural” and you'll quickly learn that this term can mean different things to different people. In the first part of this final unit, you'll learn how to make your own skincare products safely and naturally. In your final section of the unit, you'll put together everything you've learned so far and apply it to the skincare consultation process.</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.e} />
+              </div>
             </div>
           </div>
           <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c[]=sk" className="btn btn-secondary">ENROLL ONLINE</a></p>
@@ -389,7 +399,7 @@ const Page: React.FC = () => {
           <div className="row text-center">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
               <h2 className="text-dark text-center">Your Skincare Consultant Tutor</h2>
-              <p><img src={require('../../../images/tutor-nathan.jpg')} alt="Nathan Johnson" /></p>
+              <p><img src={require('../../../images/tutor-nathan.jpg')} className="img-fluid" alt="Nathan Johnson" /></p>
               <h3 className="text-dark">Nathan Johnson</h3>
               <p>With over 18 years of experience as an executive makeup artist and skincare consultant, Nathan is excited to share that knowledge with you and help you advance your skillset. Nathan is featured in QC Makeup Academy's instructional videos, and will be the expert to mentor you through your learning journey!</p>
             </div>
