@@ -179,7 +179,7 @@ const Page: React.FC = () => {
 
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
-        <PaymentPlans courses={[ 'ic' ]} doubleGuarantee={doubleGuarantee} />
+        <PaymentPlans courses={['ic']} doubleGuarantee={doubleGuarantee} />
       </section>
 
       <section id="whatSection" className="bg-light">
@@ -212,7 +212,7 @@ const Page: React.FC = () => {
               <a className="btn btn-dark" href="#outline" role="button">Read the Full Course Outline</a>
             </div>
             <div className="col-12 col-md-6 col-lg-4">
-              <p className="d-none d-lg-block"><img src={require('../../../images/ic-what-youll-learn.jpg')} className="text-center" alt="What you'll learn in the personal caregiving course" /></p>
+              <p className="d-none d-lg-block"><img src={require('../../../images/ic-what-youll-learn.jpg')} className="text-center img-fluid" alt="What you'll learn in the personal caregiving course" /></p>
             </div>
           </div>
         </div>
@@ -246,40 +246,46 @@ const Page: React.FC = () => {
               <p className="lead text-center">Here's a detailed outline of the topics you'll learn in the Personal Caregiving certification course.</p>
             </div>
           </div>
-          <div className="row my-5" id="unitA">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/ic-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Informal Caregiving Course Unit A" />
-            </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit A: Introduction to Caregiving</h3>
-              <p className="mb-0">In this first unit, you'll learn what it means to be a caregiver. We’ll discuss the details of the role and provide tips to help you maintain a positive relationship with your loved one as you help him or her through difficult times. Finally, you'll learn how to understand your loved one’s care plan and become an advocate for his or her health and wellbeing.</p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.a} />
-            </div>
-          </div>
-          <div className="row my-5" id="unitB">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/ic-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Informal Caregiving Course Unit B" />
-            </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit B: Care Needs</h3>
-              <p className="mb-0">Now that you have a good idea of your role as a caregiver, you'll start to learn how to put that knowledge to use when caring for your loved one. Your loved one will have specific challenges he or she faces every day. In this unit, you'll focus on understanding your loved one’s unique needs and providing personalized support.</p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.b} />
+          <div className="container">
+            <div className="row my-5" id="unitA">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/ic-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Informal Caregiving Course Unit A" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit A: Introduction to Caregiving</h3>
+                <p className="mb-0">In this first unit, you'll learn what it means to be a caregiver. We’ll discuss the details of the role and provide tips to help you maintain a positive relationship with your loved one as you help him or her through difficult times. Finally, you'll learn how to understand your loved one’s care plan and become an advocate for his or her health and wellbeing.</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.a} />
+              </div>
             </div>
           </div>
-          <div className="row my-5" id="unitC">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/pc-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Informal Caregiving Course Unit C" />
+          <div className="container">
+            <div className="row my-5" id="unitB">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/ic-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Informal Caregiving Course Unit B" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit B: Care Needs</h3>
+                <p className="mb-0">Now that you have a good idea of your role as a caregiver, you'll start to learn how to put that knowledge to use when caring for your loved one. Your loved one will have specific challenges he or she faces every day. In this unit, you'll focus on understanding your loved one’s unique needs and providing personalized support.</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.b} />
+              </div>
             </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit C: Technical Skills</h3>
-              <p className="mb-0">This highly practical unit is where you'll learn the details of the technical skills any personal caregiver needs to have. When working with individuals who have limited independence, caregivers are sometimes required to help with basic daily tasks such as dressing, toileting, bathing/showering or helping their loved ones move around. You’ll learn to follow procedures that keep you safe and that ensure you preserve your loved one’s dignity as you perform these practical tasks.</p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.c} />
+          </div>
+          <div className="container">
+            <div className="row my-5" id="unitC">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/pc-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Informal Caregiving Course Unit C" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit C: Technical Skills</h3>
+                <p className="mb-0">This highly practical unit is where you'll learn the details of the technical skills any personal caregiver needs to have. When working with individuals who have limited independence, caregivers are sometimes required to help with basic daily tasks such as dressing, toileting, bathing/showering or helping their loved ones move around. You’ll learn to follow procedures that keep you safe and that ensure you preserve your loved one’s dignity as you perform these practical tasks.</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.c} />
+              </div>
             </div>
           </div>
           <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c[]=ic" className="btn btn-secondary">ENROLL ONLINE</a></p>
