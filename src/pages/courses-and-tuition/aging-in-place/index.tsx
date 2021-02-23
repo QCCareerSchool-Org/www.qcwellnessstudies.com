@@ -276,7 +276,7 @@ const Page: React.FC = () => {
           <div className="row text-center">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
               <h2 className="text-dark text-center">Your Aging in Place Tutor</h2>
-              <p><img src={require('../../../images/tutor-tammy.jpg')} alt="Tammy Hart" /></p>
+              <p><img src={require('../../../images/tutor-tammy.jpg')} className="img-fluid" alt="Tammy Hart" /></p>
               <h3 className="text-dark">Tammy Hart</h3>
               <p>Tammy Hart, IDDP, CAPS, is a graduate and tutor of QC Design School. She is a Certified Aging-in-Place Specialist from the National Association of Home Builders. She is the owner and award-winning designer for Designer Chick Co. and is the previous director on the National Board for DDA (formerly CDECA).</p>
               <p>She is a professional speaker, speaking at venues like IIDEXCanada and The Small Business Forum. She’s been featured in East of the City Magazine, as a guest spot on the Rogers Daytime Durham talk show and has won the HOUZZ Service Award 2017. She works to empower young women to become successful future leaders and supports ocean clean-up efforts.</p>
