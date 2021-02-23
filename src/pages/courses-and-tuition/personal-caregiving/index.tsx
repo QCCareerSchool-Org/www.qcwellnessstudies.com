@@ -179,7 +179,7 @@ const Page: React.FC = () => {
 
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
-        <PaymentPlans courses={['ic']} doubleGuarantee={doubleGuarantee} />
+        <PaymentPlans courses={[ 'ic' ]} doubleGuarantee={doubleGuarantee} />
       </section>
 
       <section id="whatSection" className="bg-light">
