@@ -344,12 +344,14 @@ const Page: React.FC = () => {
 
       <a className="anchor" id="promo"></a>
       <section>
-        <div className="row">
-          <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-            <div className="container text-dark text-center">
-              <p><img className="img-fluid" src={require('../../../images/promo-inlay-december.png')} alt="December Promo" /></p>
-              <p className="lead mb-5">Save an extra $100 on your professional caregiver course tuition.<br />This discount will be automatically applied when you enroll.</p>
-              <p><a className="btn btn-secondary btn-lg" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+              <div className="container text-dark text-center">
+                <p><img className="img-fluid" src={require('../../../images/promo-inlay-december.png')} alt="December Promo" /></p>
+                <p className="lead mb-5">Save an extra $100 on your professional caregiver course tuition.<br />This discount will be automatically applied when you enroll.</p>
+                <p><a className="btn btn-secondary btn-lg" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>
+              </div>
             </div>
           </div>
         </div>
@@ -357,7 +359,7 @@ const Page: React.FC = () => {
 
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
-        <PaymentPlans courses={[ 'fc' ]} doubleGuarantee={doubleGuarantee} />
+        <PaymentPlans courses={['fc']} doubleGuarantee={doubleGuarantee} />
       </section>
 
       <section id="whatSection">
@@ -471,7 +473,7 @@ const Page: React.FC = () => {
           affordable="QC's course is fully online. You don't have to pay surcharges for attending lectures or classroom sessions. You complete the full course from home."
           flexible="No start dates, no deadlines, no mandatory attendance! This course is completely self-directed and self-paced. Get certified quickly or take your time. The choice is yours."
           comprehensive="You're not just learning how one caregiving company wants you do things. You're getting a foundation of knowledge in caregiving that will be useful no matter where you work!"
-          courses={[ 'fc' ]}
+          courses={['fc']}
         />
       </section>
 
@@ -488,76 +490,88 @@ const Page: React.FC = () => {
               <p className="lead text-center">Here's a detailed outline of all topics you'll learn in your caregiver certification course.</p>
             </div>
           </div>
-          <div className="row my-5" id="unitA">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/pc-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Caregiver Course Unit A" />
-            </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit A: Introduction to Caregiving</h3>
-              <p className="mb-0">In this first unit, you'll learn what it means to be a caregiver. You'll learn the details of the job, and how you'll interact with clients. Just as importantly, you’ll see the duties you WON'T be expected to complete as a caregiver. You'll then learn how to perform your initial client consultation. You’ll focus on the information you'll need to collect, and how to evaluate safety needs for each client. Finally, you'll learn how to establish and work with a detailed care plan for every client you take on.</p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.a} />
-            </div>
-          </div>
-          <div className="row my-5" id="unitB">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/pc-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Caregiver Course Unit B" />
-            </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit B: Working with Clients</h3>
-              <p className="mb-0">Now that you have a good idea of your role as a caregiver, you'll start to learn how to put that knowledge to use when working with clients. You’ll see how to help clients with everyday challenges. You’ll learn how to establish professional boundaries with your clients while still developing meaningful relationships. These can be tricky skills to master! Later in the unit, you'll focus on understanding a client's unique needs based on his or her personal challenges.</p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.b} />
+          <div className="container">
+            <div className="row my-5" id="unitA">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/pc-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Caregiver Course Unit A" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit A: Introduction to Caregiving</h3>
+                <p className="mb-0">In this first unit, you'll learn what it means to be a caregiver. You'll learn the details of the job, and how you'll interact with clients. Just as importantly, you’ll see the duties you WON'T be expected to complete as a caregiver. You'll then learn how to perform your initial client consultation. You’ll focus on the information you'll need to collect, and how to evaluate safety needs for each client. Finally, you'll learn how to establish and work with a detailed care plan for every client you take on.</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.a} />
+              </div>
             </div>
           </div>
-          <div className="row my-5" id="unitC">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/pc-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Caregiver Course Unit C" />
-            </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit C: Working as a Caregiver</h3>
-              <p className="mb-0">In Unit C, you'll dive into the services you'll offer as a caregiver and you’ll start developing the skills you need. Whether you plan on providing all these services once you start your business, it's important to have the full range of skills you’ll need as a successful caregiver. You’ll also explore the different workplace settings available to you as a caregiver. For example, you might choose to work for a caregiving agency, a retirement home or to start your own caregiving business.</p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.c} />
-            </div>
-          </div>
-          <div className="row my-5" id="unitD">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/pc-outline-d.jpg')} className="rounded img-fluid mt-2" alt="Caregiver Course Unit D" />
-            </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit D: Technical Skills</h3>
-              <p className="mb-0">This highly practical unit is where you'll learn about the technical skills any caregiver needs before helping a client with personal care tasks. Caregivers are sometimes required to help with basic daily tasks such as dressing, toileting, bathing/showering or helping their client move around. You’ll learn methods that will keep you safe and that ensure you preserve your client's dignity as you perform these delicate tasks.</p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.d} />
+          <div className="container">
+            <div className="row my-5" id="unitB">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/pc-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Caregiver Course Unit B" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit B: Working with Clients</h3>
+                <p className="mb-0">Now that you have a good idea of your role as a caregiver, you'll start to learn how to put that knowledge to use when working with clients. You’ll see how to help clients with everyday challenges. You’ll learn how to establish professional boundaries with your clients while still developing meaningful relationships. These can be tricky skills to master! Later in the unit, you'll focus on understanding a client's unique needs based on his or her personal challenges.</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.b} />
+              </div>
             </div>
           </div>
-          <div className="row my-5" id="unitE">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/pc-outline-e.jpg')} className="rounded img-fluid mt-2" alt="Caregiver Unit E" />
-            </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit E: Client Scenarios</h3>
-              <p className="mb-0">In Unit E, you’ll learn about challenging situations and how to handle each one. You'll use the scenarios outlined in your course text as a guide to help you start thinking like a professional caregiver. Then you'll complete scenario-based assignments to practice interacting with clients in challenging situations.</p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.e} />
+          <div className="container">
+            <div className="row my-5" id="unitC">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/pc-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Caregiver Course Unit C" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit C: Working as a Caregiver</h3>
+                <p className="mb-0">In Unit C, you'll dive into the services you'll offer as a caregiver and you’ll start developing the skills you need. Whether you plan on providing all these services once you start your business, it's important to have the full range of skills you’ll need as a successful caregiver. You’ll also explore the different workplace settings available to you as a caregiver. For example, you might choose to work for a caregiving agency, a retirement home or to start your own caregiving business.</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.c} />
+              </div>
             </div>
           </div>
-          <div className="row my-5" id="unitF">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/fcg-unit-f-course-outline.jpg')} className="rounded img-fluid mt-2" alt="Caregiver Unit F" />
+          <div className="container">
+            <div className="row my-5" id="unitD">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/pc-outline-d.jpg')} className="rounded img-fluid mt-2" alt="Caregiver Course Unit D" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit D: Technical Skills</h3>
+                <p className="mb-0">This highly practical unit is where you'll learn about the technical skills any caregiver needs before helping a client with personal care tasks. Caregivers are sometimes required to help with basic daily tasks such as dressing, toileting, bathing/showering or helping their client move around. You’ll learn methods that will keep you safe and that ensure you preserve your client's dignity as you perform these delicate tasks.</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.d} />
+              </div>
             </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit F: Business Training Unit</h3>
-              <p className="mb-0">If you plan on launching your own caregiving business, don't skip this essential final unit! You'll work through the specific elements of getting your business off the ground. You’ll learn how to set your prices and how to find your first clients. You’ll also learn how to build your website, market your services and much more. This unit will help you launch your career in high gear!</p>
+          </div>
+          <div className="container">
+            <div className="row my-5" id="unitE">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/pc-outline-e.jpg')} className="rounded img-fluid mt-2" alt="Caregiver Unit E" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit E: Client Scenarios</h3>
+                <p className="mb-0">In Unit E, you’ll learn about challenging situations and how to handle each one. You'll use the scenarios outlined in your course text as a guide to help you start thinking like a professional caregiver. Then you'll complete scenario-based assignments to practice interacting with clients in challenging situations.</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.e} />
+              </div>
             </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.f} />
+          </div>
+          <div className="container">
+            <div className="row my-5" id="unitF">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/fcg-unit-f-course-outline.jpg')} className="rounded img-fluid mt-2" alt="Caregiver Unit F" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit F: Business Training Unit</h3>
+                <p className="mb-0">If you plan on launching your own caregiving business, don't skip this essential final unit! You'll work through the specific elements of getting your business off the ground. You’ll learn how to set your prices and how to find your first clients. You’ll also learn how to build your website, market your services and much more. This unit will help you launch your career in high gear!</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.f} />
+              </div>
             </div>
           </div>
           <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c[]=fc" className="btn btn-secondary">ENROLL ONLINE</a></p>
