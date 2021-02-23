@@ -128,7 +128,7 @@ const Page: React.FC = () => {
 
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
-        <PaymentPlans courses={[ 'ap' ]} doubleGuarantee={doubleGuarantee} />
+        <PaymentPlans courses={['ap']} doubleGuarantee={doubleGuarantee} />
       </section>
 
       <section id="whatSection">
@@ -213,7 +213,7 @@ const Page: React.FC = () => {
           affordable="Since QC's course is fully online, you don't have to pay surcharges for attending lectures or webinars. You complete the full course from home."
           flexible="No start dates, no deadlines, no mandatory webinars! This course is completely self-directed and self-paced. Get certified quickly, or take your time."
           comprehensive="You'll learn many different facets of aging in place design to ensure you'll be prepared to work with any client that walks through your doors!"
-          courses={[ 'ap' ]}
+          courses={['ap']}
         />
       </section>
 
@@ -230,40 +230,46 @@ const Page: React.FC = () => {
               <p className="lead text-center">Here's a detailed outline of all topics you'll learn in the aging in place certification course.</p>
             </div>
           </div>
-          <div className="row my-5" id="unitA">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/ap-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit A" />
-            </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit A: Introduction to Aging in Place</h3>
-              <p className="mb-0">This unit will introduce you to the Aging in Place (AIP) design industry. You’ll learn about the responsibilities of an AIP designer and how AIP services differ from other types of design work. You’ll also learn about common physiological changes, medical conditions, and lifestyle changes people experience as they age, and about all of the different housing and support options available to people facing aging-related challenges. This unit will also teach you how act as an AIP educator and market your services effectively.</p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.a} />
-            </div>
-          </div>
-          <div className="row my-5" id="unitB">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/ap-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit B" />
-            </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit B: Aging in Place Practices</h3>
-              <p className="mb-0">Unit B focuses on developing the skills required to assess client needs, evaluate homes from an AIP perspective, and create AIP modification plans. You’ll start by learning about the design standards AIP professionals use to guide their work, including universal design, accessible design and visitable design. You’ll then learn how to apply these principles to assess clients’ homes and make effective design recommendations. This unit will also teach you how you can incorporate decluttering and home transition services into your AIP business.</p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.b} />
+          <div className="container">
+            <div className="row my-5" id="unitA">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/ap-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit A" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit A: Introduction to Aging in Place</h3>
+                <p className="mb-0">This unit will introduce you to the Aging in Place (AIP) design industry. You’ll learn about the responsibilities of an AIP designer and how AIP services differ from other types of design work. You’ll also learn about common physiological changes, medical conditions, and lifestyle changes people experience as they age, and about all of the different housing and support options available to people facing aging-related challenges. This unit will also teach you how act as an AIP educator and market your services effectively.</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.a} />
+              </div>
             </div>
           </div>
-          <div className="row my-5" id="unitC">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/ap-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit C" />
+          <div className="container">
+            <div className="row my-5" id="unitB">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/ap-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit B" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit B: Aging in Place Practices</h3>
+                <p className="mb-0">Unit B focuses on developing the skills required to assess client needs, evaluate homes from an AIP perspective, and create AIP modification plans. You’ll start by learning about the design standards AIP professionals use to guide their work, including universal design, accessible design and visitable design. You’ll then learn how to apply these principles to assess clients’ homes and make effective design recommendations. This unit will also teach you how you can incorporate decluttering and home transition services into your AIP business.</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.b} />
+              </div>
             </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit C: Final Project</h3>
-              <p className="mb-0">This unit will ask you to work with the home of a friend or relative. The home’s resident(s) can be any age and at any stage of life. You will simply be assessing the home as if it belonged to an AIP client. You’ll start by assessing the whole home in broad terms. In later assignments, you’ll focus on two specific rooms in the home. You can choose any type of room (bedroom, bathroom, kitchen, living room, entryway, etc.). However, to get the most from this project, we recommend that you pick a room in which you can make a number of suggestions for AIP improvements. A room that is already AIP-ready won’t allow you to practice applying all of your new skills.</p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <div id="accordionUnitC"></div>
+          </div>
+          <div className="container">
+            <div className="row my-5" id="unitC">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/ap-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit C" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit C: Final Project</h3>
+                <p className="mb-0">This unit will ask you to work with the home of a friend or relative. The home’s resident(s) can be any age and at any stage of life. You will simply be assessing the home as if it belonged to an AIP client. You’ll start by assessing the whole home in broad terms. In later assignments, you’ll focus on two specific rooms in the home. You can choose any type of room (bedroom, bathroom, kitchen, living room, entryway, etc.). However, to get the most from this project, we recommend that you pick a room in which you can make a number of suggestions for AIP improvements. A room that is already AIP-ready won’t allow you to practice applying all of your new skills.</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <div id="accordionUnitC"></div>
+              </div>
             </div>
           </div>
           <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c[]=ap" className="btn btn-secondary">ENROLL ONLINE</a></p>

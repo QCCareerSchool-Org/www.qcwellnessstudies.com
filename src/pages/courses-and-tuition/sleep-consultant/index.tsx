@@ -437,70 +437,70 @@ const Page: React.FC = () => {
             </div>
           </div>
           <div className="container">
-          <div className="row my-5" id="unitA">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/sl-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit A" />
+            <div className="row my-5" id="unitA">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/sl-outline-a.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit A" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit A: Sleep Consulting Practices</h3>
+                <p className="mb-0">In this first unit, you'll explore the basics of sleep consulting. You'll learn the science of sleep, how children sleep, and how you can help caregivers promote healthy sleep habits. You'll learn every method of sleep consulting, including the advantages and disadvantages of each. You'll learn to use various tools of the trade to help create an optimal sleep space and promote healthy sleep.</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.a} />
+              </div>
             </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit A: Sleep Consulting Practices</h3>
-              <p className="mb-0">In this first unit, you'll explore the basics of sleep consulting. You'll learn the science of sleep, how children sleep, and how you can help caregivers promote healthy sleep habits. You'll learn every method of sleep consulting, including the advantages and disadvantages of each. You'll learn to use various tools of the trade to help create an optimal sleep space and promote healthy sleep.</p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.a} />
-            </div>
-          </div>
           </div>
           <div className="container">
-          <div className="row my-5" id="unitB">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/sl-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit B" />
+            <div className="row my-5" id="unitB">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/sl-outline-b.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit B" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit B: Sleep Consulting Application</h3>
+                <p className="mb-0">Now that you have a good foundation of knowledge as a sleep consultant, you'll start learning how to apply those practices to provide the best service possible to clients. You'll learn how to create, implement and adapt individualized sleep plans unique to each client.</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.b} />
+              </div>
             </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit B: Sleep Consulting Application</h3>
-              <p className="mb-0">Now that you have a good foundation of knowledge as a sleep consultant, you'll start learning how to apply those practices to provide the best service possible to clients. You'll learn how to create, implement and adapt individualized sleep plans unique to each client.</p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.b} />
-            </div>
-          </div>
           </div>
           <div className="container">
-          <div className="row my-5" id="unitC">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/sl-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit C" />
+            <div className="row my-5" id="unitC">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/sl-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit C" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit C: Professional Sleep Consulting &amp; Coaching</h3>
+                <p className="mb-0">In this unit, you'll start putting into practice the knowledge you've acquired over the past two units. You'll go over a number of case studies of unique situations you're likely to encounter as a sleep consultant. You'll start learning how to best work with different clients, and how to turn your new skills and knowledge into a rewarding career.</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.c} />
+              </div>
             </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit C: Professional Sleep Consulting &amp; Coaching</h3>
-              <p className="mb-0">In this unit, you'll start putting into practice the knowledge you've acquired over the past two units. You'll go over a number of case studies of unique situations you're likely to encounter as a sleep consultant. You'll start learning how to best work with different clients, and how to turn your new skills and knowledge into a rewarding career.</p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.c} />
-            </div>
-          </div>
           </div>
           <div className="container">
-          <div className="row my-5" id="unitD">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/sl-outline-d.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit D" />
-            </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit D: Business Training</h3>
-              <p className="mb-0">If you plan on launching your own sleep consulting business, don't skip this essential final unit! You'll work on getting your business on its feet, and gain invaluable feedback from your tutor in the process!</p>
-            </div>
-            <div className="col-12 col-md-10 offset-md-1">
-              <UnitOutline data={units.d} />
+            <div className="row my-5" id="unitD">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/sl-outline-d.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit D" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit D: Business Training</h3>
+                <p className="mb-0">If you plan on launching your own sleep consulting business, don't skip this essential final unit! You'll work on getting your business on its feet, and gain invaluable feedback from your tutor in the process!</p>
+              </div>
+              <div className="col-12 col-md-10 offset-md-1">
+                <UnitOutline data={units.d} />
+              </div>
             </div>
           </div>
-          </div>          
           <div className="container">
-          <div className="row my-5" id="unitE">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <img src={require('../../../images/sl-outline-e.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit E" />
-            </div>
-            <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit E: Final Project</h3>
-              <p className="mb-0">This unit is composed of a final project where you will create a full sleep plan for a real client. You'll practice interacting with new clients, filling out an intake questionnaire, and developing a full sleep plan with feedback from your tutor.</p>
-            </div>
+            <div className="row my-5" id="unitE">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
+                <img src={require('../../../images/sl-outline-e.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit E" />
+              </div>
+              <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
+                <h3 className="text-dark">Unit E: Final Project</h3>
+                <p className="mb-0">This unit is composed of a final project where you will create a full sleep plan for a real client. You'll practice interacting with new clients, filling out an intake questionnaire, and developing a full sleep plan with feedback from your tutor.</p>
+              </div>
             </div>
           </div>
           <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/" className="btn btn-secondary">ENROLL ONLINE</a></p>
