@@ -370,7 +370,7 @@ const Page: React.FC = () => {
               <a className="btn btn-dark" href="#outline" role="button">Read the Full Course Outline</a>
             </div>
             <div className="col-12 col-md-6 col-lg-4">
-              <p className="d-none d-lg-block"><img src={require('../../../images/sl-what-youll-learn.jpg')} className="text-center" alt="What you'll learn in the sleep consultant course" /></p>
+              <p className="d-none d-lg-block"><img src={require('../../../images/sl-what-youll-learn.jpg')} className="text-center img-fluid" alt="What you'll learn in the sleep consultant course" /></p>
             </div>
           </div>
         </div>

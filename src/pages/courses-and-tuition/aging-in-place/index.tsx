@@ -181,7 +181,7 @@ const Page: React.FC = () => {
               <a className="btn btn-dark" href="#outline" role="button">Read the Full Course Outline</a>
             </div>
             <div className="col-12 col-md-6 col-lg-4">
-              <p className="d-none d-lg-block"><img src={require('../../../images/ap-what-youll-learn.jpg')} className="text-center" alt="What You'll Learn in the Skincare Consultant Course" /></p>
+              <p className="d-none d-lg-block"><img src={require('../../../images/ap-what-youll-learn.jpg')} className="text-center img-fluid" alt="What You'll Learn in the Skincare Consultant Course" /></p>
             </div>
           </div>
         </div>

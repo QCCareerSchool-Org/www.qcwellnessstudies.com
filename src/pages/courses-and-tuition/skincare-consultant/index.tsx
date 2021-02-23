@@ -270,7 +270,7 @@ const Page: React.FC = () => {
               <a className="btn btn-dark" href="#outline" role="button">Read the Full Course Outline</a>
             </div>
             <div className="col-12 col-md-6 col-lg-4">
-              <p className="d-none d-lg-block"><img src={require('../../../images/sk-what-youll-learn.jpg')} className="text-center" alt="What You'll Learn in the Skincare Consultant Course" /></p>
+              <p className="d-none d-lg-block"><img src={require('../../../images/sk-what-youll-learn.jpg')} className="text-center img-fluid" alt="What You'll Learn in the Skincare Consultant Course" /></p>
             </div>
           </div>
         </div>
@@ -389,7 +389,7 @@ const Page: React.FC = () => {
           <div className="row text-center">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
               <h2 className="text-dark text-center">Your Skincare Consultant Tutor</h2>
-              <p><img src={require('../../../images/tutor-nathan.jpg')} alt="Nathan Johnson" /></p>
+              <p><img src={require('../../../images/tutor-nathan.jpg')} className="img-fluid" alt="Nathan Johnson" /></p>
               <h3 className="text-dark">Nathan Johnson</h3>
               <p>With over 18 years of experience as an executive makeup artist and skincare consultant, Nathan is excited to share that knowledge with you and help you advance your skillset. Nathan is featured in QC Makeup Academy's instructional videos, and will be the expert to mentor you through your learning journey!</p>
             </div>
