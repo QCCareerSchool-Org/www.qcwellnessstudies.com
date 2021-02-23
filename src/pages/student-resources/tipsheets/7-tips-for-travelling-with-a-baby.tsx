@@ -48,7 +48,7 @@ const Page: NextPage = () => (
                     <h4>5.	Follow the usual bedtime routine as closely as possible</h4>
                     <p>Routine helps an infant settle and know that bedtime is coming soon. Follow through with the usual bedtime activities, such as having a bath, reading a story, etc., to establish routine while away from home.</p>
                     <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-10 offset-lg-1 text-center flex-column">
-                        <p><img className="img-fluid" src={require('../../../images/sl-asian-young-pretty-mother-giving-bottle.jpg')} alt="mother giving baby bottle" /></p>
+                        <p><img className="img-fluid" src={require('../../../images/sl-mother-giving-bottle.jpg')} alt="mother giving baby bottle" /></p>
                     </div>
                     <h4>6.	Relax the routine for events and activities.</h4>
                     <p>Be flexible and ease the schedule slightly to suit travel plans and events, such as weddings, parties, day trips and family celebrations. Allow the infant to fall asleep outside of the regular nap times, such as in a car or plane, to keep the baby in a good mood later on. Trying to follow a rigid schedule will cause stress for the parents and infant!</p>
@@ -56,7 +56,7 @@ const Page: NextPage = () => (
                     <p>After the trip, get back to the regular sleep plan and routine as quickly as possible. Put down the infant at the normal nap times and follow the usual bedtime routine. However, if the infant is adjusting between time zones, change the sleep schedule gradually. The baby will need time to adapt.</p>
                     <p><Link href="/tip-sheets/7-tips-travelling-baby.pdf"><a className="btn btn-primary"><strong>Download Tipsheet</strong></a></Link></p>
                     <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-10 offset-lg-1 text-center flex-column">
-                        <p><img className="img-fluid" src={require('../../../images/sl-adorable-baby-drinking-milk-blue-bassinet.jpg')} alt="baby sleeping in a crib" /></p>
+                        <p><img className="img-fluid" src={require('../../../images/sl-baby-blue-bassinet.jpg')} alt="baby sleeping in a crib" /></p>
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@ const Page: NextPage = () => (
 
         <style jsx>{`
       #enrollToday{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}     
-      #heroSection{background-image:url(${require('../../../images/bg-home-top.jpg')});background-size:cover;background-position:center}
+      #heroSection{background-image:url(${require('../../../images/sl-hero-7-tips-travelling-baby.jpg')});background-size:cover;background-position:center}
       .course-icon{width:80px}
 
       /* sm */
