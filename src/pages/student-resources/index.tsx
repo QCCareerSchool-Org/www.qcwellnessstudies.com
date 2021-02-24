@@ -28,6 +28,7 @@ const Page: NextPage = () => (
     </section>
 
     <section>
+      <h1 className="text-dark text-center">Blog Posts</h1>
       <div className="container">
         <div className="row mb-4">
           <CardColumn>
@@ -74,8 +75,9 @@ const Page: NextPage = () => (
           </CardColumn>
         </div>
       </div>
-      </section>
-      <section>
+    </section>
+    <section>
+    <h1 className="text-dark text-center">Tipsheets</h1>
       <div className="container">
         <div className="row mb-4">
           <CardColumn>
@@ -121,7 +123,7 @@ const Page: NextPage = () => (
             />
           </CardColumn>
         </div>
-      </div>     
+      </div>
     </section>
 
     <section id="enrollToday" className="text-light">
