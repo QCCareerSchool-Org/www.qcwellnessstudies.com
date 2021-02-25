@@ -74,10 +74,13 @@ const Page: NextPage = () => (
             />
           </CardColumn>
         </div>
+        <p className="col 12">Article 4</p>
+        <p className="col 12">Article 5</p>
+        <p className="col 12">Article 6</p>
       </div>
     </section>
     <section>
-    <h1 className="text-dark text-center">Tipsheets</h1>
+      <h1 className="text-dark text-center">Tipsheets</h1>
       <div className="container">
         <div className="row mb-4">
           <CardColumn>
@@ -123,6 +126,9 @@ const Page: NextPage = () => (
             />
           </CardColumn>
         </div>
+        <p className="col 12">Tipsheet 4</p>
+        <p className="col 12">Tipsheet 5</p>
+        <p className="col 12">Tipsheet 6</p>
       </div>
     </section>
 
