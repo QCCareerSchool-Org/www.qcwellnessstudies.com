@@ -140,8 +140,12 @@ const Page: React.FC = () => {
           <h2 className="h3">The 6 Most Commonly Used Sleep Training Methods</h2>
           <p>Here are the methods most regularly recommended by certified sleep consultants:</p>
           <div className="row">
-            <div>
+            <div className="col-12 col-sm-10 col-md-8 col-lg-6">
+
               <UnitOutline data={units.a} />
+            </div>
+            <div className="col-12 col-sm-10 col-md-8 col-lg-6">
+              <p><img className="img-fluid" src={require('../../../images/sl-mother-working-in-laptop.jpg')} alt="happy baby with raised arms" /></p>
             </div>
           </div>
         </div>
