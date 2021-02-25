@@ -1,10 +1,8 @@
-import Link from 'next/link';
 import React from 'react';
 
 import { OutlineData, UnitOutline } from '../../../components/unit-outline';
 import { SEO } from '../../../components/seo';
 import { DefaultLayout } from '../../../layouts/default';
-
 
 const Page: React.FC = () => {
   const units: { [key: string]: OutlineData[] } = {
@@ -15,7 +13,7 @@ const Page: React.FC = () => {
           'A fully self-soothing form of sleep training',
           'Teaches the infant how to fall asleep without assistance',
           'Parents/caregivers have little to no involvement outside of supervising to ensure the baby’s safety',
-          'Goal: Eliminate the need for parental soothing ',
+          'Goal: Eliminate the need for parental soothing',
           {
             title: 'Downsides: Some critics believe this method can cause separation anxiety and stress.',
             topics: [
@@ -40,7 +38,7 @@ const Page: React.FC = () => {
           'Caregivers place the baby in their crib while partially awake and then sit in a chair next to the crib until the baby falls asleep, periodically reaching in to calm the baby',
           'Over time, the chair is to be moved further away from the crib until finally out of the room',
           'Goal: Teach infants how to recognize bedtime habits and fall asleep without direct assistance',
-          'Downsides: This method takes time and requires patience—parents looking for immediate results may become frustrated. ',
+          'Downsides: This method takes time and requires patience—parents looking for immediate results may become frustrated.',
         ],
       },
       {
@@ -57,13 +55,13 @@ const Page: React.FC = () => {
         title: '5) The Pick Up Put Down Method',
         topics: [
           'Another mixture of self-soothing and caregiver-soothing techniques that requires the caregiver to respond to almost ALL fussing',
-          'Parents will pick up and soothe the fussing infant, then immediately put them back down once fussing has stopped. ',
+          'Parents will pick up and soothe the fussing infant, then immediately put them back down once fussing has stopped.',
           'Gradually, caregivers will reduce the number (and length) of handling times and switch to the fading the method.',
           'Goal: Gradually teach the infant self-soothing with a lot of caregiver support.',
           {
             title: 'Downsides: This sleep training method requires a lengthy implementation time, with limited improvements often seen in the early stages of the process',
             topics: [
-              'This method can be disruptive to infants who are easily stimulated ',
+              'This method can be disruptive to infants who are easily stimulated',
             ],
           },
         ],
@@ -73,7 +71,7 @@ const Page: React.FC = () => {
         topics: [
           'Many unnamed sleep training techniques follow the no cry method. They encourage caregivers to relax and soothe the infant and avoid tears altogether.',
           'Developing strict yet relaxing pre-bedtime routines is key for this method’s success',
-          'Goal: Provide sufficient comfort to avoid tears and stress before sleep to limit the baby and caregiver’s discomfort ',
+          'Goal: Provide sufficient comfort to avoid tears and stress before sleep to limit the baby and caregiver’s discomfort',
           'Downsides: Some people believe that no cry methods limit a baby’s independence and prevent them from learning to self-soothe',
         ],
       },
@@ -83,12 +81,12 @@ const Page: React.FC = () => {
   return (
     <DefaultLayout>
       <SEO
-        title="Baby Sign Language for Beginners: When (and How) to Start"
-        description="Baby sign language can prove to be a useful tool to recommend to your clients!"
-        canonical="/courses-and-tuition/sleep-consultant/baby-sign-language-for-beginners"
+        title="The 6 Common Training Methods of an Infant Sleep Consultant"
+        description="A sleep training method is a system used to encourage children to develop natural, healthy sleeping habits. Experts in the field have developed these methodologies over time, based on research developments and personal best practices. "
+        canonical="/courses-and-tuition/sleep-consultant/the-6-common-training-methods-of-an-infant-sleep-consultant"
         image={{
-          src: require('../../../images/sl-baby-sign-language-cover.jpg'),
-          alt: 'baby sign language',
+          src: require('../../../images/sl-mother-working-in-laptop.jpg'),
+          alt: 'mother working in a laptop',
         }}
       />
 
@@ -110,12 +108,12 @@ const Page: React.FC = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-              <h2 className="h3">Sleep Training Methodology</h2>
+              <h2 className="h3">Sleep Training Methods</h2>
               <p>As a professional sleep consultant, you’ll use your expertise in sleep training methodology to help your clients establish healthy sleep habits for their babies.</p>
               <p> Earn your certification from the safety of home with  <a href="/courses-and-tuition/sleep-consultant">QC’s online Sleep Consultant Course!</a></p>
             </div>
             <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-              <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-what-is.jpg')} alt="happy baby with raised arms" /></p>
+              <p><img className="img-fluid" src={require('../../../images/sl-close-portrait-newborn-baby.jpg')} alt="happy baby with raised arms" /></p>
             </div>
           </div>
         </div>
@@ -128,10 +126,10 @@ const Page: React.FC = () => {
               <h2 className="h3">What is a Sleep Training Method?</h2>
               <p>A sleep training method is a system used to encourage children to develop natural, healthy sleeping habits. Experts in the field have developed these methodologies over time, based on research developments and personal best practices.</p>
               <p>Sleep training methods can be placed on a spectrum based on the amount of parental soothing involved in each strategy. You’ll find self-soothing methods on one end of the spectrum and caregiver-soothing methods on the other. The majority of sleeping training methods are a mixture of self- and caregiver-soothing, falling somewhere in the middle of the spectrum. You’ll personalize your sleep training recommendations to each client and their unique needs. There is no single “right answer” when it comes to sleep training.</p>
-              <p>Importantly, sleep training methods aren’t likely to resolve sleep issues all on they’re own. You’ll also need to consider a variety of other factors, such as establishing routines and improving sleep spaces, to successfully implement sleep training.</p>            
+              <p>Importantly, sleep training methods aren’t likely to resolve sleep issues all on they’re own. You’ll also need to consider a variety of other factors, such as establishing routines and improving sleep spaces, to successfully implement sleep training.</p>
             </div>
             <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6">
-              <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-hands.jpg')} alt="baby smiling and covering mouth with hands" /></p>
+              <p><img className="img-fluid" src={require('../../../images/sl-baby-lying-on-bed-falling-asleep.jpg')} alt="baby smiling and covering mouth with hands" /></p>
             </div>
           </div>
         </div>
@@ -141,20 +139,27 @@ const Page: React.FC = () => {
         <div className="container">
           <h2 className="h3">The 6 Most Commonly Used Sleep Training Methods</h2>
           <p>Here are the methods most regularly recommended by certified sleep consultants:</p>
-          <div className="row my-5" id="unitA">
-            <div className="col-8">
+          <div className="row">
+            <div>
               <UnitOutline data={units.a} />
             </div>
           </div>
         </div>
       </section>
 
-      <section>
+      <section className="bg-light">
         <div className="container">
-          <h2 className="h3">Which Method is Right for You?</h2>
-          <p>There is NO scientific proof that one sleep training method works better than another. It all depends on each individual infant’s needs and your client’s goals. Become well-versed in multiple sleep training methods. This way, you can provide clients with a wider variety of options, based on their personal situation, circumstances, and needs.</p>
-          <p>Keep in mind that you can also adapt any of these techniques in order to better serve your client and their infant. Ultimately, the more experience you gain in the field, the better your understanding will be of the different sleep training methods at your disposal.</p>
-          <p>Want to learn more about the type of training you’ll get from QC’s Sleep Consultant Course? Check out our feature on QC Wellness Studies graduate, <a href="/student-features">Sarah Pashniak!</a> </p>
+          <div className="row">
+            <div className="col-12 col-sm-10 col-md-8 col-lg-6 order-lg-2">
+              <h2 className="h3">Which Method is Right for You?</h2>
+              <p>There is NO scientific proof that one sleep training method works better than another. It all depends on each individual infant’s needs and your client’s goals. Become well-versed in multiple sleep training methods. This way, you can provide clients with a wider variety of options, based on their personal situation, circumstances, and needs.</p>
+              <p>Keep in mind that you can also adapt any of these techniques in order to better serve your client and their infant. Ultimately, the more experience you gain in the field, the better your understanding will be of the different sleep training methods at your disposal.</p>
+              <p>Want to learn more about the type of training you’ll get from QC’s Sleep Consultant Course? Check out our feature on QC Wellness Studies graduate, <a href="/student-features">Sarah Pashniak!</a></p>
+            </div>
+            <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6">
+              <p><img className="img-fluid" src={require('../../../images/sl-newborn-baby-sleeping.jpg')} alt="thirsty baby moving towards baby bottle" /></p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -169,7 +174,7 @@ const Page: React.FC = () => {
 
       <style jsx>{`       
       #enrollSection{background-image: url(${require('../../../images/bg-enrollment.jpg')});background-size: cover;}
-      #heroSection{background-image:url(${require('../../../images/sl-baby-sign-language-cover.jpg')});background-size:cover;background-position:center} 
+      #heroSection{background-image:url(${require('../../../images/sl-mother-working-in-laptop.jpg')});background-size:cover;background-position:center} 
     `}</style>
 
     </DefaultLayout>
