@@ -15,13 +15,13 @@ const Page: React.FC = () => {
           'A fully self-soothing form of sleep training',
           'Teaches the infant how to fall asleep without assistance',
           'Parents/caregivers have little to no involvement outside of supervising to ensure the baby’s safety',
-          'Goal: Eliminate the need for parental soothing ',      
+          'Goal: Eliminate the need for parental soothing ',
           {
             title: 'Downsides: Some critics believe this method can cause separation anxiety and stress.',
             topics: [
-              'Parents may miss the signs of a medical emergency if the mistake the reason for their child’s crying',            
+              'Parents may miss the signs of a medical emergency if the mistake the reason for their child’s crying',
             ],
-          },   
+          },
         ],
       },
       {
@@ -30,7 +30,7 @@ const Page: React.FC = () => {
           'Another form of self-soothing but with more parental involvement than the extinction method',
           'Caregivers check in periodically to offer soothing words of encouragement/support but do not pickup or touch the infant',
           'Goal: Teach the baby self-soothing methods with some support from caregivers',
-          'Downsides: Concern that strict self-soothing methods can potentially be damaging to a young baby’s future emotional health',       
+          'Downsides: Concern that strict self-soothing methods can potentially be damaging to a young baby’s future emotional health',
         ],
       },
       {
@@ -40,7 +40,7 @@ const Page: React.FC = () => {
           'Caregivers place the baby in their crib while partially awake and then sit in a chair next to the crib until the baby falls asleep, periodically reaching in to calm the baby',
           'Over time, the chair is to be moved further away from the crib until finally out of the room',
           'Goal: Teach infants how to recognize bedtime habits and fall asleep without direct assistance',
-          'Downsides: This method takes time and requires patience—parents looking for immediate results may become frustrated. ',  
+          'Downsides: This method takes time and requires patience—parents looking for immediate results may become frustrated. ',
         ],
       },
       {
@@ -50,7 +50,7 @@ const Page: React.FC = () => {
           'A very slow and gradual sleep training method that requires a lot of caregiver soothing, especially in early stages',
           'Most often used to set a specific bedtime, or change an existing one, by gradually fading the bedtime in small, regular increments until the desired bedtime is met',
           'Goal: Modify behaviors and sleep routines, and implement new habits',
-          'Downsides: This method takes time, discipline, and consistency, and will be far less effective if the infant does not already have established sleep habits',    
+          'Downsides: This method takes time, discipline, and consistency, and will be far less effective if the infant does not already have established sleep habits',
         ],
       },
       {
@@ -63,9 +63,9 @@ const Page: React.FC = () => {
           {
             title: 'Downsides: This sleep training method requires a lengthy implementation time, with limited improvements often seen in the early stages of the process',
             topics: [
-              'This method can be disruptive to infants who are easily stimulated ',            
+              'This method can be disruptive to infants who are easily stimulated ',
             ],
-          },       
+          },
         ],
       },
       {
@@ -74,10 +74,10 @@ const Page: React.FC = () => {
           'Many unnamed sleep training techniques follow the no cry method. They encourage caregivers to relax and soothe the infant and avoid tears altogether.',
           'Developing strict yet relaxing pre-bedtime routines is key for this method’s success',
           'Goal: Provide sufficient comfort to avoid tears and stress before sleep to limit the baby and caregiver’s discomfort ',
-          'Downsides: Some people believe that no cry methods limit a baby’s independence and prevent them from learning to self-soothe',          
+          'Downsides: Some people believe that no cry methods limit a baby’s independence and prevent them from learning to self-soothe',
         ],
       },
-    ],    
+    ],
   };
 
   return (
@@ -126,9 +126,9 @@ const Page: React.FC = () => {
           <div className="row">
             <div className="col-12 col-sm-10 col-md-8 col-lg-6 order-lg-2">
               <h2 className="h3">What is a Sleep Training Method?</h2>
-              <p>A sleep training method is a system used to encourage children to develop natural, healthy sleeping habits. Experts in the field have developed these methodologies over time, based on research developments and personal best practices.
-              Sleep training methods can be placed on a spectrum based on the amount of parental soothing involved in each strategy. You’ll find self-soothing methods on one end of the spectrum and caregiver-soothing methods on the other. The majority of sleeping training methods are a mixture of self- and caregiver-soothing, falling somewhere in the middle of the spectrum. You’ll personalize your sleep training recommendations to each client and their unique needs. There is no single “right answer” when it comes to sleep training.
-            Importantly, sleep training methods aren’t likely to resolve sleep issues all on they’re own. You’ll also need to consider a variety of other factors, such as establishing routines and improving sleep spaces, to successfully implement sleep training.</p>
+              <p>A sleep training method is a system used to encourage children to develop natural, healthy sleeping habits. Experts in the field have developed these methodologies over time, based on research developments and personal best practices.</p>
+              <p>Sleep training methods can be placed on a spectrum based on the amount of parental soothing involved in each strategy. You’ll find self-soothing methods on one end of the spectrum and caregiver-soothing methods on the other. The majority of sleeping training methods are a mixture of self- and caregiver-soothing, falling somewhere in the middle of the spectrum. You’ll personalize your sleep training recommendations to each client and their unique needs. There is no single “right answer” when it comes to sleep training.</p>
+              <p>Importantly, sleep training methods aren’t likely to resolve sleep issues all on they’re own. You’ll also need to consider a variety of other factors, such as establishing routines and improving sleep spaces, to successfully implement sleep training.</p>            
             </div>
             <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6">
               <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-hands.jpg')} alt="baby smiling and covering mouth with hands" /></p>
@@ -140,10 +140,10 @@ const Page: React.FC = () => {
       <section>
         <div className="container">
           <h2 className="h3">The 6 Most Commonly Used Sleep Training Methods</h2>
-          <p>Here are the methods most regularly recommended by certified sleep consultants:</p>        
-            <div className="row my-5" id="unitA">             
-              <div className="col-12">
-                <UnitOutline data={units.a} />       
+          <p>Here are the methods most regularly recommended by certified sleep consultants:</p>
+          <div className="row my-5" id="unitA">
+            <div className="col-8">
+              <UnitOutline data={units.a} />
             </div>
           </div>
         </div>
@@ -176,4 +176,4 @@ const Page: React.FC = () => {
   );
 };
 
-  export default Page;
+export default Page;
