@@ -1,138 +1,179 @@
 import Link from 'next/link';
 import React from 'react';
 
+import { OutlineData, UnitOutline } from '../../../components/unit-outline';
 import { SEO } from '../../../components/seo';
 import { DefaultLayout } from '../../../layouts/default';
 
-const Page: React.FC = () => (
-  <DefaultLayout>
 
-    <SEO
-      title="Baby Sign Language for Beginners: When (and How) to Start"
-      description="Baby sign language can prove to be a useful tool to recommend to your clients!"
-      canonical="/courses-and-tuition/sleep-consultant/baby-sign-language-for-beginners"
-      image={{
-        src: require('../../../images/sl-baby-sign-language-cover.jpg'),
-        alt: 'baby sign language',
-      }}
-    />
+const Page: React.FC = () => {
+  const units: { [key: string]: OutlineData[] } = {
+    a: [
+      {
+        title: '1) Cry it Out Method (a.k.a The Extinction Method',
+        topics: [
+          'A fully self-soothing form of sleep training',
+          'Teaches the infant how to fall asleep without assistance',
+          'Parents/caregivers have little to no involvement outside of supervising to ensure the baby’s safety',
+          'Goal: Eliminate the need for parental soothing ',      
+          {
+            title: 'Downsides: Some critics believe this method can cause separation anxiety and stress.',
+            topics: [
+              'Parents may miss the signs of a medical emergency if the mistake the reason for their child’s crying',            
+            ],
+          },   
+        ],
+      },
+      {
+        title: '2) Check and Console Method (a.k.a. The Graduated Extinction Method)',
+        topics: [
+          'Another form of self-soothing but with more parental involvement than the extinction method',
+          'Caregivers check in periodically to offer soothing words of encouragement/support but do not pickup or touch the infant',
+          'Goal: Teach the baby self-soothing methods with some support from caregivers',
+          'Downsides: Concern that strict self-soothing methods can potentially be damaging to a young baby’s future emotional health',       
+        ],
+      },
+      {
+        title: '3) The Chair Method',
+        topics: [
+          'A modified version of self-soothing sleep training methods',
+          'Caregivers place the baby in their crib while partially awake and then sit in a chair next to the crib until the baby falls asleep, periodically reaching in to calm the baby',
+          'Over time, the chair is to be moved further away from the crib until finally out of the room',
+          'Goal: Teach infants how to recognize bedtime habits and fall asleep without direct assistance',
+          'Downsides: This method takes time and requires patience—parents looking for immediate results may become frustrated. ',  
+        ],
+      },
+      {
+        title: '4) The Fading Method',
+        topics: [
+          'An even mix of self-soothing and caregiver-soothing methods',
+          'A very slow and gradual sleep training method that requires a lot of caregiver soothing, especially in early stages',
+          'Most often used to set a specific bedtime, or change an existing one, by gradually fading the bedtime in small, regular increments until the desired bedtime is met',
+          'Goal: Modify behaviors and sleep routines, and implement new habits',
+          'Downsides: This method takes time, discipline, and consistency, and will be far less effective if the infant does not already have established sleep habits',    
+        ],
+      },
+      {
+        title: '5) The Pick Up Put Down Method',
+        topics: [
+          'Another mixture of self-soothing and caregiver-soothing techniques that requires the caregiver to respond to almost ALL fussing',
+          'Parents will pick up and soothe the fussing infant, then immediately put them back down once fussing has stopped. ',
+          'Gradually, caregivers will reduce the number (and length) of handling times and switch to the fading the method.',
+          'Goal: Gradually teach the infant self-soothing with a lot of caregiver support.',
+          {
+            title: 'Downsides: This sleep training method requires a lengthy implementation time, with limited improvements often seen in the early stages of the process',
+            topics: [
+              'This method can be disruptive to infants who are easily stimulated ',            
+            ],
+          },       
+        ],
+      },
+      {
+        title: '6) The No Cry Methods',
+        topics: [
+          'Many unnamed sleep training techniques follow the no cry method. They encourage caregivers to relax and soothe the infant and avoid tears altogether.',
+          'Developing strict yet relaxing pre-bedtime routines is key for this method’s success',
+          'Goal: Provide sufficient comfort to avoid tears and stress before sleep to limit the baby and caregiver’s discomfort ',
+          'Downsides: Some people believe that no cry methods limit a baby’s independence and prevent them from learning to self-soothe',          
+        ],
+      },
+    ],    
+  };
 
-    <section id="heroSection">
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-sm-10 col-md-8 col-lg-5">
-            <div className="card">
-              <div className="card-body">
-                <h1 className="h2">The 6 Common Training Methods of an Infant Sleep Consultant </h1>
+  return (
+    <DefaultLayout>
+      <SEO
+        title="Baby Sign Language for Beginners: When (and How) to Start"
+        description="Baby sign language can prove to be a useful tool to recommend to your clients!"
+        canonical="/courses-and-tuition/sleep-consultant/baby-sign-language-for-beginners"
+        image={{
+          src: require('../../../images/sl-baby-sign-language-cover.jpg'),
+          alt: 'baby sign language',
+        }}
+      />
+
+      <section id="heroSection">
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-sm-10 col-md-8 col-lg-5">
+              <div className="card">
+                <div className="card-body">
+                  <h1 className="h2">The 6 Common Training Methods of an Infant Sleep Consultant </h1>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-            <h2 className="h3">Sleep Training Methodology</h2>
-            <p>As a professional sleep consultant, you’ll use your expertise in sleep training methodology to help your clients establish healthy sleep habits for their babies.</p>
-            <p> Earn your certification from the safety of home with  <a href="/courses-and-tuition/sleep-consultant">QC’s online Sleep Consultant Course!</a></p>
-          </div>
-          <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-            <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-what-is.jpg')} alt="happy baby with raised arms" /></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section className="bg-light">
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-sm-10 col-md-8 col-lg-6 order-lg-2">
-            <h2 className="h3">What is a Sleep Training Method?</h2>
-            <p>A sleep training method is a system used to encourage children to develop natural, healthy sleeping habits. Experts in the field have developed these methodologies over time, based on research developments and personal best practices.
-            Sleep training methods can be placed on a spectrum based on the amount of parental soothing involved in each strategy. You’ll find self-soothing methods on one end of the spectrum and caregiver-soothing methods on the other. The majority of sleeping training methods are a mixture of self- and caregiver-soothing, falling somewhere in the middle of the spectrum. You’ll personalize your sleep training recommendations to each client and their unique needs. There is no single “right answer” when it comes to sleep training.
-            Importantly, sleep training methods aren’t likely to resolve sleep issues all on they’re own. You’ll also need to consider a variety of other factors, such as establishing routines and improving sleep spaces, to successfully implement sleep training.</p>           
-          </div>
-          <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6">
-            <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-hands.jpg')} alt="baby smiling and covering mouth with hands" /></p>
+      <section>
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-sm-10 col-md-8 col-lg-6">
+              <h2 className="h3">Sleep Training Methodology</h2>
+              <p>As a professional sleep consultant, you’ll use your expertise in sleep training methodology to help your clients establish healthy sleep habits for their babies.</p>
+              <p> Earn your certification from the safety of home with  <a href="/courses-and-tuition/sleep-consultant">QC’s online Sleep Consultant Course!</a></p>
+            </div>
+            <div className="col-12 col-sm-10 col-md-8 col-lg-6">
+              <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-what-is.jpg')} alt="happy baby with raised arms" /></p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div className="container">
-        <h2 className="h3">The 6 Most Commonly Used Sleep Training Methods</h2>
-        <p>Here are the methods most regularly recommended by certified sleep consultants:</p>
-      </div>
-    </section>
-
-    <section>
-      <div className="container">
-        <h2 className="h3">Which Method is Right for You?</h2>
-        <p>There is NO scientific proof that one sleep training method works better than another. It all depends on each individual infant’s needs and your client’s goals. Become well-versed in multiple sleep training methods. This way, you can provide clients with a wider variety of options, based on their personal situation, circumstances, and needs.</p>
-        <p>Keep in mind that you can also adapt any of these techniques in order to better serve your client and their infant. Ultimately, the more experience you gain in the field, the better your understanding will be of the different sleep training methods at your disposal.</p>
-        <p>Want to learn more about the type of training you’ll get from QC’s Sleep Consultant Course? Check out our feature on QC Wellness Studies graduate, <a href="/student-features">Sarah Pashniak!</a> </p>
-      </div>
-    </section>
-
-    {/* <section className="bg-light">
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-sm-10 col-md-8 col-lg-6 order-lg-2">
-            <h2 className="h3">How to Get Started</h2>
-            <p>If your clients are unsure where to begin, here are a few tips you can suggest:</p>
-            <ul>
-              <li>Choose signs that are meaningful and relevant to the child</li>
-              <li>Signs should express common, everyday needs (i.e. being hungry, being sleepy, etc.)</li>
-              <li>To be most effective, signing should be consistent</li>
-              <li>Speak AND sign at the same time so the baby can establish a connection between the sign and the spoken word</li>
-              <li>Make signs as close to your face as possible</li>
-              <li>If the baby creates their own sign, use it</li>
-              <li>Reward the baby whenever they successfully use the right sign</li>
-            </ul>
-            <p>
-              <Link href="https://www.youtube.com/watch?v=MchIPOm2G0Q"><a rel="noopener noreferrer" target="_blank">Watch this informative video</a></Link> on the Top 15 signs your clients should teach their infants!</p>
-          </div>
-          <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6">
-            <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-thirsty.jpg')} alt="thirsty baby moving towards baby bottle" /></p>
+      <section className="bg-light">
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-sm-10 col-md-8 col-lg-6 order-lg-2">
+              <h2 className="h3">What is a Sleep Training Method?</h2>
+              <p>A sleep training method is a system used to encourage children to develop natural, healthy sleeping habits. Experts in the field have developed these methodologies over time, based on research developments and personal best practices.
+              Sleep training methods can be placed on a spectrum based on the amount of parental soothing involved in each strategy. You’ll find self-soothing methods on one end of the spectrum and caregiver-soothing methods on the other. The majority of sleeping training methods are a mixture of self- and caregiver-soothing, falling somewhere in the middle of the spectrum. You’ll personalize your sleep training recommendations to each client and their unique needs. There is no single “right answer” when it comes to sleep training.
+            Importantly, sleep training methods aren’t likely to resolve sleep issues all on they’re own. You’ll also need to consider a variety of other factors, such as establishing routines and improving sleep spaces, to successfully implement sleep training.</p>
+            </div>
+            <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-6">
+              <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-hands.jpg')} alt="baby smiling and covering mouth with hands" /></p>
+            </div>
           </div>
         </div>
-      </div>
-    </section> */}
+      </section>
 
-    {/* <section>
-      <div className="container">
-
-        <div className="row">
-          <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-            <h2 className="h3">How This Affects You as the Sleep Consultant</h2>
-            <p>Your job is to help parents create a safe, healthy routine for their infant’s sleep schedule. While you personally won’t be expected to teach your clients baby sign language, you can ultimately make their lives easier by bringing this option to their attention and providing helpful tips for getting started. After all, a sleepy baby might not be able to say they’re tired with actual words – but this way, they’ll have a way of saying it with signs. Thus, your clients can gain an even better understanding of their baby’s needs and more efficiently implement a plan of action.</p>
-          </div>
-          <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-            <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-arms.jpg')} alt="smiling baby crawling in bed" /></p>
+      <section>
+        <div className="container">
+          <h2 className="h3">The 6 Most Commonly Used Sleep Training Methods</h2>
+          <p>Here are the methods most regularly recommended by certified sleep consultants:</p>        
+            <div className="row my-5" id="unitA">             
+              <div className="col-12">
+                <UnitOutline data={units.a} />       
+            </div>
           </div>
         </div>
-      </div>
-    </section> */}
+      </section>
 
-    <section id="enrollSection" className="text-light text-center">
-      <div className="container">
-        <h2>Start Your Journey Today</h2>
-        <p className="h5 sans-serif">Make 2021 the year you follow your dreams and launch a successful career!</p>
-        <p className="h5 sans-serif">Enroll in QC’s Sleep Consultant Course today and graduate in as little as 3-6 months!</p>
-        <a href="https://enroll.qcwellnessstudies.com/" className="btn btn-secondary btn-lg mt-4">ENROLL NOW</a>
-      </div>
-    </section>
+      <section>
+        <div className="container">
+          <h2 className="h3">Which Method is Right for You?</h2>
+          <p>There is NO scientific proof that one sleep training method works better than another. It all depends on each individual infant’s needs and your client’s goals. Become well-versed in multiple sleep training methods. This way, you can provide clients with a wider variety of options, based on their personal situation, circumstances, and needs.</p>
+          <p>Keep in mind that you can also adapt any of these techniques in order to better serve your client and their infant. Ultimately, the more experience you gain in the field, the better your understanding will be of the different sleep training methods at your disposal.</p>
+          <p>Want to learn more about the type of training you’ll get from QC’s Sleep Consultant Course? Check out our feature on QC Wellness Studies graduate, <a href="/student-features">Sarah Pashniak!</a> </p>
+        </div>
+      </section>
 
-    <style jsx>{`       
+      <section id="enrollSection" className="text-light text-center">
+        <div className="container">
+          <h2>Start Your Journey Today</h2>
+          <p className="h5 sans-serif">Make 2021 the year you follow your dreams and launch a successful career!</p>
+          <p className="h5 sans-serif">Enroll in QC’s Sleep Consultant Course today and graduate in as little as 3-6 months!</p>
+          <a href="https://enroll.qcwellnessstudies.com/" className="btn btn-secondary btn-lg mt-4">ENROLL NOW</a>
+        </div>
+      </section>
+
+      <style jsx>{`       
       #enrollSection{background-image: url(${require('../../../images/bg-enrollment.jpg')});background-size: cover;}
       #heroSection{background-image:url(${require('../../../images/sl-baby-sign-language-cover.jpg')});background-size:cover;background-position:center} 
     `}</style>
 
-  </DefaultLayout>
-);
+    </DefaultLayout>
+  );
+};
 
-export default Page;
+  export default Page;
