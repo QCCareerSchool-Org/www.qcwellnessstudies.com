@@ -28,14 +28,13 @@ const Page: NextPage = () => (
     </section>
 
     <section>
-      <h1 className="text-dark text-center">Blog Posts</h1>
+      <h2 className="text-dark text-center">Blog Posts</h2>
       <div className="container">
         <div className="row mb-4">
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },             
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
@@ -48,8 +47,7 @@ const Page: NextPage = () => (
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },         
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
@@ -62,8 +60,7 @@ const Page: NextPage = () => (
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },    
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
@@ -80,14 +77,13 @@ const Page: NextPage = () => (
       </div>
     </section>
     <section>
-      <h1 className="text-dark text-center">Tipsheets</h1>
+      <h2 className="text-dark text-center">Tipsheets</h2>
       <div className="container">
         <div className="row mb-4">
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },               
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
@@ -100,8 +96,7 @@ const Page: NextPage = () => (
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },            
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
@@ -114,8 +109,7 @@ const Page: NextPage = () => (
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/webp' },
+                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },            
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"

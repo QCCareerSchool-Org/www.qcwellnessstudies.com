@@ -80,6 +80,16 @@ const Page: NextPage = () => (
       </div>
     </section>
 
+    <section className="bg-light text-dark">
+      <div className="container text-center">
+        <div className="row">
+          <div className="col-12 col-md-10 col-lg-12">
+          <Link href="/student-resources"><a className="btn btn-primary btn-lg text-uppercase">Back to Student Resources</a></Link>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <style jsx>{`
       #enrollToday{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}     
       #heroSection{background-image:url(${require('../../../images/sl-hero-7-tips-travelling-baby.jpg')});background-size:cover;background-position:center}
