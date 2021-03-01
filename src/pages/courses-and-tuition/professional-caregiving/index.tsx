@@ -346,10 +346,10 @@ const Page: React.FC = () => {
       <section className="text-dark text-center">
         <div className="container">
           <div className="row">
-            <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">             
-                <p><img className="img-fluid" src={require('../../../images/promo-inlay-december.png')} alt="December Promo" /></p>
-                <p className="lead mb-5">Save an extra $100 on your professional caregiver course tuition.<br />This discount will be automatically applied when you enroll.</p>
-                <p><a className="btn btn-secondary btn-lg" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>           
+            <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+              <p><img className="img-fluid" src={require('../../../images/promo-inlay-december.png')} alt="December Promo" /></p>
+              <p className="lead mb-5">Save an extra $100 on your professional caregiver course tuition.<br />This discount will be automatically applied when you enroll.</p>
+              <p><a className="btn btn-secondary btn-lg" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>
             </div>
           </div>
         </div>
@@ -357,7 +357,7 @@ const Page: React.FC = () => {
 
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
-        <PaymentPlans courses={['fc']} doubleGuarantee={doubleGuarantee} />
+        <PaymentPlans courses={[ 'fc' ]} doubleGuarantee={doubleGuarantee} />
       </section>
 
       <section id="whatSection">
@@ -471,7 +471,7 @@ const Page: React.FC = () => {
           affordable="QC's course is fully online. You don't have to pay surcharges for attending lectures or classroom sessions. You complete the full course from home."
           flexible="No start dates, no deadlines, no mandatory attendance! This course is completely self-directed and self-paced. Get certified quickly or take your time. The choice is yours."
           comprehensive="You're not just learning how one caregiving company wants you do things. You're getting a foundation of knowledge in caregiving that will be useful no matter where you work!"
-          courses={['fc']}
+          courses={[ 'fc' ]}
         />
       </section>
 

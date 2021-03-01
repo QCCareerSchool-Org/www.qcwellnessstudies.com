@@ -73,9 +73,9 @@ const Page: NextPage = () => (
               <li>An Independent caregiver can earn a very good salary by direct billing clients.</li>
               <li>Most certified caregivers are eligible for billing certain Medicaid programs.</li>
               <li>Work in a field where you get to help people every single day.</li>
-              <li>Get certified online without having to leave your home!</li>                          
+              <li>Get certified online without having to leave your home!</li>
             </ul>
-            <p className="h3 text-dark">Get a free course preview to learn more!</p>  
+            <p className="h3 text-dark">Get a free course preview to learn more!</p>
           </div>
         </div>
       </div>
