@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../../../components/seo';
@@ -37,7 +38,7 @@ const Page: React.FC = () => {
             <div className="col-12 col-sm-10 col-md-8 col-lg-6">
               <h2 className="h3">Sleep Training Methods</h2>
               <p>As a professional sleep consultant, you’ll use your expertise in sleep training methodology to help your clients establish healthy sleep habits for their babies.</p>
-              <p> Earn your certification from the safety of home with  <a href="/courses-and-tuition/sleep-consultant">QC’s online Sleep Consultant Course!</a></p>
+              <p> Earn your certification from the safety of home with  <Link href="/courses-and-tuition/sleep-consultant">QC’s online Sleep Consultant Course!</Link></p>
             </div>
             <div className="col-12 col-sm-10 col-md-8 col-lg-6">
               <p><img className="img-fluid" src={require('../../../images/sl-close-portrait-newborn-baby.jpg')} alt="happy baby with raised arms" /></p>
@@ -72,13 +73,14 @@ const Page: React.FC = () => {
                 <li>Parents/caregivers have little to no involvement outside of supervising to ensure the baby’s safety</li>
                 <li>Goal: Eliminate the need for parental soothing
                   <ul>
-                    <li>Parents may miss the signs of a medical emergency if the mistake the reason for their child’s crying </li>
-                  </ul></li>
+                    <li>Parents may miss the signs of a medical emergency if the mistake the reason for their child’s crying</li>
+                  </ul>
+                </li>
               </ul>
               <h2 className="h3">2) Check and Console Method (a.k.a. The Graduated Extinction Method)</h2>
               <ul>
                 <li>Another form of self-soothing but with more parental involvement than the extinction method</li>
-                <li>Caregivers check in periodically to offer soothing words of encouragement/support but do not pickup or touch the infant </li>
+                <li>Caregivers check in periodically to offer soothing words of encouragement/support but do not pickup or touch the infant</li>
                 <li>Goal: Teach the baby self-soothing methods with some support from caregivers</li>
                 <li>Downsides: Concern that strict self-soothing methods can potentially be damaging to a young baby’s future emotional health</li>
               </ul>        
@@ -100,7 +102,7 @@ const Page: React.FC = () => {
                 <li>Caregivers place the baby in their crib while partially awake and then sit in a chair next to the crib until the baby falls asleep, periodically reaching in to calm the baby</li>
                 <li>Over time, the chair is to be moved further away from the crib until finally out of the room</li>
                 <li>Goal: Teach infants how to recognize bedtime habits and fall asleep without direct assistance</li>
-                <li>Downsides: This method takes time and requires patience—parents looking for immediate results may become frustrated. </li>
+                <li>Downsides: This method takes time and requires patience—parents looking for immediate results may become frustrated.</li>
               </ul>
               
               <h2 className="h3">4) The Fading Method</h2>
@@ -131,10 +133,11 @@ const Page: React.FC = () => {
                 <li>Goal: Gradually teach the infant self-soothing with a lot of caregiver support.</li>
                 <li>Downsides: This sleep training method requires a lengthy implementation time, with limited improvements often seen in the early stages of the process
                   <ul>
-                    <li>This method can be disruptive to infants who are easily stimulated </li>
-                  </ul></li>
+                    <li>This method can be disruptive to infants who are easily stimulated</li>
+                  </ul>
+                </li>
               </ul>
-              <h2 className="h3">6) The No Cry Methods </h2>
+              <h2 className="h3">6) The No Cry Methods</h2>
               <ul>
                 <li>Many unnamed sleep training techniques follow the no cry method. They encourage caregivers to relax and soothe the infant and avoid tears altogether.</li>
                 <li>Developing strict yet relaxing pre-bedtime routines is key for this method’s success</li>
@@ -153,10 +156,10 @@ const Page: React.FC = () => {
         <div className="container">
           <div className="row">
             <div>
-              <h2 className="h3">Which Method is Right for You?</h2>
+              <h2 className="h3">Which Method Is Right for You?</h2>
               <p>There is NO scientific proof that one sleep training method works better than another. It all depends on each individual infant’s needs and your client’s goals. Become well-versed in multiple sleep training methods. This way, you can provide clients with a wider variety of options, based on their personal situation, circumstances, and needs.</p>
               <p>Keep in mind that you can also adapt any of these techniques in order to better serve your client and their infant. Ultimately, the more experience you gain in the field, the better your understanding will be of the different sleep training methods at your disposal.</p>
-              <p>Want to learn more about the type of training you’ll get from QC’s Sleep Consultant Course? Check out our feature on QC Wellness Studies graduate, <a href="/student-features">Sarah Pashniak!</a></p>
+              <p>Want to learn more about the type of training you’ll get from QC’s Sleep Consultant Course? Check out our feature on QC Wellness Studies graduate, <Link href="/student-features/sarah-pashniak">Sarah Pashniak!</Link></p>
             </div>       
           </div>
         </div>
@@ -166,7 +169,7 @@ const Page: React.FC = () => {
         <div className="container">
           <h2>Start Your Journey Today</h2>
           <p className="h5 sans-serif">Make 2021 the year you follow your dreams and launch a successful career!</p>
-          <p className="h5 sans-serif">Enroll in QC’s Sleep Consultant Course today and graduate in as little as 3-6 months!</p>
+          <p className="h5 sans-serif">Enroll in QC’s Sleep Consultant Course today and graduate in as little as 3 to 6 months!</p>
           <a href="https://enroll.qcwellnessstudies.com/" className="btn btn-secondary btn-lg mt-4">ENROLL NOW</a>
         </div>
       </section>
