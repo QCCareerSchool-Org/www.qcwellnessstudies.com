@@ -159,7 +159,7 @@ const Page: React.FC = () => {
               <h2 className="h3">Which Method Is Right for You?</h2>
               <p>There is NO scientific proof that one sleep training method works better than another. It all depends on each individual infant’s needs and your client’s goals. Become well-versed in multiple sleep training methods. This way, you can provide clients with a wider variety of options, based on their personal situation, circumstances, and needs.</p>
               <p>Keep in mind that you can also adapt any of these techniques in order to better serve your client and their infant. Ultimately, the more experience you gain in the field, the better your understanding will be of the different sleep training methods at your disposal.</p>
-              <p>Want to learn more about the type of training you’ll get from QC’s Sleep Consultant Course? Check out our feature on QC Wellness Studies graduate, <Link href="/student-features/sarah-pashniak">Sarah Pashniak!</Link></p>
+              <p>Want to learn more about the type of training you’ll get from QC’s Sleep Consultant Course? Check out our feature on QC Wellness Studies graduate, <Link href="/student-features/sarah-pashniak"><a>Sarah Pashniak!</a></Link></p>
             </div>       
           </div>
         </div>
