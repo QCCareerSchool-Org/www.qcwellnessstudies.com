@@ -38,7 +38,7 @@ const Page: React.FC = () => {
             <div className="col-12 col-sm-10 col-md-8 col-lg-6">
               <h2 className="h3">Sleep Training Methods</h2>
               <p>As a professional sleep consultant, you’ll use your expertise in sleep training methodology to help your clients establish healthy sleep habits for their babies.</p>
-              <p> Earn your certification from the safety of home with  <Link href="/courses-and-tuition/sleep-consultant">QC’s online Sleep Consultant Course!</Link></p>
+              <p>Earn your certification from the safety of home with <Link href="/courses-and-tuition/sleep-consultant"><a>QC’s online Sleep Consultant Course!</a></Link></p>
             </div>
             <div className="col-12 col-sm-10 col-md-8 col-lg-6">
               <p><img className="img-fluid" src={require('../../../images/sl-close-portrait-newborn-baby.jpg')} alt="happy baby with raised arms" /></p>
@@ -159,7 +159,7 @@ const Page: React.FC = () => {
               <h2 className="h3">Which Method Is Right for You?</h2>
               <p>There is NO scientific proof that one sleep training method works better than another. It all depends on each individual infant’s needs and your client’s goals. Become well-versed in multiple sleep training methods. This way, you can provide clients with a wider variety of options, based on their personal situation, circumstances, and needs.</p>
               <p>Keep in mind that you can also adapt any of these techniques in order to better serve your client and their infant. Ultimately, the more experience you gain in the field, the better your understanding will be of the different sleep training methods at your disposal.</p>
-              <p>Want to learn more about the type of training you’ll get from QC’s Sleep Consultant Course? Check out our feature on QC Wellness Studies graduate, <Link href="/student-features/sarah-pashniak">Sarah Pashniak!</Link></p>
+              <p>Want to learn more about the type of training you’ll get from QC’s Sleep Consultant Course? Check out our feature on QC Wellness Studies graduate, <Link href="/student-features/sarah-pashniak"><a>Sarah Pashniak!</a></Link></p>
             </div>       
           </div>
         </div>
