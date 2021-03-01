@@ -37,7 +37,7 @@ const Page: React.FC = () => (
           <div className="col-12 col-sm-10 col-md-8 col-lg-6">
             <h2 className="h3">A Useful Tool</h2>
             <p>As a certified Sleep Consultant, you will not be required to know baby sign language. However, this can prove to be a useful tool to recommend to your clients!</p>
-            <p> Not a certified Sleep Consultant yet? Enroll today in <a href="/courses-and-tuition/sleep-consultant">QC Wellness Studies’ online Sleep Consultant Course!</a></p>
+            <p>Not a certified Sleep Consultant yet? Enroll today in <Link href="/courses-and-tuition/sleep-consultant"><a>QC Wellness Studies’ online Sleep Consultant Course!</a></Link></p>
           </div>
           <div className="col-12 col-sm-10 col-md-8 col-lg-6">
             <p><img className="img-fluid" src={require('../../../images/sl-baby-sign-language-what-is.jpg')} alt="happy baby with raised arms" /></p>

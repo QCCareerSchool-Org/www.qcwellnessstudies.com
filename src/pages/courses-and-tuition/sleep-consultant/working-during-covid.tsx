@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../../../components/seo';
@@ -46,7 +47,7 @@ const Page: React.FC = () => (
               <li>Get up to 2 full years to complete your course</li>
               <li>Become a certified Infant Sleep Consulting Professional (ISCP™) upon successful completion of the course</li>
             </ul>
-            <p className="lead"><a href="/courses-and-tuition/sleep-consultant">Learn more about QC Wellness Studies' Sleep Consultant Course!</a>
+            <p className="lead"><Link href="/courses-and-tuition/sleep-consultant"><a>Learn more about QC Wellness Studies' Sleep Consultant Course!</a></Link>
             </p>
           </div>
           <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-5">
@@ -64,7 +65,7 @@ const Page: React.FC = () => (
             <p className="lead font-italic">“The Sleep Consultant Course divides the learning into easy-to-digest portions. The assignments effectively reflect the information taught in each section, and there’s a variety of different types of assignments to test and apply your knowledge. I had a wonderful experience as a student at QC Wellness School! My favorite thing about my program was the quick feedback from my instructor. I enjoyed that it was always provided to me in a detailed audio message. It felt so personal!”</p>
             <p className="lead font-italic">-Sarah Pashniak, ISCP™</p>
             <p className="lead font-italic">QC Graduate</p>
-            <p className="lead font-italic">Learn more about Sarah’s experience with QC’s Sleep Consultant Course <a href="/student-features">here</a></p>
+            <p className="lead font-italic">Learn more about Sarah’s experience with QC’s Sleep Consultant Course <Link href="/student-features"><a>here</a></Link></p>
           </div>
         </div>
       </div>

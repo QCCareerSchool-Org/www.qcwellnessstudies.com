@@ -38,7 +38,7 @@ const Page: React.FC = () => {
             <div className="col-12 col-sm-10 col-md-8 col-lg-6">
               <h2 className="h3">Sleep Training Methods</h2>
               <p>As a professional sleep consultant, you’ll use your expertise in sleep training methodology to help your clients establish healthy sleep habits for their babies.</p>
-              <p> Earn your certification from the safety of home with  <Link href="/courses-and-tuition/sleep-consultant">QC’s online Sleep Consultant Course!</Link></p>
+              <p>Earn your certification from the safety of home with <Link href="/courses-and-tuition/sleep-consultant"><a>QC’s online Sleep Consultant Course!</a></Link></p>
             </div>
             <div className="col-12 col-sm-10 col-md-8 col-lg-6">
               <p><img className="img-fluid" src={require('../../../images/sl-close-portrait-newborn-baby.jpg')} alt="happy baby with raised arms" /></p>
