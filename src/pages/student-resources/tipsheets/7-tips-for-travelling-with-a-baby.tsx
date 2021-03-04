@@ -20,7 +20,8 @@ const Page: NextPage = () => (
         <div className="row d-flex align-items-center">
           <div className="text-light text-center">
             <h1>7 Tips for Travelling with a Baby</h1>
-          </div>
+            <p><Link href="/tip-sheets/7-tips-travelling-baby.pdf"><a className="btn btn-primary"><strong>Download Tipsheet</strong></a></Link></p>
+           </div>
         </div>
       </div>
     </section>
@@ -58,11 +59,6 @@ const Page: NextPage = () => (
       </div>
       <div className="container col-12 mb-4 col-sm-10 col-md-8 col-lg-6 mb-lg-0">
         <div className="row mb-4">
-          <p><Link href="/tip-sheets/7-tips-travelling-baby.pdf"><a className="btn btn-primary"><strong>Download Tipsheet</strong></a></Link></p>
-        </div>
-      </div>
-      <div className="container col-12 mb-4 col-sm-10 col-md-8 col-lg-6 mb-lg-0">
-        <div className="row mb-4">
           <p><img className="img-fluid" src={require('../../../images/sl-baby-blue-bassinet.jpg')} alt="baby sleeping in a crib" /></p>
         </div>
       </div>
@@ -84,7 +80,7 @@ const Page: NextPage = () => (
       <div className="container text-center">
         <div className="row">
           <div className="col-12 col-md-10 col-lg-12">
-          <Link href="/student-resources"><a className="btn btn-primary btn-lg text-uppercase">Back to Student Resources</a></Link>
+            <Link href="/student-resources"><a className="btn btn-primary btn-lg text-uppercase">Back to Student Resources</a></Link>
           </div>
         </div>
       </div>
