@@ -39,7 +39,7 @@ const Page: NextPage = () => (
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
-              buttonText="READ THE ARTICLE"
+              buttonText="READ ONLINE"
               link="/student-resources/blog/7-tips-for-travelling-with-a-baby"
               externalLink={true}
             />
@@ -52,7 +52,7 @@ const Page: NextPage = () => (
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
-              buttonText="READ THE ARTICLE"
+              buttonText="READ ONLINE"
               link="/student-resources/blog/7-tips-for-travelling-with-a-baby"
               externalLink={true}
             />
@@ -65,7 +65,7 @@ const Page: NextPage = () => (
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
-              buttonText="READ THE ARTICLE"
+              buttonText="READ ONLINE"
               link="/student-resources/blog/7-tips-for-travelling-with-a-baby"
               externalLink={true}
             />
@@ -88,7 +88,7 @@ const Page: NextPage = () => (
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
-              buttonText="DOWNLOAD TIPSHEET"
+              buttonText="DOWNLOAD PDF"
               link="/tip-sheets/7-tips-travelling-baby.pdf"
               externalLink={true}
             />
@@ -101,7 +101,7 @@ const Page: NextPage = () => (
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
-              buttonText="DOWNLOAD TIPSHEET"
+              buttonText="DOWNLOAD PDF"
               link="/tip-sheets/7-tips-travelling-baby.pdf"
               externalLink={true}
             />
@@ -114,7 +114,7 @@ const Page: NextPage = () => (
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
-              buttonText="DOWNLOAD TIPSHEET"
+              buttonText="DOWNLOAD PDF"
               link="/tip-sheets/7-tips-travelling-baby.pdf"
               externalLink={true}
             />
