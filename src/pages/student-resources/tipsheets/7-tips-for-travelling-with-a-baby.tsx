@@ -20,7 +20,7 @@ const Page: NextPage = () => (
         <div className="row d-flex align-items-center">
           <div className="text-light text-center">
             <h1>7 Tips for Travelling with a Baby</h1>
-            <p><Link href="/tip-sheets/7-tips-travelling-baby.pdf"><a className="btn btn-primary"><strong>Download Tipsheet</strong></a></Link></p>
+            <p><Link href="/tip-sheets/7-tips-travelling-baby.pdf"><a className="btn btn-primary"><strong>Download PDF</strong></a></Link></p>
            </div>
         </div>
       </div>
