@@ -86,8 +86,7 @@ const Page: NextPage = () => (
               title="7 Tips for Travelling with a Baby"
               body=""
               buttonText="DOWNLOAD PDF"
-              link="/tip-sheets/7-tips-travelling-baby.pdf"
-              externalLink={true}
+              link="/student-resources/tipsheets/7-tips-for-travelling-with-a-baby"          
             />
           </CardColumn>
           <CardColumn>
@@ -99,8 +98,7 @@ const Page: NextPage = () => (
               title="7 Tips for Travelling with a Baby"
               body=""
               buttonText="DOWNLOAD PDF"
-              link="/tip-sheets/7-tips-travelling-baby.pdf"
-              externalLink={true}
+              link="/student-resources/tipsheets/7-tips-for-travelling-with-a-baby"             
             />
           </CardColumn>
           <CardColumn>
@@ -112,8 +110,7 @@ const Page: NextPage = () => (
               title="7 Tips for Travelling with a Baby"
               body=""
               buttonText="DOWNLOAD PDF"
-              link="/tip-sheets/7-tips-travelling-baby.pdf"
-              externalLink={true}
+              link="/student-resources/tipsheets/7-tips-for-travelling-with-a-baby"    
             />
           </CardColumn>
         </div>

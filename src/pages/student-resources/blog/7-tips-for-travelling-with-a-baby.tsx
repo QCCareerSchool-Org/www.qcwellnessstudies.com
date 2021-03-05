@@ -17,16 +17,19 @@ const Page: NextPage = () => (
     <section id="heroSection">
       <div className="container col-12 mb-4 col-sm-10 col-md-8 col-lg-6 mb-lg-0">
         <div className="row d-flex align-items-center">
-          <div className="text-light text-center">
-            <h1>7 Tips for Travelling with a Baby</h1>
+          <div className="col-12">
+            <div className="text-light">
+              <h1>7 Tips for Travelling with a Baby</h1>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </section>  
 
     <section>
       <div className="container col-12 mb-4 col-sm-10 col-md-8 col-lg-6 mb-lg-0">
         <div className="row mb-4">
+          <div className="col-12">
           <p className="lead">Following an infant’s sleep plan while travelling can be a challenge. A new sleep environment, a change in routine or different eating habits can all impact an infant’s sleep. Consider these seven tips for travelling with an infant, without disrupting the sleep schedule.</p>
           <h4>1. Plan Accomodation in Advance.</h4>
           <p>Planning is key to a successful trip. When travelling with children, accommodations should include a designated space for babies and young children to sleep. Check that accommodations will include a separate living space for children and will be equipped with a crib or child’s bed.</p>
@@ -58,6 +61,7 @@ const Page: NextPage = () => (
           </div>
         </div>
       </div>
+      </div>
     </section>
 
     <section id="enrollToday" className="text-light">
@@ -76,7 +80,7 @@ const Page: NextPage = () => (
       <div className="container text-center">
         <div className="row">
           <div className="col-12 col-md-10 col-lg-12">
-          <Link href="/student-resources"><a className="btn btn-primary btn-lg text-uppercase">Back to Student Resources</a></Link>
+            <Link href="/student-resources"><a className="btn btn-primary btn-lg text-uppercase">Back to Student Resources</a></Link>
           </div>
         </div>
       </div>
