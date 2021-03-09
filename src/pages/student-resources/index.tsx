@@ -28,7 +28,7 @@ const Page: NextPage = () => (
     </section>
 
     <section>
-      <h2 className="text-dark text-center">Blog Posts</h2>
+      <h2 className="text-dark text-center">Featured Articles</h2>
       <div className="container">
         <div className="row mb-4">
           <CardColumn>
@@ -68,6 +68,7 @@ const Page: NextPage = () => (
             />
           </CardColumn>
         </div>
+        <h2 className="text-dark text-center">More Articles</h2>
         <p className="col 12">Article 4</p>
         <p className="col 12">Article 5</p>
         <p className="col 12">Article 6</p>
@@ -85,7 +86,7 @@ const Page: NextPage = () => (
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
-              buttonText="DOWNLOAD PDF"
+              buttonText="READ ONLINE"
               link="/student-resources/tipsheets/7-tips-for-travelling-with-a-baby"          
             />
           </CardColumn>
@@ -97,7 +98,7 @@ const Page: NextPage = () => (
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
-              buttonText="DOWNLOAD PDF"
+              buttonText="READ ONLINE"
               link="/student-resources/tipsheets/7-tips-for-travelling-with-a-baby"             
             />
           </CardColumn>
@@ -109,11 +110,12 @@ const Page: NextPage = () => (
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
-              buttonText="DOWNLOAD PDF"
+              buttonText="READ ONLINE"
               link="/student-resources/tipsheets/7-tips-for-travelling-with-a-baby"    
             />
           </CardColumn>
         </div>
+        <h2 className="text-dark text-center">More Tipsheets</h2>
         <p className="col 12">Tipsheet 4</p>
         <p className="col 12">Tipsheet 5</p>
         <p className="col 12">Tipsheet 6</p>

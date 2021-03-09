@@ -19,7 +19,7 @@ const Page: NextPage = () => (
         <div className="row d-flex align-items-center">
           <div className="col-12">
             <div className="text-light">
-              <h1>7 Tips for Travelling with a Baby</h1>
+              <h1 className="text-center">7 Tips for Travelling with a Baby</h1>
             </div>
           </div>
         </div>
