@@ -30,7 +30,7 @@ const Page: NextPage = () => (
     <section>
       <h2 className="text-dark text-center">Featured Articles</h2>
       <div className="container">
-        <div className="row mb-4">
+        <div className="row mb-5">
           <CardColumn>
             <ArticleCard
               images={[
@@ -77,7 +77,7 @@ const Page: NextPage = () => (
     <section>
       <h2 className="text-dark text-center">Tipsheets</h2>
       <div className="container">
-        <div className="row mb-4">
+        <div className="row mb-5">
           <CardColumn>
             <ArticleCard
               images={[
