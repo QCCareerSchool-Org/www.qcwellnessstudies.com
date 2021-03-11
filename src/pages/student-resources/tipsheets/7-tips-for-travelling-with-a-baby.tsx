@@ -58,13 +58,11 @@ const Page: NextPage = () => (
             <p>Be flexible and ease the schedule slightly to suit travel plans and events, such as weddings, parties, day trips and family celebrations. Allow the infant to fall asleep outside of the regular nap times, such as in a car or plane, to keep the baby in a good mood later on. Trying to follow a rigid schedule will cause stress for the parents and infant!</p>
             <h4>7.	Reinstate the sleep plan at home.</h4>
             <p>After the trip, get back to the regular sleep plan and routine as quickly as possible. Put down the infant at the normal nap times and follow the usual bedtime routine. However, if the infant is adjusting between time zones, change the sleep schedule gradually. The baby will need time to adapt.</p>
+            <div>
+              <p><img className="img-fluid" src={require('../../../images/sl-baby-blue-bassinet.jpg')} alt="baby sleeping in a crib" /></p>
+            </div>
           </div>
-        </div>
-        <div className="container col-12 mb-4 col-sm-10 col-md-8 col-lg-6 mb-lg-0">
-          <div className="row mb-4">
-            <p><img className="img-fluid" src={require('../../../images/sl-baby-blue-bassinet.jpg')} alt="baby sleeping in a crib" /></p>
-          </div>
-        </div>
+        </div>        
       </div>
     </section>
 

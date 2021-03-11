@@ -34,37 +34,37 @@ const Page: NextPage = () => (
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },             
+                { src: require('../../images/sr-focused-woman-wearing-headphones.jpg'), type: 'image/jpg' },             
               ]}
-              alt="7 Tips for Travelling with a Baby"
-              title="7 Tips for Travelling with a Baby"
+              alt="Can an Online Course Prepare You for a Sleep Consultant Career?"
+              title="Can an Online Course Prepare You for a Sleep Consultant Career?"
               body=""
               buttonText="READ ONLINE"
-              link="/student-resources/blog/7-tips-for-travelling-with-a-baby"      
+              link="/student-resources/blog/can-an-online-course-prepare-you-for-a-sleep-consultant-career"      
             />
           </CardColumn>
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },         
+                { src: require('../../images/sr-focused-woman-wearing-headphones.jpg'), type: 'image/jpg' },         
               ]}
-              alt="7 Tips for Travelling with a Baby"
-              title="7 Tips for Travelling with a Baby"
+              alt="Can an Online Course Prepare You for a Sleep Consultant Career?"
+              title="Can an Online Course Prepare You for a Sleep Consultant Career?"
               body=""
               buttonText="READ ONLINE"
-              link="/student-resources/blog/7-tips-for-travelling-with-a-baby"            
+              link="/student-resources/blog/can-an-online-course-prepare-you-for-a-sleep-consultant-career"            
             />
           </CardColumn>
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },    
+                { src: require('../../images/sr-focused-woman-wearing-headphones.jpg'), type: 'image/jpg' },    
               ]}
-              alt="7 Tips for Travelling with a Baby"
-              title="7 Tips for Travelling with a Baby"
+              alt="Can an Online Course Prepare You for a Sleep Consultant Career?"
+              title="Can an Online Course Prepare You for a Sleep Consultant Career?"
               body=""
               buttonText="READ ONLINE"
-              link="/student-resources/blog/7-tips-for-travelling-with-a-baby"         
+              link="/student-resources/blog/can-an-online-course-prepare-you-for-a-sleep-consultant-career"         
             />
           </CardColumn>
         </div>
