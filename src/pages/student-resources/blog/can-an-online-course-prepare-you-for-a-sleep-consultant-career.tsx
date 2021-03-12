@@ -43,7 +43,7 @@ const Page: NextPage = () => (
             <h4>Learning at Home</h4>
             <p>You may not be able to access in-person sleep consultant courses in your region due to lack of schools and/or local interest in sleep training. Many people also can’t or don’t want to venture out to in-person schools right now, in the middle of a global pandemic.</p>
             <div>
-              <p><img className="img-fluid" src={require('../../../images/sr-focused-woman-wearing-headphones.jpg')} alt="newborn baby sleeps with toy" /></p>
+              <p><img className="img-fluid" src={require('../../../images/sr-focused-woman-wearing-headphones.jpg')} alt="focused woman wearing headphones" /></p>
             </div>
             <p>Studying online is a great alternative to in-person classes. An online course is convenient, flexible and you can study your online sleep consulting course from anywhere, including in the comfort of your own home!</p>
             <h4>Practical Assignments</h4>
@@ -52,7 +52,7 @@ const Page: NextPage = () => (
             <p>Your online sleep consultant course is created with you in mind. Course materials, such as textbooks, videos and assignments, will take you through the consulting process and help you create sleep plans.</p>
             <p>As a QC Wellness Studies student, you’ll receive personalized feedback on your course assignments. Expert sleep consultant tutors provide feedback and information about sleep consulting to improve your understanding of course content. Your tutor will ensure you receive detailed and beneficial feedback. You’ll never have to guess what you need to improve on as a QC student!</p>
             <div>
-              <p><img className="img-fluid" src={require('../../../images/sr-back-view-teen-girl-sit-desk.jpg')} alt="mother giving baby bottle" /></p>
+              <p><img className="img-fluid" src={require('../../../images/sr-back-view-teen-girl-sit-desk.jpg')} alt="sleep consultant virtual consultation" /></p>
             </div>
             <h4>Formal Learning</h4>
             <p>When you’re working with infants and their families, you NEED formal training to understand babies’ sleep needs and their development stages. Your clients trust you with the sleep plans for their babies and children. You need to be able to explain your decisions and recommendations to parents and caregivers.</p>
@@ -77,7 +77,7 @@ const Page: NextPage = () => (
               <li>And more!</li>
             </ul>
             <div>
-              <p><img className="img-fluid" src={require('../../../images/sr-happy-casual-entrepreneur-working-on-line.jpg')} alt="mother giving baby bottle" /></p>
+              <p><img className="img-fluid" src={require('../../../images/sr-happy-casual-entrepreneur-working-on-line.jpg')} alt="entrepreneur working online" /></p>
             </div>
             <p>Online courses are readily available, flexible and personalized. You’ll receive one-on-one feedback from your tutor, a certification in sleep consulting AND you can do it all from home!</p>
             <p className="lead">Do you want to learn how to provide sleep consulting from the comfort of your own home? Enroll in QC Wellness Studies’ <Link href="/student-resources"><a>Infant Sleep Consultant Course</a></Link> today and get certified as a consultant in 3 months!</p>
