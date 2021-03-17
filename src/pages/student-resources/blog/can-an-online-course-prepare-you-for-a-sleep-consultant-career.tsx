@@ -80,7 +80,7 @@ const Page: NextPage = () => (
               <p><img className="img-fluid" src={require('../../../images/sr-happy-casual-entrepreneur-working-on-line.jpg')} alt="entrepreneur working online" /></p>
             </div>
             <p>Online courses are readily available, flexible and personalized. You’ll receive one-on-one feedback from your tutor, a certification in sleep consulting AND you can do it all from home!</p>
-            <p className="lead">Do you want to learn how to provide sleep consulting from the comfort of your own home? Enroll in QC Wellness Studies’ <Link href="/student-resources"><a>Infant Sleep Consultant Course</a></Link> today and get certified as a consultant in 3 months!</p>
+            <p className="lead">Do you want to learn how to provide sleep consulting from the comfort of your own home? Enroll in QC Wellness Studies’ <Link href="/courses-and-tuition/sleep-consultant"><a>Infant Sleep Consultant Course</a></Link> today and get certified as a consultant in 3 months!</p>
           </div>
         </div>
       </div>

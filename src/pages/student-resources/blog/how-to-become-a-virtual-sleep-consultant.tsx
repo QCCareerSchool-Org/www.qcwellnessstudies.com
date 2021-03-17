@@ -29,10 +29,9 @@ const Page: NextPage = () => (
     <section>
       <div className="container col-12 mb-4 col-sm-10 col-md-8 col-lg-6 mb-lg-0">
         <div className="row mb-4">
-          <div className="col-12">
-            <h4></h4>
-            <p>Becoming a virtual sleep consultant could be a fantastic way to begin a new career from home. Sleep consultants are becoming more and more common – whether for first- or fifth-time parents. Each baby is unique and could benefit from a sleep consultant to help caregivers understand their needs.</p>
-            <p>If the idea of working from home appeals to you, you may be suited to a career as a virtual sleep consultant. You could work with families and infants all over the world to develop positive sleep habits.  If you’re interested in seeing what this career is all about, read on to discover how to become a virtual sleep consultant!</p>  
+          <div className="col-12">            
+            <p className="lead">Becoming a virtual sleep consultant could be a fantastic way to begin a new career from home. Sleep consultants are becoming more and more common – whether for first- or fifth-time parents. Each baby is unique and could benefit from a sleep consultant to help caregivers understand their needs.</p>
+            <p className="lead">If the idea of working from home appeals to you, you may be suited to a career as a virtual sleep consultant. You could work with families and infants all over the world to develop positive sleep habits.  If you’re interested in seeing what this career is all about, read on to discover how to become a virtual sleep consultant!</p>  
             <div>
               <p><img className="img-fluid" src={require('../../../images/sr-senior-stylish-woman-taking-notes-notebook.jpg')} alt="Stylish woman taking notes in a notebook" /></p>
             </div>
