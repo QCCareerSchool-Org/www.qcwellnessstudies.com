@@ -14,6 +14,10 @@ const Page: NextPage = () => (
       title="QC Student Resources"
       description="As a student of QC Wellness Studies, you have countless resources to help you succeed in your Sleep Consulting course. Read the featured articles and tipsheets in this page for up-to-date advice for sleep consultants."
       canonical="/student-resources"
+      image={{
+        src: require('../../../images/bg-home-top.jpg'),
+        alt: 'Sleep consultant using a laptop',
+      }}
     />
 
     <section id="heroSection">
