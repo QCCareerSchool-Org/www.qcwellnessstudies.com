@@ -13,6 +13,10 @@ const Page: NextPage = () => (
       title="8 Tips for Improving the Bedtime Routine"
       description="The bedtime routine should prepare an infant or child for sleep. The following tips can help you develop an effective routine to encourage a good sleep and a positive experience for everyone."
       canonical="/student-resources/tipsheets/8-tips-for-improving-bedtime-routine"
+      image={{
+        src: require('../../../images/sr-mother-holding-feeding-baby-milk-bottle.jpg'),
+        alt: 'mother holding baby milk bottle',
+      }}
     />
 
     <section id="heroSection">

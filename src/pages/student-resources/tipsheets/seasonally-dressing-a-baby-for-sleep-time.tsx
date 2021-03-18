@@ -14,6 +14,10 @@ const Page: NextPage = () => (
       title="Seasonally Dressing a Baby for Sleep Time"
       description="Temperature can have a significant affect on a baby’s quality and quantity of sleep. While the bedroom itself should be kept a comfortable temperature between 68°F to 70°F, you can also help a baby sleep through the night by providing appropriate sleepwear for each season."
       canonical="/student-resources/tipsheets/seasonally-dressing-a-baby-for-sleep-time"
+      image={{
+        src: require('../../../images/sr-father-toddler-children-sitting-on-floor.jpg'),
+        alt: 'Father and toddler children sitting on the floor at home at bedtime.',
+      }}
     />
 
     <section id="heroSection">

@@ -13,6 +13,10 @@ const Page: NextPage = () => (
       title="7 Tips for Travelling with a Baby"
       description="Following an infant’s sleep plan while travelling can be a challenge. A new sleep environment, a change in routine or different eating habits can all impact an infant’s sleep. Consider the tips in this tipsheet for travelling with an infant, without disrupting the sleep schedule"
       canonical="/student-resources/tipsheets/7-tips-for-travelling-with-a-baby"
+      image={{
+        src: require('../../../images/sl-travelling-kids-happy-mother-her-child.jpg'),
+        alt: 'Mother travelling with her child',
+      }}
     />
 
     <section id="heroSection">

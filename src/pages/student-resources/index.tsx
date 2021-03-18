@@ -12,7 +12,7 @@ const Page: NextPage = () => (
 
     <SEO
       title="QC Student Resources"
-      description=""
+      description="As a student of QC Wellness Studies, you have countless resources to help you succeed in your Sleep Consulting course. Read the featured articles and tipsheets in this page for up-to-date advice for sleep consultants."
       canonical="/student-resources"
     />
 
@@ -70,6 +70,7 @@ const Page: NextPage = () => (
         </div>
         <h2 className="text-dark text-center">More Articles</h2>
         <p className="col 12 lead"><Link href="/student-resources/blog/working-with-helicopter-parents"><a><strong>Working with Helicopter Parents</strong></a></Link></p>
+        <p className="col 12 lead"><Link href="/student-resources/blog/6-common-training-methods-of-an-infant-sleep-consultant"><a><strong>The 6 Common Training Methods of An Infant Sleep Consultant</strong></a></Link></p>
       </div>
     </section>
     <section>

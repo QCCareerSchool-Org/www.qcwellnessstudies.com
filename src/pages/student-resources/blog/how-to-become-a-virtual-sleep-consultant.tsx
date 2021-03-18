@@ -12,6 +12,10 @@ const Page: NextPage = () => (
       title="How to Become a Virtual Sleep Consultant"
       description="If you’re on the fence about choosing an online course to start your new career, we’re here to help! Online learning provides students with lots of advantages. You can choose when and where you study, and how long your study sessions last."
       canonical="/student-resources/blog/how-to-become-a-virtual-sleep-consultant"
+      image={{
+        src: require('../../../images/sr-technology-communication-people-concept-senior-woman.jpg'),
+        alt: 'online family gathering',
+      }}
     />
 
     <section id="heroSection">

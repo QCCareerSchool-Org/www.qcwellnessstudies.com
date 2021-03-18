@@ -13,6 +13,10 @@ const Page: NextPage = () => (
       title="10 Tips for Creating the Ideal Sleep Environment"
       description="A suitable sleep environment is essential to help babies and young children get a good night’s rest. Follow these universal tips to create healthy sleep environments for babies and infants."
       canonical="/student-resources/tipsheets/10-tips-for-creating-the-ideal-sleep-environment"
+      image={{
+        src: require('../../../images/sr-little-girl-reading-book-bed-dark.jpg'),
+        alt: 'little girl reading in bed',
+      }}
     />
 
     <section id="heroSection">

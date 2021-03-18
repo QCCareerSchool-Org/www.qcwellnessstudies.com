@@ -12,6 +12,10 @@ const Page: NextPage = () => (
       title="Stages of Development: How Sleep Consultants Can Help"
       description="Infant sleep consultants work with babies at different stages of development. Sleep training a newborn baby can be very different to sleep training a toddler and every infant develops at a different rate."
       canonical="/student-resources/blog/stages-of-development"
+      image={{
+        src: require('../../../images/sr-year-old-child-sleeps-white-bed.jpg'),
+        alt: 'Year old child sleeps in white bed',
+      }}
     />
 
     <section id="heroSection">

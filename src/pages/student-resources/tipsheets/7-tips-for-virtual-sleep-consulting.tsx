@@ -13,6 +13,10 @@ const Page: NextPage = () => (
       title="7 Tips for Virtual Sleep Consulting"
       description="Parents with young children don’t have a lot of spare time, especially if those children are struggling to sleep through the night. Virtual consultations with a trained sleep professional offer the perfect solution to help busy parents get the help they need."
       canonical="/student-resources/tipsheets/7-tips-for-virtual-sleep-consulting"
+      image={{
+        src: require('../../../images/sr-mother-sitting-baby-on-laps.jpg'),
+        alt: 'mother sitting baby on lap',
+      }}
     />
 
     <section id="heroSection">

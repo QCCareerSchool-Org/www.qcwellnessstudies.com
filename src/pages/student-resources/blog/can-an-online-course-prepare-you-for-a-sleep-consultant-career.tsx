@@ -12,6 +12,10 @@ const Page: NextPage = () => (
       title="Can an Online Course Prepare You for a Sleep Consultant Career?"
       description="If you’re on the fence about choosing an online course to start your new career, we’re here to help! Online learning provides students with lots of advantages. You can choose when and where you study, and how long your study sessions last."
       canonical="/student-resources/blog/can-an-online-course-prepare-you-for-a-sleep-consultant-career"
+      image={{
+        src: require('../../../images/sr-focused-woman-wearing-headphones.jpg'),
+        alt: 'focused woman wearing headphone',
+      }}
     />
 
     <section id="heroSection">

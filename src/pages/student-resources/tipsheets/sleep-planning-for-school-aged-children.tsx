@@ -13,6 +13,10 @@ const Page: NextPage = () => (
       title="Sleep Planning for School-Aged Children"
       description="Many parents find it difficult to manage sleep schedules for multiple children. However, many of the tricks that help infants get restful sleep will benefit school-aged children as well! Preschoolers aged 3-5 years need 10 to 13 hours of sleep, including daytime naps. Grade school children aged 6-12 years need 9 to 12 hours of sleep per night. Follow these tips to help all children in the house get restful sleep."
       canonical="/student-resources/tipsheets/sleep-planning-for-school-aged-children"
+      image={{
+        src: require('../../../images/sr-boy-lying-on-bed-low.jpg'),
+        alt: 'boy lying on bed',
+      }}
     />
 
     <section id="heroSection">
