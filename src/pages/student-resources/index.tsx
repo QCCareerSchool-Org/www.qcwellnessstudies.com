@@ -17,7 +17,7 @@ const Page: NextPage = () => (
       image={{
         src: require('../../../images/bg-home-top.jpg'),
         alt: 'Sleep consultant using a laptop',
-      }}
+      }}      
     />
 
     <section id="heroSection">
