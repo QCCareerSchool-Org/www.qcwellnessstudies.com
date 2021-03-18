@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
+import Table from 'react-bootstrap/Table';
 
 import { SEO } from '../../../components/seo';
 import { DefaultLayout } from '../../../layouts/default';
@@ -37,7 +38,43 @@ const Page: NextPage = () => (
               <p><img className="img-fluid" src={require('../../../images/sr-sleeping-baby-on-back-white-bed.jpg')} alt="sleeping baby on back white bed" /></p>
             </div>
             <h4>Thermal Overall Grade (TOG) Ratings</h4>
-            <p>Thermal Overall Grade (TOG) ratings measure the thickness and warmth of blankets, duvets and padded sleepwear. You can use these ratings to choose the right type of seasonal bedding and sleepwear to keep a baby comfortable. You’ll find TOG ratings on product labels indicating the following:</p>       
+            <p>Thermal Overall Grade (TOG) ratings measure the thickness and warmth of blankets, duvets and padded sleepwear. You can use these ratings to choose the right type of seasonal bedding and sleepwear to keep a baby comfortable. You’ll find TOG ratings on product labels indicating the following:</p>
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th>TOG Rating</th>
+                  <th>Room Temperature</th>
+                  <th>Sleepwear</th>                
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0.2</td>
+                  <td>26 degrees Celsius+</td>
+                  <td>Light-weight, such as a bodysuit and light sleeping bag</td>             
+                </tr>
+                <tr>
+                  <td>0.5</td>
+                  <td>23-27 degrees Celsius</td>
+                  <td>Light-weight, such as a bodysuit and medium sleep pouch</td>             
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>20-24 degrees Celsius</td>
+                  <td>Mid-light-weight, such as a sleepsuit and warm sleep sack</td>           
+                </tr>
+                <tr>
+                  <td>2.5</td>
+                  <td>16-20 degrees Celsius</td>
+                  <td>Mid-heavy-weight, such as a body suit, sleepsuit and pouch</td>             
+                </tr>
+                <tr>
+                  <td>3.5</td>
+                  <td>10-16 degrees Celsius</td>
+                  <td>Heavy-weight, such as pajamas with a warm sleep sack</td>             
+                </tr>
+              </tbody>
+            </Table>
             <div>
               <p><img className="img-fluid" src={require('../../../images/sr-newborn-baby-swaddling-white-cloth.jpg')} alt="Newborn baby in a white cloth" /></p>
             </div>
