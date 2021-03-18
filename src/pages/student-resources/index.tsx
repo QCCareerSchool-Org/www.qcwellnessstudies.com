@@ -13,11 +13,7 @@ const Page: NextPage = () => (
     <SEO
       title="QC Student Resources"
       description="As a student of QC Wellness Studies, you have countless resources to help you succeed in your Sleep Consulting course. Read the featured articles and tipsheets in this page for up-to-date advice for sleep consultants."
-      canonical="/student-resources"
-      image={{
-        src: require('../../../images/bg-home-top.jpg'),
-        alt: 'Sleep consultant using a laptop',
-      }}      
+      canonical="/student-resources"       
     />
 
     <section id="heroSection">
