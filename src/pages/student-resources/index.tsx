@@ -21,7 +21,7 @@ const Page: NextPage = () => (
         <div className="row d-flex align-items-center">
           <div>
             <h1 className="text-light text-center">Student Resources</h1>
-            <p className="lead text-light text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p className="lead text-light text-center">As a student of QC Wellness Studies, you have countless resources to help you succeed in your Sleep Consulting course. Read the featured articles and tipsheets below for up-to-date advice for sleep consultants.</p>
           </div>
         </div>
       </div>
