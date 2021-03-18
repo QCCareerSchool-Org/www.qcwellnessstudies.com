@@ -34,44 +34,42 @@ const Page: NextPage = () => (
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../../images/sr-focused-woman-wearing-headphones.jpg'), type: 'image/jpg' },             
+                { src: require('../../images/sr-thumb-focused-woman-wearing-headphones.jpg'), type: 'image/jpg' },
               ]}
               alt="Can an Online Course Prepare You for a Sleep Consultant Career?"
               title="Can an Online Course Prepare You for a Sleep Consultant Career?"
               body=""
               buttonText="READ ONLINE"
-              link="/student-resources/blog/can-an-online-course-prepare-you-for-a-sleep-consultant-career"      
+              link="/student-resources/blog/can-an-online-course-prepare-you-for-a-sleep-consultant-career"
             />
           </CardColumn>
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../../images/sr-focused-woman-wearing-headphones.jpg'), type: 'image/jpg' },         
+                { src: require('../../images/sr-thumb-how-to-become-a-virtual-sleep-consultant.jpg'), type: 'image/jpg' },
               ]}
-              alt="Can an Online Course Prepare You for a Sleep Consultant Career?"
-              title="Can an Online Course Prepare You for a Sleep Consultant Career?"
+              alt="How to Become a Virtual Sleep Consultant"
+              title="How to Become a Virtual Sleep Consultant"
               body=""
               buttonText="READ ONLINE"
-              link="/student-resources/blog/can-an-online-course-prepare-you-for-a-sleep-consultant-career"            
+              link="/student-resources/blog/how-to-become-a-virtual-sleep-consultant"
             />
           </CardColumn>
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../../images/sr-focused-woman-wearing-headphones.jpg'), type: 'image/jpg' },    
+                { src: require('../../images/sr-thumb-stages-of-development.jpg'), type: 'image/jpg' },
               ]}
-              alt="Can an Online Course Prepare You for a Sleep Consultant Career?"
-              title="Can an Online Course Prepare You for a Sleep Consultant Career?"
+              alt="Stages of Development: How Sleep Consultants Can Help"
+              title="Stages of Development: How Sleep Consultants Can Help"
               body=""
               buttonText="READ ONLINE"
-              link="/student-resources/blog/can-an-online-course-prepare-you-for-a-sleep-consultant-career"         
+              link="/student-resources/blog/stages-of-development"
             />
           </CardColumn>
         </div>
         <h2 className="text-dark text-center">More Articles</h2>
-        <p className="col 12">Article 4</p>
-        <p className="col 12">Article 5</p>
-        <p className="col 12">Article 6</p>
+        <p className="col 12 lead"><Link href="/student-resources/blog/working-with-helicopter-parents"><a><strong>Working with Helicopter Parents</strong></a></Link></p>
       </div>
     </section>
     <section>
@@ -81,44 +79,44 @@ const Page: NextPage = () => (
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },               
+                { src: require('../../images/sr-thumb-7-tips-travelling-baby.jpg'), type: 'image/jpg' },
               ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
               buttonText="READ ONLINE"
-              link="/student-resources/tipsheets/7-tips-for-travelling-with-a-baby"          
+              link="/student-resources/tipsheets/7-tips-for-travelling-with-a-baby"
             />
           </CardColumn>
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },            
+                { src: require('../../images/sr-thumb-7-tips-for-virtual-sleep-consulting.jpg'), type: 'image/jpg' },
               ]}
-              alt="7 Tips for Travelling with a Baby"
-              title="7 Tips for Travelling with a Baby"
+              alt="7 Tips for Virtual Sleep Consulting"
+              title="7 Tips for Virtual Sleep Consulting"
               body=""
               buttonText="READ ONLINE"
-              link="/student-resources/tipsheets/7-tips-for-travelling-with-a-baby"             
+              link="/student-resources/tipsheets/7-tips-for-virtual-sleep-consulting"
             />
           </CardColumn>
           <CardColumn>
             <ArticleCard
               images={[
-                { src: require('../../images/sl-travelling-kids-happy-mother-her-child.jpg'), type: 'image/jpg' },            
+                { src: require('../../images/sr-thumb-8-tips-for-improving-bedtime-routine.jpg'), type: 'image/jpg' },
               ]}
-              alt="7 Tips for Travelling with a Baby"
-              title="7 Tips for Travelling with a Baby"
+              alt="8 Tips for Improving the Bedtime Routine"
+              title="8 Tips for Improving the Bedtime Routine"
               body=""
               buttonText="READ ONLINE"
-              link="/student-resources/tipsheets/7-tips-for-travelling-with-a-baby"    
+              link="/student-resources/tipsheets/8-tips-for-improving-bedtime-routine"
             />
           </CardColumn>
         </div>
         <h2 className="text-dark text-center">More Tipsheets</h2>
-        <p className="col 12">Tipsheet 4</p>
-        <p className="col 12">Tipsheet 5</p>
-        <p className="col 12">Tipsheet 6</p>
+        <p className="col 12 lead"><Link href="/student-resources/tipsheets/10-tips-for-creating-the-ideal-sleep-environment"><a><strong>10 Tips for Creating the Ideal Sleep Environment</strong></a></Link></p>
+        <p className="col 12 lead"><Link href="/student-resources/tipsheets/seasonally-dressing-a-baby-for-sleep-time"><a><strong>Seasonally Dressing a Baby for Sleep Time</strong></a></Link></p>
+        <p className="col 12 lead"><Link href="/student-resources/tipsheets/sleep-planning-for-school-aged-children"><a><strong>Sleep Planning for School-Aged Children</strong></a></Link></p>       
       </div>
     </section>
 
