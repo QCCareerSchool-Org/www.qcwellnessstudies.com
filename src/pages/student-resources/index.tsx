@@ -28,10 +28,10 @@ const Page: NextPage = () => (
     </section>
 
     <section>
-      <h2 className="text-dark text-center">Featured Articles</h2>
+      <h2 className="text-dark text-center mb-4">Featured Articles</h2>
       <div className="container">
-        <div className="row mb-5">
-          <CardColumn>
+        <div className="row mb-2">      
+          <CardColumn>   
             <ArticleCard
               images={[
                 { src: require('../../images/sr-thumb-focused-woman-wearing-headphones.jpg'), type: 'image/jpg' },
@@ -41,9 +41,9 @@ const Page: NextPage = () => (
               body=""
               buttonText="READ ONLINE"
               link="/student-resources/blog/can-an-online-course-prepare-you-for-a-sleep-consultant-career"
-            />
-          </CardColumn>
-          <CardColumn>
+            /> 
+          </CardColumn>   
+          <CardColumn>     
             <ArticleCard
               images={[
                 { src: require('../../images/sr-thumb-how-to-become-a-virtual-sleep-consultant.jpg'), type: 'image/jpg' },
@@ -54,8 +54,8 @@ const Page: NextPage = () => (
               buttonText="READ ONLINE"
               link="/student-resources/blog/how-to-become-a-virtual-sleep-consultant"
             />
-          </CardColumn>
-          <CardColumn>
+          </CardColumn>   
+          <CardColumn>     
             <ArticleCard
               images={[
                 { src: require('../../images/sr-thumb-stages-of-development.jpg'), type: 'image/jpg' },
@@ -66,18 +66,18 @@ const Page: NextPage = () => (
               buttonText="READ ONLINE"
               link="/student-resources/blog/stages-of-development"
             />
-          </CardColumn>
+          </CardColumn>     
         </div>
         <h2 className="text-dark text-center">More Articles</h2>
-        <p className="col 12 lead"><Link href="/student-resources/blog/working-with-helicopter-parents"><a><strong>Working with Helicopter Parents</strong></a></Link></p>
-        <p className="col 12 lead"><Link href="/student-resources/blog/6-common-training-methods-of-an-infant-sleep-consultant"><a><strong>The 6 Common Training Methods of An Infant Sleep Consultant</strong></a></Link></p>
+        <p className="col-12 offset-md-2 offset-lg-0 lead"><Link href="/student-resources/blog/working-with-helicopter-parents"><a><strong>Working with Helicopter Parents</strong></a></Link></p>
+        <p className="col-12 offset-md-2 offset-lg-0 lead"><Link href="/student-resources/blog/6-common-training-methods-of-an-infant-sleep-consultant"><a><strong>The 6 Common Training Methods of An Infant Sleep Consultant</strong></a></Link></p>
       </div>
     </section>
     <section>
-      <h2 className="text-dark text-center">Tipsheets</h2>
+      <h2 className="text-dark text-center mb-4">Tipsheets</h2>
       <div className="container">
-        <div className="row mb-5">
-          <CardColumn>
+        <div className="row mb-2">
+          <CardColumn>        
             <ArticleCard
               images={[
                 { src: require('../../images/sr-thumb-7-tips-travelling-baby.jpg'), type: 'image/jpg' },
@@ -89,7 +89,7 @@ const Page: NextPage = () => (
               link="/student-resources/tipsheets/7-tips-for-travelling-with-a-baby"
             />
           </CardColumn>
-          <CardColumn>
+          <CardColumn> 
             <ArticleCard
               images={[
                 { src: require('../../images/sr-thumb-7-tips-for-virtual-sleep-consulting.jpg'), type: 'image/jpg' },
@@ -99,9 +99,9 @@ const Page: NextPage = () => (
               body=""
               buttonText="READ ONLINE"
               link="/student-resources/tipsheets/7-tips-for-virtual-sleep-consulting"
-            />
+            />  
           </CardColumn>
-          <CardColumn>
+          <CardColumn> 
             <ArticleCard
               images={[
                 { src: require('../../images/sr-thumb-8-tips-for-improving-bedtime-routine.jpg'), type: 'image/jpg' },
@@ -111,13 +111,13 @@ const Page: NextPage = () => (
               body=""
               buttonText="READ ONLINE"
               link="/student-resources/tipsheets/8-tips-for-improving-bedtime-routine"
-            />
+            />       
           </CardColumn>
         </div>
         <h2 className="text-dark text-center">More Tipsheets</h2>
-        <p className="col 12 lead"><Link href="/student-resources/tipsheets/10-tips-for-creating-the-ideal-sleep-environment"><a><strong>10 Tips for Creating the Ideal Sleep Environment</strong></a></Link></p>
-        <p className="col 12 lead"><Link href="/student-resources/tipsheets/seasonally-dressing-a-baby-for-sleep-time"><a><strong>Seasonally Dressing a Baby for Sleep Time</strong></a></Link></p>
-        <p className="col 12 lead"><Link href="/student-resources/tipsheets/sleep-planning-for-school-aged-children"><a><strong>Sleep Planning for School-Aged Children</strong></a></Link></p>       
+        <p className="col-12 offset-md-2 offset-lg-0 lead"><Link href="/student-resources/tipsheets/10-tips-for-creating-the-ideal-sleep-environment"><a><strong>10 Tips for Creating the Ideal Sleep Environment</strong></a></Link></p>
+        <p className="col-12 offset-md-2 offset-lg-0 lead"><Link href="/student-resources/tipsheets/seasonally-dressing-a-baby-for-sleep-time"><a><strong>Seasonally Dressing a Baby for Sleep Time</strong></a></Link></p>
+        <p className="col-12 offset-md-2 offset-lg-0  lead"><Link href="/student-resources/tipsheets/sleep-planning-for-school-aged-children"><a><strong>Sleep Planning for School-Aged Children</strong></a></Link></p>       
       </div>
     </section>
 
