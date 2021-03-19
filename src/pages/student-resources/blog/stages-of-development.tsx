@@ -79,7 +79,7 @@ const Page: NextPage = () => (
               <p><img className="img-fluid" src={require('../../../images/sr-close-top-view-lying-bed-toddler.jpg')} alt="Toddler lying in bed" /></p>
             </div>      
             <p>Newborns, babies and toddlers all need enough sleep to ensure they continue to develop and grow. Sleep plans should suit each individual infant’s sleep needs, surroundings and feeding schedule. Remember to update sleep plans and bedtime routines as infants reach new stages of development!</p>
-            <p className="lead">Want to learn more about infant sleep consulting? Enroll in QC Career School’s <Link href="/courses-and-tuition/sleep-consultant"><a>Infant Sleep Consultant Course</a></Link> today and start your new career in 2021!</p>         
+            <p className="lead">Want to learn more about infant sleep consulting? Enroll in QC Career School’s <Link href="/courses-and-tuition/sleep-consultant"><a>Infant Sleep Consultant Course</a></Link> today and start your new career!</p>         
           </div>
         </div>
       </div>

@@ -81,7 +81,7 @@ const Page: NextPage = () => (
               <p><img className="img-fluid" src={require('../../../images/sr-close-mother-cuddling-sleeping-baby-daughter.jpg')} alt="Mother cuddling sleeping baby daughter" /></p>
             </div>
             <p>Sleep consultants should always make sure parents feel heard and understood. Clear communication and advice will improve the parent-baby relationship and ensure successful infant sleep training.</p>
-            <p className="lead">Want to learn more about infant sleep coaching? Enroll in QC Wellness Studies’ <Link href="/courses-and-tuition/sleep-consultant"><a>Infant Sleep Consultant Course</a></Link> and launch your new career in 2021!</p>
+            <p className="lead">Want to learn more about infant sleep coaching? Enroll in QC Wellness Studies’ <Link href="/courses-and-tuition/sleep-consultant"><a>Infant Sleep Consultant Course</a></Link> and launch your new career!</p>
           </div>
         </div>
       </div>
