@@ -124,7 +124,7 @@ const Page: NextPage = () => (
     <section id="enrollToday" className="text-light">
       <div className="container text-center">
         <div className="row">
-          <div className="col-12 col-md-10 col-lg-12">
+          <div className="col-12">
             <h2>Get Started Today!</h2>
             <p className="lead">Why wait? Start your professional training program today and get on the path toward a new and exciting career</p>
             <p><a className="btn btn-secondary btn-lg text-uppercase" href="https://enroll.qcwellnessstudies.com/">Enroll Online</a></p>
