@@ -124,7 +124,6 @@ const Page: NextPage = () => (
       </div>
     </section>
 
-
     <section id="agingSection" className="bg-light">
       <div className="container">
         <div className="row">

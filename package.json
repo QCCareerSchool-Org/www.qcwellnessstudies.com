@@ -1,6 +1,6 @@
 {
   "name": "www.qcwellnessstudies.com",
-  "version": "1.29.2",
+  "version": "1.30.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "test:watch": "jest --verbose --watch",
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint \"src/**/*.ts*\""
   },
   "keywords": [],
   "author": "QC Career School",

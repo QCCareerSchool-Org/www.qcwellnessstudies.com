@@ -30,4 +30,3 @@ LandingPageLayout.propTypes = {
   children: PropTypes.oneOfType([ PropTypes.element, PropTypes.arrayOf(PropTypes.element.isRequired) ]).isRequired,
   SecondaryNav: PropTypes.func,
 };
-

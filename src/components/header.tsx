@@ -46,6 +46,7 @@ export const Header: React.FC<Props> = ({ nav }) => {
                   </NavDropdown>
                   <NavDropdown title="How It Works" id="howItWorksDropdown">
                     <Link href="/how-it-works"><a className="dropdown-item">How Online Learning Works</a></Link>
+                    <Link href="/student-resources"><a className="dropdown-item">Sleep Resources</a></Link>
                     <Link href="/faq"><a className="dropdown-item">FAQ</a></Link>
                   </NavDropdown>
                   <NavDropdown title="About" id="aboutDropdown">

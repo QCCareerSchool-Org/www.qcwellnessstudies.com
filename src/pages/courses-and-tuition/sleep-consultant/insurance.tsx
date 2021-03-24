@@ -68,7 +68,7 @@ const Page: React.FC = () => (
     <section>
       <div className="container">
         <div className="row">
-          <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-12 text-center ">
+          <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-12 text-center">
             <h2 className="h3">Types of Insurance Recommended for Sleep Consultants</h2>
             <p>You’ll explore different types of insurance when you begin your business as a sleep consultant. Remember that you should always consult an insurance broker and investigate the local laws and regulations that may be in place in your area before making any final decisions regarding insurance.</p>
             <p>If you already know you’re interested in covering yourself as much as possible, here are a few insurance policies you should consider.</p>
@@ -83,7 +83,7 @@ const Page: React.FC = () => (
           </div>
           <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-4">
             <h2 className="h3">Specialized Insurance</h2>
-            <p>You may be offered specific insurance packages that seem to cover everything you need in a business. These packages could be sold as “coaching insurance,” “consulting insurance,” or similar. While these packages can work for you and your business, they may come at a higher cost than other types of insurance. They may not also be as complete as you think they are – many packages don’t include professional indemnity insurance, for example. Always read the fine print of your insurance policy to determine exactly what is and isn’t covered.</p>
+            <p>You may be offered specific insurance packages that seem to cover everything you need in a business. These packages could be sold as “coaching insurance,” “consulting insurance,” or similar. While these packages can work for you and your business, they may come at a higher cost than other types of insurance. They may not also be as complete as you think they are&mdash;many packages don’t include professional indemnity insurance, for example. Always read the fine print of your insurance policy to determine exactly what is and isn’t covered.</p>
           </div>
           <div className="col-12 mb-4 col-sm-10 col-md-8 col-lg-12 text-center">
             <h2 className="h3">Other Types of Insurance</h2>
