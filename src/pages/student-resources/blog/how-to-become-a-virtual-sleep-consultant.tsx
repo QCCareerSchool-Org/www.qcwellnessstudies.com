@@ -32,7 +32,7 @@ const Page: NextPage = () => (
       <div className="container">
         <div className="row">
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
-            <p className="lead">Becoming a virtual sleep consultant could be a fantastic way to begin a new career from home. Sleep consultants are becoming more and more common – whether for first- or fifth-time parents. Each baby is unique and could benefit from a sleep consultant to help caregivers understand their needs.</p>
+            <p className="lead">Becoming a virtual sleep consultant could be a fantastic way to begin a new career from home. Sleep consultants are becoming more and more common&mdash;whether for first- or fifth-time parents. Each baby is unique and could benefit from a sleep consultant to help caregivers understand their needs.</p>
             <p className="lead">If the idea of working from home appeals to you, you may be suited to a career as a virtual sleep consultant. You could work with families and infants all over the world to develop positive sleep habits.  If you’re interested in seeing what this career is all about, read on to discover how to become a virtual sleep consultant!</p>
             <p><img className="img-fluid" src={require('../../../images/sr-senior-stylish-woman-taking-notes-notebook.jpg')} alt="Stylish woman taking notes in a notebook" /></p>
 
@@ -44,7 +44,7 @@ const Page: NextPage = () => (
 
             <h4>Who Can Become a Virtual Sleep Consultant?</h4>
             <p>Sleep consultants require training to become familiar with all of the sleep training methods necessary to help families. If you’re organized, have good people skills, enjoy working with infants and children, and are able to clearly communicate, you might find you’re an excellent virtual sleep consultant!</p>
-            <p>If you’re multilingual, becoming a virtual sleep consultant opens up even more doors. You’d be able to assist families in every language you speak – and, because your services are remote, you’ll also be able to assist families in other countries where those languages are spoken.</p>
+            <p>If you’re multilingual, becoming a virtual sleep consultant opens up even more doors. You’d be able to assist families in every language you speak&mdash;and, because your services are remote, you’ll also be able to assist families in other countries where those languages are spoken.</p>
             <p>Keep in mind that you’ll usually work odd hours as a sleep consultant, virtual or otherwise. After all, your area of concern often involves times when everyone else should be sleeping! Virtual sleep consultants should also consider time zones if they work with international clients.</p>
             <p><img className="img-fluid" src={require('../../../images/sr-technology-communication-people-concept-senior-woman.jpg')} alt="online family gathering" /></p>
 

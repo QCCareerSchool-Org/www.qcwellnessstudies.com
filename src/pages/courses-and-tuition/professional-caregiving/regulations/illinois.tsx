@@ -17,7 +17,7 @@ const Page: React.FC = () => {
 					<div className="row">
 						<div className="col-12 col-sm-10 col-md-8 col-lg-7">
 							<h1>Illinois</h1>
-							<h2 className="h5">In Illinois, Professional Caregivers fall under the category “Caregiver – Home Care – Home Service Worker (Non-Medical Home Care)” but are referred to as “Home Service Workers.”</h2>
+							<h2 className="h5">In Illinois, Professional Caregivers fall under the category “Caregiver&mdash;Home Care&mdash;Home Service Worker (Non-Medical Home Care)” but are referred to as “Home Service Workers.”</h2>
 						</div>
 					</div>
 				</div>
