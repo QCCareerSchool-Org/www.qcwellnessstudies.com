@@ -18,7 +18,7 @@ interface Props {
 }
 
 export const ArticleCard: React.FC<Props> = ({ images, title, body, buttonText, link, externalLink, alt }) => (
-  <div className="card shadow-lg rounded-lg mb-5">
+  <div className="card shadow-lg mb-5">
     {externalLink
       ? <a href={link}><CardImage images={images} alt={alt} /></a>
       : <Link href={link}><a><CardImage images={images} alt={alt} /></a></Link>
