@@ -120,12 +120,15 @@ export const getAddress = (countryCode: string): string[] => {
  * Creates a query string from an object
  * @param params the query string values
  */
-export function getQueryString(params: any): string {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function getQueryString(params: { [key: string]: any }): string {
   return Object.keys(params).map(k => {
-    if (Array.isArray(params[k])) {
-      return params[k].map((val: any) => `${encodeURIComponent(k)}[]=${encodeURIComponent(val)}`).join('&');
+    const param = params[k];
+    if (Array.isArray(param)) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      return param.map((val: any) => `${encodeURIComponent(k)}[]=${encodeURIComponent(val)}`).join('&');
     }
-    return `${encodeURIComponent(k)}=${encodeURIComponent(params[k])}`;
+    return `${encodeURIComponent(k)}=${encodeURIComponent(param)}`;
   }).join('&');
 }
 

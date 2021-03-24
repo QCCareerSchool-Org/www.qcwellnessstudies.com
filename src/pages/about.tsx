@@ -74,22 +74,22 @@ const Page: React.FC = () => (
         <div className="container">
           <div className="row">
             <div className="col-12 mb-4 col-sm-6 col-md-3 mb-md-0">
-              <p><a href="https://www.qcmakeupacademy.com/" target="_blank" rel="noopener noreferrer" ><img src={require('../images/logo-makeup.svg')} alt="QC Makeup Academy" /></a></p>
+              <p><a href="https://www.qcmakeupacademy.com/" target="_blank" rel="noopener noreferrer"><img src={require('../images/logo-makeup.svg')} alt="QC Makeup Academy" /></a></p>
               <h3 className="h5">QC Makeup Academy</h3>
               <p>QC Makeup Academy is QC's fastest growing schools and provides 10 courses in basic and advanced professional makeup artistry training.</p>
             </div>
             <div className="col-12 mb-4 col-sm-6 col-md-3 mb-md-0">
-              <p><a href="https://www.qceventplanning.com/" target="_blank" rel="noopener noreferrer" ><img src={require('../images/logo-event.svg')} alt="QC Event School" /></a></p>
+              <p><a href="https://www.qceventplanning.com/" target="_blank" rel="noopener noreferrer"><img src={require('../images/logo-event.svg')} alt="QC Event School" /></a></p>
               <h3 className="h5">QC Event School</h3>
               <p>High quality training for event and wedding planning professionals, offering specialty classes for individuals and corporations alike.</p>
             </div>
             <div className="col-12 mb-4 col-sm-6 col-md-3 mb-md-0">
-              <p><a href="https://www.qcdesignschool.com/" target="_blank" rel="noopener noreferrer" ><img src={require('../images/logo-design.svg')} alt="QC Design School" /></a></p>
+              <p><a href="https://www.qcdesignschool.com/" target="_blank" rel="noopener noreferrer"><img src={require('../images/logo-design.svg')} alt="QC Design School" /></a></p>
               <h3 className="h5">QC Design School</h3>
               <p>Provides design &amp; decorating professionals with training in 6 unique fields of study, from interior decorating to Feng Shui Design.</p>
             </div>
             <div className="col-12 mb-4 col-sm-6 col-md-3 mb-md-0">
-              <p><a href="https://www.doggroomingcourse.com/" target="_blank" rel="noopener noreferrer" ><img src={require('../images/logo-pet.svg')} alt="QC Pet Studies" /></a></p>
+              <p><a href="https://www.doggroomingcourse.com/" target="_blank" rel="noopener noreferrer"><img src={require('../images/logo-pet.svg')} alt="QC Pet Studies" /></a></p>
               <h3 className="h5">QC Pet Studies</h3>
               <p>Expert training classes in dog grooming and dog First Aid. Perfect for individuals or employees of dog grooming salons.</p>
             </div>
