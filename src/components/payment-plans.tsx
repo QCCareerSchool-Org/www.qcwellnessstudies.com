@@ -59,4 +59,3 @@ PaymentPlans.propTypes = {
   courses: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   doubleGuarantee: PropTypes.bool.isRequired,
 };
-

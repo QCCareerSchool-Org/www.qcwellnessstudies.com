@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 interface Image {
@@ -44,6 +45,19 @@ export const ArticleCard: React.FC<Props> = ({ images, title, body, buttonText, 
   </div>
 );
 
+ArticleCard.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.shape({
+    src: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+  }).isRequired).isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string,
+  buttonText: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  externalLink: PropTypes.bool,
+  alt: PropTypes.string.isRequired,
+};
+
 interface CardImageProps {
   images: Image[];
   alt: string;
@@ -55,8 +69,16 @@ const CardImage: React.FC<CardImageProps> = ({ images, alt }) => {
   }
   return (
     <picture>
-      {[...images].reverse().map((image, i) => <source key={i} srcSet={image.src} type={image.type} />)}
+      {[ ...images ].reverse().map((image, i) => <source key={i} srcSet={image.src} type={image.type} />)}
       <img className="card-img-top" src={images[0].src} alt={alt} />
     </picture>
   );
+};
+
+CardImage.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.shape({
+    src: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+  }).isRequired).isRequired,
+  alt: PropTypes.string.isRequired,
 };

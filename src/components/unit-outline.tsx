@@ -1,9 +1,9 @@
+import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-import Card from 'react-bootstrap/Card';
 import { useAccordionToggle } from 'react-bootstrap/AccordionToggle';
+import Card from 'react-bootstrap/Card';
 import { IoMdAddCircle, IoMdRemoveCircle } from 'react-icons/io';
-import PropTypes from 'prop-types';
 
 interface CustomToggleProps {
   children: React.ReactNode;
@@ -78,4 +78,3 @@ export const UnitOutline: React.FC<Props> = ({ data }) => {
 UnitOutline.propTypes = {
   data: PropTypes.array.isRequired,
 };
-
