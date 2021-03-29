@@ -35,9 +35,8 @@ export interface Enrollment {
   courses: Array<{
     code: string;
     baseCost: number;
+    planDiscount: number;
     discount: number;
-    secondaryDiscount: number;
-    campaignDiscount: number;
     deposit: number;
     installment: number;
     name: string;

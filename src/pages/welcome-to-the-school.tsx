@@ -101,16 +101,16 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
                         <td><strong>Cost</strong></td>
                         <td>{enrollment.currencySymbol}{c.baseCost.toFixed(2)}</td>
                       </tr>
-                      {c.discount > 0 && (
+                      {c.planDiscount > 0 && (
                         <tr>
                           <td><strong>Discount</strong></td>
-                          <td>&minus;{enrollment.currencySymbol}{c.discount.toFixed(2)}</td>
+                          <td>&minus;{enrollment.currencySymbol}{c.planDiscount.toFixed(2)}</td>
                         </tr>
                       )}
-                      {c.secondaryDiscount > 0 && (
+                      {c.discount > 0 && (
                         <tr>
-                          <td><strong>Multi-Course Discount</strong></td>
-                          <td>&minus;{enrollment.currencySymbol}{c.secondaryDiscount.toFixed(2)}</td>
+                          <td><strong>Special Discount</strong></td>
+                          <td>&minus;{enrollment.currencySymbol}{c.discount.toFixed(2)}</td>
                         </tr>
                       )}
                       <tr>
