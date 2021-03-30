@@ -1,4 +1,5 @@
 export interface Enrollment {
+  id: number;
   school: string;
   url: string;
   noShipping: boolean;

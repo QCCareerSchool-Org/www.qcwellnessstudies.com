@@ -16,9 +16,11 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@qccareerschool/http-status": "^2.1.0",
+    "@types/big.js": "^6.0.2",
     "@types/prop-types": "^15.7.3",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.6",
+    "big.js": "^6.0.3",
     "bootstrap": "^4.5.3",
     "eslint-plugin-jest": "^23.8.2",
     "isomorphic-unfetch": "^3.1.0",

@@ -1,14 +1,17 @@
 import * as HttpStatus from '@qccareerschool/http-status';
+import Big from 'big.js';
 import fetch from 'isomorphic-unfetch';
 import { NextPage } from 'next';
 import ErrorPage from 'next/error';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { SEO } from '../components/seo';
 import { TelephoneNumber } from '../components/telephone-number';
 import { DefaultLayout } from '../layouts/default';
 import { Enrollment } from '../models/enrollment';
+
+declare const gtag: (...args: unknown[]) => void;
 
 interface Props {
   enrollment?: Enrollment;
@@ -23,6 +26,26 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
   if (!enrollment) {
     return null;
   }
+
+  useEffect(() => {
+    if (enrollment.emailed === false) {
+      typeof gtag !== 'undefined' && gtag('event', 'purchase', {
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        transaction_id: enrollment.id,
+        affiliation: enrollment.school,
+        value: enrollment.cost,
+        currency: enrollment.currencyCode,
+        tax: 0,
+        shipping: 0,
+        items: enrollment.courses.map(c => ({
+          id: c.code,
+          name: c.name,
+          price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(2)),
+          quantity: 1,
+        })),
+      });
+    }
+  }, [ enrollment.emailed ]);
 
   const paymentDate = new Date(enrollment.paymentDate);
 
