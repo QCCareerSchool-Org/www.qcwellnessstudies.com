@@ -33,7 +33,6 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
       if (typeof gtag !== 'undefined') {
         // https://developers.google.com/analytics/devguides/collection/gtagjs/ecommerce
         gtag('event', 'purchase', {
-          // eslint-disable-next-line @typescript-eslint/camelcase
           transaction_id: enrollment.id,
           affiliation: enrollment.school,
           value: enrollment.cost,
@@ -70,7 +69,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
         ga('ecommerce:send');
       }
     }
-  }, [enrollment.emailed]);
+  }, [ enrollment.emailed ]);
 
   const paymentDate = new Date(enrollment.paymentDate);
 
