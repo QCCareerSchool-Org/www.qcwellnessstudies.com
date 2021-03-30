@@ -1,7 +1,7 @@
 import * as HttpStatus from '@qccareerschool/http-status';
 import Big from 'big.js';
 import fetch from 'isomorphic-unfetch';
-import { NextPage } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 import ErrorPage from 'next/error';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
@@ -239,7 +239,8 @@ const getEnrollment = async (enrollmentId: number, code: string): Promise<Enroll
   return response.json();
 };
 
-Page.getInitialProps = async ({ res, query }): Promise<Props> => {
+export const getServerSideProps: GetServerSideProps = async ({ res, query }) => {
+  console.log('here');
   try {
     if (typeof query.enrollmentId !== 'string' || typeof query.code !== 'string') {
       throw new HttpStatus.BadRequest();
@@ -259,13 +260,13 @@ Page.getInitialProps = async ({ res, query }): Promise<Props> => {
       } catch (err) { /* ignore */ }
     }
 
-    return { enrollment };
+    return { props: { enrollment } };
   } catch (err) {
     const errorCode = typeof err.statusCode === 'undefined' ? 500 : err.statusCode;
     if (res) {
       res.statusCode = errorCode;
     }
-    return { errorCode };
+    return { props: { errorCode } };
   }
 };
 
