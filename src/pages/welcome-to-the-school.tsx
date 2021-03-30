@@ -240,7 +240,6 @@ const getEnrollment = async (enrollmentId: number, code: string): Promise<Enroll
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ res, query }) => {
-  console.log('here');
   try {
     if (typeof query.enrollmentId !== 'string' || typeof query.code !== 'string') {
       throw new HttpStatus.BadRequest();
