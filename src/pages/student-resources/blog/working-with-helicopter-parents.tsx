@@ -37,7 +37,7 @@ const Page: NextPage = () => (
             <p className="lead">In this article, we’ll go over a few strategies to help parents and sleep consultants work together to create successful sleep plans.</p>
             <p><img className="img-fluid" src={require('../../../images/sr-smiling-young-mother-father-standing.jpg')} alt="Smiling mother and father with their baby" /></p>
 
-            <h4>What is a helicopter parent?</h4>
+            <h4>What Is a helicopter parent?</h4>
             <p>Helicopter parents, also known as cosseting parents, are parents and caregivers who pay extremely close attention to their children. A helicopter parent will carefully watch over every area of her child’s life, including the sleep routine. This attention to detail is often perceived in a negative light, but let’s remember that helicopter parents are just looking out for their children!</p>
             <p>A helicopter parent will probably monitor a child’s progress and quantity of sleep. This type of parent may even know the exact lengths of her baby’s naps! Detailed information about an infant’s sleep schedule will actually be extremely helpful for sleep training.</p>
             <p>When it comes to sleep training habits, a helicopter parent might:</p>
@@ -50,7 +50,7 @@ const Page: NextPage = () => (
             </ul>
             <p><img className="img-fluid" src={require('../../../images/sr-woman-man-look-newborn-boy-sleeps.jpg')} alt="Mother and fatehr watching newborn baby sleep" /></p>
 
-            <h4>Communication is Key</h4>
+            <h4>Communication Is Key</h4>
             <p>Clear communication is <strong><em>essential</em></strong> for helicopter parents. They’ll want to be involved in every step of developing a sleep plan for their infant, so they’ll need the sleep consultant to share as much detailed information as possible. A helicopter parent will want to understand and approve every element of the plan. In some cases, these parents may have trouble asking for help when it comes to their child’s care and wellbeing. Open communication between the parent and sleep consultant will help put the parents at ease.</p>
             <p>Parents, caregivers and sleep consultants should work together to develop the best possible plans and routines for the infant. Sleep consultants can reassure helicopter parents by highlighting their specific role in the plan and emphasizing how each element benefits the child.</p>
             <p>Let’s take a look at the best ways for a sleep consultant to involve parents in the sleep training process:</p>
