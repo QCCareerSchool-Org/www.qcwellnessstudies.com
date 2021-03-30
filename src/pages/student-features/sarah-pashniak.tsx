@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -10,7 +11,7 @@ const Page: React.FC = () => (
     <SEO
       title="Student Feature - Sarah Pashniak"
       description="QC graduate, Sarah Pashniak, discusses her sleep consultant journey, her passion about sleep, how QC fine-tuned her skills as a professional, and more!"
-      canonical="/student-feature"
+      canonical="/student-feature/sarah-pashniak"
     />
 
     <section id="heroSection">
@@ -50,7 +51,7 @@ const Page: React.FC = () => (
             <p>After that, when my daughter was four months old, I actually worked with a sleep consultant for her. It was this individual who inspired me to get my certification as well! We became instant best friends. Along the way, she’s also been my mentor. She recognized my passion and desire to not only help babies, but to help the whole family get the sleep they need and deserve.</p>
           </div>
           <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-            <p><img className="img-fluid" src={require('../../images/student-feature/sarah-pashniak-family.jpg')} alt="Sarah Pashniak Family" /></p>
+            <p><Image className="img-fluid" src={require('../../images/student-feature/sarah-pashniak-family.jpg')} width="2368" height="3361" alt="Sarah Pashniak Family" /></p>
           </div>
         </div>
         <div className="row">
@@ -74,7 +75,7 @@ const Page: React.FC = () => (
             <Link href="/courses-and-tuition/sleep-consultant"><a className="btn btn-secondary mt-3 mb-3">Course Overview</a></Link>
           </div>
           <div className="col-12 col-sm-10 col-md-8 col-lg-6 order-lg-1">
-            <p><img className="img-fluid" src={require('../../images/student-feature/sarah-pashniak-family-lake.jpg')} alt="Sarah Pashniak Family in the Lake" /></p>
+            <p><Image className="img-fluid" src={require('../../images/student-feature/sarah-pashniak-family-lake.jpg')} width="664" height="1097" alt="Sarah Pashniak Family in the Lake" /></p>
           </div>
         </div>
         <div className="row">
@@ -88,7 +89,7 @@ const Page: React.FC = () => (
             <p>I would definitely recommend that you take the additional business training, especially if you have any goals of starting your own business. After all, how you market your business is key to your success! If you have no business training, how can you ever hope to run one?</p>
           </div>
           <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-            <p><img className="img-fluid" src={require('../../images/student-feature/sarah-pashniak-office.jpg')} alt="Sarah Pashniak Office" /></p>
+            <p><Image className="img-fluid" src={require('../../images/student-feature/sarah-pashniak-office.jpg')} width="1536" height="2048" alt="Sarah Pashniak Office" /></p>
           </div>
         </div>
         <div className="row">
