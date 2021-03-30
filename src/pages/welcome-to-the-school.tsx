@@ -12,6 +12,7 @@ import { DefaultLayout } from '../layouts/default';
 import { Enrollment } from '../models/enrollment';
 
 declare const gtag: (...args: unknown[]) => void;
+declare const ga: (...args: unknown[]) => void;
 
 interface Props {
   enrollment?: Enrollment;
@@ -29,23 +30,47 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
 
   useEffect(() => {
     if (enrollment.emailed === false) {
-      typeof gtag !== 'undefined' && gtag('event', 'purchase', {
-        // eslint-disable-next-line @typescript-eslint/camelcase
-        transaction_id: enrollment.id,
-        affiliation: enrollment.school,
-        value: enrollment.cost,
-        currency: enrollment.currencyCode,
-        tax: 0,
-        shipping: 0,
-        items: enrollment.courses.map(c => ({
-          id: c.code,
-          name: c.name,
-          price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(2)),
-          quantity: 1,
-        })),
-      });
+      if (typeof gtag !== 'undefined') {
+        // https://developers.google.com/analytics/devguides/collection/gtagjs/ecommerce
+        gtag('event', 'purchase', {
+          // eslint-disable-next-line @typescript-eslint/camelcase
+          transaction_id: enrollment.id,
+          affiliation: enrollment.school,
+          value: enrollment.cost,
+          currency: enrollment.currencyCode,
+          tax: 0,
+          shipping: 0,
+          items: enrollment.courses.map(c => ({
+            id: c.code,
+            name: c.name,
+            price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(2)),
+            quantity: 1,
+          })),
+        });
+      } else if (typeof ga !== 'undefined') {
+        // https://developers.google.com/analytics/devguides/collection/analyticsjs/ecommerce
+        ga('require', 'ecommerce');
+        ga('ecommerce:addTransaction', {
+          id: enrollment.id,
+          affiliation: enrollment.school,
+          revenue: enrollment.cost,
+          shipping: 0,
+          tax: 0,
+          currency: enrollment.currencyCode,
+        });
+        enrollment.courses.forEach(c => {
+          ga('ecommerce:addItem', {
+            id: enrollment.id,
+            name: c.name,
+            price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(2)),
+            quantity: 1,
+            currency: enrollment.currencyCode,
+          });
+        });
+        ga('ecommerce:send');
+      }
     }
-  }, [ enrollment.emailed ]);
+  }, [enrollment.emailed]);
 
   const paymentDate = new Date(enrollment.paymentDate);
 
