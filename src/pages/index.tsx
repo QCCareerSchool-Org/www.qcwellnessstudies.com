@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -27,7 +28,7 @@ const Page: NextPage = () => (
 
     <section id="certifications" className="text-center">
       <div className="container">
-        <p><img className="img-fluid" width="90" height="90" src={require('../images/certification-seal.png')} alt="certification seal" /></p>
+        <p><Image className="img-fluid" width="90" height="90" src={require('../images/certification-seal.png')} alt="certification seal" /></p>
         <h2 className="text-dark mb-5">Certifications</h2>
         <div className="row">
           <div className="col-12 mb-5 col-md-6 mb-md-0 col-lg-5 offset-lg-1 mb-5">
@@ -79,7 +80,7 @@ const Page: NextPage = () => (
             </ul>
           </div>
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-5 offset-lg-0 text-center flex-column">
-            <img className="img-fluid" src={require('../images/how-it-works.svg')} alt="how it works" />
+            <Image className="img-fluid" width={427} height={427} src={require('../images/how-it-works.svg')} alt="how it works" />
           </div>
         </div>
       </div>
@@ -91,7 +92,7 @@ const Page: NextPage = () => (
         <p className="lead text-center col-12 col-lg-10 offset-lg-1 mb-4">When choosing to attend an online school, it can be difficult to separate the legitimate educational institutions from less-than-reputable companies who are looking to make a quick buck. You want to choose a school you'll be proud to attend. One that will help you meet your career goals. Welcome to QC!</p>
         <div className="row d-flex align-items-center mb-5 mb-md-4">
           <div className="col-4 offset-4 col-md-2 offset-md-0 offset-lg-1 offset-xl-2 text-center mb-2 mb-md-0">
-            <img className="img-fluid" width="60" height="60" src={require('../images/icon-why-choose-qc-proven.svg')} alt="icon proven" />
+            <Image className="img-fluid" width="60" height="60" src={require('../images/icon-why-choose-qc-proven.svg')} alt="icon proven" />
           </div>
           <div className="col-12 col-md-10 col-lg-8 col-xl-6 text-center text-md-left">
             <h3>Proven Track Record</h3>
@@ -100,7 +101,7 @@ const Page: NextPage = () => (
         </div>
         <div className="row d-flex align-items-center mb-5 mb-md-4">
           <div className="col-4 offset-4 col-md-2 offset-md-0 offset-lg-1 offset-xl-2 text-center mb-2 mb-md-0">
-            <p><img className="img-fluid" width="60" height="60" src={require('../images/icon-why-choose-qc-online.svg')} alt="icon online" /></p>
+            <p><Image className="img-fluid" width="60" height="60" src={require('../images/icon-why-choose-qc-online.svg')} alt="icon online" /></p>
           </div>
           <div className="col-12 col-md-10 col-lg-8 col-xl-6 text-center text-md-left">
             <h3>A Fully Online Learning Experience</h3>
@@ -109,7 +110,7 @@ const Page: NextPage = () => (
         </div>
         <div className="row d-flex align-items-center mb-5 mb-md-4">
           <div className="col-4 offset-4 col-md-2 offset-md-0 offset-lg-1 offset-xl-2 text-center mb-2 mb-md-0">
-            <p><img className="img-fluid" width="60" height="60" src={require('../images/icon-why-choose-qc-tutor-guide.svg')} alt="tutor" /></p>
+            <p><Image className="img-fluid" width="60" height="60" src={require('../images/icon-why-choose-qc-tutor-guide.svg')} alt="tutor" /></p>
           </div>
           <div className="col-12 col-md-10 col-lg-8 col-xl-6 text-center text-md-left">
             <h3>Expert Tutors to Guide You</h3>
@@ -118,7 +119,7 @@ const Page: NextPage = () => (
         </div>
         <div className="row d-flex align-items-center mb-5 mb-md-4">
           <div className="col-4 offset-4 col-md-2 offset-md-0 offset-lg-1 offset-xl-2 text-center mb-2 mb-md-0">
-            <p><img className="img-fluid" width="60" height="60" src={require('../images/icon-why-choose-qc-training.svg')} alt="training" /></p>
+            <p><Image className="img-fluid" width="60" height="60" src={require('../images/icon-why-choose-qc-training.svg')} alt="training" /></p>
           </div>
           <div className="col-12 col-md-10 col-lg-8 col-xl-6 text-center text-md-left">
             <h3>Business Training You can Use</h3>
@@ -127,7 +128,7 @@ const Page: NextPage = () => (
         </div>
         <div className="row d-flex align-items-center">
           <div className="col-4 offset-4 col-md-2 offset-md-0 offset-lg-1 offset-xl-2 text-center mb-2 mb-md-0">
-            <p><img className="img-fluid" width="60" height="60" src={require('../images/icon-why-choose-qc-no-hidden-fees.svg')} alt="no hidden fees" /></p>
+            <p><Image className="img-fluid" width="60" height="60" src={require('../images/icon-why-choose-qc-no-hidden-fees.svg')} alt="no hidden fees" /></p>
           </div>
           <div className="col-12 col-md-10 col-lg-8 col-xl-6 text-center text-md-left">
             <h3>No Additional or Hidden Fees</h3>
