@@ -13,6 +13,7 @@ import { Enrollment } from '../models/enrollment';
 
 declare const gtag: (...args: unknown[]) => void;
 declare const ga: (...args: unknown[]) => void;
+declare const dataLayer: any[];
 
 interface Props {
   enrollment?: Enrollment;
@@ -29,46 +30,91 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
   }
 
   useEffect(() => {
+    console.log('enrollment.emailed', enrollment.emailed);
     if (enrollment.emailed === false) {
-      if (typeof gtag !== 'undefined') {
-        // https://developers.google.com/analytics/devguides/collection/gtagjs/ecommerce
-        gtag('event', 'purchase', {
-          transaction_id: enrollment.id,
-          affiliation: enrollment.school,
-          value: enrollment.cost,
-          currency: enrollment.currencyCode,
-          tax: 0,
-          shipping: 0,
-          items: enrollment.courses.map(c => ({
-            id: c.code,
-            name: c.name,
-            price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(2)),
-            quantity: 1,
-          })),
-        });
-      } else if (typeof ga !== 'undefined') {
-        // https://developers.google.com/analytics/devguides/collection/analyticsjs/ecommerce
-        ga('require', 'ecommerce');
-        ga('ecommerce:addTransaction', {
-          id: enrollment.id,
-          affiliation: enrollment.school,
-          revenue: enrollment.cost,
-          shipping: 0,
-          tax: 0,
-          currency: enrollment.currencyCode,
-        });
-        enrollment.courses.forEach(c => {
-          ga('ecommerce:addItem', {
+      // if (typeof gtag !== 'undefined') {
+      //   // https://developers.google.com/analytics/devguides/collection/gtagjs/ecommerce
+      //   gtag('event', 'purchase', {
+      //     transaction_id: enrollment.id,
+      //     affiliation: enrollment.school,
+      //     value: enrollment.cost,
+      //     currency: enrollment.currencyCode,
+      //     tax: 0,
+      //     shipping: 0,
+      //     items: enrollment.courses.map(c => ({
+      //       id: c.code,
+      //       name: c.name,
+      //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(2)),
+      //       quantity: 1,
+      //     })),
+      //   });
+      // } else if (typeof ga !== 'undefined') {
+      //   // https://developers.google.com/analytics/devguides/collection/analyticsjs/ecommerce
+      //   ga('require', 'ecommerce');
+      //   ga('ecommerce:addTransaction', {
+      //     id: enrollment.id,
+      //     affiliation: enrollment.school,
+      //     revenue: enrollment.cost,
+      //     shipping: 0,
+      //     tax: 0,
+      //     currency: enrollment.currencyCode,
+      //   });
+      //   enrollment.courses.forEach(c => {
+      //     ga('ecommerce:addItem', {
+      //       id: enrollment.id,
+      //       name: c.name,
+      //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(2)),
+      //       quantity: 1,
+      //       currency: enrollment.currencyCode,
+      //     });
+      //   });
+      //   ga('ecommerce:send');
+      //   console.log('ga');
+      // } else {
+      //   console.log('no tracker found');
+      // }
+
+    }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      ecommerce: {
+        purchase: {
+          actionField: {
+            id: enrollment.id,
+            affiliation: enrollment.school,
+            revenue: enrollment.cost,
+            shipping: 0,
+            tax: 0,
+            currency: enrollment.currencyCode,
+          },
+          products: enrollment.courses.map(c => ({
             id: enrollment.id,
             name: c.name,
             price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(2)),
             quantity: 1,
             currency: enrollment.currencyCode,
-          });
-        });
-        ga('ecommerce:send');
-      }
-    }
+          })),
+        },
+      },
+    });
+
+    // window.dataLayer.push({
+    //   event: 'purchase',
+    //   ecommerce: {
+    //     transaction_id: enrollment.id,
+    //     affiliation: enrollment.school,
+    //     value: enrollment.cost,
+    //     currency: enrollment.currencyCode,
+    //     tax: 0,
+    //     shipping: 0,
+    //     items: enrollment.courses.map(c => ({
+    //       item_name: c.name,
+    //       item_id: c.code,
+    //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(2)),
+    //       quantity: 1,
+    //     })),
+    //   },
+    // });
   }, [ enrollment.emailed ]);
 
   const paymentDate = new Date(enrollment.paymentDate);
@@ -228,6 +274,34 @@ const sendEmail = async (enrollmentId: number, code: string): Promise<void> => {
   await response.json();
 };
 
+const addToActiveCampaign = async (enrollment: Enrollment): Promise<void> => {
+  const payload = {
+    firstName: enrollment.firstName,
+    lastName: enrollment.lastName,
+    emailAddress: enrollment.emailAddress,
+    phoneNumber: enrollment.telephoneNumber,
+    country: enrollment.countryName,
+    state: enrollment.provinceName,
+    listId: 39,
+    customFields: {
+      SALE_AMOUNT: enrollment.cost,
+      SALE_CURRENCY: enrollment.currencyCode,
+    },
+  };
+  
+  const response = await fetch('https://api.qccareerschool.com/activeCampaign/subscribe', {
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  });
+  if (!response.ok) {
+    throw new HttpStatus.HttpResponse(response.status, response.statusText);
+  }
+  await response.json();
+};
+
 const getEnrollment = async (enrollmentId: number, code: string): Promise<Enrollment> => {
   const url = `https://api.qccareerschool.com/enrollments/${enrollmentId}?code=${code}`;
   const response = await fetch(url, {
@@ -248,6 +322,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res, query }) => 
     const code = query.code;
 
     const enrollment = await getEnrollment(enrollmentId, code);
+    console.log(enrollment);
 
     if (!enrollment.complete || !enrollment.success) {
       throw new HttpStatus.NotFound();
@@ -256,6 +331,9 @@ export const getServerSideProps: GetServerSideProps = async ({ res, query }) => 
     if (!enrollment.emailed) {
       try {
         await sendEmail(enrollmentId, code);
+      } catch (err) { /* ignore */ }
+      try {
+        await addToActiveCampaign(enrollment);
       } catch (err) { /* ignore */ }
     }
 
