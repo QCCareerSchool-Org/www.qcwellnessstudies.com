@@ -260,7 +260,8 @@ Page.propTypes = {
 };
 
 const sendEmail = async (enrollmentId: number, code: string): Promise<void> => {
-  const response = await fetch(`https://api.qccareerschool.com/enrollments/${enrollmentId}/email`, {
+  const url = `https://api.qccareerschool.com/enrollments/${enrollmentId}/email`;
+  const response = await fetch(url, {
     method: 'post',
     headers: {
       'X-API-Version': '2',
@@ -289,7 +290,8 @@ const addToActiveCampaign = async (enrollment: Enrollment): Promise<void> => {
     },
   };
   
-  const response = await fetch('https://api.qccareerschool.com/activeCampaign/subscribe', {
+  const url = 'https://api.qccareerschool.com/activeCampaign/subscribe';
+  const response = await fetch(url, {
     method: 'post',
     headers: {
       'Content-Type': 'application/json',
