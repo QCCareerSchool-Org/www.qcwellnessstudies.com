@@ -87,7 +87,7 @@ const Page: NextPage = () => (
 
     <style jsx>{`
       #enrollToday{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}     
-      #heroSection{background-image:url(${require('../../../images/sl-baby-sign-language-cover.jpg')});background-size:cover;background-position:center}
+      #heroSection{background-image:url(${require('../../../images/sr-hero-baby-sign-language-for-beginners.jpg')});background-size:cover;background-position:center}
       .course-icon{width:80px}
 
       /* sm */
