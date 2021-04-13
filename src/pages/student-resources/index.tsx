@@ -76,6 +76,7 @@ const Page: NextPage = () => (
             <p className="lead"><Link href="/student-resources/blog/baby-sign-language-for-beginners"><a><strong>Baby Sign Language for Beginners</strong></a></Link></p>
             <p className="lead"><Link href="/student-resources/blog/working-during-covid"><a><strong>Learning &amp; Working as a Sleep Consultant During COVID-19</strong></a></Link></p>
             <p className="lead"><Link href="/student-resources/blog/insurance"><a><strong>The Different Types of Insurance Recommended for Sleep Consultants</strong></a></Link></p>
+            <p className="lead"><Link href="/student-resources/blog/meet-a-qc-graduate-sarah-pashniak"><a><strong>Meet a QC Graduate: Sarah Pashniak</strong></a></Link></p>
           </div>
         </div>
       </div>
