@@ -28,8 +28,10 @@ const Page: NextPage = () => (
 
     <section id="certifications" className="text-center">
       <div className="container">
+        <div>
         <p><Image className="img-fluid" width="90" height="90" src={require('../images/certification-seal.png')} alt="certification seal" /></p>
         <h2 className="text-dark mb-5">Certifications</h2>
+        </div>
         <div className="row">
           <div className="col-12 mb-5 col-md-6 mb-md-0 col-lg-5 offset-lg-1 mb-5">
             <h3 className="h4 text-dark">Caregiver <span className="badge badge-secondary text sans-serif">NEW</span></h3>
