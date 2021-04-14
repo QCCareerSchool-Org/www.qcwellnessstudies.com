@@ -28,8 +28,10 @@ const Page: NextPage = () => (
 
     <section id="certifications" className="text-center">
       <div className="container">
-        <p><Image className="img-fluid" width="90" height="90" src={require('../images/certification-seal.png')} alt="certification seal" /></p>
-        <h2 className="text-dark mb-5">Certifications</h2>
+        <div>
+          <p><Image className="img-fluid" width="90" height="90" src={require('../images/certification-seal.png')} alt="certification seal" /></p>
+          <h2 className="text-dark mb-5">Certifications</h2>
+        </div>
         <div className="row">
           <div className="col-12 mb-5 col-md-6 mb-md-0 col-lg-5 offset-lg-1 mb-5">
             <h3 className="h4 text-dark">Caregiver <span className="badge badge-secondary text sans-serif">NEW</span></h3>
@@ -37,7 +39,7 @@ const Page: NextPage = () => (
             <p className="text-uppercase"><Link href="/caregiver"><a className="text-info"><strong>view courses</strong></a></Link></p>
           </div>
           <div className="col-12 col-md-6 col-lg-5 mb-5">
-            <h3 className="h4 text-dark">Sleep Consultant </h3>
+            <h3 className="h4 text-dark">Sleep Consultant</h3>
             <p>A professional sleep consultant helps parents and caregivers set healthy and save sleep habits for their infants and toddlers, contributing to every family member's physical, mental and emotional wellness!</p>
             <p className="text-uppercase"><Link href="/courses-and-tuition/sleep-consultant"><a className="text-info"><strong>view course</strong></a></Link></p>
           </div>
