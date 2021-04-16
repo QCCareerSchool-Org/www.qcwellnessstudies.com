@@ -69,14 +69,20 @@ const Page: NextPage = () => (
               <li>Sleep plans</li>
               <li>A business logo</li>
               <li>And so much more!</li>
-            </ul>
+            </ul>        
+            <div className="text-center mb-4">
             <Link href="/courses-and-tuition/sleep-consultant"><a className="btn btn-secondary mt-3 mb-3">Course Overview</a></Link>
-            <p><img className="img-fluid" src={require('../../../images/student-feature/sarah-pashniak-family-lake.jpg')} alt="Sarah Pashniak Family in the Lake" /></p>            
+            </div>
+            <div className="text-center mb-4">
+            <p><img className="img-fluid" src={require('../../../images/student-feature/sarah-pashniak-family-lake.jpg')} alt="Sarah Pashniak Family in the Lake" /></p>
+            </div>                 
             <h4>Life as a QC Student</h4>
             <p>I had a wonderful experience as a student at QC Wellness School! My favorite thing about my program was the quick feedback from my instructor. I enjoyed that it was always provided to me in a detailed audio message. It felt so personal!</p>
             <p>I also found the turnaround rate (from when I’d submit my unit to when I’d receive my tutor’s feedback) to be exceptionally fast. If I needed any support or had questions about my assignment, I could ask my tutor. They were always there to help!</p>
             <p>Not to mention, there was also the Student Support Team. I was always able to reach out to them by phone, email, or live chat. The entire QC staff supports you, helps you with assignments, and answers any questions you may have!</p>
+            <div className="text-center mb-4">
             <Link href="/courses-and-tuition/sleep-consultant#tutors"><a className="btn btn-secondary mt-3 mb-3">Meet Your Tutor</a></Link>
+            </div>
             <h4>Business Training</h4>
             <p>I would definitely recommend that you take the additional business training, especially if you have any goals of starting your own business. After all, how you market your business is key to your success! If you have no business training, how can you ever hope to run one?</p>
             <h4>The Challenges of a Sleep Consultant</h4>
@@ -95,7 +101,9 @@ const Page: NextPage = () => (
               <li>I was able to complete the course at my own pace. This is a great option if you have children, another job, etc.</li>
               <li>I was able to complete the entire course online.</li>
             </ol>
+            <div className="text-center mb-4">
             <Link href="/how-it-works"><a className="btn btn-secondary mt-3 mb-3">How Online Learning Works</a></Link>       
+            </div>
             <p><img className="img-fluid" src={require('../../../images/student-feature/sarah-pashniak-office.jpg')} alt="Sarah Pashniak Office" /></p>  
             <h4>Your Proudest Moment</h4>
             <p>It’s difficult to name just one proud moment, because my sleep coaching journey has been so rewarding. It’d constantly filled with small celebrations!</p>
