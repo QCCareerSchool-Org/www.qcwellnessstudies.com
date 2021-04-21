@@ -34,7 +34,7 @@ const Page: NextPage = () => (
       <div className="container">
         <div className="row">
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
-            <p className="lead">Parents with young children don’t have a lot of spare time, especially if those children are struggling to sleep through the night. Virtual consultations with a trained sleep professional offer the perfect solution to help busy parents get the help they need.</p>
+            <p className="lead">Parents with young children don’t have a lot of spare time, especially if those children are struggling to sleep through the night. Virtual consultations with a <Link href="/courses-and-tuition/sleep-consultant"><a>trained sleep professional</a></Link> offer the perfect solution to help busy parents get the help they need.</p>
 
             <h4>1. Test your technology.</h4>
             <p>You’ll need a few pieces of technology to participate in a virtual consultation, these could include:</p>

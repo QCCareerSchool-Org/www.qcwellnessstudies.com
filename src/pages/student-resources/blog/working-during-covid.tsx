@@ -33,7 +33,7 @@ const Page: NextPage = () => (
         <div className="row">
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
             <p className="lead">See how you can earn your certification and run your very own sleep consulting business safely during COVID-19</p>
-            <p className="lead">Learn from the safety of home with QC’s online courses.</p>  
+            <p className="lead">Learn from the safety of home with <Link href="/courses-and-tuition/sleep-consultant"><a>QC’s online courses</a></Link>.</p>  
             <p><img className="img-fluid" src={require('../../../images/sleep-consultant-home-office.jpg')} alt="Sleep Consultant Home Office" /></p>        
             <h4>How QC Sets You Up to Succeed</h4>      
             <ul>
