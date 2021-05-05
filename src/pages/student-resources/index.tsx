@@ -68,7 +68,6 @@ const Page: NextPage = () => (
             />
           </CardColumn>
         </div>
-
         <div className="row">
           <div className="col-12 offset-md-2 offset-lg-0">
             <h2 className="text-dark">More Articles</h2>
