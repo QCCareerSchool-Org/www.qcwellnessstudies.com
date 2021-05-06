@@ -16,7 +16,8 @@
     { "source": "/courses-and-tuition/personal-care-aide/get-a-preview", "destination": "/courses-and-tuition/professional-caregiving/get-a-preview" },
     { "source": "/courses-and-tuition/personal-care-aide/thank-you", "destination": "/courses-and-tuition/professional-caregiving/thank-you" },
     { "source": "/courses-and-tuition/professional-organizing(/.*)?", "destination": "https://www.qcdesignschool.com/online-courses/professional-organizing/" },
-    { "source": "/courses-and-tuition/sleep-consultant/the-6-common-training-methods-of-an-infant-sleep-consultant", "destination": "/student-resources/blog/6-common-training-methods-of-an-infant-sleep-consultant" }
+    { "source": "/courses-and-tuition/sleep-consultant/the-6-common-training-methods-of-an-infant-sleep-consultant", "destination": "/student-resources/blog/6-common-training-methods-of-an-infant-sleep-consultant" },
+    { "source": "/courses-and-tuition/sleep-consultant/baby-sign-language-for-beginners", "destination": "/student-resources/blog/baby-sign-language-for-beginners" }
   ],
   "rewrites": [
     { "source": "/get-a-personal-care-aide-course-preview", "destination": "/courses-and-tuition/personal-care-aide/get-a-preview" },
