@@ -81,8 +81,8 @@ const Page: NextPage = () => (
     <section id="enrollToday" className="text-light">
       <div className="container text-center">
         <h2>Get Started Today!</h2>
-         <p className="lead">Why wait? Start your professional training program today and get on the path toward a new and exciting career</p>
-         <p><a className="btn btn-secondary btn-lg text-uppercase" href="https://enroll.qcwellnessstudies.com/">Enroll Online</a></p>
+        <p className="lead">Why wait? Start your professional training program today and get on the path toward a new and exciting career</p>
+        <p><a className="btn btn-secondary btn-lg text-uppercase" href="https://enroll.qcwellnessstudies.com/">Enroll Online</a></p>
       </div>
     </section>
 

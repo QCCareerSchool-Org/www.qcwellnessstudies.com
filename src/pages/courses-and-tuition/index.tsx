@@ -37,7 +37,7 @@ const Page: React.FC = () => (
       <div className="container">
         <div className="row">
           <div className="col-12 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-4">
-          <PriceCard courses={[ 'sl' ]} />
+            <PriceCard courses={[ 'sl' ]} />
           </div>
           <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
             <h2 className="text-dark">Sleep Consultant Course</h2>

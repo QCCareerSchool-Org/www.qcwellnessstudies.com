@@ -47,7 +47,7 @@ const Page: NextPage = () => (
             <p><i>QC's 21-day guarantee is there to help you make an informed decision about your education. From the day you receive your course materials, you have a full three weeks to review the course guides, books, and assignments in order to decide whether your course is right for you. If you decide that it's not a good fit, simply contact the school to arrange a refund of your tuition. You'll be asked to return any course material you have to the school, and these must be unused.</i></p>
             <div className="alert alert-primary" role="alert">
               Note that since the 21-day guarantee is made for you to decide whether to take the course or not, a full tuition refund cannot be granted if you've already completed and submitted course work to your tutor.
-          </div>
+            </div>
             <h3 className="h4 text-dark">How do tuition payment plans work?</h3>
             <p><i>When you enroll online, you can choose to pay your tuition in full where you'll get a discount, or you can choose to pay your full tuition in monthly installments. You'll pay an initial “deposit” amount when you first enroll online, and then you'll pick the day of the month for QC to charge your credit card a set “monthly fee”. You'll make equal monthly payments until your tuition is paid in full, usually over 12-16 months, depending on the course.</i></p>
             <h3 className="h4 text-dark">What if I miss a tuition payment?</h3>
@@ -56,7 +56,7 @@ const Page: NextPage = () => (
             <p><i>If you forget and an attempted monthly payment doesn't go through, a student advisor will contact you to make arrangements to get you back on track.</i></p>
             <div className="alert alert-primary" role="alert">
               Note: students can only access their online student center if their account is in good standing. If payments are missed, the student center is placed “on hold” until payments are caught up. While you won't lose any work, you won't be able to submit assignments to your tutor during this time.
-          </div>
+            </div>
           </div>
         </div>
       </div>
