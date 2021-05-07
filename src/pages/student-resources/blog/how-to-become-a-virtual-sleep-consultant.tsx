@@ -33,7 +33,7 @@ const Page: NextPage = () => (
         <div className="row">
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
             <p className="lead">Becoming a virtual sleep consultant could be a fantastic way to begin a new career from home. Sleep consultants are becoming more and more common&mdash;whether for first- or fifth-time parents. Each baby is unique and could benefit from a sleep consultant to help caregivers understand their needs.</p>
-            <p className="lead">If the idea of working from home appeals to you, you may be suited to a career as a virtual sleep consultant. You could work with families and infants all over the world to develop positive sleep habits.  If you’re interested in seeing what this career is all about, read on to discover how to become a virtual sleep consultant!</p>
+            <p className="lead">If the idea of working from home appeals to you, you may be suited to a career as a <Link href="/courses-and-tuition/sleep-consultant"><a>virtual sleep consultant</a></Link>. You could work with families and infants all over the world to develop positive sleep habits.  If you’re interested in seeing what this career is all about, read on to discover how to become a virtual sleep consultant!</p>
             <p><img className="img-fluid" src={require('../../../images/sr-senior-stylish-woman-taking-notes-notebook.jpg')} alt="Stylish woman taking notes in a notebook" /></p>
 
             <h4>What is a Virtual Sleep Consultant?</h4>
@@ -56,7 +56,7 @@ const Page: NextPage = () => (
 
             <h4>Virtual Sleep Consultant Training</h4>
             <p>Like any new career, you can’t just decide to become a virtual sleep consultant! When clients consider hiring you, they’ll naturally ask questions about your qualifications and training. So, what training do you need in order to become a virtual sleep consultant?</p>
-            <p>Thankfully, the Sleep Consultant course offered by QC Wellness Studies covers everything you need to know in order to begin a successful and fulfilling career as a sleep consultant. Interested in learning more? Check out the information from QC Wellness Studies, or speak to a member of our Student Support team!</p>
+            <p>Thankfully, the <Link href="/courses-and-tuition/sleep-consultant"><a>Sleep Consultant course</a></Link> offered by QC Wellness Studies covers everything you need to know in order to begin a successful and fulfilling career as a sleep consultant. Interested in learning more? Check out the information from QC Wellness Studies, or speak to a member of our Student Support team!</p>
             <p>Infant sleep consultants can be the difference that makes an entire family’s mental and physical health much better than it was before. By helping infants to transition to fuller, better sleep, you’re allowing them to start their lives off on the right foot. And if you prefer to operate your sleep consultant business from the comfort of your own home, then you’ll have plenty of opportunities to do so!</p>
           </div>
         </div>

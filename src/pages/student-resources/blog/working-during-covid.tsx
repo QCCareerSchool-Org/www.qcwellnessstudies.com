@@ -10,7 +10,7 @@ const Page: React.FC = () => (
     <SEO
       title="Learning &amp; Working as a Sleep Consultant During COVID-19"
       description="See how you can earn your certification and run your very own sleep consulting business safely during COVID-19"
-      canonical="/courses-and-tuition/sleep-consultant/working-during-covid"
+      canonical="/student-resources/blog/working-during-covid"
       image={{
         src: require('../../../images/sr-hero-image-working-with-covid.jpg'),
         alt: 'sleep consultant working remotely',
@@ -97,8 +97,6 @@ const Page: React.FC = () => (
         <Link href="/student-resources"><a className="btn btn-primary btn-lg text-uppercase">Back to Student Resources</a></Link>
       </div>
     </section>
-
-
 
     <style jsx>{`       
       #enrollToday{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}     

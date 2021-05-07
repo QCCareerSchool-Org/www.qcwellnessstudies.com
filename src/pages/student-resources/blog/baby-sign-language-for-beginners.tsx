@@ -10,7 +10,7 @@ const Page: React.FC = () => (
     <SEO
       title="Baby Sign Language for Beginners: When (and How) to Start"
       description="Baby sign language can prove to be a useful tool to recommend to your clients!"
-      canonical="/courses-and-tuition/sleep-consultant/baby-sign-language-for-beginners"
+      canonical="/student-resources/blog/baby-sign-language-for-beginners"
       image={{
         src: require('../../../images/sr-hero-baby-sign-language-for-beginners.jpg'),
         alt: 'baby sign language',
