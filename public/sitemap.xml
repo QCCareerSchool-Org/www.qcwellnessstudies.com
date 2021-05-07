@@ -56,11 +56,7 @@
   <url>
     <loc>https://www.qcwellnessstudies.com/student-resources/blog/baby-sign-language-for-beginners</loc>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.qcwellnessstudies.com/courses-and-tuition/sleep-consultant/the-6-common-training-methods-of-an-infant-sleep-consultant</loc>
-    <priority>0.5</priority>
-  </url>
+  </url>   
   <url>
     <loc>https://www.qcwellnessstudies.com/terms</loc>
     <priority>0.1</priority>
@@ -99,6 +95,10 @@
   </url>
   <url>
     <loc>https://www.qcwellnessstudies.com/student-resources/blog/working-with-helicopter-parents</loc>
+    <priority>0.5</priority>
+  </url>
+    <url>
+    <loc>https://www.qcwellnessstudies.com/student-resources/blog/student-features/sarah-pashniak</loc>
     <priority>0.5</priority>
   </url>
   <url>
