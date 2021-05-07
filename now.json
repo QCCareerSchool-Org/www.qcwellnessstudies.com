@@ -18,6 +18,7 @@
     { "source": "/courses-and-tuition/professional-organizing(/.*)?", "destination": "https://www.qcdesignschool.com/online-courses/professional-organizing/" },
     { "source": "/courses-and-tuition/sleep-consultant/the-6-common-training-methods-of-an-infant-sleep-consultant", "destination": "/student-resources/blog/6-common-training-methods-of-an-infant-sleep-consultant" },
     { "source": "/courses-and-tuition/sleep-consultant/baby-sign-language-for-beginners", "destination": "/student-resources/blog/baby-sign-language-for-beginners" },
+    { "source": "/courses-and-tuition/sleep-consultant/working-during-covid", "destination": "/student-resources/blog/working-during-covid" },
     { "source": "/courses-and-tuition/sleep-consultant/insurance", "destination": "/student-resources/blog/insurance" }
   ],
   "rewrites": [
