@@ -10,7 +10,7 @@ const Page: React.FC = () => (
     <SEO
       title="The Different Types of Insurance Recommended for Sleep Consultants"
       description="Learn about the different types of insurance recommended for sleep consultants"
-      canonical="/courses-and-tuition/sleep-consultant/insurance"
+      canonical="/student-resources/blog/insurance"
       image={{
         src: require('../../../images/cute-baby-boy-hero.jpg'),
         alt: 'cute baby boy',

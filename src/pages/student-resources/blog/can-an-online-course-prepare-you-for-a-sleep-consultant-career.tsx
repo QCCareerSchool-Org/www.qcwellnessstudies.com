@@ -35,7 +35,7 @@ const Page: NextPage = () => (
             <h4>Can an Online Course Prepare You for a Sleep Consultant Career?</h4>
             <p>If you’re on the fence about choosing an online course to start your new career, we’re here to help! Online learning provides students with lots of advantages. You can choose when and where you study, and how long your study sessions last.</p>
             <p>As a student with QC Wellness Studies, you’ll learn everything you need to know to kickstart your new sleep consultant career!</p>
-            <p>Let’s take a look at how an online course can prepare you to work as an infant sleep consultant.</p>
+            <p>Let’s take a look at how an online course can prepare you to work as an <Link href="/courses-and-tuition/sleep-consultant"><a>infant sleep consultant.</a></Link></p>
             <p><img className="img-fluid" src={require('../../../images/sr-mother-putting-baby-sleep-crib.jpg')} alt="Mother putting baby to sleep in a crib" /></p>
 
             <h4>Flexible Learning</h4>

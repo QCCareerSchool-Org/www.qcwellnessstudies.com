@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://www.qcwellnessstudies.com</loc>
     <priority>1.0</priority>
@@ -44,7 +45,7 @@
     <loc>https://www.qcwellnessstudies.com/how-it-works</loc>
     <priority>0.5</priority>
   </url>
-   <url>
+  <url>
     <loc>https://www.qcwellnessstudies.com/student-resources/blog/working-during-covid</loc>
     <priority>0.5</priority>
   </url>
@@ -52,11 +53,11 @@
     <loc>https://www.qcwellnessstudies.com/student-resources/blog/insurance</loc>
     <priority>0.5</priority>
   </url>
-   <url>
-    <loc>https://www.qcwellnessstudies.com/courses-and-tuition/sleep-consultant/baby-sign-language-for-beginners</loc>
+  <url>
+    <loc>https://www.qcwellnessstudies.com/student-resources/blog/baby-sign-language-for-beginners</loc>
     <priority>0.5</priority>
   </url>
-   <url>
+  <url>
     <loc>https://www.qcwellnessstudies.com/courses-and-tuition/sleep-consultant/the-6-common-training-methods-of-an-infant-sleep-consultant</loc>
     <priority>0.5</priority>
   </url>
