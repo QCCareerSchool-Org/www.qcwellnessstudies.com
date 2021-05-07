@@ -24,7 +24,9 @@ const Page: React.FC = () => (
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
             <h1 className="text-center text-light">Meet a QC Graduate: Sarah Pashniak</h1>
             <p className="text-light">Sarah Graduated from QC’s Sleep Consultant Course in 2019 and now runs a successful sleep consultant business!</p>
-            <div className="card col-lg-6">
+          </div>
+          <div className="col col-sm-8 offset-sm-1 col-md-6 offset-md-2 col-lg-5 col-xl-4">
+            <div className="card">
               <div className="card-body">
                 <table>
                   <tr><td className="text-right pr-2">Website:</td><td><a target="_blank" rel="noopener noreferrer" href="https://www.pashionateaboutsleep.com/">Pashionate About Sleep</a></td></tr>
