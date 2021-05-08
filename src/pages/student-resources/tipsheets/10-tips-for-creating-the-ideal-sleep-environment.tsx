@@ -11,7 +11,7 @@ const Page: NextPage = () => (
 
     <SEO
       title="10 Tips for Creating the Ideal Sleep Environment"
-      description="A suitable sleep environment is essential to help babies and young children get a good night’s rest. Follow these universal tips to create healthy sleep environments for babies and infants."
+      description="A suitable sleep environment is essential to help babies and young children get a good night's rest. Follow these universal tips to create healthy sleep environments for babies and infants."
       canonical="/student-resources/tipsheets/10-tips-for-creating-the-ideal-sleep-environment"
       image={{
         src: require('../../../images/sr-little-girl-reading-book-bed-dark.jpg'),
@@ -34,36 +34,36 @@ const Page: NextPage = () => (
       <div className="container">
         <div className="row">
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
-            <p className="lead">A suitable sleep environment is essential to help babies and young children get a good night’s rest. Follow these universal tips to create healthy sleep environments for babies and infants.</p>
+            <p className="lead">A suitable sleep environment is essential to help babies and young children get a good night&apos;s rest. Follow these universal tips to create healthy sleep environments for babies and infants.</p>
 
             <h4>1. Adjust the bedroom lighting to set the mood for sleep.</h4>
             <p>Use lightbulbs with warm hues to create a soft, relaxing environment for the bedtime routine. Bulbs that give off bright white and blue light can keep children alert. Use lighting options such as nightlights, dimmer switches and lamps to create a soft and serene atmosphere.</p>
             <p><img className="img-fluid" src={require('../../../images/sr-little-girl-reading-book-bed-dark.jpg')} alt="little girl reading in bed" /></p>
 
             <h4>2. Create a quiet, soothing space for sleep time.</h4>
-            <p>Ideally, infants and children should have a noise-free environment for sleep. Limit sounds from traffic, neighbors, television, older siblings, pets, etc. as much as possible to ensure a quiet space. If you can’t limit disruptive sounds in the sleep space, you might introduce soothing noise for rest and sleep. Soft music, mobiles and noise machines can help improve the sounds for the baby.</p>
+            <p>Ideally, infants and children should have a noise-free environment for sleep. Limit sounds from traffic, neighbors, television, older siblings, pets, etc. as much as possible to ensure a quiet space. If you can&apos;t limit disruptive sounds in the sleep space, you might introduce soothing noise for rest and sleep. Soft music, mobiles and noise machines can help improve the sounds for the baby.</p>
 
             <h4>3.	Install heavy curtains or blinds to control natural light.</h4>
             <p>Use heavy curtains and blinds to control lighting in the sleep environment. Natural light can create a bright and cheerful space during waking hours, but when it comes to sleep time all age groups benefit from a dark sleep space. As an added bonus, heavy blackout curtains reduce sound from outside as well as natural light.</p>
             <p><img className="img-fluid" src={require('../../../images/sr-real-photo-cot-yellow-blanket-standing.jpg')} alt="baby room interior" /></p>
 
             <h4>4. Monitor temperature and humidity in the sleep space.</h4>
-            <p>Check the temperature and humidity in the bedroom using a thermometer. Infants and young children can usually sleep comfortably with a room temperature between 68°F to 70°F, while humidity should fall between 45-50%.</p>
+            <p>Check the temperature and humidity in the bedroom using a thermometer. Infants and young children can usually sleep comfortably with a room temperature between 68°F to 70°F, while humidity should fall between 45 to 50%.</p>
 
             <h4>5.	Consider your bedding choices.</h4>
-            <p>Make sure bedding is sufficiently warm without causing the child to overheat. Overheating or becoming too cold will prevent babies and infants from sleeping soundly and can even pose health risks for babies. The best way to determine if bedding is appropriate is to monitor the child’s sleep. Touch the child’s chest to check temperature. The child should feel warm, but not hot or sweaty.</p>
-            <p><em>Always remember that a baby’s crib should be free of blankets and pillows.</em> These soft objects greatly increase the risk of suffocation. Babies should use appropriate clothing rather than bedding to stay warm while they sleep.</p>
+            <p>Make sure bedding is sufficiently warm without causing the child to overheat. Overheating or becoming too cold will prevent babies and infants from sleeping soundly and can even pose health risks for babies. The best way to determine if bedding is appropriate is to monitor the child&apos;s sleep. Touch the child&apos;s chest to check temperature. The child should feel warm, but not hot or sweaty.</p>
+            <p><em>Always remember that a baby&apos;s crib should be free of blankets and pillows.</em> These soft objects greatly increase the risk of suffocation. Babies should use appropriate clothing rather than bedding to stay warm while they sleep.</p>
             <p><img className="img-fluid" src={require('../../../images/sr-happy-family-mother-playing-her-baby.jpg')} alt="happy mother playing with her baby in the bedroom" /></p>
 
             <h4>6. Keep the bedroom tidy.</h4>
-            <p>Tidying up the bedroom helps babies and young children fall asleep quickly by reducing distractions. Children are also more likely to “sleep in” in a tidy bedroom since they won’t be enticed by toys and other distractions when they wake.</p>
+            <p>Tidying up the bedroom helps babies and young children fall asleep quickly by reducing distractions. Children are also more likely to &ldquo;sleep in&rdquo; in a tidy bedroom since they won&apos;t be enticed by toys and other distractions when they wake.</p>
             <p><img className="img-fluid" src={require('../../../images/sr-mother-home-hospital-newborn-baby-nursery.jpg')} alt="newborn baby nursery" /></p>
 
             <h4>7. Keep the bedroom clean.</h4>
             <p>Eliminating dust and other allergens from the bedroom improves the space for the health and wellness of the baby. Frequent dusting, vacuuming and reducing clutter will enable quick and efficient cleaning.</p>
 
-            <h4>8.	Provide comforting toys or “blankies.”</h4>
-            <p><em>No toys or other items should be in the cribs of babies who are one year old or under. These items present a safety risk.</em> However, older babies and children sometimes sleep better with their favorite toys or blankies. Soft, stuffed toys, such as teddy bears, sometimes provide comfort and make children feel safe as they fall asleep. Keep in mind that, for some children, these toys could be distracting. Get to know a child’s individual needs.</p>
+            <h4>8.	Provide comforting toys or &ldquo;blankies.&rdquo;</h4>
+            <p><em>No toys or other items should be in the cribs of babies who are one year old or under. These items present a safety risk.</em> However, older babies and children sometimes sleep better with their favorite toys or blankies. Soft, stuffed toys, such as teddy bears, sometimes provide comfort and make children feel safe as they fall asleep. Keep in mind that, for some children, these toys could be distracting. Get to know a child&apos;s individual needs.</p>
             <p><img className="img-fluid" src={require('../../../images/sr-photo-baby-boy-sleeping-together-teddy.jpg')} alt="Boy sleeping on bed with teddy bear" /></p>
 
             <h4>9. Divide the bedroom into zones.</h4>

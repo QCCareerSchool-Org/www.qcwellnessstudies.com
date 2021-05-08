@@ -21,11 +21,11 @@ const Page: NextPage = () => (
         <div className="row d-flex align-items-center">
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-7 offset-lg-0">
             <h1 className="text-dark">Your Course Preview</h1>
-            <p><strong>Thank you for your interest in QC Wellness School's Sleep Consultant Course!</strong>The course preview should help answer most questions you have about becoming a professional sleep consultant from the comfort of home including:</p>
+            <p><strong>Thank you for your interest in QC Wellness School&apos;s Sleep Consultant Course!</strong>The course preview should help answer most questions you have about becoming a professional sleep consultant from the comfort of home including:</p>
             <ul>
               <li>What exactly am I going to learn in this course?</li>
               <li>What is the tuition for the course and what do those fees cover?</li>
-              <li>How am I going to get hands-on training if I'm doing an online course?</li>
+              <li>How am I going to get hands-on training if I&apos;m doing an online course?</li>
               <li>Can online learning really prepare me for real-world sleep consultations?</li>
             </ul>
             <Link href="preview"><a className="btn btn-secondary btn-lg text-uppercase my-3"><div className="d-flex align-items-center"><IoMdEye className="mr-2" /> View the Course Preview</div></a></Link>
@@ -49,13 +49,13 @@ const Page: NextPage = () => (
           <div className="col-12 col-md-8 offset-md-2 col-lg-4 offset-lg-0 mb-5 mb-lg-0">
             <IoMdSchool size={30} />
             <h3 className="text-dark text-center">Courses &amp; Tuition</h3>
-            <p className="text-dark text-center">Browse through ALL of QC's online courses, tuition and payment plans to choose the one that's right for you.</p>
+            <p className="text-dark text-center">Browse through ALL of QC&apos;s online courses, tuition and payment plans to choose the one that&apos;s right for you.</p>
             <p><Link href="/courses-and-tuition"><a className="btn btn-dark btn-md text-uppercase mt-auto">Learn More</a></Link></p>
           </div>
           <div className="col-12 col-md-8 offset-md-2 col-lg-4 offset-lg-0">
             <IoMdLaptop size={30} />
-            <h3 className="text-dark text-center">How You'll Learn</h3>
-            <p className="text-dark text-center">Find out how QC's online training will help you succeed.</p>
+            <h3 className="text-dark text-center">How You&apos;ll Learn</h3>
+            <p className="text-dark text-center">Find out how QC&apos;s online training will help you succeed.</p>
             <p><Link href="/how-it-works"><a className="btn btn-dark btn-md text-uppercase mt-auto">Learn More</a></Link></p>
           </div>
         </div>

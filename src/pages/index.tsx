@@ -20,7 +20,7 @@ const Page: NextPage = () => (
         <div className="row d-flex align-items-center">
           <div className="col-12 col-sm-10 col-md-8 col-lg-6">
             <h1 className="text-light">Start an Exciting Career in the Wellness Industry</h1>
-            <p className="text-light">Training for a new career isn't always easy, but when you enroll with QC you'll gain the knowledge, support, and flexibility you need to succeed in your studies!</p>
+            <p className="text-light">Training for a new career isn&apos;t always easy, but when you enroll with QC you&apos;ll gain the knowledge, support, and flexibility you need to succeed in your studies!</p>
           </div>
         </div>
       </div>
@@ -40,17 +40,17 @@ const Page: NextPage = () => (
           </div>
           <div className="col-12 col-md-6 col-lg-5 mb-5">
             <h3 className="h4 text-dark">Sleep Consultant</h3>
-            <p>A professional sleep consultant helps parents and caregivers set healthy and save sleep habits for their infants and toddlers, contributing to every family member's physical, mental and emotional wellness!</p>
+            <p>A professional sleep consultant helps parents and caregivers set healthy and save sleep habits for their infants and toddlers, contributing to every family member&apos;s physical, mental and emotional wellness!</p>
             <p className="text-uppercase"><Link href="/courses-and-tuition/sleep-consultant"><a className="text-info"><strong>view course</strong></a></Link></p>
           </div>
           <div className="col-12 mb-5 col-md-6 mb-md-0 col-lg-5 offset-lg-1">
             <h3 className="h4 text-dark">Skincare Consultant</h3>
-            <p>Skincare consultants help improve clients' emotional and physical wellness by working with them to gain healthy, glowing skin with the help of a personalized skincare plan designed for the client's unique needs.</p>
+            <p>Skincare consultants help improve clients&apos; emotional and physical wellness by working with them to gain healthy, glowing skin with the help of a personalized skincare plan designed for the client&apos;s unique needs.</p>
             <p className="text-uppercase"><Link href="/courses-and-tuition/skincare-consultant"><a className="text-info"><strong>view course</strong></a></Link></p>
           </div>
           <div className="col-12 col-md-6 col-lg-5">
             <h3 className="h4 text-dark">Aging in Place Designer</h3>
-            <p>An aging in place designer specializes in helping clients with aging concerns maintain their independence as long as possible, which is beneficial to clients' physical, emotional and environmental wellness.</p>
+            <p>An aging in place designer specializes in helping clients with aging concerns maintain their independence as long as possible, which is beneficial to clients&apos; physical, emotional and environmental wellness.</p>
             <p className="text-uppercase"><Link href="/courses-and-tuition/aging-in-place"><a className="text-info"><strong>view course</strong></a></Link></p>
           </div>
         </div>
@@ -91,7 +91,7 @@ const Page: NextPage = () => (
     <section id="whyChooseQC">
       <div className="container">
         <h2 className="text-center text-dark mb-3">Why Choose QC</h2>
-        <p className="lead text-center col-12 col-lg-10 offset-lg-1 mb-4">When choosing to attend an online school, it can be difficult to separate the legitimate educational institutions from less-than-reputable companies who are looking to make a quick buck. You want to choose a school you'll be proud to attend. One that will help you meet your career goals. Welcome to QC!</p>
+        <p className="lead text-center col-12 col-lg-10 offset-lg-1 mb-4">When choosing to attend an online school, it can be difficult to separate the legitimate educational institutions from less-than-reputable companies who are looking to make a quick buck. You want to choose a school you&apos;ll be proud to attend. One that will help you meet your career goals. Welcome to QC!</p>
         <div className="row d-flex align-items-center mb-5 mb-md-4">
           <div className="col-4 offset-4 col-md-2 offset-md-0 offset-lg-1 offset-xl-2 text-center mb-2 mb-md-0">
             <Image className="img-fluid" width="60" height="60" src={require('../images/icon-why-choose-qc-proven.svg')} alt="icon proven" />
@@ -116,7 +116,7 @@ const Page: NextPage = () => (
           </div>
           <div className="col-12 col-md-10 col-lg-8 col-xl-6 text-center text-md-left">
             <h3>Expert Tutors to Guide You</h3>
-            <p>Your personal tutor will follow your progress through your online course, will personally grade your assignments, and provide you with individualized feedback after you've completed each unit. These aren't paid employees of the school grading from a template; they're career professionals working in your industry, and they're focused on your success!</p>
+            <p>Your personal tutor will follow your progress through your online course, will personally grade your assignments, and provide you with individualized feedback after you&apos;ve completed each unit. These aren&apos;t paid employees of the school grading from a template; they&apos;re career professionals working in your industry, and they&apos;re focused on your success!</p>
           </div>
         </div>
         <div className="row d-flex align-items-center mb-5 mb-md-4">
@@ -125,7 +125,7 @@ const Page: NextPage = () => (
           </div>
           <div className="col-12 col-md-10 col-lg-8 col-xl-6 text-center text-md-left">
             <h3>Business Training You can Use</h3>
-            <p>Each course comes complete with optional business training where you'll work with your tutor to come up with a business name, create a marketing strategy, start building your website, and get access to templates that will help get your career off the ground from day one!</p>
+            <p>Each course comes complete with optional business training where you&apos;ll work with your tutor to come up with a business name, create a marketing strategy, start building your website, and get access to templates that will help get your career off the ground from day one!</p>
           </div>
         </div>
         <div className="row d-flex align-items-center">
@@ -134,7 +134,7 @@ const Page: NextPage = () => (
           </div>
           <div className="col-12 col-md-10 col-lg-8 col-xl-6 text-center text-md-left">
             <h3>No Additional or Hidden Fees</h3>
-            <p>Your course tuition is the only fee you'll pay for your course or certification. Unlike other schools, when you graduate from QC your certificate is yours forever, and you'll have continued access to your student center at no additional cost. You'll never be asked to pay subscription fees, membership fees, or any other fees to keep your certification current or use your business materials.</p>
+            <p>Your course tuition is the only fee you&apos;ll pay for your course or certification. Unlike other schools, when you graduate from QC your certificate is yours forever, and you&apos;ll have continued access to your student center at no additional cost. You&apos;ll never be asked to pay subscription fees, membership fees, or any other fees to keep your certification current or use your business materials.</p>
           </div>
         </div>
       </div>

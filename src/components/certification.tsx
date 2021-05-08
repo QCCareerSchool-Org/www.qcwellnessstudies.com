@@ -20,7 +20,7 @@ export const Certification: React.FC<Props> = ({ shortName, fullName, abbr, regi
       <div className="col-12 col-md-6 col-lg-5">
         {graduation ? graduation : <h2 className="text-light">Your {shortName} <p>Certification</p>
         </h2>}
-        {completion ? completion : <p>Once you successfully complete the course, you'll receive your <strong>{fullName} ({abbr}{registered ? '®' : '™'})</strong> certificate. This certification is yours forever and doesn't expire. Use it as proof of competency with clients and/or employers. Your professional designation is a great way to set yourself from the competition. Display it proudly on your business cards, marketing materials, website, and anywhere else you advertise your services!</p>}
+        {completion ? completion : <p>Once you successfully complete the course, you&apos;ll receive your <strong>{fullName} ({abbr}{registered ? '®' : '™'})</strong> certificate. This certification is yours forever and doesn&apos;t expire. Use it as proof of competency with clients and/or employers. Your professional designation is a great way to set yourself from the competition. Display it proudly on your business cards, marketing materials, website, and anywhere else you advertise your services!</p>}
       </div>
     </div>
   </div>

@@ -61,8 +61,7 @@ export const Header: React.FC<Props> = ({ nav }) => {
           )
           : (
             <div className="ml-auto text-muted">Call Us Toll Free:&nbsp; <a className="text-white" href={`tel:${telephoneNumber}`}>{telephoneNumber}</a></div>
-          )
-        }
+          )}
       </Navbar>
     </header>
   );
