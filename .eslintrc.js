@@ -6,15 +6,18 @@ module.exports = {
     'jest/globals': true,
   },
   parser: '@typescript-eslint/parser',
+  plugins: [
+    '@typescript-eslint',
+    'jest',
+  ],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
-  ],
-  plugins: [
-    'jest',
+    'plugin:jest/recommended',
+    'plugin:jest/style',
   ],
   parserOptions: {
     ecmaFeatures: {
