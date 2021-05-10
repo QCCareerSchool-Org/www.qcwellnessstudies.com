@@ -2,6 +2,7 @@ import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, Next
 import React from 'react';
 
 declare global {
+  // eslint-disable-next-line camelcase
   interface Window { LC_API?: { open_chat_window: () => void } }
 }
 

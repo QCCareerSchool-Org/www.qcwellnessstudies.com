@@ -16,6 +16,13 @@ interface Props {
   errorCode?: number;
 }
 
+const precision = 2;
+
+const formatDate = (d: Date): string => {
+  const fieldLength = 2;
+  return `${d.getFullYear()}-${d.getMonth().toString().padStart(fieldLength, '0')}-${d.getDate().toString().padStart(fieldLength, '0')}`;
+};
+
 const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
   if (errorCode) {
     return <ErrorPage statusCode={errorCode} />;
@@ -27,6 +34,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
 
   useEffect(() => {
     console.log('enrollment.emailed', enrollment.emailed);
+
     if (enrollment.emailed === false) {
       // if (typeof gtag !== 'undefined') {
       //   // https://developers.google.com/analytics/devguides/collection/gtagjs/ecommerce
@@ -40,7 +48,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
       //     items: enrollment.courses.map(c => ({
       //       id: c.code,
       //       name: c.name,
-      //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(2)),
+      //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
       //       quantity: 1,
       //     })),
       //   });
@@ -59,7 +67,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
       //     ga('ecommerce:addItem', {
       //       id: enrollment.id,
       //       name: c.name,
-      //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(2)),
+      //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
       //       quantity: 1,
       //       currency: enrollment.currencyCode,
       //     });
@@ -69,7 +77,6 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
       // } else {
       //   console.log('no tracker found');
       // }
-
     }
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
@@ -86,7 +93,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
           products: enrollment.courses.map(c => ({
             id: enrollment.id,
             name: c.name,
-            price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(2)),
+            price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
             quantity: 1,
             currency: enrollment.currencyCode,
           })),
@@ -106,7 +113,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
     //     items: enrollment.courses.map(c => ({
     //       item_name: c.name,
     //       item_id: c.code,
-    //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(2)),
+    //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
     //       quantity: 1,
     //     })),
     //   },
@@ -177,7 +184,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
                       </tr>
                       <tr>
                         <td><strong>Installments Start</strong></td>
-                        <td>{paymentDate.getFullYear()}-{paymentDate.getMonth().toString().padStart(2, '0')}-{paymentDate.getDate().toString().padStart(2, '0')}</td>
+                        <td>{formatDate(paymentDate)}</td>
                       </tr>
                     </>
                   )}
@@ -188,27 +195,27 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
                       </tr>
                       <tr>
                         <td><strong>Cost</strong></td>
-                        <td>{enrollment.currencySymbol}{c.baseCost.toFixed(2)}</td>
+                        <td>{enrollment.currencySymbol}{c.baseCost.toFixed(precision)}</td>
                       </tr>
                       {c.planDiscount > 0 && (
                         <tr>
                           <td><strong>Discount</strong></td>
-                          <td>&minus;{enrollment.currencySymbol}{c.planDiscount.toFixed(2)}</td>
+                          <td>&minus;{enrollment.currencySymbol}{c.planDiscount.toFixed(precision)}</td>
                         </tr>
                       )}
                       {c.discount > 0 && (
                         <tr>
                           <td><strong>Special Discount</strong></td>
-                          <td>&minus;{enrollment.currencySymbol}{c.discount.toFixed(2)}</td>
+                          <td>&minus;{enrollment.currencySymbol}{c.discount.toFixed(precision)}</td>
                         </tr>
                       )}
                       <tr>
                         <td><strong>Today&apos;s Deposit</strong></td>
-                        <td>{enrollment.currencySymbol}{c.deposit.toFixed(2)}</td>
+                        <td>{enrollment.currencySymbol}{c.deposit.toFixed(precision)}</td>
                       </tr>
                       <tr>
                         <td><strong>Monthly Installment</strong></td>
-                        <td>{enrollment.currencySymbol}{c.installment.toFixed(2)}</td>
+                        <td>{enrollment.currencySymbol}{c.installment.toFixed(precision)}</td>
                       </tr>
                     </React.Fragment>
                   ))}
@@ -228,7 +235,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
                   </tr>
                   <tr>
                     <td>Amount Processed</td>
-                    <td>{enrollment.deposit.toFixed(2)} {enrollment.currencyCode}</td>
+                    <td>{enrollment.deposit.toFixed(precision)} {enrollment.currencyCode}</td>
                   </tr>
                   <tr>
                     <td>Time</td>
@@ -285,7 +292,7 @@ const addToActiveCampaign = async (enrollment: Enrollment): Promise<void> => {
       SALE_CURRENCY: enrollment.currencyCode,
     },
   };
-  
+
   const url = 'https://api.qccareerschool.com/activeCampaign/subscribe';
   const response = await fetch(url, {
     method: 'post',
@@ -337,7 +344,8 @@ export const getServerSideProps: GetServerSideProps = async ({ res, query }) => 
 
     return { props: { enrollment } };
   } catch (err) {
-    const errorCode = typeof err.statusCode === 'undefined' ? 500 : err.statusCode;
+    const internalServerError = 500;
+    const errorCode = typeof err.statusCode === 'undefined' ? internalServerError : err.statusCode;
     if (res) {
       res.statusCode = errorCode;
     }

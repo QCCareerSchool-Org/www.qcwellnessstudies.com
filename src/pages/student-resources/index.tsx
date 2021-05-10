@@ -33,9 +33,7 @@ const Page: NextPage = () => (
         <div className="row mb-2">
           <CardColumn>
             <ArticleCard
-              images={[
-                { src: require('../../images/sr-thumb-focused-woman-wearing-headphones.jpg'), type: 'image/jpg' },
-              ]}
+              images={[ { src: require('../../images/sr-thumb-focused-woman-wearing-headphones.jpg'), type: 'image/jpg' } ]}
               alt="Can an Online Course Prepare You for a Sleep Consultant Career?"
               title="Can an Online Course Prepare You for a Sleep Consultant Career?"
               body=""
@@ -45,9 +43,7 @@ const Page: NextPage = () => (
           </CardColumn>
           <CardColumn>
             <ArticleCard
-              images={[
-                { src: require('../../images/sr-thumb-how-to-become-a-virtual-sleep-consultant.jpg'), type: 'image/jpg' },
-              ]}
+              images={[ { src: require('../../images/sr-thumb-how-to-become-a-virtual-sleep-consultant.jpg'), type: 'image/jpg' } ]}
               alt="How to Become a Virtual Sleep Consultant"
               title="How to Become a Virtual Sleep Consultant"
               body=""
@@ -57,9 +53,7 @@ const Page: NextPage = () => (
           </CardColumn>
           <CardColumn>
             <ArticleCard
-              images={[
-                { src: require('../../images/sr-thumb-stages-of-development.jpg'), type: 'image/jpg' },
-              ]}
+              images={[ { src: require('../../images/sr-thumb-stages-of-development.jpg'), type: 'image/jpg' } ]}
               alt="Stages of Development: How Sleep Consultants Can Help"
               title="Stages of Development: How Sleep Consultants Can Help"
               body=""
@@ -89,9 +83,7 @@ const Page: NextPage = () => (
         <div className="row">
           <CardColumn>
             <ArticleCard
-              images={[
-                { src: require('../../images/sr-thumb-7-tips-travelling-baby.jpg'), type: 'image/jpg' },
-              ]}
+              images={[ { src: require('../../images/sr-thumb-7-tips-travelling-baby.jpg'), type: 'image/jpg' } ]}
               alt="7 Tips for Travelling with a Baby"
               title="7 Tips for Travelling with a Baby"
               body=""
@@ -101,9 +93,7 @@ const Page: NextPage = () => (
           </CardColumn>
           <CardColumn>
             <ArticleCard
-              images={[
-                { src: require('../../images/sr-thumb-7-tips-for-virtual-sleep-consulting.jpg'), type: 'image/jpg' },
-              ]}
+              images={[ { src: require('../../images/sr-thumb-7-tips-for-virtual-sleep-consulting.jpg'), type: 'image/jpg' } ]}
               alt="7 Tips for Virtual Sleep Consulting"
               title="7 Tips for Virtual Sleep Consulting"
               body=""
@@ -113,9 +103,7 @@ const Page: NextPage = () => (
           </CardColumn>
           <CardColumn>
             <ArticleCard
-              images={[
-                { src: require('../../images/sr-thumb-8-tips-for-improving-bedtime-routine.jpg'), type: 'image/jpg' },
-              ]}
+              images={[ { src: require('../../images/sr-thumb-8-tips-for-improving-bedtime-routine.jpg'), type: 'image/jpg' } ]}
               alt="8 Tips for Improving the Bedtime Routine"
               title="8 Tips for Improving the Bedtime Routine"
               body=""

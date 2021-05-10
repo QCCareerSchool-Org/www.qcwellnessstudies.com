@@ -107,9 +107,9 @@ const Page: React.FC = () => (
     </section>
 
     <style jsx>{`
-    #guaranteeSection{background-image: url(${require('../images/bg-white-green-light.jpg')});background-size: cover;}
-    #partnerSection{background-image: url(${require('../images/bg-dark-green-navy.jpg')});background-size: cover;}
-  `}</style>
+      #guaranteeSection{background-image: url(${require('../images/bg-white-green-light.jpg')});background-size: cover;}
+      #partnerSection{background-image: url(${require('../images/bg-dark-green-navy.jpg')});background-size: cover;}
+    `}</style>
 
   </DefaultLayout>
 );

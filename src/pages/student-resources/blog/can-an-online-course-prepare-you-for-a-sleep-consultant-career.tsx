@@ -17,7 +17,7 @@ const Page: NextPage = () => (
         alt: 'focused woman wearing headphone',
       }}
     />
- 
+
     <section id="heroSection">
       <div className="container text-light text-center">
         <div className="row">

@@ -11,6 +11,7 @@ interface Props {
 
 export const DefaultLayout: React.FC<Props> = ({ children, SecondaryNav }) => {
   useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ event: 'track' });
   }, []);
 

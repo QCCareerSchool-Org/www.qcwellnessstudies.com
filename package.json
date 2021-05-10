@@ -9,7 +9,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint \"src/**/*.{ts,tsx}\""
+    "lint": "eslint --ext .tsx,.ts,.jsx,.js __tests__ src"
   },
   "keywords": [],
   "author": "QC Career School",

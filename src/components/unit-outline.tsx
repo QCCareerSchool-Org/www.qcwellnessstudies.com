@@ -46,7 +46,7 @@ export const UnitOutline: React.FC<Props> = ({ data }) => {
       {data.map((d, i) => (
         <Card key={i}>
           <Card.Header>
-            <CustomToggle onClick={(): void => { setOpen((prev) => prev === i ? undefined : i); }} eventKey={i.toString()} expanded={open === i}>{d.title}</CustomToggle>
+            <CustomToggle onClick={(): void => { setOpen(prev => (prev === i ? undefined : i)); }} eventKey={i.toString()} expanded={open === i}>{d.title}</CustomToggle>
           </Card.Header>
           <Accordion.Collapse eventKey={i.toString()}>
             <Card.Body>

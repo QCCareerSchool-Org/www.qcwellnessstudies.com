@@ -26,7 +26,7 @@ interface Props {
   caseStudiesExtended?: string;
 }
 
-export const HowItWorks: React.FC<Props> = (props) => (
+export const HowItWorks: React.FC<Props> = props => (
   <div className="container text-center">
     <div className="col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 mb-4">
       <h2 className="text-dark mb-4">How Online Training Works</h2>

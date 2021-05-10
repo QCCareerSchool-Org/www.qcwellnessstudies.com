@@ -136,8 +136,7 @@ const Page: React.FC = () => {
           },
           {
             title: 'Eating',
-            topics: [
-            ],
+            topics: [],
           },
         ],
       },

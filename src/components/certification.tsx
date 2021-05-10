@@ -8,7 +8,7 @@ interface Props {
   registered: boolean;
   logo?: JSX.Element;
   graduation?: JSX.Element;
-  completion?: JSX.Element;  
+  completion?: JSX.Element;
 }
 
 export const Certification: React.FC<Props> = ({ shortName, fullName, abbr, registered, logo, graduation, completion }) => (
@@ -33,5 +33,5 @@ Certification.propTypes = {
   registered: PropTypes.bool.isRequired,
   logo: PropTypes.element,
   graduation: PropTypes.element,
-  completion: PropTypes.element,  
+  completion: PropTypes.element,
 };

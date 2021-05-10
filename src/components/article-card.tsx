@@ -2,10 +2,7 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-interface Image {
-  src: string;
-  type: string;
-}
+import { CardImage, Image } from './card-image';
 
 interface Props {
   images: Image[];
@@ -34,14 +31,14 @@ export const ArticleCard: React.FC<Props> = ({ images, title, body, buttonText, 
     </div>
 
     <style jsx>{`
-    .buttonSpacer {
-      height: 31px;
-    }
-    .absoluteButton {
-      position: absolute;
-      bottom: 20px;
-    }
-  `}</style>
+      .buttonSpacer {
+        height: 31px;
+      }
+      .absoluteButton {
+        position: absolute;
+        bottom: 20px;
+      }
+    `}</style>
   </div>
 );
 
@@ -55,30 +52,5 @@ ArticleCard.propTypes = {
   buttonText: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   externalLink: PropTypes.bool,
-  alt: PropTypes.string.isRequired,
-};
-
-interface CardImageProps {
-  images: Image[];
-  alt: string;
-}
-
-const CardImage: React.FC<CardImageProps> = ({ images, alt }) => {
-  if (images.length === 0) {
-    return null;
-  }
-  return (
-    <picture>
-      {[ ...images ].reverse().map((image, i) => <source key={i} srcSet={image.src} type={image.type} />)}
-      <img className="card-img-top" src={images[0].src} alt={alt} />
-    </picture>
-  );
-};
-
-CardImage.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-  }).isRequired).isRequired,
   alt: PropTypes.string.isRequired,
 };

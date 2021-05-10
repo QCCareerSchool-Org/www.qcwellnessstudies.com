@@ -14,7 +14,9 @@ interface Props {
 export const PriceCard: React.FC<Props> = ({ courses }) => {
   const location = useLocation();
   const price = usePrice(courses, location?.countryCode, location?.provinceCode);
-  const uniqueId = useRef(Math.random().toString(32).slice(2));
+  const radix = 32;
+  const startPosition = 2;
+  const uniqueId = useRef(Math.random().toString(radix).slice(startPosition));
   const enrollLink = `https://enroll.qcwellnessstudies.com/?${courses.map(c => `c[]=${c}`).join('&')}`;
   return (
     <div className="card shadow text-center price-card">

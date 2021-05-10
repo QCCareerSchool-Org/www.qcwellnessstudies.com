@@ -33,7 +33,7 @@ const Page: NextPage = () => (
         <div className="row">
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
             <p className="lead">Infant sleep consultants work with babies at different stages of development. Sleep training a newborn baby can be <strong>very</strong> different to sleep training a toddler and every infant develops at a different rate. One baby may adapt quickly to a bedtime routine, while another baby of the same age may have trouble creating associations between the bedtime routine and actually sleeping.</p>
-            <p className="lead">A good sleep plan will address the unique challenges of each infant but the plan should also be adaptable. A sleep plan should change as a child grows and his or her needs change.</p>  
+            <p className="lead">A good sleep plan will address the unique challenges of each infant but the plan should also be adaptable. A sleep plan should change as a child grows and his or her needs change.</p>
             <p><img className="img-fluid" src={require('../../../images/sr-smiling-baby-girl-lying-on-bed.jpg')} alt="Smiling baby girl lying on bed" /></p>
 
             <h4>Working with Newborns</h4>
@@ -72,7 +72,7 @@ const Page: NextPage = () => (
             </ul>
             <p><img className="img-fluid" src={require('../../../images/sr-close-top-view-lying-bed-toddler.jpg')} alt="Toddler lying in bed" /></p>
             <p>Newborns, babies and toddlers all need enough sleep to ensure they continue to develop and grow. Sleep plans should suit each individual infant&apos;s sleep needs, surroundings and feeding schedule. Remember to update sleep plans and bedtime routines as infants reach new stages of development!</p>
-            <p className="lead">Want to learn more about infant sleep consulting? Enroll in QC Career School&apos;s <Link href="/courses-and-tuition/sleep-consultant"><a>Infant Sleep Consultant Course</a></Link> today and start your new career!</p>         
+            <p className="lead">Want to learn more about infant sleep consulting? Enroll in QC Career School&apos;s <Link href="/courses-and-tuition/sleep-consultant"><a>Infant Sleep Consultant Course</a></Link> today and start your new career!</p>
           </div>
         </div>
       </div>

@@ -83,7 +83,7 @@ const Page: React.FC = () => (
         </div>
       </div>
     </section>
-   
+
     <section id="enrollToday" className="text-light">
       <div className="container text-center">
         <h2>Get Started Today!</h2>

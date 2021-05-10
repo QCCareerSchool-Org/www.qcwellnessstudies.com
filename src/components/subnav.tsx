@@ -13,7 +13,9 @@ interface Props {
 }
 
 export const Subnav: React.FC<Props> = ({ heading, items }) => {
-  const uniqueId = useRef(Math.random().toString(32).slice(2));
+  const radix = 32;
+  const startPosition = 2;
+  const uniqueId = useRef(Math.random().toString(radix).slice(startPosition));
   return (
     <Navbar variant="light" expand="md" fixed="top" bg="light" className="shadow subnav">
       <Navbar.Brand>
