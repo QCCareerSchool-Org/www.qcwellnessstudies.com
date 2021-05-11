@@ -47,7 +47,6 @@ module.exports = {
     'no-extra-bind': 'error',
     'no-extra-label': 'error',
     'no-floating-decimal': 'error',
-    // 'no-implied-eval': 'error',
     'no-implied-eval': 'off', // handled by @typescript-eslint plugin
     'no-invalid-this': 'error',
     'no-iterator': 'error',
@@ -78,9 +77,8 @@ module.exports = {
     'yoda': 'error',
 
     // standard rules -- variables
-    // 'no-shadow': 'off', // handled by @typescript-eslint plugin
-    // 'no-use-before-define': 'off', // handled by @typescript-eslint plugin
-    // 'no-unused-vars': 'off', // handled by @typescript-eslint plugin
+    'no-shadow': 'off', // handled by @typescript-eslint plugin
+    'no-unused-vars': 'off', // handled by @typescript-eslint plugin (part of "recommended")
 
     // standard rules -- stylistic issues
     'array-bracket-newline': 'error',
@@ -106,7 +104,7 @@ module.exports = {
     'lines-between-class-members': 'off', // handled by @typescript-eslint plugin
     'new-parens': 'error',
     'no-bitwise': 'error',
-    'no-lonely-if': 'error',
+    'no-lonely-if': 'off',
     'no-mixed-operators': 'error',
     'no-multi-assign': 'error',
     'no-multiple-empty-lines': [ 'error', { max: 1, maxEOF: 0, maxBOF: 0 } ],
@@ -148,6 +146,7 @@ module.exports = {
     'yield-star-spacing': 'error',
 
     // @typescript-eslint rules
+    '@typescript-eslint/explicit-function-return-type': 'off', // included in "overrides" section
     '@typescript-eslint/member-delimiter-style': 'error',
     '@typescript-eslint/no-use-before-define': 'error',
     '@typescript-eslint/no-var-requires': 'off', // needed for dynamic require
@@ -160,6 +159,7 @@ module.exports = {
     '@typescript-eslint/promise-function-async': 'error',
     '@typescript-eslint/prefer-reduce-type-parameter': 'error',
     '@typescript-eslint/prefer-string-starts-ends-with': 'error',
+    '@typescript-eslint/type-annotation-spacing': 'error',
 
     // @typescript-eslint eslint extension rules
     '@typescript-eslint/brace-style': [ 'error', '1tbs', { allowSingleLine: true } ],
@@ -207,8 +207,7 @@ module.exports = {
     {
       files: [ '*.ts', '*.tsx' ],
       rules: {
-        '@typescript-eslint/explicit-function-return-type': [ 'error' ],
-        '@typescript-eslint/no-var-requires': [ 'error' ],
+        '@typescript-eslint/explicit-function-return-type': 'error',
       },
     },
   ],
