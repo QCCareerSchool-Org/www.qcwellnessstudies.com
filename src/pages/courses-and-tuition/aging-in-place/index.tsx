@@ -92,16 +92,18 @@ const Page: React.FC = () => {
   };
 
   return (
-    <DefaultLayout SecondaryNav={(): React.ReactElement => (
-      <Subnav
-        heading="Aging in Place Design Course"
-        items={[
-          { name: 'Tuition', url: '#paymentPlans' },
-          { name: 'Course Outline', url: '#outline' },
-          { name: 'Tutors', url: '#tutors' },
-        ]}
-      />
-    )}>
+    <DefaultLayout
+      SecondaryNav={(): React.ReactElement => (
+        <Subnav
+          heading="Aging in Place Design Course"
+          items={[
+            { name: 'Tuition', url: '#paymentPlans' },
+            { name: 'Course Outline', url: '#outline' },
+            { name: 'Tutors', url: '#tutors' },
+          ]}
+        />
+      )}
+    >
 
       <SEO
         title="Aging in Place Course"
@@ -136,10 +138,10 @@ const Page: React.FC = () => {
           <h2 className="text-dark text-center">What Is a Aging in Place Consultant?</h2>
           <div className="row">
             <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-3 mb-md-0">
-              <p>An aging in place consultant is a decorating professional that specializes in working with clients who have specific concerns related to aging. These clients are either elderly people or individuals in their 40's and 50's who are planning ahead to their retirement years.</p>
+              <p>An aging in place consultant is a decorating professional that specializes in working with clients who have specific concerns related to aging. These clients are either elderly people or individuals in their 40s and 50s who are planning ahead to their retirement years.</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5">
-              <p>The designer works with clients to plan and design a space that is safe and convenient for the client's specific situation, thus helping the client remain in their home for as long as possible, avoiding having to relocate to an assisted living facility.</p>
+              <p>The designer works with clients to plan and design a space that is safe and convenient for the client&apos;s specific situation, thus helping the client remain in their home for as long as possible, avoiding having to relocate to an assisted living facility.</p>
             </div>
           </div>
         </div>
@@ -151,7 +153,7 @@ const Page: React.FC = () => {
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
               <h2>Basic Requirements for Becoming an Aging in Place Designer</h2>
               <ul className="mb-4">
-                <li><p><strong>Interior Decorating Certification/Experience</strong> &mdash; This advanced course is for previously certified decorating professionals. If you do not have previous experience in the design industry, you'll want to <a href="https://www.qcdesignschool.com/online-courses/interior-decorating/">become a certified interior decorator</a> before taking this Aging in Place course.</p></li>
+                <li><p><strong>Interior Decorating Certification/Experience</strong> &mdash; This advanced course is for previously certified decorating professionals. If you do not have previous experience in the design industry, you&apos;ll want to <a href="https://www.qcdesignschool.com/online-courses/interior-decorating/">become a certified interior decorator</a> before taking this Aging in Place course.</p></li>
                 <li><p><strong>Business &amp; Marketing Expertise</strong> &mdash; Since this course is an advanced course for certified decorating professionals, the course does not contain business training. You will need to rely on your own business and marketing experience to sell your aging in place services to potential clients.</p></li>
                 <li><p><strong>Reliability, Flexibility &amp; Empathy</strong> &mdash; Working with aging in place clients can require a greater degree of sensitivity than your usual design and decorating clients. Being able to connect with your aging clients on a personal level and offer them greater flexibility when scheduling consultations will be a great way to garner their trust!</p></li>
               </ul>
@@ -165,10 +167,10 @@ const Page: React.FC = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-5">
-              <h2 className="text-dark">What You'll Learn</h2>
-              <p className="lead">In this highly interactive self-paced training course, you'll learn:</p>
+              <h2 className="text-dark">What You&apos;ll Learn</h2>
+              <p className="lead">In this highly interactive self-paced training course, you&apos;ll learn:</p>
               <ul className="mb-4">
-                <li>What Aging in Place services are and when they're required</li>
+                <li>What Aging in Place services are and when they&apos;re required</li>
                 <li>The role of a decorator/designer in offering aging in place services</li>
                 <li>Common aging challenges and how to accommodate those challenges</li>
                 <li>Working with clients of all ages to plan for aging</li>
@@ -191,15 +193,15 @@ const Page: React.FC = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-              <h2>How You'll Learn</h2>
-              <p>QC's signature online learning experience is made for highly motivated and ambitious individuals! You'll learn at your own pace, with the help of your student advisor and expert tutor who will be with you every step of the way!</p>
+              <h2>How You&apos;ll Learn</h2>
+              <p>QC&apos;s signature online learning experience is made for highly motivated and ambitious individuals! You&apos;ll learn at your own pace, with the help of your student advisor and expert tutor who will be with you every step of the way!</p>
               <ul>
                 <li>Follow the course guide that will tell you when you need to read a course book, watch a video, or complete an assignment.</li>
-                <li>Complete a variety of assignments including knowledge quizzes, open-ended discussions, and comprehensive real-world case studies where you experience what it's like to be a professional aging in place designer.</li>
+                <li>Complete a variety of assignments including knowledge quizzes, open-ended discussions, and comprehensive real-world case studies where you experience what it&apos;s like to be a professional aging in place designer.</li>
                 <li>Upload your completed assignments to the online student center.</li>
                 <li>Submit your unit once all assignments are completed and uploaded.</li>
                 <li>Your tutor will grade your work and provide feedback on every assignment.</li>
-                <li>Listen to your tutor's personalized feedback, and apply their suggestions as you progress through the course.</li>
+                <li>Listen to your tutor&apos;s personalized feedback, and apply their suggestions as you progress through the course.</li>
                 <li>Reach out to your student advisor at any time with questions about your training, assignments, or anything else!</li>
               </ul>
             </div>
@@ -227,7 +229,7 @@ const Page: React.FC = () => {
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1">
               <h2 className="text-dark text-center">Full Course Outline</h2>
-              <p className="lead text-center">Here's a detailed outline of all topics you'll learn in the aging in place certification course.</p>
+              <p className="lead text-center">Here&apos;s a detailed outline of all topics you&apos;ll learn in the aging in place certification course.</p>
             </div>
           </div>
           <div className="container">
@@ -237,7 +239,7 @@ const Page: React.FC = () => {
               </div>
               <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
                 <h3 className="text-dark">Unit A: Introduction to Aging in Place</h3>
-                <p className="mb-0">This unit will introduce you to the Aging in Place (AIP) design industry. You’ll learn about the responsibilities of an AIP designer and how AIP services differ from other types of design work. You’ll also learn about common physiological changes, medical conditions, and lifestyle changes people experience as they age, and about all of the different housing and support options available to people facing aging-related challenges. This unit will also teach you how act as an AIP educator and market your services effectively.</p>
+                <p className="mb-0">This unit will introduce you to the aging in place (AIP) design industry. You&apos;ll learn about the responsibilities of an AIP designer and how AIP services differ from other types of design work. You&apos;ll also learn about common physiological changes, medical conditions, and lifestyle changes people experience as they age, and about all of the different housing and support options available to people facing aging-related challenges. This unit will also teach you how act as an AIP educator and market your services effectively.</p>
               </div>
               <div className="col-12 col-md-10 offset-md-1">
                 <UnitOutline data={units.a} />
@@ -251,7 +253,7 @@ const Page: React.FC = () => {
               </div>
               <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
                 <h3 className="text-dark">Unit B: Aging in Place Practices</h3>
-                <p className="mb-0">Unit B focuses on developing the skills required to assess client needs, evaluate homes from an AIP perspective, and create AIP modification plans. You’ll start by learning about the design standards AIP professionals use to guide their work, including universal design, accessible design and visitable design. You’ll then learn how to apply these principles to assess clients’ homes and make effective design recommendations. This unit will also teach you how you can incorporate decluttering and home transition services into your AIP business.</p>
+                <p className="mb-0">Unit B focuses on developing the skills required to assess client needs, evaluate homes from an AIP perspective, and create AIP modification plans. You&apos;ll start by learning about the design standards AIP professionals use to guide their work, including universal design, accessible design and visitable design. You&apos;ll then learn how to apply these principles to assess clients&apos; homes and make effective design recommendations. This unit will also teach you how you can incorporate decluttering and home transition services into your AIP business.</p>
               </div>
               <div className="col-12 col-md-10 offset-md-1">
                 <UnitOutline data={units.b} />
@@ -265,7 +267,7 @@ const Page: React.FC = () => {
               </div>
               <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
                 <h3 className="text-dark">Unit C: Final Project</h3>
-                <p className="mb-0">This unit will ask you to work with the home of a friend or relative. The home’s resident(s) can be any age and at any stage of life. You will simply be assessing the home as if it belonged to an AIP client. You’ll start by assessing the whole home in broad terms. In later assignments, you’ll focus on two specific rooms in the home. You can choose any type of room (bedroom, bathroom, kitchen, living room, entryway, etc.). However, to get the most from this project, we recommend that you pick a room in which you can make a number of suggestions for AIP improvements. A room that is already AIP-ready won’t allow you to practice applying all of your new skills.</p>
+                <p className="mb-0">This unit will ask you to work with the home of a friend or relative. The home&apos;s resident(s) can be any age and at any stage of life. You will simply be assessing the home as if it belonged to an AIP client. You&apos;ll start by assessing the whole home in broad terms. In later assignments, you&apos;ll focus on two specific rooms in the home. You can choose any type of room (bedroom, bathroom, kitchen, living room, entryway, etc.). However, to get the most from this project, we recommend that you pick a room in which you can make a number of suggestions for AIP improvements. A room that is already AIP-ready won&apos;t allow you to practice applying all of your new skills.</p>
               </div>
               <div className="col-12 col-md-10 offset-md-1">
                 <div id="accordionUnitC"></div>
@@ -285,7 +287,7 @@ const Page: React.FC = () => {
               <p><img src={require('../../../images/tutor-tammy.jpg')} className="img-fluid" alt="Tammy Hart" /></p>
               <h3 className="text-dark">Tammy Hart</h3>
               <p>Tammy Hart, IDDP, CAPS, is a graduate and tutor of QC Design School. She is a Certified Aging-in-Place Specialist from the National Association of Home Builders. She is the owner and award-winning designer for Designer Chick Co. and is the previous director on the National Board for DDA (formerly CDECA).</p>
-              <p>She is a professional speaker, speaking at venues like IIDEXCanada and The Small Business Forum. She’s been featured in East of the City Magazine, as a guest spot on the Rogers Daytime Durham talk show and has won the HOUZZ Service Award 2017. She works to empower young women to become successful future leaders and supports ocean clean-up efforts.</p>
+              <p>She is a professional speaker, speaking at venues like IIDEXCanada and The Small Business Forum. She&apos;s been featured in East of the City Magazine, as a guest spot on the Rogers Daytime Durham talk show and has won the HOUZZ Service Award 2017. She works to empower young women to become successful future leaders and supports ocean clean-up efforts.</p>
             </div>
           </div>
         </div>

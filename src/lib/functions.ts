@@ -2,25 +2,30 @@
  * Returns whether the country is a country with a +44 country dialing code. E.g., United Kingdom
  * @param countryCode the two-letter iso-3166-1 alpha-2 country code
  */
-export const isCallingCode44 = (countryCode: string): boolean => [ 'GB', 'IM', 'GG', 'JE' ].indexOf(countryCode) !== -1;
+export const isCallingCode44 = (countryCode: string): boolean => [ 'GB', 'IM', 'GG', 'JE' ].includes(countryCode);
 
 /**
  * Returns whether the country is a country with a +61 country dialing code. E.g., Australia
  * @param countryCode the two-letter iso-3166-1 alpha-2 country code
  */
-export const isCallingCode61 = (countryCode: string): boolean => [ 'AU', 'CX', 'CC' ].indexOf(countryCode) !== -1;
+export const isCallingCode61 = (countryCode: string): boolean => [ 'AU', 'CX', 'CC' ].includes(countryCode);
 
 /**
  * Returns whether the country is a country with a +64 country dialing code. E.g., New Zealand
  * @param countryCode the two-letter iso-3166-1 alpha-2 country code
  */
-export const isCallingCode64 = (countryCode: string): boolean => [ 'NZ', 'PN' ].indexOf(countryCode) !== -1;
+export const isCallingCode64 = (countryCode: string): boolean => [ 'NZ', 'PN' ].includes(countryCode);
 
 /**
  * Returns whether the country is a country with a +1 country dialing code. E.g., Canada, United States, Jamaica
  * @param countryCode the two-letter iso-3166-1 alpha-2 country code
  */
-export const isCallingCode1 = (countryCode: string): boolean => [ 'CA', 'US', 'AG', 'AI', 'AS', 'BB', 'BM', 'BS', 'DM', 'DO', 'GD', 'GU', 'JM', 'KN', 'KY', 'LC', 'MP', 'MS', 'PR', 'SX', 'TC', 'TT', 'VC', 'VG', 'VI', 'UM' ].indexOf(countryCode) !== -1;
+export const isCallingCode1 = (countryCode: string): boolean => [ 'CA', 'US', 'AG', 'AI', 'AS', 'BB', 'BM', 'BS', 'DM', 'DO', 'GD', 'GU', 'JM', 'KN', 'KY', 'LC', 'MP', 'MS', 'PR', 'SX', 'TC', 'TT', 'VC', 'VG', 'VI', 'UM' ].includes(countryCode);
+
+const northAmericaCode = 1;
+const ukCode = 44;
+const auCode = 61;
+const nzCode = 64;
 
 /**
  * Returns the country dialing code for a particular country. Only supports +1, +44, +61, and +64.
@@ -32,16 +37,16 @@ export const getCallingCode = (countryCode?: string): number | null => {
     return null;
   }
   if (isCallingCode1(countryCode)) {
-    return 1;
+    return northAmericaCode;
   }
   if (isCallingCode44(countryCode)) {
-    return 44;
+    return ukCode;
   }
   if (isCallingCode61(countryCode)) {
-    return 61;
+    return auCode;
   }
   if (isCallingCode64(countryCode)) {
-    return 64;
+    return nzCode;
   }
   return null;
 };
@@ -52,13 +57,13 @@ export const getCallingCode = (countryCode?: string): number | null => {
  */
 export const getTelephoneNumber = (countryCode?: string): string => {
   switch (getCallingCode(countryCode)) {
-    case 1:
+    case northAmericaCode:
       return '1-833-600-3751';
-    case 44:
+    case ukCode:
       return '0800 066 4734';
-    case 61:
+    case auCode:
       return '0800-451-979';
-    case 64:
+    case nzCode:
       return '1800 531 923';
     default:
       return '+1 613-749-8248';
@@ -137,14 +142,15 @@ export function nl2br(str?: string | null, xhtml?: boolean): string {
     return '';
   }
   const breakTag = (xhtml || typeof xhtml === 'undefined') ? '<br />' : '<br>';
-  return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
+  return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/gu, '$1' + breakTag + '$2');
 }
 
 export function needsProvince(countryCode: string): boolean {
   return [ 'CA', 'US', 'AU' ].includes(countryCode);
 }
 
-export const formatPrice = (value?: number, precision = 2): string => {
+const defaultPrecision = 2;
+export const formatPrice = (value?: number, precision = defaultPrecision): string => {
   if (typeof value === 'undefined') {
     return '';
   }

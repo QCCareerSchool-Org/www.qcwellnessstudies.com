@@ -10,9 +10,16 @@ jest.mock('../../src/providers/location', () => {
   return { useLocation: jest.fn().mockReturnValue(location) };
 });
 
-jest.mock('../../src/providers/screen-width', () => ({
-  useScreenWidth: jest.fn().mockReturnValue(1024),
-}));
+jest.mock('../../src/providers/screen-width', () => {
+  const defaultScreenWidth = 1024;
+  return {
+    useScreenWidth: jest.fn().mockReturnValue(defaultScreenWidth),
+  };
+});
+
+// Prevent act() error logs from Link
+// TODO: clean up when fixed: https://github.com/vercel/next.js/pull/20169
+jest.mock('next/link', () => (props: { children: unknown }): unknown => props.children);
 
 expect.extend(toHaveNoViolations);
 

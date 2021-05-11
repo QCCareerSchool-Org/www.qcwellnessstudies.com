@@ -17,7 +17,7 @@ const Page: React.FC = () => {
           <div className="row">
             <div className="col-12 col-sm-10 col-md-8 col-lg-7">
               <h1>Texas</h1>
-              <h2 className="h5">In Texas, Personal Caregivers are called “Personal Care Aides,” or PCAs.</h2>
+              <h2 className="h5">In Texas, Personal Caregivers are called &ldquo;Personal Care Aides,&rdquo; or PCAs.</h2>
             </div>
           </div>
         </div>
@@ -58,8 +58,8 @@ const Page: React.FC = () => {
               <li>The <span className="font-weight-bold">Community First Choice (CFC) Program </span>is for individuals of any age who need help with daily tasks or activities of daily living. Your client will be re-assessed annually to determine whether they still qualify for the CFC Program.</li>
               <li>The <span className="font-weight-bold">Primary Home Care (PHC) Program </span>is for disabled individuals over the age of 21 who require assistance to perform at least one activity of daily living. Their disability must be due to a medical condition, and must be documented by a medical professional.</li>
             </ul>
-            <p>If your client has served in the US Military and sustained a serious injury in the line of duty on or after September 11th, 2001, a Caregiver may be partially or fully reimbursed by <a className="text-info" href="https://www.benefits.gov/benefit/5918">Veteran’s’ Affairs.</a> Serious injuries include traumatic brain injury, psychological trauma, and other mental disorders.</p>
-            <p className="font-italic">Please note that while these regulations are accurate at time of publication, laws can change quickly. It’s always a good idea to check on government websites or contact public health representatives to get the most up-to-date information.</p>
+            <p>If your client has served in the US Military and sustained a serious injury in the line of duty on or after September 11th, 2001, a Caregiver may be partially or fully reimbursed by <a className="text-info" href="https://www.benefits.gov/benefit/5918">Veterans Affairs.</a> Serious injuries include traumatic brain injury, psychological trauma, and other mental disorders.</p>
+            <p className="font-italic">Please note that while these regulations are accurate at time of publication, laws can change quickly. It&apos;s always a good idea to check on government websites or contact public health representatives to get the most up-to-date information.</p>
             <p>Sources:</p>
             <p><a className="text-info" href="https://hhs.texas.gov/services/aging/long-term-care/aging-disability-resource-center/are-you-a-family-caregiver">https://hhs.texas.gov/services/aging/long-term-care/aging-disability-resource-center/are-you-a-family-caregiver</a></p>
             <p><a className="text-info" href="https://www.payingforseniorcare.com/texas/medicaid-waivers/star-plus">https://www.payingforseniorcare.com/texas/medicaid-waivers/star-plus</a></p>

@@ -12,6 +12,10 @@ jest.mock('../../src/components/address', () => ({
   Address: jest.fn().mockReturnValue(null),
 }));
 
+// Prevent act() error logs from Link
+// TODO: clean up when fixed: https://github.com/vercel/next.js/pull/20169
+jest.mock('next/link', () => (props: { children: unknown }): unknown => props.children);
+
 expect.extend(toHaveNoViolations);
 
 describe('<Footer>', () => {

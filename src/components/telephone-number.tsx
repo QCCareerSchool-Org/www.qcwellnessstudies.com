@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import { getTelephoneNumber } from '../lib/functions';
@@ -17,7 +18,10 @@ export const TelephoneNumber: React.FC<Props> = ({ link = true }) => {
   const telephoneNumber = getTelephoneNumber(location.countryCode);
   if (link) {
     return <a href={`tel:${telephoneNumber}`}>{telephoneNumber}</a>;
-  } else {
-    return <>{telephoneNumber}</>;
   }
+  return <>{telephoneNumber}</>;
+};
+
+TelephoneNumber.propTypes = {
+  link: PropTypes.bool,
 };

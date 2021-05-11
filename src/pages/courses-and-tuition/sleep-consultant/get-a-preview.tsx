@@ -66,14 +66,14 @@ const Page: NextPage = () => (
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-            <p className="h3 text-dark">In this course preview, you’ll learn</p>
+            <p className="h3 text-dark">In this course preview, you&apos;ll learn</p>
             <ul>
               <li>Why infant sleep consulting is a rewarding and lucrative career choice</li>
-              <li>How QC's online learning system works, and why it's perfect for you</li>
+              <li>How QC&apos;s online learning system works, and why it&apos;s perfect for you</li>
               <li>How you can get certified as a sleep consultant without ever leaving home</li>
               <li>Your career opportunities, including how you can launch your own sleep consulting business</li>
               <li>A full outline of the online sleep consulting course, including sample assignments</li>
-              <li>A full breakdown of the course’s tuition and available payment plans</li>
+              <li>A full breakdown of the course&apos;s tuition and available payment plans</li>
             </ul>
           </div>
         </div>

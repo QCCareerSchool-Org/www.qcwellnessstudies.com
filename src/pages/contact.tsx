@@ -61,8 +61,8 @@ const Page: NextPage = () => {
             <div className="text-center text-dark col-lg-10 offset-lg-1">
               <img src={require('../images/icon-schedule.svg')} className="text-center" alt="calendar with clock" />
               <h2>Schedule a Call with a Student Advisor</h2>
-              <p className="lead">Would you like to speak to a student advisor about your options in online wellness training? Fill out this form and we'll call you at your convenience!</p>
-              <p><strong>Please note:</strong> QC's offices are not open 24/7. We'll do our best to call you at the specific times you request, but if our offices will be closed at the time you request, we'll contact you via e-mail to reschedule!</p>
+              <p className="lead">Would you like to speak to a student advisor about your options in online wellness training? Fill out this form and we&apos;ll call you at your convenience!</p>
+              <p><strong>Please note:</strong> QC&apos;s offices are not open 24/7. We&apos;ll do our best to call you at the specific times you request, but if our offices will be closed at the time you request, we&apos;ll contact you via email to reschedule!</p>
               <p><a className="btn btn-sm btn-outline-primary" target="_blank" rel="noopener noreferrer" href="https://qccareerschool.activehosted.com/f/52">&nbsp;Schedule a Call with a Student Advisor</a></p>
             </div>
           </div>

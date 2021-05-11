@@ -20,11 +20,11 @@ const Page: React.FC = () => (
         <li>A full refund cannot be granted if you have already submitted course work to your tutor for grading. In this case, a partial tuition refund may be offered instead.</li>
       </ul>
       <h3>1-Year Money-back Guarantee</h3>
-      <p>QC's <strong>sleep consultant course</strong> offers a 1-year money back guarantee. If, after graduation, you do not earn the equivalent of your course tuition in professional consulting fees, you will be eligible for a full refund of your tuition. In order to qualify for this refund, you must demonstrate that you have made a reasonable effort to obtain clients.</p>
-      <p>Graduates who request a refund under the 1-year guarantee must contact the School <strong>within 13-18 months post-graduation</strong> and provide proof that they:</p>
+      <p>QC&apos;s <strong>sleep consultant course</strong> offers a 1-year money back guarantee. If, after graduation, you do not earn the equivalent of your course tuition in professional consulting fees, you will be eligible for a full refund of your tuition. In order to qualify for this refund, you must demonstrate that you have made a reasonable effort to obtain clients.</p>
+      <p>Graduates who request a refund under the 1-year guarantee must contact the School <strong>within 13 to 18 months post-graduation</strong> and provide proof that they:</p>
       <ul>
         <li>Have completed the optional business training unit in full before graduation;</li>
-        <li>Have a working website and social media presence that are at least 10 months old and that follow best practices outlined in the course's business unit; and</li>
+        <li>Have a working website and social media presence that are at least 10 months old and that follow best practices outlined in the course&apos;s business unit; and</li>
         <li>Provide examples of how their services were advertised over the course of the past 10 months (social media ads, direct mailers, proof of one-on-one outreach, etc.)</li>
       </ul>
 
@@ -35,7 +35,7 @@ const Page: React.FC = () => (
       <ul>
         <li>If you know in advance that you will miss a tuition payment, contact the School as quickly as possible and a student advisor will work with you to change your scheduled payment date(s).</li>
         <li>You are allowed a maximum of three months of tuition deferrals within your payment schedule. A missed monthly payment is considered a tuition deferral.</li>
-        <li>Should you miss a scheduled tuition payment, you are required to communicate with the School and arrange a replacement payment as quickly as possible. Your student center account will be placed “on hold” until your payments are up-to-date.</li>
+        <li>Should you miss a scheduled tuition payment, you are required to communicate with the School and arrange a replacement payment as quickly as possible. Your student center account will be placed &ldquo;on hold&rdquo; until your payments are up-to-date.</li>
       </ul>
 
       <h2>4. Course Deadlines</h2>
@@ -60,7 +60,7 @@ const Page: React.FC = () => (
       </ul>
 
       <h2>7. Code of Conduct</h2>
-      <p>QC's tutors and support staff are dedicated to providing a top-quality experience to all students. When you communicate with the QC Team, you will be greeted in a courteous, friendly and respectful manner.</p>
+      <p>QC&apos;s tutors and support staff are dedicated to providing a top-quality experience to all students. When you communicate with the QC Team, you will be greeted in a courteous, friendly and respectful manner.</p>
       <p>Students who exhibit abusive, threatening or offensive behavior when communicating with any member of the QC team may be placed on academic probation or expelled from the School without a tuition refund.</p>
       <p>QC considers cyber-bullying to be a serious and dangerous situation for all. Any individual who is identifiable as a QC student who is found to exhibit threatening, harassing, abusive or offensive behavior online may be placed on academic probation or expelled from the School without a tuition refund.</p>
       <h3>Cheating &amp; Plagiarism</h3>

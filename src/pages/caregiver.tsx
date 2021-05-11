@@ -21,7 +21,7 @@ const Page: React.FC = () => (
         <div className="row d-flex align-items-center">
           <div className="col-12 mb-4 col-sm-10 col-md-8 offset-sm-1 offset-md-2 offset-lg-0 col-lg-6 mb-lg-0 text-center">
             <p className="lead">PROFESSIONAL CAREGIVER</p>
-            <p>Join one of the world’s fastest growing industries! Work for established caregiving agencies or freelance as an independent caregiver.</p>
+            <p>Join one of the world&apos;s fastest growing industries! Work for established caregiving agencies or freelance as an independent caregiver.</p>
             <p>This course includes a professional certification!</p>
             <Link href="/courses-and-tuition/professional-caregiving"><a className="btn btn-secondary mb-4">LEARN MORE</a></Link>
           </div>

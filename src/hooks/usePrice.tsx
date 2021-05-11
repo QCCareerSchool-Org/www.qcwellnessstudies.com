@@ -8,7 +8,7 @@ type Request = {
   courses: string | string[];
   countryCode: string;
   provinceCode?: string;
-}
+};
 
 export const usePrice = (courses: string | string[], countryCode?: string, provinceCode?: string | null): PriceResult | undefined => {
   const [ price, setPrice ] = useState<PriceResult>();

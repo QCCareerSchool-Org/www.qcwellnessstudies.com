@@ -17,7 +17,7 @@ const Page: React.FC = () => {
           <div className="row">
             <div className="col-12 col-sm-10 col-md-8 col-lg-7">
               <h1>Pennsylvania</h1>
-              <h2 className="h5">In Pennsylvania, Personal Caregivers are called “Direct Care Workers.”</h2>
+              <h2 className="h5">In Pennsylvania, Personal Caregivers are called &ldquo;Direct Care Workers.&rdquo;</h2>
             </div>
           </div>
         </div>
@@ -53,8 +53,8 @@ const Page: React.FC = () => {
           <div className="col-12 col-lg-10 offset-lg-1 mb-6 mb-md-0">
             <h2>Funding</h2>
             <p>Medicaid programs to support caregiving are available to qualifying residents of Pennsylvania. However, to qualify for these programs, clients must require a nursing-home level of care. Your clients would probably not be reimbursed by Medicaid for your services.</p>
-            <p>If your client has served in the US Military and sustained a serious injury in the line of duty on or after September 11th, 2001, a Caregiver may be partially or fully reimbursed by <a className="text-info" href="https://www.benefits.gov/benefit/5918">Veteran’s’ Affairs.</a> Serious injuries include traumatic brain injury, psychological trauma, and other mental disorders.</p>
-            <p className="font-italic">Please note that while these regulations are accurate at time of publication, laws can change quickly. It’s always a good idea to check on government websites or contact public health representatives to get the most up-to-date information.</p>
+            <p>If your client has served in the US Military and sustained a serious injury in the line of duty on or after September 11th, 2001, a Caregiver may be partially or fully reimbursed by <a className="text-info" href="https://www.benefits.gov/benefit/5918">Veterans Affairs.</a> Serious injuries include traumatic brain injury, psychological trauma, and other mental disorders.</p>
+            <p className="font-italic">Please note that while these regulations are accurate at time of publication, laws can change quickly. It&apos;s always a good idea to check on government websites or contact public health representatives to get the most up-to-date information.</p>
             <p>Sources:</p>
             <p><a className="text-info" href="https://www.health.pa.gov/topics/Documents/Facilities%20and%20Licensing/Chapter611.pdf">https://www.health.pa.gov/topics/Documents/Facilities%20and%20Licensing/Chapter611.pdf</a></p>
             <p><a className="text-info" href="https://www.benefits.gov/benefit/5918">https://www.benefits.gov/benefit/5918</a></p>

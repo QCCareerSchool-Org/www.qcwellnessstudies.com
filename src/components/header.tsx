@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
+import * as breakpoints from '../lib/breakpoints';
 import { getTelephoneNumber } from '../lib/functions';
 import { useLocation } from '../providers/location';
 import { useScreenWidth } from '../providers/screen-width';
@@ -23,7 +24,7 @@ export const Header: React.FC<Props> = ({ nav }) => {
         <Navbar.Brand>
           <Link href="/">
             <a>
-              {(nav && (screenWidth < 576 || screenWidth >= 768 && screenWidth < 992) || !nav && screenWidth < 768)
+              {((nav && (screenWidth < breakpoints.sm.start || (screenWidth >= breakpoints.md.start && screenWidth < breakpoints.lg.start))) || (!nav && screenWidth < breakpoints.md.start))
                 ? <img data-testid="header-logo-sm" className="header-logo" src={require('../images/logo.svg')} alt="QC Wellness Studies" />
                 : <img data-testid="header-logo-lg" className="header-logo" src={require('../images/logo-lg.svg')} alt="QC Wellness Studies" />
               }
@@ -61,8 +62,7 @@ export const Header: React.FC<Props> = ({ nav }) => {
           )
           : (
             <div className="ml-auto text-muted">Call Us Toll Free:&nbsp; <a className="text-white" href={`tel:${telephoneNumber}`}>{telephoneNumber}</a></div>
-          )
-        }
+          )}
       </Navbar>
     </header>
   );

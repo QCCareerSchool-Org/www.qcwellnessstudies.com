@@ -11,14 +11,17 @@ import { TelephoneNumber } from '../components/telephone-number';
 import { DefaultLayout } from '../layouts/default';
 import { Enrollment } from '../models/enrollment';
 
-declare const gtag: (...args: unknown[]) => void;
-declare const ga: (...args: unknown[]) => void;
-declare const dataLayer: any[];
-
 interface Props {
   enrollment?: Enrollment;
   errorCode?: number;
 }
+
+const precision = 2;
+
+const formatDate = (d: Date): string => {
+  const fieldLength = 2;
+  return `${d.getFullYear()}-${d.getMonth().toString().padStart(fieldLength, '0')}-${d.getDate().toString().padStart(fieldLength, '0')}`;
+};
 
 const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
   if (errorCode) {
@@ -31,6 +34,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
 
   useEffect(() => {
     console.log('enrollment.emailed', enrollment.emailed);
+
     if (enrollment.emailed === false) {
       // if (typeof gtag !== 'undefined') {
       //   // https://developers.google.com/analytics/devguides/collection/gtagjs/ecommerce
@@ -44,7 +48,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
       //     items: enrollment.courses.map(c => ({
       //       id: c.code,
       //       name: c.name,
-      //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(2)),
+      //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
       //       quantity: 1,
       //     })),
       //   });
@@ -63,7 +67,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
       //     ga('ecommerce:addItem', {
       //       id: enrollment.id,
       //       name: c.name,
-      //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(2)),
+      //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
       //       quantity: 1,
       //       currency: enrollment.currencyCode,
       //     });
@@ -73,7 +77,6 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
       // } else {
       //   console.log('no tracker found');
       // }
-
     }
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
@@ -90,7 +93,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
           products: enrollment.courses.map(c => ({
             id: enrollment.id,
             name: c.name,
-            price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(2)),
+            price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
             quantity: 1,
             currency: enrollment.currencyCode,
           })),
@@ -110,7 +113,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
     //     items: enrollment.courses.map(c => ({
     //       item_name: c.name,
     //       item_id: c.code,
-    //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(2)),
+    //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
     //       quantity: 1,
     //     })),
     //   },
@@ -134,7 +137,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
           <div className="row row d-flex align-items-center mb-3 mt-3">
             <div className="col-12 col-sm-10 col-md-8 col-lg-8">
               <h1 className="text-dark">Thank You for Enrolling with QC Wellness Studies!</h1>
-              <p>Your enrollment has been received and will be processed quickly. You will receive an email within the next business day containing login information to your online student center. If you don't see an email from us, please check your spam folder.</p>
+              <p>Your enrollment has been received and will be processed quickly. You will receive an email within the next business day containing login information to your online student center. If you don&apos;t see an email from us, please check your spam folder.</p>
               <p>If you have any questions regarding the course, or if you want to discuss your goals, our friendly and knowledgeable student support advisors are available 7 days a week by email at <a href="mailto:info@qcwellnessstudies.com">info@qcwellnessstudies.com</a> or by phone at <TelephoneNumber />. We would be delighted to speak with you and assist you in any way we can. We hope your learning experience with us will be enjoyable, interesting, and valuable.</p>
               <p className="lead">Remember, we want to develop a personal relationship with you and be readily available for you whenever you need us.</p>
               <p className="text-dark"><strong>Best of luck with your studies!</strong></p>
@@ -181,7 +184,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
                       </tr>
                       <tr>
                         <td><strong>Installments Start</strong></td>
-                        <td>{paymentDate.getFullYear()}-{paymentDate.getMonth().toString().padStart(2, '0')}-{paymentDate.getDate().toString().padStart(2, '0')}</td>
+                        <td>{formatDate(paymentDate)}</td>
                       </tr>
                     </>
                   )}
@@ -192,27 +195,27 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
                       </tr>
                       <tr>
                         <td><strong>Cost</strong></td>
-                        <td>{enrollment.currencySymbol}{c.baseCost.toFixed(2)}</td>
+                        <td>{enrollment.currencySymbol}{c.baseCost.toFixed(precision)}</td>
                       </tr>
                       {c.planDiscount > 0 && (
                         <tr>
                           <td><strong>Discount</strong></td>
-                          <td>&minus;{enrollment.currencySymbol}{c.planDiscount.toFixed(2)}</td>
+                          <td>&minus;{enrollment.currencySymbol}{c.planDiscount.toFixed(precision)}</td>
                         </tr>
                       )}
                       {c.discount > 0 && (
                         <tr>
                           <td><strong>Special Discount</strong></td>
-                          <td>&minus;{enrollment.currencySymbol}{c.discount.toFixed(2)}</td>
+                          <td>&minus;{enrollment.currencySymbol}{c.discount.toFixed(precision)}</td>
                         </tr>
                       )}
                       <tr>
-                        <td><strong>Today's Deposit</strong></td>
-                        <td>{enrollment.currencySymbol}{c.deposit.toFixed(2)}</td>
+                        <td><strong>Today&apos;s Deposit</strong></td>
+                        <td>{enrollment.currencySymbol}{c.deposit.toFixed(precision)}</td>
                       </tr>
                       <tr>
                         <td><strong>Monthly Installment</strong></td>
-                        <td>{enrollment.currencySymbol}{c.installment.toFixed(2)}</td>
+                        <td>{enrollment.currencySymbol}{c.installment.toFixed(precision)}</td>
                       </tr>
                     </React.Fragment>
                   ))}
@@ -232,7 +235,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
                   </tr>
                   <tr>
                     <td>Amount Processed</td>
-                    <td>{enrollment.deposit.toFixed(2)} {enrollment.currencyCode}</td>
+                    <td>{enrollment.deposit.toFixed(precision)} {enrollment.currencyCode}</td>
                   </tr>
                   <tr>
                     <td>Time</td>
@@ -289,7 +292,7 @@ const addToActiveCampaign = async (enrollment: Enrollment): Promise<void> => {
       SALE_CURRENCY: enrollment.currencyCode,
     },
   };
-  
+
   const url = 'https://api.qccareerschool.com/activeCampaign/subscribe';
   const response = await fetch(url, {
     method: 'post',
@@ -341,7 +344,8 @@ export const getServerSideProps: GetServerSideProps = async ({ res, query }) => 
 
     return { props: { enrollment } };
   } catch (err) {
-    const errorCode = typeof err.statusCode === 'undefined' ? 500 : err.statusCode;
+    const internalServerError = 500;
+    const errorCode = typeof err.statusCode === 'undefined' ? internalServerError : err.statusCode;
     if (res) {
       res.statusCode = errorCode;
     }

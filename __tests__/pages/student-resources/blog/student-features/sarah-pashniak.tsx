@@ -2,15 +2,15 @@ import { render } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import React from 'react';
 
-import Page from '../../src/pages/index';
-import { Location } from '../../src/providers/location';
+import Page from '../../../../../src/pages/student-resources/blog/student-features/sarah-pashniak';
+import { Location } from '../../../../../src/providers/location';
 
-jest.mock('../../src/providers/location', () => {
+jest.mock('../../../../../src/providers/location', () => {
   const location: Location = { countryCode: 'CA', countryName: 'Canada', provinceCode: 'ON', provinceName: 'Ontario' };
   return { useLocation: jest.fn().mockReturnValue(location) };
 });
 
-jest.mock('../../src/providers/screen-width', () => {
+jest.mock('../../../../../src/providers/screen-width', () => {
   const defaultScreenWidth = 1024;
   return {
     useScreenWidth: jest.fn().mockReturnValue(defaultScreenWidth),
@@ -26,7 +26,7 @@ jest.mock('next/image', () => Image);
 
 expect.extend(toHaveNoViolations);
 
-describe('/', () => {
+describe('/student-resources/blog/student-features/sarah-pashniak', () => {
 
   it('shouldn\'t have any usability violations', async () => {
     const { container } = render(<Page />);
