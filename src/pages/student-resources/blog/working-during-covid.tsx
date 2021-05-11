@@ -47,11 +47,11 @@ const Page: React.FC = () => (
             <p className="lead"><Link href="/courses-and-tuition/sleep-consultant"><a>Learn more about QC Wellness Studies&apos; Sleep Consultant Course!</a></Link></p>
             <p><img className="img-fluid" src={require('../../../images/sleep-consultant-home-office.jpg')} alt="Sleep Consultant Home Office" /></p>
 
-            <h2 className="h3">Reviews &amp; Testimonials</h2>
+            <h2 className="h3">Hear from a QC Graduate</h2>
             <p className="lead font-italic">&ldquo;The Sleep Consultant Course divides the learning into easy-to-digest portions. The assignments effectively reflect the information taught in each section, and there&apos;s a variety of different types of assignments to test and apply your knowledge. I had a wonderful experience as a student at QC Wellness School! My favorite thing about my program was the quick feedback from my instructor. I enjoyed that it was always provided to me in a detailed audio message. It felt so personal!&rdquo;</p>
             <p className="lead font-italic">-Sarah Pashniak, ISCP™</p>
             <p className="lead font-italic">QC Graduate</p>
-            <p className="lead font-italic">Learn more about Sarah&apos;s experience with QC&apos;s Sleep Consultant Course <Link href="/student-resources/blog/student-features"><a>here</a></Link></p>
+            <p className="lead font-italic">Learn more about Sarah&apos;s <Link href="/student-resources/blog/student-features"><a>experience with QC&apos;s Sleep Consultant Course</a></Link></p>
 
             <h2 className="h3">You Can Still Earn an Income for Your Sleep Consultant Business During COVID-19</h2>
             <p>Continue to book clients and make a profit by adding any of the following services to your business:</p>
