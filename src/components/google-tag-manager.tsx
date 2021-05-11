@@ -11,7 +11,7 @@ interface Props {
 }
 
 class GoogleTagManager extends React.Component<Props> {
-  static propTypes = {
+  public static propTypes = {
     gtmId: PropTypes.string.isRequired,
     dataLayerName: PropTypes.string,
     additionalEvents: PropTypes.object,
@@ -19,7 +19,7 @@ class GoogleTagManager extends React.Component<Props> {
     scriptId: PropTypes.string,
   };
 
-  componentDidMount(): void {
+  public componentDidMount(): void {
     const dataLayerName = this.props.dataLayerName ?? 'dataLayer';
     const scriptId = this.props.scriptId ?? 'react-google-tag-manager-gtm';
 
@@ -32,7 +32,7 @@ class GoogleTagManager extends React.Component<Props> {
     }
   }
 
-  render(): JSX.Element {
+  public render(): JSX.Element {
     const gtm = gtmParts({
       id: this.props.gtmId,
       dataLayerName: this.props.dataLayerName ?? 'dataLayer',

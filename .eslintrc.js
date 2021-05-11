@@ -147,8 +147,8 @@ module.exports = {
 
     // @typescript-eslint rules
     '@typescript-eslint/explicit-function-return-type': 'off', // included in "overrides" section
+    '@typescript-eslint/explicit-member-accessibility': 'error',
     '@typescript-eslint/member-delimiter-style': 'error',
-    '@typescript-eslint/no-use-before-define': 'error',
     '@typescript-eslint/no-var-requires': 'off', // needed for dynamic require
     '@typescript-eslint/prefer-for-of': 'error',
     '@typescript-eslint/prefer-includes': 'error',
@@ -175,6 +175,7 @@ module.exports = {
     '@typescript-eslint/no-magic-numbers': [ 'warn', { ignoreArrayIndexes: true, ignore: [ 0, 1 ] } ],
     '@typescript-eslint/no-shadow': 'error',
     '@typescript-eslint/no-throw-literal': 'error',
+    '@typescript-eslint/no-use-before-define': 'off', // override CRA's default
     '@typescript-eslint/object-curly-spacing': [ 'error', 'always' ],
     '@typescript-eslint/quotes': [ 'error', 'single' ],
     '@typescript-eslint/require-await': 'error',
