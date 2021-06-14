@@ -11,7 +11,7 @@ const Page: React.FC = () => (
     <SEO
       title="Student Feature - Sarah Pashniak"
       description="QC graduate, Sarah Pashniak, discusses her sleep consultant journey, her passion about sleep, how QC fine-tuned her skills as a professional, and more!"
-      canonical="/student-resources/blog/student-feature/sarah-pashniak"
+      canonical="/student-resources/blog/student-features/sarah-pashniak"
       image={{
         src: require('../../../../images/student-feature/sarah-pashniak-office.jpg'),
         alt: 'Sarah Pashniak Office',

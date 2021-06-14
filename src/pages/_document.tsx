@@ -7,12 +7,12 @@ declare global {
 }
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
+  public static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
   }
 
-  render(): JSX.Element {
+  public render(): JSX.Element {
     return (
       <Html lang="en" className="h-100" prefix="og: http://ogp.me/ns#">
         <Head>

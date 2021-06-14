@@ -15,7 +15,7 @@ export const usePrice = (courses: string | string[], countryCode?: string, provi
 
   useEffect(() => {
     if (countryCode) {
-      (async (): Promise<void> => {
+      const getData = async (): Promise<void> => {
         const url = 'https://api.qccareerschool.com/prices';
         const params: Request = { courses, countryCode };
         if (provinceCode) {
@@ -32,7 +32,8 @@ export const usePrice = (courses: string | string[], countryCode?: string, provi
         } catch (err) {
           console.error('Unable to look up prices', err);
         }
-      })();
+      };
+      getData().catch(err => { console.error(err); });
     }
   }, [ courses, countryCode, provinceCode ]);
 

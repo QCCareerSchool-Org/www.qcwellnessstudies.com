@@ -195,7 +195,7 @@ const Page: React.FC = () => {
       <SEO
         title="Skincare Consultant Course"
         description="Become a professional skincare consultant with QC's interactive online course. Study at your own pace and learn to launch your own skincare business!"
-        canonical="/courses-and-tutition/skincare-consultant"
+        canonical="/courses-and-tuition/skincare-consultant"
       />
 
       <section id="heroSection">

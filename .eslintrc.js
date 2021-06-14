@@ -81,7 +81,7 @@ module.exports = {
     'no-unused-vars': 'off', // handled by @typescript-eslint plugin (part of "recommended")
 
     // standard rules -- stylistic issues
-    'array-bracket-newline': 'error',
+    'array-bracket-newline': [ 'error', 'consistent' ],
     'array-bracket-spacing': [ 'error', 'always' ],
     'array-element-newline': [ 'error', 'consistent' ],
     'block-spacing': 'error',
@@ -94,13 +94,13 @@ module.exports = {
     'eol-last': 'error',
     'func-call-spacing': 'off', // handled by @typescript-eslint plugin
     'function-call-argument-newline': [ 'error', 'consistent' ],
-    'function-paren-newline': 'error',
+    'function-paren-newline': [ 'error', 'multiline-arguments' ],
     'implicit-arrow-linebreak': 'error',
     'indent': 'off', // handled by @typescript-eslint plugin
     'jsx-quotes': 'error',
     'key-spacing': 'error',
     'keyword-spacing': 'off', // handled by @typescript-eslint plugin
-    'linebreak-style': [ 'error', 'windows' ],
+    'linebreak-style': [ 'error' ],
     'lines-between-class-members': 'off', // handled by @typescript-eslint plugin
     'new-parens': 'error',
     'no-bitwise': 'error',
@@ -147,8 +147,11 @@ module.exports = {
 
     // @typescript-eslint rules
     '@typescript-eslint/explicit-function-return-type': 'off', // included in "overrides" section
+    '@typescript-eslint/explicit-member-accessibility': 'off', // included in "overrides" section
     '@typescript-eslint/member-delimiter-style': 'error',
-    '@typescript-eslint/no-use-before-define': 'error',
+    '@typescript-eslint/member-ordering': 'error',
+    '@typescript-eslint/method-signature-style': 'error',
+    '@typescript-eslint/no-floating-promises': 'error',
     '@typescript-eslint/no-var-requires': 'off', // needed for dynamic require
     '@typescript-eslint/prefer-for-of': 'error',
     '@typescript-eslint/prefer-includes': 'error',
@@ -172,9 +175,20 @@ module.exports = {
     '@typescript-eslint/lines-between-class-members': [ 'error', 'always', { exceptAfterSingleLine: true } ],
     '@typescript-eslint/no-implied-eval': 'error',
     '@typescript-eslint/no-loop-func': 'error',
-    '@typescript-eslint/no-magic-numbers': [ 'warn', { ignoreArrayIndexes: true, ignore: [ 0, 1 ] } ],
+    '@typescript-eslint/no-magic-numbers': [
+      'warn', {
+        ignoreArrayIndexes: true,
+        ignoreDefaultValues: true,
+        detectObjects: true,
+        ignoreEnums: true,
+        ignoreNumericLiteralTypes: true,
+        ignoreReadonlyClassProperties: true,
+        ignore: [ 0, 1 ],
+      },
+    ],
     '@typescript-eslint/no-shadow': 'error',
     '@typescript-eslint/no-throw-literal': 'error',
+    '@typescript-eslint/no-use-before-define': 'off', // override CRA's default
     '@typescript-eslint/object-curly-spacing': [ 'error', 'always' ],
     '@typescript-eslint/quotes': [ 'error', 'single' ],
     '@typescript-eslint/require-await': 'error',
@@ -207,7 +221,20 @@ module.exports = {
     {
       files: [ '*.ts', '*.tsx' ],
       rules: {
-        '@typescript-eslint/explicit-function-return-type': 'error',
+        '@typescript-eslint/explicit-function-return-type': [ 'error', { allowExpressions: true } ],
+        '@typescript-eslint/explicit-member-accessibility': 'error',
+      },
+    },
+    {
+      files: [
+        'src/__tests__/**/*.ts',
+        'src/__tests__/**/*.tsx',
+        '*.spec.ts',
+        '*.spec.tsx',
+      ],
+      rules: {
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-magic-numbers': 'off',
       },
     },
   ],
