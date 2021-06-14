@@ -81,7 +81,7 @@ module.exports = {
     'no-unused-vars': 'off', // handled by @typescript-eslint plugin (part of "recommended")
 
     // standard rules -- stylistic issues
-    'array-bracket-newline': 'error',
+    'array-bracket-newline': [ 'error', 'consistent' ],
     'array-bracket-spacing': [ 'error', 'always' ],
     'array-element-newline': [ 'error', 'consistent' ],
     'block-spacing': 'error',
@@ -94,13 +94,13 @@ module.exports = {
     'eol-last': 'error',
     'func-call-spacing': 'off', // handled by @typescript-eslint plugin
     'function-call-argument-newline': [ 'error', 'consistent' ],
-    'function-paren-newline': 'error',
+    'function-paren-newline': [ 'error', 'multiline-arguments' ],
     'implicit-arrow-linebreak': 'error',
     'indent': 'off', // handled by @typescript-eslint plugin
     'jsx-quotes': 'error',
     'key-spacing': 'error',
     'keyword-spacing': 'off', // handled by @typescript-eslint plugin
-    'linebreak-style': [ 'error', 'windows' ],
+    'linebreak-style': [ 'error' ],
     'lines-between-class-members': 'off', // handled by @typescript-eslint plugin
     'new-parens': 'error',
     'no-bitwise': 'error',
@@ -151,6 +151,7 @@ module.exports = {
     '@typescript-eslint/member-delimiter-style': 'error',
     '@typescript-eslint/member-ordering': 'error',
     '@typescript-eslint/method-signature-style': 'error',
+    '@typescript-eslint/no-floating-promises': 'error',
     '@typescript-eslint/no-var-requires': 'off', // needed for dynamic require
     '@typescript-eslint/prefer-for-of': 'error',
     '@typescript-eslint/prefer-includes': 'error',

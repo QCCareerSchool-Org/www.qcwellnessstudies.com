@@ -15,7 +15,7 @@ const LocationDispatchContext = React.createContext<((location: Location) => voi
 export const LocationProvider: React.FC = ({ children }) => {
   const [ state, dispatch ] = useState<Location | null>(null);
   useEffect(() => {
-    (async (): Promise<void> => {
+    const getData = async (): Promise<void> => {
       const url = 'https://api.qccareerschool.com/geoLocation/ip';
       try {
         const response = await fetch(url);
@@ -27,7 +27,8 @@ export const LocationProvider: React.FC = ({ children }) => {
       } catch (err) {
         dispatch({ countryCode: 'US', countryName: 'United States', provinceCode: 'MD', provinceName: 'Maryland' });
       }
-    })();
+    };
+    getData().catch(err => { console.error(err); });
   }, []);
   return (
     <LocationStateContext.Provider value={state}>
