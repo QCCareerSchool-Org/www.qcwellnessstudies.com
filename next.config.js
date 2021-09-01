@@ -1,9 +1,7 @@
 const withImages = require('next-images');
 const withPurgeCss = require('next-purgecss');
 module.exports = withPurgeCss(withImages({
-  future: {
-    webpack5: true,
-  },
+  webpack5: true,
   purgeCssPaths: [
     'src/**/*',
     // 'src/pages/**/*',
