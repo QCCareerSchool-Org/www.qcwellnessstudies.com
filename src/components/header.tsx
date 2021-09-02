@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -25,8 +26,8 @@ export const Header: React.FC<Props> = ({ nav }) => {
           <Link href="/">
             <a>
               {((nav && (screenWidth < breakpoints.sm.start || (screenWidth >= breakpoints.md.start && screenWidth < breakpoints.lg.start))) || (!nav && screenWidth < breakpoints.md.start))
-                ? <img data-testid="header-logo-sm" className="header-logo" src={require('../images/logo.svg')} alt="QC Wellness Studies" />
-                : <img data-testid="header-logo-lg" className="header-logo" src={require('../images/logo-lg.svg')} alt="QC Wellness Studies" />
+                ? <Image width="34" height="32" data-testid="header-logo-sm" className="header-logo" src={require('../images/logo.svg')} alt="QC Wellness Studies" />
+                : <Image width="212" height="32" data-testid="header-logo-lg" className="header-logo" src={require('../images/logo-lg.svg')} alt="QC Wellness Studies" />
               }
             </a>
           </Link>

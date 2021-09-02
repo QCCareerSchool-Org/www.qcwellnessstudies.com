@@ -15,9 +15,11 @@ import { MinimalLayout } from '../../../layouts/mimimal';
 import { formatPrice } from '../../../lib/functions';
 import { useLocation } from '../../../providers/location';
 
+const courses = [ 'fc' ];
+
 const Page: NextPage = () => {
   const location = useLocation();
-  const price = usePrice([ 'fc' ], location?.countryCode, location?.provinceCode);
+  const price = usePrice(courses, location?.countryCode, location?.provinceCode);
 
   return (
     <MinimalLayout

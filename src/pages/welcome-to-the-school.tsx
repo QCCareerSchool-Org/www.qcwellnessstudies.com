@@ -343,9 +343,9 @@ export const getServerSideProps: GetServerSideProps = async ({ res, query }) => 
     }
 
     return { props: { enrollment } };
-  } catch (err) {
+  } catch (err: unknown) {
     const internalServerError = 500;
-    const errorCode = typeof err.statusCode === 'undefined' ? internalServerError : err.statusCode;
+    const errorCode = err instanceof HttpStatus.HttpResponse ? err.statusCode : internalServerError;
     if (res) {
       res.statusCode = errorCode;
     }

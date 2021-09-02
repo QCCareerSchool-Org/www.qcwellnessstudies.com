@@ -1,7 +1,10 @@
 const withImages = require('next-images');
 const withPurgeCss = require('next-purgecss');
 module.exports = withPurgeCss(withImages({
-  webpack5: true,
+  webpack5: false,
+  images: {
+    disableStaticImages: true,
+  },
   purgeCssPaths: [
     'src/**/*',
     // 'src/pages/**/*',
@@ -9,7 +12,7 @@ module.exports = withPurgeCss(withImages({
     // 'src/layouts/**/*',
   ],
   purgeCss: {
-    whitelistPatterns: () => [ /^nav-/, /^navbar-/, /^dropdown-/, /^modal-/ ],
+    whitelistPatterns: () => [ /^nav-/u, /^navbar-/u, /^dropdown-/u, /^modal-/u ],
     whitelist: () => [
       'nav',
       'navbar',
