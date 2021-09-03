@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -15,7 +16,7 @@ export const Certification: React.FC<Props> = ({ shortName, fullName, abbr, regi
   <div className="container">
     <div className="row d-flex align-items-center">
       <div className="col-12 col-md-6 col-lg-5 offset-lg-1">
-        {logo ? logo : <img src={require('../images/certificate.png')} className="img-fluid text-center" alt={`${shortName} Certification`} />}
+        {logo ? logo : <Image width="400" height="332" src={require('../images/certificate.png')} className="img-fluid text-center" alt={`${shortName} Certification`} />}
       </div>
       <div className="col-12 col-md-6 col-lg-5">
         {graduation ? graduation : <h2 className="text-light">Your {shortName} <p>Certification</p>

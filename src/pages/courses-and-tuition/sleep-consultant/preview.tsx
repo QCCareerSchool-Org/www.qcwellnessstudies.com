@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
@@ -17,11 +18,13 @@ import { MinimalLayout } from '../../../layouts/mimimal';
 import { formatPrice } from '../../../lib/functions';
 import { useLocation } from '../../../providers/location';
 
+const courses = [ 'sl' ];
+
 const Page: NextPage = () => {
   const [ popup1, toggle1 ] = useToggle();
   const [ popup2, toggle2 ] = useToggle();
   const location = useLocation();
-  const price = usePrice([ 'sl' ], location?.countryCode, location?.provinceCode);
+  const price = usePrice(courses, location?.countryCode, location?.provinceCode);
 
   return (
     <MinimalLayout
@@ -50,7 +53,7 @@ const Page: NextPage = () => {
         <div className="container text-center">
           <div className="row mt-5">
             <div className="col-12 col-md-10 offset-md-1">
-              <p><img src={require('../../../images/certification-iscp.png')} alt="Infant Sleep Consulting Professional Certification" /></p>
+              <p><Image width="129" height="132" src={require('../../../images/certification-iscp.png')} alt="Infant Sleep Consulting Professional Certification" /></p>
               <h1 className="text-uppercase">Infant Sleep Consultant Course</h1>
               <h2 className="h3">Course Preview</h2>
             </div>
@@ -130,22 +133,22 @@ const Page: NextPage = () => {
               <p>The sleep consultant course is divided into four units. You&apos;ll start by learning the basics of sleep consulting, and then build on that knowledge as you work your way through the course. Once you&apos;ve completed the course, you&apos;ll be fully qualified to work as a professional sleep consultant!</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-5">
-              <p><img className="img-fluid" src={require('../../../images/sl-outline-a.jpg')} alt="Sleep Consultant Course Unit A" /></p>
+              <p><Image className="img-fluid" width="445" height="225" src={require('../../../images/sl-outline-a.jpg')} alt="Sleep Consultant Course Unit A" /></p>
               <h3 className="text-dark">Unit A: Sleep Consulting<br />Practices</h3>
               <p>In this first unit, you&apos;ll explore the basics of sleep consulting. You&apos;ll learn the science of sleep, how children sleep, and how you can help caregivers promote healthy sleep habits. You&apos;ll learn every method of sleep consulting&mdash;from &ldquo;cry it out&rdquo; to &ldquo;no cry&rdquo; methods and everything in between&mdash;including the advantages and disadvantages of each. You&apos;ll learn to use various tools of the trade to help create an optimal sleep space and promote healthy sleep.</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 mb-5">
-              <p><img className="img-fluid" src={require('../../../images/sl-outline-b.jpg')} alt="Sleep Consultant Course Unit B" /></p>
+              <p><Image className="img-fluid" width="445" height="225" src={require('../../../images/sl-outline-b.jpg')} alt="Sleep Consultant Course Unit B" /></p>
               <h3 className="text-dark">Unit B: Sleep Consulting Application</h3>
               <p>Now that you have a good foundation of knowledge as a sleep consultant, you&apos;ll start learning how to apply those practices to provide the best service possible to clients. You&apos;ll learn how to create, implement and adapt individualized sleep plans unique to each client, including how to deal with a variety of special situations that might impact your plan&mdash;from working in a home with multiple children, to working with children who have disabilities or other diagnosed medical issues.</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-5">
-              <p><img className="img-fluid" src={require('../../../images/sl-outline-c.jpg')} alt="Sleep Consultant Course Unit C" /></p>
+              <p><Image className="img-fluid" width="445" height="225" src={require('../../../images/sl-outline-c.jpg')} alt="Sleep Consultant Course Unit C" /></p>
               <h3 className="text-dark">Unit C: Professional Sleep Consulting &amp; Coaching</h3>
               <p>Once you understand the fundamentals of sleep consulting and how to build a sleep plan unique to your clients&apos; needs, you&apos;ll start to put these skills to use while learning to be an effective consultant and coach. You&apos;ll learn how to best work with different types of clients, and how to translate your knowledge as a sleep expert to caregivers who will be implementing your sleep plan on an ongoing basis. You&apos;ll go over a number of case studies of unique situations you&apos;re likely to encounter as a sleep consultant, to get a first-hand look at how you&apos;ll work professionally once you graduate.</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 mb-5">
-              <p><img className="img-fluid" src={require('../../../images/sl-outline-d.jpg')} alt="Sleep Consultant Course Unit D" /></p>
+              <p><Image className="img-fluid" width="445" height="225" src={require('../../../images/sl-outline-d.jpg')} alt="Sleep Consultant Course Unit D" /></p>
               <h3 className="text-dark">Unit D: (Optional) Business Training Unit</h3>
               <p>If you plan on launching your own sleep consultant business, don&apos;t skip this essential final unit! You&apos;ll work through the specific elements of getting your business on its feet, including everything from choosing a business name to building your website to setting your prices and marketing your services. This unit can really catapult your career!</p>
             </div>
@@ -241,18 +244,18 @@ const Page: NextPage = () => {
         <div className="container">
           <div className="row">
             <div className="text-center col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 mb-4">
-              <p><img src={require('../../../images/icon-live-chat.svg')} alt="live chat icon" /></p>
+              <p><Image src={require('../../../images/icon-live-chat.svg')} width="119" height="120" alt="live chat icon" /></p>
               <h2 className="text-dark">Your Support System</h2>
               <p>Just because you&apos;re learning online doesn&apos;t mean you&apos;ll be learning alone. As part of the QC community, you&apos;ll have access to a network that will support and encourage you through your entire journey.</p>
             </div>
             <div className="col-12 col-lg-5 offset-lg-1">
-              <p><img className="img-fluid" src={require('../../../images/tutor.jpg')} alt="tutor" /></p>
+              <p><Image className="img-fluid" src={require('../../../images/tutor.jpg')} width="445" height="225" alt="tutor" /></p>
               <h3 className="text-dark">Your Tutor</h3>
               <p>Your personal tutor will be responsible for grading your work and providing detailed audio feedback on all your assignments. Use this feedback to gain encouragement and inspiration in the areas where you excel, and also to help improve skills you haven&apos;t quite mastered yet.</p>
               <p>All of QC&apos;s personal care aide tutors are experienced caregiving professionals with decades of experience. They&apos;re uniquely equipped to challenge you in your studies and are invested in your professional success!</p>
             </div>
             <div className="mt-4 mt-lg-0 col-12 col-lg-5">
-              <p><img className="img-fluid" src={require('../../../images/student-advisor.jpg')} alt="student advisor" /></p>
+              <p><Image className="img-fluid" src={require('../../../images/student-advisor.jpg')} width="445" height="225" alt="student advisor" /></p>
               <h3 className="text-dark">Your Student Advisor</h3>
               <p>QC&apos;s Student Support team is available 7 days a week to assist you with your studies in any way they can! Your student advisor will be your first point of contact with the school, and will be able to assist you with just about anything with regards to your online training. Contact your student advisor at any time for help with</p>
               <ul>
