@@ -523,15 +523,10 @@ const Page: React.FC = () => {
           <h2 className="text-dark text-center">Your Sleep Consulting Tutor</h2>
           <p className="lead mb-5 mx-lg-5">When you enroll, you&apos;ll be paired up with one of QC&apos;s expert sleep consulting tutors. Your tutor will be responsible for grading your work and providing feedback on your assignments.</p>
           <div className="row text-center">
-            <div className="col-12 mb-5 col-md-6 mb-md-0 col-lg-5 offset-lg-1">
+            <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
               <p><Image className="img-fluid" src={require('../../../images/tutor-rosalee.jpg')} width={350} height={350} alt="Rosalee Lahaie Hera" /></p>
               <h3 className="text-dark">Rosalee Lahaie Hera</h3>
               <p>Rosalee is a mother of two, a certified sleep consultant and owner of Baby Sleep Love. With a background in health services, Rosalee turned to sleep consulting after having to hire a sleep consultant for her own daughter. Since then, she&apos;s worked with hundreds of families to provide completely customized sleep plans for their children. Rosalee specializes in tailoring her services for each family, and will be an invaluable resource to you when starting your sleep consulting business!</p>
-            </div>
-            <div className="col-12 col-md-6 col-lg-5">
-              <p><Image className="img-fluid" src={require('../../../images/tutor-elisa.jpg')} width={350} height={350} alt="Eliza Constanza" /></p>
-              <h3 className="text-dark">Elisa Constanza</h3>
-              <p>Elisa has over 15 years of experience working with children and their parents. As an early childhood educator and child sleep consultant, she understands how healthy sleep is paramount to healthy development of the child. As a sleep consultant, she offers both in-person consultations as well as virtual consultations over the phone or Skype. Use her mentorship to help build your ideal sleep consulting business!</p>
             </div>
           </div>
         </div>
