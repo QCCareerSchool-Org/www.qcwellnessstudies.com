@@ -33,6 +33,7 @@ export interface Enrollment {
   maskedPan: string;
   currencySymbol: string;
   currencyName: string;
+  currencyExchangeRate: number;
   courses: Array<{
     code: string;
     baseCost: number;

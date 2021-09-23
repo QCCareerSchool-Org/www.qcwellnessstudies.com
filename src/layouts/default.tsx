@@ -5,7 +5,7 @@ import { Footer } from '../components/footer';
 import { Header } from '../components/header';
 
 interface Props {
-  children: React.ReactElement | React.ReactElement[];
+  children?: React.ReactNode;
   SecondaryNav?: React.FC;
 }
 
