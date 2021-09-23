@@ -13,6 +13,7 @@ import { Enrollment } from '../models/enrollment';
 
 interface Props {
   enrollment?: Enrollment;
+  ipAddress?: string | null;
   errorCode?: number;
 }
 
@@ -23,7 +24,7 @@ const formatDate = (d: Date): string => {
   return `${d.getFullYear()}-${d.getMonth().toString().padStart(fieldLength, '0')}-${d.getDate().toString().padStart(fieldLength, '0')}`;
 };
 
-const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
+const Page: NextPage<Props> = ({ errorCode, enrollment, ipAddress }) => {
   if (errorCode) {
     return <ErrorPage statusCode={errorCode} />;
   }
@@ -33,6 +34,16 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
   }
 
   useEffect(() => {
+    // if ($enrollment['emailed'] === 0 && !secure_ip($ip_address)) {
+    //   $sale_amount = round($enrollment['cost'] / $enrollment['exchange_rate'], 2); // total cost of the course
+    //   $customer_name = urlencode($enrollment['first_name'] . ' ' . $enrollment['last_name']);
+    //   $email_address = urlencode($enrollment['email_address']);
+    //   echo "<script type=\"text/javascript\" src=\"https://affiliates.qccareerschool.com/sale.php?profile=72198&idev_saleamt=$sale_amount&idev_ordernum=$id&idev_option_1=$customer_name&idev_option_2=$email_address\"></script>\n";
+    //   echo "<noscript>\n";
+    //   echo "<img src=\"https://affiliates.qccareerschool.com/sale.php?profile=72198&idev_saleamt=$sale_amount&idev_ordernum=$id&idev_option_1=$customer_name&idev_option_2=$email_address\" style=\"height:0px; width:0px; border:0px;\">\n";
+    //   echo "</noscript>\n";
+    // }
+
     console.log('enrollment.emailed', enrollment.emailed);
 
     if (enrollment.emailed === false) {
@@ -122,6 +133,10 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
 
   const paymentDate = new Date(enrollment.paymentDate);
 
+  const cost = (enrollment.cost / enrollment.currencyExchangeRate).toFixed(2);
+  const name = enrollment.firstName + ' ' + enrollment.lastName;
+  const iDevAffiliateUrl = `https://affiliates.qccareerschool.com/sale.php?profile=72198&amp;idev_saleamt=${cost}&amp;idev_ordernum=${enrollment.id}&amp;idev_option_1=${name}&amp;idev_option_2=${enrollment.emailAddress}`;
+
   return (
     <DefaultLayout>
 
@@ -131,6 +146,15 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
         canonical="/welcome-to-the-school"
         noIndex={true}
       />
+
+      {ipAddress !== '173.242.186.194' && (
+        <>
+          <script type="text/javascript" src={iDevAffiliateUrl}></script>
+          <noscript>
+            <img src={iDevAffiliateUrl} style={{ height: 0, width: 0, border: 0 }} />
+          </noscript>
+        </>
+      )}
 
       <section id="thankyouSection">
         <div className="container">
@@ -259,6 +283,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment }) => {
 
 Page.propTypes = {
   enrollment: PropTypes.any,
+  ipAddress: PropTypes.string,
   errorCode: PropTypes.number,
 };
 
@@ -318,7 +343,7 @@ const getEnrollment = async (enrollmentId: number, code: string): Promise<Enroll
   return response.json();
 };
 
-export const getServerSideProps: GetServerSideProps = async ({ res, query }) => {
+export const getServerSideProps: GetServerSideProps = async ({ req, res, query }) => {
   try {
     if (typeof query.enrollmentId !== 'string' || typeof query.code !== 'string') {
       throw new HttpStatus.BadRequest();
@@ -342,7 +367,9 @@ export const getServerSideProps: GetServerSideProps = async ({ res, query }) => 
       } catch (err) { /* ignore */ }
     }
 
-    return { props: { enrollment } };
+    const ipAddress = Array.isArray(req.headers['x-real-ip']) ? req.headers['x-real-ip']?.[0] : req.headers['x-real-ip'];
+
+    return { props: { enrollment, ipAddress: ipAddress ?? null } };
   } catch (err: unknown) {
     const internalServerError = 500;
     const errorCode = err instanceof HttpStatus.HttpResponse ? err.statusCode : internalServerError;
