@@ -135,7 +135,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment, ipAddress }) => {
 
   const cost = (enrollment.cost / enrollment.currencyExchangeRate).toFixed(2);
   const name = enrollment.firstName + ' ' + enrollment.lastName;
-  const iDevAffiliateUrl = `https://affiliates.qccareerschool.com/sale.php?profile=72198&amp;idev_saleamt=${cost}&amp;idev_ordernum=${enrollment.id}&amp;idev_option_1=${name}&amp;idev_option_2=${enrollment.emailAddress}`;
+  const iDevAffiliateUrl = `https://affiliates.qccareerschool.com/sale.php?profile=72198&idev_saleamt=${encodeURIComponent(cost)}&idev_ordernum=${encodeURIComponent(enrollment.id)}&idev_option_1=${encodeURIComponent(name)}&idev_option_2=${encodeURIComponent(enrollment.emailAddress)}`;
 
   return (
     <DefaultLayout>
