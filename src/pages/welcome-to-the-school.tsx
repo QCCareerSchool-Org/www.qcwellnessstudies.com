@@ -3,7 +3,6 @@ import Big from 'big.js';
 import fetch from 'isomorphic-unfetch';
 import { GetServerSideProps, NextPage } from 'next';
 import ErrorPage from 'next/error';
-import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
 import { SEO } from '../components/seo';
@@ -11,11 +10,13 @@ import { TelephoneNumber } from '../components/telephone-number';
 import { DefaultLayout } from '../layouts/default';
 import { Enrollment } from '../models/enrollment';
 
-interface Props {
-  enrollment?: Enrollment;
-  ipAddress?: string | null;
+type Props = {
+  data?: {
+    enrollment: Enrollment;
+    ipAddress: string | null;
+  };
   errorCode?: number;
-}
+};
 
 const precision = 2;
 
@@ -24,94 +25,86 @@ const formatDate = (d: Date): string => {
   return `${d.getFullYear()}-${d.getMonth().toString().padStart(fieldLength, '0')}-${d.getDate().toString().padStart(fieldLength, '0')}`;
 };
 
-const Page: NextPage<Props> = ({ errorCode, enrollment, ipAddress }) => {
-  if (errorCode) {
-    return <ErrorPage statusCode={errorCode} />;
-  }
+const Page: NextPage<Props> = ({ data, errorCode }) => {
 
-  if (!enrollment) {
-    return null;
-  }
-
+  // perform this the client side so the right IP address is used
   useEffect(() => {
-    // if ($enrollment['emailed'] === 0 && !secure_ip($ip_address)) {
-    //   $sale_amount = round($enrollment['cost'] / $enrollment['exchange_rate'], 2); // total cost of the course
-    //   $customer_name = urlencode($enrollment['first_name'] . ' ' . $enrollment['last_name']);
-    //   $email_address = urlencode($enrollment['email_address']);
-    //   echo "<script type=\"text/javascript\" src=\"https://affiliates.qccareerschool.com/sale.php?profile=72198&idev_saleamt=$sale_amount&idev_ordernum=$id&idev_option_1=$customer_name&idev_option_2=$email_address\"></script>\n";
-    //   echo "<noscript>\n";
-    //   echo "<img src=\"https://affiliates.qccareerschool.com/sale.php?profile=72198&idev_saleamt=$sale_amount&idev_ordernum=$id&idev_option_1=$customer_name&idev_option_2=$email_address\" style=\"height:0px; width:0px; border:0px;\">\n";
-    //   echo "</noscript>\n";
-    // }
-
-    console.log('enrollment.emailed', enrollment.emailed);
-
-    if (enrollment.emailed === false) {
-      // if (typeof gtag !== 'undefined') {
-      //   // https://developers.google.com/analytics/devguides/collection/gtagjs/ecommerce
-      //   gtag('event', 'purchase', {
-      //     transaction_id: enrollment.id,
-      //     affiliation: enrollment.school,
-      //     value: enrollment.cost,
-      //     currency: enrollment.currencyCode,
-      //     tax: 0,
-      //     shipping: 0,
-      //     items: enrollment.courses.map(c => ({
-      //       id: c.code,
-      //       name: c.name,
-      //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
-      //       quantity: 1,
-      //     })),
-      //   });
-      // } else if (typeof ga !== 'undefined') {
-      //   // https://developers.google.com/analytics/devguides/collection/analyticsjs/ecommerce
-      //   ga('require', 'ecommerce');
-      //   ga('ecommerce:addTransaction', {
-      //     id: enrollment.id,
-      //     affiliation: enrollment.school,
-      //     revenue: enrollment.cost,
-      //     shipping: 0,
-      //     tax: 0,
-      //     currency: enrollment.currencyCode,
-      //   });
-      //   enrollment.courses.forEach(c => {
-      //     ga('ecommerce:addItem', {
-      //       id: enrollment.id,
-      //       name: c.name,
-      //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
-      //       quantity: 1,
-      //       currency: enrollment.currencyCode,
-      //     });
-      //   });
-      //   ga('ecommerce:send');
-      //   console.log('ga');
-      // } else {
-      //   console.log('no tracker found');
-      // }
+    if (typeof data === 'undefined') {
+      return;
     }
+
+    if (data.enrollment.emailed) {
+      return;
+    }
+
+    addToActiveCampaign(data.enrollment).catch(() => { /* */ });
+    if (data.ipAddress !== '173.242.186.1941') {
+      addToIDevAffiliate(data.enrollment).catch(() => { /* */ });
+    }
+
+    // if (typeof gtag !== 'undefined') {
+    //   // https://developers.google.com/analytics/devguides/collection/gtagjs/ecommerce
+    //   gtag('event', 'purchase', {
+    //     transaction_id: enrollment.id,
+    //     affiliation: enrollment.school,
+    //     value: enrollment.cost,
+    //     currency: enrollment.currencyCode,
+    //     tax: 0,
+    //     shipping: 0,
+    //     items: enrollment.courses.map(c => ({
+    //       id: c.code,
+    //       name: c.name,
+    //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
+    //       quantity: 1,
+    //     })),
+    //   });
+    // } else if (typeof ga !== 'undefined') {
+    //   // https://developers.google.com/analytics/devguides/collection/analyticsjs/ecommerce
+    //   ga('require', 'ecommerce');
+    //   ga('ecommerce:addTransaction', {
+    //     id: enrollment.id,
+    //     affiliation: enrollment.school,
+    //     revenue: enrollment.cost,
+    //     shipping: 0,
+    //     tax: 0,
+    //     currency: enrollment.currencyCode,
+    //   });
+    //   enrollment.courses.forEach(c => {
+    //     ga('ecommerce:addItem', {
+    //       id: enrollment.id,
+    //       name: c.name,
+    //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
+    //       quantity: 1,
+    //       currency: enrollment.currencyCode,
+    //     });
+    //   });
+    //   ga('ecommerce:send');
+    //   console.log('ga');
+    // } else {
+    //   console.log('no tracker found');
+    // }
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       ecommerce: {
         purchase: {
           actionField: {
-            id: enrollment.id,
-            affiliation: enrollment.school,
-            revenue: enrollment.cost,
+            id: data.enrollment.id,
+            affiliation: data.enrollment.school,
+            revenue: data.enrollment.cost,
             shipping: 0,
             tax: 0,
-            currency: enrollment.currencyCode,
+            currency: data.enrollment.currencyCode,
           },
-          products: enrollment.courses.map(c => ({
-            id: enrollment.id,
+          products: data.enrollment.courses.map(c => ({
+            id: data.enrollment.id,
             name: c.name,
             price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
             quantity: 1,
-            currency: enrollment.currencyCode,
+            currency: data.enrollment.currencyCode,
           })),
         },
       },
     });
-
     // window.dataLayer.push({
     //   event: 'purchase',
     //   ecommerce: {
@@ -129,13 +122,20 @@ const Page: NextPage<Props> = ({ errorCode, enrollment, ipAddress }) => {
     //     })),
     //   },
     // });
-  }, [ enrollment.emailed ]);
+  }, [ data ]);
 
-  const paymentDate = new Date(enrollment.paymentDate);
+  if (errorCode) {
+    return <ErrorPage statusCode={errorCode} />;
+  }
 
-  const cost = (enrollment.cost / enrollment.currencyExchangeRate).toFixed(2);
-  const name = enrollment.firstName + ' ' + enrollment.lastName;
-  const iDevAffiliateUrl = `https://affiliates.qccareerschool.com/sale.php?profile=72198&idev_saleamt=${encodeURIComponent(cost)}&idev_ordernum=${encodeURIComponent(enrollment.id)}&idev_option_1=${encodeURIComponent(name)}&idev_option_2=${encodeURIComponent(enrollment.emailAddress)}`;
+  if (typeof data === 'undefined') {
+    return <ErrorPage statusCode={500} />;
+  }
+
+  const paymentDate = new Date(data.enrollment.paymentDate);
+  // const cost = (data.enrollment.cost / data.enrollment.currencyExchangeRate).toFixed(2);
+  // const name = data.enrollment.firstName + ' ' + data.enrollment.lastName;
+  // const iDevAffiliateUrl = `https://affiliates.qccareerschool.com/sale.php?profile=72198&idev_saleamt=${encodeURIComponent(cost)}&idev_ordernum=${encodeURIComponent(data.enrollment.id)}&idev_option_1=${encodeURIComponent(name)}&idev_option_2=${encodeURIComponent(data.enrollment.emailAddress)}`;
 
   return (
     <DefaultLayout>
@@ -147,14 +147,14 @@ const Page: NextPage<Props> = ({ errorCode, enrollment, ipAddress }) => {
         noIndex={true}
       />
 
-      {ipAddress !== '173.242.186.194' && !enrollment.emailed && (
+      {/* {data.ipAddress !== '173.242.186.194' && !data.enrollment.emailed && (
         <>
           <script type="text/javascript" src={iDevAffiliateUrl}></script>
           <noscript>
             <img src={iDevAffiliateUrl} style={{ height: 0, width: 0, border: 0 }} />
           </noscript>
         </>
-      )}
+      )} */}
 
       <section id="thankyouSection">
         <div className="container">
@@ -181,30 +181,30 @@ const Page: NextPage<Props> = ({ errorCode, enrollment, ipAddress }) => {
                 <tbody>
                   <tr>
                     <td><strong>Name</strong></td>
-                    <td>{enrollment.firstName} {enrollment.lastName}</td>
+                    <td>{data.enrollment.firstName} {data.enrollment.lastName}</td>
                   </tr>
                   <tr>
                     <td><strong>Address</strong></td>
                     <td>
-                      {enrollment.address1}<br />
-                      {enrollment.address2 && <>{enrollment.address2}<br /></>}
-                      {enrollment.city} {enrollment.provinceName} {enrollment.postalCode}<br />
-                      {enrollment.countryName}
+                      {data.enrollment.address1}<br />
+                      {data.enrollment.address2 && <>{data.enrollment.address2}<br /></>}
+                      {data.enrollment.city} {data.enrollment.provinceName} {data.enrollment.postalCode}<br />
+                      {data.enrollment.countryName}
                     </td>
                   </tr>
                   <tr>
                     <td><strong>Currency</strong></td>
-                    <td>{enrollment.currencyName}</td>
+                    <td>{data.enrollment.currencyName}</td>
                   </tr>
                   <tr>
                     <td><strong>Payment Plan</strong></td>
-                    <td>{enrollment.paymentPlan === 'full' ? 'Full Payment' : 'Installment Plan'}</td>
+                    <td>{data.enrollment.paymentPlan === 'full' ? 'Full Payment' : 'Installment Plan'}</td>
                   </tr>
-                  {enrollment.paymentPlan !== 'full' && (
+                  {data.enrollment.paymentPlan !== 'full' && (
                     <>
                       <tr>
                         <td><strong>Payment Day</strong></td>
-                        <td>{enrollment.paymentDay}</td>
+                        <td>{data.enrollment.paymentDay}</td>
                       </tr>
                       <tr>
                         <td><strong>Installments Start</strong></td>
@@ -212,34 +212,34 @@ const Page: NextPage<Props> = ({ errorCode, enrollment, ipAddress }) => {
                       </tr>
                     </>
                   )}
-                  {enrollment.courses.map((c, i) => (
+                  {data.enrollment.courses.map((c, i) => (
                     <React.Fragment key={i}>
                       <tr>
                         <td colSpan={2}><h6 className="mt-4 mb-0">{c.name}</h6></td>
                       </tr>
                       <tr>
                         <td><strong>Cost</strong></td>
-                        <td>{enrollment.currencySymbol}{c.baseCost.toFixed(precision)}</td>
+                        <td>{data.enrollment.currencySymbol}{c.baseCost.toFixed(precision)}</td>
                       </tr>
                       {c.planDiscount > 0 && (
                         <tr>
                           <td><strong>Discount</strong></td>
-                          <td>&minus;{enrollment.currencySymbol}{c.planDiscount.toFixed(precision)}</td>
+                          <td>&minus;{data.enrollment.currencySymbol}{c.planDiscount.toFixed(precision)}</td>
                         </tr>
                       )}
                       {c.discount > 0 && (
                         <tr>
                           <td><strong>Special Discount</strong></td>
-                          <td>&minus;{enrollment.currencySymbol}{c.discount.toFixed(precision)}</td>
+                          <td>&minus;{data.enrollment.currencySymbol}{c.discount.toFixed(precision)}</td>
                         </tr>
                       )}
                       <tr>
                         <td><strong>Today&apos;s Deposit</strong></td>
-                        <td>{enrollment.currencySymbol}{c.deposit.toFixed(precision)}</td>
+                        <td>{data.enrollment.currencySymbol}{c.deposit.toFixed(precision)}</td>
                       </tr>
                       <tr>
                         <td><strong>Monthly Installment</strong></td>
-                        <td>{enrollment.currencySymbol}{c.installment.toFixed(precision)}</td>
+                        <td>{data.enrollment.currencySymbol}{c.installment.toFixed(precision)}</td>
                       </tr>
                     </React.Fragment>
                   ))}
@@ -251,23 +251,23 @@ const Page: NextPage<Props> = ({ errorCode, enrollment, ipAddress }) => {
                 <tbody>
                   <tr>
                     <td>Reference Code</td>
-                    <td>{enrollment.authorizationId}</td>
+                    <td>{data.enrollment.authorizationId}</td>
                   </tr>
                   <tr>
                     <td>PAN</td>
-                    <td>{enrollment.maskedPan}</td>
+                    <td>{data.enrollment.maskedPan}</td>
                   </tr>
                   <tr>
                     <td>Amount Processed</td>
-                    <td>{enrollment.deposit.toFixed(precision)} {enrollment.currencyCode}</td>
+                    <td>{data.enrollment.deposit.toFixed(precision)} {data.enrollment.currencyCode}</td>
                   </tr>
                   <tr>
                     <td>Time</td>
-                    <td>{enrollment.transactionTime}</td>
+                    <td>{data.enrollment.transactionTime}</td>
                   </tr>
                   <tr>
                     <td>Auth Code</td>
-                    <td>{enrollment.authCode}</td>
+                    <td>{data.enrollment.authCode}</td>
                   </tr>
                 </tbody>
               </table>
@@ -279,12 +279,6 @@ const Page: NextPage<Props> = ({ errorCode, enrollment, ipAddress }) => {
 
     </DefaultLayout>
   );
-};
-
-Page.propTypes = {
-  enrollment: PropTypes.any,
-  ipAddress: PropTypes.string,
-  errorCode: PropTypes.number,
 };
 
 const sendEmail = async (enrollmentId: number, code: string): Promise<void> => {
@@ -317,7 +311,6 @@ const addToActiveCampaign = async (enrollment: Enrollment): Promise<void> => {
       SALE_CURRENCY: enrollment.currencyCode,
     },
   };
-
   const url = 'https://api.qccareerschool.com/activeCampaign/subscribe';
   const response = await fetch(url, {
     method: 'post',
@@ -326,6 +319,17 @@ const addToActiveCampaign = async (enrollment: Enrollment): Promise<void> => {
     },
     body: JSON.stringify(payload),
   });
+  if (!response.ok) {
+    throw new HttpStatus.HttpResponse(response.status, response.statusText);
+  }
+  await response.json();
+};
+
+const addToIDevAffiliate = async (enrollment: Enrollment): Promise<void> => {
+  const cost = (enrollment.cost / enrollment.currencyExchangeRate).toFixed(2);
+  const name = enrollment.firstName + ' ' + enrollment.lastName;
+  const url = `https://affiliates.qccareerschool.com/sale.php?profile=72198&idev_saleamt=${encodeURIComponent(cost)}&idev_ordernum=${encodeURIComponent(enrollment.id)}&idev_option_1=${encodeURIComponent(name)}&idev_option_2=${encodeURIComponent(enrollment.emailAddress)}`;
+  const response = await fetch(url, { mode: 'no-cors' });
   if (!response.ok) {
     throw new HttpStatus.HttpResponse(response.status, response.statusText);
   }
@@ -352,26 +356,19 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res, query }
     const code = query.code;
 
     const enrollment = await getEnrollment(enrollmentId, code);
-    console.log(enrollment);
 
     if (!enrollment.complete || !enrollment.success) {
       throw new HttpStatus.NotFound();
     }
 
     if (!enrollment.emailed) {
-      sendEmail(enrollmentId, code); // eslint-disable-line @typescript-eslint/no-floating-promises
-      addToActiveCampaign(enrollment); // eslint-disable-line @typescript-eslint/no-floating-promises
-      // try {
-      //   await sendEmail(enrollmentId, code);
-      // } catch (err) { /* ignore */ }
-      // try {
-      //   await addToActiveCampaign(enrollment);
-      // } catch (err) { /* ignore */ }
+      // don't wait here because of vercel's serverless function time limit
+      sendEmail(enrollmentId, code).catch(() => { /* */ });
     }
 
     const ipAddress = Array.isArray(req.headers['x-real-ip']) ? req.headers['x-real-ip']?.[0] : req.headers['x-real-ip'];
 
-    return { props: { enrollment, ipAddress: ipAddress ?? null } };
+    return { props: { data: { enrollment, ipAddress: ipAddress ?? null } } };
   } catch (err: unknown) {
     const internalServerError = 500;
     const errorCode = err instanceof HttpStatus.HttpResponse ? err.statusCode : internalServerError;
