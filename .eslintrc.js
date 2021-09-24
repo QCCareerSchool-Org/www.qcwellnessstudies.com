@@ -66,7 +66,7 @@ module.exports = {
     'no-useless-call': 'error',
     'no-useless-concat': 'error',
     'no-useless-return': 'error',
-    'no-void': 'error',
+    'no-void': 'off',
     'no-warning-comments': 'warn',
     'prefer-promise-reject-errors': 'error',
     'prefer-regex-literals': 'error',
@@ -210,6 +210,7 @@ module.exports = {
     'react/jsx-props-no-multi-spaces': 'error',
     'react/jsx-tag-spacing': [ 'error', { beforeClosing: 'never' } ],
     'react/no-unescaped-entities': [ 'error', { forbid: [ '>', '"', '\'', '}', '“', '”', '‘', '’' ] } ],
+    'react/prop-types': 'off',
 
     // import rules
     'import/order': [ 'error', { alphabetize: { order: 'asc', caseInsensitive: true } } ],
