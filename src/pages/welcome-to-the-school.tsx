@@ -359,12 +359,14 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res, query }
     }
 
     if (!enrollment.emailed) {
-      try {
-        await sendEmail(enrollmentId, code);
-      } catch (err) { /* ignore */ }
-      try {
-        await addToActiveCampaign(enrollment);
-      } catch (err) { /* ignore */ }
+      sendEmail(enrollmentId, code); // eslint-disable-line @typescript-eslint/no-floating-promises
+      addToActiveCampaign(enrollment); // eslint-disable-line @typescript-eslint/no-floating-promises
+      // try {
+      //   await sendEmail(enrollmentId, code);
+      // } catch (err) { /* ignore */ }
+      // try {
+      //   await addToActiveCampaign(enrollment);
+      // } catch (err) { /* ignore */ }
     }
 
     const ipAddress = Array.isArray(req.headers['x-real-ip']) ? req.headers['x-real-ip']?.[0] : req.headers['x-real-ip'];
