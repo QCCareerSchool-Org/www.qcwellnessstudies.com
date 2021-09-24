@@ -32,96 +32,13 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
     if (typeof data === 'undefined') {
       return;
     }
-
-    if (data.enrollment.emailed) {
-      return;
+    if (!data.enrollment.emailed) {
+      addToActiveCampaign(data.enrollment).catch(() => { /* */ });
+      if (data.ipAddress !== '173.242.186.1941') {
+        addToIDevAffiliate(data.enrollment).catch(() => { /* */ });
+      }
+      addToGoogleAnalytics(data.enrollment);
     }
-
-    addToActiveCampaign(data.enrollment).catch(() => { /* */ });
-    if (data.ipAddress !== '173.242.186.1941') {
-      addToIDevAffiliate(data.enrollment).catch(() => { /* */ });
-    }
-
-    // if (typeof gtag !== 'undefined') {
-    //   // https://developers.google.com/analytics/devguides/collection/gtagjs/ecommerce
-    //   gtag('event', 'purchase', {
-    //     transaction_id: enrollment.id,
-    //     affiliation: enrollment.school,
-    //     value: enrollment.cost,
-    //     currency: enrollment.currencyCode,
-    //     tax: 0,
-    //     shipping: 0,
-    //     items: enrollment.courses.map(c => ({
-    //       id: c.code,
-    //       name: c.name,
-    //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
-    //       quantity: 1,
-    //     })),
-    //   });
-    // } else if (typeof ga !== 'undefined') {
-    //   // https://developers.google.com/analytics/devguides/collection/analyticsjs/ecommerce
-    //   ga('require', 'ecommerce');
-    //   ga('ecommerce:addTransaction', {
-    //     id: enrollment.id,
-    //     affiliation: enrollment.school,
-    //     revenue: enrollment.cost,
-    //     shipping: 0,
-    //     tax: 0,
-    //     currency: enrollment.currencyCode,
-    //   });
-    //   enrollment.courses.forEach(c => {
-    //     ga('ecommerce:addItem', {
-    //       id: enrollment.id,
-    //       name: c.name,
-    //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
-    //       quantity: 1,
-    //       currency: enrollment.currencyCode,
-    //     });
-    //   });
-    //   ga('ecommerce:send');
-    //   console.log('ga');
-    // } else {
-    //   console.log('no tracker found');
-    // }
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      ecommerce: {
-        purchase: {
-          actionField: {
-            id: data.enrollment.id,
-            affiliation: data.enrollment.school,
-            revenue: data.enrollment.cost,
-            shipping: 0,
-            tax: 0,
-            currency: data.enrollment.currencyCode,
-          },
-          products: data.enrollment.courses.map(c => ({
-            id: data.enrollment.id,
-            name: c.name,
-            price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
-            quantity: 1,
-            currency: data.enrollment.currencyCode,
-          })),
-        },
-      },
-    });
-    // window.dataLayer.push({
-    //   event: 'purchase',
-    //   ecommerce: {
-    //     transaction_id: enrollment.id,
-    //     affiliation: enrollment.school,
-    //     value: enrollment.cost,
-    //     currency: enrollment.currencyCode,
-    //     tax: 0,
-    //     shipping: 0,
-    //     items: enrollment.courses.map(c => ({
-    //       item_name: c.name,
-    //       item_id: c.code,
-    //       price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
-    //       quantity: 1,
-    //     })),
-    //   },
-    // });
   }, [ data ]);
 
   if (errorCode) {
@@ -133,9 +50,6 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
   }
 
   const paymentDate = new Date(data.enrollment.paymentDate);
-  // const cost = (data.enrollment.cost / data.enrollment.currencyExchangeRate).toFixed(2);
-  // const name = data.enrollment.firstName + ' ' + data.enrollment.lastName;
-  // const iDevAffiliateUrl = `https://affiliates.qccareerschool.com/sale.php?profile=72198&idev_saleamt=${encodeURIComponent(cost)}&idev_ordernum=${encodeURIComponent(data.enrollment.id)}&idev_option_1=${encodeURIComponent(name)}&idev_option_2=${encodeURIComponent(data.enrollment.emailAddress)}`;
 
   return (
     <DefaultLayout>
@@ -146,15 +60,6 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
         canonical="/welcome-to-the-school"
         noIndex={true}
       />
-
-      {/* {data.ipAddress !== '173.242.186.194' && !data.enrollment.emailed && (
-        <>
-          <script type="text/javascript" src={iDevAffiliateUrl}></script>
-          <noscript>
-            <img src={iDevAffiliateUrl} style={{ height: 0, width: 0, border: 0 }} />
-          </noscript>
-        </>
-      )} */}
 
       <section id="thankyouSection">
         <div className="container">
@@ -334,6 +239,27 @@ const addToIDevAffiliate = async (enrollment: Enrollment): Promise<void> => {
     throw new HttpStatus.HttpResponse(response.status, response.statusText);
   }
   await response.json();
+};
+
+const addToGoogleAnalytics = (enrollment: Enrollment): void => {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: 'purchase',
+    ecommerce: {
+      transaction_id: enrollment.id, // eslint-disable-line camelcase
+      affiliation: enrollment.school,
+      value: enrollment.cost,
+      currency: enrollment.currencyCode,
+      tax: 0,
+      shipping: 0,
+      items: enrollment.courses.map(c => ({
+        item_name: c.name, // eslint-disable-line camelcase
+        item_id: c.code, // eslint-disable-line camelcase
+        price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
+        quantity: 1,
+      })),
+    },
+  });
 };
 
 const getEnrollment = async (enrollmentId: number, code: string): Promise<Enrollment> => {
