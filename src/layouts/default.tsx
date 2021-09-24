@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
 import { Footer } from '../components/footer';
@@ -25,9 +24,4 @@ export const DefaultLayout: React.FC<Props> = ({ children, SecondaryNav }) => {
       <Footer />
     </>
   );
-};
-
-DefaultLayout.propTypes = {
-  children: PropTypes.oneOfType([ PropTypes.element, PropTypes.arrayOf(PropTypes.element.isRequired) ]).isRequired,
-  SecondaryNav: PropTypes.func,
 };
