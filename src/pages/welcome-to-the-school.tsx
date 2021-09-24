@@ -147,7 +147,7 @@ const Page: NextPage<Props> = ({ errorCode, enrollment, ipAddress }) => {
         noIndex={true}
       />
 
-      {ipAddress !== '173.242.186.194' && (
+      {ipAddress !== '173.242.186.194' && !enrollment.emailed && (
         <>
           <script type="text/javascript" src={iDevAffiliateUrl}></script>
           <noscript>
