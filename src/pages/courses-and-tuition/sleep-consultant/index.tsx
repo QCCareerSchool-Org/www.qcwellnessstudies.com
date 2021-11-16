@@ -310,8 +310,8 @@ const Page: React.FC = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-              <p><Image src={require('../../../images/promo-inlay-50-2.png')} width={282} height={162} alt="December Promo" /></p>
-              <p className="lead mb-5">Save an extra $50 on your sleep consultant course tuition.<br />This discount will be automatically applied when you enroll.</p>
+              <p><Image src={require('../../../images/promo-inlay-150.png')} width={282} height={162} alt="Promo" /></p>
+              <p className="lead mb-5">Save an extra $150 on your sleep consultant course tuition.<br />This discount will be automatically applied when you enroll.</p>
               <p><a className="btn btn-secondary btn-lg" href="https://enroll.qcwellnessstudies.com/?c[]=sl">ENROLL NOW</a></p>
             </div>
           </div>
