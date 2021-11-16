@@ -156,3 +156,7 @@ export const formatPrice = (value?: number, precision = defaultPrecision): strin
   }
   return Math.round(value) === value ? value.toString() : value.toFixed(precision);
 };
+
+export const isGBPCountry = (countryCode: string): boolean => {
+  return [ 'GB', 'IM', 'GG', 'JE' ].includes(countryCode);
+};
