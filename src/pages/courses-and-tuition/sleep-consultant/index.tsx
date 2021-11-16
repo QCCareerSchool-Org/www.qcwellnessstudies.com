@@ -11,6 +11,8 @@ import { Subnav } from '../../../components/subnav';
 import { OutlineData, UnitOutline } from '../../../components/unit-outline';
 import { WhyChoose } from '../../../components/why-chose';
 import { DefaultLayout } from '../../../layouts/default';
+import { isGBPCountry } from '../../../lib/functions';
+import { useLocation } from '../../../providers/location';
 
 const units: { [key: string]: OutlineData[] } = {
   a: [
@@ -263,8 +265,17 @@ const units: { [key: string]: OutlineData[] } = {
   ],
 };
 
+const doubleGuarantee = true;
+
 const Page: React.FC = () => {
-  const doubleGuarantee = true;
+  const location = useLocation();
+  const now = new Date();
+  const lastChance = now.getTime() > Date.UTC(2021, 10, 24, 5); // November 24 at 00:00 (05:00 UTC)
+  const gbpCountry = isGBPCountry(location?.countryCode ?? 'US');
+
+  const promoSrc = gbpCountry
+    ? lastChance ? require('../../../images/promo-inlay-110gbp-ends.png') : require('../../../images/promo-inlay-110gbp.png')
+    : lastChance ? require('../../../images/promo-inlay-150-ends.png') : require('../../../images/promo-inlay-150.png');
 
   return (
     <DefaultLayout
@@ -310,8 +321,8 @@ const Page: React.FC = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-              <p><Image src={require('../../../images/promo-inlay-50-2.png')} width={282} height={162} alt="December Promo" /></p>
-              <p className="lead mb-5">Save an extra $50 on your sleep consultant course tuition.<br />This discount will be automatically applied when you enroll.</p>
+              <p><Image src={promoSrc} width={282} height={162} alt={`Save ${gbpCountry ? '£110' : '$150'}`} /></p>
+              <p className="lead mb-5">Save an extra {gbpCountry ? '£110' : '$150'} on your sleep consultant course tuition.<br />This discount will be automatically applied when you enroll.</p>
               <p><a className="btn btn-secondary btn-lg" href="https://enroll.qcwellnessstudies.com/?c[]=sl">ENROLL NOW</a></p>
             </div>
           </div>
