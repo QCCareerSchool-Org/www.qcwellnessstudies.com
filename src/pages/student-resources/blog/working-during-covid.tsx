@@ -1,10 +1,11 @@
+import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../../../components/seo';
 import { DefaultLayout } from '../../../layouts/default';
 
-const Page: React.FC = () => (
+const Page: NextPage = () => (
   <DefaultLayout>
 
     <SEO

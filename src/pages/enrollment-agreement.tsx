@@ -1,7 +1,9 @@
+import { NextPage } from 'next';
 import React from 'react';
+
 import { TermsLayout } from '../layouts/terms';
 
-const Page: React.FC = () => (
+const Page: NextPage = () => (
   <TermsLayout>
     <div className="container my-5">
 

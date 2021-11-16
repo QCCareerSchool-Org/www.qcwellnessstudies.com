@@ -1,3 +1,4 @@
+import { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -14,6 +15,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { isGBPCountry } from '../../../lib/functions';
 import { useLocation } from '../../../providers/location';
 
+const doubleGuarantee = true;
 const units: { [key: string]: OutlineData[] } = {
   a: [
     {
@@ -265,9 +267,7 @@ const units: { [key: string]: OutlineData[] } = {
   ],
 };
 
-const doubleGuarantee = true;
-
-const Page: React.FC = () => {
+const Page: NextPage = () => {
   const location = useLocation();
   const now = new Date();
   const lastChance = now.getTime() > Date.UTC(2021, 10, 24, 5); // November 24 at 00:00 (05:00 UTC)
