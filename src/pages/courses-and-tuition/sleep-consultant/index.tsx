@@ -270,12 +270,12 @@ const units: { [key: string]: OutlineData[] } = {
 const Page: NextPage = () => {
   const location = useLocation();
   const now = new Date();
-  const lastChance = now.getTime() > Date.UTC(2021, 10, 24, 5); // November 24 at 00:00 (05:00 UTC)
+  const lastChance = now.getTime() > Date.UTC(2021, 11, 16, 5); // December 16 at 00:00 (05:00 UTC)
   const gbpCountry = isGBPCountry(location?.countryCode ?? 'US');
 
   const promoSrc = gbpCountry
     ? lastChance ? require('../../../images/promo-inlay-110gbp-ends.png') : require('../../../images/promo-inlay-110gbp.png')
-    : lastChance ? require('../../../images/promo-inlay-150-ends.png') : require('../../../images/promo-inlay-150.png');
+    : lastChance ? require('../../../images/promo-inlay-100-ends.png') : require('../../../images/promo-inlay-100.png');
 
   return (
     <DefaultLayout
@@ -322,7 +322,7 @@ const Page: NextPage = () => {
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
               <p><Image src={promoSrc} width={282} height={162} alt={`Save ${gbpCountry ? '£110' : '$150'}`} /></p>
-              <p className="lead mb-5">Save an extra {gbpCountry ? '£110' : '$150'} on your sleep consultant course tuition.<br />This discount will be automatically applied when you enroll.</p>
+              <p className="lead mb-5">Save an extra {gbpCountry ? '£60' : '$100'} on your sleep consultant course tuition.<br />This discount will be automatically applied when you enroll.</p>
               <p><a className="btn btn-secondary btn-lg" href="https://enroll.qcwellnessstudies.com/?c[]=sl">ENROLL NOW</a></p>
             </div>
           </div>
