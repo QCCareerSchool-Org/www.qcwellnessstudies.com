@@ -270,7 +270,7 @@ const units: { [key: string]: OutlineData[] } = {
 const Page: NextPage = () => {
   const location = useLocation();
   const now = new Date();
-  const lastChance = now.getTime() > Date.UTC(2021, 12, 16, 5); // December 16 at 00:00 (05:00 UTC)
+  const lastChance = now.getTime() > Date.UTC(2021, 11, 16, 5); // December 16 at 00:00 (05:00 UTC)
   const gbpCountry = isGBPCountry(location?.countryCode ?? 'US');
 
   const promoSrc = gbpCountry
