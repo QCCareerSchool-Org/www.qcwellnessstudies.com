@@ -1,5 +1,4 @@
 import * as HttpStatus from '@qccareerschool/http-status';
-import Big from 'big.js';
 import fetch from 'isomorphic-unfetch';
 import { GetServerSideProps, NextPage } from 'next';
 import ErrorPage from 'next/error';
@@ -8,11 +7,13 @@ import React, { useEffect } from 'react';
 import { SEO } from '../components/seo';
 import { TelephoneNumber } from '../components/telephone-number';
 import { DefaultLayout } from '../layouts/default';
+import { addToGoogleAnalytics } from '../lib/addToGoogleAnalytics';
 import { Enrollment } from '../models/enrollment';
 
 type Props = {
   data?: {
     enrollment: Enrollment;
+    code: string;
     ipAddress: string | null;
   };
   errorCode?: number;
@@ -38,6 +39,7 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
         addToIDevAffiliate(data.enrollment).catch(() => { /* */ });
       }
       addToGoogleAnalytics(data.enrollment);
+      sendEmail(data.enrollment.id, data.code).catch((err: unknown) => { console.error(err); });
     }
   }, [ data ]);
 
@@ -241,27 +243,6 @@ const addToIDevAffiliate = async (enrollment: Enrollment): Promise<void> => {
   await response.json();
 };
 
-const addToGoogleAnalytics = (enrollment: Enrollment): void => {
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    event: 'purchase',
-    ecommerce: {
-      transaction_id: enrollment.id, // eslint-disable-line camelcase
-      affiliation: enrollment.school,
-      value: enrollment.cost,
-      currency: enrollment.currencyCode,
-      tax: 0,
-      shipping: 0,
-      items: enrollment.courses.map(c => ({
-        item_name: c.name, // eslint-disable-line camelcase
-        item_id: c.code, // eslint-disable-line camelcase
-        price: parseFloat(Big(c.baseCost).minus(c.planDiscount).minus(c.discount).toFixed(precision)),
-        quantity: 1,
-      })),
-    },
-  });
-};
-
 const getEnrollment = async (enrollmentId: number, code: string): Promise<Enrollment> => {
   const url = `https://api.qccareerschool.com/enrollments/${enrollmentId}?code=${code}`;
   const response = await fetch(url, {
@@ -287,20 +268,13 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res, query }
       throw new HttpStatus.NotFound();
     }
 
-    if (!enrollment.emailed) {
-      // don't wait here because of vercel's serverless function time limit
-      sendEmail(enrollmentId, code).catch(() => { /* */ });
-    }
-
     const ipAddress = Array.isArray(req.headers['x-real-ip']) ? req.headers['x-real-ip']?.[0] : req.headers['x-real-ip'];
 
-    return { props: { data: { enrollment, ipAddress: ipAddress ?? null } } };
-  } catch (err: unknown) {
+    return { props: { data: { enrollment, code, ipAddress: ipAddress ?? null } } };
+  } catch (err) {
     const internalServerError = 500;
     const errorCode = err instanceof HttpStatus.HttpResponse ? err.statusCode : internalServerError;
-    if (res) {
-      res.statusCode = errorCode;
-    }
+    res.statusCode = errorCode;
     return { props: { errorCode } };
   }
 };
