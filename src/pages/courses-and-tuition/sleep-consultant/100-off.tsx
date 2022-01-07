@@ -4,275 +4,20 @@ import Link from 'next/link';
 import React from 'react';
 
 import { Certification } from '../../../components/certification';
+import { DeadlineFunnelScript } from '../../../components/deadline-funnel-script';
 import { Guarantee } from '../../../components/guarantee';
 import { Included } from '../../../components/included';
 import { PaymentPlans } from '../../../components/payment-plans';
 import { SEO } from '../../../components/seo';
 import { Subnav } from '../../../components/subnav';
-import { OutlineData, UnitOutline } from '../../../components/unit-outline';
+import { UnitOutline } from '../../../components/unit-outline';
 import { WhyChoose } from '../../../components/why-chose';
 import { DefaultLayout } from '../../../layouts/default';
 import { isGBPCountry } from '../../../lib/functions';
 import { useLocation } from '../../../providers/location';
+import { subNavItems, units } from '.';
 
 const doubleGuarantee = true;
-export const units: { [key: string]: OutlineData[] } = {
-  a: [
-    {
-      title: 'Introduction to sleep consulting',
-      topics: [
-        'Industry history',
-        'Roles and responsibilities',
-        'Required skills',
-        'Communication skills',
-        'Planning & organizing',
-        'Common misconceptions about sleep consulting',
-        {
-          title: 'Becoming a sleep consultant:',
-          topics: [
-            'Licensing requirements',
-            'Business needs',
-            'Expansion opportunities',
-            'Additional certifications to consider',
-          ],
-        },
-        'Sleep consulting services',
-        'Associations & organizations',
-      ],
-    },
-    {
-      title: 'Infant & toddler sleep habits & behaviors',
-      topics: [
-        'Human brain development',
-        'Habit and behavior formulation',
-        'Changing behavior through habits',
-        'Common myths about behaviors and habits',
-        'Fostering healthy habits',
-        'Understanding age groups',
-        'Development of the child in each age group',
-        'Types of sleep',
-        'Ideal sleep schedules for infants',
-        'Understanding the effects of sleep',
-        'A holistic vision of sleep habits and behaviors',
-      ],
-    },
-    {
-      title: 'Sleep training methods & philosophies',
-      topics: [
-        'How sleep training works',
-        'Key methods and their development',
-        'Statistics on different method types',
-        'The "cry it out" / "Extinction" method',
-        'The "Check and Console" / "Ferber" method',
-        'The "Chair" method',
-        'The "Fading" method',
-        'The "Pick Up Put Down" method',
-        'The "No cry" method(s)',
-      ],
-    },
-    {
-      title: 'Sleep spaces',
-      topics: [
-        'Co-sleeping: from healthy co-sleeping for newborns to sleep training after co-sleeping',
-        'Creating a quiet and peaceful environment for sleep',
-        'White noise generators',
-        'Using other ambient noises',
-        'Sleep training alarm clocks',
-        'Night light pros and cons',
-        'Daylight simulation',
-        'Essential oils and diffusers for infants: calming scents, oils to avoid, and safety tips',
-        'Creating the perfect room for sleep: From nursery décor to choosing the right crib/bed',
-        'The home environment: beyond the nursery',
-        'Starting & following a sleep routine',
-        'Changing & modifying a routine',
-      ],
-    },
-  ],
-  b: [
-    {
-      title: 'Individualized sleep plans',
-      topics: [
-        'Using your intake survey to build a sleep plan',
-        'Key questions to ask during an interview',
-        'Identifying client needs',
-        'Creating a sleep plan',
-        'Fostering healthy habits',
-        'Key components of every sleep plan',
-        'Development of the child in each age group',
-        'Tracking a sleep plan',
-        'Components of an effective sleep log',
-        'Evaluating a sleep plan based on feedback from the caregiver',
-        'Revising a sleep plan once it\'s been implemented',
-      ],
-    },
-    {
-      title: 'Implementation of sleep training',
-      topics: [
-        'Program considerations for each age group (from newborns to toddlers)',
-        'Types of client plans, from "skeleton plans" to "premium plans", upgrades, follow-ups, and how to offer discounts',
-        'Creating templates for different sleep consulting methods',
-        'Creating templates to match common parental needs',
-        'Using accessible terminology to communicate your sleep plan',
-        'Identifying appropriate methods in every situation',
-        'Using questionnaires and surveys to determine client needs',
-        'Identifying client concerns during intake',
-        'Materials to provide clients at the start of a sleep plan',
-        'Providing feedback during the first days of the plan',
-        'Creating and reviewing sleep logs',
-        'Conducting a follow-up to sleep training',
-      ],
-    },
-    {
-      title: 'Special situations',
-      topics: [
-        'How to prepare for different families',
-        'Sleep training multiple infants of the same age ',
-        'Training one infant that is a twin or triplet',
-        'Sleep training multiple infants of different ages',
-        'Training one infant that has a sibling in the house',
-        'How physical disabilities can affect sleep ',
-        'Working with parents and medical professionals ',
-        'Understanding limitations for infants with disabilities',
-        'How different mental conditions affect sleep ',
-        'Sleep training methods for infants with special needs',
-        'Understanding limitations for infants with special needs',
-        'Understanding different medical issues and how it might affect sleep',
-        'Working with infants who have diagnosed medical issues',
-        'Creating effective solutions for a single caregiver using a dual parent model',
-        'Adapting sleep training plans for one caregiver',
-        'Adapting sleep training plans for single parent households with multiple children',
-        'Working with multiple non-parent caregivers',
-      ],
-    },
-  ],
-  c: [
-    {
-      title: 'Troubleshooting',
-      topics: [
-        'Case Study: Parental conflict',
-        'Case Study: Baby isn\'t responding ',
-        'Case Study: Rejection of methods by parents',
-        'Case Study: Lifestyle changes',
-        'Cast Study: Other medical issues',
-        'Case Study: Competition ',
-      ],
-    },
-    {
-      title: 'Getting to know your clients',
-      topics: [
-        'Initial outreach: When you contact a client and when a client contacts you',
-        'Onboarding clients',
-        'Conducting client consultations',
-        'Client intake',
-        'Fostering healthy habits',
-        'Client follow-up',
-        'Development of the child in each age group',
-        'Tracking and analysis: tools, templates, and how to use client data',
-        'Ideal sleep schedules for infants',
-        'Client feedback: Getting and using honest feedback from clients',
-      ],
-    },
-    {
-      title: 'Effective consulting',
-      topics: [
-        'How to coach effectively',
-        'Working with caregivers: Giving caregivers the tools to help their own children',
-        'Communication skills: Listening',
-        'Communication skills: Delivering your message',
-        'Patience and support: Positive feedback, reinforcement, and understanding',
-        'Understanding age groups',
-        'Development of the child in each age group',
-        'Planning, setting goals, and creating strategies',
-        'Implementing feedback to encourage growth & change behavior',
-        'Working with limitations (your own and your clients\')',
-      ],
-    },
-  ],
-  d: [
-    {
-      title: 'Launching your business',
-      topics: [
-        {
-          title: 'Creating a business model',
-          topics: [
-            'Identifying the services you will provide',
-            'Identifying the core values of your business',
-            'Naming your business',
-            'Creating a business plan',
-          ],
-        },
-        'Assessing needs in your community: Needs, competition, and gaps in the market',
-        'Defining your methods and plans',
-        'Setting your prices, packages, and now to incentivize returning customers or customer referrals',
-        {
-          title: 'Setting up business infrastructure',
-          topics: [
-            'Creating your website',
-            'Your social media presence',
-            'Traditional print resources (books, pamphlets, etc.)',
-            'Setting up your business space',
-            'Creating materials',
-          ],
-        },
-        'Setting limits: Minimum/maximum number of clients, outlining your budget and expected income',
-        'Creating realistic business goals',
-
-      ],
-    },
-    {
-      title: 'Licensing, restrictions & legal aspects',
-      topics: [
-        'Ethical considerations & legal obligations of reporting suspected abuse',
-        'Certification requirements & service restrictions',
-        'Professional associations & organizations',
-        'Client contracts & other legal documents',
-        'Insurance considerations',
-        'Health care training: CPR, first aid, and other certifications to consider',
-      ],
-
-    },
-    {
-      title: 'Marketing your business',
-      topics: [
-        'Branding: Creating an effective brand, personalizing your brand, and using your brand to sell your business',
-        {
-          title: 'Finding clients',
-          topics: [
-            'How clients find you (Print/Web/Social Media)',
-            'How to advertise your services',
-            'How to find clients (online and in person)',
-          ],
-        },
-        {
-          title: 'Tips for advertising',
-          topics: [
-            'Learning your clientele',
-            'Where to advertise',
-            'Effective advertising for small businesses',
-            'Advertising budgets',
-          ],
-        },
-        {
-          title: 'Your website and social media presence',
-          topics: [
-            'How to build an effective website',
-            'How to start a business using social media',
-            'Keys to an effective online presence',
-          ],
-        },
-        'Community outreach: Community events, groups, and online groups and events',
-        'Partnering: Identifying key partners, developing relationships with local businesses, and creating joint advertising with other small businesses',
-      ],
-    },
-  ],
-};
-
-export const subNavItems = [
-  { name: 'Tuition', url: '#paymentPlans' },
-  { name: 'Course Outline', url: '#outline' },
-  { name: 'Tutors', url: '#tutors' },
-  { name: 'Working During Covid-19', url: '#working' },
-];
 
 const Page: NextPage = () => {
   const location = useLocation();
@@ -298,7 +43,10 @@ const Page: NextPage = () => {
         title="Sleep Consultant Course"
         description="Become a certified professional sleep consultant with QC's online training. QC offers a fully-online sleep consultant course. Get certified faster and launch your own sleep consulting business!"
         canonical="/courses-and-tuition/sleep-consultant"
+        noIndex={true}
       />
+
+      <DeadlineFunnelScript />
 
       <section id="heroSection">
         <div className="container">
