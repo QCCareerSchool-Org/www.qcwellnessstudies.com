@@ -12,11 +12,11 @@ import { useLocation } from '../providers/location';
 import { useScreenWidth } from '../providers/screen-width';
 
 interface Props {
-  enrollPath: string;
+  enrollPath?: string;
   nav: boolean;
 }
 
-export const Header: React.FC<Props> = ({ nav, enrollPath }) => {
+export const Header: React.FC<Props> = ({ nav, enrollPath = 'https://enroll.qcwellnessstudies.com/' }) => {
   const screenWidth = useScreenWidth();
   const location = useLocation();
   const telephoneNumber = getTelephoneNumber(location?.countryCode);
