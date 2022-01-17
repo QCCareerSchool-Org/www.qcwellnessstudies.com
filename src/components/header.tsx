@@ -12,10 +12,11 @@ import { useLocation } from '../providers/location';
 import { useScreenWidth } from '../providers/screen-width';
 
 interface Props {
+  enrollPath: string;
   nav: boolean;
 }
 
-export const Header: React.FC<Props> = ({ nav }) => {
+export const Header: React.FC<Props> = ({ nav, enrollPath }) => {
   const screenWidth = useScreenWidth();
   const location = useLocation();
   const telephoneNumber = getTelephoneNumber(location?.countryCode);
@@ -57,7 +58,7 @@ export const Header: React.FC<Props> = ({ nav }) => {
                     <Link href="/contact"><a className="dropdown-item">Contact</a></Link>
                   </NavDropdown>
                 </Nav>
-                <a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com">Enroll Online</a>
+                <a className="btn btn-secondary" href={enrollPath}>Enroll Online</a>
               </Navbar.Collapse>
             </>
           )

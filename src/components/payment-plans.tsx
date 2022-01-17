@@ -10,9 +10,10 @@ import { GuaranteeModal } from './guarantee-modal';
 interface Props {
   courses: string[];
   doubleGuarantee: boolean;
+  enrollPath?: string;
 }
 
-export const PaymentPlans: React.FC<Props> = ({ courses, doubleGuarantee }) => {
+export const PaymentPlans: React.FC<Props> = ({ courses, doubleGuarantee, enrollPath = 'https://enroll.qcwellnessstudies.com/' }) => {
   const location = useLocation();
   const price = usePrice(courses, location?.countryCode, location?.provinceCode);
   const [ modal, toggle ] = useToggle();
@@ -33,7 +34,7 @@ export const PaymentPlans: React.FC<Props> = ({ courses, doubleGuarantee }) => {
                 <p className="card-text">PAY IN FULL</p>
                 <p className="small text-muted mb-0"><del>{price?.currency.symbol}{formatPrice(price?.discountedCost)}</del></p>
                 <p className="card-text price text-dark"><small>{price?.currency.symbol}</small>{formatPrice(price?.plans.full.total)}</p>
-                <p className="card-text"><a href={`https://enroll.qcwellnessstudies.com/?${courses.map(c => `c[]=${c}`).join('&')}`} className="btn btn-secondary">ENROLL NOW</a></p>
+                <p className="card-text"><a href={`${enrollPath}?${courses.map(c => `c[]=${c}`).join('&')}`} className="btn btn-secondary">ENROLL NOW</a></p>
                 <p className="card-text"><strong><mark>SAVE {price?.currency.symbol}{formatPrice(price?.plans.full.discount)}</mark></strong><br />when you pay in full.</p>
               </div>
             </div>
@@ -44,7 +45,7 @@ export const PaymentPlans: React.FC<Props> = ({ courses, doubleGuarantee }) => {
                 <p className="card-text">INSTALLMENT PLAN</p>
                 <p className="small text-muted mb-0">&nbsp;</p>
                 <p className="card-text price text-dark"><small>{price?.currency.symbol}</small>{formatPrice(price?.plans.part.installmentSize)} <small className="text-muted">/ mo</small></p>
-                <p className="card-text"><a href={`https://enroll.qcwellnessstudies.com/?${courses.map(c => `c[]=${c}`).join('&')}`} className="btn btn-secondary">ENROLL NOW</a></p>
+                <p className="card-text"><a href={`${enrollPath}?${courses.map(c => `c[]=${c}`).join('&')}`} className="btn btn-secondary">ENROLL NOW</a></p>
                 <p className="card-text"><strong>Deposit of {price?.currency.symbol}{formatPrice(price?.plans.part.deposit)}</strong><br />then {price?.plans.part.installments} monthly payments of {price?.currency.symbol}{formatPrice(price?.plans.part.installmentSize)}.</p>
               </div>
             </div>
