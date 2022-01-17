@@ -4,11 +4,12 @@ import { Footer } from '../components/footer';
 import { Header } from '../components/header';
 
 interface Props {
-  children?: React.ReactNode;
+  enrollPath?: string;
   SecondaryNav?: React.FC;
+  children?: React.ReactNode;
 }
 
-export const DefaultLayout: React.FC<Props> = ({ children, SecondaryNav }) => {
+export const DefaultLayout: React.FC<Props> = ({ children, SecondaryNav, enrollPath = 'https://enroll.qcwellnessstudies.com' }) => {
   useEffect(() => {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ event: 'track' });
@@ -16,7 +17,7 @@ export const DefaultLayout: React.FC<Props> = ({ children, SecondaryNav }) => {
 
   return (
     <>
-      <Header nav={true} />
+      <Header nav={true} enrollPath={enrollPath} />
       {SecondaryNav && <SecondaryNav />}
       <main role="main" className="flex-shrink-0">
         {children}
