@@ -2,8 +2,8 @@ import * as HttpStatus from '@qccareerschool/http-status';
 import { GetServerSideProps, NextPage } from 'next';
 import ErrorPage from 'next/error';
 import React, { useEffect } from 'react';
-import { GoogleAdsSaleScript } from '../components/googleAdsSaleScript';
 
+import { GoogleAdsSaleScript } from '../components/googleAdsSaleScript';
 import { SEO } from '../components/seo';
 import { TelephoneNumber } from '../components/telephone-number';
 import { DefaultLayout } from '../layouts/default';
