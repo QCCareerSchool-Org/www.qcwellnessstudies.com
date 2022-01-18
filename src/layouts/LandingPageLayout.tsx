@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 
-import { Header } from '../components/header';
-import { LandingPageFooter } from '../components/landing-page-footer';
+import { Header } from '../components/Header';
+import { LandingPageFooter } from '../components/LandingPageFooter';
 
-interface Props {
-  children: React.ReactElement | React.ReactElement[];
+type Props = {
+  children: ReactNode;
   SecondaryNav?: React.FC;
-}
+};
 
-export const LandingPageLayout: React.FC<Props> = ({ children, SecondaryNav }) => (
+export const LandingPageLayout = ({ children, SecondaryNav }: Props): ReactElement => (
   <>
     <Header nav={false} />
     {SecondaryNav && <SecondaryNav />}

@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-interface Props {
+type Props = {
   shortName: string;
   fullName: string;
   abbr: string;
@@ -10,9 +10,9 @@ interface Props {
   logo?: JSX.Element;
   graduation?: JSX.Element;
   completion?: JSX.Element;
-}
+};
 
-export const Certification: React.FC<Props> = ({ shortName, fullName, abbr, registered, logo, graduation, completion }) => (
+export const Certification = ({ shortName, fullName, abbr, registered, logo, graduation, completion }: Props): ReactElement => (
   <div className="container">
     <div className="row d-flex align-items-center">
       <div className="col-12 col-md-6 col-lg-5 offset-lg-1">

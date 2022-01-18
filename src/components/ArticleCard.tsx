@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-import { CardImage, Image } from './card-image';
+import { CardImage, Image } from './CardImage';
 
-interface Props {
+type Props = {
   images: Image[];
   title: string;
   body?: string;
@@ -12,9 +12,9 @@ interface Props {
   link: string;
   externalLink?: boolean;
   alt: string;
-}
+};
 
-export const ArticleCard: React.FC<Props> = ({ images, title, body, buttonText, link, externalLink, alt }) => (
+export const ArticleCard = ({ images, title, body, buttonText, link, externalLink, alt }: Props): ReactElement => (
   <div className="card shadow-lg mb-5">
     {externalLink
       ? <a href={link}><CardImage images={images} alt={alt} /></a>

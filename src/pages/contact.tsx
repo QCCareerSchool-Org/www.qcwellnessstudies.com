@@ -1,12 +1,12 @@
 import { NextPage } from 'next';
 import React from 'react';
 
-import { SEO } from '../components/seo';
-import { TelephoneNumber } from '../components/telephone-number';
-import { DefaultLayout } from '../layouts/default';
+import { SEO } from '../components/SEO';
+import { TelephoneNumber } from '../components/TelephoneNumber';
+import { useLocation } from '../hooks/useLocation';
+import { DefaultLayout } from '../layouts/DefaultLayout';
 import { getTelephoneNumber } from '../lib/functions';
 import { openLiveChat } from '../lib/livechat';
-import { useLocation } from '../providers/location';
 
 const Page: NextPage = () => {
   const location = useLocation();

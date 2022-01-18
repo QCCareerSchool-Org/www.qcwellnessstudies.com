@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
+import { useLocation } from '../hooks/useLocation';
 import { getAddress } from '../lib/functions';
-import { useLocation } from '../providers/location';
 
-export const Address: React.FC = () => {
+export const Address = (): ReactElement | null => {
   const location = useLocation();
   if (location === null) {
     return null;

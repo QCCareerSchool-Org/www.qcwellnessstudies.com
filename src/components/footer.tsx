@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { openLiveChat } from '../lib/livechat';
 
-import { Address } from './address';
-import { TelephoneNumber } from './telephone-number';
+import { Address } from './Address';
+import { TelephoneNumber } from './TelephoneNumber';
 
-export const Footer: React.FC = () => (
+export const Footer = (): ReactElement => (
   <footer id="footer" className="footer bg-dark mt-auto">
     <div className="container">
       <div className="row text-center text-lg-left">

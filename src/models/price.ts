@@ -1,4 +1,4 @@
-interface Plan {
+type Plan = {
   /** the discount based on the payment plan */
   discount: number;
   /** the amount to be paid today */
@@ -11,9 +11,9 @@ interface Plan {
   remainder: number;
   /** the final price after discounts */
   total: number;
-}
+};
 
-interface Price {
+type Price = {
   /** the base price before any discounts */
   cost: number;
   /** the discount on courses after the first course */
@@ -24,7 +24,7 @@ interface Price {
   discountedCost: number;
   /** the payment plans */
   plans: { full: Plan; part: Plan };
-}
+};
 
 /**
 This is the response
@@ -47,9 +47,9 @@ export type CourseResult = {
   free: boolean;
 } & Price;
 
-export interface Currency {
+export type Currency = {
   code: string;
   symbol: string;
   name: string;
   exchangeRate: number;
-}
+};

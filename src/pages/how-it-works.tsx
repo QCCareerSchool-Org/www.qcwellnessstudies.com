@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
 import React from 'react';
 
-import { SEO } from '../components/seo';
-import { DefaultLayout } from '../layouts/default';
+import { SEO } from '../components/SEO';
+import { DefaultLayout } from '../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
   <DefaultLayout>

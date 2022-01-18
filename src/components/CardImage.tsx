@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-export interface Image {
+export type Image = {
   src: string;
   type: string;
-}
+};
 
-interface CardImageProps {
+type Props = {
   images: Image[];
   alt: string;
-}
+};
 
-export const CardImage: React.FC<CardImageProps> = ({ images, alt }) => {
+export const CardImage = ({ images, alt }: Props): ReactElement | null => {
   if (images.length === 0) {
     return null;
   }

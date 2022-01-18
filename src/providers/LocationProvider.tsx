@@ -1,18 +1,22 @@
 import fetch from 'isomorphic-unfetch';
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import React, { ReactElement, ReactNode, useEffect, useState } from 'react';
 
-export interface Location {
+export type Location = {
   countryCode: string;
   countryName: string;
   provinceCode: string | null;
   provinceName: string | null;
-}
+};
 
-const LocationStateContext = React.createContext<Location | null | undefined>(undefined);
-const LocationDispatchContext = React.createContext<((location: Location) => void) | undefined>(undefined);
+export const LocationStateContext = React.createContext<Location | null | undefined>(undefined);
+export const LocationDispatchContext = React.createContext<((location: Location) => void) | undefined>(undefined);
 
-export const LocationProvider: React.FC = ({ children }) => {
+type Props = {
+  children: ReactNode;
+};
+
+export const LocationProvider = ({ children }: Props): ReactElement => {
   const [ state, dispatch ] = useState<Location | null>(null);
   useEffect(() => {
     const getData = async (): Promise<void> => {
@@ -41,12 +45,4 @@ export const LocationProvider: React.FC = ({ children }) => {
 
 LocationProvider.propTypes = {
   children: PropTypes.node,
-};
-
-export const useLocation = (): Location | null => {
-  const context = React.useContext(LocationStateContext);
-  if (context === undefined) {
-    throw new Error('useLocation must be used within a LocationProvider');
-  }
-  return context;
 };

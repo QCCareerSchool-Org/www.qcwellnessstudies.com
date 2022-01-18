@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-interface Props {
+type Props = {
   profession: string;
-}
+};
 
-export const About: React.FC<Props> = ({ profession }) => (
+export const About = ({ profession }: Props): ReactElement => (
   <div className="container text-light">
     <div className="row col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
       <div className="">

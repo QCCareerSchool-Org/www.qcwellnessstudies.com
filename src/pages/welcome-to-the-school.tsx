@@ -3,10 +3,10 @@ import { GetServerSideProps, NextPage } from 'next';
 import ErrorPage from 'next/error';
 import React, { useEffect } from 'react';
 
-import { GoogleAdsSaleScript } from '../components/googleAdsSaleScript';
-import { SEO } from '../components/seo';
-import { TelephoneNumber } from '../components/telephone-number';
-import { DefaultLayout } from '../layouts/default';
+import { GoogleAdsSaleScript } from '../components/GoogleAdsSaleScript';
+import { SEO } from '../components/SEO';
+import { TelephoneNumber } from '../components/TelephoneNumber';
+import { DefaultLayout } from '../layouts/DefaultLayout';
 import { addToIDevAffiliate } from '../lib/addToIDevAffiliate';
 import { fbqSale } from '../lib/fbq';
 import { gaSale } from '../lib/ga';

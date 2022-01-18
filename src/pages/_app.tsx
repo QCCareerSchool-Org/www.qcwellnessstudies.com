@@ -8,8 +8,8 @@ import { fbqPageview } from '../lib/fbq';
 import { gaPageview } from '../lib/ga';
 import { pardotPageview } from '../lib/pardot';
 import { uetPageview } from '../lib/uet';
-import { LocationProvider } from '../providers/location';
-import { ScreenWidthProvider } from '../providers/screen-width';
+import { LocationProvider } from '../providers/LocationProvider';
+import { ScreenWidthProvider } from '../providers/ScreenWidthProvider';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   const router = useRouter();

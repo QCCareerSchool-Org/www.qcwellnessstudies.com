@@ -3,9 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 import { IoMdBook, IoMdEye, IoMdLaptop, IoMdSchool } from 'react-icons/io';
 
-import { GoogleAdsLeadScript } from '../../../components/googleAdsLeadScript';
-import { SEO } from '../../../components/seo';
-import { DefaultLayout } from '../../../layouts/default';
+import { GoogleAdsLeadScript } from '../../../components/GoogleAdsLeadScript';
+import { SEO } from '../../../components/SEO';
+import { DefaultLayout } from '../../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
   <DefaultLayout>

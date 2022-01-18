@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-interface Props {
+type Props = {
   subheader: string;
   affordable: string;
   flexible: string;
   comprehensive: string;
   courses: string[];
   hideButton?: boolean;
-}
+};
 
-export const WhyChoose: React.FC<Props> = ({ subheader, affordable, flexible, comprehensive, courses, hideButton }) => (
+export const WhyChoose = ({ subheader, affordable, flexible, comprehensive, courses, hideButton }: Props): ReactElement => (
   <div className="container text-center">
     <h2 className="text-dark">Why Choose QC?</h2>
     <p className="lead mb-5">{subheader}</p>

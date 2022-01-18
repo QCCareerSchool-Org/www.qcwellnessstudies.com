@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-import { TelephoneNumber } from './telephone-number';
+import { TelephoneNumber } from './TelephoneNumber';
 
-export const LandingPageFooter: React.FC = () => {
+export const LandingPageFooter = (): ReactElement => {
   return (
     <footer id="landing-page-footer" className="footer bg-dark text-white mt-auto text-center">
       <div className="container">

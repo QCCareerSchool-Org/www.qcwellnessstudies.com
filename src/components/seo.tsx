@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 type TwitterCardType = 'card' | 'summary_large_image';
 type SchemaType = 'WebPage' | 'AboutPage' | 'CheckoutPage' | 'CollectionPage' | 'ContactPage' | 'FAQPage' | 'ItemPage' | 'MedicalWebPage' | 'ProfilePage' | 'QAPage' | 'RealEstateListing' | 'SearchResultsPage';
 
-interface Props {
+type Props = {
   title: string;
   description: string;
   canonical: string;
@@ -17,17 +17,17 @@ interface Props {
   twitterCreator?: string;
   schemaType?: SchemaType;
   noIndex?: boolean;
-}
+};
 
-interface Schema {
+type Schema = {
   '@content': string;
   '@type': SchemaType;
   'name': string;
   'url': string;
   'description': string;
-}
+};
 
-export const SEO: React.FC<Props> = ({ title, description, canonical, image, twitterCardType, twitterCreator, schemaType, noIndex }) => {
+export const SEO = ({ title, description, canonical, image, twitterCardType, twitterCreator, schemaType, noIndex }: Props): ReactElement => {
   const htmlTitle = title === 'QC Wellness Studies' ? title : `${title} - QC Wellness Studies`;
   const baseUrl = 'https://www.qcwellnessstudies.com';
   const schema: Schema = {

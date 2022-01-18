@@ -1,8 +1,7 @@
 import { NextPage } from 'next';
 import React from 'react';
 
-import { DeadlineFunnelScript } from '../../../components/deadline-funnel-script';
-
+import { DeadlineFunnelScript } from '../../../components/DeadlineFunnelScript';
 import OriginalPage from '.';
 
 const Page: NextPage = () => (

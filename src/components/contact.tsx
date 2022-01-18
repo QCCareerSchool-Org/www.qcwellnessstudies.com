@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 import { openLiveChat } from '../lib/livechat';
-import { TelephoneNumber } from './telephone-number';
+import { TelephoneNumber } from './TelephoneNumber';
 
-export const Contact: React.FC = () => (
+export const Contact = (): ReactElement => (
   <div className="container text-center">
     <h1 className="text-dark">Contact Us</h1>
     <p className="lead">Our student advisors are happy to answer all of your questions!</p>
