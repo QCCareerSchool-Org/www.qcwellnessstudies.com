@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { ReactElement, ReactNode, useEffect, useState } from 'react';
 
-const ScreenWidthStateContext = React.createContext<number | undefined>(undefined);
-const ScreenWidthDispatchContext = React.createContext<((width: number) => void) | undefined>(undefined);
+export const ScreenWidthStateContext = React.createContext<number | undefined>(undefined);
+export const ScreenWidthDispatchContext = React.createContext<((width: number) => void) | undefined>(undefined);
 
 type Props = {
   children: ReactNode;
@@ -29,12 +29,4 @@ export const ScreenWidthProvider = ({ children }: Props): ReactElement => {
 
 ScreenWidthProvider.propTypes = {
   children: PropTypes.node,
-};
-
-export const useScreenWidth = (): number => {
-  const context = React.useContext(ScreenWidthStateContext);
-  if (context === undefined) {
-    throw new Error('useScreenWidth must be used within a ScreenWidthProvider');
-  }
-  return context;
 };

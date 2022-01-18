@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { ReactElement } from 'react';
 
+import { useLocation } from '../hooks/useLocation';
 import { usePrice } from '../hooks/usePrice';
 import { useToggle } from '../hooks/useToggle';
 import { formatPrice } from '../lib/functions';
-import { useLocation } from '../providers/location';
 import { GuaranteeModal } from './GuaranteeModal';
 
 type Props = {

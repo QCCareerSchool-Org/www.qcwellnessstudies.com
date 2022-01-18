@@ -9,8 +9,8 @@ export type Location = {
   provinceName: string | null;
 };
 
-const LocationStateContext = React.createContext<Location | null | undefined>(undefined);
-const LocationDispatchContext = React.createContext<((location: Location) => void) | undefined>(undefined);
+export const LocationStateContext = React.createContext<Location | null | undefined>(undefined);
+export const LocationDispatchContext = React.createContext<((location: Location) => void) | undefined>(undefined);
 
 type Props = {
   children: ReactNode;
@@ -45,12 +45,4 @@ export const LocationProvider = ({ children }: Props): ReactElement => {
 
 LocationProvider.propTypes = {
   children: PropTypes.node,
-};
-
-export const useLocation = (): Location | null => {
-  const context = React.useContext(LocationStateContext);
-  if (context === undefined) {
-    throw new Error('useLocation must be used within a LocationProvider');
-  }
-  return context;
 };

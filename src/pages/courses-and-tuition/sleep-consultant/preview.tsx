@@ -12,11 +12,11 @@ import { HowItWorks } from '../../../components/HowItWorks';
 import { PriceCard } from '../../../components/PriceCard';
 import { SEO } from '../../../components/SEO';
 import { Subnav } from '../../../components/Subnav';
+import { useLocation } from '../../../hooks/useLocation';
 import { usePrice } from '../../../hooks/usePrice';
 import { useToggle } from '../../../hooks/useToggle';
 import { MinimalLayout } from '../../../layouts/MimimalLayout';
 import { formatPrice } from '../../../lib/functions';
-import { useLocation } from '../../../providers/location';
 
 const courses = [ 'sl' ];
 

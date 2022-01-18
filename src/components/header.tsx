@@ -6,10 +6,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
+import { useLocation } from '../hooks/useLocation';
+import { useScreenWidth } from '../hooks/useScreenWidth';
 import * as breakpoints from '../lib/breakpoints';
 import { getTelephoneNumber } from '../lib/functions';
-import { useLocation } from '../providers/location';
-import { useScreenWidth } from '../providers/screen-width';
 
 type Props = {
   enrollPath?: string;

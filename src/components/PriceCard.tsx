@@ -3,9 +3,9 @@ import React, { ReactElement, useRef } from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 
+import { useLocation } from '../hooks/useLocation';
 import { usePrice } from '../hooks/usePrice';
 import { formatPrice } from '../lib/functions';
-import { useLocation } from '../providers/location';
 
 type Props = {
   courses: string[];
