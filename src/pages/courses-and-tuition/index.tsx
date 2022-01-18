@@ -2,9 +2,9 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
-import { PriceCard } from '../../components/price-card';
-import { SEO } from '../../components/seo';
-import { DefaultLayout } from '../../layouts/default';
+import { PriceCard } from '../../components/PriceCard';
+import { SEO } from '../../components/SEO';
+import { DefaultLayout } from '../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
   <DefaultLayout>

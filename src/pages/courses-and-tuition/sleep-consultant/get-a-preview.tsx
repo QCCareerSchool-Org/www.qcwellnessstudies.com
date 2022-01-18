@@ -2,9 +2,9 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
-import { SEO } from '../../../components/seo';
-import { WhyChoose } from '../../../components/why-chose';
-import { LandingPageLayout } from '../../../layouts/landing-page';
+import { SEO } from '../../../components/SEO';
+import { WhyChoose } from '../../../components/WhyChose';
+import { LandingPageLayout } from '../../../layouts/LandingPageLayout';
 
 const Page: NextPage = () => (
   <LandingPageLayout>

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useRef } from 'react';
+import React, { ReactElement, useRef } from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 
@@ -7,11 +7,11 @@ import { usePrice } from '../hooks/usePrice';
 import { formatPrice } from '../lib/functions';
 import { useLocation } from '../providers/location';
 
-interface Props {
+type Props = {
   courses: string[];
-}
+};
 
-export const PriceCard: React.FC<Props> = ({ courses }) => {
+export const PriceCard = ({ courses }: Props): ReactElement => {
   const location = useLocation();
   const price = usePrice(courses, location?.countryCode, location?.provinceCode);
   const radix = 32;

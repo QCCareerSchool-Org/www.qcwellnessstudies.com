@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 import { getTelephoneNumber } from '../lib/functions';
 import { useLocation } from '../providers/location';
 
-interface Props {
+type Props = {
   link?: boolean;
-}
+};
 
-export const TelephoneNumber: React.FC<Props> = ({ link = true }) => {
+export const TelephoneNumber = ({ link = true }: Props): ReactElement => {
   const location = useLocation();
   const telephoneNumber = getTelephoneNumber(location?.countryCode ?? 'US');
 

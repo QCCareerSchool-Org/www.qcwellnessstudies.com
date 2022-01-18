@@ -2,16 +2,16 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
-import { Certification } from '../../../components/certification';
-import { Guarantee } from '../../../components/guarantee';
-import { Included } from '../../../components/included';
-import { PaymentPlans } from '../../../components/payment-plans';
-import { SEO } from '../../../components/seo';
-import { Subnav } from '../../../components/subnav';
-import { UnitOutline } from '../../../components/unit-outline';
-import { WhyChoose } from '../../../components/why-chose';
+import { Certification } from '../../../components/Certification';
+import { Guarantee } from '../../../components/Guarantee';
+import { Included } from '../../../components/Included';
+import { PaymentPlans } from '../../../components/PaymentPlans';
+import { SEO } from '../../../components/SEO';
+import { Subnav } from '../../../components/Subnav';
+import { UnitOutline } from '../../../components/UnitOutline';
+import { WhyChoose } from '../../../components/WhyChose';
 import { fcUnits } from '../../../data/units-fc';
-import { DefaultLayout } from '../../../layouts/default';
+import { DefaultLayout } from '../../../layouts/DefaultLayout';
 
 const doubleGuarantee = false;
 

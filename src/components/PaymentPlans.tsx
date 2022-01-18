@@ -1,26 +1,26 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 import { usePrice } from '../hooks/usePrice';
 import { useToggle } from '../hooks/useToggle';
 import { formatPrice } from '../lib/functions';
 import { useLocation } from '../providers/location';
-import { GuaranteeModal } from './guarantee-modal';
+import { GuaranteeModal } from './GuaranteeModal';
 
-interface Props {
+type Props = {
   courses: string[];
   doubleGuarantee: boolean;
   enrollPath?: string;
-}
+};
 
-export const PaymentPlans: React.FC<Props> = ({ courses, doubleGuarantee, enrollPath = 'https://enroll.qcwellnessstudies.com/' }) => {
+export const PaymentPlans = ({ courses, doubleGuarantee, enrollPath = 'https://enroll.qcwellnessstudies.com/' }: Props): ReactElement => {
   const location = useLocation();
   const price = usePrice(courses, location?.countryCode, location?.provinceCode);
   const [ modal, toggle ] = useToggle();
+
   return (
     <>
       <GuaranteeModal show={modal} doubleGuarantee={doubleGuarantee} toggle={toggle} />
-
       <div className="container">
         <div className="row">
           <div className="col-12 col-lg-4 text-center text-lg-left mb-4 mb-lg-0">

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -11,12 +11,12 @@ import { getTelephoneNumber } from '../lib/functions';
 import { useLocation } from '../providers/location';
 import { useScreenWidth } from '../providers/screen-width';
 
-interface Props {
+type Props = {
   enrollPath?: string;
   nav: boolean;
-}
+};
 
-export const Header: React.FC<Props> = ({ nav, enrollPath = 'https://enroll.qcwellnessstudies.com/' }) => {
+export const Header = ({ nav, enrollPath = 'https://enroll.qcwellnessstudies.com/' }: Props): ReactElement => {
   const screenWidth = useScreenWidth();
   const location = useLocation();
   const telephoneNumber = getTelephoneNumber(location?.countryCode);

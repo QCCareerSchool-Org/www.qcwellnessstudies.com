@@ -1,4 +1,4 @@
-export interface Enrollment {
+export type Enrollment = {
   id: number;
   school: string;
   url: string;
@@ -44,4 +44,4 @@ export interface Enrollment {
     name: string;
   }>;
   courseCodes: string[];
-}
+};

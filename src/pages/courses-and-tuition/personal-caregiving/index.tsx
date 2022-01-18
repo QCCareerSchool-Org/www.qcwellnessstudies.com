@@ -2,13 +2,13 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
-import { Certification } from '../../../components/certification';
-import { Guarantee } from '../../../components/guarantee';
-import { PaymentPlans } from '../../../components/payment-plans';
-import { SEO } from '../../../components/seo';
-import { Subnav } from '../../../components/subnav';
-import { OutlineData, UnitOutline } from '../../../components/unit-outline';
-import { DefaultLayout } from '../../../layouts/default';
+import { Certification } from '../../../components/Certification';
+import { Guarantee } from '../../../components/Guarantee';
+import { PaymentPlans } from '../../../components/PaymentPlans';
+import { SEO } from '../../../components/SEO';
+import { Subnav } from '../../../components/Subnav';
+import { OutlineData, UnitOutline } from '../../../components/UnitOutline';
+import { DefaultLayout } from '../../../layouts/DefaultLayout';
 
 const doubleGuarantee = false;
 const units: { [key: string]: OutlineData[] } = {

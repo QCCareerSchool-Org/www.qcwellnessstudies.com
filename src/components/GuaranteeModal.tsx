@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import Modal from 'react-bootstrap/Modal';
 
-interface Props {
+type Props = {
   show: boolean;
   doubleGuarantee: boolean;
   toggle: () => void;
-}
+};
 
-export const GuaranteeModal: React.FC<Props> = ({ show, doubleGuarantee, toggle }) => (
+export const GuaranteeModal = ({ show, doubleGuarantee, toggle }: Props): ReactElement => (
   <Modal show={show} onHide={toggle} size={doubleGuarantee ? 'lg' : undefined}>
     <Modal.Header closeButton>
       <Modal.Title>21-Day Money-Back Guarantee!</Modal.Title>

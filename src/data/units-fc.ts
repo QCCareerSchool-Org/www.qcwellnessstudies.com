@@ -1,4 +1,4 @@
-import { OutlineData } from '../components/unit-outline';
+import { OutlineData } from '../components/UnitOutline';
 
 export const fcUnits: { [key: string]: OutlineData[] } = {
   a: [

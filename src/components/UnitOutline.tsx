@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { ReactElement, useState } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import { useAccordionToggle } from 'react-bootstrap/AccordionToggle';
 import Card from 'react-bootstrap/Card';
 import { IoMdAddCircle, IoMdRemoveCircle } from 'react-icons/io';
 
-interface CustomToggleProps {
+type CustomToggleProps = {
   children: React.ReactNode;
   eventKey: string;
   expanded: boolean;
   onClick: () => void;
-}
+};
 
-const CustomToggle: React.FC<CustomToggleProps> = ({ children, eventKey, expanded, onClick }) => {
+const CustomToggle = ({ children, eventKey, expanded, onClick }: CustomToggleProps): ReactElement => {
   const decoratedOnClick = useAccordionToggle(eventKey, onClick);
   const iconSize = 20;
   return (
@@ -30,16 +30,16 @@ CustomToggle.propTypes = {
   onClick: PropTypes.func.isRequired,
 };
 
-export interface OutlineData {
+export type OutlineData = {
   title: string;
   topics: Array<string | { title: string; topics: string[] }>;
-}
+};
 
-interface Props {
+type Props = {
   data: OutlineData[];
-}
+};
 
-export const UnitOutline: React.FC<Props> = ({ data }) => {
+export const UnitOutline = ({ data }: Props): ReactElement => {
   const [ open, setOpen ] = useState<number>();
   return (
     <Accordion>

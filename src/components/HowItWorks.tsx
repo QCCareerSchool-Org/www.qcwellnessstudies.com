@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { IoMdChatboxes, IoMdCheckbox, IoMdHome, IoMdSchool, IoMdTime } from 'react-icons/io';
 
-interface Props {
+type Props = {
   /** the name of the course, including the word "Course, Workshop, etc." e.g., "Sleep Consultant Course" */
   courseName: string;
   /** used before "training" and "scenarios" e.g., "sleep-consultant */
@@ -24,9 +24,9 @@ interface Props {
   graduate?: JSX.Element;
   /** additional text to add to the end of the case studies bullet point */
   caseStudiesExtended?: string;
-}
+};
 
-export const HowItWorks: React.FC<Props> = props => (
+export const HowItWorks = (props: Props): ReactElement => (
   <div className="container text-center">
     <div className="col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 mb-4">
       <h2 className="text-dark mb-4">How Online Training Works</h2>

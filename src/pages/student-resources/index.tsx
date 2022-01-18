@@ -2,10 +2,10 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
-import { ArticleCard } from '../../components/article-card';
-import { CardColumn } from '../../components/card-column';
-import { SEO } from '../../components/seo';
-import { DefaultLayout } from '../../layouts/default';
+import { ArticleCard } from '../../components/ArticleCard';
+import { CardColumn } from '../../components/CardColumn';
+import { SEO } from '../../components/SEO';
+import { DefaultLayout } from '../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
   <DefaultLayout>

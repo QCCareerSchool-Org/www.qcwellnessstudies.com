@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { IoMdBook, IoMdDocument, IoMdPeople, IoMdSchool, IoMdTimer } from 'react-icons/io';
 
-interface Props {
+type Props = {
   certification: string;
-}
+};
 
-export const Included: React.FC<Props> = ({ certification }) => (
+export const Included = ({ certification }: Props): ReactElement => (
   <div className="container">
     <div className="row">
       <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">

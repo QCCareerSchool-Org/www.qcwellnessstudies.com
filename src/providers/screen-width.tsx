@@ -1,10 +1,14 @@
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import React, { ReactElement, ReactNode, useEffect, useState } from 'react';
 
 const ScreenWidthStateContext = React.createContext<number | undefined>(undefined);
 const ScreenWidthDispatchContext = React.createContext<((width: number) => void) | undefined>(undefined);
 
-export const ScreenWidthProvider: React.FC = ({ children }) => {
+type Props = {
+  children: ReactNode;
+};
+
+export const ScreenWidthProvider = ({ children }: Props): ReactElement => {
   const [ state, dispatch ] = useState<number>(0);
   useEffect(() => {
     const handler = (): void => { dispatch(window.innerWidth); };

@@ -1,18 +1,18 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import React, { useRef } from 'react';
+import React, { ReactElement, useRef } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-interface Props {
+type Props = {
   heading: string;
   items: Array<{
     name: string;
     url: string;
   }>;
-}
+};
 
-export const Subnav: React.FC<Props> = ({ heading, items }) => {
+export const Subnav = ({ heading, items }: Props): ReactElement => {
   const radix = 32;
   const startPosition = 2;
   const uniqueId = useRef(Math.random().toString(radix).slice(startPosition));

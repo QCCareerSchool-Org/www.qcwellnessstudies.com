@@ -1,16 +1,16 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-interface Props {
+type Props = {
   courseName: string;
   doubleGuarantee: boolean;
   twentyOneDays?: React.ReactElement;
   oneYear?: React.ReactElement;
   starting?: React.ReactElement;
-}
+};
 
-export const Guarantee: React.FC<Props> = ({ courseName, doubleGuarantee, twentyOneDays, oneYear, starting }) => (
+export const Guarantee = ({ courseName, doubleGuarantee, twentyOneDays, oneYear, starting }: Props): ReactElement => (
   <div className="container text-center">
     <h2 className="text-dark">Your Guarantee</h2>
     {starting ? starting : <p className="lead mb-5">Starting a new career can be scary but don&apos;t worry!<br />Once you enroll in QC&apos;s {courseName} Course, you&apos;ll be protected by a<br /><strong>{doubleGuarantee ? 'double' : '21-day'} money-back guarantee!</strong></p>}

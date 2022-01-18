@@ -5,16 +5,16 @@ import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { IoMdDownload, IoMdFiling } from 'react-icons/io';
 
-import { About } from '../../../components/about';
-import { Contact } from '../../../components/contact';
-import { Guarantee } from '../../../components/guarantee';
-import { HowItWorks } from '../../../components/how-it-works';
-import { PriceCard } from '../../../components/price-card';
-import { SEO } from '../../../components/seo';
-import { Subnav } from '../../../components/subnav';
+import { About } from '../../../components/About';
+import { Contact } from '../../../components/Contact';
+import { Guarantee } from '../../../components/Guarantee';
+import { HowItWorks } from '../../../components/HowItWorks';
+import { PriceCard } from '../../../components/PriceCard';
+import { SEO } from '../../../components/SEO';
+import { Subnav } from '../../../components/Subnav';
 import { usePrice } from '../../../hooks/usePrice';
 import { useToggle } from '../../../hooks/useToggle';
-import { MinimalLayout } from '../../../layouts/mimimal';
+import { MinimalLayout } from '../../../layouts/MimimalLayout';
 import { formatPrice } from '../../../lib/functions';
 import { useLocation } from '../../../providers/location';
 
