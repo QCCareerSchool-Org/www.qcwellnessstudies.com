@@ -2,19 +2,15 @@ import { NextPage } from 'next';
 import React from 'react';
 
 import { SEO } from '../components/seo';
+import { TelephoneNumber } from '../components/telephone-number';
 import { DefaultLayout } from '../layouts/default';
-
 import { getTelephoneNumber } from '../lib/functions';
+import { openLiveChat } from '../lib/livechat';
 import { useLocation } from '../providers/location';
 
 const Page: NextPage = () => {
   const location = useLocation();
   const telephoneNumber = getTelephoneNumber(location?.countryCode);
-
-  const openLiveChat = (e: React.MouseEvent): void => {
-    e.preventDefault();
-    window?.LC_API?.open_chat_window();
-  };
 
   return (
     <DefaultLayout>
@@ -38,7 +34,7 @@ const Page: NextPage = () => {
             <div className="col-12 mb-4 col-lg-4 mb-lg-0">
               <a className="telephone-link" href={`tel:${telephoneNumber}`}><img src={require('../images/icon-phone.svg')} className="img-fluid" alt="cell phone" /></a>
               <h3 className="text-dark text-center">By Phone</h3>
-              <p className="text-dark text-center"><a className="telephone-link" href={`tel:${telephoneNumber}`}><span className="telephone-text">{telephoneNumber}</span></a></p>
+              <p className="text-dark text-center"><TelephoneNumber /></p>
             </div>
             <div className="col-12 mb-4 col-lg-4 mb-lg-0">
               <a href="mailto:info@qcwellnessstudies.com"><img src={require('../images/icon-email.svg')} className="text-center" alt="paper envelope with @ symbol" /></a>

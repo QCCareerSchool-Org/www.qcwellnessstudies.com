@@ -9,22 +9,16 @@ interface Props {
   SecondaryNav?: React.FC;
 }
 
-export const LandingPageLayout: React.FC<Props> = ({ children, SecondaryNav }) => {
-  useEffect(() => {
-    window.dataLayer.push({ event: 'track' });
-  }, []);
-
-  return (
-    <>
-      <Header nav={false} />
-      {SecondaryNav && <SecondaryNav />}
-      <main role="main" className="flex-shrink-0">
-        {children}
-      </main>
-      <LandingPageFooter />
-    </>
-  );
-};
+export const LandingPageLayout: React.FC<Props> = ({ children, SecondaryNav }) => (
+  <>
+    <Header nav={false} />
+    {SecondaryNav && <SecondaryNav />}
+    <main role="main" className="flex-shrink-0">
+      {children}
+    </main>
+    <LandingPageFooter />
+  </>
+);
 
 LandingPageLayout.propTypes = {
   children: PropTypes.oneOfType([ PropTypes.element, PropTypes.arrayOf(PropTypes.element.isRequired) ]).isRequired,
