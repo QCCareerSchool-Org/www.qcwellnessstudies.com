@@ -72,7 +72,7 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
         canonical="/welcome-to-the-school"
         noIndex={true}
       />
-      <GoogleAdsSaleScript enrollment={data.enrollment} />
+      <GoogleAdsSaleScript conversionLabel="rla_CMLg3ZgBEL_bi_8D" enrollment={data.enrollment} />
 
       <section id="thankyouSection">
         <div className="container">
