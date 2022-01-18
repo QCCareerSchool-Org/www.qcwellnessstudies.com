@@ -1,6 +1,6 @@
 {
   "name": "www.qcwellnessstudies.com",
-  "version": "1.37.0",
+  "version": "1.37.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -32,7 +32,6 @@
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.2",
-    "react-google-tag-manager": "^2.2.1",
     "react-icons": "^3.11.0",
     "sass": "^1.32.12"
   },
