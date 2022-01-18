@@ -180,7 +180,7 @@ module.exports = {
     '@typescript-eslint/no-throw-literal': 'error',
     '@typescript-eslint/no-use-before-define': 'off', // override CRA's default
     '@typescript-eslint/object-curly-spacing': [ 'error', 'always' ],
-    '@typescript-eslint/quotes': [ 'error', 'single' ],
+    '@typescript-eslint/quotes': [ 'error', 'single', { avoidEscape: true, allowTemplateLiterals: true } ],
     '@typescript-eslint/require-await': 'error',
     '@typescript-eslint/return-await': 'error',
     '@typescript-eslint/semi': 'error',

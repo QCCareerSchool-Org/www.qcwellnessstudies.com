@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import { IoMdBook, IoMdEye, IoMdLaptop, IoMdSchool } from 'react-icons/io';
 
+import { GoogleAdsLeadScript } from '../../../components/googleAdsLeadScript';
 import { SEO } from '../../../components/seo';
 import { DefaultLayout } from '../../../layouts/default';
 
@@ -15,6 +16,7 @@ const Page: NextPage = () => (
       canonical="/courses-and-tuition/professional-caregiving/thank-you"
       noIndex={true}
     />
+    <GoogleAdsLeadScript />
 
     <section id="heroSection">
       <div className="container">

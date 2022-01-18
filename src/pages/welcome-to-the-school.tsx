@@ -1,14 +1,18 @@
 import * as HttpStatus from '@qccareerschool/http-status';
-import fetch from 'isomorphic-unfetch';
 import { GetServerSideProps, NextPage } from 'next';
 import ErrorPage from 'next/error';
 import React, { useEffect } from 'react';
+import { GoogleAdsSaleScript } from '../components/googleAdsSaleScript';
 
 import { SEO } from '../components/seo';
 import { TelephoneNumber } from '../components/telephone-number';
 import { DefaultLayout } from '../layouts/default';
+import { addToIDevAffiliate } from '../lib/addToIDevAffiliate';
 import { fbqSale } from '../lib/fbq';
 import { gaSale } from '../lib/ga';
+import { getEnrollment } from '../lib/getEnrollment';
+import { sendEnrollmentEmail } from '../lib/sendEnrollmentEmail';
+import { setStudent } from '../lib/setStudent';
 import { Enrollment } from '../models/enrollment';
 
 type Props = {
@@ -35,13 +39,17 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
       return;
     }
     if (!data.enrollment.emailed) {
-      addToActiveCampaign(data.enrollment).catch(() => { /* */ });
       if (data.ipAddress !== '173.242.186.194') {
         addToIDevAffiliate(data.enrollment).catch(() => { /* */ });
       }
       gaSale(data.enrollment);
       fbqSale(data.enrollment);
-      sendEmail(data.enrollment.id, data.code).catch((err: unknown) => { console.error(err); });
+      sendEnrollmentEmail(data.enrollment.id, data.code).catch((err: unknown) => {
+        console.error(err);
+      });
+      setStudent(data.enrollment.id, data.code).catch((err: unknown) => {
+        console.error(err);
+      });
     }
   }, [ data ]);
 
@@ -64,6 +72,7 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
         canonical="/welcome-to-the-school"
         noIndex={true}
       />
+      <GoogleAdsSaleScript enrollment={data.enrollment} />
 
       <section id="thankyouSection">
         <div className="container">
@@ -188,72 +197,6 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
 
     </DefaultLayout>
   );
-};
-
-const sendEmail = async (enrollmentId: number, code: string): Promise<void> => {
-  const url = `https://api.qccareerschool.com/enrollments/${enrollmentId}/email`;
-  const response = await fetch(url, {
-    method: 'post',
-    headers: {
-      'X-API-Version': '2',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ code }),
-  });
-  if (!response.ok) {
-    throw new HttpStatus.HttpResponse(response.status, response.statusText);
-  }
-  await response.json();
-};
-
-const addToActiveCampaign = async (enrollment: Enrollment): Promise<void> => {
-  const payload = {
-    firstName: enrollment.firstName,
-    lastName: enrollment.lastName,
-    emailAddress: enrollment.emailAddress,
-    phoneNumber: enrollment.telephoneNumber,
-    country: enrollment.countryName,
-    state: enrollment.provinceName,
-    listId: 39,
-    customFields: {
-      SALE_AMOUNT: enrollment.cost,
-      SALE_CURRENCY: enrollment.currencyCode,
-    },
-  };
-  const url = 'https://api.qccareerschool.com/activeCampaign/subscribe';
-  const response = await fetch(url, {
-    method: 'post',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(payload),
-  });
-  if (!response.ok) {
-    throw new HttpStatus.HttpResponse(response.status, response.statusText);
-  }
-  await response.json();
-};
-
-const addToIDevAffiliate = async (enrollment: Enrollment): Promise<void> => {
-  const cost = (enrollment.cost / enrollment.currencyExchangeRate).toFixed(2);
-  const name = enrollment.firstName + ' ' + enrollment.lastName;
-  const url = `https://affiliates.qccareerschool.com/sale.php?profile=72198&idev_saleamt=${encodeURIComponent(cost)}&idev_ordernum=${encodeURIComponent(enrollment.id)}&idev_option_1=${encodeURIComponent(name)}&idev_option_2=${encodeURIComponent(enrollment.emailAddress)}`;
-  const response = await fetch(url, { mode: 'no-cors' });
-  if (!response.ok) {
-    throw new HttpStatus.HttpResponse(response.status, response.statusText);
-  }
-  await response.json();
-};
-
-const getEnrollment = async (enrollmentId: number, code: string): Promise<Enrollment> => {
-  const url = `https://api.qccareerschool.com/enrollments/${enrollmentId}?code=${code}`;
-  const response = await fetch(url, {
-    headers: { 'X-API-Version': '2' },
-  });
-  if (!response.ok) {
-    throw new HttpStatus.HttpResponse(response.status, response.statusText);
-  }
-  return response.json();
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ req, res, query }) => {
