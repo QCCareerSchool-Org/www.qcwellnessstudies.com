@@ -1,8 +1,12 @@
 import Script from 'next/script';
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useMemo } from 'react';
 
-const script = `gtag('event', 'conversion', { send_to: 'AW-1071836607/Srl-CMns3JgBEL_bi_8D' });`;
+type Props = {
+  conversionId?: number;
+  conversionLabel: string;
+};
 
-export const GoogleAdsLeadScript = (): ReactElement => (
-  <Script id="googleAdsLead" dangerouslySetInnerHTML={{ __html: script }} />
-);
+export const GoogleAdsLeadScript = ({ conversionId = 1071836607, conversionLabel }: Props): ReactElement => {
+  const script = useMemo(() => `gtag('event', 'conversion', { send_to: 'AW-${conversionId}/${conversionLabel}' });`, [ conversionId, conversionLabel ]);
+  return <Script id="googleAdsLead" dangerouslySetInnerHTML={{ __html: script }} />;
+};
