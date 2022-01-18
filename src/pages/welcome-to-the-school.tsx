@@ -7,7 +7,8 @@ import React, { useEffect } from 'react';
 import { SEO } from '../components/seo';
 import { TelephoneNumber } from '../components/telephone-number';
 import { DefaultLayout } from '../layouts/default';
-import { addToGoogleAnalytics } from '../lib/addToGoogleAnalytics';
+import { fbqSale } from '../lib/fbq';
+import { gaSale } from '../lib/ga';
 import { Enrollment } from '../models/enrollment';
 
 type Props = {
@@ -35,10 +36,11 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
     }
     if (!data.enrollment.emailed) {
       addToActiveCampaign(data.enrollment).catch(() => { /* */ });
-      if (data.ipAddress !== '173.242.186.1941') {
+      if (data.ipAddress !== '173.242.186.194') {
         addToIDevAffiliate(data.enrollment).catch(() => { /* */ });
       }
-      addToGoogleAnalytics(data.enrollment);
+      gaSale(data.enrollment);
+      fbqSale(data.enrollment);
       sendEmail(data.enrollment.id, data.code).catch((err: unknown) => { console.error(err); });
     }
   }, [ data ]);

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import { openLiveChat } from '../lib/livechat';
 
 import { Address } from './address';
 import { TelephoneNumber } from './telephone-number';
@@ -30,7 +31,7 @@ export const Footer: React.FC = () => (
         <div className="col-12 col-md-4 col-lg-3 mb-4 mb-md-0">
           <p className="text-light"><strong>CONTACT US:</strong></p>
           <p><a href="mailto:info@qcwellnessstudies.com">Send Us a Message</a></p>
-          <p><a href="#" onClick={(e): void => { e.preventDefault(); window.LC_API?.open_chat_window(); }}>Click Here to Chat</a></p>
+          <p><a href="#" onClick={openLiveChat}>Click Here to Chat</a></p>
           <p><TelephoneNumber /></p>
           <p><a target="_blank" href="/terms" className="termsLink">Privacy Policy</a></p>
         </div>

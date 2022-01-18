@@ -10,12 +10,8 @@ interface Props {
 
 export const TelephoneNumber: React.FC<Props> = ({ link = true }) => {
   const location = useLocation();
+  const telephoneNumber = getTelephoneNumber(location?.countryCode ?? 'US');
 
-  if (location === null) {
-    return null;
-  }
-
-  const telephoneNumber = getTelephoneNumber(location.countryCode);
   if (link) {
     return <a href={`tel:${telephoneNumber}`}>{telephoneNumber}</a>;
   }

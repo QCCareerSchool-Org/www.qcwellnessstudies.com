@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { Footer } from '../components/footer';
 import { Header } from '../components/header';
@@ -9,20 +9,13 @@ interface Props {
   children?: React.ReactNode;
 }
 
-export const DefaultLayout: React.FC<Props> = ({ children, SecondaryNav, enrollPath = 'https://enroll.qcwellnessstudies.com' }) => {
-  useEffect(() => {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: 'track' });
-  }, []);
-
-  return (
-    <>
-      <Header nav={true} enrollPath={enrollPath} />
-      {SecondaryNav && <SecondaryNav />}
-      <main role="main" className="flex-shrink-0">
-        {children}
-      </main>
-      <Footer />
-    </>
-  );
-};
+export const DefaultLayout: React.FC<Props> = ({ children, SecondaryNav, enrollPath = 'https://enroll.qcwellnessstudies.com' }) => (
+  <>
+    <Header nav={true} enrollPath={enrollPath} />
+    {SecondaryNav && <SecondaryNav />}
+    <main role="main" className="flex-shrink-0">
+      {children}
+    </main>
+    <Footer />
+  </>
+);
