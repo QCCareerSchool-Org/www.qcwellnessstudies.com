@@ -20,7 +20,7 @@ export const BrochureForm = ({ action, phoneNumber = false, buttonText = 'Get th
 
   return (
     <form action={action} method="post">
-      <input type="hidden" name="school" value="QC Pet Studies" />
+      <input type="hidden" name="school" value="QC Wellness Studies" />
       {hiddenFields?.map(h => (
         <input key={h.key} type="hidden" name={h.key} value={h.value} />
       ))}
