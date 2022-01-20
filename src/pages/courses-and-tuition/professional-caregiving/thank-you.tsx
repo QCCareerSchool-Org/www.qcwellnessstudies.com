@@ -1,4 +1,6 @@
-import { NextPage } from 'next';
+import { promisify } from 'util';
+import { urlencoded } from 'body-parser';
+import { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
 import React, { useEffect } from 'react';
 import { IoMdBook, IoMdEye, IoMdLaptop, IoMdSchool } from 'react-icons/io';
@@ -8,8 +10,13 @@ import { SEO } from '../../../components/SEO';
 import { DefaultLayout } from '../../../layouts/DefaultLayout';
 import { fbqLead } from '../../../lib/fbq';
 
-const Page: NextPage = () => {
+const urlencodedAsync = promisify(urlencoded());
 
+type Props = {
+  emailAddress: string | null;
+};
+
+const Page: NextPage<Props> = ({ emailAddress }) => {
   useEffect(() => {
     fbqLead();
   }, []);
@@ -23,7 +30,7 @@ const Page: NextPage = () => {
         canonical="/courses-and-tuition/professional-caregiving/thank-you"
         noIndex={true}
       />
-      <GoogleAdsLeadScript conversionLabel="AWiyCKKCz7gBEL_bi_8D" />
+      <GoogleAdsLeadScript conversionLabel="AWiyCKKCz7gBEL_bi_8D" emailAddress={emailAddress} />
 
       <section id="heroSection">
         <div className="container">
@@ -87,4 +94,16 @@ const Page: NextPage = () => {
     </DefaultLayout>
   );
 };
+
+// eslint-disable-next-line @typescript-eslint/require-await
+export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
+  if (req.method === 'POST') {
+    await urlencodedAsync(req, res);
+    type RequestWithBody = typeof req & { body: any };
+    const body = (req as RequestWithBody).body;
+    return { props: { emailAddress: body?.emailAddress ?? null } };
+  }
+  return { props: { emailAddress: null } };
+};
+
 export default Page;
