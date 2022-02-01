@@ -7,7 +7,7 @@ import { SEO } from '../components/SEO';
 import { DefaultLayout } from '../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
+  <>
 
     <SEO
       title="QC Wellness Studies"
@@ -181,7 +181,7 @@ const Page: NextPage = () => (
       }
     `}</style>
 
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

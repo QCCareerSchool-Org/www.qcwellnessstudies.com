@@ -2,9 +2,10 @@ import { NextPage } from 'next';
 import React from 'react';
 
 import { TermsLayout } from '../layouts/TermsLayout';
+import { NextPageWithLayout } from './_app';
 
-const Page: NextPage = () => (
-  <TermsLayout>
+const Page: NextPageWithLayout = () => (
+  <>
     <div className="container my-5">
 
       <h1>Enrollment Agreement</h1>
@@ -94,7 +95,11 @@ const Page: NextPage = () => (
       </table>
 
     </div>
-  </TermsLayout>
+  </>
 );
+
+Page.getLayout = function Layout(page) {
+  return <TermsLayout>{page}</TermsLayout>;
+};
 
 export default Page;
