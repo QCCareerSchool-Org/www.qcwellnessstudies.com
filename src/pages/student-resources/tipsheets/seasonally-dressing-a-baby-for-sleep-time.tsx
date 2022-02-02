@@ -4,11 +4,9 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 
 import { SEO } from '../../../components/SEO';
-import { DefaultLayout } from '../../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-
-  <DefaultLayout>
+  <>
 
     <SEO
       title="Seasonally Dressing a Baby for Sleep Time"
@@ -137,7 +135,7 @@ const Page: NextPage = () => (
       }
     `}</style>
 
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

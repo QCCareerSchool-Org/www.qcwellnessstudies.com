@@ -7,7 +7,6 @@ import { IoMdBook, IoMdEye, IoMdLaptop, IoMdSchool } from 'react-icons/io';
 
 import { GoogleAdsLeadScript } from '../../../components/GoogleAdsLeadScript';
 import { SEO } from '../../../components/SEO';
-import { DefaultLayout } from '../../../layouts/DefaultLayout';
 import { fbqLead } from '../../../lib/fbq';
 
 const urlencodedAsync = promisify(urlencoded());
@@ -22,8 +21,7 @@ const Page: NextPage<Props> = ({ emailAddress }) => {
   }, []);
 
   return (
-    <DefaultLayout>
-
+    <>
       <SEO
         title="Thank You For Your Interest"
         description="More information about the Caregiver course"
@@ -90,8 +88,7 @@ const Page: NextPage<Props> = ({ emailAddress }) => {
         #heroSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
         #enrollSection{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}
       `}</style>
-
-    </DefaultLayout>
+    </>
   );
 };
 
