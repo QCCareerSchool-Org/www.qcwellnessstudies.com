@@ -4,11 +4,9 @@ import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../components/SEO';
-import { DefaultLayout } from '../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
   <>
-
     <SEO
       title="QC Wellness Studies"
       description="QC Wellness Studies is the only fully online school for professional wellness training. Whether you want to be a sleep consultant, a professional skincare consultant or an aging in place designer, QC has an online course for your future career!"
@@ -180,7 +178,6 @@ const Page: NextPage = () => (
       @media (min-width: 1200px) {
       }
     `}</style>
-
   </>
 );
 

@@ -6,7 +6,6 @@ import { SEO } from '../../../components/SEO';
 
 const Page: NextPage = () => (
   <>
-
     <SEO
       title="Stages of Development: How Sleep Consultants Can Help"
       description="Infant sleep consultants work with babies at different stages of development. Sleep training a newborn baby can be very different to sleep training a toddler and every infant develops at a different rate."
@@ -118,7 +117,6 @@ const Page: NextPage = () => (
       @media (min-width: 1200px) {
       }
     `}</style>
-
   </>
 );
 

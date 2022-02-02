@@ -6,7 +6,6 @@ import { SEO } from '../../../components/SEO';
 
 const Page: NextPage = () => (
   <>
-
     <SEO
       title="8 Tips for Improving the Bedtime Routine"
       description="The bedtime routine should prepare an infant or child for sleep. The following tips can help you develop an effective routine to encourage a good sleep and a positive experience for everyone."
@@ -107,7 +106,6 @@ const Page: NextPage = () => (
       @media (min-width: 1200px) {
       }
     `}</style>
-
   </>
 );
 

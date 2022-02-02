@@ -2,11 +2,9 @@ import { NextPage } from 'next';
 import React from 'react';
 
 import { SEO } from '../components/SEO';
-import { DefaultLayout } from '../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
   <>
-
     <SEO
       title="How Online Learning Works"
       description="Discover how QC's online learning system will help you become a fully certified wellness professional from the comfort of home!"

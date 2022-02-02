@@ -6,7 +6,6 @@ import { SEO } from '../../../components/SEO';
 
 const Page: NextPage = () => (
   <>
-
     <SEO
       title="The Different Types of Insurance Recommended for Sleep Consultants"
       description="Learn about the different types of insurance recommended for sleep consultants"
@@ -85,7 +84,6 @@ const Page: NextPage = () => (
       #enrollToday{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}     
       #heroSection{background-image:url(${require('../../../images/cute-baby-boy-hero.jpg')});background-size:cover;background-position:center} 
     `}</style>
-
   </>
 );
 

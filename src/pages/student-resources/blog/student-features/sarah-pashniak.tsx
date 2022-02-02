@@ -7,7 +7,6 @@ import { SEO } from '../../../../components/SEO';
 
 const Page: NextPage = () => (
   <>
-
     <SEO
       title="Student Feature - Sarah Pashniak"
       description="QC graduate, Sarah Pashniak, discusses her sleep consultant journey, her passion about sleep, how QC fine-tuned her skills as a professional, and more!"
@@ -138,7 +137,6 @@ const Page: NextPage = () => (
       #heroSection{background-image:url(${require('../../../../images/student-feature/sarah-pashniak-cover.jpg')});background-size:cover;background-position:center}
       .course-icon{width:80px}
     `}</style>
-
   </>
 );
 

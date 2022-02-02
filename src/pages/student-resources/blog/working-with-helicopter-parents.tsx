@@ -6,7 +6,6 @@ import { SEO } from '../../../components/SEO';
 
 const Page: NextPage = () => (
   <>
-
     <SEO
       title="Sleep Consultants and Helicopter Parents"
       description="Parents are often under a lot of stress when they're facing challenges with an infant's sleep. This stress can easily lead to disagreement and discontent when working with a sleep consultant. Part of a sleep consultant's job is to help parents through stressful situations."
@@ -120,7 +119,6 @@ const Page: NextPage = () => (
       @media (min-width: 1200px) {
       }
     `}</style>
-
   </>
 );
 

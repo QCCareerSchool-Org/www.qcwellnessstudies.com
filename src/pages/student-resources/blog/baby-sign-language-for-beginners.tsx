@@ -6,7 +6,6 @@ import { SEO } from '../../../components/SEO';
 
 const Page: NextPage = () => (
   <>
-
     <SEO
       title="Baby Sign Language for Beginners: When (and How) to Start"
       description="Baby sign language can prove to be a useful tool to recommend to your clients!"
@@ -90,7 +89,6 @@ const Page: NextPage = () => (
       #enrollToday{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}
       #heroSection{background-image:url(${require('../../../images/sr-hero-baby-sign-language-for-beginners.jpg')});background-size:cover;background-position:center} 
     `}</style>
-
   </>
 );
 

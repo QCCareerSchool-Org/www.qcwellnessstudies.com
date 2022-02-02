@@ -113,7 +113,6 @@ const Page: NextPage = () => (
         }
       }
     `}</style>
-
   </>
 );
 

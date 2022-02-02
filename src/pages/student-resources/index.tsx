@@ -8,7 +8,6 @@ import { SEO } from '../../components/SEO';
 
 const Page: NextPage = () => (
   <>
-
     <SEO
       title="QC Student Resources"
       description="As a student of QC Wellness Studies, you have countless resources to help you succeed in your Sleep Consulting course. Read the featured articles and tipsheets in this page for up-to-date advice for sleep consultants."
@@ -161,7 +160,6 @@ const Page: NextPage = () => (
       @media (min-width: 1200px) {
       }
     `}</style>
-
   </>
 );
 

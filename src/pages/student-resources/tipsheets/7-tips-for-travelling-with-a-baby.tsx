@@ -6,7 +6,6 @@ import { SEO } from '../../../components/SEO';
 
 const Page: NextPage = () => (
   <>
-
     <SEO
       title="7 Tips for Travelling with a Baby"
       description="Following an infant's sleep plan while travelling can be a challenge. A new sleep environment, a change in routine or different eating habits can all impact an infant's sleep. Consider the tips in this tipsheet for travelling with an infant, without disrupting the sleep schedule"
@@ -108,7 +107,6 @@ const Page: NextPage = () => (
       @media (min-width: 1200px) {
       }
     `}</style>
-
   </>
 );
 
