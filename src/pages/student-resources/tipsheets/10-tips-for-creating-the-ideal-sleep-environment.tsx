@@ -3,11 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../../../components/SEO';
-import { DefaultLayout } from '../../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-
-  <DefaultLayout>
+  <>
 
     <SEO
       title="10 Tips for Creating the Ideal Sleep Environment"
@@ -119,7 +117,7 @@ const Page: NextPage = () => (
       }
     `}</style>
 
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

@@ -6,7 +6,7 @@ import { SEO } from '../../../components/SEO';
 import { DefaultLayout } from '../../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
+  <>
 
     <SEO
       title="The 6 Common Training Methods of an Infant Sleep Consultant"
@@ -121,7 +121,7 @@ const Page: NextPage = () => (
       }
     `}</style>
 
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

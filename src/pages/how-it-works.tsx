@@ -5,7 +5,7 @@ import { SEO } from '../components/SEO';
 import { DefaultLayout } from '../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
+  <>
 
     <SEO
       title="How Online Learning Works"
@@ -117,7 +117,7 @@ const Page: NextPage = () => (
       #anytimeSection{background-image: url(${require('../images/bg-white-green-light.jpg')});background-size: cover;}
       #certificationSection{background-image: url(${require('../images/bg-white-green-light.jpg')});background-size: cover;}
     `}</style>
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

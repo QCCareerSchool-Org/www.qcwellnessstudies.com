@@ -3,10 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../../../components/SEO';
-import { DefaultLayout } from '../../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
+  <>
 
     <SEO
       title="How to Become a Virtual Sleep Consultant"
@@ -105,7 +104,7 @@ const Page: NextPage = () => (
       }
     `}</style>
 
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

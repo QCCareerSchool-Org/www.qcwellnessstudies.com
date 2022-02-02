@@ -3,10 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../../../components/SEO';
-import { DefaultLayout } from '../../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
+  <>
 
     <SEO
       title="Baby Sign Language for Beginners: When (and How) to Start"
@@ -92,7 +91,7 @@ const Page: NextPage = () => (
       #heroSection{background-image:url(${require('../../../images/sr-hero-baby-sign-language-for-beginners.jpg')});background-size:cover;background-position:center} 
     `}</style>
 
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

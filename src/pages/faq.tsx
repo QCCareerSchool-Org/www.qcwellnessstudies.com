@@ -3,10 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../components/SEO';
-import { DefaultLayout } from '../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
+  <>
 
     <SEO
       title="Frequently Asked Questions"
@@ -185,7 +184,7 @@ const Page: NextPage = () => (
       #enrollSection{background-image: url(${require('../images/bg-enrollment.jpg')});background-size: cover;}
     `}</style>
 
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

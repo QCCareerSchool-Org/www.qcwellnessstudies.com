@@ -5,10 +5,9 @@ import React from 'react';
 import { ArticleCard } from '../../components/ArticleCard';
 import { CardColumn } from '../../components/CardColumn';
 import { SEO } from '../../components/SEO';
-import { DefaultLayout } from '../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
+  <>
 
     <SEO
       title="QC Student Resources"
@@ -163,7 +162,7 @@ const Page: NextPage = () => (
       }
     `}</style>
 
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

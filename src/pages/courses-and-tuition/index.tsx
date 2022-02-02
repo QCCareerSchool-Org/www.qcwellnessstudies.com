@@ -4,10 +4,9 @@ import React from 'react';
 
 import { PriceCard } from '../../components/PriceCard';
 import { SEO } from '../../components/SEO';
-import { DefaultLayout } from '../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
+  <>
 
     <SEO
       title="Courses &amp; Tuition"
@@ -94,7 +93,7 @@ const Page: NextPage = () => (
       #heroSection{background-image:url(${require('../../images/bg-white-green-light.jpg')});background-size:cover}
       #enrollSection{background-image:url(${require('../../images/bg-enrollment.jpg')});background-size:cover}
     `}</style>
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

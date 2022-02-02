@@ -3,10 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../../../components/SEO';
-import { DefaultLayout } from '../../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
+  <>
 
     <SEO
       title="Learning &amp; Working as a Sleep Consultant During COVID-19"
@@ -104,7 +103,7 @@ const Page: NextPage = () => (
       #heroSection{background-image:url(${require('../../../images/sr-hero-image-working-with-covid.jpg')});background-size:cover;background-position:center} 
     `}</style>
 
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

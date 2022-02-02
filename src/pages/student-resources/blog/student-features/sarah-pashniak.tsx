@@ -4,10 +4,9 @@ import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../../../../components/SEO';
-import { DefaultLayout } from '../../../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
+  <>
 
     <SEO
       title="Student Feature - Sarah Pashniak"
@@ -140,7 +139,7 @@ const Page: NextPage = () => (
       .course-icon{width:80px}
     `}</style>
 
-  </DefaultLayout>
+  </>
 );
 
 export default Page;
