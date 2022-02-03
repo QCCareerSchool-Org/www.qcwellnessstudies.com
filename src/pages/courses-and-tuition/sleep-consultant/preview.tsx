@@ -17,31 +17,18 @@ import { usePrice } from '../../../hooks/usePrice';
 import { useToggle } from '../../../hooks/useToggle';
 import { MinimalLayout } from '../../../layouts/MimimalLayout';
 import { formatPrice } from '../../../lib/functions';
+import { NextPageWithLayout } from '../../_app';
 
 const courses = [ 'sl' ];
 
-const Page: NextPage = () => {
+const Page: NextPageWithLayout = () => {
   const [ popup1, toggle1 ] = useToggle();
   const [ popup2, toggle2 ] = useToggle();
   const location = useLocation();
   const price = usePrice(courses, location?.countryCode, location?.provinceCode);
 
   return (
-    <MinimalLayout
-      SecondaryNav={(): React.ReactElement => (
-        <Subnav
-          heading="Sleep Consultant Course Preview"
-          items={[
-            { name: 'Curriculum', url: '#curriculum' },
-            { name: 'Tuition', url: '#tuition' },
-            { name: 'Support', url: '#support' },
-            { name: 'Guarantee', url: '#guarantee' },
-            { name: 'Working During Covid-19', url: '#working' },
-          ]}
-        />
-      )}
-    >
-
+    <>
       <SEO
         title="Sleep Consultant Course Preview"
         description="Preview the online sleep consultant course offered by QC. Read a detailed course overview, sample some assignments, meet your tutors, and more!"
@@ -323,8 +310,26 @@ const Page: NextPage = () => {
         #workingSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
         #onlineSection{background-image:url(${require('../../../images/bg-fully-online.jpg')});background-size:cover;background-position: center}
       `}</style>
+    </>
+  );
+};
 
-    </MinimalLayout>
+Page.getLayout = function Layout(page) {
+  return (
+    <MinimalLayout
+      secondaryNav={(
+        <Subnav
+          heading="Sleep Consultant Course Preview"
+          items={[
+            { name: 'Curriculum', url: '#curriculum' },
+            { name: 'Tuition', url: '#tuition' },
+            { name: 'Support', url: '#support' },
+            { name: 'Guarantee', url: '#guarantee' },
+            { name: 'Working During Covid-19', url: '#working' },
+          ]}
+        />
+      )}
+    >{page}</MinimalLayout>
   );
 };
 

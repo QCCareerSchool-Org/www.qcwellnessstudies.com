@@ -7,7 +7,6 @@ import { SEO } from '../../components/SEO';
 
 const Page: NextPage = () => (
   <>
-
     <SEO
       title="Courses &amp; Tuition"
       description="QC offers many courses in the wellness industry. Whether you want to become a sleep consultant, skincare consultant, aging in place designer or other wellness professional, you'll find your dream career with QC's training!"

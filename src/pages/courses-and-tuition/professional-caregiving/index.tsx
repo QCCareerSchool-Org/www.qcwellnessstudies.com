@@ -330,23 +330,24 @@ const Page: NextPageWithLayout = () => (
         }
       }
     `}</style>
-
   </>
 );
 
 Page.getLayout = function Layout(page) {
-  return <DefaultLayout
-    SecondaryNav={(): React.ReactElement => (
-      <Subnav
-        heading="Caregiver Course"
-        items={[
-          { name: 'Tuition', url: '#paymentPlans' },
-          { name: 'Course Outline', url: '#outline' },
-          { name: 'Tutors', url: '#tutors' },
-        ]}
-      />
-    )}
-  >{page}</DefaultLayout>;
+  return (
+    <DefaultLayout
+      secondaryNav={(
+        <Subnav
+          heading="Caregiver Course"
+          items={[
+            { name: 'Tuition', url: '#paymentPlans' },
+            { name: 'Course Outline', url: '#outline' },
+            { name: 'Tutors', url: '#tutors' },
+          ]}
+        />
+      )}
+    >{page}</DefaultLayout>
+  );
 };
 
 export default Page;

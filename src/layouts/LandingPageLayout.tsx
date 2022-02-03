@@ -6,13 +6,13 @@ import { LandingPageFooter } from '../components/LandingPageFooter';
 
 type Props = {
   children: ReactNode;
-  SecondaryNav?: React.FC;
+  secondaryNav?: ReactNode;
 };
 
-export const LandingPageLayout = ({ children, SecondaryNav }: Props): ReactElement => (
+export const LandingPageLayout = ({ children, secondaryNav }: Props): ReactElement => (
   <>
     <Header nav={false} />
-    {SecondaryNav && <SecondaryNav />}
+    {secondaryNav}
     <main role="main" className="flex-shrink-0">
       {children}
     </main>
@@ -22,5 +22,5 @@ export const LandingPageLayout = ({ children, SecondaryNav }: Props): ReactEleme
 
 LandingPageLayout.propTypes = {
   children: PropTypes.oneOfType([ PropTypes.element, PropTypes.arrayOf(PropTypes.element.isRequired) ]).isRequired,
-  SecondaryNav: PropTypes.func,
+  secondaryNav: PropTypes.node,
 };
