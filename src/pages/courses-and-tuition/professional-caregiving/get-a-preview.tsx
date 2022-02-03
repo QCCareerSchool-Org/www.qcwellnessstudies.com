@@ -7,6 +7,7 @@ import { SEO } from '../../../components/SEO';
 import { WhyChoose } from '../../../components/WhyChose';
 import { LandingPageLayout } from '../../../layouts/LandingPageLayout';
 import { getRandomIntInclusive } from '../../../lib/randomInt';
+import { NextPageWithLayout } from './_app';
 
 type Props = {
   testGroup: number;
@@ -14,12 +15,11 @@ type Props = {
 
 const formAction = 'https://go.qcwellnessstudies.com/l/947642/2021-12-05/6h9rz';
 
-const Page: NextPage<Props> = ({ testGroup }) => {
+const Page: NextPageWithLayout<Props> = ({ testGroup }) => {
   const hiddenFields = useMemo(() => ([ { key: 'testGroup', value: testGroup } ]), [ testGroup ]);
 
   return (
-    <LandingPageLayout>
-
+    <>
       <SEO
         title="Get a Caregiver Course Preview"
         description="If you're interested in becoming a caregiver, get a preview of QC's Caregiver certifiation course here!"
@@ -89,8 +89,7 @@ const Page: NextPage<Props> = ({ testGroup }) => {
         #requireSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
         #enrollSection{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}
       `}</style>
-
-    </LandingPageLayout>
+    </>
   );
 };
 
@@ -110,6 +109,10 @@ export const getServerSideProps: GetServerSideProps = async context => {
     context.res.setHeader('Set-Cookie', `testGroup=${testGroup}; Max-Age=${maxAge}; Path=/; Secure; SameSite=Strict`);
   }
   return { props: { testGroup } };
+};
+
+Page.getLayout = function Layout(page) {
+  return <LandingPageLayout>{page}</LandingPageLayout>;
 };
 
 export default Page;
