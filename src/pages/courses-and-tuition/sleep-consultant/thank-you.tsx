@@ -88,7 +88,7 @@ const Page: NextPage<Props> = ({ emailAddress }) => {
         #heroSection{background-image:url(${require('../../../images/bg-white-green-light.jpg')});background-size:cover}
         #enrollSection{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}
       `}</style>
-    <>
+    </>
   );
 };
 

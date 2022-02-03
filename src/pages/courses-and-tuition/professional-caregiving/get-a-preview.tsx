@@ -7,7 +7,7 @@ import { SEO } from '../../../components/SEO';
 import { WhyChoose } from '../../../components/WhyChose';
 import { LandingPageLayout } from '../../../layouts/LandingPageLayout';
 import { getRandomIntInclusive } from '../../../lib/randomInt';
-import { NextPageWithLayout } from './_app';
+import { NextPageWithLayout } from '../../_app';
 
 type Props = {
   testGroup: number;
