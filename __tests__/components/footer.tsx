@@ -1,20 +1,20 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { render } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import React from 'react';
 
 import { Footer } from '../../src/components/Footer';
 
-jest.mock('../../src/components/telephone-number', () => ({
+jest.mock('../../src/components/TelephoneNumber', () => ({
   TelephoneNumber: jest.fn().mockReturnValue(null),
 }));
 
-jest.mock('../../src/components/address', () => ({
+jest.mock('../../src/components/Address', () => ({
   Address: jest.fn().mockReturnValue(null),
 }));
-
-// Prevent act() error logs from Link
-// TODO: clean up when fixed: https://github.com/vercel/next.js/pull/20169
-jest.mock('next/link', () => (props: { children: unknown }): unknown => props.children);
 
 expect.extend(toHaveNoViolations);
 
