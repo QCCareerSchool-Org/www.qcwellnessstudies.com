@@ -3,11 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../components/SEO';
-import { DefaultLayout } from '../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
-
+  <>
     <SEO
       title="About QC"
       description="QC Wellness Studies is a faculty of QC Career School. With over 35 years in distance education and an A+ rating from the BBB, you're enrolling in a school you can trust!"
@@ -111,8 +109,7 @@ const Page: NextPage = () => (
       #guaranteeSection{background-image: url(${require('../images/bg-white-green-light.jpg')});background-size: cover;}
       #partnerSection{background-image: url(${require('../images/bg-dark-green-navy.jpg')});background-size: cover;}
     `}</style>
-
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

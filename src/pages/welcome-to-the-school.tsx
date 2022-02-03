@@ -6,7 +6,6 @@ import React, { useEffect } from 'react';
 import { GoogleAdsSaleScript } from '../components/GoogleAdsSaleScript';
 import { SEO } from '../components/SEO';
 import { TelephoneNumber } from '../components/TelephoneNumber';
-import { DefaultLayout } from '../layouts/DefaultLayout';
 import { addToIDevAffiliate } from '../lib/addToIDevAffiliate';
 import { fbqSale } from '../lib/fbq';
 import { gaSale } from '../lib/ga';
@@ -64,8 +63,7 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
   const paymentDate = new Date(data.enrollment.paymentDate);
 
   return (
-    <DefaultLayout>
-
+    <>
       <SEO
         title="Welcome to the School"
         description="Your enrollment has been received and will be processed quickly. You will receive an email within the next business day containing login information to your online student center."
@@ -194,8 +192,7 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
           <p>If you would like to make changes to your account, please contact the School at your earliest convenience by phone or email.</p>
         </div>
       </section>
-
-    </DefaultLayout>
+    </>
   );
 };
 

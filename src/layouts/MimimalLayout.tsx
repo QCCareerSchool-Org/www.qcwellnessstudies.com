@@ -6,13 +6,13 @@ import { Header } from '../components/Header';
 
 type Props = {
   children: ReactNode;
-  SecondaryNav?: React.FC;
+  secondaryNav?: ReactNode;
 };
 
-export const MinimalLayout = ({ children, SecondaryNav }: Props): ReactElement => (
+export const MinimalLayout = ({ children, secondaryNav }: Props): ReactElement => (
   <>
     <Header nav={false} />
-    {SecondaryNav && <SecondaryNav />}
+    {secondaryNav}
     <main role="main" className="flex-shrink-0">
       {children}
     </main>
@@ -22,5 +22,5 @@ export const MinimalLayout = ({ children, SecondaryNav }: Props): ReactElement =
 
 MinimalLayout.propTypes = {
   children: PropTypes.oneOfType([ PropTypes.element, PropTypes.arrayOf(PropTypes.element.isRequired) ]).isRequired,
-  SecondaryNav: PropTypes.func,
+  secondaryNav: PropTypes.node,
 };

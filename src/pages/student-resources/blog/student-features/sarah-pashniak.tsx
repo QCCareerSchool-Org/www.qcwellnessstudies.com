@@ -4,11 +4,9 @@ import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../../../../components/SEO';
-import { DefaultLayout } from '../../../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
-
+  <>
     <SEO
       title="Student Feature - Sarah Pashniak"
       description="QC graduate, Sarah Pashniak, discusses her sleep consultant journey, her passion about sleep, how QC fine-tuned her skills as a professional, and more!"
@@ -139,8 +137,7 @@ const Page: NextPage = () => (
       #heroSection{background-image:url(${require('../../../../images/student-feature/sarah-pashniak-cover.jpg')});background-size:cover;background-position:center}
       .course-icon{width:80px}
     `}</style>
-
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

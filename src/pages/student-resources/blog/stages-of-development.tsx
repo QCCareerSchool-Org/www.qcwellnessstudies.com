@@ -3,11 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../../../components/SEO';
-import { DefaultLayout } from '../../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
-
+  <>
     <SEO
       title="Stages of Development: How Sleep Consultants Can Help"
       description="Infant sleep consultants work with babies at different stages of development. Sleep training a newborn baby can be very different to sleep training a toddler and every infant develops at a different rate."
@@ -119,8 +117,7 @@ const Page: NextPage = () => (
       @media (min-width: 1200px) {
       }
     `}</style>
-
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

@@ -3,12 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../../../components/SEO';
-import { DefaultLayout } from '../../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-
-  <DefaultLayout>
-
+  <>
     <SEO
       title="10 Tips for Creating the Ideal Sleep Environment"
       description="A suitable sleep environment is essential to help babies and young children get a good night's rest. Follow these universal tips to create healthy sleep environments for babies and infants."
@@ -118,8 +115,7 @@ const Page: NextPage = () => (
       @media (min-width: 1200px) {
       }
     `}</style>
-
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

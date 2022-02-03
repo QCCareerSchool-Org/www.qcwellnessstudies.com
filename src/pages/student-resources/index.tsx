@@ -5,11 +5,9 @@ import React from 'react';
 import { ArticleCard } from '../../components/ArticleCard';
 import { CardColumn } from '../../components/CardColumn';
 import { SEO } from '../../components/SEO';
-import { DefaultLayout } from '../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
-
+  <>
     <SEO
       title="QC Student Resources"
       description="As a student of QC Wellness Studies, you have countless resources to help you succeed in your Sleep Consulting course. Read the featured articles and tipsheets in this page for up-to-date advice for sleep consultants."
@@ -162,8 +160,7 @@ const Page: NextPage = () => (
       @media (min-width: 1200px) {
       }
     `}</style>
-
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

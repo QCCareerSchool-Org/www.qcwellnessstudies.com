@@ -3,11 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../../../components/SEO';
-import { DefaultLayout } from '../../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
-
+  <>
     <SEO
       title="The 6 Common Training Methods of an Infant Sleep Consultant"
       description="No matter what the level of caregiver involvement or baby fussiness, these six tried and tested training methods can help improve an infant's sleep."
@@ -120,8 +118,7 @@ const Page: NextPage = () => (
       @media (min-width: 1200px) {
       }
     `}</style>
-
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

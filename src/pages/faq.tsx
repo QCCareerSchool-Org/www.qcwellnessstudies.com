@@ -3,11 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../components/SEO';
-import { DefaultLayout } from '../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
-
+  <>
     <SEO
       title="Frequently Asked Questions"
       description="Find answers to the most frequently asked questions about QC's online training, tuition, and certification courses."
@@ -184,8 +182,7 @@ const Page: NextPage = () => (
       #heroSection{background-image: url(${require('../images/bg-white-green-light.jpg')});background-size: cover;}
       #enrollSection{background-image: url(${require('../images/bg-enrollment.jpg')});background-size: cover;}
     `}</style>
-
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

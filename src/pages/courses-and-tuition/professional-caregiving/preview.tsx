@@ -14,28 +14,16 @@ import { useLocation } from '../../../hooks/useLocation';
 import { usePrice } from '../../../hooks/usePrice';
 import { MinimalLayout } from '../../../layouts/MimimalLayout';
 import { formatPrice } from '../../../lib/functions';
+import { NextPageWithLayout } from '../../_app';
 
 const courses = [ 'fc' ];
 
-const Page: NextPage = () => {
+const Page: NextPageWithLayout = () => {
   const location = useLocation();
   const price = usePrice(courses, location?.countryCode, location?.provinceCode);
 
   return (
-    <MinimalLayout
-      SecondaryNav={(): React.ReactElement => (
-        <Subnav
-          heading="Professional Caregiver Course Preview"
-          items={[
-            { name: 'Curriculum', url: '#curriculum' },
-            { name: 'Tuition', url: '#tuition' },
-            { name: 'Support', url: '#support' },
-            { name: 'Guarantee', url: '#guarantee' },
-          ]}
-        />
-      )}
-    >
-
+    <>
       <SEO
         title="Professional Caregiver Course Preview"
         description="Preview the online professional caregiver course offered by QC. Read a detailed course overview, sample some assignments, meet your tutors, and more!"
@@ -259,8 +247,25 @@ const Page: NextPage = () => {
         #enrollSection{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}
         #onlineSection{background-image:url(${require('../../../images/bg-fully-online.jpg')});background-size:cover;background-position: center}
       `}</style>
+    </>
+  );
+};
 
-    </MinimalLayout>
+Page.getLayout = function Layout(page) {
+  return (
+    <MinimalLayout
+      secondaryNav={(
+        <Subnav
+          heading="Professional Caregiver Course Preview"
+          items={[
+            { name: 'Curriculum', url: '#curriculum' },
+            { name: 'Tuition', url: '#tuition' },
+            { name: 'Support', url: '#support' },
+            { name: 'Guarantee', url: '#guarantee' },
+          ]}
+        />
+      )}
+    >{page}</MinimalLayout>
   );
 };
 

@@ -4,7 +4,6 @@ import React from 'react';
 import { SEO } from '../components/SEO';
 import { TelephoneNumber } from '../components/TelephoneNumber';
 import { useLocation } from '../hooks/useLocation';
-import { DefaultLayout } from '../layouts/DefaultLayout';
 import { getTelephoneNumber } from '../lib/functions';
 import { openLiveChat } from '../lib/livechat';
 
@@ -13,8 +12,7 @@ const Page: NextPage = () => {
   const telephoneNumber = getTelephoneNumber(location?.countryCode);
 
   return (
-    <DefaultLayout>
-
+    <>
       <SEO
         title="Contact Us"
         description="You can contact QC at any time by phone, email or live chat. Or, schedule a call with a student advisor and we'll call you!"
@@ -68,8 +66,7 @@ const Page: NextPage = () => {
       <style jsx>{`
         #formSection{background-image:url(${require('../images/bg-white-green-light.jpg')});background-size:cover}
       `}</style>
-
-    </DefaultLayout>
+    </>
   );
 };
 

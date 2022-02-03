@@ -1,4 +1,3 @@
-import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
@@ -9,6 +8,7 @@ import { SEO } from '../../../components/SEO';
 import { Subnav } from '../../../components/Subnav';
 import { OutlineData, UnitOutline } from '../../../components/UnitOutline';
 import { DefaultLayout } from '../../../layouts/DefaultLayout';
+import { NextPageWithLayout } from '../../_app';
 
 const doubleGuarantee = false;
 const units: { [key: string]: OutlineData[] } = {
@@ -143,19 +143,8 @@ const units: { [key: string]: OutlineData[] } = {
   ],
 };
 
-const Page: NextPage = () => (
-  <DefaultLayout
-    SecondaryNav={(): React.ReactElement => (
-      <Subnav
-        heading="Personal Caregiving Course"
-        items={[
-          { name: 'Tuition', url: '#paymentPlans' },
-          { name: 'Course Outline', url: '#outline' },
-        ]}
-      />
-    )}
-  >
-
+const Page: NextPageWithLayout = () => (
+  <>
     <SEO
       title="Personal Caregiving Course"
       description="Become a certified personal caregiver with QC's online training. QC offers a fully-online personal caregiving course. Get certified faster and launch your own business!"
@@ -357,8 +346,23 @@ const Page: NextPage = () => (
         }
       }
     `}</style>
-
-  </DefaultLayout>
+  </>
 );
+
+Page.getLayout = function Layout(page) {
+  return (
+    <DefaultLayout
+      secondaryNav={(
+        <Subnav
+          heading="Personal Caregiving Course"
+          items={[
+            { name: 'Tuition', url: '#paymentPlans' },
+            { name: 'Course Outline', url: '#outline' },
+          ]}
+        />
+      )}
+    >{page}</DefaultLayout>
+  );
+};
 
 export default Page;
