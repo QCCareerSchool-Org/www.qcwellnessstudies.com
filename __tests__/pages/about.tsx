@@ -1,25 +1,12 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { render } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 import Page from '../../src/pages/about';
-import { Location } from '../../src/providers/location';
-
-jest.mock('../../src/providers/location', () => {
-  const location: Location = { countryCode: 'CA', countryName: 'Canada', provinceCode: 'ON', provinceName: 'Ontario' };
-  return { useLocation: jest.fn().mockReturnValue(location) };
-});
-
-jest.mock('../../src/providers/screen-width', () => {
-  const defaultScreenWidth = 1024;
-  return {
-    useScreenWidth: jest.fn().mockReturnValue(defaultScreenWidth),
-  };
-});
-
-// Prevent act() error logs from Link
-// TODO: clean up when fixed: https://github.com/vercel/next.js/pull/20169
-jest.mock('next/link', () => (props: { children: unknown }): unknown => props.children);
 
 expect.extend(toHaveNoViolations);
 

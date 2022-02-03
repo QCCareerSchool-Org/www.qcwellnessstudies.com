@@ -4,14 +4,14 @@ module.exports = {
   // extended assertions to Jest
   testMatch: [ '**/__tests__/**/*.(ts|tsx)' ],
   // setupFiles: [
-    // '<rootDir>/test/scrollto.js'
+  // '<rootDir>/test/scrollto.js'
   // ],
   setupFilesAfterEnv: [
     '@testing-library/jest-dom/extend-expect',
   ],
   moduleNameMapper: {
-    '\.(css|less|scss)$': require.resolve('./test/style.module.js'),
-    '\.(jpg|svg|png)$': require.resolve('./test/style.module.js'),
-    '\.(jpg|svg|png)\?webp$': require.resolve('./test/style.module.js'),
+    '\\.(css|less|scss)$': require.resolve('./test/style.module.js'),
+    '\\.(jpg|svg|png)$': require.resolve('./test/style.module.js'),
+    '\\.(jpg|svg|png)?webp$': require.resolve('./test/style.module.js'),
   },
 };
