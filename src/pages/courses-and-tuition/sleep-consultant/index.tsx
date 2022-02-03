@@ -1,4 +1,3 @@
-import { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -12,6 +11,7 @@ import { Subnav } from '../../../components/Subnav';
 import { OutlineData, UnitOutline } from '../../../components/UnitOutline';
 import { WhyChoose } from '../../../components/WhyChose';
 import { DefaultLayout } from '../../../layouts/DefaultLayout';
+import { NextPageWithLayout } from '../../_app';
 
 const doubleGuarantee = true;
 
@@ -277,17 +277,8 @@ type Props = {
   enrollPath: string;
 };
 
-const Page: NextPage<Props> = ({ enrollPath = 'https://enroll.qcwellnessstudies.com/' }) => (
-  <DefaultLayout
-    enrollPath={enrollPath}
-    SecondaryNav={(): React.ReactElement => (
-      <Subnav
-        heading="Infant Sleep Consultant Course"
-        items={subNavItems}
-      />
-    )}
-  >
-
+const Page: NextPageWithLayout<Props> = ({ enrollPath = 'https://enroll.qcwellnessstudies.com/' }) => (
+  <>
     <SEO
       title="Sleep Consultant Course"
       description="Become a certified professional sleep consultant with QC's online training. QC offers a fully-online sleep consultant course. Get certified faster and launch your own sleep consulting business!"
@@ -579,8 +570,20 @@ const Page: NextPage<Props> = ({ enrollPath = 'https://enroll.qcwellnessstudies.
         }
       }
     `}</style>
-
-  </DefaultLayout>
+  </>
 );
+
+Page.getLayout = function Layout(page) {
+  return (
+    <DefaultLayout
+      secondaryNav={(
+        <Subnav
+          heading="Infant Sleep Consultant Course"
+          items={subNavItems}
+        />
+      )}
+    >{page}</DefaultLayout>
+  );
+};
 
 export default Page;

@@ -3,12 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../../../components/SEO';
-import { DefaultLayout } from '../../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-
-  <DefaultLayout>
-
+  <>
     <SEO
       title="7 Tips for Virtual Sleep Consulting"
       description="Parents with young children don't have a lot of spare time, especially if those children are struggling to sleep through the night. Virtual consultations with a trained sleep professional offer the perfect solution to help busy parents get the help they need."
@@ -112,8 +109,7 @@ const Page: NextPage = () => (
       @media (min-width: 1200px) {
       }
     `}</style>
-
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

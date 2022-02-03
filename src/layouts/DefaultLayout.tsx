@@ -1,18 +1,18 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 
 type Props = {
   enrollPath?: string;
-  SecondaryNav?: React.FC;
-  children?: React.ReactNode;
+  secondaryNav?: ReactNode;
+  children?: ReactNode;
 };
 
-export const DefaultLayout = ({ children, SecondaryNav, enrollPath = 'https://enroll.qcwellnessstudies.com' }: Props): ReactElement => (
+export const DefaultLayout = ({ children, secondaryNav, enrollPath = 'https://enroll.qcwellnessstudies.com' }: Props): ReactElement => (
   <>
     <Header nav={true} enrollPath={enrollPath} />
-    {SecondaryNav && <SecondaryNav />}
+    {secondaryNav}
     <main role="main" className="flex-shrink-0">
       {children}
     </main>

@@ -4,10 +4,9 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 
 import { SEO } from '../../../../components/SEO';
-import { DefaultLayout } from '../../../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
+  <>
     <SEO
       title="Professional Caregiver Regulations"
       description="Different states have different regulations for professional caregivers. Before you begin your training, make sure you understand these regulations!"
@@ -114,8 +113,7 @@ const Page: NextPage = () => (
         }
       }
     `}</style>
-
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

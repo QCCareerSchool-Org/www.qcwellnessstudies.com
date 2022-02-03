@@ -3,11 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../../../components/SEO';
-import { DefaultLayout } from '../../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
-
+  <>
     <SEO
       title="The Different Types of Insurance Recommended for Sleep Consultants"
       description="Learn about the different types of insurance recommended for sleep consultants"
@@ -86,8 +84,7 @@ const Page: NextPage = () => (
       #enrollToday{background-image:url(${require('../../../images/bg-enrollment.jpg')});background-size:cover}     
       #heroSection{background-image:url(${require('../../../images/cute-baby-boy-hero.jpg')});background-size:cover;background-position:center} 
     `}</style>
-
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

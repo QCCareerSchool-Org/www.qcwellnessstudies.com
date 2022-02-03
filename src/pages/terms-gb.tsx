@@ -1,12 +1,11 @@
-import { NextPage } from 'next';
 import React from 'react';
 
 import { SEO } from '../components/SEO';
 import { TermsLayout } from '../layouts/TermsLayout';
+import { NextPageWithLayout } from './_app';
 
-const Page: NextPage = () => (
-  <TermsLayout>
-
+const Page: NextPageWithLayout = () => (
+  <>
     <SEO
       title="Privacy Policy"
       description="QC Wellness Studies's comprehensive privacy policy"
@@ -48,7 +47,11 @@ const Page: NextPage = () => (
     <p>Email: info@qccareerschool.com<br />Phone: 0800 066 4734</p>
     <p><em>This policy is powered by Free Privacy Policy and Rhino Support helpdesk software.</em></p>
     <p><a onClick={(): false => { window.print(); return false; }} href="#">Print This Page</a></p>
-  </TermsLayout>
+  </>
 );
+
+Page.getLayout = function Layout(page) {
+  return <TermsLayout>{page}</TermsLayout>;
+};
 
 export default Page;

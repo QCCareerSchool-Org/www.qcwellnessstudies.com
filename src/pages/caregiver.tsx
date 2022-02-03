@@ -3,11 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../components/SEO';
-import { DefaultLayout } from '../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
-
+  <>
     <SEO
       title="Online Caregiver Courses"
       description="QC has 2 courses to meet your needs: Professional Caregiver and Personal Caregiver. Whether you want to become a professional caregiver, or a personal caregiver, you'll find your dream career with QC's training!"
@@ -36,8 +34,7 @@ const Page: NextPage = () => (
         <hr />
       </div>
     </section>
-
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

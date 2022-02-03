@@ -1,4 +1,3 @@
-import { NextPage } from 'next';
 import React from 'react';
 
 import { Certification } from '../../../components/Certification';
@@ -10,6 +9,7 @@ import { Subnav } from '../../../components/Subnav';
 import { OutlineData, UnitOutline } from '../../../components/UnitOutline';
 import { WhyChoose } from '../../../components/WhyChose';
 import { DefaultLayout } from '../../../layouts/DefaultLayout';
+import { NextPageWithLayout } from '../../_app';
 
 const doubleGuarantee = false;
 const units: { [key: string]: OutlineData[] } = {
@@ -178,20 +178,8 @@ const units: { [key: string]: OutlineData[] } = {
   ],
 };
 
-const Page: NextPage = () => (
-  <DefaultLayout
-    SecondaryNav={(): React.ReactElement => (
-      <Subnav
-        heading="Skincare Consultant Course"
-        items={[
-          { name: 'Tuition', url: '#paymentPlans' },
-          { name: 'Course Outline', url: '#outline' },
-          { name: 'Tutors', url: '#tutors' },
-        ]}
-      />
-    )}
-  >
-
+const Page: NextPageWithLayout = () => (
+  <>
     <SEO
       title="Skincare Consultant Course"
       description="Become a professional skincare consultant with QC's interactive online course. Study at your own pace and learn to launch your own skincare business!"
@@ -446,8 +434,24 @@ const Page: NextPage = () => (
         }
       }
     `}</style>
-
-  </DefaultLayout>
+  </>
 );
+
+Page.getLayout = function Layout(page) {
+  return (
+    <DefaultLayout
+      secondaryNav={(
+        <Subnav
+          heading="Skincare Consultant Course"
+          items={[
+            { name: 'Tuition', url: '#paymentPlans' },
+            { name: 'Course Outline', url: '#outline' },
+            { name: 'Tutors', url: '#tutors' },
+          ]}
+        />
+      )}
+    >{page}</DefaultLayout>
+  );
+};
 
 export default Page;

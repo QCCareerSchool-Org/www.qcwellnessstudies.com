@@ -3,11 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 
 import { SEO } from '../../../components/SEO';
-import { DefaultLayout } from '../../../layouts/DefaultLayout';
 
 const Page: NextPage = () => (
-  <DefaultLayout>
-
+  <>
     <SEO
       title="Can an Online Course Prepare You for a Sleep Consultant Career?"
       description="If you're on the fence about choosing an online course to start your new career, we're here to help! Online learning provides students with lots of advantages. You can choose when and where you study, and how long your study sessions last."
@@ -127,8 +125,7 @@ const Page: NextPage = () => (
       @media (min-width: 1200px) {
       }
     `}</style>
-
-  </DefaultLayout>
+  </>
 );
 
 export default Page;

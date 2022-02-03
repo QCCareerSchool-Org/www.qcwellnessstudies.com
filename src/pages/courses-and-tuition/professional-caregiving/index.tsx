@@ -1,4 +1,3 @@
-import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
@@ -12,23 +11,12 @@ import { UnitOutline } from '../../../components/UnitOutline';
 import { WhyChoose } from '../../../components/WhyChose';
 import { fcUnits } from '../../../data/units-fc';
 import { DefaultLayout } from '../../../layouts/DefaultLayout';
+import { NextPageWithLayout } from '../../_app';
 
 const doubleGuarantee = false;
 
-const Page: NextPage = () => (
-  <DefaultLayout
-    SecondaryNav={(): React.ReactElement => (
-      <Subnav
-        heading="Caregiver Course"
-        items={[
-          { name: 'Tuition', url: '#paymentPlans' },
-          { name: 'Course Outline', url: '#outline' },
-          { name: 'Tutors', url: '#tutors' },
-        ]}
-      />
-    )}
-  >
-
+const Page: NextPageWithLayout = () => (
+  <>
     <SEO
       title="Caregiver Course"
       description="Become a certified professional caregiver with QC's online training. QC offers a fully-online caregiver course. Get certified faster and launch your own business!"
@@ -342,8 +330,24 @@ const Page: NextPage = () => (
         }
       }
     `}</style>
-
-  </DefaultLayout>
+  </>
 );
+
+Page.getLayout = function Layout(page) {
+  return (
+    <DefaultLayout
+      secondaryNav={(
+        <Subnav
+          heading="Caregiver Course"
+          items={[
+            { name: 'Tuition', url: '#paymentPlans' },
+            { name: 'Course Outline', url: '#outline' },
+            { name: 'Tutors', url: '#tutors' },
+          ]}
+        />
+      )}
+    >{page}</DefaultLayout>
+  );
+};
 
 export default Page;
