@@ -1,4 +1,4 @@
-import { GetServerSideProps, NextPage } from 'next';
+import { GetServerSideProps } from 'next';
 import Link from 'next/link';
 import React, { useMemo } from 'react';
 
