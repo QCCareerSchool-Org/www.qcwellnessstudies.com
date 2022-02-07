@@ -10,17 +10,18 @@ const Page: NextPageWithLayout = () => (
       <h1>Enrollment Agreement</h1>
 
       <h2>1. Shipping Policy</h2>
-      <p>All course materials will be shipped within two business days of the date of enrollment. Materials will be shipped via courier, and are expected to be delivered within 10 business days.</p>
+      <p>All applicable course materials will be shipped within two business days of the date of enrollment. Materials will be shipped via courier, and are expected to be delivered within 10 business days.</p>
 
       <h2>2. Money-Back Guarantee</h2>
       <h3>21-Day Money-Back Guarantee</h3>
       <p>You have 21 days from the date of enrollment to examine the course and materials. If you are not entirely satisfied or choose not to complete the course, contact the School within this 21-day period, either by phone or email.</p>
+      <p>If your course includes physical materials, you must return them to receive a refund:</p>
       <ul>
         <li>QC will provide you with shipping instructions and ask you to return the physical course materials, postage paid and with a tracking number. QC is not responsible for lost return shipments that do not have a valid tracking number.</li>
         <li>Your course fees will be refunded in full once QC has received your returned materials. Note that return shipping fees will not be covered or refunded by QC.</li>
         <li>Returned course materials must be unused and in their original condition. A full refund cannot be issued if any materials have been used or are not in their original condition.</li>
-        <li>A full refund cannot be granted if you have already submitted course work to your tutor for grading. In this case, a partial tuition refund may be offered instead.</li>
       </ul>
+      <p>A full refund cannot be granted if you have already submitted course work to your tutor for grading. In this case, a partial tuition refund may be offered instead.</p>
       <h3>1-Year Money-back Guarantee</h3>
       <p>QC&apos;s <strong>sleep consultant course</strong> offers a 1-year money back guarantee. If, after graduation, you do not earn the equivalent of your course tuition in professional consulting fees, you will be eligible for a full refund of your tuition. In order to qualify for this refund, you must demonstrate that you have made a reasonable effort to obtain clients.</p>
       <p>Graduates who request a refund under the 1-year guarantee must contact the School <strong>within 13 to 18 months post-graduation</strong> and provide proof that they:</p>
