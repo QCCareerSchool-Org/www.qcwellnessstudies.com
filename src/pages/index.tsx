@@ -1,9 +1,13 @@
 import { NextPage } from 'next';
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { jsonLdScriptProps } from 'react-schemaorg';
+import { EducationalOrganization } from 'schema-dts';
 
 import { SEO } from '../components/SEO';
+import { qcWellnessStudiesEducationalOrganization } from '../qcWellnessStudiesEducationalOrganization';
 
 const Page: NextPage = () => (
   <>
@@ -12,6 +16,10 @@ const Page: NextPage = () => (
       description="QC Wellness Studies is the only fully online school for professional wellness training. Whether you want to be a sleep consultant, a professional skincare consultant or an aging in place designer, QC has an online course for your future career!"
       canonical=""
     />
+
+    <Head>
+      <script {...jsonLdScriptProps<EducationalOrganization>(qcWellnessStudiesEducationalOrganization)} />
+    </Head>
 
     <section id="heroSection">
       <div className="container">
