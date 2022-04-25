@@ -1,7 +1,6 @@
 const withImages = require('next-images');
 const withPurgeCss = require('next-purgecss');
 module.exports = withPurgeCss(withImages({
-  webpack5: false,
   images: {
     disableStaticImages: true,
   },
