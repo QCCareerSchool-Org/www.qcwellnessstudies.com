@@ -5,13 +5,22 @@ import React, { ReactElement, ReactNode, useEffect } from 'react';
 
 import '../styles/app.scss';
 // import GoogleTagManager from '../components/google-tag-manager';
+import { ErrorBoundary } from '../components/ErrorBoundary';
 import { DefaultLayout } from '../layouts/DefaultLayout';
 import { fbqPageview } from '../lib/fbq';
 import { gaPageview } from '../lib/ga';
 import { pardotPageview } from '../lib/pardot';
+import { TrackJS } from '../lib/trackjs-isomorphic';
 import { uetPageview } from '../lib/uet';
 import { LocationProvider } from '../providers/LocationProvider';
 import { ScreenWidthProvider } from '../providers/ScreenWidthProvider';
+
+if (!TrackJS.isInstalled()) {
+  TrackJS.install({
+    token: '0377457a8a0c41c2a11da5e34f786bba',
+    application: 'qc-wellness-studies',
+  });
+}
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -46,12 +55,14 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout): JSX.Element => {
   const getLayout = Component.getLayout ?? (page => <DefaultLayout>{page}</DefaultLayout>);
 
   return (
-    <ScreenWidthProvider>
-      <LocationProvider>
-        {/* <GoogleTagManager gtmId="GTM-P9J948Z" /> */}
-        {getLayout(<Component {...pageProps} />)}
-      </LocationProvider>
-    </ScreenWidthProvider>
+    <ErrorBoundary fallback={<></>}>
+      <ScreenWidthProvider>
+        <LocationProvider>
+          {/* <GoogleTagManager gtmId="GTM-P9J948Z" /> */}
+          {getLayout(<Component {...pageProps} />)}
+        </LocationProvider>
+      </ScreenWidthProvider>
+    </ErrorBoundary>
   );
 };
 
