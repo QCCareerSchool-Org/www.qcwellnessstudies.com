@@ -21,7 +21,7 @@ const Page: NextPageWithLayout = () => (
       <p>A full refund cannot be granted if you have already submitted course work to your tutor for grading. In this case, a partial tuition refund may be offered instead.</p>
       <h3>1-Year Money-back Guarantee</h3>
       <p>QC&apos;s <strong>sleep consultant course</strong> offers a 1-year money back guarantee. If, after graduation, you do not earn the equivalent of your course tuition in professional consulting fees, you will be eligible for a full refund of your tuition. In order to qualify for this refund, you must demonstrate that you have made a reasonable effort to obtain clients.</p>
-      <p>Graduates who request a refund under the 1-year guarantee must contact the School <strong>within 13 to 18 months post-graduation</strong> and provide proof that they:</p>
+      <p>Graduates who request a refund under the 1-year guarantee must contact the School <strong>at least 13 months and no later than 18 months after graduation</strong> and provide proof that they:</p>
       <ul>
         <li>Have completed the optional business training unit in full before graduation;</li>
         <li>Have a working website and social media presence that are at least 10 months old and that follow best practices outlined in the course&apos;s business unit; and</li>
