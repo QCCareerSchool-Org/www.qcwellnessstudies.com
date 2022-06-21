@@ -62,9 +62,9 @@ export const getTelephoneNumber = (countryCode?: string): string => {
     case ukCode:
       return '0800 066 4734';
     case auCode:
-      return '0800-451-979';
-    case nzCode:
       return '1800 531 923';
+    case nzCode:
+      return '0800 451 979';
     default:
       return '+1 613-749-8248';
   }
@@ -76,15 +76,15 @@ export const getTelephoneNumber = (countryCode?: string): string => {
  */
 export const getAddress = (countryCode: string): string[] => {
   switch (countryCode) {
-    case 'GB':
-    case 'IM':
-    case 'GG':
-    case 'JE':
-      return [
-        '186 St. Albans Road',
-        'Suite 18',
-        'Watford WD24 4AS',
-      ];
+    // case 'GB':
+    // case 'IM':
+    // case 'GG':
+    // case 'JE':
+    //   return [
+    //     '186 St. Albans Road',
+    //     'Suite 18',
+    //     'Watford WD24 4AS',
+    //   ];
     case 'AU':
     case 'CX':
     case 'CC':
