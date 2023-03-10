@@ -227,7 +227,7 @@ const Page: NextPageWithLayout = () => (
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-            <h2>Basic Requirements for Becoming a Skinare Consultant</h2>
+            <h2>Basic Requirements for Becoming a Skincare Consultant</h2>
             <ul className="mb-4">
               <li><p><strong>Attention to Detail </strong> &mdash; You&apos;ll need to become familiar with a multitude of skin types and conditions, and be able to identify them based on a single consultation with your client. This will require precision and care!</p></li>
               <li><p><strong>Flexibility</strong> &mdash; Most skincare consultants work on appointments, and most clients will expect you to be available outside of regular business hours. Skincare professionals who have availability on some evenings and weekends have a much greater chance of success.</p></li>
