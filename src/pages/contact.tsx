@@ -48,7 +48,7 @@ const Page: NextPage = () => {
         </div>
       </section>
 
-      <a className="anchor" id="form"></a>
+      {/* <a className="anchor" id="form"></a>
       <section id="formSection">
         <div className="container">
           <div className="row">
@@ -61,7 +61,7 @@ const Page: NextPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <style jsx>{`
         #formSection{background-image:url(${require('../images/bg-white-green-light.jpg')});background-size:cover}
