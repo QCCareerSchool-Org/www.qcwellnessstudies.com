@@ -106,7 +106,7 @@ const Page: NextPage = () => (
       <div className="container">
         <h2>Get Started Today!</h2>
         <p className="h5 sans-serif">Why wait? Start your professional training program today and get on the path toward a new and exciting career.</p>
-        <a href="#" className="btn btn-secondary btn-lg mt-4">ENROLL ONLINE</a>
+        <a href="https://enroll.qcwellnessstudies.com" className="btn btn-secondary btn-lg mt-4">ENROLL ONLINE</a>
       </div>
     </section>
 
