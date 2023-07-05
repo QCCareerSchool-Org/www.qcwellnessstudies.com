@@ -11,12 +11,19 @@ import { NextPageWithLayout } from '../../_app';
 
 type Props = {
   testGroup: number;
+  gclid: string | null;
 };
 
 const formAction = 'https://go.qcwellnessstudies.com/l/947642/2021-12-05/6h9rz';
 
-const Page: NextPageWithLayout<Props> = ({ testGroup }) => {
-  const hiddenFields = useMemo(() => ([ { key: 'testGroup', value: testGroup } ]), [ testGroup ]);
+const Page: NextPageWithLayout<Props> = ({ testGroup, gclid }) => {
+  const hiddenFields = useMemo(() => {
+    const h: Array<{ key: string; value: string | number }> = [ { key: 'testGroup', value: testGroup } ];
+    if (gclid) {
+      h.push({ key: 'gclid', value: gclid });
+    }
+    return h;
+  }, [ testGroup, gclid ]);
 
   return (
     <>
@@ -93,7 +100,7 @@ const Page: NextPageWithLayout<Props> = ({ testGroup }) => {
 };
 
 // eslint-disable-next-line @typescript-eslint/require-await
-export const getServerSideProps: GetServerSideProps = async context => {
+export const getServerSideProps: GetServerSideProps<Props> = async context => {
   let testGroup: number | undefined;
   const storedTestGroup = context.req.cookies.testGroup;
   if (typeof storedTestGroup !== 'undefined') {
@@ -107,7 +114,10 @@ export const getServerSideProps: GetServerSideProps = async context => {
     const maxAge = 60 * 60 * 24 * 365;
     context.res.setHeader('Set-Cookie', `testGroup=${testGroup}; Max-Age=${maxAge}; Path=/; Secure; SameSite=Strict`);
   }
-  return { props: { testGroup } };
+
+  const gclid = typeof context.query.gclid === 'string' ? context.query.gclid : null;
+
+  return { props: { testGroup, gclid } };
 };
 
 Page.getLayout = function Layout(page) {
