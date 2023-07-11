@@ -13,12 +13,11 @@ type Props = {
   testGroup: number;
   gclid: string | null;
   msclkid: string | null;
-  utmTerm: string | null;
 };
 
 const formAction = 'https://go.qcwellnessstudies.com/l/947642/2021-12-05/6h9rz';
 
-const Page: NextPageWithLayout<Props> = ({ testGroup, gclid, msclkid, utmTerm }) => {
+const Page: NextPageWithLayout<Props> = ({ testGroup, gclid, msclkid }) => {
   const hiddenFields = useMemo(() => {
     const h: Array<{ key: string; value: string | number }> = [ { key: 'testGroup', value: testGroup } ];
     if (gclid) {
@@ -26,9 +25,6 @@ const Page: NextPageWithLayout<Props> = ({ testGroup, gclid, msclkid, utmTerm })
     }
     if (msclkid) {
       h.push({ key: 'msclkid', value: msclkid });
-    }
-    if (utmTerm) {
-      h.push({ key: 'utmTerm', value: utmTerm });
     }
     return h;
   }, [ testGroup, gclid ]);
@@ -126,9 +122,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async context => {
 
   const gclid = typeof context.query.gclid === 'string' ? context.query.gclid : null;
   const msclkid = typeof context.query.msclkid === 'string' ? context.query.msclkid : null;
-  const utmTerm = typeof context.query.utm_term === 'string' ? context.query.utm_term : null;
 
-  return { props: { testGroup, gclid, msclkid, utmTerm } };
+  return { props: { testGroup, gclid, msclkid } };
 };
 
 Page.getLayout = function Layout(page) {
