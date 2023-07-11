@@ -27,7 +27,7 @@ const Page: NextPageWithLayout<Props> = ({ testGroup, gclid, msclkid }) => {
       h.push({ key: 'msclkid', value: msclkid });
     }
     return h;
-  }, [ testGroup, gclid ]);
+  }, [ testGroup, gclid, msclkid ]);
 
   return (
     <>
