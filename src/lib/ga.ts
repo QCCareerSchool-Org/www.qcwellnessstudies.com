@@ -37,4 +37,10 @@ export const gaSale = (enrollment: Enrollment): void => {
       quantity: 1,
     })),
   });
+
+  gaEvent('conversion', {
+    send_to: 'AW-1071836607/rla_CMLg3ZgBEL_bi_8D', // eslint-disable-line camelcase
+    value: enrollment.cost,
+    currency: enrollment.currencyCode,
+  });
 };
