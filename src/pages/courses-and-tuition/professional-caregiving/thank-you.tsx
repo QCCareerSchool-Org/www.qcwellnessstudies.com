@@ -19,6 +19,12 @@ const Page: NextPage<Props> = ({ emailAddress }) => {
   const effectCalled = useRef<boolean>(false);
 
   useEffect(() => {
+    if (emailAddress !== null && emailAddress.length > 0) {
+      window.gtag?.('set', 'user-data', { email: emailAddress });
+    }
+  }, [ emailAddress ]);
+
+  useEffect(() => {
     if (effectCalled.current) {
       return;
     }
@@ -30,12 +36,6 @@ const Page: NextPage<Props> = ({ emailAddress }) => {
       currency: 'USD',
     });
   }, []);
-
-  useEffect(() => {
-    if (emailAddress !== null && emailAddress.length > 0) {
-      window.gtag?.('set', 'user-data', { email: emailAddress });
-    }
-  }, [ emailAddress ]);
 
   return (
     <>
