@@ -3,7 +3,6 @@ import { GetServerSideProps, NextPage } from 'next';
 import ErrorPage from 'next/error';
 import React, { useEffect } from 'react';
 
-import { GoogleAdsSaleScript } from '../components/GoogleAdsSaleScript';
 import { SEO } from '../components/SEO';
 import { TelephoneNumber } from '../components/TelephoneNumber';
 import { addToIDevAffiliate } from '../lib/addToIDevAffiliate';
@@ -70,7 +69,6 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
         canonical="/welcome-to-the-school"
         noIndex={true}
       />
-      <GoogleAdsSaleScript conversionLabel="rla_CMLg3ZgBEL_bi_8D" enrollment={data.enrollment} />
 
       <section id="thankyouSection">
         <div className="container">

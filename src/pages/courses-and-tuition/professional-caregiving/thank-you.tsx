@@ -2,12 +2,12 @@ import { promisify } from 'util';
 import { urlencoded } from 'body-parser';
 import { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { IoMdBook, IoMdEye, IoMdLaptop, IoMdSchool } from 'react-icons/io';
 
-import { GoogleAdsLeadScript } from '../../../components/GoogleAdsLeadScript';
 import { SEO } from '../../../components/SEO';
 import { fbqLead } from '../../../lib/fbq';
+import { gaEvent } from '../../../lib/ga';
 
 const urlencodedAsync = promisify(urlencoded());
 
@@ -16,9 +16,26 @@ type Props = {
 };
 
 const Page: NextPage<Props> = ({ emailAddress }) => {
+  const effectCalled = useRef<boolean>(false);
+
   useEffect(() => {
+    if (effectCalled.current) {
+      return;
+    }
+    effectCalled.current = true;
     fbqLead();
+    gaEvent('conversion', {
+      send_to: 'AW-1071836607/Srl-CMns3JgBEL_bi_8D', // eslint-disable-line camelcase
+      value: 1.0,
+      currency: 'USD',
+    });
   }, []);
+
+  useEffect(() => {
+    if (emailAddress !== null && emailAddress.length > 0) {
+      window.gtag?.('set', 'user-data', { email: emailAddress });
+    }
+  }, [ emailAddress ]);
 
   return (
     <>
@@ -28,7 +45,6 @@ const Page: NextPage<Props> = ({ emailAddress }) => {
         canonical="/courses-and-tuition/professional-caregiving/thank-you"
         noIndex={true}
       />
-      <GoogleAdsLeadScript conversionLabel="AWiyCKKCz7gBEL_bi_8D" emailAddress={emailAddress} />
 
       <section id="heroSection">
         <div className="container">
