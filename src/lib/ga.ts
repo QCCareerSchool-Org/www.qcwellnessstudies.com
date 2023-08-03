@@ -65,5 +65,4 @@ export const gaSale = (enrollment: Enrollment): void => {
     currency: enrollment.currencyCode,
     transaction_id: enrollment.id.toString(), // eslint-disable-line camelcase
   });
-
 };

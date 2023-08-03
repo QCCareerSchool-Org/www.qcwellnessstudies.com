@@ -12,6 +12,8 @@ import { gaEvent } from '../../../lib/ga';
 const urlencodedAsync = promisify(urlencoded());
 
 type Props = {
+  firstName: string | null;
+  lastName: string | null;
   emailAddress: string | null;
 };
 
@@ -109,14 +111,19 @@ const Page: NextPage<Props> = ({ emailAddress }) => {
 };
 
 // eslint-disable-next-line @typescript-eslint/require-await
-export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
+export const getServerSideProps: GetServerSideProps<Props> = async ({ req, res }) => {
   if (req.method === 'POST') {
     await urlencodedAsync(req, res);
-    type RequestWithBody = typeof req & { body: any };
+    type RequestWithBody = typeof req & { body: unknown };
     const body = (req as RequestWithBody).body;
-    return { props: { emailAddress: body?.emailAddress ?? null } };
+    if (typeof body === 'object' && body !== null) {
+      const firstName = 'firstName' in body && typeof body.firstName === 'string' ? body.firstName : null;
+      const lastName = 'lastName' in body && typeof body.lastName === 'string' ? body.lastName : null;
+      const emailAddress = 'emailAddress' in body && typeof body.emailAddress === 'string' ? body.emailAddress : null;
+      return { props: { firstName, lastName, emailAddress } };
+    }
   }
-  return { props: { emailAddress: null } };
+  return { props: { firstName: null, lastName: null, emailAddress: null } };
 };
 
 export default Page;
