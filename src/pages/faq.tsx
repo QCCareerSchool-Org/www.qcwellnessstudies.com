@@ -77,7 +77,7 @@ const Page: NextPage = () => (
             <h3 className="h4 text-dark">Do I have to pay ongoing fees to use the school&apos;s templates or keep my certification up to date?</h3>
             <p><i>No! Your certification is yours forever, and you have access to all course resources for life, no extra charge!</i></p>
             <h3 className="h4 text-dark">How much money can I make as a professional caregiver?</h3>
-            <p><i>That depends on many factors, including your area, the types of services you offer, and your level of experience. Professional caregivers that work for caregiving agencies usually make little above minimum wage. However by providing freelance services you&apos;re able to skip the agency &ldquo;middle ma&rdquo; and charge your clients directly. This allows you to earn a much higher salary! Independent caregivers are often paid as much as $20-$25/hour however some experienced caregivers earn as high as $35-$40 per hour!</i></p>
+            <p><i>That depends on many factors, including your area, the types of services you offer, and your level of experience. Professional caregivers that work for caregiving agencies usually make little above minimum wage. However by providing freelance services you&apos;re able to skip the agency &ldquo;middle man&rdquo; and charge your clients directly. This allows you to earn a much higher salary! Independent caregivers are often paid as much as $20-$25/hour however some experienced caregivers earn as high as $35-$40 per hour!</i></p>
             <Link href="/courses-and-tuition/personal-care-aide"><a className="btn btn-secondary mt-3 mb-3">View Course</a></Link>
             <div className="card">
               <div className="card-body">
