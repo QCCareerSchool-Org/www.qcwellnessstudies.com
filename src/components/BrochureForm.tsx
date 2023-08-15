@@ -1,7 +1,8 @@
-import React, { FC, FormEventHandler, useRef } from 'react';
+import React, { ChangeEventHandler, FC, FormEventHandler, useReducer, useRef } from 'react';
 
 import { useLocation } from '../hooks/useLocation';
 import { addLead } from '../lib/leads';
+import { Spinner } from './Spinner';
 
 export type HiddenField = {
   key: string;
@@ -33,9 +34,54 @@ type Props = {
   errors?: boolean;
 };
 
+type State = {
+  formSubmitting: boolean;
+  telephoneNumber: string;
+  smsOptIn: boolean;
+  telephoneError: boolean;
+  telephoneErrorMessage?: string;
+};
+
+type Action =
+  | { type: 'FORM_SUBMITTED' }
+  | { type: 'FORM_COMPLETE' }
+  | { type: 'TELEPHONE_NUMBER_CHANGED'; payload: string }
+  | { type: 'SMS_OPT_IN_CHANGED'; payload: boolean };
+
+const reducer = (state: State, action: Action): State => {
+  switch (action.type) {
+    case 'FORM_SUBMITTED':
+      return { ...state, formSubmitting: true };
+    case 'FORM_COMPLETE':
+      return { ...state, formSubmitting: false };
+    case 'TELEPHONE_NUMBER_CHANGED': {
+      let telephoneError = false;
+      let telephoneErrorMessage: string | undefined = undefined;
+      if (state.smsOptIn && action.payload.length === 0) {
+        telephoneError = true;
+        telephoneErrorMessage = 'You have opted into getting text messages. A telephone number is required.';
+      }
+      return { ...state, telephoneNumber: action.payload, telephoneError, telephoneErrorMessage };
+    }
+    case 'SMS_OPT_IN_CHANGED': {
+      let telephoneError = false;
+      let telephoneErrorMessage: string | undefined = undefined;
+      if (state.telephoneNumber.length === 0 && action.payload) {
+        telephoneError = true;
+        telephoneErrorMessage = 'You have opted into getting text messages. A telephone number is required.';
+      }
+      return { ...state, smsOptIn: action.payload, telephoneError, telephoneErrorMessage };
+    }
+  }
+};
+
+const initialState: State = { formSubmitting: false, telephoneNumber: '', smsOptIn: false, telephoneError: false };
+
 const getHiddenField = (name: string, hiddenFields?: Array<{ key: string; value: string | number }>): string | number | null => {
   return hiddenFields?.find(({ key }) => key === name)?.value ?? null;
 };
+
+const disabledDelay = 5000;
 
 // Do we need to keep track of the opt in date, or will Pardot do that? For telephoneOptIn too?
 
@@ -53,6 +99,16 @@ export const BrochureForm: FC<Props> = ({ action, phoneNumber = false, buttonTex
   const emailOptInRef = useRef<HTMLInputElement>(null);
   const smsOptInRef = useRef<HTMLInputElement>(null);
 
+  const [ state, dispatch ] = useReducer(reducer, initialState);
+
+  const handleTelephoneNumberChange: ChangeEventHandler<HTMLInputElement> = e => {
+    dispatch({ type: 'TELEPHONE_NUMBER_CHANGED', payload: e.target.value });
+  };
+
+  const handleSMSOptInChange: ChangeEventHandler<HTMLInputElement> = e => {
+    dispatch({ type: 'SMS_OPT_IN_CHANGED', payload: e.target.checked });
+  };
+
   const handleSubmit: FormEventHandler<HTMLFormElement> = e => {
     e.preventDefault();
 
@@ -69,6 +125,8 @@ export const BrochureForm: FC<Props> = ({ action, phoneNumber = false, buttonTex
     const emailAddressInput = emailAddressRef.current;
     const firstNameInput = firstNameRef.current;
     const lastNameInput = lastNameRef.current;
+
+    dispatch({ type: 'FORM_SUBMITTED' });
 
     Promise.resolve().then(async () => {
       submitting.current = true;
@@ -95,8 +153,11 @@ export const BrochureForm: FC<Props> = ({ action, phoneNumber = false, buttonTex
       });
     }).catch(err => {
       console.error('Error adding lead', err);
-    }).finally(() => {
+    }).then(async () => {
       form.submit();
+      return new Promise(res => setTimeout(res, disabledDelay));
+    }).finally(() => {
+      dispatch({ type: 'FORM_COMPLETE' });
       submitting.current = false;
     });
   };
@@ -124,7 +185,8 @@ export const BrochureForm: FC<Props> = ({ action, phoneNumber = false, buttonTex
       {phoneNumber && (
         <div className="mb-4">
           <label htmlFor="telephoneNumber" className="form-label">Phone Number</label>
-          <input ref={telephoneNumberRef} type="tel" id="telephoneNumber" name="telephoneNumber" className="form-control" autoComplete="tel" defaultValue={initialValues?.telephoneNumber ?? ''} />
+          <input ref={telephoneNumberRef} onChange={handleTelephoneNumberChange} value={state.telephoneNumber} type="tel" id="telephoneNumber" name="telephoneNumber" className={`form-control ${state.telephoneError ? 'is-invalid' : ''}`} autoComplete="tel" defaultValue={initialValues?.telephoneNumber ?? ''} />
+          {state.telephoneErrorMessage && <div className="invalid-feedback">{state.telephoneErrorMessage}</div>}
         </div>
       )}
       <div className="mb-4">
@@ -139,7 +201,7 @@ export const BrochureForm: FC<Props> = ({ action, phoneNumber = false, buttonTex
         <>
           <div className="mb-4">
             <div className="form-check">
-              <input ref={smsOptInRef} className="form-check-input" type="checkbox" id="smsOptIn" name="smsOptIn" value="yes" defaultChecked={initialValues?.smsOptIn ?? false} />
+              <input ref={smsOptInRef} onChange={handleSMSOptInChange} checked={state.smsOptIn} className="form-check-input" type="checkbox" id="smsOptIn" name="smsOptIn" value="yes" defaultChecked={initialValues?.smsOptIn ?? false} />
               <label className="form-check-label" htmlFor="smsOptIn">
                 I agree to receive phone calls and/or text messages from a QC student advisor. Standard rates apply.
               </label>
@@ -148,7 +210,10 @@ export const BrochureForm: FC<Props> = ({ action, phoneNumber = false, buttonTex
         </>
       )}
       {errors && <p className="text-danger mb-4" style={{ marginTop: '-0.5rem' }}>Please complete all required form fields.</p>}
-      <button className={buttonClassName ?? 'btn btn-primary'} type="submit">{buttonText}</button>
+      <div className="d-flex align-items-center">
+        <button className={buttonClassName ?? 'btn btn-primary'} type="submit" disabled={state.formSubmitting}>{buttonText}</button>
+        {state.formSubmitting && <div className="ml-2"><Spinner /></div>}
+      </div>
     </form>
   );
 };
