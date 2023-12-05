@@ -42,7 +42,7 @@ const Page: NextPage = () => (
               <li>To receive higher pay in your current caregiving career</li>
               <li>To complete additional training</li>
             </ul>
-            <p className="text-center"><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>
+            <p className="text-center"><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c=fc">ENROLL NOW</a></p>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@ const Page: NextPage = () => (
       <div className="container">
         <h2>Enroll Today</h2>
         <p className="lead mb-5">Start your caregiving training today<br />and launch an exciting, rewarding career!</p>
-        <p><a href="https://enroll.qcwellnessstudies.com/?c[]=fc" className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
+        <p><a href="https://enroll.qcwellnessstudies.com/?c=fc" className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
       </div>
     </section>
 

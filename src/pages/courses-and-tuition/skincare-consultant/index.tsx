@@ -234,7 +234,7 @@ const Page: NextPageWithLayout = () => (
               <li><p><strong>Reliability</strong> &mdash; As a professional, you&apos;ll be expected to adhere to a set schedule. Time management skills are essential to succeed in this career.</p></li>
               <li><p><strong>Empathy</strong> &mdash; Some of your clients will come to you in a desperate state, having tried everything they can think of to get a specific skin condition under control. Some clients might get frustrated if the results you offer aren&apos;t transformative enough. You&apos;ll need the ability to deal with these clients compassionately and professionally, always!</p></li>
             </ul>
-            <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c[]=sk" className="btn btn-secondary">ENROLL NOW</a></p>
+            <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c=sk" className="btn btn-secondary">ENROLL NOW</a></p>
           </div>
         </div>
       </div>
@@ -379,7 +379,7 @@ const Page: NextPageWithLayout = () => (
             </div>
           </div>
         </div>
-        <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c[]=sk" className="btn btn-secondary">ENROLL ONLINE</a></p>
+        <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c=sk" className="btn btn-secondary">ENROLL ONLINE</a></p>
       </div>
     </section>
 
@@ -414,7 +414,7 @@ const Page: NextPageWithLayout = () => (
       <div className="container">
         <h2>Enroll Today</h2>
         <p className="lead mb-5">Start your online skincare consultant training today<br />and launch an exciting, rewarding career!</p>
-        <p><a href="https://enroll.qcwellnessstudies.com/?c[]=sk" className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
+        <p><a href="https://enroll.qcwellnessstudies.com/?c=sk" className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
       </div>
     </section>
 

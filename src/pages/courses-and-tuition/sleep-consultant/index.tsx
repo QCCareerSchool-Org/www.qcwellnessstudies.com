@@ -333,7 +333,7 @@ const Page: NextPageWithLayout<Props> = ({ enrollPath = 'https://enroll.qcwellne
               <li><p><strong>Reliability</strong> &mdash; As a professional, you&apos;ll be expected to adhere to a set schedule. Time management skills are essential to succeed in this career.</p></li>
               <li><p><strong>Care &amp; Compassion</strong> &mdash; You&apos;re going to be working with babies, infants and toddlers every day. You&apos;ll need to be empathetic as they adjust to their new routines.</p></li>
             </ul>
-            <p className="text-center"><a className="btn btn-secondary" href={`${enrollPath}?c[]=sl`}>ENROLL NOW</a></p>
+            <p className="text-center"><a className="btn btn-secondary" href={`${enrollPath}?c=sl`}>ENROLL NOW</a></p>
           </div>
         </div>
       </div>
@@ -498,7 +498,7 @@ const Page: NextPageWithLayout<Props> = ({ enrollPath = 'https://enroll.qcwellne
             </div>
           </div>
         </div>
-        <p className="text-center"><a href={`${enrollPath}?c[]=sl`} className="btn btn-secondary">ENROLL ONLINE</a></p>
+        <p className="text-center"><a href={`${enrollPath}?c=sl`} className="btn btn-secondary">ENROLL ONLINE</a></p>
       </div>
     </section>
 
@@ -549,7 +549,7 @@ const Page: NextPageWithLayout<Props> = ({ enrollPath = 'https://enroll.qcwellne
       <div className="container">
         <h2>Enroll Today</h2>
         <p className="lead mb-5">Start your online sleep consultant training today<br />and launch an exciting, rewarding career!</p>
-        <p><a href={`${enrollPath}?c[]=sl`} className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
+        <p><a href={`${enrollPath}?c=sl`} className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
       </div>
     </section>
 

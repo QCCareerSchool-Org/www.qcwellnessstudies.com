@@ -17,7 +17,7 @@ export const PriceCard = ({ courses }: Props): ReactElement => {
   const radix = 32;
   const startPosition = 2;
   const uniqueId = useRef(Math.random().toString(radix).slice(startPosition));
-  const enrollLink = `https://enroll.qcwellnessstudies.com/?${courses.map(c => `c[]=${c}`).join('&')}`;
+  const enrollLink = `https://enroll.qcwellnessstudies.com/?${courses.map(c => `c=${c}`).join('&')}`;
   return (
     <div className="card shadow text-center price-card">
       <div className="card-body">
