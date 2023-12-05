@@ -234,7 +234,7 @@ const Page: NextPageWithLayout = () => {
         <div className="container">
           <h2>Enroll Today</h2>
           <p className="lead mb-5">Start your online caregiver training today<br />and launch an exciting, rewarding career!</p>
-          <p><a href="https://enroll.qcwellnessstudies.com/?c[]=fc" className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
+          <p><a href="https://enroll.qcwellnessstudies.com/?c=fc" className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
         </div>
       </section>
 

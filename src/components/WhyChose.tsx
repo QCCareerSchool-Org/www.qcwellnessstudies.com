@@ -31,7 +31,7 @@ export const WhyChoose = ({ subheader, affordable, flexible, comprehensive, cour
         <p className="text-dark text-center">{comprehensive}</p>
       </div>
     </div>
-    {!hideButton && <p className="mt-5"><a href={`https://enroll.qcwellnessstudies.com/?${courses.map(c => `c[]=${c}`).join('&')}`} className="btn btn-secondary">GET STARTED TODAY!</a></p>}
+    {!hideButton && <p className="mt-5"><a href={`https://enroll.qcwellnessstudies.com/?${courses.map(c => `c=${c}`).join('&')}`} className="btn btn-secondary">GET STARTED TODAY!</a></p>}
   </div>
 );
 

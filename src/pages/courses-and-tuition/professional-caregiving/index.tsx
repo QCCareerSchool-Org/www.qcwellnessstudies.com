@@ -46,7 +46,7 @@ const Page: NextPageWithLayout = () => (
           <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
             <p><img className="img-fluid" src={require('../../../images/promo-inlay-december.png')} alt="December Promo" /></p>
             <p className="lead mb-5">Save an extra $100 on your professional caregiver course tuition.<br />This discount will be automatically applied when you enroll.</p>
-            <p><a className="btn btn-secondary btn-lg" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>
+            <p><a className="btn btn-secondary btn-lg" href="https://enroll.qcwellnessstudies.com/?c=fc">ENROLL NOW</a></p>
           </div>
         </div>
       </div>
@@ -109,7 +109,7 @@ const Page: NextPageWithLayout = () => (
               <li><p><strong>Physical Stamina</strong> &mdash; You&apos;re ready to work hard and have the physical strength to help your clients with mobility issues. You know your own limitations. You are ready to turn down a client if you know you won&apos;t have the physical ability to properly care for him or her.</p></li>
               <li><p><strong>Integrity &amp; Discretion</strong> &mdash; You understand the importance of respecting your clients&apos; privacy while working in their homes and helping them with sensitive tasks. You&apos;re discreet and would never dream of betraying a client&apos;s trust!</p></li>
             </ul>
-            <p className="text-center"><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c[]=fc">ENROLL NOW</a></p>
+            <p className="text-center"><a className="btn btn-secondary" href="https://enroll.qcwellnessstudies.com/?c=fc">ENROLL NOW</a></p>
           </div>
         </div>
       </div>
@@ -269,7 +269,7 @@ const Page: NextPageWithLayout = () => (
             </div>
           </div>
         </div>
-        <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c[]=fc" className="btn btn-secondary">ENROLL ONLINE</a></p>
+        <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c=fc" className="btn btn-secondary">ENROLL ONLINE</a></p>
       </div>
     </section>
 
@@ -310,7 +310,7 @@ const Page: NextPageWithLayout = () => (
       <div className="container">
         <h2>Enroll Today</h2>
         <p className="lead mb-5">Start your caregiving training today<br />and launch an exciting, rewarding career!</p>
-        <p><a href="https://enroll.qcwellnessstudies.com/?c[]=fc" className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
+        <p><a href="https://enroll.qcwellnessstudies.com/?c=fc" className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
       </div>
     </section>
 

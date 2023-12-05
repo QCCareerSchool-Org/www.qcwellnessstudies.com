@@ -145,7 +145,7 @@ const Page: NextPageWithLayout = () => (
               <li><p><strong>Business &amp; Marketing Expertise</strong> &mdash; Since this course is an advanced course for certified decorating professionals, the course does not contain business training. You will need to rely on your own business and marketing experience to sell your aging in place services to potential clients.</p></li>
               <li><p><strong>Reliability, Flexibility &amp; Empathy</strong> &mdash; Working with aging in place clients can require a greater degree of sensitivity than your usual design and decorating clients. Being able to connect with your aging clients on a personal level and offer them greater flexibility when scheduling consultations will be a great way to garner their trust!</p></li>
             </ul>
-            <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c[]=ap" className="btn btn-secondary">ENROLL NOW</a></p>
+            <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c=ap" className="btn btn-secondary">ENROLL NOW</a></p>
           </div>
         </div>
       </div>
@@ -262,7 +262,7 @@ const Page: NextPageWithLayout = () => (
             </div>
           </div>
         </div>
-        <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c[]=ap" className="btn btn-secondary">ENROLL ONLINE</a></p>
+        <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c=ap" className="btn btn-secondary">ENROLL ONLINE</a></p>
       </div>
     </section>
 
@@ -298,7 +298,7 @@ const Page: NextPageWithLayout = () => (
       <div className="container">
         <h2>Enroll Today</h2>
         <p className="lead mb-5">Start your online aging in place training today<br />and launch an exciting, rewarding career!</p>
-        <p><a href="https://enroll.qcwellnessstudies.com/?c[]=ap" className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
+        <p><a href="https://enroll.qcwellnessstudies.com/?c=ap" className="btn btn-secondary btn-lg">ENROLL ONLINE</a></p>
       </div>
     </section>
 

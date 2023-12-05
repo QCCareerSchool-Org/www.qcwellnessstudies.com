@@ -131,7 +131,7 @@ export function getQueryString(params: { [key: string]: any }): string {
     const param = params[k];
     if (Array.isArray(param)) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      return param.map((val: any) => `${encodeURIComponent(k)}[]=${encodeURIComponent(val)}`).join('&');
+      return param.map((val: any) => `${encodeURIComponent(k)}=${encodeURIComponent(val)}`).join('&');
     }
     return `${encodeURIComponent(k)}=${encodeURIComponent(param)}`;
   }).join('&');

@@ -278,7 +278,7 @@ const Page: NextPageWithLayout = () => (
             </div>
           </div>
         </div>
-        <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c[]=ic" className="btn btn-secondary">ENROLL ONLINE</a></p>
+        <p className="text-center"><a href="https://enroll.qcwellnessstudies.com/?c=ic" className="btn btn-secondary">ENROLL ONLINE</a></p>
       </div>
     </section>
 
@@ -326,7 +326,7 @@ const Page: NextPageWithLayout = () => (
       <div className="container">
         <h2>Enroll Online Today</h2>
         <p className="lead mb-5">If you&apos;re ready to learn important skills to be the personal caregiver your loved one deserves, enroll today!<br />Complete the course in as little as one month!</p>
-        <p><a href="https://enroll.qcwellnessstudies.com/?c[]=ic" className="btn btn-secondary btn-lg">ENROLL NOW</a></p>
+        <p><a href="https://enroll.qcwellnessstudies.com/?c=ic" className="btn btn-secondary btn-lg">ENROLL NOW</a></p>
       </div>
     </section>
 
