@@ -343,7 +343,7 @@ const Page: NextPageWithLayout = () => (
               <img src={require('../../../images/sk-outline-c.jpg')} className="rounded img-fluid mt-2" alt="Sleep Consultant Course Unit C" />
             </div>
             <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0 text-lg-left mb-4">
-              <h3 className="text-dark">Unit C: Workng with Skin Conditions</h3>
+              <h3 className="text-dark">Unit C: Working with Skin Conditions</h3>
               <p className="mb-0">In this unit you&apos;ll learn about specific skin conditions and skin concerns that you&apos;ll encounter as a skincare professional. You&apos;ll learn how to assess these conditions, and what products/tools to specifically recommend or stay away from based on the client&apos;s unique needs. You&apos;ll also learn what serious but rare conditions to look out for, and when you should refer a client to a dermatologist or other healthcare professional.</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
