@@ -16,7 +16,7 @@ import { usePrice } from '../../../hooks/usePrice';
 import { useToggle } from '../../../hooks/useToggle';
 import { MinimalLayout } from '../../../layouts/MimimalLayout';
 import { formatPrice } from '../../../lib/functions';
-import { NextPageWithLayout } from '../../_app';
+import { NextPageWithLayout } from '../../_app.page';
 
 const courses = [ 'sl' ];
 

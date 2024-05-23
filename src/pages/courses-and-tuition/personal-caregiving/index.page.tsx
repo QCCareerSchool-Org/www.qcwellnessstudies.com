@@ -8,7 +8,7 @@ import { SEO } from '../../../components/SEO';
 import { Subnav } from '../../../components/Subnav';
 import { OutlineData, UnitOutline } from '../../../components/UnitOutline';
 import { DefaultLayout } from '../../../layouts/DefaultLayout';
-import { NextPageWithLayout } from '../../_app';
+import { NextPageWithLayout } from '../../_app.page';
 
 const doubleGuarantee = false;
 const units: { [key: string]: OutlineData[] } = {
