@@ -3,12 +3,12 @@ import React from 'react';
 import { DeadlineFunnelScript } from '../../../components/DeadlineFunnelScript';
 import { LandingPageLayout } from '../../../layouts/LandingPageLayout';
 import { NextPageWithLayout } from '../../_app';
-import OriginalPage from '.';
+import OriginalPage from './index.page';
 
 const Page: NextPageWithLayout = () => (
   <>
     <DeadlineFunnelScript />
-    <OriginalPage enrollPath="https://enroll.qcwellnessstudies.com/100-off" />
+    <OriginalPage enrollPath="https://enroll.qcwellnessstudies.com/50-off" />
   </>
 );
 

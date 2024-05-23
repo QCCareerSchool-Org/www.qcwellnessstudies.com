@@ -6,7 +6,7 @@ import { render } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import React, { ReactElement } from 'react';
 
-import Page from '../../src/pages/about';
+import Page from '../../src/pages/about.page';
 
 expect.extend(toHaveNoViolations);
 
