@@ -11,7 +11,7 @@ import { UnitOutline } from '../../../components/UnitOutline';
 import { WhyChoose } from '../../../components/WhyChose';
 import { fcUnits } from '../../../data/units-fc';
 import { DefaultLayout } from '../../../layouts/DefaultLayout';
-import { NextPageWithLayout } from '../../_app';
+import { NextPageWithLayout } from '../../_app.page';
 
 const doubleGuarantee = false;
 

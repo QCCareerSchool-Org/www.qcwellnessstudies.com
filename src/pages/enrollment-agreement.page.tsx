@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { TermsLayout } from '../layouts/TermsLayout';
-import { NextPageWithLayout } from './_app';
+import { NextPageWithLayout } from './_app.page';
 
 const Page: NextPageWithLayout = () => (
   <>

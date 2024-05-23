@@ -2,7 +2,7 @@ import React from 'react';
 
 import { SEO } from '../components/SEO';
 import { TermsLayout } from '../layouts/TermsLayout';
-import { NextPageWithLayout } from './_app';
+import { NextPageWithLayout } from './_app.page';
 
 const Page: NextPageWithLayout = () => (
   <>
