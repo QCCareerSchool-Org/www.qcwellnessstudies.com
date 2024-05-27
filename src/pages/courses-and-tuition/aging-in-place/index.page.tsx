@@ -217,7 +217,7 @@ const Page: NextPageWithLayout = () => (
         <div className="row">
           <div className="col-12 col-md-10 offset-md-1">
             <h2 className="text-dark text-center">Full Course Outline</h2>
-            <p className="lead text-center">Here&apos;s a detailed outline of all topics you&apos;ll learn in the aging in place certification course.</p>
+            <p className="lead text-center">Here&apos;s a detailed outline of all the topics you&apos;ll study in the aging in place certification course.</p>
           </div>
         </div>
         <div className="container">

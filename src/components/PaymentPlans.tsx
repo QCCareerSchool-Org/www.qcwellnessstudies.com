@@ -28,8 +28,8 @@ export const PaymentPlans = ({ courses, doubleGuarantee, enrollPath = 'https://e
             <p className="text-dark">Includes everything you need to get certified!<br />All prices are in {price?.currency.name}</p>
             <button type="button" className="btn btn-dark" onClick={toggle}>{doubleGuarantee ? 'Double' : '21-Day'} Money-Back Guarantee!</button>
           </div>
-          <div className="col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-4 mb-4 mb-lg-0">
-            <div className="card shadow text-center">
+          <div className="d-flex col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-4 mb-4 mb-md-0">
+            <div className="card shadow text-center w-100">
               <div className="card-body">
                 <p className="card-text">PAY IN FULL</p>
                 <p className="small text-muted mb-0"><del>{price?.currency.symbol}{formatPrice(price?.discountedCost)}</del></p>
@@ -39,8 +39,8 @@ export const PaymentPlans = ({ courses, doubleGuarantee, enrollPath = 'https://e
               </div>
             </div>
           </div>
-          <div className="col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-4">
-            <div className="card shadow text-center">
+          <div className="d-flex col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-4">
+            <div className="card shadow text-center w-100">
               <div className="card-body">
                 <p className="card-text">INSTALLMENT PLAN</p>
                 <p className="small text-muted mb-0">&nbsp;</p>
