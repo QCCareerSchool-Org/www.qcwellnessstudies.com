@@ -7,193 +7,13 @@ import { Included } from '../../../components/Included';
 import { PaymentPlans } from '../../../components/PaymentPlans';
 import { SEO } from '../../../components/SEO';
 import { Subnav } from '../../../components/Subnav';
-import { OutlineData, UnitOutline } from '../../../components/UnitOutline';
+import { UnitOutline } from '../../../components/UnitOutline';
 import { WhyChoose } from '../../../components/WhyChose';
 import { DefaultLayout } from '../../../layouts/DefaultLayout';
 import { NextPageWithLayout } from '../../_app.page';
+import { units } from './units';
 
-const doubleGuarantee = true;
-
-export const units: { [key: string]: OutlineData[] } = {
-  a: [
-    {
-      title: 'Introduction to Sleep Coaching',
-      topics: [
-        'Industry overview',
-        'Roles, responsibilities, and required skills',
-        'Overview of key skills, including communication, planning, and organizing',
-        'Common misconceptions about sleep consulting',
-        'Licensing requirements, business needs, additional certifications',
-        'Professional associations & organizations',
-      ],
-    },
-    {
-      title: 'Infant and toddler sleep behavior',
-      topics: [
-        'Determining infant age groups',
-        'Types of sleep',
-        'Understanding newborn, baby, and toddler development',
-        'Ideal sleep schedules for children in every age group',
-        'Effects of sleep on childhood development',
-        'A holistic vision of sleep habits and behaviors',
-      ],
-    },
-    {
-      title: 'Development and Sleep Habits',
-      topics: [
-        'Understanding mental and physical development in infants',
-        'Habits, nutrition, sleep, and behavior formulation',
-        'Common myths about behaviors and habits',
-        'Caregiving and childhood brain development',
-        'Caregiving and habit formation',
-        'Caregiving and building healthy habits',
-      ],
-    },
-  ],
-  b: [
-    {
-      title: 'Sleep Training Methods',
-      topics: [
-        'Creating, implementing, establishing, and modifying sleep routines',
-        'Key sleep training methods and techniques',
-        'The "Cry it out" / "Extinction" method',
-        'The "Check and Console" / "Ferber" method',
-        'The "Chair" method',
-        'The "Fading" method',
-        'The "Pick Up Put Down" method',
-        'The "No cry" method(s)',
-      ],
-    },
-    {
-      title: 'Spaces for Good Sleep',
-      topics: [
-        'Effects of home environments on family sleep habits',
-        'Sleep environments for different age groups',
-        'Transitioning from healthy co-sleeping for newborns to sleep training toddlers and older children',
-        'Creating a perfect nursery',
-        'Incorporating sleep technologies, including white noise generators, sleep training alarm clocks, night lights, and daylight simulation',
-        'Essential oils and diffusers, with a focus on calming scents, oils to avoid, and safety tips',
-        'Understanding and preventing Sudden Infant Death Syndrome (SIDS)',
-      ],
-    },
-  ],
-  c: [
-    {
-      title: 'Getting to Know Your Clients',
-      topics: [
-        'Onboarding clients',
-        'Conducting client consultations',
-        'Client intake processes',
-        'Client follow-ups',
-        'Tools and templates to help you work with client data',
-        'Getting and using honest feedback from clients',
-      ],
-    },
-    {
-      title: 'Individualized Sleep Plans',
-      topics: [
-        'Using questionnaires and surveys to determine client needs',
-        'Key questions to ask during client interviews',
-        'Identifying client concerns during intake',
-        'Using intake surveys to build sleep plans',
-        'Key components of every sleep plan',
-        'Creating ideal sleep schedules for newborns, babies, toddlers, and older children',
-        'Tracking a sleep plan',
-        'Creating effective sleep logs',
-        'Evaluating a sleep plan based on client feedback',
-        'Revising a sleep plan before and after implementation',
-      ],
-    },
-    {
-      title: 'Implementing a Sleep Plan',
-      topics: [
-        'Program considerations for each age group',
-        'Types of plans: from "skeleton plans" to "premium plans", upgrades, follow-ups, and how to offer discounts',
-        'Creating templates for different sleep consulting methods',
-        'Creating templates to match parental needs',
-        'How to communicate your sleep plan',
-        'Materials to provide clients at the start of a sleep plan',
-        'Providing feedback during the first days of the plan',
-        'Reviewing sleep logs and modifying sleep plans',
-        'Conducting follow-ups',
-      ],
-    },
-  ],
-  d: [
-    {
-      title: 'Special Situations',
-      topics: [
-        'Identifying appropriate methods in every situation',
-        'How to prepare to work with different families',
-        'Sleep training multiple infants of the same age',
-        'Sleep training multiple children of different ages',
-        'Training twins or triplets',
-        'Training children with older or younger siblings',
-        'Understanding and sleep training infants with disabilities, medical diagnoses, or special needs',
-        'Creating effective solutions for a single caregiver using a dual-parent model',
-        'Working with parents and medical professionals',
-        'Adapting sleep training plans for single-parent households or single caregivers with multiple children',
-        'Working with non-parent caregivers',
-      ],
-    },
-    {
-      title: 'Effective Coaching',
-      topics: [
-        'Teaching clients how to navigate infant age groups',
-        'Communication skills, including listening to clients, delivering your message, and coaching for longevity',
-        'Support skills, including constructive feedback, positive reinforcement, and compassionate understanding',
-        'Planning, setting goals, and creating strategies',
-        'Implementing feedback to encourage growth and change behavior',
-        'Working with limitations (your own and your clients\')',
-      ],
-    },
-    {
-      title: 'Troubleshooting',
-      topics: [
-        'Navigating parental conflicts',
-        'Adjusting the plan when the infant isn\'t responding',
-        'Rejection of methods by parents',
-        'Addressing lifestyle changes',
-        'Accounting for medical issues in the sleep plan',
-      ],
-    },
-  ],
-  e: [
-    {
-      title: 'Starting Your Own Business',
-      topics: [
-        'Naming your business and creating a business plan',
-        'Identifying the core values of your business and defining an ideal client profile',
-        'Assessing needs in your community and gaps in the market',
-        'Setting your prices, packages, and learning how to incentivize returning customers or customer referrals',
-        'Outlining your budget and expected income',
-        'Creating realistic business goals',
-      ],
-    },
-    {
-      title: 'Licensing, Restrictions & Legal Aspects',
-      topics: [
-        'Ethical considerations & legal obligations when working with children',
-        'Certification requirements & service restrictions',
-        'Professional associations & organizations',
-        'Client contracts & other legal documents',
-        'Insurance considerations',
-        'Health care training: CPR, first aid, and other certifications to consider',
-      ],
-    },
-    {
-      title: 'Marketing and Promoting Your Business',
-      topics: [
-        'Creating an effective brand, personalizing your brand, and using your brand to sell your business',
-        'Finding clients and advertising your services',
-        'Tips for learning about your clientele and how to market your services using traditional and digital marketing strategies',
-        'Creating an effective online presence through your website and social media',
-        'Using community events, groups, and online groups and events to promote your services',
-        'Identifying key partners, developing relationships with local businesses, and creating joint advertising with other small businesses',
-      ],
-    },
-  ],
-};
+const doubleGuarantee = false;
 
 export const subNavItems = [
   { name: 'Tuition', url: '#paymentPlans' },
@@ -208,7 +28,7 @@ type Props = {
 const Page: NextPageWithLayout<Props> = ({ enrollPath = 'https://enroll.qcwellnessstudies.com/' }) => (
   <>
     <SEO
-      title="Sleep Consultant Course"
+      title="Pediatric Sleep Consultant Course"
       description="Become a certified professional sleep consultant with QC's online training. QC offers a fully-online sleep consultant course. Get certified faster and launch your own sleep consulting business!"
       canonical="/courses-and-tuition/sleep-consultant"
     />
@@ -256,7 +76,7 @@ const Page: NextPageWithLayout<Props> = ({ enrollPath = 'https://enroll.qcwellne
           <div className="col-12 col-md-10 offset-md-1 col-lg-7 offset-lg-0">
             <h2>Basic Requirements for Becoming a Sleep Consultant</h2>
             <ul className="mb-4">
-              <li><p><strong>Patience</strong> &mdash; Infants and toddlers are vulnerable human beings with diverse personalities. Caregivers are often stressed, busy, and overwhelmed. This is where you come in. You need to bring calm and order to stressful conditions</p></li>
+              <li><p><strong>Patience</strong> &mdash; Infants and toddlers are vulnerable human beings with diverse personalities. Caregivers are often stressed, busy, and overwhelmed. This is where you come in. You need to bring calm and order to stressful conditions.</p></li>
               <li><p><strong>Flexibility</strong> &mdash; Both children and their caregivers have different needs and preferences. You need to be attentive to these differences and be able to adapt your approach depending on the child or caregiver. Sometimes that means putting your own preferences aside and striving to do what&apos;s best for your clients.</p></li>
               <li><p><strong>Reliability</strong> &mdash; As a professional, you&apos;ll be expected to adhere to a set schedule. Time management skills are essential to succeed in this career.</p></li>
               <li><p><strong>Care &amp; Compassion</strong> &mdash; You&apos;re going to be working with newborns, babies, and toddlers every day. Sometimes they&apos;ll be difficult, for a variety of different reasons. You&apos;ll need to be empathetic as they adjust to their new routines.</p></li>
@@ -302,10 +122,9 @@ const Page: NextPageWithLayout<Props> = ({ enrollPath = 'https://enroll.qcwellne
             <h2>How You&apos;ll Learn</h2>
             <p>QC&apos;s signature online learning experience is designed to help you succeed! QC&apos;s courses provide you with tons of hands-on experience to enrich your learning. Combine that with detailed individualized feedback from your tutor and you&apos;re guaranteed to receive a well-rounded educational experience.</p>
             <ul>
-              <li>Log in to your Online Student Center to access all your course materials, including interactive lessons, instructional videos and assignments</li>
+              <li>Log in to your Online Student Center to access all your course materials, including interactive lessons, instructional videos and assignments.</li>
               <li>Complete a variety of theoretical and practical assignments designed to hone your skills as a professional sleep consultant.</li>
-              <li>Upload your completed assignments to the Online Student Center.</li>
-              <li>An industry expert will grade your work and provide you with personalized feedback</li>
+              <li>An industry expert will grade your work and provide you with personalized feedback.</li>
               <li>Once you&apos;ve completed your course and your tuition has been paid in full, you&apos;ll be all set to graduate and receive your professional certification!</li>
             </ul>
           </div>
@@ -464,12 +283,7 @@ const Page: NextPageWithLayout<Props> = ({ enrollPath = 'https://enroll.qcwellne
             <p>This is your chance to inspect the entire course, risk-free! If you decide this course isn&apos;t the right fit for you, simply contact your student advisor to withdraw from the course. As long as you haven&apos;t submitted any work to your tutor yet, your tuition will be refunded in full!</p>
           </>
         )}
-        oneYear={(
-          <>
-            <p>You&apos;ll succeed in your new career, and that&apos;s a promise! If you don&apos;t earn the equivalent of your tuition within one year after graduating from the sleep consultant course, you&apos;ll be eligible for a full refund of your tuition. Simply contact the school, and provide proof that you&apos;ve made a reasonable effort to gain clients.</p>
-            <p><strong>Note:</strong> the 1-year guarantee is only available to graduates of the course. This means you must have successfully completed each unit and have paid your tuition in full.</p>
-          </>
-        )}
+
       />
     </section>
 

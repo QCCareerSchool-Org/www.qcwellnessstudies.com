@@ -29,9 +29,9 @@ const Page: NextPageWithLayout = () => {
   return (
     <>
       <SEO
-        title="Sleep Consultant Course Preview"
-        description="Preview the online sleep consultant course offered by QC. Read a detailed course overview, sample some assignments, meet your tutors, and more!"
-        canonical="/courses-and-tuition/personal-care-aide/preview"
+        title="Pediatric Sleep Consultant Course Preview"
+        description="Preview the online Pediatric Sleep Consultant course offered by QC. Read a detailed course overview, sample some assignments, meet your tutors, and more!"
+        canonical="/courses-and-tuition/sleep-consultant/preview"
         noIndex={true}
       />
 
@@ -40,7 +40,7 @@ const Page: NextPageWithLayout = () => {
           <div className="row mt-5">
             <div className="col-12 col-md-10 offset-md-1">
               <p><Image width="129" height="132" src={require('../../../images/certification-iscp.png')} alt="Infant Sleep Consulting Professional Certification" /></p>
-              <h1 className="text-uppercase">Infant Sleep Consultant Course</h1>
+              <h1 className="text-uppercase">Pediatric Sleep Consultant Course</h1>
               <h2 className="h3">Course Preview</h2>
             </div>
           </div>
@@ -51,17 +51,18 @@ const Page: NextPageWithLayout = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 mb-3">
-              <h2 className="text-dark">Infant Sleep Consultant Certification Course</h2>
-              <p>Sleep consulting is a booming industry in modern society. New parents understand the importance of healthy sleep habits to their infants and toddlers&apos; health and wellbeing. When a child doesn&apos;t sleep, the parents don&apos;t either! Parents can sometimes become desperate for solutions to their children&apos;s sleeping problems. As a certified sleep consultant, you&apos;ll be able to help!</p>
-              <p>QC&apos;s online course equips you with everything you need to begin your career as a sleep consultant. To run an effective sleep consulting business you must learn about best practices and techniques. You must also know how to communicate with clients and develop the management expertise needed to run a profitable company.</p>
-              <p>This course is perfect for anyone who loves children and want to work in the child care industry, either part-time or full-time.<strong> This includes</strong></p>
+              <h2 className="text-dark">Pediatric Sleep Consultant Certification Course</h2>
+              <h3 className="h4">Unlock a Rewarding Career in a Thriving Industry</h3>
+              <p>Sleep consulting is a booming industry in today&apos;s society. New parents are increasingly aware of the crucial role healthy sleep habits play in the health and well-being of their infants and toddlers. When a child doesn&apos;t sleep, neither do the parents! This often leads to parents seeking expert solutions for their children&apos;s sleep challenges. As a certified sleep consultant, you&apos;ll be equipped to provide these much-needed solutions.</p>
+              <p>QC&apos;s comprehensive online course offers everything you need to launch a successful career as a sleep consultant. You&apos;ll learn the best practices and techniques essential for effective sleep consulting, along with crucial skills in client communication and business management to ensure your venture is profitable and impactful.</p>
+              <p>This course is ideal for individuals passionate about working with children and interested in the childcare industry, whether part-time or full-time, including:</p>
               <ul>
                 <li>Parents of young children</li>
-                <li>Work-at-home moms and dads</li>
-                <li>Professionals already working in the child care industry</li>
-                <li>Professionals already working in the healthcare and/or wellness industries</li>
+                <li>Work-at-home parents</li>
+                <li>Professionals in the childcare industry</li>
+                <li>Professionals in the healthcare and wellness industries</li>
               </ul>
-              <p>Do you want to learn more about the course from the point of view of our graduates?<Link href="/student-resources/blog/student-features/sarah-pashniak"><a> Meet Sarah Pashniak, a QC graduate, who now runs a successful sleep consulting business!</a></Link></p>
+              <p>Curious about the course from a graduate&apos;s perspective? <Link href="/student-resources/blog/student-features/sarah-pashniak"><a>Meet Sarah Pashniak, a QC graduate who now runs a flourishing sleep consulting business</a></Link>. Discover her inspiring journey and see how the course can transform your career.</p>
             </div>
           </div>
         </div>

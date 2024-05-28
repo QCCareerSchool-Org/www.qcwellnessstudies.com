@@ -2,10 +2,11 @@ import { promisify } from 'util';
 import { urlencoded } from 'body-parser';
 import { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { IoMdBook, IoMdEye, IoMdLaptop, IoMdSchool } from 'react-icons/io';
 
 import { SEO } from '../../../components/SEO';
+import { useOnce } from '../../../hooks/useOnce';
 import { fbqLead } from '../../../lib/fbq';
 import { gaEvent } from '../../../lib/ga';
 
@@ -18,26 +19,20 @@ type Props = {
 };
 
 const Page: NextPage<Props> = ({ emailAddress }) => {
-  const effectCalled = useRef<boolean>(false);
-
   useEffect(() => {
     if (emailAddress !== null && emailAddress.length > 0) {
       window.gtag?.('set', 'user-data', { email: emailAddress });
     }
   }, [ emailAddress ]);
 
-  useEffect(() => {
-    if (effectCalled.current) {
-      return;
-    }
-    effectCalled.current = true;
+  useOnce(() => {
     fbqLead();
     gaEvent('conversion', {
       send_to: 'AW-1071836607/Srl-CMns3JgBEL_bi_8D', // eslint-disable-line camelcase
       value: 1.0,
       currency: 'USD',
     });
-  }, []);
+  });
 
   return (
     <>
