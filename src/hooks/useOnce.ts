@@ -11,5 +11,5 @@ export const useOnce = (fn: () => void): void => {
     alreadyCalled.current = true;
 
     fn();
-  }, []);
+  }, [ fn ]);
 };

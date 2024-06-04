@@ -164,7 +164,7 @@ export const units: { [key: string]: OutlineData[] } = {
         'Professional associations & organizations',
         'Client contracts & other legal documents',
         'Insurance considerations',
-        'Health care training: CPR, first aid, and other certifications to consider',
+        'Health care training, including CPR, first aid, and other certifications to consider',
       ],
     },
     {
