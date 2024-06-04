@@ -29,9 +29,9 @@ const Page: NextPageWithLayout = () => {
   return (
     <>
       <SEO
-        title="Sleep Consultant Course Preview"
-        description="Preview the online sleep consultant course offered by QC. Read a detailed course overview, sample some assignments, meet your tutors, and more!"
-        canonical="/courses-and-tuition/personal-care-aide/preview"
+        title="Pediatric Sleep Consultant Course Preview"
+        description="Preview the online Pediatric Sleep Consultant course offered by QC. Read a detailed course overview, sample some assignments, meet your tutors, and more!"
+        canonical="/courses-and-tuition/sleep-consultant/preview"
         noIndex={true}
       />
 
@@ -40,7 +40,7 @@ const Page: NextPageWithLayout = () => {
           <div className="row mt-5">
             <div className="col-12 col-md-10 offset-md-1">
               <p><Image width="129" height="132" src={require('../../../images/certification-iscp.png')} alt="Infant Sleep Consulting Professional Certification" /></p>
-              <h1 className="text-uppercase">Infant Sleep Consultant Course</h1>
+              <h1 className="text-uppercase">Pediatric Sleep Consultant Course</h1>
               <h2 className="h3">Course Preview</h2>
             </div>
           </div>
@@ -51,17 +51,18 @@ const Page: NextPageWithLayout = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 mb-3">
-              <h2 className="text-dark">Infant Sleep Consultant Certification Course</h2>
-              <p>Sleep consulting is a booming industry in modern society. New parents understand the importance of healthy sleep habits to their infants and toddlers&apos; health and wellbeing. When a child doesn&apos;t sleep, the parents don&apos;t either! Parents can sometimes become desperate for solutions to their children&apos;s sleeping problems. As a certified sleep consultant, you&apos;ll be able to help!</p>
-              <p>QC&apos;s online course equips you with everything you need to begin your career as a sleep consultant. To run an effective sleep consulting business you must learn about best practices and techniques. You must also know how to communicate with clients and develop the management expertise needed to run a profitable company.</p>
-              <p>This course is perfect for anyone who loves children and want to work in the child care industry, either part-time or full-time.<strong> This includes</strong></p>
+              <h2 className="text-dark">Pediatric Sleep Consultant Certification Course</h2>
+              <h3 className="h4">Unlock a Rewarding Career in a Thriving Industry</h3>
+              <p>Sleep consulting is a booming industry in today&apos;s society. New parents are increasingly aware of the crucial role healthy sleep habits play in the health and well-being of their infants and toddlers. When a child doesn&apos;t sleep, neither do the parents! This often leads to parents seeking expert solutions for their children&apos;s sleep challenges. As a certified sleep consultant, you&apos;ll be equipped to provide these much-needed solutions.</p>
+              <p>QC&apos;s comprehensive online course offers everything you need to launch a successful career as a sleep consultant. You&apos;ll learn the best practices and techniques essential for effective sleep consulting, along with crucial skills in client communication and business management to ensure your venture is profitable and impactful.</p>
+              <p>This course is ideal for individuals passionate about working with children and interested in the childcare industry, whether part-time or full-time, including:</p>
               <ul>
                 <li>Parents of young children</li>
-                <li>Work-at-home moms and dads</li>
-                <li>Professionals already working in the child care industry</li>
-                <li>Professionals already working in the healthcare and/or wellness industries</li>
+                <li>Work-at-home parents</li>
+                <li>Professionals in the childcare industry</li>
+                <li>Professionals in the healthcare and wellness industries</li>
               </ul>
-              <p>Do you want to learn more about the course from the point of view of our graduates?<Link href="/student-resources/blog/student-features/sarah-pashniak"><a> Meet Sarah Pashniak, a QC graduate, who now runs a successful sleep consulting business!</a></Link></p>
+              <p>Curious about the course from a graduate&apos;s perspective? <Link href="/student-resources/blog/student-features/sarah-pashniak"><a>Meet Sarah Pashniak, a QC graduate who now runs a flourishing sleep consulting business</a></Link>. Discover her inspiring journey and see how the course can transform your career.</p>
             </div>
           </div>
         </div>
@@ -72,14 +73,15 @@ const Page: NextPageWithLayout = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-              <h2 className="text-light">Get certified faster with a fully-online sleep consultant course!</h2>
+              <h2 className="text-light">Get Certified Faster with Our Fully Online Sleep Consultant Course!</h2>
+              <h3 className="text-light h4">Why Choose QC&apos;s Online Course</h3>
               <ul className="text-light">
-                <li><p>You won&apos;t have to follow specific enrollment or certification deadlines.</p></li>
-                <li><p>You won&apos;t pay hundreds (or thousands!) of dollars to attend mandatory webinars or seminars in order to get certified.</p></li>
-                <li><p>There are no ongoing fees to keep your certification current or to use your course materials &amp; templates after you graduate!</p></li>
-                <li><p>You&apos;ll learn every method of sleep consulting, not just one method trademarked by the school. This will help you become a true industry expert, and will allow you to better serve your clients!</p></li>
+                <li><p>Flexible Scheduling: No rigid enrollment or certification deadlines to worry about.</p></li>
+                <li><p>No Hidden Fees: Keep your certification current without ongoing fees, and enjoy lifetime access to your course materials and templates after graduation.</p></li>
+                <li><p>Comprehensive Training: Our course covers all methods of sleep consulting, not just one proprietary technique. This extensive training ensures you become a true industry expert, capable of serving your clients with the best possible solutions.</p></li>
+                <li><p>True Online Learning Experience: QC offers a flexible and interactive online learning experience. Our course is designed to provide you with ample feedback and hands-on training, making your learning process both convenient and effective.</p></li>
               </ul>
-              <p className="text-light">Don&apos;t be fooled by so-called &ldquo;online&rdquo; sleep consultant courses that end up just being recorded seminars that you&apos;re made to attend weekly. The fact is, you <em>can</em> learn sleep consulting online in a convenient and effective manner. You just need a course that&apos;s designed to give you plenty of feedback and hands-on training. Welcome to QC!</p>
+              <p className="text-light">Welcome to QC&mdash;where your journey to becoming a certified sleep consultant begins!</p>
             </div>
           </div>
         </div>
@@ -92,22 +94,7 @@ const Page: NextPageWithLayout = () => {
           adjective="sleep-consultant"
           tutorOccupation="professional sleep consultant"
           certification="Infant Sleep Consultant Professional (ISCP™)"
-          caseStudiesExtended="As part of this course, you&apos;ll be presented with a number of case studies and will be asked to create full sleep plans to address unique circumstances."
         />
-      </section>
-
-      <a className="anchor" id="working"></a>
-      <section id="workingSection">
-        <div className="row">
-          <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-            <div className="container text-dark text-center">
-              <h2 className="text-dark text-center">Learning &amp; Working During Covid-19</h2>
-              <p className="lead">See how you can earn your certification and run your very own sleep consulting business safely during COVID-19.</p>
-              <p className="lead mb-4">Learn from the safety of home with QC&apos;s online courses.</p>
-              <Link href="/courses-and-tuition/sleep-consultant/working-during-covid"><a className="btn btn-secondary" rel="noopener noreferrer" target="_blank">LEARN MORE</a></Link>
-            </div>
-          </div>
-        </div>
       </section>
 
       <a className="anchor" id="curriculum"></a>
@@ -116,27 +103,37 @@ const Page: NextPageWithLayout = () => {
           <div className="row">
             <div className="text-center col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 mb-5">
               <h2 className="text-dark mb-4 text-center">Course Curriculum</h2>
-              <p>The sleep consultant course is divided into four units. You&apos;ll start by learning the basics of sleep consulting, and then build on that knowledge as you work your way through the course. Once you&apos;ve completed the course, you&apos;ll be fully qualified to work as a professional sleep consultant!</p>
+              <p>The sleep consultant course is divided into six units. You&apos;ll start by learning the basics of sleep consulting, and then build on that knowledge as you work your way through the course. Once you&apos;ve completed the course, you&apos;ll be fully qualified to work as a professional sleep consultant!</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-5">
               <p><Image className="img-fluid" width="445" height="225" src={require('../../../images/sl-outline-a.jpg')} alt="Sleep Consultant Course Unit A" /></p>
-              <h3 className="text-dark">Unit A: Sleep Consulting<br />Practices</h3>
-              <p>In this first unit, you&apos;ll explore the basics of sleep consulting. You&apos;ll learn the science of sleep, how children sleep, and how you can help caregivers promote healthy sleep habits. You&apos;ll learn every method of sleep consulting&mdash;from &ldquo;cry it out&rdquo; to &ldquo;no cry&rdquo; methods and everything in between&mdash;including the advantages and disadvantages of each. You&apos;ll learn to use various tools of the trade to help create an optimal sleep space and promote healthy sleep.</p>
+              <h3 className="text-dark">Unit A: Sleep Consulting Practices</h3>
+              <p>In this first unit, you&apos;ll explore the basics of sleep consulting. You&apos;ll learn the science of sleep, how children sleep, and how you can help caregivers promote healthy sleep habits.</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 mb-5">
               <p><Image className="img-fluid" width="445" height="225" src={require('../../../images/sl-outline-b.jpg')} alt="Sleep Consultant Course Unit B" /></p>
-              <h3 className="text-dark">Unit B: Sleep Consulting Application</h3>
-              <p>Now that you have a good foundation of knowledge as a sleep consultant, you&apos;ll start learning how to apply those practices to provide the best service possible to clients. You&apos;ll learn how to create, implement and adapt individualized sleep plans unique to each client, including how to deal with a variety of special situations that might impact your plan&mdash;from working in a home with multiple children, to working with children who have disabilities or other diagnosed medical issues.</p>
+              <h3 className="text-dark">Unit B: Sleep Training Methods &amp; Philosophies</h3>
+              <p>Next, you&apos;ll learn every method of sleep consulting, including the advantages and disadvantages of each. You&apos;ll learn how to use various tools of the trade to help create an optimal sleep space and promote healthy sleep for infants in every age group.</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-5">
               <p><Image className="img-fluid" width="445" height="225" src={require('../../../images/sl-outline-c.jpg')} alt="Sleep Consultant Course Unit C" /></p>
-              <h3 className="text-dark">Unit C: Professional Sleep Consulting &amp; Coaching</h3>
-              <p>Once you understand the fundamentals of sleep consulting and how to build a sleep plan unique to your clients&apos; needs, you&apos;ll start to put these skills to use while learning to be an effective consultant and coach. You&apos;ll learn how to best work with different types of clients, and how to translate your knowledge as a sleep expert to caregivers who will be implementing your sleep plan on an ongoing basis. You&apos;ll go over a number of case studies of unique situations you&apos;re likely to encounter as a sleep consultant, to get a first-hand look at how you&apos;ll work professionally once you graduate.</p>
+              <h3 className="text-dark">Unit C: Sleep Consulting Application</h3>
+              <p>Now that you have a good foundation of knowledge as a sleep consultant, you&apos;ll start learning how to apply those practices to provide the best service possible to clients. You&apos;ll learn how to create, implement and adapt individualized sleep plans unique to each client.</p>
             </div>
             <div className="col-12 col-md-6 col-lg-5 mb-5">
               <p><Image className="img-fluid" width="445" height="225" src={require('../../../images/sl-outline-d.jpg')} alt="Sleep Consultant Course Unit D" /></p>
-              <h3 className="text-dark">Unit D: (Optional) Business Training Unit</h3>
-              <p>If you plan on launching your own sleep consultant business, don&apos;t skip this essential final unit! You&apos;ll work through the specific elements of getting your business on its feet, including everything from choosing a business name to building your website to setting your prices and marketing your services. This unit can really catapult your career!</p>
+              <h3 className="text-dark">Unit D: Professional Sleep Consulting &amp; Coaching</h3>
+              <p>In this unit, you&apos;ll start putting into practice the knowledge you&apos;ve acquired over the past two units. You&apos;ll go over a number of case studies of unique situations you&apos;re likely to encounter as a sleep consultant. You&apos;ll start learning how to best work with different clients, and how to turn your new skills and knowledge into a rewarding career.</p>
+            </div>
+            <div className="col-12 col-md-6 col-lg-5 offset-lg-1 mb-5">
+              {/* <p><Image className="img-fluid" width="445" height="225" src={require('../../../images/sl-outline-e.jpg')} alt="Sleep Consultant Course Unit E" /></p> */}
+              <h3 className="text-dark">Unit E: Business Training</h3>
+              <p>You&apos;ll learn essential skills to help you launch a successful sleep consulting business. You&apos;ll work on starting your business and marketing your services, and gain invaluable feedback from your tutor in the process!</p>
+            </div>
+            <div className="col-12 col-md-6 col-lg-5 mb-5">
+              {/* <p><Image className="img-fluid" width="445" height="225" src={require('../../../images/sl-outline-e.jpg')} alt="Sleep Consultant Course Unit F" /></p> */}
+              <h3 className="text-dark">Unit F: Final Project</h3>
+              <p>This unit is composed of a final project where you will create a full sleep plan for a real client. You&apos;ll practice interacting with new clients, filling out an intake questionnaire, and developing a full sleep plan with feedback from your tutor.</p>
             </div>
             <div className="text-center col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
               <p className="lead"><strong>Note:</strong> Above is an overview of the sleep consulting course curriculum. For a full and detailed course outline, click below.</p>
@@ -324,7 +321,6 @@ Page.getLayout = function Layout(page) {
             { name: 'Tuition', url: '#tuition' },
             { name: 'Support', url: '#support' },
             { name: 'Guarantee', url: '#guarantee' },
-            { name: 'Working During Covid-19', url: '#working' },
           ]}
         />
       )}

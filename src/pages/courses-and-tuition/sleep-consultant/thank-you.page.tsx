@@ -2,10 +2,11 @@ import { promisify } from 'util';
 import { urlencoded } from 'body-parser';
 import { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { IoMdBook, IoMdEye, IoMdLaptop, IoMdSchool } from 'react-icons/io';
 
 import { SEO } from '../../../components/SEO';
+import { useOnce } from '../../../hooks/useOnce';
 import { fbqLead } from '../../../lib/fbq';
 import { gaEvent } from '../../../lib/ga';
 
@@ -18,32 +19,26 @@ type Props = {
 };
 
 const Page: NextPage<Props> = ({ emailAddress }) => {
-  const effectCalled = useRef<boolean>(false);
-
   useEffect(() => {
     if (emailAddress !== null && emailAddress.length > 0) {
       window.gtag?.('set', 'user-data', { email: emailAddress });
     }
   }, [ emailAddress ]);
 
-  useEffect(() => {
-    if (effectCalled.current) {
-      return;
-    }
-    effectCalled.current = true;
+  useOnce(() => {
     fbqLead();
     gaEvent('conversion', {
       send_to: 'AW-1071836607/Srl-CMns3JgBEL_bi_8D', // eslint-disable-line camelcase
       value: 1.0,
       currency: 'USD',
     });
-  }, []);
+  });
 
   return (
     <>
       <SEO
         title="Thank You For Your Interest"
-        description="More information about the Sleep Consultant course"
+        description="More information about the Pediatric Sleep Consultant course"
         canonical="/courses-and-tuition/sleep-consultant/thank-you"
         noIndex={true}
       />
@@ -53,12 +48,12 @@ const Page: NextPage<Props> = ({ emailAddress }) => {
           <div className="row d-flex align-items-center">
             <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-7 offset-lg-0">
               <h1 className="text-dark">Your Course Preview</h1>
-              <p><strong>Thank you for your interest in QC Wellness School&apos;s Sleep Consultant Course!</strong>The course preview should help answer most questions you have about becoming a professional sleep consultant from the comfort of home including:</p>
+              <p><strong>Thank you for your interest in QC Wellness School&apos;s Pediatric Sleep Consultant Course!</strong>The course preview will help answer your questions about becoming a professional sleep consultant from the comfort of your own home, including:</p>
               <ul>
-                <li>What exactly am I going to learn in this course?</li>
+                <li>What will I learn in this course?</li>
                 <li>What is the tuition for the course and what do those fees cover?</li>
-                <li>How am I going to get hands-on training if I&apos;m doing an online course?</li>
-                <li>Can online learning really prepare me for real-world sleep consultations?</li>
+                <li>How will I get hands-on training if I&apos;m doing an online course?</li>
+                <li>How does this online course prepare me for a real-world career in sleep consulting?</li>
               </ul>
               <Link href="preview"><a className="btn btn-secondary btn-lg text-uppercase my-3"><div className="d-flex align-items-center"><IoMdEye className="mr-2" /> View the Course Preview</div></a></Link>
             </div>

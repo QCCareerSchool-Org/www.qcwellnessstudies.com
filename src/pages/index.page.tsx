@@ -45,8 +45,8 @@ const Page: NextPage = () => (
             <p className="text-uppercase"><Link href="/caregiver"><a className="text-info"><strong>view courses</strong></a></Link></p>
           </div>
           <div className="col-12 col-md-6 col-lg-5 mb-5">
-            <h3 className="h4 text-dark">Sleep Consultant</h3>
-            <p>A professional sleep consultant helps parents and caregivers set healthy and save sleep habits for their infants and toddlers, contributing to every family member&apos;s physical, mental and emotional wellness!</p>
+            <h3 className="h4 text-dark">Pediatric Sleep Consultant</h3>
+            <p>A pediatric sleep consultant helps parents and caregivers set healthy and safe sleep habits for their children, contributing to every family member&apos;s physical, mental and emotional wellness!</p>
             <p className="text-uppercase"><Link href="/courses-and-tuition/sleep-consultant"><a className="text-info"><strong>view course</strong></a></Link></p>
           </div>
           <div className="col-12 mb-5 col-md-6 mb-md-0 col-lg-5 offset-lg-1">

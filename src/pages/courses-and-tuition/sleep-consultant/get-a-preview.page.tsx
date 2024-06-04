@@ -48,7 +48,7 @@ const Page: NextPageWithLayout<Props> = ({ firstName, lastName, emailAddress, em
   return (
     <>
       <SEO
-        title="Get a Sleep Consultant Course Preview"
+        title="Pediatric Sleep Consultant Course Preview"
         description="If you're interested in becoming a professional sleep consultant, get a preview of QC's sleep consultant certification course here!"
         canonical="/courses-and-tuition/sleep-consultant/get-a-preview"
       />
