@@ -94,7 +94,6 @@ const Page: NextPageWithLayout = () => {
               <p>Your tutor is your best resource throughout the course! They&apos;ve taken the journey you&apos;re taking now and have done it successfully. Take their feedback to heart. They want to see you succeed!</p>
             </>
           )}
-          caseStudiesExtended="As part of this course, you&apos;ll be presented with a number of practical assignments and case studies that will put you in the shoes of a professional caregiver to test your technical skills and practical knowledge."
         />
       </section>
 
