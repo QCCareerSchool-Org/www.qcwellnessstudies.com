@@ -48,8 +48,8 @@ export const Header = ({ nav, enrollPath = 'https://enroll.qcwellnessstudies.com
                   <NavDropdown title="Courses &amp; Tuition" id="coursesDropdown">
                     <Link href="/courses-and-tuition"><a onClick={resetMenu} className="dropdown-item">All Courses &amp; Tuition</a></Link>
                     <NavDropdown.Divider />
-                    <Link href="/caregiver"><a onClick={resetMenu} className="dropdown-item"><strong>Caregiver</strong>&nbsp;&nbsp;<span className="badge badge-secondary">New</span></a></Link>
-                    <Link href="/courses-and-tuition/sleep-consultant"><a onClick={resetMenu} className="dropdown-item">Sleep Consultant</a></Link>
+                    <Link href="/courses-and-tuition/sleep-consultant"><a onClick={resetMenu} className="dropdown-item">Pediatric Sleep Consultant</a></Link>
+                    <Link href="/caregiver"><a onClick={resetMenu} className="dropdown-item">Caregiver</a></Link>
                     <Link href="/courses-and-tuition/skincare-consultant"><a onClick={resetMenu} className="dropdown-item">Skincare Consultant</a></Link>
                     <Link href="/courses-and-tuition/aging-in-place"><a onClick={resetMenu} className="dropdown-item">Aging in Place</a></Link>
                   </NavDropdown>
