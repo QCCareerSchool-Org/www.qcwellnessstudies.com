@@ -11,11 +11,11 @@ import { gaSale } from '../lib/ga';
 import { getEnrollment } from '../lib/getEnrollment';
 import { sendEnrollmentEmail } from '../lib/sendEnrollmentEmail';
 import { setStudent } from '../lib/setStudent';
-import { Enrollment } from '../models/enrollment';
+import { Enrollment, RawEnrollment } from '../models/enrollment';
 
 type Props = {
   data?: {
-    enrollment: Enrollment;
+    enrollment: RawEnrollment;
     code: string;
     ipAddress: string | null;
   };
@@ -31,17 +31,25 @@ const formatDate = (d: Date): string => {
 
 const Page: NextPage<Props> = ({ data, errorCode }) => {
 
+  const enrollment: Enrollment | undefined = typeof data?.enrollment === 'undefined'
+    ? undefined
+    : {
+      ...data.enrollment,
+      transactionTime: data.enrollment.transactionTime === null ? null : new Date(data.enrollment.transactionTime),
+      paymentDate: new Date(data.enrollment.paymentDate),
+    };
+
   // perform this the client side so the right IP address is used
   useEffect(() => {
-    if (typeof data === 'undefined') {
+    if (typeof data === 'undefined' || typeof enrollment === 'undefined') {
       return;
     }
-    if (!data.enrollment.emailed) {
+    if (!enrollment.emailed) {
       if (data.ipAddress !== '173.242.186.194') {
-        addToIDevAffiliate(data.enrollment).catch(() => { /* */ });
+        addToIDevAffiliate(enrollment).catch(() => { /* */ });
       }
-      gaSale(data.enrollment);
-      fbqSale(data.enrollment);
+      gaSale(enrollment);
+      fbqSale(enrollment);
       sendEnrollmentEmail(data.enrollment.id, data.code).catch((err: unknown) => {
         console.error(err);
       });
@@ -49,17 +57,15 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
         console.error(err);
       });
     }
-  }, [ data ]);
+  }, [ data, enrollment ]);
 
   if (errorCode) {
     return <ErrorPage statusCode={errorCode} />;
   }
 
-  if (typeof data === 'undefined') {
+  if (typeof data === 'undefined' || typeof enrollment === 'undefined') {
     return <ErrorPage statusCode={500} />;
   }
-
-  const paymentDate = new Date(data.enrollment.paymentDate);
 
   return (
     <>
@@ -95,65 +101,65 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
                 <tbody>
                   <tr>
                     <td><strong>Name</strong></td>
-                    <td>{data.enrollment.firstName} {data.enrollment.lastName}</td>
+                    <td>{enrollment.firstName} {enrollment.lastName}</td>
                   </tr>
                   <tr>
                     <td><strong>Address</strong></td>
                     <td>
-                      {data.enrollment.address1}<br />
-                      {data.enrollment.address2 && <>{data.enrollment.address2}<br /></>}
-                      {data.enrollment.city} {data.enrollment.provinceName} {data.enrollment.postalCode}<br />
-                      {data.enrollment.countryName}
+                      {enrollment.address1}<br />
+                      {enrollment.address2 && <>{enrollment.address2}<br /></>}
+                      {enrollment.city} {enrollment.provinceName} {enrollment.postalCode}<br />
+                      {enrollment.countryName}
                     </td>
                   </tr>
                   <tr>
                     <td><strong>Currency</strong></td>
-                    <td>{data.enrollment.currencyName}</td>
+                    <td>{enrollment.currencyName}</td>
                   </tr>
                   <tr>
                     <td><strong>Payment Plan</strong></td>
-                    <td>{data.enrollment.paymentPlan === 'full' ? 'Full Payment' : 'Installment Plan'}</td>
+                    <td>{enrollment.paymentPlan === 'full' ? 'Full Payment' : 'Installment Plan'}</td>
                   </tr>
-                  {data.enrollment.paymentPlan !== 'full' && (
+                  {enrollment.paymentPlan !== 'full' && (
                     <>
                       <tr>
                         <td><strong>Payment Day</strong></td>
-                        <td>{data.enrollment.paymentDay}</td>
+                        <td>{enrollment.paymentDay}</td>
                       </tr>
                       <tr>
                         <td><strong>Installments Start</strong></td>
-                        <td>{formatDate(paymentDate)}</td>
+                        <td>{formatDate(enrollment.paymentDate)}</td>
                       </tr>
                     </>
                   )}
-                  {data.enrollment.courses.map((c, i) => (
+                  {enrollment.courses.map((c, i) => (
                     <React.Fragment key={i}>
                       <tr>
                         <td colSpan={2}><h6 className="mt-4 mb-0">{c.name}</h6></td>
                       </tr>
                       <tr>
                         <td><strong>Cost</strong></td>
-                        <td>{data.enrollment.currencySymbol}{c.baseCost.toFixed(precision)}</td>
+                        <td>{enrollment.currencySymbol}{c.baseCost.toFixed(precision)}</td>
                       </tr>
                       {c.planDiscount > 0 && (
                         <tr>
                           <td><strong>Discount</strong></td>
-                          <td>&minus;{data.enrollment.currencySymbol}{c.planDiscount.toFixed(precision)}</td>
+                          <td>&minus;{enrollment.currencySymbol}{c.planDiscount.toFixed(precision)}</td>
                         </tr>
                       )}
                       {c.discount > 0 && (
                         <tr>
                           <td><strong>Special Discount</strong></td>
-                          <td>&minus;{data.enrollment.currencySymbol}{c.discount.toFixed(precision)}</td>
+                          <td>&minus;{enrollment.currencySymbol}{c.discount.toFixed(precision)}</td>
                         </tr>
                       )}
                       <tr>
                         <td><strong>Today&apos;s Deposit</strong></td>
-                        <td>{data.enrollment.currencySymbol}{c.deposit.toFixed(precision)}</td>
+                        <td>{enrollment.currencySymbol}{c.deposit.toFixed(precision)}</td>
                       </tr>
                       <tr>
                         <td><strong>Monthly Installment</strong></td>
-                        <td>{data.enrollment.currencySymbol}{c.installment.toFixed(precision)}</td>
+                        <td>{enrollment.currencySymbol}{c.installment.toFixed(precision)}</td>
                       </tr>
                     </React.Fragment>
                   ))}
@@ -165,23 +171,23 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
                 <tbody>
                   <tr>
                     <td>Reference Code</td>
-                    <td>{data.enrollment.authorizationId}</td>
+                    <td>{enrollment.authorizationId}</td>
                   </tr>
                   <tr>
                     <td>PAN</td>
-                    <td>{data.enrollment.maskedPan}</td>
+                    <td>{enrollment.maskedPan}</td>
                   </tr>
                   <tr>
                     <td>Amount Processed</td>
-                    <td>{data.enrollment.deposit.toFixed(precision)} {data.enrollment.currencyCode}</td>
+                    <td>{enrollment.deposit.toFixed(precision)} {enrollment.currencyCode}</td>
                   </tr>
                   <tr>
                     <td>Time</td>
-                    <td>{data.enrollment.transactionTime}</td>
+                    <td>{enrollment.transactionTime?.toISOString()}</td>
                   </tr>
                   <tr>
                     <td>Auth Code</td>
-                    <td>{data.enrollment.authCode}</td>
+                    <td>{enrollment.authCode}</td>
                   </tr>
                 </tbody>
               </table>
