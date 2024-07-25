@@ -29,7 +29,7 @@ const Page: NextPage = () => (
               <div className="card-body">
                 <table>
                   <tbody>
-                    <tr><td className="text-right pr-2">Website:</td><td><a target="_blank" rel="noopener noreferrer" href="https://www.pashionateaboutsleep.com/">Pashionate About Sleep</a></td></tr>
+                    <tr><td className="text-right pr-2">Website:</td><td><a target="_blank" rel="noopener noreferrer" href="https://www.pashionateaboutsleep.ca/">Pashionate About Sleep</a></td></tr>
                     <tr><td className="text-right pr-2">Facebook:</td><td><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Sarahpashniak/">@Sarahpashniak</a></td></tr>
                     <tr><td className="text-right pr-2">Instagram:</td><td><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/pashionateaboutsleep/">@pashionateaboutsleep</a></td></tr>
                   </tbody>
