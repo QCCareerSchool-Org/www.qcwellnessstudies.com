@@ -1,7 +1,7 @@
 import React, { ChangeEventHandler, FC, FormEventHandler, useReducer, useRef } from 'react';
 
-import { useLocation } from '../hooks/useLocation';
 import { addLead } from '../lib/leads';
+import { isSchool } from '../models/school';
 import { Spinner } from './Spinner';
 
 export type HiddenField = {
@@ -86,8 +86,6 @@ const disabledDelay = 5000;
 // Do we need to keep track of the opt in date, or will Pardot do that? For telephoneOptIn too?
 
 export const BrochureForm: FC<Props> = ({ action, phoneNumber = false, buttonText = 'Get the Catalog', buttonClassName, hiddenFields, marketing, courses, initialValues, errors }) => {
-  const location = useLocation();
-
   const submitting = useRef(false);
 
   const formRef = useRef<HTMLFormElement>(null);
@@ -131,23 +129,19 @@ export const BrochureForm: FC<Props> = ({ action, phoneNumber = false, buttonTex
     Promise.resolve().then(async () => {
       submitting.current = true;
 
-      const testGroup = getHiddenField('testGroup', hiddenFields);
       const gclid = getHiddenField('gclid', hiddenFields);
       const msclkid = getHiddenField('msclkid', hiddenFields);
 
       return addLead({
-        school: schoolInput.value,
+        school: isSchool(schoolInput.value) ? schoolInput.value : 'QC Wellness Studies',
         emailAddress: emailAddressInput.value,
-        firstName: firstNameInput.value || null,
-        lastName: lastNameInput.value || null,
-        telephoneNumber: telephoneNumberRef.current?.value || null, // eslint-disable-line @typescript-eslint/prefer-nullish-coalescing
-        emailOptIn: emailOptInRef.current?.checked ?? null,
-        smsOptIn: smsOptInRef.current?.checked ?? null,
-        countryCode: location?.countryCode ?? null,
-        provinceCode: location?.provinceCode ?? null,
-        testGroup: typeof testGroup === 'string' ? parseInt(testGroup, 10) : testGroup,
-        gclid: typeof gclid === 'number' ? gclid.toString() : gclid,
-        msclkid: typeof msclkid === 'number' ? msclkid.toString() : msclkid,
+        firstName: firstNameInput.value,
+        lastName: lastNameInput.value,
+        telephoneNumber: telephoneNumberRef.current?.value,
+        emailOptIn: emailOptInRef.current?.checked ?? undefined,
+        smsOptIn: smsOptInRef.current?.checked ?? undefined,
+        gclid: typeof gclid === 'number' ? gclid.toString() : gclid ?? undefined,
+        msclkid: typeof msclkid === 'number' ? msclkid.toString() : msclkid ?? undefined,
         marketing: marketing ?? undefined,
         courses: courses,
       });
@@ -168,8 +162,6 @@ export const BrochureForm: FC<Props> = ({ action, phoneNumber = false, buttonTex
       {hiddenFields?.map(h => (
         <input key={h.key} type="hidden" name={h.key} value={h.value} />
       ))}
-      {location?.countryCode && <input type="hidden" name="countryCode" value={location.countryCode} />}
-      {location?.provinceCode && <input type="hidden" name="provinceCode" value={location.provinceCode} />}
       <div className="mb-4">
         <label htmlFor="firstName" className="form-label">First Name</label>
         <input ref={firstNameRef} type="text" id="firstName" name="firstName" className="form-control" autoComplete="given-name" autoCapitalize="words" defaultValue={initialValues?.firstName ?? ''} />
