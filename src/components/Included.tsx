@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { ReactElement } from 'react';
-import { IoMdBook, IoMdDocument, IoMdPeople, IoMdSchool, IoMdTimer } from 'react-icons/io';
+import { IoMdBook, IoMdDocument, IoMdPeople, IoMdSchool } from 'react-icons/io';
 
 type Props = {
   certification: string;
