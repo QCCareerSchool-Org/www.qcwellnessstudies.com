@@ -8,7 +8,7 @@ import OriginalPage from './index.page';
 const Page: NextPageWithLayout = () => (
   <>
     <DeadlineFunnelScript />
-    <OriginalPage enrollPath="https://enroll.qcwellnessstudies.com/150-off" />
+    <OriginalPage enrollPath="https://enroll.qcwellnessstudies.com/300-off" />
   </>
 );
 
