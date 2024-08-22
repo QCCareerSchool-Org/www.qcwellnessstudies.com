@@ -12,21 +12,7 @@ const Page: NextPageWithLayout = () => (
       <h2>1. Money-Back Guarantee</h2>
       <h3>21-Day Money-Back Guarantee</h3>
       <p>You have 21 days from the date of enrollment to examine the course. If you are not entirely satisfied or choose not to complete the course, please notify the School by emailing accounts@qccareerschool.com within 21 days of your date of enrollment. Within two business days the School will review your account and provide you with your options.</p>
-      <p>A full refund cannot be granted if you have already submitted course work to your tutor for grading. A partial refund may be offered instead.</p>
-      <p>If your course includes physical materials, you must return them to receive a refund:</p>
-      <ul>
-        <li>QC will provide you with shipping instructions and ask you to return the physical course materials, postage paid and with a tracking number. QC is not responsible for lost return shipments that do not have a valid tracking number.</li>
-        <li>Your course fees will be refunded in full once QC has received your returned materials. Note that return shipping fees will not be covered or refunded by QC.</li>
-        <li>Returned course materials must be unused and in their original condition. A full refund cannot be issued if any materials have been used or are not in their original condition.</li>
-      </ul>
-      <h3>1-Year Money-back Guarantee</h3>
-      <p>QC&apos;s <strong>sleep consultant course</strong> offers a 1-year money back guarantee. If, after graduation, you do not earn the equivalent of your course tuition in professional consulting fees, you will be eligible for a full refund of your tuition. In order to qualify for this refund, you must demonstrate that you have made a reasonable effort to obtain clients.</p>
-      <p>Graduates who request a refund under the 1-year guarantee must contact the School <strong>at least 13 months and no later than 18 months after graduation</strong> and provide proof that they:</p>
-      <ul>
-        <li>Have completed the optional business training unit in full before graduation;</li>
-        <li>Have a working website and social media presence that are at least 10 months old and that follow best practices outlined in the course&apos;s business unit; and</li>
-        <li>Provide examples of how their services were advertised over the course of the past 10 months (social media ads, direct mailers, proof of one-on-one outreach, etc.)</li>
-      </ul>
+      <p>A full refund cannot be granted if you have already submitted course work to your tutor for grading. In this case, a partial tuition refund may be offered instead.</p>
 
       <h2>2. Tuition Payments &amp; Installment Plans</h2>
       <p>If you choose to pay your course fees in monthly installments, you are obligated and agree to continue to make your scheduled payments until the entire tuition amount has been paid.</p>
