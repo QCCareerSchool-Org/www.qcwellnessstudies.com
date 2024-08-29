@@ -1,3 +1,5 @@
+import type { MouseEventHandler } from 'react';
+
 declare global {
   interface Window {
     // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -8,6 +10,7 @@ declare global {
   }
 }
 
-export const openLiveChat = (): void => {
+export const openLiveChat: MouseEventHandler<HTMLAnchorElement> = e => {
+  e.preventDefault();
   window.LC_API?.open_chat_window?.();
 };
