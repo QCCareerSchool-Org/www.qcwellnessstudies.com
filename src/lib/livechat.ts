@@ -10,7 +10,7 @@ declare global {
   }
 }
 
-export const openLiveChat: MouseEventHandler<HTMLAnchorElement> = e => {
+export const openLiveChat: MouseEventHandler<HTMLElement> = e => {
   e.preventDefault();
   window.LC_API?.open_chat_window?.();
 };
