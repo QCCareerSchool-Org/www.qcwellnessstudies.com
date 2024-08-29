@@ -52,7 +52,7 @@ export const BrevoForm: FC<Props> = props => {
   return (
     <form action="https://leads.qccareerschool.com" method="post" className={styles.brochureForm}>
       <input type="hidden" name="g-recaptcha-response" value={token} />
-      <input type="hidden" name="school" value="QC Event School" />
+      <input type="hidden" name="school" value="QC Wellness Studies" />
       <input type="hidden" name="successLocation" value={props.successLocation} />
       <input type="hidden" name="listId" value={props.listId} />
       {props.courseCodes?.map(c => <input key={c} type="hidden" name="courseCodes" value={c} />)}
