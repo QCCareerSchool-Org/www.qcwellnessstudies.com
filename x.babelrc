@@ -1,0 +1,13 @@
+// needed for jest
+{
+  "presets": [
+    "next/babel"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "styled-jsx/babel-test"
+      ]
+    }
+  }
+}
