@@ -24,7 +24,7 @@ interface Props {
 }
 
 const precision = 2;
-const brevoStudentListId = 0;
+const brevoStudentListId = 22;
 
 const formatDate = (d: Date): string => {
   const fieldLength = 2;
