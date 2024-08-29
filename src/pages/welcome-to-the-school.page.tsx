@@ -2,29 +2,29 @@ import * as HttpStatus from '@qccareerschool/http-status';
 import type { GetServerSideProps, NextPage } from 'next';
 import ErrorPage from 'next/error';
 import Image from 'next/image';
-import { Fragment, useEffect } from 'react';
+import { Fragment, useEffect, useMemo } from 'react';
 
 import { SEO } from '@/components/SEO';
 import { TelephoneNumber } from '@/components/TelephoneNumber';
 import AlexMyersSignatureImage from '@/images/alex-myers.png';
 import { addToIDevAffiliate } from '@/lib/addToIDevAffiliate';
+import { brevoIdentifyStudent } from '@/lib/brevo';
+import { createBrevoContact } from '@/lib/brevoAPI';
 import { fbqSale } from '@/lib/fbq';
 import { gaSale } from '@/lib/ga';
 import { getEnrollment } from '@/lib/getEnrollment';
 import { sendEnrollmentEmail } from '@/lib/sendEnrollmentEmail';
-import { setStudent } from '@/lib/setStudent';
 import type { Enrollment, RawEnrollment } from '@/models/enrollment';
 
 interface Props {
   data?: {
-    enrollment: RawEnrollment;
-    code: string;
-    ipAddress: string | null;
+    rawEnrollment: RawEnrollment;
   };
   errorCode?: number;
 }
 
 const precision = 2;
+const brevoStudentListId = 0;
 
 const formatDate = (d: Date): string => {
   const fieldLength = 2;
@@ -32,14 +32,16 @@ const formatDate = (d: Date): string => {
 };
 
 const Page: NextPage<Props> = ({ data, errorCode }) => {
-
-  const enrollment: Enrollment | undefined = typeof data?.enrollment === 'undefined'
-    ? undefined
-    : {
-      ...data.enrollment,
-      transactionTime: data.enrollment.transactionTime === null ? null : new Date(data.enrollment.transactionTime),
-      paymentDate: new Date(data.enrollment.paymentDate),
+  const enrollment: Enrollment | undefined = useMemo(() => {
+    if (typeof data?.rawEnrollment === 'undefined') {
+      return;
+    }
+    return {
+      ...data.rawEnrollment,
+      paymentDate: new Date(data.rawEnrollment.paymentDate),
+      transactionTime: data.rawEnrollment.transactionTime === null ? null : new Date(data.rawEnrollment.transactionTime),
     };
+  }, [ data?.rawEnrollment ]);
 
   // perform this the client side so the right IP address is used
   useEffect(() => {
@@ -47,18 +49,10 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
       return;
     }
     if (!enrollment.emailed) {
-      if (data.ipAddress !== '173.242.186.194') {
-        addToIDevAffiliate(enrollment).catch(() => { /* */ });
-      }
       gaSale(enrollment);
       fbqSale(enrollment);
-      sendEnrollmentEmail(data.enrollment.id, data.code).catch((err: unknown) => {
-        console.error(err);
-      });
-      setStudent(data.enrollment.id, data.code).catch((err: unknown) => {
-        console.error(err);
-      });
     }
+    brevoIdentifyStudent(enrollment.emailAddress, enrollment.countryCode, enrollment.provinceCode ?? undefined, enrollment.firstName, enrollment.lastName);
   }, [ data, enrollment ]);
 
   if (errorCode) {
@@ -202,23 +196,89 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async ({ req, res, query }) => {
+export const getServerSideProps: GetServerSideProps<Props> = async ({ req, res, query }) => {
   try {
     if (typeof query.enrollmentId !== 'string' || typeof query.code !== 'string') {
       throw new HttpStatus.BadRequest();
     }
+
     const enrollmentId = parseInt(query.enrollmentId, 10);
     const code = query.code;
 
-    const enrollment = await getEnrollment(enrollmentId, code);
+    if (isNaN(enrollmentId)) {
+      throw new HttpStatus.BadRequest();
+    }
 
-    if (!enrollment.complete || !enrollment.success) {
+    const rawEnrollment = await getEnrollment(enrollmentId, code);
+
+    if (!rawEnrollment.complete || !rawEnrollment.success) {
       throw new HttpStatus.NotFound();
     }
 
-    const ipAddress = Array.isArray(req.headers['x-real-ip']) ? req.headers['x-real-ip'][0] : req.headers['x-real-ip'];
+    if (!rawEnrollment.emailed) {
+      const getHeader = (headerName: string): string | null => {
+        const rawHeader = req.headers[headerName];
+        if (Array.isArray(rawHeader)) {
+          return rawHeader[0] ?? null;
+        }
+        return rawHeader ?? null;
+      };
 
-    return { props: { data: { enrollment, code, ipAddress: ipAddress ?? null } } };
+      const ipAddress = getHeader('x-real-ip');
+      // const userAgent = getHeader('user-agent');
+
+      // const getCookie = (cookieName: string): string | undefined => {
+      //   const rawCookie = req.cookies[cookieName];
+      //   if (Array.isArray(rawCookie)) {
+      //     return req.headers['x-real-ip']?.[0];
+      //   }
+      //   return rawCookie;
+      // };
+
+      // const fbc = getCookie('_fbc');
+      // const fbp = getCookie('_fbp');
+
+      // send email
+      try {
+        await sendEnrollmentEmail(enrollmentId, code);
+      } catch (err) {
+        console.error(err);
+      }
+
+      // create Brevo contact
+      try {
+        await createBrevoContact(rawEnrollment.emailAddress, rawEnrollment.firstName, rawEnrollment.lastName, rawEnrollment.countryCode, rawEnrollment.provinceCode, { STATUS_WELLNESS_STUDENT: true }, [ brevoStudentListId ]);
+      } catch (err) {
+        console.error(err);
+      }
+
+      // TrustPulse
+      // try {
+      //   await trustPulseEnrollment(rawEnrollment, ipAddress);
+      // } catch (err) {
+      //   console.error(err);
+      // }
+
+      // iDevAffiliate
+      try {
+        await addToIDevAffiliate(rawEnrollment, ipAddress);
+      } catch (err) {
+        console.error(err);
+      }
+
+      // Facebook
+      // if (rawEnrollment.transactionTime === null || new Date().getTime() - new Date(rawEnrollment.transactionTime).getTime() < 7 * 24 * 60 * 60 * 1000) {
+      //   try {
+      //     const source = (process.env.HOST ?? 'https://www.qcpetstudies.com') + resolvedUrl;
+      //     await fbPostPurchase(rawEnrollment, source, ipAddress, userAgent, fbc, fbp);
+      //   } catch (err) {
+      //     console.error(err);
+      //   }
+      // }
+
+    }
+
+    return { props: { data: { rawEnrollment } } };
   } catch (err) {
     const internalServerError = 500;
     const errorCode = err instanceof HttpStatus.HttpResponse ? err.statusCode : internalServerError;
