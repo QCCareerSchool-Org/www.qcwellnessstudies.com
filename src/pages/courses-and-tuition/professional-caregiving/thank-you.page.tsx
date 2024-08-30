@@ -25,7 +25,6 @@ const Page: NextPage<Props> = ({ emailAddress, countryCode, provinceCode, firstN
   useEffect(() => {
     if (emailAddress) {
       window.gtag('set', 'user-data', { email: emailAddress });
-      brevoIdentifyLead(emailAddress, countryCode, provinceCode, firstName, lastName);
     }
   }, [ emailAddress ]);
 
@@ -33,6 +32,12 @@ const Page: NextPage<Props> = ({ emailAddress, countryCode, provinceCode, firstN
     fbqLead();
     gaEvent('conversion', { send_to: 'AW-1071836607/Srl-CMns3JgBEL_bi_8D' }); // eslint-disable-line camelcase
   });
+
+  useEffect(() => {
+    if (emailAddress) {
+      brevoIdentifyLead(emailAddress, countryCode, provinceCode, firstName ?? undefined, lastName ?? undefined);
+    }
+  }, [ emailAddress, countryCode, provinceCode, firstName, lastName ]);
 
   return <>
     <SEO
