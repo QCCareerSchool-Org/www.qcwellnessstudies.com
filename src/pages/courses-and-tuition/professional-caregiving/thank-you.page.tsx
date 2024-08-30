@@ -4,25 +4,28 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 import { IoMdBook, IoMdEye, IoMdLaptop, IoMdSchool } from 'react-icons/io';
 
-import { SEO } from '../../../components/SEO';
-import { useOnce } from '../../../hooks/useOnce';
-import BGEnrollmentImage from '../../../images/bg-enrollment.jpg';
-import BGWhiteGreenLightImage from '../../../images/bg-white-green-light.jpg';
-import ThankYouImage from '../../../images/thank-you.jpg';
-import { fbqLead } from '../../../lib/fbq';
-import { gaEvent } from '../../../lib/ga';
+import ThankYouImage from './thank-you.jpg';
+import { SEO } from '@/components/SEO';
+import { useOnce } from '@/hooks/useOnce';
+import BGEnrollmentImage from '@/images/bg-enrollment.jpg';
+import BGWhiteGreenLightImage from '@/images/bg-white-green-light.jpg';
+import { brevoIdentifyLead } from '@/lib/brevo';
+import { fbqLead } from '@/lib/fbq';
+import { gaEvent } from '@/lib/ga';
 
 interface Props {
-  leadId?: string;
+  emailAddress?: string;
+  countryCode?: string;
+  provinceCode?: string;
   firstName?: string;
   lastName?: string;
-  emailAddress?: string;
 }
 
-const Page: NextPage<Props> = ({ emailAddress }) => {
+const Page: NextPage<Props> = ({ emailAddress, countryCode, provinceCode, firstName, lastName }) => {
   useEffect(() => {
     if (emailAddress) {
       window.gtag('set', 'user-data', { email: emailAddress });
+      brevoIdentifyLead(emailAddress, countryCode, provinceCode, firstName, lastName);
     }
   }, [ emailAddress ]);
 
@@ -45,6 +48,7 @@ const Page: NextPage<Props> = ({ emailAddress }) => {
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-7 offset-lg-0">
             <h1 className="text-dark">Your Course Preview</h1>
             <p><strong>Thank you for your interest in QC Wellness School&apos;s Caregiver Course!</strong> The course preview should help answer most questions you have about becoming a professional caregiver from the comfort of home including</p>
+            {emailAddress && <p className="lead text-secondary">Your email was sent to <strong>{emailAddress}</strong>. If you don't see it in your inbox in a few minutes, please check your Junk folder.</p>}
             <ul>
               <li>What am I going to learn in this course?</li>
               <li>What is the tuition for the course and what do those fees cover?</li>
@@ -109,17 +113,21 @@ export const getServerSideProps: GetServerSideProps<Props> = async context => {
     return context.query[paramName];
   };
 
-  const leadId = getParam('leadId');
   const emailAddress = getParam('emailAddress');
+  const countryCode = getParam('countryCode');
+  const provinceCode = getParam('provinceCode');
   const firstName = getParam('firstName');
   const lastName = getParam('lastName');
 
   const props: Props = {};
-  if (leadId) {
-    props.leadId = leadId;
-  }
   if (emailAddress) {
     props.emailAddress = emailAddress;
+  }
+  if (countryCode) {
+    props.countryCode = countryCode;
+  }
+  if (provinceCode) {
+    props.provinceCode = provinceCode;
   }
   if (firstName) {
     props.firstName = firstName;
