@@ -14,6 +14,7 @@ import { pardotPageview } from '../lib/pardot';
 import { TrackJS } from '../lib/trackjs-isomorphic';
 import { uetPageview } from '../lib/uet';
 import { Provider } from '../providers';
+import { brevoPageview } from '@/lib/brevo';
 
 if (!TrackJS.isInstalled()) {
   TrackJS.install({
@@ -40,6 +41,12 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout): JSX.Element => {
       uetPageview(url);
       fbqPageview(url);
       pardotPageview(url);
+      try {
+        const parsed = new URL(window.document.title);
+        brevoPageview(window.document.title, url, parsed.pathname);
+      } catch (err) {
+        console.error(err);
+      }
     };
 
     // When the component is mounted, subscribe to router changes and log those page views

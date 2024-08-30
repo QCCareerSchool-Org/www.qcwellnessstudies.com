@@ -62,6 +62,34 @@ window.__lc.ga_version = 'gtag';
 window.__lc.group = 19;
 (function(n,t,c) { function i(n) { return e._h ? e._h.apply(null, n) : e._q.push(n) }var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on", c.call(arguments)])},once:function(){i(["once", c.call(arguments)])},off:function(){i(["off", c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call", c.call(arguments)])},init:function(){var n=t.createElement("script");n.defer=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))`;
 
+const brevoScript = `
+<script type="text/javascript">
+(function() {
+    window.sib = {
+        equeue: [],
+        client_key: "ggq6iykwaxh2hn0q20y7fwpu"
+    };
+    /* OPTIONAL: email for identify request*/
+    // window.sib.email_id = 'example@domain.com';
+    window.sendinblue = {};
+    for (var j = ['track', 'identify', 'trackLink', 'page'], i = 0; i < j.length; i++) {
+    (function(k) {
+        window.sendinblue[k] = function() {
+            var arg = Array.prototype.slice.call(arguments);
+            (window.sib[k] || function() {
+                    var t = {};
+                    t[k] = arg;
+                    window.sib.equeue.push(t);
+                })(arg[0], arg[1], arg[2], arg[3]);
+            };
+        })(j[i]);
+    }
+    var n = document.createElement("script"),
+        i = document.getElementsByTagName("script")[0];
+    n.type = "text/javascript", n.id = "sendinblue-js", n.async = !0, n.src = "https://sibautomation.com/sa.js?key=" + window.sib.client_key, i.parentNode.insertBefore(n, i), window.sendinblue.page();
+})();
+</script>`;
+
 class MyDocument extends Document {
   public static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx);
@@ -77,6 +105,7 @@ class MyDocument extends Document {
           <script dangerouslySetInnerHTML={{ __html: uetScript }} />
           <script dangerouslySetInnerHTML={{ __html: facebookScript }} />
           <script dangerouslySetInnerHTML={{ __html: pardotScript }} />
+          <script dangerouslySetInnerHTML={{ __html: brevoScript }} />
           <script dangerouslySetInnerHTML={{ __html: livechatScript }} />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Playfair+Display:400,700,900"></link>
         </Head>
