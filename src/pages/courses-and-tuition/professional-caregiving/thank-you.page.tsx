@@ -53,7 +53,7 @@ const Page: NextPage<Props> = ({ emailAddress, countryCode, provinceCode, firstN
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-7 offset-lg-0">
             <h1 className="text-dark">Your Course Preview</h1>
             <p><strong>Thank you for your interest in QC Wellness School&apos;s Caregiver Course!</strong> The course preview should help answer most questions you have about becoming a professional caregiver from the comfort of home including</p>
-            {emailAddress && <p className="lead text-secondary">Your email was sent to <strong>{emailAddress}</strong>. If you don't see it in your inbox in a few minutes, please check your Junk folder.</p>}
+            {emailAddress && <p className="lead text-secondary">Your email was sent to <strong>{emailAddress}</strong>. If you don't see it in your inbox in a few minutes, please check your spam or junk mail folder.</p>}
             <ul>
               <li>What am I going to learn in this course?</li>
               <li>What is the tuition for the course and what do those fees cover?</li>
