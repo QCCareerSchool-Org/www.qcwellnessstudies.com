@@ -10,7 +10,6 @@ import { ErrorBoundary } from '../components/ErrorBoundary';
 import { DefaultLayout } from '../layouts/DefaultLayout';
 import { fbqPageview } from '../lib/fbq';
 import { gaPageview } from '../lib/ga';
-import { pardotPageview } from '../lib/pardot';
 import { TrackJS } from '../lib/trackjs-isomorphic';
 import { uetPageview } from '../lib/uet';
 import { Provider } from '../providers';
@@ -40,7 +39,6 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout): JSX.Element => {
       gaPageview(url);
       uetPageview(url);
       fbqPageview(url);
-      pardotPageview(url);
       try {
         const parsed = new URL(window.document.title);
         brevoPageview(window.document.title, url, parsed.pathname);

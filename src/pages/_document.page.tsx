@@ -37,23 +37,6 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '1725004270923176');
 fbq('track', 'PageView');`;
 
-const pardotScript = `
-piAId = '948642';
-piCId = '34909';
-piHostname = 'go.qcwellnessstudies.com';
-(function() {
-  function async_load() {
-    var s = document.createElement('script'); s.type = 'text/javascript';
-    s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
-    var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
-  }
-  if (window.attachEvent) {
-    window.attachEvent('onload', async_load);
-  } else {
-    window.addEventListener('load', async_load, false);
-  }
-})();`;
-
 const livechatScript = `
 window.__lc = window.__lc || { };
 window.__lc.license = 1056788;
@@ -104,7 +87,6 @@ class MyDocument extends Document {
           <script dangerouslySetInnerHTML={{ __html: googleAnalyticsScript }} />
           <script dangerouslySetInnerHTML={{ __html: uetScript }} />
           <script dangerouslySetInnerHTML={{ __html: facebookScript }} />
-          <script dangerouslySetInnerHTML={{ __html: pardotScript }} />
           <script dangerouslySetInnerHTML={{ __html: brevoScript }} />
           <script dangerouslySetInnerHTML={{ __html: livechatScript }} />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Playfair+Display:400,700,900"></link>
