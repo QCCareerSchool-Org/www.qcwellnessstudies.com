@@ -21,6 +21,7 @@ interface Props {
   utmCampaign?: string;
   utmContent?: string;
   utmTerm?: string;
+  referrer: string | null;
 }
 
 const brevoListId = 24;
@@ -62,6 +63,7 @@ const Page: NextPageWithLayout<Props> = props => {
                   utmTerm={props.utmTerm}
                   placeholders
                   courseCodes={courses}
+                  referrer={props.referrer}
                 />
               </div>
             </div>
@@ -126,7 +128,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async context => {
   const utmContent = getParam('utm_content');
   const utmTerm = getParam('utm_term');
 
-  const props: Props = {};
+  const props: Props = { referrer: context.req.headers.referer ?? null };
   if (gclid) {
     props.gclid = gclid;
   }
