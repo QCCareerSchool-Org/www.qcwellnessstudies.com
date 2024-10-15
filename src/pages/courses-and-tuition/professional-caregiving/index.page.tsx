@@ -1,9 +1,11 @@
+import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 
 import HeroBackgroundImage from './hero-bg.jpg';
 import OutlineAImage from './outline-a.jpg';
+
 import OutlineBImage from './outline-b.jpg';
 import OutlineCImage from './outline-c.jpg';
 import OutlineDImage from './outline-d.jpg';
@@ -21,6 +23,9 @@ import { SEO } from '@/components/SEO';
 import { Subnav } from '@/components/Subnav';
 import { UnitOutline } from '@/components/UnitOutline';
 import { WhyChoose } from '@/components/WhyChose';
+import IconAffordable from '@/images/icon-affordable.svg';
+import IconComprehensive from '@/images/icon-comprehensive.svg';
+import IconFlexible from '@/images/icon-flexible.svg';
 import PromoImage from '@/images/promo-inlay-december.png';
 import TutorAlyImage from '@/images/tutor-aly.jpg';
 import TutorSuzanneImage from '@/images/tutor-suzanne.jpg';
@@ -185,9 +190,23 @@ const Page: NextPageWithLayout = () => (
     <section id="whyChooseQCSection">
       <WhyChoose
         subheader="Get certified faster and start a fulfilling career!"
-        affordable="QC's course is fully online. You don't have to pay surcharges for attending lectures or classroom sessions. You complete the full course from home."
-        flexible="No start dates, no deadlines, no mandatory attendance! This course is completely self-directed and self-paced. Get certified quickly or take your time. The choice is yours."
-        comprehensive="You&apos;re not just learning how one caregiving company wants you do things. You&apos;re getting a foundation of knowledge in caregiving that will be useful no matter where you work!"
+        sections={[
+          {
+            title: 'Affordable',
+            text: 'QC\'s course is fully online. You don\'t have to pay surcharges for attending lectures or classroom sessions. You complete the full course from home.',
+            icon: IconAffordable as StaticImageData,
+          },
+          {
+            title: 'Flexible',
+            text: 'No start dates, no deadlines, no mandatory attendance! This course is completely self-directed and self-paced. Get certified quickly or take your time. The choice is yours.',
+            icon: IconFlexible as StaticImageData,
+          },
+          {
+            title: 'Comprehensive',
+            text: 'You\'re not just learning how one caregiving company wants you do things. You\'re getting a foundation of knowledge in caregiving that will be useful no matter where you work!',
+            icon: IconComprehensive as StaticImageData,
+          },
+        ]}
         courses={[ 'fc' ]}
       />
     </section>

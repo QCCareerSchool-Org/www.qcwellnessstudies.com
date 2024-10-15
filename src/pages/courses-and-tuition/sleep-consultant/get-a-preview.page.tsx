@@ -1,4 +1,5 @@
 import type { GetServerSideProps } from 'next';
+import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -6,10 +7,19 @@ import type { ReactNode } from 'react';
 import HeroBackgroundImage from './preview-hero-bg.jpg';
 import { BackgroundImage } from '@/components/BackgroundImage';
 import { BrevoForm } from '@/components/BrevoForm';
+import DownloadIcon from '@/components/download.svg';
+import { GuarenteeSection } from '@/components/GuaranteeSection';
+import { Header } from '@/components/Header';
+
+import { Included } from '@/components/Included';
 import { SEO } from '@/components/SEO';
+import { TestimonialSection } from '@/components/Testimonial';
 import { WhyChoose } from '@/components/WhyChose';
 import RequireBackgroundImage from '@/images/bg-white-green-light.jpg';
-import ISCPCertificationImage from '@/images/certification-iscp.png';
+import CertificationImage from '@/images/certification-pscp.png';
+import IconComprehensive from '@/images/icon-comprehensive.svg';
+import IconFlexible from '@/images/icon-flexible.svg';
+import IconTutor from '@/images/icon-tutor.svg';
 import { LandingPageLayout } from '@/layouts/LandingPageLayout';
 import type { NextPageWithLayout } from '@/pages/_app.page';
 
@@ -37,13 +47,25 @@ const Page: NextPageWithLayout<Props> = props => {
     />
 
     <section id="formSection">
+      <Header
+        nav={false}
+        buttonOnClick={() => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          });
+        }}
+        buttonContent={
+          <>
+            <span className="text-light" style={{ marginRight: '10px' }}>
+              <Image src={DownloadIcon as StaticImageData} alt="" />
+            </span>Get Your Free Catalog
+          </>
+        }
+      />
       <BackgroundImage src={HeroBackgroundImage} />
       <div className="container text-light">
-        <div className="row">
-          <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-0 text-center">
-            <Image src={ISCPCertificationImage} className="d-none d-sm-inline mb-3 mb-md-4" alt="ISCP logo" />
-            <h1 className="text-light mb-5">Become a Professional<br />Infant Sleep Consultant<span className="d-none d-md-inline"> Online</span></h1>
-          </div>
+        <div className="row justify-content-center align-items-center">
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-0">
             <a className="anchor" id="form"></a>
             <div className="card text-dark mb-3 p-sm-3">
@@ -68,6 +90,10 @@ const Page: NextPageWithLayout<Props> = props => {
               </div>
             </div>
           </div>
+          <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-0 text-center">
+            <Image src={CertificationImage} className="d-none d-sm-inline mb-3 mb-md-4" alt="ISCP logo" />
+            <h1 className="text-light mb-5">Become a Certified Professional Infant Sleep Consultant Online</h1>
+          </div>
         </div>
       </div>
     </section>
@@ -79,12 +105,12 @@ const Page: NextPageWithLayout<Props> = props => {
           <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
             <p className="h3 text-dark">In this course preview, you&apos;ll learn</p>
             <ul>
-              <li>Why infant sleep consulting is a rewarding and lucrative career choice</li>
-              <li>How QC&apos;s online learning system works, and why it&apos;s perfect for you</li>
-              <li>How you can get certified as a sleep consultant without ever leaving home</li>
-              <li>Your career opportunities, including how you can launch your own sleep consulting business</li>
-              <li>A full outline of the online sleep consulting course, including sample assignments</li>
-              <li>A full breakdown of the course&apos;s tuition and available payment plans</li>
+              <li>Why <b>pediatric</b> sleep consulting is a rewarding and <b>lucrative career choice</b></li>
+              <li>How QC's online learning system works, and why it's <b>perfect for you</b></li>
+              <li>How you can get certified as a sleep consultant <b>without ever leaving home</b></li>
+              <li>What your career opportunities are, and how you can launch your <b>own sleep consulting business</b></li>
+              <li>What's included in the course, including <b>sample assignments</b></li>
+              <li>A full breakdown of the course's tuition and available <b>payment plans</b></li>
             </ul>
           </div>
         </div>
@@ -94,14 +120,32 @@ const Page: NextPageWithLayout<Props> = props => {
     <section id="whySection">
       <WhyChoose
         subheader="Get certified faster with a fully online sleep consultant course!"
-        affordable="Since QC's course is fully online, you don't have to pay surcharges for attending lectures or webinars. You complete the full course from home."
-        flexible="No start dates, no deadlines, no mandatory webinars! This course is completely self-directed and self-paced. Get certified quickly, or take your time."
-        comprehensive="You won't just learn one proprietary method of sleep coaching. You'll learn every method of sleep consulting, so that you can offer the best service!"
+        sections = {[
+          {
+            title: 'Comprehensive',
+            text: 'You won\'t learn just one proprietary method of sleep coaching. QC provides advanced training in every sleep consulting method, so you\'ll be well prepared to pick and choose the right method for your clients\' needs.',
+            icon: IconComprehensive as StaticImageData,
+          },
+          {
+            title: 'Expert Led',
+            text: 'Learn from professional sleep consultants. QC\'s tutors have helped hundreds of families with their sleep needs. You\'ll benefit from your tutor\'s detailed feedback on every one of your assignments. ',
+            icon: IconTutor as StaticImageData,
+          },
+          {
+            title: 'Flexible',
+            text: 'You don\'t have to worry about stressful due dates or tests. You can get started whenever you want and work through the course at a pace that works for you. Get certified quickly, or take your time.',
+            icon: IconFlexible as StaticImageData,
+          },
+        ]}
         courses={[ 'sl' ]}
         hideButton={true}
       />
     </section>
 
+    <Included certification="Professional Infant Sleep Consultant" />
+
+    <TestimonialSection id="TD_0001" />
+    <GuarenteeSection />
     <section className="bg-light text-center">
       <div className="container">
         <h2>Get Started Today!</h2>

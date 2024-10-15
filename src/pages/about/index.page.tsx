@@ -6,10 +6,9 @@ import Link from 'next/link';
 import LaptopLibraryImage from './laptop-library.svg';
 import ThumbnailImage from './macbook-on-granite-counter.png';
 import { BackgroundImage } from '@/components/BackgroundImage';
+import { GuarenteeSection } from '@/components/GuaranteeSection';
 import { SEO } from '@/components/SEO';
-import TwentyOneDayIcon from '@/images/21-day-guarentee.svg';
 import PartnerBackgroundImage from '@/images/bg-dark-green-navy.jpg';
-import GuaranteeBackgroundImage from '@/images/bg-white-green-light.jpg';
 import DesignLogo from '@/images/logo-design.svg';
 import EventLogo from '@/images/logo-event.svg';
 import MakeupLogo from '@/images/logo-makeup.svg';
@@ -52,16 +51,8 @@ const Page: NextPage = () => (
     </section>
 
     <a className="anchor" id="guarantee"></a>
-    <section id="guaranteeSection">
-      <BackgroundImage src={GuaranteeBackgroundImage} />
-      <div className="container text-center">
-        <div className="col-12 col-lg-8 offset-lg-2 mb-6 mb-md-0">
-          <p><Image src={TwentyOneDayIcon as StaticImageData} alt="21-day-guarentee" /></p>
-          <h2 className="text-dark">QC&apos;s Guarantee</h2>
-          <p>At QC, providing high quality online wellness courses is our top priority. With QC&apos;s 100% money-back guarantee, you&apos;ll have 21 days to review your course materials from the day you receive them. If you have a question or concern, contact us. If, in the 21 days, you decide the course isn&apos;t for you, we&apos;ll give you a full refund.</p>
-        </div>
-      </div>
-    </section>
+
+    <GuarenteeSection />
 
     <section id="accreditationSection">
       <div className="container text-center">

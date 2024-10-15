@@ -1,3 +1,4 @@
+import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import type { ReactNode } from 'react';
 
@@ -20,6 +21,9 @@ import { UnitOutline } from '@/components/UnitOutline';
 import { WhyChoose } from '@/components/WhyChose';
 import DarkGreenNavyBackgroundImage from '@/images/bg-dark-green-navy.jpg';
 import WhiteGreenBackgroundImage from '@/images/bg-white-green-light.jpg';
+import IconAffordable from '@/images/icon-affordable.svg';
+import IconComprehensive from '@/images/icon-comprehensive.svg';
+import IconFlexible from '@/images/icon-flexible.svg';
 import TutorTammyImage from '@/images/tutor-tammy.jpg';
 import { DefaultLayout } from '@/layouts/DefaultLayout';
 import type { NextPageWithLayout } from '@/pages/_app.page';
@@ -138,9 +142,23 @@ const Page: NextPageWithLayout = () => (
     <section id="whyChooseQCSection">
       <WhyChoose
         subheader="Get certified faster with a fully online skincare consultant course!"
-        affordable="Since QC's course is fully online, you don't have to pay surcharges for attending lectures or webinars. You complete the full course from home."
-        flexible="No start dates, no deadlines, no mandatory webinars! This course is completely self-directed and self-paced. Get certified quickly, or take your time."
-        comprehensive="You'll learn many different facets of aging in place design to ensure you'll be prepared to work with any client that walks through your doors!"
+        sections = {[
+          {
+            title: 'Affordable',
+            text: 'Since QC\'s course is fully online, you don\'t have to pay surcharges for attending lectures or webinars. You complete the full course from home.',
+            icon: IconAffordable as StaticImageData,
+          },
+          {
+            title: 'Flexible',
+            text: 'No start dates, no deadlines, no mandatory webinars! This course is completely self-directed and self-paced. Get certified quickly, or take your time.',
+            icon: IconFlexible as StaticImageData,
+          },
+          {
+            title: 'Comprehensive',
+            text: 'You\'ll learn many different facets of aging in place design to ensure you\'ll be prepared to work with any client that walks through your doors!',
+            icon: IconComprehensive as StaticImageData,
+          },
+        ]}
         courses={[ 'ap' ]}
       />
     </section>

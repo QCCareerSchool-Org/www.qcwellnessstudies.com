@@ -1,29 +1,31 @@
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import Link from 'next/link';
-import type { FC } from 'react';
+import type { FC, ReactNode } from 'react';
 import { useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-import { useLocation } from '../hooks/useLocation';
 import { useScreenWidth } from '../hooks/useScreenWidth';
 import LogoLg from '../images/logo-lg.svg';
 import Logo from '../images/logo.svg';
 import * as breakpoints from '../lib/breakpoints';
-import { getTelephoneNumber } from '../lib/functions';
+import { showButton } from './ButtonWrapper';
+import { useScrollPosition } from '@/hooks/useScrollPosition';
 
 interface Props {
   enrollPath?: string;
   nav: boolean;
+  buttonContent: ReactNode;
+  buttonOnClick: () => void;
 }
 
-export const Header: FC<Props> = ({ nav, enrollPath = 'https://enroll.qcwellnessstudies.com/' }) => {
-  const screenWidth = useScreenWidth();
-  const location = useLocation();
-  const telephoneNumber = getTelephoneNumber(location?.countryCode);
+export const Header: FC<Props> = ({ nav, enrollPath = 'https://enroll.qcwellnessstudies.com/', buttonContent, buttonOnClick }) => {
   const [ key, setKey ] = useState(0);
+
+  const scrollPosition = useScrollPosition();
+  const screenWidth = useScreenWidth();
 
   const resetMenu = (): void => {
     setKey(k => (k < Number.MAX_SAFE_INTEGER ? k + 1 : 0));
@@ -31,7 +33,7 @@ export const Header: FC<Props> = ({ nav, enrollPath = 'https://enroll.qcwellness
 
   return (
     <header className="flex-shrink-0">
-      <Navbar key={key} id="mainNav" variant="dark" expand="md" fixed="top" bg="dark">
+      <Navbar key={key} id="mainNav" variant="dark" expand="md" fixed="top" bg="dark" className="d-flex justify-content-between">
         <Navbar.Brand>
           <Link href="/" onClick={resetMenu}>
             {(nav && (screenWidth < breakpoints.sm.start || (screenWidth >= breakpoints.md.start && screenWidth < breakpoints.lg.start))) || (!nav && screenWidth < breakpoints.md.start)
@@ -41,7 +43,7 @@ export const Header: FC<Props> = ({ nav, enrollPath = 'https://enroll.qcwellness
           </Link>
         </Navbar.Brand>
         {nav
-          ? (
+          && (
             <>
               <Navbar.Toggle aria-controls="main-navbar-nav" />
               <Navbar.Collapse id="main-navbar-nav" data-testid="main-nav">
@@ -69,8 +71,9 @@ export const Header: FC<Props> = ({ nav, enrollPath = 'https://enroll.qcwellness
               </Navbar.Collapse>
             </>
           )
-          :
-          <div className="ml-auto text-muted">Call Us Toll Free:&nbsp; <a className="text-white" href={`tel:${telephoneNumber}`}>{telephoneNumber}</a></div>
+        }
+        {buttonContent && showButton(screenWidth, scrollPosition) &&
+            <button onClick={buttonOnClick} className={'btn btn-light'}>{buttonContent}</button>
         }
       </Navbar>
     </header>
