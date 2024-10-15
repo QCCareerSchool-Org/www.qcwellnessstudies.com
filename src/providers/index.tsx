@@ -1,7 +1,7 @@
 import { CaptchaProvider } from './CaptchaProvider';
 import { LocationProvider } from './LocationProvider';
 import { ScreenWidthProvider } from './ScreenWidthProvider';
-import { ScrollPositionProvider } from './scrollPositionProvider';
+import { ScrollPositionProvider } from './ScrollPositionProvider';
 
 const reCaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_KEY;
 

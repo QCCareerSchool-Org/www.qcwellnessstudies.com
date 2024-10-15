@@ -17,8 +17,8 @@ import { useScrollPosition } from '@/hooks/useScrollPosition';
 interface Props {
   enrollPath?: string;
   nav: boolean;
-  buttonContent: ReactNode;
-  buttonOnClick: () => void;
+  buttonContent?: ReactNode;
+  buttonOnClick?: () => void;
 }
 
 export const Header: FC<Props> = ({ nav, enrollPath = 'https://enroll.qcwellnessstudies.com/', buttonContent, buttonOnClick }) => {
