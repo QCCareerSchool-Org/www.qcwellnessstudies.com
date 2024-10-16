@@ -1,3 +1,4 @@
+import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
@@ -15,12 +16,15 @@ import { BackgroundImage } from '@/components/BackgroundImage';
 import { Certification } from '@/components/Certification';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
 import { Guarantee } from '@/components/Guarantee';
-import { Included } from '@/components/Included';
+import { IncludedSection } from '@/components/IncludedSection';
 import { PaymentPlans } from '@/components/PaymentPlans';
 import { SEO } from '@/components/SEO';
 import { Subnav } from '@/components/Subnav';
 import { UnitOutline } from '@/components/UnitOutline';
 import { WhyChoose } from '@/components/WhyChose';
+import IconAffordable from '@/images/icon-affordable.svg';
+import IconComprehensive from '@/images/icon-comprehensive.svg';
+import IconFlexible from '@/images/icon-flexible.svg';
 import PromoImage from '@/images/promo-inlay-december.png';
 import TutorAlyImage from '@/images/tutor-aly.jpg';
 import TutorSuzanneImage from '@/images/tutor-suzanne.jpg';
@@ -33,6 +37,7 @@ import type { NextPageWithLayout } from '@/pages/_app.page';
 // #includedSection{background-image:url(${require('@/images/bg-white-green-light.jpg').default.src});background-size:cover}
 
 const doubleGuarantee = false;
+const courses = [ 'fc' ];
 
 const Page: NextPageWithLayout = () => (
   <>
@@ -74,7 +79,7 @@ const Page: NextPageWithLayout = () => (
 
     <a className="anchor" id="paymentPlans"></a>
     <section id="paymentPlansSection" className="bg-light">
-      <PaymentPlans courses={[ 'fc' ]} doubleGuarantee={doubleGuarantee} />
+      <PaymentPlans courses={courses} doubleGuarantee={doubleGuarantee} />
     </section>
 
     <section id="whatSection">
@@ -185,16 +190,28 @@ const Page: NextPageWithLayout = () => (
     <section id="whyChooseQCSection">
       <WhyChoose
         subheader="Get certified faster and start a fulfilling career!"
-        affordable="QC's course is fully online. You don't have to pay surcharges for attending lectures or classroom sessions. You complete the full course from home."
-        flexible="No start dates, no deadlines, no mandatory attendance! This course is completely self-directed and self-paced. Get certified quickly or take your time. The choice is yours."
-        comprehensive="You&apos;re not just learning how one caregiving company wants you do things. You&apos;re getting a foundation of knowledge in caregiving that will be useful no matter where you work!"
-        courses={[ 'fc' ]}
+        sections={[
+          {
+            title: 'Affordable',
+            text: 'QC\'s course is fully online. You don\'t have to pay surcharges for attending lectures or classroom sessions. You complete the full course from home.',
+            icon: IconAffordable as StaticImageData,
+          },
+          {
+            title: 'Flexible',
+            text: 'No start dates, no deadlines, no mandatory attendance! This course is completely self-directed and self-paced. Get certified quickly or take your time. The choice is yours.',
+            icon: IconFlexible as StaticImageData,
+          },
+          {
+            title: 'Comprehensive',
+            text: 'You\'re not just learning how one caregiving company wants you do things. You\'re getting a foundation of knowledge in caregiving that will be useful no matter where you work!',
+            icon: IconComprehensive as StaticImageData,
+          },
+        ]}
+        courses={courses}
       />
     </section>
 
-    <section id="includedSection" className="bg-light text-dark">
-      <Included certification="Formal Caregiving Professional (FCGP™)" />
-    </section>
+    <IncludedSection className="bg-light text-dark" certification="Formal Caregiving Professional (FCGP™)" />
 
     <a className="anchor" id="outline"></a>
     <section id="outlineSection">
@@ -326,7 +343,7 @@ const Page: NextPageWithLayout = () => (
       <Guarantee courseName="Professional Caregiver" doubleGuarantee={doubleGuarantee} />
     </section>
 
-    <EnrollmentSection courseCodes={[ 'fc' ]}>
+    <EnrollmentSection courseCodes={courses}>
       Start your caregiving training today<br />and launch an exciting, rewarding career!
     </EnrollmentSection>
 

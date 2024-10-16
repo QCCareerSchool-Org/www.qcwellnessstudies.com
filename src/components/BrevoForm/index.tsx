@@ -125,7 +125,7 @@ export const BrevoForm: FC<Props> = props => {
       {props.button
         ? <>{props.button}</>
         :
-        <button className={`${styles.button} ${props.buttonClassName ?? 'btn btn-primary'}`} disabled={disabled}><span className="text-navy"><Image src={DownloadIcon as StaticImageData} alt="" height="14" className="mr-2" style={{ position: 'relative', top: -1 }} /></span>{props.buttonText ?? 'Get Your Free Catalog'}</button>
+        <button className={`${styles.button} ${props.buttonClassName ?? 'btn btn-primary'}`} disabled={disabled}><span className="text-navy"><Image src={DownloadIcon as StaticImageData} alt="" height="14" className="mr-2" style={{ position: 'relative', top: -1 }} /></span>{props.buttonText ?? 'Get the Course Preview'}</button>
 
       }
       <GoogleReCaptcha onVerify={handleVerify} refreshReCaptcha={refreshReCaptcha} />

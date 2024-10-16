@@ -1,4 +1,5 @@
 import type { GetServerSideProps } from 'next';
+import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
@@ -9,7 +10,11 @@ import { BrevoForm } from '@/components/BrevoForm';
 import { SEO } from '@/components/SEO';
 import { WhyChoose } from '@/components/WhyChose';
 import WhiteGreenBackgroundImage from '@/images/bg-white-green-light.jpg';
+import IconAffordable from '@/images/icon-affordable.svg';
+import IconComprehensive from '@/images/icon-comprehensive.svg';
 import FCGPCertificationImage from '@/images/icon-fcgp.png';
+import IconFlexible from '@/images/icon-flexible.svg';
+
 import { LandingPageLayout } from '@/layouts/LandingPageLayout';
 import type { NextPageWithLayout } from '@/pages/_app.page';
 
@@ -95,9 +100,23 @@ const Page: NextPageWithLayout<Props> = props => {
     <section id="whySection">
       <WhyChoose
         subheader="Get certified faster with a fully online caregiving course!"
-        affordable="Since QC's course is fully online, you don't have to pay surcharges for attending lectures or webinars. You complete the full course from home."
-        flexible="No start dates, no deadlines, no mandatory webinars! This course is completely self-directed and self-paced. Get certified quickly or take your time."
-        comprehensive="The course prepares you to work in different environments with all types of people. Experience the full range of caregiving services to be better prepared for starting your career!"
+        sections={[
+          {
+            title: 'Affordable',
+            text: 'Since QC\'s course is fully online, you don\'t have to pay surcharges for attending lectures or webinars. You complete the full course from home.',
+            icon: IconAffordable as StaticImageData,
+          },
+          {
+            title: 'Flexible',
+            text: 'No start dates, no deadlines, no mandatory webinars! This course is completely self-directed and self-paced. Get certified quickly or take your time.',
+            icon: IconFlexible as StaticImageData,
+          },
+          {
+            title: 'Comprehensive',
+            text: 'The course prepares you to work in different environments with all types of people. Experience the full range of caregiving services to be better prepared for starting your career!',
+            icon: IconComprehensive as StaticImageData,
+          },
+        ]}
         courses={[ 'fc' ]}
         hideButton={true}
       />
