@@ -5,7 +5,7 @@ import { BackgroundImage } from './BackgroundImage';
 import TwentyOneDayIcon from '@/images/21-day-guarentee.svg';
 import GuaranteeBackgroundImage from '@/images/bg-white-green-light.jpg';
 
-export const GuarenteeSection: FC = () => (
+export const GuaranteeSection: FC = () => (
   <section id="guaranteeSection">
     <BackgroundImage src={GuaranteeBackgroundImage} />
     <div className="container text-center">

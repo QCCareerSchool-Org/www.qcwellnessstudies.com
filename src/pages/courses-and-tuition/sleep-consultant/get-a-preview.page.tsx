@@ -2,16 +2,15 @@ import type { GetServerSideProps } from 'next';
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import Link from 'next/link';
-
 import type { ReactNode } from 'react';
-import HeroBackgroundImage from './hero-bg.jpg';
+
+import HeroBackgroundImage from './preview-hero-bg.jpg';
 import { BackgroundImage } from '@/components/BackgroundImage';
 import { BrevoForm } from '@/components/BrevoForm';
 import DownloadIcon from '@/components/download.svg';
-import { GuarenteeSection } from '@/components/GuaranteeSection';
+import { GuaranteeSection } from '@/components/GuaranteeSection';
 import { Header } from '@/components/Header';
-
-import { Included } from '@/components/Included';
+import { IncludedSection } from '@/components/IncludedSection';
 import { SEO } from '@/components/SEO';
 import { TestimonialSection } from '@/components/Testimonial';
 import { WhyChoose } from '@/components/WhyChose';
@@ -39,6 +38,10 @@ const brevoEmailTemplateId = 59;
 const courses = [ 'sl' ];
 
 const Page: NextPageWithLayout<Props> = props => {
+  const handleButtonClick = (): void => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return <>
     <SEO
       title="Pediatric Sleep Consultant Course Preview"
@@ -49,24 +52,23 @@ const Page: NextPageWithLayout<Props> = props => {
     <section id="formSection">
       <Header
         nav={false}
-        buttonOnClick={() => {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-          });
-        }}
-        buttonContent={
+        buttonOnClick={handleButtonClick}
+        buttonContent={(
           <>
             <span className="text-light" style={{ marginRight: '10px' }}>
               <Image src={DownloadIcon as StaticImageData} alt="" />
             </span>Get Your Free Catalog
           </>
-        }
+        )}
       />
       <BackgroundImage src={HeroBackgroundImage} />
       <div className="container text-light">
         <div className="row justify-content-center align-items-center">
-          <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-0">
+          <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-0 text-center order-lg-1">
+            <Image src={CertificationImage} className="d-none d-md-inline mb-3 mb-md-4" alt="ISCP logo" />
+            <h1 className="h2 text-light mb-5">Become a Certified Professional Infant Sleep Consultant Online</h1>
+          </div>
+          <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-0 order-lg-0">
             <a className="anchor" id="form"></a>
             <div className="card text-dark mb-3 p-sm-3">
               <div className="card-body">
@@ -89,10 +91,6 @@ const Page: NextPageWithLayout<Props> = props => {
                 />
               </div>
             </div>
-          </div>
-          <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-0 text-center">
-            <Image src={CertificationImage} className="d-none d-sm-inline mb-3 mb-md-4" alt="ISCP logo" />
-            <h1 className="text-light mb-5">Become a Certified Professional Infant Sleep Consultant Online</h1>
           </div>
         </div>
       </div>
@@ -137,16 +135,18 @@ const Page: NextPageWithLayout<Props> = props => {
             icon: IconFlexible as StaticImageData,
           },
         ]}
-        courses={[ 'sl' ]}
-        hideButton={true}
+        courses={courses}
+        hideButton
       />
     </section>
 
-    <Included certification="Professional Infant Sleep Consultant" />
+    <IncludedSection certification="Professional Infant Sleep Consultant" className="bg-light" />
 
     <TestimonialSection id="TD_0001" />
-    <GuarenteeSection />
-    <section className="bg-light text-center">
+
+    <GuaranteeSection />
+
+    <section className="text-center">
       <div className="container">
         <h2>Get Started Today!</h2>
         <p className="text-center text-uppercase"><Link href="#form" className="btn btn-secondary btn-lg mb-4">Request a Course Preview</Link></p>
