@@ -57,7 +57,7 @@ const Page: NextPageWithLayout<Props> = props => {
           <>
             <span className="text-light" style={{ marginRight: '10px' }}>
               <Image src={DownloadIcon as StaticImageData} alt="" />
-            </span>Get Your Free Catalog
+            </span>Get The Course Preview
           </>
         )}
       />
