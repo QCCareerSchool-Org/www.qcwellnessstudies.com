@@ -60,7 +60,7 @@ const Page: NextPageWithLayout<Props> = props => {
         <div className="row justify-content-center align-items-center">
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-0 text-center order-lg-1">
             <Image src={CertificationImage} className="d-none d-md-inline mb-3 mb-md-4" alt="ISCP logo" />
-            <h1 className="h2 text-light mb-5">Become a Certified Professional Infant Sleep Consultant Online</h1>
+            <h1 className="h2 text-light mb-5">Become a Certified Pediatric Sleep Consultant Online</h1>
           </div>
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-0 order-lg-0">
             <a className="anchor" id="form"></a>
