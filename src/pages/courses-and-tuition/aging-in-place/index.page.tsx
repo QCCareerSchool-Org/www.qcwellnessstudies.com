@@ -1,3 +1,4 @@
+import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import type { ReactNode } from 'react';
 
@@ -12,7 +13,7 @@ import { BackgroundImage } from '@/components/BackgroundImage';
 import { Certification } from '@/components/Certification';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
 import { Guarantee } from '@/components/Guarantee';
-import { Included } from '@/components/Included';
+import { IncludedSection } from '@/components/IncludedSection';
 import { PaymentPlans } from '@/components/PaymentPlans';
 import { SEO } from '@/components/SEO';
 import { Subnav } from '@/components/Subnav';
@@ -20,11 +21,15 @@ import { UnitOutline } from '@/components/UnitOutline';
 import { WhyChoose } from '@/components/WhyChose';
 import DarkGreenNavyBackgroundImage from '@/images/bg-dark-green-navy.jpg';
 import WhiteGreenBackgroundImage from '@/images/bg-white-green-light.jpg';
+import IconAffordable from '@/images/icon-affordable.svg';
+import IconComprehensive from '@/images/icon-comprehensive.svg';
+import IconFlexible from '@/images/icon-flexible.svg';
 import TutorTammyImage from '@/images/tutor-tammy.jpg';
 import { DefaultLayout } from '@/layouts/DefaultLayout';
 import type { NextPageWithLayout } from '@/pages/_app.page';
 
 const doubleGuarantee = false;
+const courses = [ 'ap' ];
 
 const Page: NextPageWithLayout = () => (
   <>
@@ -34,7 +39,7 @@ const Page: NextPageWithLayout = () => (
       canonical="/courses-and-tuition/aging-in-place"
     />
 
-    <section>
+    <section className="text-white">
       <BackgroundImage src={HeroBackgroundImage} priority />
       <div className="container">
         <div className="row">
@@ -42,9 +47,9 @@ const Page: NextPageWithLayout = () => (
             <h1>Become a Certified Aging in Place Consultant</h1>
             <h2 className="h4">Get certified quickly with online training!</h2>
             <ul>
-              <li>Fast-Paced training course for certified/experienced design professionals.</li>
+              <li>Fast-paced training course for certified/experienced design professionals</li>
               <li>Get plenty of hands-on training through practical assignments</li>
-              <li>Become certified and start your own aging in place business!</li>
+              <li>Become certified and start your own aging in place business</li>
             </ul>
             <p className="lead">This course is provided in partnership with QC Design School</p>
           </div>
@@ -55,7 +60,7 @@ const Page: NextPageWithLayout = () => (
     <a className="anchor" id="paymentPlans"></a>
     <section id="paymentPlansSection" className="bg-light">
       <BackgroundImage src={WhiteGreenBackgroundImage} />
-      <PaymentPlans courses={[ 'ap' ]} doubleGuarantee={doubleGuarantee} />
+      <PaymentPlans courses={courses} doubleGuarantee={doubleGuarantee} />
     </section>
 
     <section id="whatSection">
@@ -138,17 +143,28 @@ const Page: NextPageWithLayout = () => (
     <section id="whyChooseQCSection">
       <WhyChoose
         subheader="Get certified faster with a fully online skincare consultant course!"
-        affordable="Since QC's course is fully online, you don't have to pay surcharges for attending lectures or webinars. You complete the full course from home."
-        flexible="No start dates, no deadlines, no mandatory webinars! This course is completely self-directed and self-paced. Get certified quickly, or take your time."
-        comprehensive="You'll learn many different facets of aging in place design to ensure you'll be prepared to work with any client that walks through your doors!"
-        courses={[ 'ap' ]}
+        sections = {[
+          {
+            title: 'Affordable',
+            text: 'Since QC\'s course is fully online, you don\'t have to pay surcharges for attending lectures or webinars. You complete the full course from home.',
+            icon: IconAffordable as StaticImageData,
+          },
+          {
+            title: 'Flexible',
+            text: 'No start dates, no deadlines, no mandatory webinars! This course is completely self-directed and self-paced. Get certified quickly, or take your time.',
+            icon: IconFlexible as StaticImageData,
+          },
+          {
+            title: 'Comprehensive',
+            text: 'You\'ll learn many different facets of aging in place design to ensure you\'ll be prepared to work with any client that walks through your doors!',
+            icon: IconComprehensive as StaticImageData,
+          },
+        ]}
+        courses={courses}
       />
     </section>
 
-    <section id="includedSection" className="bg-light text-dark">
-      <BackgroundImage src={WhiteGreenBackgroundImage} />
-      <Included certification="Aging in Place Design Professional (APDP™)" />
-    </section>
+    <IncludedSection className="bg-light text-dark" backgroundImageSrc={WhiteGreenBackgroundImage} certification="Aging in Place Design Professional (APDP™)" />
 
     <a className="anchor" id="outline"></a>
     <section id="outlineSection">
