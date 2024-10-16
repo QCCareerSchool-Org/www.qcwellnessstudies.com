@@ -53,13 +53,7 @@ const Page: NextPageWithLayout<Props> = props => {
       <Header
         nav={false}
         buttonOnClick={handleButtonClick}
-        buttonContent={(
-          <>
-            <span className="text-light" style={{ marginRight: '10px' }}>
-              <Image src={DownloadIcon as StaticImageData} alt="" />
-            </span>Get The Course Preview
-          </>
-        )}
+        buttonContent={<><span className="text-light" style={{ marginRight: '10px' }}><Image src={DownloadIcon as StaticImageData} alt="" /></span>Get the Course Preview</>}
       />
       <BackgroundImage src={HeroBackgroundImage} />
       <div className="container text-light">
