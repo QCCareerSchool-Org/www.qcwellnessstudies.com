@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import type { ReactNode } from 'react';
-import HeroBackgroundImage from './preview-hero-bg.jpg';
+import HeroBackgroundImage from './hero-bg.jpg';
 import { BackgroundImage } from '@/components/BackgroundImage';
 import { BrevoForm } from '@/components/BrevoForm';
 import DownloadIcon from '@/components/download.svg';
