@@ -13,7 +13,7 @@ import { BackgroundImage } from '@/components/BackgroundImage';
 import { Certification } from '@/components/Certification';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
 import { Guarantee } from '@/components/Guarantee';
-import { Included } from '@/components/Included';
+import { IncludedSection } from '@/components/IncludedSection';
 import { PaymentPlans } from '@/components/PaymentPlans';
 import { SEO } from '@/components/SEO';
 import { Subnav } from '@/components/Subnav';
@@ -29,6 +29,7 @@ import { DefaultLayout } from '@/layouts/DefaultLayout';
 import type { NextPageWithLayout } from '@/pages/_app.page';
 
 const doubleGuarantee = false;
+const courses = [ 'ap' ];
 
 const Page: NextPageWithLayout = () => (
   <>
@@ -38,7 +39,7 @@ const Page: NextPageWithLayout = () => (
       canonical="/courses-and-tuition/aging-in-place"
     />
 
-    <section>
+    <section className="text-white">
       <BackgroundImage src={HeroBackgroundImage} priority />
       <div className="container">
         <div className="row">
@@ -46,9 +47,9 @@ const Page: NextPageWithLayout = () => (
             <h1>Become a Certified Aging in Place Consultant</h1>
             <h2 className="h4">Get certified quickly with online training!</h2>
             <ul>
-              <li>Fast-Paced training course for certified/experienced design professionals.</li>
+              <li>Fast-paced training course for certified/experienced design professionals</li>
               <li>Get plenty of hands-on training through practical assignments</li>
-              <li>Become certified and start your own aging in place business!</li>
+              <li>Become certified and start your own aging in place business</li>
             </ul>
             <p className="lead">This course is provided in partnership with QC Design School</p>
           </div>
@@ -59,7 +60,7 @@ const Page: NextPageWithLayout = () => (
     <a className="anchor" id="paymentPlans"></a>
     <section id="paymentPlansSection" className="bg-light">
       <BackgroundImage src={WhiteGreenBackgroundImage} />
-      <PaymentPlans courses={[ 'ap' ]} doubleGuarantee={doubleGuarantee} />
+      <PaymentPlans courses={courses} doubleGuarantee={doubleGuarantee} />
     </section>
 
     <section id="whatSection">
@@ -159,14 +160,11 @@ const Page: NextPageWithLayout = () => (
             icon: IconComprehensive as StaticImageData,
           },
         ]}
-        courses={[ 'ap' ]}
+        courses={courses}
       />
     </section>
 
-    <section id="includedSection" className="bg-light text-dark">
-      <BackgroundImage src={WhiteGreenBackgroundImage} />
-      <Included certification="Aging in Place Design Professional (APDP™)" />
-    </section>
+    <IncludedSection className="bg-light text-dark" backgroundImageSrc={WhiteGreenBackgroundImage} certification="Aging in Place Design Professional (APDP™)" />
 
     <a className="anchor" id="outline"></a>
     <section id="outlineSection">

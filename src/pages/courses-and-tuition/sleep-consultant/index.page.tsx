@@ -14,7 +14,7 @@ import { BackgroundImage } from '@/components/BackgroundImage';
 import { Certification } from '@/components/Certification';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
 import { Guarantee } from '@/components/Guarantee';
-import { Included } from '@/components/Included';
+import { IncludedSection } from '@/components/IncludedSection';
 import { PaymentPlans } from '@/components/PaymentPlans';
 import { SEO } from '@/components/SEO';
 import { Subnav } from '@/components/Subnav';
@@ -30,6 +30,7 @@ import { DefaultLayout } from '@/layouts/DefaultLayout';
 import type { NextPageWithLayout } from '@/pages/_app.page';
 
 const doubleGuarantee = false;
+const courses = [ 'sl' ];
 
 export const subNavItems = [
   { name: 'Tuition', url: '#paymentPlans' },
@@ -72,7 +73,7 @@ const Page: NextPageWithLayout<Props> = ({ enrollPath = 'https://enroll.qcwellne
       <a className="anchor" id="paymentPlans"></a>
       <section id="paymentPlansSection" className="bg-light">
         <BackgroundImage src={WhiteGreenLightBackgroundImage} />
-        <PaymentPlans courses={[ 'sl' ]} doubleGuarantee={doubleGuarantee} enrollPath={enrollPath} />
+        <PaymentPlans courses={courses} doubleGuarantee={doubleGuarantee} enrollPath={enrollPath} />
       </section>
 
       <section id="whatSection">
@@ -171,13 +172,11 @@ const Page: NextPageWithLayout<Props> = ({ enrollPath = 'https://enroll.qcwellne
               icon: IconComprehensive as StaticImageData,
             },
           ]}
-          courses={[ 'sl' ]}
+          courses={courses}
         />
       </section>
 
-      <section className="bg-light text-dark">
-        <Included certification="Pediactric Sleep Consulting Professional (PSCP™)" />
-      </section>
+      <IncludedSection className="bg-light text-dark" certification="Pediactric Sleep Consulting Professional (PSCP™)" />
 
       <a className="anchor" id="outline"></a>
       <section id="outlineSection">
@@ -322,7 +321,7 @@ const Page: NextPageWithLayout<Props> = ({ enrollPath = 'https://enroll.qcwellne
         />
       </section>
 
-      <EnrollmentSection courseCodes={[ 'sl' ]}>
+      <EnrollmentSection courseCodes={courses}>
         Start your online sleep consultant training today<br />and launch an exciting, rewarding career!
       </EnrollmentSection>
 

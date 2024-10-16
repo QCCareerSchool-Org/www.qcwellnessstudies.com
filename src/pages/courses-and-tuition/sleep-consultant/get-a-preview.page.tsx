@@ -8,7 +8,7 @@ import HeroBackgroundImage from './preview-hero-bg.jpg';
 import { BackgroundImage } from '@/components/BackgroundImage';
 import { BrevoForm } from '@/components/BrevoForm';
 import DownloadIcon from '@/components/download.svg';
-import { GuarenteeSection } from '@/components/GuaranteeSection';
+import { GuaranteeSection } from '@/components/GuaranteeSection';
 import { Header } from '@/components/Header';
 import { IncludedSection } from '@/components/IncludedSection';
 import { SEO } from '@/components/SEO';
@@ -144,7 +144,7 @@ const Page: NextPageWithLayout<Props> = props => {
 
     <TestimonialSection id="TD_0001" />
 
-    <GuarenteeSection />
+    <GuaranteeSection />
 
     <section className="text-center">
       <div className="container">

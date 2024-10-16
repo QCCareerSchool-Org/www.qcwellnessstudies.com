@@ -1,16 +1,21 @@
+import type { StaticImageData } from 'next/image';
 import type { FC } from 'react';
 import { IoBarChart, IoDocument, IoPeople, IoSchool } from 'react-icons/io5';
+
+import { BackgroundImage } from './BackgroundImage';
 
 interface Props {
   certification: string;
   className?: string;
+  backgroundImageSrc?: StaticImageData;
 }
 
 const iconSize = 40;
 const iconColor = '#1ED1C4';
 
-export const IncludedSection: FC<Props> = ({ certification, className }) => (
-  <section className={className}>
+export const IncludedSection: FC<Props> = ({ certification, className, backgroundImageSrc }) => (
+  <section id="includedSection" className={className}>
+    {backgroundImageSrc && <BackgroundImage src={backgroundImageSrc} />}
     <div className="container">
       <h2 className="text-center">Included in Your Course</h2>
       <div className="row pt-4">

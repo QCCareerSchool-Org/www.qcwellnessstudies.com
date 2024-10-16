@@ -6,7 +6,7 @@ import Link from 'next/link';
 import LaptopLibraryImage from './laptop-library.svg';
 import ThumbnailImage from './macbook-on-granite-counter.png';
 import { BackgroundImage } from '@/components/BackgroundImage';
-import { GuarenteeSection } from '@/components/GuaranteeSection';
+import { GuaranteeSection } from '@/components/GuaranteeSection';
 import { SEO } from '@/components/SEO';
 import PartnerBackgroundImage from '@/images/bg-dark-green-navy.jpg';
 import DesignLogo from '@/images/logo-design.svg';
@@ -52,7 +52,7 @@ const Page: NextPage = () => (
 
     <a className="anchor" id="guarantee"></a>
 
-    <GuarenteeSection />
+    <GuaranteeSection />
 
     <section id="accreditationSection">
       <div className="container text-center">

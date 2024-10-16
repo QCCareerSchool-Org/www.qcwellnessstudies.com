@@ -5,7 +5,6 @@ import type { ReactNode } from 'react';
 
 import HeroBackgroundImage from './hero-bg.jpg';
 import OutlineAImage from './outline-a.jpg';
-
 import OutlineBImage from './outline-b.jpg';
 import OutlineCImage from './outline-c.jpg';
 import OutlineDImage from './outline-d.jpg';
@@ -17,7 +16,7 @@ import { BackgroundImage } from '@/components/BackgroundImage';
 import { Certification } from '@/components/Certification';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
 import { Guarantee } from '@/components/Guarantee';
-import { Included } from '@/components/Included';
+import { IncludedSection } from '@/components/IncludedSection';
 import { PaymentPlans } from '@/components/PaymentPlans';
 import { SEO } from '@/components/SEO';
 import { Subnav } from '@/components/Subnav';
@@ -38,6 +37,7 @@ import type { NextPageWithLayout } from '@/pages/_app.page';
 // #includedSection{background-image:url(${require('@/images/bg-white-green-light.jpg').default.src});background-size:cover}
 
 const doubleGuarantee = false;
+const courses = [ 'fc' ];
 
 const Page: NextPageWithLayout = () => (
   <>
@@ -79,7 +79,7 @@ const Page: NextPageWithLayout = () => (
 
     <a className="anchor" id="paymentPlans"></a>
     <section id="paymentPlansSection" className="bg-light">
-      <PaymentPlans courses={[ 'fc' ]} doubleGuarantee={doubleGuarantee} />
+      <PaymentPlans courses={courses} doubleGuarantee={doubleGuarantee} />
     </section>
 
     <section id="whatSection">
@@ -207,13 +207,11 @@ const Page: NextPageWithLayout = () => (
             icon: IconComprehensive as StaticImageData,
           },
         ]}
-        courses={[ 'fc' ]}
+        courses={courses}
       />
     </section>
 
-    <section id="includedSection" className="bg-light text-dark">
-      <Included certification="Formal Caregiving Professional (FCGP™)" />
-    </section>
+    <IncludedSection className="bg-light text-dark" certification="Formal Caregiving Professional (FCGP™)" />
 
     <a className="anchor" id="outline"></a>
     <section id="outlineSection">
@@ -345,7 +343,7 @@ const Page: NextPageWithLayout = () => (
       <Guarantee courseName="Professional Caregiver" doubleGuarantee={doubleGuarantee} />
     </section>
 
-    <EnrollmentSection courseCodes={[ 'fc' ]}>
+    <EnrollmentSection courseCodes={courses}>
       Start your caregiving training today<br />and launch an exciting, rewarding career!
     </EnrollmentSection>
 
