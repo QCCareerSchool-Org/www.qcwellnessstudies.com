@@ -73,7 +73,7 @@ export const Header: FC<Props> = ({ nav, enrollPath = 'https://enroll.qcwellness
           )
         }
         {buttonContent && showButton(screenWidth, scrollPosition) &&
-            <button onClick={buttonOnClick} className={'btn btn-light'}>{buttonContent}</button>
+          <button onClick={buttonOnClick} className="btn btn-light">{buttonContent}</button>
         }
       </Navbar>
     </header>
