@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { BackgroundImage } from '@/components/BackgroundImage';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
-import { QuestionAndAnswer } from '@/components/questionAndAnswer';
+import { QuestionAndAnswer } from '@/components/QuestionAndAnswer';
 import { SEO } from '@/components/SEO';
 import HeroBackgroundImage from '@/images/bg-white-green-light.jpg';
 
