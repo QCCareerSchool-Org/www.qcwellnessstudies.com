@@ -18,8 +18,8 @@ const getScript = (conversationsId: string): string => `
 })(document, window, 'BrevoConversations');
 BrevoConversations('setColors', {
     buttonText: '#f5f5f5', /* chat button text/icon color */
-    buttonBg: '#0013de', /* chat button background color */
-    visitorBubbleBg: '#0013de', /* visitor's message bubble color */
+    buttonBg: '#148e85', /* chat button background color */
+    visitorBubbleBg: '#148e85', /* visitor's message bubble color */
     agentBubbleBg: '#ddd', /* agent's message bubble color */
 });
 BrevoConversations('updateIntegrationData', {
