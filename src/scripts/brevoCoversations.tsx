@@ -8,7 +8,7 @@ interface Props {
 export const BrevoConversations: FC<Props> = ({ conversationsId }) => <Script id="brevoConversations" dangerouslySetInnerHTML={{ __html: getScript(conversationsId) }} />;
 const getScript = (conversationsId: string): string => `
 (function(d, w, c) {
-  w.BrevoConversationsID = \`${conversationsId.replace(/`/ug, '\\`')}\`;
+  w.BrevoConversationsID = \`${conversationsId.replace(/`/g, '\\`')}\`;
   w[c] = w[c] || function() {
     (w[c].q = w[c].q || []).push(arguments);
   };
