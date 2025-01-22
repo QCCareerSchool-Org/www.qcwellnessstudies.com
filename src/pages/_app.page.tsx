@@ -66,7 +66,6 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout): JSX.Element => {
         {/* <GoogleTagManager gtmId="GTM-P9J948Z" /> */}
         {getLayout(<Component {...pageProps} />)}
       </Provider>
-      {process.env.BREVO_CONVERSATIONS_ID && <h1>!!!!!!!!!!!!!!!!!!!!!!!!!</h1>}
       {process.env.BREVO_CONVERSATIONS_ID && <BrevoConversations conversationsId={process.env.BREVO_CONVERSATIONS_ID} />}
     </ErrorBoundary>
   );
