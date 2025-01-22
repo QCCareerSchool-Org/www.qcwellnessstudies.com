@@ -14,6 +14,7 @@ import { TrackJS } from '../lib/trackjs-isomorphic';
 import { uetPageview } from '../lib/uet';
 import { Provider } from '../providers';
 import { brevoPageview } from '@/lib/brevo';
+import { BrevoConversations } from '@/scripts/brevoCoversations';
 
 if (!TrackJS.isInstalled()) {
   TrackJS.install({
@@ -65,6 +66,8 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout): JSX.Element => {
         {/* <GoogleTagManager gtmId="GTM-P9J948Z" /> */}
         {getLayout(<Component {...pageProps} />)}
       </Provider>
+      {process.env.BREVO_CONVERSATIONS_ID && <h1>!!!!!!!!!!!!!!!!!!!!!!!!!</h1>}
+      {process.env.BREVO_CONVERSATIONS_ID && <BrevoConversations conversationsId={process.env.BREVO_CONVERSATIONS_ID} />}
     </ErrorBoundary>
   );
 };
