@@ -6,10 +6,11 @@ import FooterLogo from '../images/logo-footer.svg';
 import { openLiveChat } from '../lib/livechat';
 
 import { Address } from './Address';
+import styles from './Footer.module.scss';
 import { TelephoneNumber } from './TelephoneNumber';
 
 export const Footer = (): ReactElement => (
-  <footer id="footer" className="footer bg-dark mt-auto">
+  <footer id="footer" className={`${styles.footer} footer bg-dark mt-auto`}>
     <div className="container">
       <div className="row text-center text-lg-left">
         <div className="col-12 col-lg-3 text-center pb-5 pb-lg-0">

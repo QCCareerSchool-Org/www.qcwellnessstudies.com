@@ -10,7 +10,7 @@ interface Props {
 
 export const DefaultLayout: FC<PropsWithChildren<Props>> = ({ children, secondaryNav, enrollPath = 'https://enroll.qcwellnessstudies.com' }) => (
   <>
-    <Header nav={true} enrollPath={enrollPath} />
+    <Header nav enrollPath={enrollPath} />
     {secondaryNav}
     <main role="main" className="flex-shrink-0">
       {children}
