@@ -82,9 +82,10 @@ const TeresaSedlmairPage: NextPage = () => {
         <div className="container">
           <div className="row justify-content-center align-items-center">
             <div className="col-12 col-lg-6">
-              <h2>An Obsession Turned Business</h2>
-              <p>I was a grade 2 teacher before doing sleep consulting. Sleep training truly saved me. It gave me back my strength, my joy, and allowed me to enjoy motherhood finally. I became fascinated by infant sleep—obsessively reading, learning, and experimenting until things finally clicked for our family.</p>
-              <p>I then decided to get my certification as I had already begun to help some friends and family with their children's sleep. After finishing my certification, I had everything up and running in terms of my website. I was also well versed with sleep training support groups and I quickly built up a strong referral base.</p>
+              <h2>From Passion to Profession</h2>
+              <p>I was a grade 2 teacher before doing sleep consulting. Sleep training truly saved me. It gave me back my strength, my joy, and allowed me to enjoy motherhood finally.</p>
+              <p>I became fascinated by infant sleep—obsessively reading, learning, and experimenting until things finally clicked for our family.</p>
+              <p>I then decided to get my certification as I had already begun to help some friends and family with their children's sleep. After finishing my certification, I had everything up and running in terms of my website. I was also well-versed with sleep training support groups and I quickly built up a strong referral base. My certification gave me the foundation I needed to even understand the workflow of being a sleep consultant.</p>
             </div>
             <div className="col-12 col-lg-6">
               <div className="row g-4">
@@ -116,15 +117,15 @@ const TeresaSedlmairPage: NextPage = () => {
           </div>
           <div className="row justify-content-center">
             <div className="col-4" ref={clientsRef}>
-              <h3 className="h2">{clients}+</h3>
+              <h3 className="h2 text-secondary">{clients}+</h3>
               Clients
             </div>
             <div className="col-4">
-              <h3 className="h2">Top-3 Keyword Rank</h3>
+              <h3 className="h2 text-secondary">Top-3 Keyword Rank</h3>
               "sleep consultant near Vancouver"
             </div>
             <div className="col-4" ref={reviewsRef}>
-              <h3 className="h2">{reviews}+</h3>
+              <h3 className="h2 text-secondary">{reviews}+</h3>
               5-Star Google Reviews
             </div>
           </div>
@@ -133,9 +134,17 @@ const TeresaSedlmairPage: NextPage = () => {
       <section>
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-12 col-sm-10 col-md-8 mt-4">
+            <div className="col-12 col-sm-10 col-md-8">
+              <h2>Advice for Future Students</h2>
+              <p>Lessons from the journey from practitioner to business owner:</p>
+              <ul className="mb-5">
+                <li>Your role is to support struggling parents who need to feel seen and heard.</li>
+                <li>Engagement and connection are everything.</li>
+                <li>Learn how to manage your finances, workflow, and visibility.</li>
+                <li>Social media and SEO are your allies—don't underestimate them.</li>
+                <li>Don't try to be the right fit for everyone if it means losing what makes you unique.</li>
+              </ul>
               <hr />
-              <h2 className="h4 my-4">A Thought on Sleep Training</h2>
               <p className="lead my-4">Sleep training is a deeply personal choice. Parenting today can feel overwhelming because we're surrounded by so much information. One choice doesn't make another wrong—it's about what's right and sustainable for your own situation.</p>
               <hr />
             </div>
@@ -145,23 +154,6 @@ const TeresaSedlmairPage: NextPage = () => {
       <section className="bg-light">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-12 col-sm-10 col-md-8">
-              <h2>Advice for Future Students</h2>
-              <p>Lessons from the journey from practitioner to business owner:</p>
-              <ul>
-                <li>Your role is to support struggling parents who need to feel seen and heard.</li>
-                <li>Engagement and connection are everything.</li>
-                <li>Learn how to manage your finances, workflow, and visibility.</li>
-                <li>Social media and SEO are your allies—don't underestimate them.</li>
-                <li>Don't try to be the right fit for everyone if it means losing what makes you unique.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="container">
-          <div className="row justify-content-center">
             <div className="col-12 col-sm-10 col-md-8 text-center">
               <h2>The Value of Certification</h2>
               <p>Professional training builds confidence, teaches practical skills, and helps earn the trust of families looking for expert guidance. Teresa used her certification to start a business that has already supported over 350 families, and continues to grow.</p>
@@ -169,7 +161,7 @@ const TeresaSedlmairPage: NextPage = () => {
           </div>
         </div>
       </section>
-      <section className="bg-light">
+      <section>
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-10 col-md-8 text-center">
@@ -180,11 +172,11 @@ const TeresaSedlmairPage: NextPage = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section className="bg-light">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-md-8 col-lg-6 text-center">
-              <h2>Connect with Teresa</h2>
+              <h2 className="mb-5">Connect with Teresa</h2>
               <div className="d-flex justify-content-between">
                 <Link href="https://littletreessleepconsulting.com/"><button className="btn btn-secondary">Website</button></Link>
                 <Link href="https://www.instagram.com/littletreessleepconsulting/#"><button className="btn btn-secondary">Instagram</button></Link>
