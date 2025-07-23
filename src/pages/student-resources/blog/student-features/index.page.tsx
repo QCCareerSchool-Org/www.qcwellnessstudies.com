@@ -1,5 +1,9 @@
 import type { NextPage } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
+
+import SarahImage from './sarah-1.jpg';
+import TeresaImage from './teresa-1.jpg';
 
 const StudentFeaturesPage: NextPage = () => {
   return (
@@ -15,7 +19,7 @@ const StudentFeaturesPage: NextPage = () => {
           <div className="row justify-content-center g-5">
             <div className="col-12 col-md-8 col-lg-6 d-flex">
               <div className="card">
-                {/* <Image src={ } className="card-img-top" alt="" /> */}
+                <Image src={TeresaImage} className="card-img-top" alt="" />
                 <div className="card-body d-flex flex-column justify-content-between">
                   <div className="mb-4">
                     <h3 className="card-title text-center mb-3">Teresa Sedlmair</h3>
@@ -27,7 +31,7 @@ const StudentFeaturesPage: NextPage = () => {
             </div>
             <div className="col-12 col-md-8 col-lg-6 d-flex">
               <div className="card">
-                {/* <Image src={ } className="card-img-top" alt="" /> */}
+                <Image src={SarahImage} className="card-img-top" alt="" />
                 <div className="card-body d-flex flex-column justify-content-between">
                   <div className="mb-4">
                     <h3 className="card-title text-center mb-3">Sarah Pashniak</h3>
