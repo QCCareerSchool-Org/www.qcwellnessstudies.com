@@ -45,11 +45,14 @@ $text-muted: $gray-500;
 
 h1,.h1{font-size:2.5rem}
 h2,.h2{font-size:2rem}
-main{margin-top:59px;min-height: 500px}
+main{
+  // margin-top:59px;
+  min-height: 500px;
+}
 .no-nav main{margin-top:0}
 section{padding:48px 0;position:relative}
 .container{position:relative}
-.subNav section:first-of-type{padding-top:105px}
+//.subNav section:first-of-type{padding-top:105px}
 .footer{padding:48px 0 96px;color:#ccc}
 .footer strong{font-weight:700}
 #footer{font-size:14px}
@@ -67,7 +70,7 @@ section{padding:48px 0;position:relative}
 
 .subnav .nav-link, .subnav .btn{text-transform:uppercase;font-size:14px!important}
 .subnav .navbar-brand{font-size:14px;font-weight:400;text-transform:uppercase}
-.subnav{top:64px!important}
+//.subnav{top:64px!important}
 
 .header-logo{height:38px}
 #footer-logo{width:100%;max-width:100px}
@@ -97,9 +100,12 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-weight:400}
 #navbarCollapse.collapsing li,#navbarCollapse.show li{padding-bottom:0.5rem}
 #navbarCollapse.collapsing .btn,#navbarCollapse.show .btn{margin-top:0.5rem}
 
+.btn-primary { color: white; }
+.btn-secondary { color: white; }
+
 /* sm */
 @media (min-width: 576px) {
-  main{margin-top:63px}
+  // main{margin-top:63px}
   .no-nav main{margin-top:0}
   .anchor{top:-64px}
   .subNav .anchor{top:-120px}
@@ -110,7 +116,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-weight:400}
   section{padding:52px 0}
   .subNav section:first-of-type{padding-top:105px}
   #navList{margin-right:1rem;}
-  .navbar-nav .nav-link{padding-left:1.25rem!important;padding-right:1.25rem!important}
+  .navbar-nav .nav-link{padding-left:0rem!important;padding-right:2rem!important}
 
   #navbarCollapse.collapsing,#navbarCollapse.show{padding-top:0;padding-bottom:0}
   #navbarCollapse.collapsing li,#navbarCollapse.show li{padding-bottom:0}
@@ -125,11 +131,12 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-weight:400}
   section{padding:58px 0}
   .subNav section:first-of-type{padding-top:101px}
   #navList{margin-right:2rem;}
-  .navbar-nav .nav-link{padding-left:1.75rem!important;padding-right:1.75rem!important}
+  .navbar-nav .nav-link{padding-left:0!important;padding-right:1.75rem!important}
 }
 
 /* xl */
 @media (min-width: 1200px) {
+  .navbar-nav .nav-link{padding-left:0!important;padding-right:3rem!important}
 }
 
 .price-card .nav-item.nav-link { padding-top: 0.25rem }
