@@ -176,11 +176,12 @@ const TeresaSedlmairPage: NextPage = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-md-8 col-lg-6 text-center">
-              <h2 className="mb-5">Connect with Teresa</h2>
+              <h2 className="mb-5">See Teresa's Success in Action</h2>
+              <p className="lead">Explore Teresa's work and see what's possible with a QC certification:</p>
               <div className="d-flex justify-content-between">
-                <Link href="https://littletreessleepconsulting.com/"><button className="btn btn-secondary">Website</button></Link>
-                <Link href="https://www.instagram.com/littletreessleepconsulting/#"><button className="btn btn-secondary">Instagram</button></Link>
-                <Link href="https://www.facebook.com/people/Little-Trees-Sleep-Consulting/100089354994612/"><button className="btn btn-secondary">Facebook</button></Link>
+                <Link href="https://littletreessleepconsulting.com/">Website</Link>
+                <Link href="https://www.instagram.com/littletreessleepconsulting/#">Instagram</Link>
+                <Link href="https://www.facebook.com/people/Little-Trees-Sleep-Consulting/100089354994612/">Facebook</Link>
               </div>
             </div>
           </div>
