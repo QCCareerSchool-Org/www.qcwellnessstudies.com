@@ -9,6 +9,7 @@ import { useCountUp } from 'react-use-count-up';
 import Image1 from './image-1.jpg';
 import Image2 from './image-2.jpg';
 import Image3 from './image-3.jpg';
+import VideoPosterImage from './video-preview-cover.jpg';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
 const iconSize = 64;
@@ -31,7 +32,7 @@ const TeresaSedlmairPage: NextPage = () => {
           <h1>From Classroom to Calm Nights</h1>
           <p className="lead">Teresa Sedlmair | Certified Infant Sleep Consultant</p>
           <div className="ratio ratio-16x9">
-            <video src="https://1b42a0e06c41c1a1efaf-e0e54072af1cb962a4847b2205399911.ssl.cf1.rackcdn.com/teresa-sedlmair.mp4" controls />
+            <video src="https://1b42a0e06c41c1a1efaf-e0e54072af1cb962a4847b2205399911.ssl.cf1.rackcdn.com/teresa-sedlmair.mp4" poster={VideoPosterImage.src} controls />
           </div>
         </div>
       </section>
