@@ -167,7 +167,7 @@ const TeresaSedlmairPage: NextPage = () => {
             <div className="col-12 col-sm-10 col-md-8 text-center">
               <h2>Start Your Own Success Story</h2>
               <p>Follow in Teresa's footsteps. Our comprehensive online course will give you the tools and business know-how to become a certified Sleep Consultant.</p>
-              <button className="btn btn-lg btn-primary">Enroll Now</button>
+              <Link href="https://enroll.qcwellnessstudies.com"><button className="btn btn-lg btn-primary">Enroll Now</button></Link>
             </div>
           </div>
         </div>
