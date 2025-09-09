@@ -176,7 +176,7 @@ const Page: NextPageWithLayout<Props> = ({ enrollPath = 'https://enroll.qcwellne
         />
       </section>
 
-      <IncludedSection className="bg-light text-dark" certification="Pediactric Sleep Consulting Professional (PSCP™)" />
+      <IncludedSection className="bg-light text-dark" certification="Pediatric Sleep Consulting Professional (PSCP™)" />
 
       <a className="anchor" id="outline"></a>
       <section id="outlineSection">
