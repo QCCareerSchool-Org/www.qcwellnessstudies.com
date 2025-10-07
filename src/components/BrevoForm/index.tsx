@@ -1,8 +1,12 @@
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
+import Link from 'next/link';
 import type { ChangeEventHandler, FC, FormEventHandler, ReactElement } from 'react';
-import { useCallback, useEffect, useId, useRef, useState } from 'react';
+import { forwardRef, useCallback, useEffect, useId, useRef, useState } from 'react';
 import { GoogleReCaptcha } from 'react-google-recaptcha-v3';
+import type { DefaultInputComponentProps } from 'react-phone-number-input';
+import type { Country, Value } from 'react-phone-number-input/input';
+import PhoneInput from 'react-phone-number-input/input';
 import { v1 } from 'uuid';
 
 import DownloadIcon from '../download.svg';
@@ -11,6 +15,7 @@ import styles from './index.module.scss';
 interface Props {
   successLocation: string;
   listId: number;
+  telephoneListId?: number;
   emailTemplateId?: number;
   buttonText?: string;
   buttonClassName?: string;
@@ -25,6 +30,7 @@ interface Props {
   courseCodes?: string[];
   button?: ReactElement;
   referrer: string | null;
+  countryCode?: string | null;
 }
 
 export const BrevoForm: FC<Props> = props => {
@@ -32,11 +38,17 @@ export const BrevoForm: FC<Props> = props => {
   const emailAddressRef = useRef<HTMLInputElement>(null);
   const [ firstName, setFirstName ] = useState('');
   const [ lastName, setLastName ] = useState('');
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const [ telephoneNumber, setTelephoneNumber ] = useState<Value>();
   const [ emailAddress, setEmailAddress ] = useState('');
   const [ token, setToken ] = useState<string>();
   const [ refreshReCaptcha, setRefreshReCaptcha ] = useState(false);
   const submitting = useRef(false);
   const [ disabled, setDisabled ] = useState(true);
+  const [ telephoneNumberE164, setTelephoneNumberE164 ] = useState('');
+
+  // const showTelephone = props.countryCode === 'CA' || props.countryCode === 'US';
+  const showTelephone = false;
 
   const handleFirstNameChange: ChangeEventHandler<HTMLInputElement> = e => {
     setFirstName(e.target.value);
@@ -44,6 +56,10 @@ export const BrevoForm: FC<Props> = props => {
 
   const handleLastNameChange: ChangeEventHandler<HTMLInputElement> = e => {
     setLastName(e.target.value);
+  };
+
+  const handleTelephoneNumberChange = (value?: Value): void => {
+    setTelephoneNumber(value);
   };
 
   const handleEmailAddressChange: ChangeEventHandler<HTMLInputElement> = e => {
@@ -103,9 +119,16 @@ export const BrevoForm: FC<Props> = props => {
     setTimeout(() => {
       submitting.current = false;
     }, 10_000);
-
-    return true;
   };
+
+  // neeed so that we send the telephone number in the correct format
+  // if we try to use telephoneNumber directly there is an issue:
+  // removing the telephone number from the visible field doesn't remove the value from the hidden field
+  // if we try to use the <PhoneInput /> component directly, we don't get the correct format in the back end
+  useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+    setTelephoneNumberE164(telephoneNumber ?? '');
+  }, [ telephoneNumber ]);
 
   return (
     <form action="https://leads.qccareerschool.com" method="post" className={styles.brochureForm} onSubmit={handleSubmit}>
@@ -116,6 +139,7 @@ export const BrevoForm: FC<Props> = props => {
       <input type="hidden" name="nonce" value={v1()} />
       {props.courseCodes?.map(c => <input key={c} type="hidden" name="courseCodes" value={c} />)}
       {typeof props.emailTemplateId !== 'undefined' && <input type="hidden" name="emailTemplateId" value={props.emailTemplateId} />}
+      {props.telephoneListId && <input type="hidden" name="telephoneListId" value={props.telephoneListId} />}
       {props.gclid && <input type="hidden" name="gclid" value={props.gclid} />}
       {props.msclkid && <input type="hidden" name="msclkid" value={props.msclkid} />}
       {props.utmSource && <input type="hidden" name="utmSource" value={props.utmSource} />}
@@ -129,6 +153,15 @@ export const BrevoForm: FC<Props> = props => {
         <input onChange={handleFirstNameChange} value={firstName} type="text" name="firstName" id={`${id}firstName`} className="form-control" placeholder={props.placeholders ? 'Name' : undefined} autoComplete="given-name" autoCapitalize="words" />
       </div>
       <input onChange={handleLastNameChange} value={lastName} type="hidden" name="lastName" id={`${id}lastName`} />
+      {/* eslint-disable-next-line @typescript-eslint/no-unnecessary-condition */}
+      {showTelephone && (
+        <div className="mb-3">
+          { /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */ }
+          <PhoneInput id={`${id}telephoneNumber`} value={telephoneNumber} onChange={handleTelephoneNumberChange} defaultCountry={props.countryCode as Country} inputComponent={InputComponent} />
+          <input type="hidden" name="telephoneNumber" value={telephoneNumberE164} />
+          <p className="p-1"><small>By providing your phone number, you agree to receive exclusive offers from QC Wellness Studies. Message frequency varies. Message & data rates may apply. Reply STOP to opt out. <Link href="https://www.qcmakeupacademy.com/terms.html" target="_blank" rel="noreferrer">Terms & Privacy</Link>.</small></p>
+        </div>
+      )}
       <div className="mb-3">
         {!props.placeholders && <label htmlFor={`${id}emailAddress`} className="form-label">Email <span className="text-primary">*</span></label>}
         <input ref={emailAddressRef} onChange={handleEmailAddressChange} value={emailAddress} type="email" name="emailAddress" id={`${id}emailAddress`} className={`form-control ${styles.emailAddressInput}`} placeholder={props.placeholders ? 'Email *' : undefined} required autoComplete="email" autoCapitalize="none" />
@@ -151,3 +184,19 @@ export const BrevoForm: FC<Props> = props => {
     </form>
   );
 };
+
+interface InputProps {
+  value: Value;
+  onChange: ChangeEventHandler;
+  name: string;
+}
+
+const InputComponent = forwardRef<HTMLInputElement, DefaultInputComponentProps>((props, ref) => {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const { value, onChange, name } = props as InputProps;
+  const handleChange = onChange;
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  return <input ref={ref} name={name} type="tel" value={value} onChange={handleChange} className="form-control" placeholder="Phone (Optional)" />;
+});
+
+InputComponent.displayName = 'InputComponent';
