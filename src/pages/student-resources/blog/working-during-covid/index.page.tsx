@@ -48,7 +48,7 @@ const Page: NextPage = () => (
               <li>Reach out to the Student Support Team 7 days a week for assistance</li>
               <li>Access your course materials any time in the online student center</li>
               <li>Choose from flexible, affordable tuition payment options</li>
-              <li>Get up to 2 full years to complete your course</li>
+              <li>Get up to a full year to complete your course</li>
               <li>Become a certified Infant Sleep Consulting Professional (ISCP™) upon successful completion of the course</li>
             </ul>
             <p className="lead"><Link href="/courses-and-tuition/sleep-consultant">Learn more about QC Wellness Studies&apos; Sleep Consultant Course!</Link></p>
