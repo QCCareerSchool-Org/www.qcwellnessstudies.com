@@ -31,6 +31,7 @@ interface Props {
   utmContent?: string;
   utmTerm?: string;
   referrer: string | null;
+  countryCode?: string;
 }
 
 const brevoListId = 24;
@@ -71,6 +72,7 @@ const Page: NextPageWithLayout<Props> = props => {
                 <BrevoForm
                   successLocation={`${process.env.NEXT_PUBLIC_HOST ?? 'https://www.qcwellnessstudies.com'}/courses-and-tuition/sleep-consultant/thank-you`}
                   listId={brevoListId}
+                  // telephoneListId={0}
                   emailTemplateId={brevoEmailTemplateId}
                   gclid={props.gclid}
                   msclkid={props.msclkid}
@@ -82,6 +84,7 @@ const Page: NextPageWithLayout<Props> = props => {
                   placeholders
                   courseCodes={courses}
                   referrer={props.referrer}
+                  countryCode={props.countryCode}
                 />
               </div>
             </div>
@@ -112,7 +115,7 @@ const Page: NextPageWithLayout<Props> = props => {
     <section id="whySection">
       <WhyChoose
         subheader="Get certified faster with a fully online sleep consultant course!"
-        sections = {[
+        sections={[
           {
             title: 'Comprehensive',
             text: 'You won\'t learn just one proprietary method of sleep coaching. QC provides advanced training in every sleep consulting method, so you\'ll be well prepared to pick and choose the right method for your clients\' needs.',
@@ -188,6 +191,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async context => {
   if (utmTerm) {
     props.utmTerm = utmTerm;
   }
+
+  const headers = context.req.headers;
+  props.countryCode = (Array.isArray(headers['x-vercel-ip-country']) ? headers['x-vercel-ip-country'][0] : headers['x-vercel-ip-country']) ?? 'US';
 
   return { props };
 };
