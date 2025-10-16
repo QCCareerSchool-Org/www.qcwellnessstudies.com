@@ -158,7 +158,7 @@ export const BrevoForm: FC<Props> = props => {
           { /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */ }
           <PhoneInput id={`${id}telephoneNumber`} value={telephoneNumber} onChange={handleTelephoneNumberChange} defaultCountry={props.countryCode as Country} inputComponent={InputComponent} />
           <input type="hidden" name="telephoneNumber" value={telephoneNumberE164} />
-          <p className="p-1"><small>By providing your phone number, you agree to receive exclusive offers from QC Wellness Studies. Message frequency varies. Message & data rates may apply. Reply STOP to opt out. <Link href="https://www.qcmakeupacademy.com/terms.html" target="_blank" rel="noreferrer">Terms & Privacy</Link>.</small></p>
+          {telephoneNumberE164 && <p className="p-1"><small>By providing your phone number, you agree to receive exclusive offers from QC Wellness Studies. Message frequency varies. Message & data rates may apply. Reply STOP to opt out. <Link href="https://www.qcmakeupacademy.com/terms.html" target="_blank" rel="noreferrer">Terms & Privacy</Link>.</small></p>}
         </div>
       )}
       <div className="mb-3">
