@@ -72,7 +72,7 @@ const Page: NextPageWithLayout<Props> = props => {
                 <BrevoForm
                   successLocation={`${process.env.NEXT_PUBLIC_HOST ?? 'https://www.qcwellnessstudies.com'}/courses-and-tuition/sleep-consultant/thank-you`}
                   listId={brevoListId}
-                  // telephoneListId={0}
+                  telephoneListId={67}
                   emailTemplateId={brevoEmailTemplateId}
                   gclid={props.gclid}
                   msclkid={props.msclkid}
