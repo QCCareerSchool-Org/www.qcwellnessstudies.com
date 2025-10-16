@@ -30,7 +30,7 @@ interface Props {
   courseCodes?: string[];
   button?: ReactElement;
   referrer: string | null;
-  countryCode?: string | null;
+  countryCode?: string;
 }
 
 export const BrevoForm: FC<Props> = props => {
@@ -47,8 +47,7 @@ export const BrevoForm: FC<Props> = props => {
   const [ disabled, setDisabled ] = useState(true);
   const [ telephoneNumberE164, setTelephoneNumberE164 ] = useState('');
 
-  // const showTelephone = props.countryCode === 'CA' || props.countryCode === 'US';
-  const showTelephone = false;
+  const showTelephone = props.countryCode === 'CA' || props.countryCode === 'US';
 
   const handleFirstNameChange: ChangeEventHandler<HTMLInputElement> = e => {
     setFirstName(e.target.value);
@@ -154,7 +153,7 @@ export const BrevoForm: FC<Props> = props => {
       </div>
       <input onChange={handleLastNameChange} value={lastName} type="hidden" name="lastName" id={`${id}lastName`} />
       {/* eslint-disable-next-line @typescript-eslint/no-unnecessary-condition */}
-      {showTelephone && (
+      {showTelephone && typeof props.telephoneListId !== 'undefined' && (
         <div className="mb-3">
           { /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */ }
           <PhoneInput id={`${id}telephoneNumber`} value={telephoneNumber} onChange={handleTelephoneNumberChange} defaultCountry={props.countryCode as Country} inputComponent={InputComponent} />
