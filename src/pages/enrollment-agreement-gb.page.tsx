@@ -25,7 +25,7 @@ const Page: NextPageWithLayout = () => (
       </ul>
 
       <h2>3. Course Deadlines</h2>
-      <p>You have one year from the date of enrollment to complete your courses. However, QC is happy to offer an extension to students who need more time. Simply contact the School to arrange an extension, before your two-year deadline. A nominal administration fee will be charged to your account.</p>
+      <p>You have one year from the date of enrollment to complete your courses. However, QC is happy to offer an extension to students who need more time. Simply contact the School to arrange an extension, before your one-year deadline. A nominal administration fee will be charged to your account.</p>
 
       <h2>4. Assignment Deadlines &amp; Grading</h2>
       <p>There are no deadlines for submitting any assignment or course unit to QC.</p>
