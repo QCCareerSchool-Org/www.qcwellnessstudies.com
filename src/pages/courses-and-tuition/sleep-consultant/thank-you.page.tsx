@@ -6,6 +6,7 @@ import { IoMdBook, IoMdEye, IoMdLaptop, IoMdSchool } from 'react-icons/io';
 
 import ThankYouImage from './thank-you.jpg';
 import { BackgroundImage } from '@/components/BackgroundImage';
+import { CurrentPromotion } from '@/components/CurrentPromotion';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
 import { SEO } from '@/components/SEO';
 import { useOnce } from '@/hooks/useOnce';
@@ -20,9 +21,10 @@ interface Props {
   provinceCode?: string;
   firstName?: string;
   lastName?: string;
+  date: number;
 }
 
-const Page: NextPage<Props> = ({ emailAddress, countryCode, provinceCode, firstName, lastName }) => {
+const Page: NextPage<Props> = ({ emailAddress, countryCode, provinceCode, firstName, lastName, date }) => {
   useEffect(() => {
     if (emailAddress) {
       window.gtag('set', 'user-data', { email: emailAddress });
@@ -71,6 +73,8 @@ const Page: NextPage<Props> = ({ emailAddress, countryCode, provinceCode, firstN
       </div>
     </section>
 
+    <CurrentPromotion date={date} countryCode={countryCode ?? 'US'} />
+
     <section id="linksQCSection">
       <div className="container text-center">
         <div className="row">
@@ -117,7 +121,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async context => {
   const firstName = getParam('firstName');
   const lastName = getParam('lastName');
 
-  const props: Props = {};
+  const props: Props = { date: new Date().getTime() };
   if (emailAddress) {
     props.emailAddress = emailAddress;
   }
