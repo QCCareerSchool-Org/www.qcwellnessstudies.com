@@ -157,7 +157,7 @@ export const BrevoForm: FC<Props> = props => {
         <input onChange={handleFirstNameChange} value={firstName} type="text" name="firstName" id={`${id}firstName`} className="form-control" placeholder={props.placeholders ? 'Name' : undefined} autoComplete="given-name" autoCapitalize="words" />
       </div>
       <input onChange={handleLastNameChange} value={lastName} type="hidden" name="lastName" id={`${id}lastName`} />
-      <input onChange={handleCityChange} value={city} type="text" name="city" id={`${id}city`} style={{ position: 'absolute', left: -9999, top: 'auto', width: 1, height: 1, overflow: 'hidden' }} tabIndex={-1} autoComplete="new-password" />
+      <input onChange={handleCityChange} value={city} type="text" name="hp_city" id={`${id}city`} style={{ position: 'absolute', left: -9999, top: 'auto', width: 1, height: 1, overflow: 'hidden' }} tabIndex={-1} autoComplete="new-password" />
       {/* eslint-disable-next-line @typescript-eslint/no-unnecessary-condition */}
       {showTelephone && typeof props.telephoneListId !== 'undefined' && (
         <div className="mb-3">
