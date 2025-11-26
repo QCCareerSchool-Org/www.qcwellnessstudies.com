@@ -14,6 +14,7 @@ export const DefaultLayout: FC<PropsWithChildren<Props>> = ({ children, secondar
   const date = new Date().getTime();
   const location = useLocation();
   const countryCode = location ? location.countryCode : 'US';
+
   return (
     <>
       <CountDownTimer date={date} countryCode={countryCode} />
