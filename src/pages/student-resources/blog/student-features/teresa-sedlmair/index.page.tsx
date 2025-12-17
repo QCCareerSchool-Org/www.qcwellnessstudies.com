@@ -51,7 +51,7 @@ const TeresaSedlmairPage: NextPage = () => {
             </div>
             <div className="col-12 col-sm-10 col-md-8 mt-4">
               <hr />
-              <p className="lead my-4">“Rested families are thriving families—helping you get there is my greatest joy. It's like a puzzle that I have to crack and can’t rest until I do.”</p>
+              <p className="lead my-4">&ldquo;Rested families are thriving families—helping you get there is my greatest joy. It's like a puzzle that I have to crack and can't rest until I do.&rdquo;</p>
               <hr />
             </div>
           </div>

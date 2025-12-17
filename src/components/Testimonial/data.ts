@@ -1,4 +1,5 @@
 import type { StaticImageData } from 'next/image';
+
 import { Sarah } from './images';
 
 export interface Testimonial {

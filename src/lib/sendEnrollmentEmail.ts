@@ -5,9 +5,9 @@ export const sendEnrollmentEmail = async (enrollmentId: number, code: string): P
   const response = await fetch(url, {
     method: 'post',
     headers: {
-      // eslint-disable-next-line @typescript-eslint/naming-convention
+
       'X-API-Version': '2',
-      // eslint-disable-next-line @typescript-eslint/naming-convention
+
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({ code }),

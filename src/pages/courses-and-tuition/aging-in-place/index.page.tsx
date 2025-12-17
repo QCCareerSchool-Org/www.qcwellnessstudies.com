@@ -57,7 +57,7 @@ const Page: NextPageWithLayout = () => (
       </div>
     </section>
 
-    <a className="anchor" id="paymentPlans"></a>
+    <a className="anchor" id="paymentPlans" />
     <section id="paymentPlansSection" className="bg-light">
       <BackgroundImage src={WhiteGreenBackgroundImage} />
       <PaymentPlans courses={courses} doubleGuarantee={doubleGuarantee} />
@@ -143,7 +143,7 @@ const Page: NextPageWithLayout = () => (
     <section id="whyChooseQCSection">
       <WhyChoose
         subheader="Get certified faster with a fully online skincare consultant course!"
-        sections = {[
+        sections={[
           {
             title: 'Affordable',
             text: 'Since QC\'s course is fully online, you don\'t have to pay surcharges for attending lectures or webinars. You complete the full course from home.',
@@ -166,7 +166,7 @@ const Page: NextPageWithLayout = () => (
 
     <IncludedSection className="bg-light text-dark" backgroundImageSrc={WhiteGreenBackgroundImage} certification="Aging in Place Design Professional (APDP™)" />
 
-    <a className="anchor" id="outline"></a>
+    <a className="anchor" id="outline" />
     <section id="outlineSection">
       <div className="container">
         <div className="row">
@@ -213,7 +213,7 @@ const Page: NextPageWithLayout = () => (
               <p className="mb-0">This unit will ask you to work with the home of a friend or relative. The home&apos;s resident(s) can be any age and at any stage of life. You will simply be assessing the home as if it belonged to an AIP client. You&apos;ll start by assessing the whole home in broad terms. In later assignments, you&apos;ll focus on two specific rooms in the home. You can choose any type of room (bedroom, bathroom, kitchen, living room, entryway, etc.). However, to get the most from this project, we recommend that you pick a room in which you can make a number of suggestions for AIP improvements. A room that is already AIP-ready won&apos;t allow you to practice applying all of your new skills.</p>
             </div>
             <div className="col-12 col-md-10 offset-md-1">
-              <div id="accordionUnitC"></div>
+              <div id="accordionUnitC" />
             </div>
           </div>
         </div>
@@ -221,7 +221,7 @@ const Page: NextPageWithLayout = () => (
       </div>
     </section>
 
-    <a className="anchor" id="tutors"></a>
+    <a className="anchor" id="tutors" />
     <section id="tutorsSection" className="bg-light">
       <div className="container text-center">
         <div className="row text-center">

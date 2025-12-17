@@ -126,12 +126,12 @@ export const BrevoForm: FC<Props> = props => {
       </div>
       <input type="hidden" name="lastName" id={`${id}lastName`} />
       <input type="text" name={`hp_${randomName}`} style={{ position: 'absolute', left: -9999, top: 'auto', width: 1, height: 1, overflow: 'hidden' }} tabIndex={-1} autoComplete="off" />
-      {/* eslint-disable-next-line @typescript-eslint/no-unnecessary-condition */}
+      { }
       {showTelephone && typeof props.telephoneListId !== 'undefined' && (
         <>
           <input type="hidden" name="telephoneListId" value={props.telephoneListId} />
           <div className="mb-3">
-            { /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}
+            { }
             <PhoneInput id={`${id}telephoneNumber`} value={telephoneNumber} onChange={handleTelephoneNumberChange} defaultCountry={props.countryCode as Country} inputComponent={InputComponent} />
             <input type="hidden" name="telephoneNumber" value={telephoneNumberE164} />
             {telephoneNumberE164 && <p className="p-1"><small>By providing your phone number, you agree to receive exclusive offers from QC Wellness Studies. Message frequency varies. Message & data rates may apply. Reply STOP to opt out. <Link href="https://www.qcmakeupacademy.com/terms.html" target="_blank" rel="noreferrer">Terms & Privacy</Link>.</small></p>}

@@ -6,7 +6,7 @@ import { SEO } from '@/components/SEO';
 import { useLocation } from '@/hooks/useLocation';
 import OfferExpiredImage from '@/images/offer-expired-tag.svg';
 import { getTelephoneNumber } from '@/lib/functions';
-import { openLiveChat } from '@/lib/livechat';
+import { openLiveChat as handleClick } from '@/lib/livechat';
 
 const OfferExpiredPage: NextPage = () => {
   const location = useLocation();
@@ -29,7 +29,7 @@ const OfferExpiredPage: NextPage = () => {
             <div className="col col-lg-8 offset-lg-2">
               <div className="d-flex flex-column flex-lg-row align-items-center justify-content-lg-around">
                 <a href={`tel:${telephoneNumber}`}><button className="btn btn-outline-primary mb-3 mb-lg-0">Call Us Now {telephoneNumber}</button></a>
-                <button onClick={openLiveChat} className="btn btn-secondary">Chat with a Student Advisor</button>
+                <button onClick={handleClick} className="btn btn-secondary">Chat with a Student Advisor</button>
               </div>
             </div>
           </div>

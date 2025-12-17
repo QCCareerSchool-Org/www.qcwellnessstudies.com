@@ -2,11 +2,11 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Back } from '../../Back';
 import HeroBackgroundImage from './hero-bg.jpg';
 import MotherNewbornSelfieImage from './mother-newborn-selfie.jpg';
 import SeniorWomanTakingNotesImage from './senior-woman-taking-notes-notebook.jpg';
 import CommunicationSeniorWomanImage from './technology-communication-people-concept-senior-woman.jpg';
+import { Back } from '../../Back';
 import { BackgroundImage } from '@/components/BackgroundImage';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
 import { SEO } from '@/components/SEO';

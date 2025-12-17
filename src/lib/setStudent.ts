@@ -6,7 +6,7 @@ export const setStudent = async (enrollmentId: number, code: string): Promise<vo
     method: 'post',
     body: JSON.stringify({ enrollmentId, code }),
     headers: {
-      // eslint-disable-next-line @typescript-eslint/naming-convention
+
       'Content-Type': 'application/json',
     },
   });

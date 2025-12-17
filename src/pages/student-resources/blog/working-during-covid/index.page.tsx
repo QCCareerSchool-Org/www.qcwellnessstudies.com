@@ -2,11 +2,11 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Back } from '../../Back';
 import BabyGirlSleepingImage from './baby-girl-sleeping.jpg';
 import HeroBackgroundImage from './hero-bg.jpg';
 import LittleBoyMedicalMaskImage from './little-boy-medical-mask.jpg';
 import SleepConsultantHomeOfficeImage from './sleep-consultant-home-office.jpg';
+import { Back } from '../../Back';
 import { BackgroundImage } from '@/components/BackgroundImage';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
 import { SEO } from '@/components/SEO';

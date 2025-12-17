@@ -2,12 +2,12 @@ import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { ReactElement } from 'react';
-import FooterLogo from '../images/logo-footer.svg';
-import { openLiveChat } from '../lib/livechat';
 
 import { Address } from './Address';
 import styles from './Footer.module.scss';
 import { TelephoneNumber } from './TelephoneNumber';
+import FooterLogo from '../images/logo-footer.svg';
+import { openLiveChat as handleClick } from '../lib/livechat';
 
 export const Footer = (): ReactElement => (
   <footer id="footer" className={`${styles.footer} footer bg-dark mt-auto`}>
@@ -35,7 +35,7 @@ export const Footer = (): ReactElement => (
         <div className="col-12 col-md-4 col-lg-3 mb-4 mb-md-0">
           <p className="text-light"><strong>CONTACT US:</strong></p>
           <p><a href="mailto:info@qcwellnessstudies.com">Send Us a Message</a></p>
-          <p><a href="#" onClick={openLiveChat}>Click Here to Chat</a></p>
+          <p><a href="#" onClick={handleClick}>Click Here to Chat</a></p>
           <p><TelephoneNumber /></p>
           <p><a target="_blank" href="/terms" className="termsLink">Privacy Policy</a></p>
         </div>

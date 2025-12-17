@@ -1,12 +1,12 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 
-import { Back } from '../../Back';
 import FatherToddlerImage from './father-toddler-children-sitting-on-floor.jpg';
 import HeroBackgroundImage from './hero-bg.jpg';
 import SwaddlingImage from './newborn-baby-swaddling-white-cloth.jpg';
 import SleepingBabyImage from './sleeping-baby-on-back-white-bed.jpg';
 import ThreeMonthOldImage from './three-month-baby-girl.jpg';
+import { Back } from '../../Back';
 import { BackgroundImage } from '@/components/BackgroundImage';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
 import { SEO } from '@/components/SEO';

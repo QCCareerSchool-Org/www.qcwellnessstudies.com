@@ -10,18 +10,10 @@ import { ErrorBoundary } from '../components/ErrorBoundary';
 import { DefaultLayout } from '../layouts/DefaultLayout';
 import { fbqPageview } from '../lib/fbq';
 import { gaPageview } from '../lib/ga';
-import { TrackJS } from '../lib/trackjs-isomorphic';
 import { uetPageview } from '../lib/uet';
 import { Provider } from '../providers';
 import { brevoPageview } from '@/lib/brevo';
 import { BrevoConversations } from '@/scripts/brevoCoversations';
-
-if (!TrackJS.isInstalled()) {
-  TrackJS.install({
-    token: '0377457a8a0c41c2a11da5e34f786bba',
-    application: 'qc-wellness-studies',
-  });
-}
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {

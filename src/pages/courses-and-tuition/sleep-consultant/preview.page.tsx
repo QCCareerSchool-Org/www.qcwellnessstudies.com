@@ -38,8 +38,8 @@ import type { NextPageWithLayout } from '@/pages/_app.page';
 const courses = [ 'sl' ];
 
 const Page: NextPageWithLayout = () => {
-  const [ popup1, toggle1 ] = useToggle();
-  const [ popup2, toggle2 ] = useToggle();
+  const [ popup1, handleToggle1 ] = useToggle();
+  const [ popup2, handleToggle2 ] = useToggle();
   const location = useLocation();
   const price = usePrice(courses, location?.countryCode, location?.provinceCode);
 
@@ -85,7 +85,7 @@ const Page: NextPageWithLayout = () => {
       </div>
     </section>
 
-    <a className="anchor" id="online"></a>
+    <a className="anchor" id="online" />
     <section id="onlineSection">
       <BackgroundImage src={OnlineBackgroundImage} />
       <div className="container">
@@ -105,7 +105,7 @@ const Page: NextPageWithLayout = () => {
       </div>
     </section>
 
-    <a className="anchor" id="howItWorks"></a>
+    <a className="anchor" id="howItWorks" />
     <section>
       <BackgroundImage src={GreenWhiteBackgroundImage} />
       <HowItWorks
@@ -115,7 +115,7 @@ const Page: NextPageWithLayout = () => {
       />
     </section>
 
-    <a className="anchor" id="curriculum"></a>
+    <a className="anchor" id="curriculum" />
     <section id="curriculumSection">
       <div className="container">
         <div className="row">
@@ -161,7 +161,7 @@ const Page: NextPageWithLayout = () => {
       </div>
     </section>
 
-    <Modal show={popup1} onHide={toggle1} size="lg">
+    <Modal show={popup1} onHide={handleToggle1} size="lg">
       <Modal.Header closeButton>
         <Modal.Title>Assignment A4</Modal.Title>
       </Modal.Header>
@@ -170,11 +170,11 @@ const Page: NextPageWithLayout = () => {
       </Modal.Body>
       <Modal.Footer className="bg-dark text-white justify-content-between border-0">
         <a href="/sample-assignments/A4.pdf" className="ml-1"><IoMdDownload className="mr-1" />Download A4.pdf</a>
-        <button type="button" className="btn btn-secondary" onClick={toggle1}>Close</button>
+        <button type="button" className="btn btn-secondary" onClick={handleToggle1}>Close</button>
       </Modal.Footer>
     </Modal>
 
-    <Modal show={popup2} onHide={toggle2} size="lg">
+    <Modal show={popup2} onHide={handleToggle2} size="lg">
       <Modal.Header closeButton>
         <Modal.Title>Assignment B3</Modal.Title>
       </Modal.Header>
@@ -183,11 +183,11 @@ const Page: NextPageWithLayout = () => {
       </Modal.Body>
       <Modal.Footer className="bg-dark text-white justify-content-between border-0">
         <a href="/sample-assignments/B3.pdf" className="ml-1"><IoMdDownload className="mr-1" />Download B3.pdf</a>
-        <button type="button" className="btn btn-secondary" onClick={toggle2}>Close</button>
+        <button type="button" className="btn btn-secondary" onClick={handleToggle2}>Close</button>
       </Modal.Footer>
     </Modal>
 
-    <a className="anchor" id="sampleAssignment"></a>
+    <a className="anchor" id="sampleAssignment" />
     <section id="sampleAssignmentSection">
       <BackgroundImage src={GreenWhiteBackgroundImage} />
       <div className="container text-center">
@@ -200,7 +200,7 @@ const Page: NextPageWithLayout = () => {
               <div className="card-body d-flex">
                 <div className="d-flex flex-column justify-content-between">
                   <p>In addition to providing guidance on sleep training, sleep consultants offer advice onother crucial factors that tie into good sleep, including the sleep environment. In this practical assignment, you&apos;ll photograph and evaluate the sleep space of a friend or relative&apos;s infant.</p>
-                  <button type="button" className="btn btn-primary" onClick={toggle1}>Assignment A4</button>
+                  <button type="button" className="btn btn-primary" onClick={handleToggle1}>Assignment A4</button>
                 </div>
               </div>
             </div>
@@ -211,7 +211,7 @@ const Page: NextPageWithLayout = () => {
               <div className="card-body d-flex">
                 <div className="d-flex flex-column justify-content-between">
                   <p>Every client&apos;s situation will be a little different. In this assignment, you&apos;ll read a client scenario and begin developing a customized sleep plan to address the client&apos;s needs. This is the kind of work you&apos;ll do every day when you start taking on your own clients.</p>
-                  <button type="button" className="btn btn-primary" onClick={toggle2}>Assignment B3</button>
+                  <button type="button" className="btn btn-primary" onClick={handleToggle2}>Assignment B3</button>
                 </div>
               </div>
             </div>
@@ -220,7 +220,7 @@ const Page: NextPageWithLayout = () => {
       </div>
     </section>
 
-    <a className="anchor" id="tuition"></a>
+    <a className="anchor" id="tuition" />
     <section id="tuitionSection">
       <div className="container">
         <div className="row">
@@ -245,7 +245,7 @@ const Page: NextPageWithLayout = () => {
       </div>
     </section>
 
-    <a className="anchor" id="support"></a>
+    <a className="anchor" id="support" />
     <section id="supportSection">
       <BackgroundImage src={GreenWhiteBackgroundImage} />
       <div className="container">
@@ -283,7 +283,7 @@ const Page: NextPageWithLayout = () => {
       </div>
     </section>
 
-    <a className="anchor" id="guarantee"></a>
+    <a className="anchor" id="guarantee" />
     <section id="guaranteeSection">
       <Guarantee
         courseName="Sleep Consultant"
@@ -303,7 +303,7 @@ const Page: NextPageWithLayout = () => {
       />
     </section>
 
-    <a className="anchor" id="about"></a>
+    <a className="anchor" id="about" />
     <section id="aboutSection">
       <BackgroundImage src={AboutBackgroundImage} />
       <About profession="professional sleep consultant" />

@@ -2,12 +2,12 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Back } from '../../Back';
 import ToddlerLyingOnBedImage from './close-top-view-lying-bed-toddler.jpg';
 import HeroBackgroundImage from './hero-bg.jpg';
 import NewbornBabyMotherImage from './home-portrait-newborn-baby-mother.jpg';
 import ChildSleepingWhiteBedImage from './one-year-old-child-sleeps-white-bed.jpg';
 import SmilingGirlLyingOnBedImage from './smiling-baby-girl-lying-on-bed.jpg';
+import { Back } from '../../Back';
 import { BackgroundImage } from '@/components/BackgroundImage';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
 import { SEO } from '@/components/SEO';

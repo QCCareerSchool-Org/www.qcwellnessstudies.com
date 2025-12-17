@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { useRef } from 'react';
+import { useId } from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 
@@ -14,14 +14,12 @@ interface Props {
 export const PriceCard: FC<Props> = ({ courses }) => {
   const location = useLocation();
   const price = usePrice(courses, location?.countryCode, location?.provinceCode);
-  const radix = 32;
-  const startPosition = 2;
-  const uniqueId = useRef(Math.random().toString(radix).slice(startPosition));
+  const uniqueId = useId();
   const enrollLink = `https://enroll.qcwellnessstudies.com/?${courses.map(c => `c=${c}`).join('&')}`;
   return (
     <div className="card shadow text-center price-card">
       <div className="card-body">
-        <Tabs defaultActiveKey="full" id={uniqueId.current}>
+        <Tabs defaultActiveKey="full" id={uniqueId}>
           <Tab eventKey="full" title={<small>PAY IN FULL</small>} className="mt-3">
             <p className="card-text small text-muted mb-0"><del>{price?.currency.symbol}{formatPrice(price?.discountedCost)}</del></p>
             <p className="card-text price text-dark"><small>{price?.currency.symbol}</small>{formatPrice(price?.plans.full.total)}</p>

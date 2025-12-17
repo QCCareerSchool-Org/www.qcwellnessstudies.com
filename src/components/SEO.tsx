@@ -9,7 +9,7 @@ interface Props {
   description: string;
   canonical: string;
   image?: {
-    src: string; // eslint-disable-line @typescript-eslint/no-explicit-any
+    src: string;
     alt: string;
   };
   twitterCardType?: TwitterCardType;
@@ -31,7 +31,7 @@ export const SEO: FC<Props> = props => {
   const baseUrl = 'https://www.qcwellnessstudies.com';
   const schema: Schema = {
     '@content': 'http://schema.org',
-    '@type': props.schemaType ? props.schemaType : 'WebPage',
+    '@type': props.schemaType ?? 'WebPage',
     'name': htmlTitle,
     'url': baseUrl + props.canonical,
     'description': props.description,
@@ -49,8 +49,8 @@ export const SEO: FC<Props> = props => {
       <meta property="og:title" content={props.title} />
       <meta property="og:description" content={props.description} />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content={baseUrl + (props.image?.src ? props.image.src : '/placeholder.jpg')} />
-      <meta property="og:image:alt" content={props.image?.alt ? props.image.alt : 'the QC Wellness Studies logo'} />
+      <meta property="og:image" content={baseUrl + (props.image?.src ?? '/placeholder.jpg')} />
+      <meta property="og:image:alt" content={props.image?.alt ?? 'the QC Wellness Studies logo'} />
       <link rel="canonical" href={baseUrl + props.canonical} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     </Head>

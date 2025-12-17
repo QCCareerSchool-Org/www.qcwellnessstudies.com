@@ -2,12 +2,12 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Back } from '../../Back';
 import BabySignLanguageArmsImage from './baby-sign-language-arms.jpg';
 import BabySignLanguageHandsImage from './baby-sign-language-hands.jpg';
 import BabySignLanguageThirstyImage from './baby-sign-language-thirsty.jpg';
 import WhatIsBabySignLanguageImage from './baby-sign-language-what-is.jpg';
 import HeroBackgroundImage from './hero-bg.jpg';
+import { Back } from '../../Back';
 import { BackgroundImage } from '@/components/BackgroundImage';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
 import { SEO } from '@/components/SEO';

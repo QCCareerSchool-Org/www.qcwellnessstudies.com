@@ -1,8 +1,7 @@
 import type { FC } from 'react';
-
 import { IoStar } from 'react-icons/io5';
-import { ImageCircle } from '../ImageCircle';
 
+import { ImageCircle } from '../ImageCircle';
 import { testimonials } from './data';
 import styles from './index.module.css';
 
@@ -21,7 +20,7 @@ export const TestimonialSection: FC<Props> = ({ id, className }) => {
         <div className="row justify-content-center">
           <div className="col-12 col-lg-9 col-xl-8 col-xxl-6">
             <div className="d-flex justify-content-center mb-3">
-              {Array.from({ length: 5 }).map((_, index) => <IoStar color={testimonial.stars > index ? 'gold' : 'lightgrey'} size={25} />)}
+              {Array.from({ length: 5 }).map((_, index) => <IoStar key={index} color={testimonial.stars > index ? 'gold' : 'lightgrey'} size={25} />)}
             </div>
             <blockquote>
               <div className={styles.text}>

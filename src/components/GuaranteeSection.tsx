@@ -1,6 +1,7 @@
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import type { FC } from 'react';
+
 import { BackgroundImage } from './BackgroundImage';
 import TwentyOneDayIcon from '@/images/21-day-guarentee.svg';
 import GuaranteeBackgroundImage from '@/images/bg-white-green-light.jpg';

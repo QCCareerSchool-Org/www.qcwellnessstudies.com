@@ -1,12 +1,12 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 
-import { Back } from '../../Back';
 import BabySleepingSheetsImage from './baby-sleeping-in-comfortable-sheets.jpg';
 import NewbornBrotherImage from './family-son-newborn-brother-nursery.jpg';
 import HeroBackgroundImage from './hero-bg.jpg';
 import MotherFeedingBabyBottleImage from './mother-holding-feeding-baby-milk-bottle.jpg';
 import MotherKidTabletImage from './mother-kid-play-tablet-computer-nursery.jpg';
+import { Back } from '../../Back';
 import { BackgroundImage } from '@/components/BackgroundImage';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
 import { SEO } from '@/components/SEO';

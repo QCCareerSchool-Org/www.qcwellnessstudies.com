@@ -42,7 +42,7 @@ interface Props {
   enrollPath: string;
 }
 
-const Page: NextPageWithLayout<Props> = ({ enrollPath = 'https://enroll.qcwellnessstudies.com/' }) => {
+const Page: NextPageWithLayout<Props> = ({ enrollPath }) => {
   return (
     <>
       <SEO
@@ -70,7 +70,7 @@ const Page: NextPageWithLayout<Props> = ({ enrollPath = 'https://enroll.qcwellne
         </div>
       </section>
 
-      <a className="anchor" id="paymentPlans"></a>
+      <a className="anchor" id="paymentPlans" />
       <section id="paymentPlansSection" className="bg-light">
         <BackgroundImage src={WhiteGreenLightBackgroundImage} />
         <PaymentPlans courses={courses} doubleGuarantee={doubleGuarantee} enrollPath={enrollPath} />
@@ -178,7 +178,7 @@ const Page: NextPageWithLayout<Props> = ({ enrollPath = 'https://enroll.qcwellne
 
       <IncludedSection className="bg-light text-dark" certification="Pediatric Sleep Consulting Professional (PSCP™)" />
 
-      <a className="anchor" id="outline"></a>
+      <a className="anchor" id="outline" />
       <section id="outlineSection">
         <div className="container">
           <div className="row">
@@ -282,7 +282,7 @@ const Page: NextPageWithLayout<Props> = ({ enrollPath = 'https://enroll.qcwellne
         </div>
       </section>
 
-      <a className="anchor" id="tutors"></a>
+      <a className="anchor" id="tutors" />
       <section id="tutorsSection" className="bg-light">
         <div className="container text-center">
           <h2 className="text-dark text-center">Your Sleep Consulting Tutor</h2>

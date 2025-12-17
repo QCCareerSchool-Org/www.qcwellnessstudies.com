@@ -64,7 +64,7 @@ const Page: NextPageWithLayout = () => (
       </div>
     </section>
 
-    <a className="anchor" id="promo"></a>
+    <a className="anchor" id="promo" />
     <section className="text-dark text-center">
       <div className="container">
         <div className="row">
@@ -77,7 +77,7 @@ const Page: NextPageWithLayout = () => (
       </div>
     </section>
 
-    <a className="anchor" id="paymentPlans"></a>
+    <a className="anchor" id="paymentPlans" />
     <section id="paymentPlansSection" className="bg-light">
       <PaymentPlans courses={courses} doubleGuarantee={doubleGuarantee} />
     </section>
@@ -213,7 +213,7 @@ const Page: NextPageWithLayout = () => (
 
     <IncludedSection className="bg-light text-dark" certification="Formal Caregiving Professional (FCGP™)" />
 
-    <a className="anchor" id="outline"></a>
+    <a className="anchor" id="outline" />
     <section id="outlineSection">
       <div className="container">
         <div className="row">
@@ -310,7 +310,7 @@ const Page: NextPageWithLayout = () => (
       </div>
     </section>
 
-    <a className="anchor" id="tutors"></a>
+    <a className="anchor" id="tutors" />
     <section id="tutorsSection" className="bg-light">
       <div className="container text-center">
         <h2 className="text-dark text-center">Your Caregiving Tutors</h2>

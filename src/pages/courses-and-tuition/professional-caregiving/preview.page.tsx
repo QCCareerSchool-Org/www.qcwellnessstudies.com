@@ -80,7 +80,7 @@ const Page: NextPageWithLayout = () => {
       </div>
     </section>
 
-    <a className="anchor" id="online"></a>
+    <a className="anchor" id="online" />
     <section id="onlineSection">
       <BackgroundImage src={OnlineBackgroundImage} />
       <div className="container">
@@ -100,7 +100,7 @@ const Page: NextPageWithLayout = () => {
       </div>
     </section>
 
-    <a className="anchor" id="howItWorks"></a>
+    <a className="anchor" id="howItWorks" />
     <section id="howItWorksSection">
       <BackgroundImage src={WhiteGreenBackgroundImage} />
       <HowItWorks
@@ -116,7 +116,7 @@ const Page: NextPageWithLayout = () => {
       />
     </section>
 
-    <a className="anchor" id="curriculum"></a>
+    <a className="anchor" id="curriculum" />
     <section id="curriculumSection">
       <div className="container">
         <div className="row">
@@ -162,7 +162,7 @@ const Page: NextPageWithLayout = () => {
       </div>
     </section>
 
-    <a className="anchor" id="tuition"></a>
+    <a className="anchor" id="tuition" />
     <section id="tuitionSection">
       <BackgroundImage src={WhiteGreenBackgroundImage} />
       <div className="container">
@@ -188,7 +188,7 @@ const Page: NextPageWithLayout = () => {
       </div>
     </section>
 
-    <a className="anchor" id="support"></a>
+    <a className="anchor" id="support" />
     <section className="bg-light">
       <div className="container">
         <div className="row">
@@ -225,7 +225,7 @@ const Page: NextPageWithLayout = () => {
       </div>
     </section>
 
-    <a className="anchor" id="guarantee"></a>
+    <a className="anchor" id="guarantee" />
     <section id="guaranteeSection">
       <Guarantee
         courseName="Caregiver"
@@ -239,7 +239,7 @@ const Page: NextPageWithLayout = () => {
       />
     </section>
 
-    <a className="anchor" id="about"></a>
+    <a className="anchor" id="about" />
     <section id="aboutSection">
       <BackgroundImage src={AboutBackgroundImage} />
       <About profession="a caregiver" />

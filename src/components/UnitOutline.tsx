@@ -1,7 +1,5 @@
 import type { FC } from 'react';
-import { useState } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-import Card from 'react-bootstrap/Card';
 
 export interface OutlineData {
   title: string;
@@ -16,7 +14,7 @@ export const UnitOutline: FC<Props> = ({ data }) => {
   return (
     <Accordion defaultActiveKey="0">
       {data.map((d, i) => (
-        <Accordion.Item eventKey={i.toString()}>
+        <Accordion.Item key={i} eventKey={i.toString()}>
           <Accordion.Header>{d.title}</Accordion.Header>
           <Accordion.Body>
             <ul className="mb-0">
