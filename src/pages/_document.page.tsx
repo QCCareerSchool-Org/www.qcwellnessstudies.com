@@ -79,7 +79,8 @@ class MyDocument extends Document {
           <script dangerouslySetInnerHTML={{ __html: uetScript }} />
           <script dangerouslySetInnerHTML={{ __html: facebookScript }} />
           <script dangerouslySetInnerHTML={{ __html: brevoScript }} />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Playfair+Display:400,700,900&display=optional" />
+          {/* eslint-disable-next-line @next/next/google-font-display */}
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Playfair+Display:400,700,900" />
         </Head>
         <body className="d-flex flex-column h-100">
           {/* eslint-disable-next-line @next/next/no-img-element */}
