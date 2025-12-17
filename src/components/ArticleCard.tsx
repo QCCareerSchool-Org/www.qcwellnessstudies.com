@@ -16,8 +16,8 @@ interface Props {
 export const ArticleCard: FC<Props> = ({ image, title, body, buttonText, link, externalLink, alt }) => (
   <div className="card shadow-lg mb-5">
     {externalLink
-      ? <a href={link}><Image className="card-img-top" src={image} alt={alt} /></a>
-      : <Link href={link}><Image className="card-img-top" src={image} alt={alt} /></Link>
+      ? <a href={link}><Image className="card-img-top" src={image} alt={alt} style={{ height: 'auto' }} /></a>
+      : <Link href={link}><Image className="card-img-top" src={image} alt={alt} style={{ height: 'auto' }} /></Link>
     }
     <div className="card-body">
       <h5 className="card-title">{title}</h5>

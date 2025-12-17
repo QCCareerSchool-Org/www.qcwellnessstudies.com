@@ -4,10 +4,10 @@ import Link from 'next/link';
 import type { ReactElement } from 'react';
 
 import { Address } from './Address';
+import { ChatLink } from './ChatLink';
 import styles from './Footer.module.scss';
 import { TelephoneNumber } from './TelephoneNumber';
 import FooterLogo from '../images/logo-footer.svg';
-import { openLiveChat as handleClick } from '../lib/livechat';
 
 export const Footer = (): ReactElement => (
   <footer id="footer" className={`${styles.footer} footer bg-dark mt-auto`}>
@@ -35,7 +35,7 @@ export const Footer = (): ReactElement => (
         <div className="col-12 col-md-4 col-lg-3 mb-4 mb-md-0">
           <p className="text-light"><strong>CONTACT US:</strong></p>
           <p><a href="mailto:info@qcwellnessstudies.com">Send Us a Message</a></p>
-          <p><a href="#" onClick={handleClick}>Click Here to Chat</a></p>
+          <p><ChatLink>Click Here to Chat</ChatLink></p>
           <p><TelephoneNumber /></p>
           <p><a target="_blank" href="/terms" className="termsLink">Privacy Policy</a></p>
         </div>
@@ -52,6 +52,7 @@ export const Footer = (): ReactElement => (
         <span className="px-2">|</span>
         <a target="_blank" rel="noopener noreferrer" href="https://www.doggroomingcourse.com/">QC Pet Studies</a>
       </p>
+      <small>This site is protected by reCAPTCHA and the Google <a target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }} href="https://policies.google.com/privacy">Privacy Policy</a> and <a target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }} href="https://policies.google.com/terms">Terms of Service</a> apply.</small>
     </div>
   </footer>
 );
