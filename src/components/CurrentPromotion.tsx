@@ -1,23 +1,18 @@
 import type { FC } from 'react';
 
-import { NewYears2025 } from './promotions/newYears2025';
+import { CyberMonday2025 } from './promotions/cyberMonday2025';
 
 interface Props {
   date: number;
   countryCode: string;
-  newYearsDiscountAmount: number;
-  newYearsEnrollHref?: string;
 }
 
-export const CurrentPromotion: FC<Props> = ({ date, countryCode, newYearsDiscountAmount, newYearsEnrollHref }) => {
-  if (date >= Date.UTC(2025, 11, 26, 8) && date < Date.UTC(2026, 0, 3, 8)) { // 2025-12-26T03:00 (8:00 UTC) to 2026-01-03T03:00 (8:00 UTC)
-    return (
-      <NewYears2025
-        countryCode={countryCode}
-        discountAmount={newYearsDiscountAmount}
-        enrollHref={newYearsEnrollHref}
-      />
-    );
+export const CurrentPromotion: FC<Props> = ({ date, countryCode }) => {
+  const cyberMondayStart = Date.UTC(2025, 10, 29, 5); // 2025-11-29T00:00 (05:00 UTC)
+  const cyberMondayEnd = Date.UTC(2025, 11, 4, 8); // 2025-12-04T03:00 (08:00 UTC)
+
+  if (date >= cyberMondayStart && date < cyberMondayEnd) {
+    return <CyberMonday2025 countryCode={countryCode} />;
   }
 
   return null;
