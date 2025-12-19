@@ -17,7 +17,7 @@ const Page: NextPageWithLayout = () => {
       <DeadlineFunnelScript />
       <OriginalPage
         enrollPath="https://enroll.qcwellnessstudies.com/300-off"
-        heroPromotion={<CurrentPromotion date={date} countryCode={countryCode} />}
+        heroPromotion={<CurrentPromotion date={date} countryCode={countryCode} newYearsDiscountAmount={300} newYearsEnrollHref="https://enroll.qcwellnessstudies.com/300-off" />}
       />
     </>
   );

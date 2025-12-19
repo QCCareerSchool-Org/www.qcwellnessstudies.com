@@ -9,7 +9,7 @@ import { isGBPCountry } from '@/lib/functions';
 
 interface Props {
   countryCode: string;
-  discountAmount?: number;
+  discountAmount: number;
   enrollHref?: string;
 }
 
@@ -24,7 +24,7 @@ const heroImages = {
   },
 } as const;
 
-export const NewYears2025: FC<Props> = ({ countryCode, discountAmount = 300, enrollHref = 'https://enroll.qcwellnessstudies.com/300-off?c=sl' }) => {
+export const NewYears2025: FC<Props> = ({ countryCode, discountAmount, enrollHref = 'https://enroll.qcwellnessstudies.com/300-off?c=sl' }) => {
   const heroImageSet = heroImages[discountAmount as keyof typeof heroImages];
   const heroImageSrc = isGBPCountry(countryCode) ? heroImageSet.uk : heroImageSet.default;
   const discount = `${isGBPCountry(countryCode) ? '£' : '$'}${discountAmount}`;

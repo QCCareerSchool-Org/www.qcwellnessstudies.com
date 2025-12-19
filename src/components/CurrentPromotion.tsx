@@ -5,7 +5,7 @@ import { NewYears2025 } from './promotions/newYears2025';
 interface Props {
   date: number;
   countryCode: string;
-  newYearsDiscountAmount?: number;
+  newYearsDiscountAmount: number;
   newYearsEnrollHref?: string;
 }
 
