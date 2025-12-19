@@ -6,7 +6,6 @@ import { IoMdBook, IoMdEye, IoMdLaptop, IoMdSchool } from 'react-icons/io';
 
 import ThankYouImage from './thank-you.jpg';
 import { BackgroundImage } from '@/components/BackgroundImage';
-import { CurrentPromotion } from '@/components/CurrentPromotion';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
 import { SEO } from '@/components/SEO';
 import { useOnce } from '@/hooks/useOnce';
@@ -24,7 +23,7 @@ interface Props {
   date: number;
 }
 
-const Page: NextPage<Props> = ({ emailAddress, countryCode, provinceCode, firstName, lastName, date }) => {
+const Page: NextPage<Props> = ({ emailAddress, countryCode, provinceCode, firstName, lastName }) => {
   useEffect(() => {
     if (emailAddress) {
       window.gtag('set', 'user-data', { email: emailAddress });
@@ -72,9 +71,6 @@ const Page: NextPage<Props> = ({ emailAddress, countryCode, provinceCode, firstN
         </div>
       </div>
     </section>
-
-    <CurrentPromotion date={date} countryCode={countryCode ?? 'US'} />
-
     <section id="linksQCSection">
       <div className="container text-center">
         <div className="row">
