@@ -126,7 +126,7 @@ export function nl2br(str?: string | null, xhtml?: boolean): string {
     return '';
   }
   const breakTag = xhtml || typeof xhtml === 'undefined' ? '<br />' : '<br>';
-  return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
+  return (str || '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/gu, '$1' + breakTag + '$2');
 }
 
 export function needsProvince(countryCode: string): boolean {

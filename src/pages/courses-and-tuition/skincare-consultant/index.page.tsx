@@ -60,7 +60,7 @@ const Page: NextPageWithLayout = () => (
       </div>
     </section>
 
-    <a className="anchor" id="paymentPlans"></a>
+    <a className="anchor" id="paymentPlans" />
     <section id="paymentPlansSection" className="bg-light">
       <BackgroundImage src={WhiteGreenBackgroundImage} />
       <PaymentPlans courses={courses} doubleGuarantee={doubleGuarantee} />
@@ -170,7 +170,7 @@ const Page: NextPageWithLayout = () => (
 
     <IncludedSection className="bg-light text-dark" backgroundImageSrc={WhiteGreenBackgroundImage} certification="International Skincare Consultant Professional (ISCP™)" />
 
-    <a className="anchor" id="outline"></a>
+    <a className="anchor" id="outline" />
     <section id="outlineSection">
       <div className="container">
         <div className="row">
@@ -253,7 +253,7 @@ const Page: NextPageWithLayout = () => (
       </div>
     </section>
 
-    <a className="anchor" id="tutors"></a>
+    <a className="anchor" id="tutors" />
     <section id="tutorsSection" className="bg-light">
       <div className="container text-center">
         <div className="row text-center">

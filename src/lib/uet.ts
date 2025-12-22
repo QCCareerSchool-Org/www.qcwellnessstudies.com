@@ -7,5 +7,5 @@ declare global {
 // log the page view with a specific URL
 export const uetPageview = (url: string): void => {
   window.uetq = window.uetq ?? [];
-  window.uetq.push('event', 'page_view', { page_path: url }); // eslint-disable-line @typescript-eslint/naming-convention, camelcase
+  window.uetq.push('event', 'page_view', { page_path: url }); // eslint-disable-line camelcase
 };

@@ -79,10 +79,12 @@ class MyDocument extends Document {
           <script dangerouslySetInnerHTML={{ __html: uetScript }} />
           <script dangerouslySetInnerHTML={{ __html: facebookScript }} />
           <script dangerouslySetInnerHTML={{ __html: brevoScript }} />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Playfair+Display:400,700,900"></link>
+          {/* eslint-disable-next-line @next/next/google-font-display */}
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Playfair+Display:400,700,900" />
         </Head>
         <body className="d-flex flex-column h-100">
-          <noscript><img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=1725004270923176&ev=PageView&noscript=1" /></noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <noscript><img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=1725004270923176&ev=PageView&noscript=1" alt="" /></noscript>
           <Main />
           <NextScript />
         </body>

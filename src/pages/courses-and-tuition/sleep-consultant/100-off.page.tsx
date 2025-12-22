@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react';
 
+import OriginalPage from './index.page';
 import { DeadlineFunnelScript } from '../../../components/DeadlineFunnelScript';
 import { LandingPageLayout } from '../../../layouts/LandingPageLayout';
 import type { NextPageWithLayout } from '../../_app.page';
-import OriginalPage from './index.page';
 
 const Page: NextPageWithLayout = () => (
   <>

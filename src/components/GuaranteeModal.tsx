@@ -9,11 +9,11 @@ import TwentyOneDayImage from '../images/21-day-guarentee.svg';
 interface Props {
   show: boolean;
   doubleGuarantee: boolean;
-  toggle: () => void;
+  onHide: () => void;
 }
 
-export const GuaranteeModal: FC<Props> = ({ show, doubleGuarantee, toggle }) => (
-  <Modal show={show} onHide={toggle} size={doubleGuarantee ? 'lg' : undefined}>
+export const GuaranteeModal: FC<Props> = ({ show, doubleGuarantee, onHide: handleHide }) => (
+  <Modal show={show} onHide={handleHide} size={doubleGuarantee ? 'lg' : undefined}>
     <Modal.Header closeButton>
       <Modal.Title>21-Day Money-Back Guarantee!</Modal.Title>
     </Modal.Header>
@@ -45,7 +45,7 @@ export const GuaranteeModal: FC<Props> = ({ show, doubleGuarantee, toggle }) => 
     </Modal.Body>
 
     <Modal.Footer>
-      <button type="button" className="btn btn-secondary" onClick={toggle}>Close</button>
+      <button type="button" className="btn btn-secondary" onClick={handleHide}>Close</button>
     </Modal.Footer>
   </Modal>
 );

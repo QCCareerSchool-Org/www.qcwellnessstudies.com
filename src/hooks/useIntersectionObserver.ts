@@ -19,7 +19,7 @@ export const useIntersectionObserver = (ref: RefObject<HTMLElement | null>, opti
 
     observer.observe(currentRef);
 
-    return () => {
+    return (): void => {
       observer.unobserve(currentRef);
     };
   }, [ ref, options ]);

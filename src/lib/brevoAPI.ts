@@ -5,9 +5,9 @@ import * as brevo from '@getbrevo/brevo';
 const brevoApiKey = process.env.BREVO_API_KEY ?? '';
 
 interface Attributes {
-  // eslint-disable-next-line @typescript-eslint/naming-convention
+
   STATUS_WELLNESS_LEAD?: boolean;
-  // eslint-disable-next-line @typescript-eslint/naming-convention
+
   STATUS_WELLNESS_STUDENT?: boolean;
 }
 

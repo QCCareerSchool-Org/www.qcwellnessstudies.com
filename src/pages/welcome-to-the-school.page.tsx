@@ -41,7 +41,7 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
       paymentDate: new Date(data.rawEnrollment.paymentDate),
       transactionTime: data.rawEnrollment.transactionTime === null ? null : new Date(data.rawEnrollment.transactionTime),
     };
-  }, [ data?.rawEnrollment ]);
+  }, [ data ]);
 
   // perform this the client side so the right IP address is used
   useEffect(() => {

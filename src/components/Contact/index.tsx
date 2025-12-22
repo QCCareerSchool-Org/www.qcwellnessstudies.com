@@ -2,7 +2,7 @@ import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import type { FC } from 'react';
 
-import { openLiveChat } from '../../lib/livechat';
+import { openLiveChat as handleClick } from '../../lib/livechat';
 import { TelephoneNumber } from '../TelephoneNumber';
 import EmailIcon from '@/images/icon-email.svg';
 import ChatIcon from '@/images/icon-live-chat.svg';
@@ -26,7 +26,7 @@ export const Contact: FC = () => (
       <div className="col-12 mb-4 col-lg-4 mb-lg-0">
         <Image src={ChatIcon as StaticImageData} className="img-fluid" alt="Live Chat" />
         <h3 className="text-dark text-center">Live Chat</h3>
-        <p className="text-dark text-center"><a href="#" onClick={openLiveChat}>Chat with a Student Support Specialist</a></p>
+        <p className="text-dark text-center"><a href="#" onClick={handleClick}>Chat with a Student Support Specialist</a></p>
       </div>
     </div>
   </div>

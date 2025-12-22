@@ -16,11 +16,11 @@ export const EnrollmentSection: FC<PropsWithChildren<Props>> = props => {
 
   return (
     <section id="enrollSection" className="text-light text-center">
-      <BackgroundImage src={EnrollmentBackgroundImage}/>
+      <BackgroundImage src={EnrollmentBackgroundImage} />
       <div className="container">
-        <h2>{props.heading || 'Enroll Today'}</h2>
+        <h2>{props.heading ?? 'Enroll Today'}</h2>
         <p className="lead mb-4">{props.children}</p>
-        <a href={url} className="btn btn-secondary btn-lg">{props.buttonText || 'ENROLL ONLINE'}</a>
+        <a href={url} className="btn btn-secondary btn-lg">{props.buttonText ?? 'ENROLL ONLINE'}</a>
       </div>
     </section>
   );

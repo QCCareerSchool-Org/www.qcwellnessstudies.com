@@ -28,14 +28,14 @@ export const addLead = async (payload: LeadPayload): Promise<void> => {
     payload.marketing = undefined;
   }
 
-  if (payload.courses && payload.courses.length === 0) {
+  if (payload.courses?.length === 0) {
     // no courses were supplied
     payload.courses = undefined;
   }
 
   const response = await fetch(url, {
     method: 'POST',
-    // eslint-disable-next-line @typescript-eslint/naming-convention
+
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
   });

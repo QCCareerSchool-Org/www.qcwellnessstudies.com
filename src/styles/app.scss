@@ -34,7 +34,9 @@ $card-border-color: #dee2e696;
 
 $btn-padding-x: 1rem;
 
-@import "bootstrap/scss/bootstrap";
+.grecaptcha-badge { visibility: hidden; }
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 $text-muted: $gray-500;
 

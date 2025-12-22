@@ -1,16 +1,32 @@
 import type { ReactNode } from 'react';
 
+import OriginalPage from './index.page';
 import { DeadlineFunnelScript } from '../../../components/DeadlineFunnelScript';
 import { LandingPageLayout } from '../../../layouts/LandingPageLayout';
 import type { NextPageWithLayout } from '../../_app.page';
-import OriginalPage from './index.page';
+import { SleepConsultantPromo } from './sleepConsultantPromoSection/SleepConsultantPromo';
+import { useLocation } from '@/hooks/useLocation';
 
-const Page: NextPageWithLayout = () => (
-  <>
-    <DeadlineFunnelScript />
-    <OriginalPage enrollPath="https://enroll.qcwellnessstudies.com/300-off" />
-  </>
-);
+const Page: NextPageWithLayout = () => {
+  const location = useLocation();
+  const countryCode = location?.countryCode ?? 'US';
+
+  return (
+    <>
+      <DeadlineFunnelScript />
+      <OriginalPage
+        enrollPath="https://enroll.qcwellnessstudies.com/300-off"
+        heroPromotion={(
+          <SleepConsultantPromo
+            countryCode={countryCode}
+            discountAmount={300}
+            enrollHref="https://enroll.qcwellnessstudies.com/300-off?c=sl"
+          />
+        )}
+      />
+    </>
+  );
+};
 
 Page.getLayout = function Layout(page): ReactNode {
   return <LandingPageLayout>{page}</LandingPageLayout>;

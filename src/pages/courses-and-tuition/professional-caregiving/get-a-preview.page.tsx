@@ -14,7 +14,6 @@ import IconAffordable from '@/images/icon-affordable.svg';
 import IconComprehensive from '@/images/icon-comprehensive.svg';
 import FCGPCertificationImage from '@/images/icon-fcgp.png';
 import IconFlexible from '@/images/icon-flexible.svg';
-
 import { LandingPageLayout } from '@/layouts/LandingPageLayout';
 import type { NextPageWithLayout } from '@/pages/_app.page';
 
@@ -51,7 +50,7 @@ const Page: NextPageWithLayout<Props> = props => {
             <h2>Get Certified From Home</h2>
           </div>
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-0">
-            <a className="anchor" id="form"></a>
+            <a className="anchor" id="form" />
             <div className="card text-dark mb-3 p-sm-3">
               <div className="card-body">
                 <h2 className="h5 sans-serif">Get a <strong className="text-dark">free course preview</strong> and find out how you can start your career!</h2>

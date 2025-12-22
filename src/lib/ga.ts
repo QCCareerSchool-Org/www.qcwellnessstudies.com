@@ -11,7 +11,7 @@ declare global {
 // log the page view with a specific URL
 export const gaPageview = (url: string): void => {
   window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
-    page_path: url, // eslint-disable-line @typescript-eslint/naming-convention, camelcase
+    page_path: url, // eslint-disable-line camelcase
   });
 };
 
@@ -24,11 +24,11 @@ const precision = 2;
 
 export const gaSale = (enrollment: Enrollment): void => {
   const address: Record<string, string> = {
-    first_name: enrollment.firstName, // eslint-disable-line @typescript-eslint/naming-convention, camelcase
-    last_name: enrollment.lastName, // eslint-disable-line @typescript-eslint/naming-convention, camelcase
+    first_name: enrollment.firstName, // eslint-disable-line camelcase
+    last_name: enrollment.lastName, // eslint-disable-line camelcase
     street: enrollment.address1,
     city: enrollment.city,
-    postal_code: enrollment.postalCode ?? '0', // eslint-disable-line @typescript-eslint/naming-convention, camelcase
+    postal_code: enrollment.postalCode ?? '0', // eslint-disable-line camelcase
     country: enrollment.countryCode,
   };
 
@@ -44,7 +44,7 @@ export const gaSale = (enrollment: Enrollment): void => {
 
   // Google Analytics e-Commerce Event
   gaEvent('purchase', {
-    transaction_id: enrollment.id.toString(), // eslint-disable-line @typescript-eslint/naming-convention, camelcase
+    transaction_id: enrollment.id.toString(), // eslint-disable-line camelcase
     affiliation: enrollment.school,
     value: enrollment.cost,
     currency: enrollment.currencyCode,
@@ -60,9 +60,9 @@ export const gaSale = (enrollment: Enrollment): void => {
 
   // Google Ads Sale Conversion
   gaEvent('conversion', {
-    send_to: 'AW-1071836607/rla_CMLg3ZgBEL_bi_8D', // eslint-disable-line @typescript-eslint/naming-convention, camelcase
+    send_to: 'AW-1071836607/rla_CMLg3ZgBEL_bi_8D', // eslint-disable-line camelcase
     value: enrollment.cost,
     currency: enrollment.currencyCode,
-    transaction_id: enrollment.id.toString(), // eslint-disable-line @typescript-eslint/naming-convention, camelcase
+    transaction_id: enrollment.id.toString(), // eslint-disable-line camelcase
   });
 };

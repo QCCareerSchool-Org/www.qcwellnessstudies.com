@@ -2,13 +2,13 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Back } from '../../Back';
 import BabyInBlueBassinetImage from './baby-sleeping-blue-bassinet-canopy.jpg';
 import CryingNewbornMomImage from './crying-newborn-baby-mom.jpg';
 import BabyCryingImage from './eight-month-old-baby-crying-sad.jpg';
 import FatherHoldingNewbornBabyImage from './father-holding-newborn-baby.jpg';
 import HeroBackgroundImage from './hero-bg.jpg';
 import MomCarryingNewbornImage from './mom-carrying-her-newborn-baby-at-home.jpg';
+import { Back } from '../../Back';
 import { BackgroundImage } from '@/components/BackgroundImage';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
 import { SEO } from '@/components/SEO';

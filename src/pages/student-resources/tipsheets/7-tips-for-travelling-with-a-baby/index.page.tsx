@@ -1,12 +1,12 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 
-import { SEO } from '../../../../components/SEO';
-import { Back } from '../../Back';
 import BabyBlueBassinetImage from './baby-blue-bassinet.jpg';
 import HeroBackgroundImage from './hero-bg.jpg';
 import MotherGivingBottleImage from './mother-giving-bottle.jpg';
 import NewbornSleepsToyHareImage from './newborn-baby-sleeps-toy-hare.jpg';
+import { SEO } from '../../../../components/SEO';
+import { Back } from '../../Back';
 import { BackgroundImage } from '@/components/BackgroundImage';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
 

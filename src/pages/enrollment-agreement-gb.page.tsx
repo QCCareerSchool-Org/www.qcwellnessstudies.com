@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
-import { TermsLayout } from '../layouts/TermsLayout';
 import type { NextPageWithLayout } from './_app.page';
+import { TermsLayout } from '../layouts/TermsLayout';
 
 const Page: NextPageWithLayout = () => (
   <>

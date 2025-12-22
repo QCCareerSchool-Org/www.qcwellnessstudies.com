@@ -61,7 +61,7 @@ const Page: NextPage = () => (
         <Table responsive>
           <thead>
             <tr>
-              <th></th>
+              <th />
               <th>Caregiver*</th>
               <th>Home Health Aide</th>
               <th>Certified Nursing Assistant</th>

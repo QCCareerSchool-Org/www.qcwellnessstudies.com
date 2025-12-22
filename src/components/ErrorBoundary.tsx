@@ -1,8 +1,6 @@
 import type { ReactNode } from 'react';
 import { Component } from 'react';
 
-import { TrackJS } from '../lib/trackjs-isomorphic';
-
 interface Props {
   fallback: ReactNode;
   children: ReactNode;
@@ -31,9 +29,6 @@ export class ErrorBoundary extends Component<Props, State> {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       console.log(errorInfo.componentStack);
     }
-
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-    TrackJS.track(error);
   }
 
   public render(): ReactNode {

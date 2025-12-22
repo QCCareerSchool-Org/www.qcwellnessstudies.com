@@ -1,10 +1,10 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 
-import { Back } from '../../Back';
 import CloseHandshakeImage from './close-handshake.jpg';
 import HeroBackgroundImage from './hero-bg.jpg';
 import YawningBabyGirlImage from './yawning-baby-girl.jpg';
+import { Back } from '../../Back';
 import { BackgroundImage } from '@/components/BackgroundImage';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
 import { SEO } from '@/components/SEO';

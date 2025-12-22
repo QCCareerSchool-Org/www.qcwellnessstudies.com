@@ -1,10 +1,10 @@
 import type { FC } from 'react';
 
+import { GuaranteeModal } from './GuaranteeModal';
 import { useLocation } from '../hooks/useLocation';
 import { usePrice } from '../hooks/usePrice';
 import { useToggle } from '../hooks/useToggle';
 import { formatPrice } from '../lib/functions';
-import { GuaranteeModal } from './GuaranteeModal';
 
 interface Props {
   courses: string[];
@@ -15,17 +15,17 @@ interface Props {
 export const PaymentPlans: FC<Props> = ({ courses, doubleGuarantee, enrollPath = 'https://enroll.qcwellnessstudies.com/' }) => {
   const location = useLocation();
   const price = usePrice(courses, location?.countryCode, location?.provinceCode);
-  const [ modal, toggle ] = useToggle();
+  const [ modal, handleClick ] = useToggle();
 
   return (
     <>
-      <GuaranteeModal show={modal} doubleGuarantee={doubleGuarantee} toggle={toggle} />
+      <GuaranteeModal show={modal} doubleGuarantee={doubleGuarantee} onHide={handleClick} />
       <div className="container">
         <div className="row">
           <div className="col-12 col-lg-4 text-center text-lg-left mb-4 mb-lg-0">
             <h2 className="text-dark">Tuition &amp;<br />Payment Plans</h2>
             <p className="text-dark">Includes everything you need to get certified!<br />All prices are in {price?.currency.name}</p>
-            <button type="button" className="btn btn-dark" onClick={toggle}>{doubleGuarantee ? 'Double' : '21-Day'} Money-Back Guarantee!</button>
+            <button type="button" className="btn btn-dark" onClick={handleClick}>{doubleGuarantee ? 'Double' : '21-Day'} Money-Back Guarantee!</button>
           </div>
           <div className="d-flex col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-4 mb-4 mb-md-0">
             <div className="card shadow text-center w-100">

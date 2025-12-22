@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import type { EducationalOrganization, WithContext } from 'schema-dts';
 
 import { getTelephoneNumber } from './lib/functions';

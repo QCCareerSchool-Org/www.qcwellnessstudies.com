@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 
-import { Back } from '../../Back';
 import BabyBoySleepingTeddyImage from './baby-boy-sleeping-together-teddy.jpg';
 import YellowCotBlanketImage from './cot-yellow-blanket.jpg';
 import HappyFamilyMotherBabyImage from './happy-family-mother-playing-her-baby.jpg';
@@ -9,6 +8,7 @@ import HeroBackgroundImage from './hero-bg.jpg';
 import GirlReadingBookBedImage from './little-girl-reading-book-bed-dark.jpg';
 import MotherHomeHospitalNewbornImage from './mother-home-hospital-newborn-baby-nursery.jpg';
 import ReadingStoryImage from './reading-interesting-story-my-mom.jpg';
+import { Back } from '../../Back';
 import { BackgroundImage } from '@/components/BackgroundImage';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
 import { SEO } from '@/components/SEO';

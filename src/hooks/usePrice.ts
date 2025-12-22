@@ -1,4 +1,3 @@
-import fetch from 'isomorphic-unfetch';
 import { useEffect, useState } from 'react';
 
 import type { PriceResult } from '../models/price';
@@ -24,7 +23,7 @@ export const usePrice = (courses: string | string[], countryCode?: string, provi
         }
         try {
           const response = await fetch(`${url}?${params.toString()}`, {
-            // eslint-disable-next-line @typescript-eslint/naming-convention
+
             headers: { 'X-API-Version': '2' },
           });
           if (response.ok) {

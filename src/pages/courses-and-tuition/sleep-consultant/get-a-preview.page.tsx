@@ -53,7 +53,7 @@ const Page: NextPageWithLayout<Props> = props => {
     <section id="formSection">
       <Header
         nav={false}
-        buttonOnClick={handleButtonClick}
+        onButtonOnClick={handleButtonClick}
         buttonContent={<><span className="text-light" style={{ marginRight: '10px' }}><Image src={DownloadIcon as StaticImageData} alt="" /></span>Get the Course Preview</>}
       />
       <BackgroundImage src={HeroBackgroundImage} />
@@ -64,7 +64,7 @@ const Page: NextPageWithLayout<Props> = props => {
             <h1 className="h2 text-light mb-5">Become a Certified Professional Pediatric Sleep Consultant Online</h1>
           </div>
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-0 order-lg-0">
-            <a className="anchor" id="form"></a>
+            <a className="anchor" id="form" />
             <div className="card text-dark mb-3 p-sm-3">
               <div className="card-body">
                 <h2 className="h5 sans-serif">Get a <strong className="text-dark">free course preview</strong> and find out how you can get certified!</h2>

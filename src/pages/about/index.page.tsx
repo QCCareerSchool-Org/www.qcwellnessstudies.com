@@ -50,7 +50,7 @@ const Page: NextPage = () => (
       </div>
     </section>
 
-    <a className="anchor" id="guarantee"></a>
+    <a className="anchor" id="guarantee" />
 
     <GuaranteeSection />
 
