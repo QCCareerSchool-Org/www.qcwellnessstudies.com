@@ -40,9 +40,10 @@ export const subNavItems = [
 
 interface Props {
   enrollPath: string;
+  heroPromotion?: ReactNode;
 }
 
-const Page: NextPageWithLayout<Props> = ({ enrollPath }) => {
+const Page: NextPageWithLayout<Props> = ({ enrollPath, heroPromotion }) => {
   return (
     <>
       <SEO
@@ -69,6 +70,8 @@ const Page: NextPageWithLayout<Props> = ({ enrollPath }) => {
           </div>
         </div>
       </section>
+
+      {heroPromotion}
 
       <a className="anchor" id="paymentPlans" />
       <section id="paymentPlansSection" className="bg-light">

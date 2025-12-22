@@ -15,12 +15,12 @@ const Page: NextPageWithLayout = () => {
     <>
       <DeadlineFunnelScript />
       <OriginalPage
-        enrollPath="https://enroll.qcwellnessstudies.com/300-off"
+        enrollPath="https://enroll.qcwellnessstudies.com/400-off"
         heroPromotion={(
           <SleepConsultantPromo
             countryCode={countryCode}
-            discountAmount={300}
-            enrollHref="https://enroll.qcwellnessstudies.com/300-off?c=sl"
+            discountAmount={400}
+            enrollHref="https://enroll.qcwellnessstudies.com/400-off?c=sl"
           />
         )}
       />
