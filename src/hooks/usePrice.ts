@@ -1,4 +1,3 @@
-import fetch from 'isomorphic-unfetch';
 import { useEffect, useState } from 'react';
 
 import type { PriceResult } from '../models/price';

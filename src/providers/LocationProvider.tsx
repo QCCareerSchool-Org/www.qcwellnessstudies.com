@@ -1,4 +1,3 @@
-import fetch from 'isomorphic-unfetch';
 import type { FC, ReactNode } from 'react';
 import { createContext, useEffect, useState } from 'react';
 
