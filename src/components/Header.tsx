@@ -8,6 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import { showButton } from './ButtonWrapper';
+import { OptionalLink } from './OptionalLink';
 import { useScreenWidth } from '../hooks/useScreenWidth';
 import LogoLg from '../images/logo-lg.svg';
 import Logo from '../images/logo.svg';
@@ -19,9 +20,10 @@ interface Props {
   nav: boolean;
   buttonContent?: ReactNode;
   onButtonOnClick?: () => void;
+  logoLink?: boolean;
 }
 
-export const Header: FC<Props> = ({ nav, enrollPath = 'https://enroll.qcwellnessstudies.com/', buttonContent, onButtonOnClick: handleButtonClick }) => {
+export const Header: FC<Props> = ({ nav, enrollPath = 'https://enroll.qcwellnessstudies.com/', buttonContent, onButtonOnClick: handleButtonClick, logoLink }) => {
   const [ key, setKey ] = useState(0);
 
   const scrollPosition = useScrollPosition();
@@ -36,12 +38,12 @@ export const Header: FC<Props> = ({ nav, enrollPath = 'https://enroll.qcwellness
       <div className="container">
         <Navbar key={key} id="mainNav" variant="dark" expand="md" bg="dark">
           <Navbar.Brand>
-            <Link href="/" onClick={handleClick}>
+            <OptionalLink href={logoLink ? '/' : undefined} onClick={handleClick}>
               {(nav && (screenWidth < breakpoints.sm.start || (screenWidth >= breakpoints.md.start && screenWidth < breakpoints.lg.start))) || (!nav && screenWidth < breakpoints.md.start)
                 ? <Image width="34" height="32" data-testid="header-logo-sm" className="header-logo" src={Logo as StaticImageData} alt="QC Wellness Studies" />
                 : <Image width="212" height="32" data-testid="header-logo-lg" className="header-logo" src={LogoLg as StaticImageData} alt="QC Wellness Studies" />
               }
-            </Link>
+            </OptionalLink>
           </Navbar.Brand>
           {nav
             && (
