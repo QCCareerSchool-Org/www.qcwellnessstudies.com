@@ -1,6 +1,6 @@
 {
   "name": "www.qcwellnessstudies.com",
-  "version": "1.43.55",
+  "version": "1.43.56",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,7 @@
     "react-phone-number-input": "^3.4.14",
     "react-schemaorg": "^2.0.0",
     "react-use-count-up": "^1.0.2",
-    "sass": "^1.97.1",
+    "sass": "^1.97.2",
     "schema-dts": "^1.1.5",
     "server-only": "^0.0.1",
     "uuid": "^13.0.0"
@@ -63,7 +63,7 @@
     "jest-environment-jsdom": "^30.2.0",
     "jiti": "^2.6.1",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.51.0"
+    "typescript-eslint": "^8.52.0"
   },
   "overrides": {
     "@types/react": "19.2.7",

@@ -40,7 +40,7 @@ export const DefaultLayout: FC<PropsWithChildren<Props>> = ({ children, secondar
           </span>
         )}
       />
-      <Header nav enrollPath={enrollPath} />
+      <Header nav logoLink enrollPath={enrollPath} />
       {secondaryNav}
       <main role="main" className="flex-shrink-0">
         {children}
