@@ -108,7 +108,7 @@ export const getAddress = (countryCode: string): string[] => {
       ];
     case 'US':
       return [
-        '402 King Farm Blvd',
+        '402 King Farm Blvd Unit 1148',
         'Ste 125 #1148',
         'Rockville, MD 20850',
       ];
