@@ -1,28 +1,40 @@
 import type { Enrollment } from '../models/enrollment';
 
+interface Options {
+  eventID?: string;
+}
+
 interface FBQ {
-  (action: 'track', type: 'PageView' | 'Lead'): void;
-  (action: 'track', type: 'Purchase', params: { value: number; currency: string }): void;
+  (action: 'track', type: 'Lead', params?: Record<string, never>, options?: Options): void;
+  (action: 'track', type: 'PageView', params?: { page_url?: string }, options?: Options): void;
+  (action: 'track', type: 'Purchase', params: { value: number; currency: string }, options: Options): void;
   (action: 'trackCustom', type: 'VirtualPageView', params: { url: string }): void;
 }
 
 declare global {
   interface Window {
-    fbq: FBQ;
+    fbq?: FBQ;
   }
 }
 
-// log the page view with a specific URL
-export const fbqPageview = (url: string): void => {
-  window.fbq('trackCustom', 'VirtualPageView', { url });
+export const fbqPageview = (url?: string): void => {
+  if (typeof url !== 'undefined') {
+    // log the page view with a specific URL
+    window.fbq?.('track', 'PageView', { page_url: url }); // eslint-disable-line camelcase
+    return;
+  }
+  window.fbq?.('track', 'PageView');
 };
 
-// log the conversion
-export const fbqLead = (): void => {
-  window.fbq('track', 'Lead');
+export const fbqLead = (eventId?: string): void => {
+  if (typeof eventId !== 'undefined') {
+    // log the conversion with a specfic eventID
+    window.fbq?.('track', 'Lead', undefined, { eventID: eventId });
+    return;
+  }
+  window.fbq?.('track', 'Lead');
 };
 
-// log a sale
 export const fbqSale = (enrollment: Enrollment): void => {
-  window.fbq('track', 'Purchase', { value: enrollment.cost, currency: enrollment.currencyCode });
+  window.fbq?.('track', 'Purchase', { value: enrollment.cost, currency: enrollment.currencyCode }, { eventID: enrollment.id.toString() });
 };
