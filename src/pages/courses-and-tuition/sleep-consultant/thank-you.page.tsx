@@ -11,10 +11,12 @@ import { SEO } from '@/components/SEO';
 import { useOnce } from '@/hooks/useOnce';
 import HeroBackgroundImage from '@/images/bg-white-green-light.jpg';
 import { brevoIdentifyLead } from '@/lib/brevo';
+import { fbPostLead } from '@/lib/facebookConversionAPI';
 import { fbqLead } from '@/lib/fbq';
 import { gaEvent } from '@/lib/ga';
 
 interface Props {
+  leadId?: string;
   emailAddress?: string;
   countryCode?: string;
   provinceCode?: string;
@@ -23,7 +25,7 @@ interface Props {
   date: number;
 }
 
-const Page: NextPage<Props> = ({ emailAddress, countryCode, provinceCode, firstName, lastName }) => {
+const Page: NextPage<Props> = ({ leadId, emailAddress, countryCode, provinceCode, firstName, lastName }) => {
   useEffect(() => {
     if (emailAddress) {
       window.gtag('set', 'user-data', { email: emailAddress });
@@ -31,7 +33,7 @@ const Page: NextPage<Props> = ({ emailAddress, countryCode, provinceCode, firstN
   }, [ emailAddress ]);
 
   useOnce(() => {
-    fbqLead();
+    fbqLead(leadId);
     gaEvent('conversion', { send_to: 'AW-1071836607/Srl-CMns3JgBEL_bi_8D' }); // eslint-disable-line camelcase
   });
 
@@ -102,7 +104,6 @@ const Page: NextPage<Props> = ({ emailAddress, countryCode, provinceCode, firstN
   </>;
 };
 
-// eslint-disable-next-line @typescript-eslint/require-await
 export const getServerSideProps: GetServerSideProps<Props> = async context => {
   const getParam = (paramName: string): string | undefined => {
     if (Array.isArray(context.query[paramName])) {
@@ -111,13 +112,36 @@ export const getServerSideProps: GetServerSideProps<Props> = async context => {
     return context.query[paramName];
   };
 
+  const leadId = getParam('leadId');
   const emailAddress = getParam('emailAddress');
   const countryCode = getParam('countryCode');
   const provinceCode = getParam('provinceCode');
   const firstName = getParam('firstName');
   const lastName = getParam('lastName');
 
+  const getHeader = (headerName: string): string | null => {
+    const rawHeader = context.req.headers[headerName];
+    if (Array.isArray(rawHeader)) {
+      return rawHeader[0] ?? null;
+    }
+    return rawHeader ?? null;
+  };
+
+  const ipAddress = getHeader('x-real-ip') ?? undefined;
+  const userAgent = getHeader('user-agent') ?? undefined;
+
+  const fbc = context.req.cookies._fbc;
+  const fbp = context.req.cookies._fbp;
+
+  if (leadId && emailAddress) {
+    const eventSource = 'https://www.qcwellnessstudies.com/sleep-consultant/get-a-preview';
+    await fbPostLead(leadId, new Date(), emailAddress, firstName, lastName, countryCode, eventSource, ipAddress, userAgent, fbc, fbp);
+  }
+
   const props: Props = { date: new Date().getTime() };
+  if (leadId) {
+    props.leadId = leadId;
+  }
   if (emailAddress) {
     props.emailAddress = emailAddress;
   }

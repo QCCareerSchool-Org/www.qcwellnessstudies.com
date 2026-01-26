@@ -10,6 +10,7 @@ import AlexMyersSignatureImage from '@/images/alex-myers.png';
 import { addToIDevAffiliate } from '@/lib/addToIDevAffiliate';
 import { brevoIdentifyStudent } from '@/lib/brevo';
 import { createBrevoContact } from '@/lib/brevoAPI';
+import { fbPostPurchase } from '@/lib/facebookConversionAPI';
 import { fbqSale } from '@/lib/fbq';
 import { gaSale } from '@/lib/ga';
 import { getEnrollment } from '@/lib/getEnrollment';
@@ -225,18 +226,10 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({ req, res, 
       };
 
       const ipAddress = getHeader('x-real-ip');
-      // const userAgent = getHeader('user-agent');
+      const userAgent = getHeader('user-agent');
 
-      // const getCookie = (cookieName: string): string | undefined => {
-      //   const rawCookie = req.cookies[cookieName];
-      //   if (Array.isArray(rawCookie)) {
-      //     return req.headers['x-real-ip']?.[0];
-      //   }
-      //   return rawCookie;
-      // };
-
-      // const fbc = getCookie('_fbc');
-      // const fbp = getCookie('_fbp');
+      const fbc = req.cookies._fbc;
+      const fbp = req.cookies._fbp;
 
       // send email
       try {
@@ -267,14 +260,14 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({ req, res, 
       }
 
       // Facebook
-      // if (rawEnrollment.transactionTime === null || new Date().getTime() - new Date(rawEnrollment.transactionTime).getTime() < 7 * 24 * 60 * 60 * 1000) {
-      //   try {
-      //     const source = (process.env.HOST ?? 'https://www.qcpetstudies.com') + resolvedUrl;
-      //     await fbPostPurchase(rawEnrollment, source, ipAddress, userAgent, fbc, fbp);
-      //   } catch (err) {
-      //     console.error(err);
-      //   }
-      // }
+      if (rawEnrollment.transactionTime === null || new Date().getTime() - new Date(rawEnrollment.transactionTime).getTime() < 7 * 24 * 60 * 60 * 1000) {
+        try {
+          const source = (process.env.HOST ?? 'https://www.qcpetstudies.com') + '/welcome-to-the-school';
+          await fbPostPurchase(rawEnrollment, source, ipAddress, userAgent, fbc, fbp);
+        } catch (err) {
+          console.error(err);
+        }
+      }
 
     }
 
