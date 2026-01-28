@@ -105,6 +105,7 @@ export const BrevoForm: FC<Props> = props => {
   return (
     <form action="https://leads.qccareerschool.com" method="post" className={styles.brochureForm} onSubmit={handleSubmit}>
       <CurrentPageInput />
+      <input type="hidden" name="forward" value="0" />
       <input type="hidden" name="nonce" value={nonce} />
       <input type="hidden" name="g-recaptcha-response" value={token} />
       <input type="hidden" name="school" value="QC Wellness Studies" />

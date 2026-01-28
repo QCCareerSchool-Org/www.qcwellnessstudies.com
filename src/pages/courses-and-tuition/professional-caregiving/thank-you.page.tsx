@@ -13,6 +13,7 @@ import { brevoIdentifyLead } from '@/lib/brevo';
 import { fbPostLead } from '@/lib/facebookConversionAPI';
 import { fbqLead } from '@/lib/fbq';
 import { gaEvent } from '@/lib/ga';
+import { getLead } from '@/lib/getLead';
 
 interface Props {
   leadId?: string;
@@ -120,11 +121,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async context => {
   };
 
   const leadId = getParam('leadId');
-  const emailAddress = getParam('emailAddress');
-  const countryCode = getParam('countryCode');
-  const provinceCode = getParam('provinceCode');
-  const firstName = getParam('firstName');
-  const lastName = getParam('lastName');
 
   const getHeader = (headerName: string): string | null => {
     const rawHeader = context.req.headers[headerName];
@@ -139,6 +135,12 @@ export const getServerSideProps: GetServerSideProps<Props> = async context => {
 
   const fbc = context.req.cookies._fbc;
   const fbp = context.req.cookies._fbp;
+
+  const lead = leadId ? await getLead(leadId) : undefined;
+
+  const [ emailAddress, firstName, lastName, countryCode, provinceCode ] = lead?.success
+    ? [ lead.value.emailAddress, lead.value.firstName ?? undefined, lead.value.lastName ?? undefined, lead.value.countryCode ?? 'US', lead.value.provinceCode ?? undefined ]
+    : [];
 
   if (leadId && emailAddress) {
     const eventSource = 'https://www.qcwellnessstudies.com/professional-caregiving/get-a-preview';
