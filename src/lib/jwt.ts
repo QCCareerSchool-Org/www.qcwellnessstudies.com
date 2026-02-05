@@ -14,7 +14,7 @@ export const createJwt = async (payload: Record<string, unknown>): Promise<strin
 
   const secret = Buffer.from(base64Secret, 'base64');
   if (secret.length !== 32) {
-    throw new Error('JWE_DIR_KEY_B64 must decode to 32 bytes');
+    throw new Error('JWT_SECRET_BASE64 must decode to 32 bytes');
   }
 
   return await new jose.EncryptJWT(payload)

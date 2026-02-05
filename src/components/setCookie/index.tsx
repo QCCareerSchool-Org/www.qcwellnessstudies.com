@@ -1,5 +1,3 @@
-'use client';
-
 import type { FC } from 'react';
 import { useEffect } from 'react';
 
@@ -9,7 +7,7 @@ export const SetCookie: FC<CookieData> = ({ name, value, domain, path, secure, h
   useEffect(() => {
     const body = JSON.stringify({ name, value, domain, path, secure, httpOnly, sameSite, maxAge });
 
-    fetch(`/set-cookie`, {
+    fetch(`/api/set-cookie`, {
       method: 'post',
       body,
       headers: { 'content-type': 'application/json' },
