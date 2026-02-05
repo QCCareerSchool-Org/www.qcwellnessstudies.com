@@ -2,29 +2,12 @@ import type { NextComponentType } from 'next';
 import type { DocumentContext, DocumentInitialProps } from 'next/document';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 
-import { getUserValues } from './getUserValues';
-import type { UserValues } from '@/domain/userValues';
-import { Bing } from '@/scripts/bing';
-import { Brevo } from '@/scripts/brevo';
-import { Facebook } from '@/scripts/facebook';
-import { GoogleAnalytics } from '@/scripts/googleAnalytics';
-import { Tiktok } from '@/scripts/tiktok';
-
-interface Props {
-  userValues?: UserValues;
-}
-
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 type DocumentComponent<P = {}> = NextComponentType<DocumentContext, DocumentInitialProps, P>;
 
-const MyDocument: DocumentComponent<Props> = ({ userValues }) => (
+const MyDocument: DocumentComponent = () => (
   <Html lang="en" className="h-100" prefix="og: http://ogp.me/ns#">
     <Head>
-      {process.env.GOOGLE_ANALYTICS_ID && <GoogleAnalytics id={process.env.GOOGLE_ANALYTICS_ID} adsId={process.env.GOOGLE_ADS_ID} userValues={userValues} />}
-      {process.env.BREVO_CLIENT_KEY && <Brevo clientKey={process.env.BREVO_CLIENT_KEY} userValues={userValues} />}
-      {process.env.NEXT_PUBLIC_FACEBOOK_ID && <Facebook id={process.env.NEXT_PUBLIC_FACEBOOK_ID} userValues={userValues} />}
-      {process.env.TIKTOK_ID && <Tiktok id={process.env.TIKTOK_ID} />}
-      {process.env.BING_ID && <Bing id={process.env.BING_ID} userValues={userValues} />}
       {/* eslint-disable-next-line @next/next/google-font-display */}
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Playfair+Display:400,700,900" />
     </Head>
@@ -37,11 +20,9 @@ const MyDocument: DocumentComponent<Props> = ({ userValues }) => (
   </Html>
 );
 
-MyDocument.getInitialProps = async (ctx: DocumentContext): Promise<DocumentInitialProps & Props> => {
+MyDocument.getInitialProps = async (ctx: DocumentContext): Promise<DocumentInitialProps> => {
   const initialProps = await Document.getInitialProps(ctx);
-  const userValues = await getUserValues(ctx);
-
-  return { ...initialProps, userValues };
+  return { ...initialProps };
 };
 
 export default MyDocument;
