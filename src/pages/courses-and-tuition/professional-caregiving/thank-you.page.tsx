@@ -29,7 +29,7 @@ const Page: NextPage<Props> = ({ emailAddress, lead, jwt, recent }) => {
         noIndex={true}
       />
 
-      {jwt && <SetCookie name="user" value={jwt} domain="qcpetstudies.com" />}
+      {jwt && <SetCookie name="user" value={jwt} domain="qcwellnessstudies.com" />}
       {lead && recent && (
         <LeadProcessing
           emailAddress={lead.emailAddress}

@@ -4,9 +4,12 @@ import ErrorPage from 'next/error';
 import Image from 'next/image';
 import { Fragment, useEffect, useMemo } from 'react';
 
+import { getUserValues } from './getUserValues';
 import { SEO } from '@/components/SEO';
+import { SetCookie } from '@/components/setCookie';
 import { TelephoneNumber } from '@/components/TelephoneNumber';
 import type { Enrollment, RawEnrollment } from '@/domain/enrollment';
+import type { UserValues } from '@/domain/userValues';
 import AlexMyersSignatureImage from '@/images/alex-myers.png';
 import { addToIDevAffiliate } from '@/lib/addToIDevAffiliate';
 import { brevoIdentifyStudent } from '@/lib/brevo';
@@ -16,11 +19,13 @@ import { fbqSale } from '@/lib/fbq';
 import { getEnrollment } from '@/lib/getEnrollment';
 import { getHeader } from '@/lib/getHeader';
 import { gaSale } from '@/lib/gtag';
+import { createJwt } from '@/lib/jwt';
 import { sendEnrollmentEmail } from '@/lib/sendEnrollmentEmail';
 
 interface Props {
   data?: {
     rawEnrollment: RawEnrollment;
+    jwt: string;
   };
   errorCode?: number;
 }
@@ -67,6 +72,7 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
 
   return (
     <>
+      {data.jwt && <SetCookie name="user" value={data.jwt} domain="qcwellnessstudies.com" />}
       <SEO
         title="Welcome to the School"
         description="Your enrollment has been received and will be processed quickly. You will receive an email within the next business day containing login information to your online student center."
@@ -262,7 +268,32 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
 
     }
 
-    return { props: { data: { rawEnrollment } } };
+    const oldUserValues = await getUserValues(ctx);
+    const userValues: UserValues = {
+      ...oldUserValues,
+      emailAddress: enrollment.emailAddress,
+    };
+    if (enrollment.telephoneNumber) {
+      userValues.telephoneNumber = enrollment.telephoneNumber;
+    }
+    if (enrollment.firstName) {
+      userValues.firstName = enrollment.firstName;
+    }
+    if (enrollment.lastName) {
+      userValues.lastName = enrollment.lastName;
+    }
+    if (enrollment.city) {
+      userValues.city = enrollment.city;
+    }
+    if (enrollment.provinceCode) {
+      userValues.provinceCode = enrollment.provinceCode;
+    }
+    if (enrollment.countryCode) {
+      userValues.countryCode = enrollment.countryCode;
+    }
+    const jwt = await createJwt(userValues);
+
+    return { props: { data: { rawEnrollment, jwt } } };
   } catch (err) {
     const internalServerError = 500;
     const errorCode = err instanceof HttpStatus.HttpResponse ? err.statusCode : internalServerError;
