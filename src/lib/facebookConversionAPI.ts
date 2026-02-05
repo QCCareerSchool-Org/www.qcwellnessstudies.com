@@ -1,23 +1,23 @@
 'server only';
 
-import { createHash } from 'crypto';
-
-import type { RawEnrollment } from '@/models/enrollment';
+import { hash, normalizeCity, normalizeEmailAddress, normalizeName, normalizeState, normalizeTelephoneNumber, normalizeZipCode } from './hash';
+import type { Enrollment } from '@/domain/enrollment';
 
 const apiVersion = 'v24.0';
-const datasetId = '1725004270923176';
-const accessToken = 'EAFnBV4vbNNYBQtHmw8bF1ZBpZCvhFAkRkZARodT7J7snpzslxkyBQBLt720SMn9rgxBFBJ7aMRVIVqItU9d2eeHGewCf7D5EXG5o8HzPHgHx3Hdj1PA3vsD96hkU6fJ3CG9TGqFztAyPvj2Xg8hmdmcO5UTWiETPxB1Ourw15RgtYsjzHTH1xl4aKJCkMhKEwZDZD';
 
 export const fbPostPurchase = async (
-  enrollment: RawEnrollment,
+  enrollment: Enrollment,
   eventSourceUrl: string | undefined,
   clientIPAddress: string | null,
   clientUserAgent: string | null,
   fbc?: string,
   fbp?: string,
 ): Promise<unknown> => {
-  const url = `https://graph.facebook.com/${apiVersion}/${datasetId}/events?access_token=${accessToken}`;
+  const datasetId = process.env.NEXT_PUBLIC_FACEBOOK_ID;
+  const accessToken = process.env.FACEBOOK_ACCESS_TOKEN;
 
+  const url = `https://graph.facebook.com/${apiVersion}/${datasetId}/events?access_token=${accessToken}`;
+  console.log(url);
   const eventTime = enrollment.transactionTime ?? new Date();
 
   const body: { data: PurchaseConversion[] } = {
@@ -58,15 +58,18 @@ export const fbPostLead = async (
   eventId: string,
   eventTime: Date,
   emailAddress: string,
-  firstName: string | undefined,
-  lastName: string | undefined,
-  countryCode: string | undefined,
-  eventSourceUrl: string | undefined,
-  clientIPAddress: string | undefined,
-  clientUserAgent: string | undefined,
+  firstName: string | null,
+  lastName: string | null,
+  countryCode: string | null,
+  eventSourceUrl: string | null,
+  clientIPAddress: string | null,
+  clientUserAgent: string | null,
   fbc?: string,
   fbp?: string,
 ): Promise<unknown> => {
+  const datasetId = process.env.NEXT_PUBLIC_FACEBOOK_ID;
+  const accessToken = process.env.FACEBOOK_ACCESS_TOKEN;
+
   const url = `https://graph.facebook.com/${apiVersion}/${datasetId}/events?access_token=${accessToken}`;
 
   const body: { data: LeadConversion[] } = {
@@ -77,26 +80,26 @@ export const fbPostLead = async (
         action_source: 'website', // eslint-disable-line camelcase
         user_data: { // eslint-disable-line camelcase
           em: hash(normalizeEmailAddress(emailAddress)),
-          client_ip_address: clientIPAddress, // eslint-disable-line camelcase
-          client_user_agent: clientUserAgent, // eslint-disable-line camelcase
+          client_ip_address: clientIPAddress ?? undefined, // eslint-disable-line camelcase
+          client_user_agent: clientUserAgent ?? undefined, // eslint-disable-line camelcase
           fbc,
           fbp,
         },
-        event_source_url: eventSourceUrl, // eslint-disable-line camelcase
+        event_source_url: eventSourceUrl ?? undefined, // eslint-disable-line camelcase
         event_id: eventId, // eslint-disable-line camelcase
       },
     ],
   };
 
-  if (typeof firstName !== 'undefined') {
+  if (firstName) {
     body.data[0].user_data.fn = hash(normalizeName(firstName));
   }
 
-  if (typeof lastName !== 'undefined') {
+  if (lastName) {
     body.data[0].user_data.ln = hash(normalizeName(lastName));
   }
 
-  if (typeof countryCode !== 'undefined') {
+  if (countryCode) {
     body.data[0].user_data.country = hash(countryCode.toLowerCase());
   }
 
@@ -116,39 +119,6 @@ const postJSON = async (url: string, body: object): Promise<unknown> => {
   }
 
   return response.json();
-};
-
-const hash = (input: string): string => {
-  return createHash('sha256').update(input).digest('hex');
-};
-
-const removePunctuation = (input: string): string => input.replace(/[^\p{L}\s]/ug, '').replace(/\s+/ug, ' ');
-
-const normalizeEmailAddress = (emailAddress: string): string => {
-  return emailAddress.toLowerCase().trim();
-};
-
-const normalizeTelephoneNumber = (telephoneNumber: string): string => {
-  return telephoneNumber.trim().replace(/[^0-9]/ug, '').replace(/^0+/ug, ''); // remove anything that's not a number, and leading zeros
-};
-
-const normalizeName = (name: string): string => {
-  return removePunctuation(name.trim().toLowerCase());
-};
-
-const normalizeCity = (city: string): string => {
-  return removePunctuation(city.trim().toLowerCase().replace(/\s+/ug, ''));
-};
-
-const normalizeState = (state: string): string => {
-  return state.toLowerCase().replace(/[^a-z]/ug, '');
-};
-
-const normalizeZipCode = (zipCode: string, countryCode: string): string => {
-  if (countryCode === 'US') {
-    return zipCode.trim().substring(0, 4);
-  }
-  return zipCode.trim().toLowerCase().replace(/\s+/ug, '');
 };
 
 type ActionSource = 'email' | 'website' | 'app' | 'phone_call' | 'chat' | 'physical_store' | 'system_generated' | 'business_messaging' | 'other';

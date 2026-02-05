@@ -22,7 +22,12 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "exclude": [
     "node_modules"
@@ -32,7 +37,9 @@
     "**/*.ts",
     "**/*.tsx",
     "eslint.config.mts",
-    "next.config.js",
-    "jest.config.js"
+    "next.config.ts",
+    "jest.config.js",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
   ]
 }

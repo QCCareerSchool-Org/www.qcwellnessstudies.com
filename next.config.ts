@@ -1,5 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from 'next';
+
+const nextConfig: NextConfig = {
   pageExtensions: [ 'page.tsx', 'page.ts', 'page.jsx', 'page.js' ],
   sassOptions: {
     quietDeps: true, // hide deprecation warnings from node_modules
@@ -8,4 +9,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

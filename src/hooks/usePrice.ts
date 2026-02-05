@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import type { PriceResult } from '../models/price';
+import type { PriceResult } from '../domain/price';
 
 export const usePrice = (courses: string | string[], countryCode?: string, provinceCode?: string | null): PriceResult | undefined => {
   const [ price, setPrice ] = useState<PriceResult>();

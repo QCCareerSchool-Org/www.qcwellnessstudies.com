@@ -12,7 +12,6 @@ interface Attributes {
 }
 
 export const createBrevoContact = async (emailAddress: string, firstName?: string, lastName?: string, countryCode?: string, provinceCode?: string | null, attributes?: Attributes, listIds?: number[]): Promise<boolean> => {
-  console.log('adding brevo contact', emailAddress);
   const contactsApi = new brevo.ContactsApi();
   contactsApi.setApiKey(brevo.ContactsApiApiKeys.apiKey, brevoApiKey);
 
@@ -44,7 +43,6 @@ export const createBrevoContact = async (emailAddress: string, firstName?: strin
 };
 
 export const sendBrevoEmail = async (templateId: number, emailAddress: string, firstName?: string): Promise<void> => {
-  console.log('sending brevo email', emailAddress);
   const transactionalEmailsApi = new brevo.TransactionalEmailsApi();
   transactionalEmailsApi.setApiKey(brevo.TransactionalEmailsApiApiKeys.apiKey, brevoApiKey);
 

@@ -1,7 +1,7 @@
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import Link from 'next/link';
-import type { ChangeEventHandler, FC, FormEventHandler, ReactElement } from 'react';
+import type { ChangeEventHandler, FC, ReactElement, SubmitEventHandler } from 'react';
 import { forwardRef, useCallback, useEffect, useId, useRef, useState } from 'react';
 import { GoogleReCaptcha } from 'react-google-recaptcha-v3';
 import type { DefaultInputComponentProps } from 'react-phone-number-input';
@@ -81,7 +81,7 @@ export const BrevoForm: FC<Props> = props => {
     };
   }, []);
 
-  const handleSubmit: FormEventHandler = e => {
+  const handleSubmit: SubmitEventHandler = e => {
     if (submitting.current || disabled) {
       e.preventDefault();
       return;
@@ -105,6 +105,7 @@ export const BrevoForm: FC<Props> = props => {
   return (
     <form action="https://leads.qccareerschool.com" method="post" className={styles.brochureForm} onSubmit={handleSubmit}>
       <CurrentPageInput />
+      <input type="hidden" name="forward" value="0" />
       <input type="hidden" name="nonce" value={nonce} />
       <input type="hidden" name="g-recaptcha-response" value={token} />
       <input type="hidden" name="school" value="QC Wellness Studies" />
