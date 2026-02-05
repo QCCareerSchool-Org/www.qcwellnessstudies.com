@@ -265,31 +265,20 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
           console.error(err);
         }
       }
-
     }
 
     const oldUserValues = await getUserValues(ctx);
     const userValues: UserValues = {
       ...oldUserValues,
       emailAddress: enrollment.emailAddress,
+      firstName: enrollment.firstName,
+      lastName: enrollment.lastName,
+      telephoneNumber: enrollment.telephoneNumber,
+      city: enrollment.city,
+      countryCode: enrollment.countryCode,
     };
-    if (enrollment.telephoneNumber) {
-      userValues.telephoneNumber = enrollment.telephoneNumber;
-    }
-    if (enrollment.firstName) {
-      userValues.firstName = enrollment.firstName;
-    }
-    if (enrollment.lastName) {
-      userValues.lastName = enrollment.lastName;
-    }
-    if (enrollment.city) {
-      userValues.city = enrollment.city;
-    }
     if (enrollment.provinceCode) {
       userValues.provinceCode = enrollment.provinceCode;
-    }
-    if (enrollment.countryCode) {
-      userValues.countryCode = enrollment.countryCode;
     }
     const jwt = await createJwt(userValues);
 
