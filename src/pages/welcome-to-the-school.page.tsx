@@ -6,16 +6,17 @@ import { Fragment, useEffect, useMemo } from 'react';
 
 import { SEO } from '@/components/SEO';
 import { TelephoneNumber } from '@/components/TelephoneNumber';
+import type { Enrollment, RawEnrollment } from '@/domain/enrollment';
 import AlexMyersSignatureImage from '@/images/alex-myers.png';
 import { addToIDevAffiliate } from '@/lib/addToIDevAffiliate';
 import { brevoIdentifyStudent } from '@/lib/brevo';
 import { createBrevoContact } from '@/lib/brevoAPI';
 import { fbPostPurchase } from '@/lib/facebookConversionAPI';
 import { fbqSale } from '@/lib/fbq';
-import { gaSale } from '@/lib/ga';
 import { getEnrollment } from '@/lib/getEnrollment';
+import { getHeader } from '@/lib/getHeader';
+import { gaSale } from '@/lib/gtag';
 import { sendEnrollmentEmail } from '@/lib/sendEnrollmentEmail';
-import type { Enrollment, RawEnrollment } from '@/models/enrollment';
 
 interface Props {
   data?: {
@@ -197,39 +198,36 @@ const Page: NextPage<Props> = ({ data, errorCode }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps<Props> = async ({ req, res, query }) => {
+export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
   try {
-    if (typeof query.enrollmentId !== 'string' || typeof query.code !== 'string') {
+    if (typeof ctx.query.enrollmentId !== 'string' || typeof ctx.query.code !== 'string') {
       throw new HttpStatus.BadRequest();
     }
 
-    const enrollmentId = parseInt(query.enrollmentId, 10);
-    const code = query.code;
+    const enrollmentId = parseInt(ctx.query.enrollmentId, 10);
+    const code = ctx.query.code;
 
     if (isNaN(enrollmentId)) {
       throw new HttpStatus.BadRequest();
     }
 
     const rawEnrollment = await getEnrollment(enrollmentId, code);
+    const enrollment: Enrollment = {
+      ...rawEnrollment,
+      paymentDate: new Date(rawEnrollment.paymentDate),
+      transactionTime: rawEnrollment.transactionTime === null ? null : new Date(rawEnrollment.transactionTime),
+    };
 
-    if (!rawEnrollment.complete || !rawEnrollment.success) {
+    if (!enrollment.complete || !enrollment.success) {
       throw new HttpStatus.NotFound();
     }
 
-    if (!rawEnrollment.emailed) {
-      const getHeader = (headerName: string): string | null => {
-        const rawHeader = req.headers[headerName];
-        if (Array.isArray(rawHeader)) {
-          return rawHeader[0] ?? null;
-        }
-        return rawHeader ?? null;
-      };
+    if (!enrollment.emailed) {
+      const ipAddress = getHeader(ctx, 'x-real-ip');
+      const userAgent = getHeader(ctx, 'user-agent');
 
-      const ipAddress = getHeader('x-real-ip');
-      const userAgent = getHeader('user-agent');
-
-      const fbc = req.cookies._fbc;
-      const fbp = req.cookies._fbp;
+      const fbc = ctx.req.cookies._fbc;
+      const fbp = ctx.req.cookies._fbp;
 
       // send email
       try {
@@ -240,30 +238,23 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({ req, res, 
 
       // create Brevo contact
       try {
-        await createBrevoContact(rawEnrollment.emailAddress, rawEnrollment.firstName, rawEnrollment.lastName, rawEnrollment.countryCode, rawEnrollment.provinceCode, { STATUS_WELLNESS_STUDENT: true }, [ brevoStudentListId ]);
+        await createBrevoContact(enrollment.emailAddress, enrollment.firstName, enrollment.lastName, enrollment.countryCode, enrollment.provinceCode, { STATUS_WELLNESS_STUDENT: true }, [ brevoStudentListId ]);
       } catch (err) {
         console.error(err);
       }
 
-      // TrustPulse
-      // try {
-      //   await trustPulseEnrollment(rawEnrollment, ipAddress);
-      // } catch (err) {
-      //   console.error(err);
-      // }
-
       // iDevAffiliate
       try {
-        await addToIDevAffiliate(rawEnrollment, ipAddress);
+        await addToIDevAffiliate(enrollment, ipAddress);
       } catch (err) {
         console.error(err);
       }
 
       // Facebook
-      if (rawEnrollment.transactionTime === null || new Date().getTime() - new Date(rawEnrollment.transactionTime).getTime() < 7 * 24 * 60 * 60 * 1000) {
+      if (enrollment.transactionTime === null || new Date().getTime() - new Date(enrollment.transactionTime).getTime() < 7 * 24 * 60 * 60 * 1000) {
         try {
           const source = (process.env.HOST ?? 'https://www.qcpetstudies.com') + '/welcome-to-the-school';
-          await fbPostPurchase(rawEnrollment, source, ipAddress, userAgent, fbc, fbp);
+          await fbPostPurchase(enrollment, source, ipAddress, userAgent, fbc, fbp);
         } catch (err) {
           console.error(err);
         }
@@ -275,7 +266,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({ req, res, 
   } catch (err) {
     const internalServerError = 500;
     const errorCode = err instanceof HttpStatus.HttpResponse ? err.statusCode : internalServerError;
-    res.statusCode = errorCode;
+    ctx.res.statusCode = errorCode;
     return { props: { errorCode } };
   }
 };

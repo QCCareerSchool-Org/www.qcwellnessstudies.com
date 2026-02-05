@@ -1,37 +1,57 @@
 import type { NextPage } from 'next';
-import type { AppProps } from 'next/app';
+import type { AppInitialProps } from 'next/app';
+import App from 'next/app';
+import type { AppContextType, NextComponentType, NextPageContext } from 'next/dist/shared/lib/utils';
+import type { NextRouter } from 'next/router';
 import { useRouter } from 'next/router';
-import type { JSX, ReactElement, ReactNode } from 'react';
+import type { ComponentType, ReactElement, ReactNode } from 'react';
 import { useEffect } from 'react';
 
-import '../styles/app.scss';
-// import GoogleTagManager from '../components/google-tag-manager';
+import { getUserValues } from './getUserValues';
 import { ErrorBoundary } from '../components/ErrorBoundary';
 import { DefaultLayout } from '../layouts/DefaultLayout';
-import { fbqPageview } from '../lib/fbq';
-import { gaPageview } from '../lib/ga';
-import { uetPageview } from '../lib/uet';
 import { Provider } from '../providers';
+import type { UserValues } from '@/domain/userValues';
 import { brevoPageview } from '@/lib/brevo';
 import { BrevoConversations } from '@/scripts/brevoCoversations';
 
+import '../styles/app.scss';
+
+type GetLayout = (page: ReactElement) => ReactNode;
+
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-  getLayout?: (page: ReactElement) => ReactNode;
+  getLayout?: GetLayout;
 };
 
-type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-empty-object-type
+type AppTypeWithLayout<P = {}> = ComponentType<AppPropsTypeWithLayout<any, P>> & {
+  // eslint-disable-next-line @typescript-eslint/method-signature-style
+  getInitialProps?(context: AppContextType): P | Promise<P>;
 };
 
-const MyApp = ({ Component, pageProps }: AppPropsWithLayout): JSX.Element => {
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+type AppPropsTypeWithLayout<Router extends NextRouter = NextRouter, PageProps = {}> = AppInitialProps<PageProps> & {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  Component: NextComponentType<NextPageContext, any, any> & {
+    getLayout?: GetLayout;
+  };
+  router: Router;
+  __N_SSG?: boolean;
+  __N_SSP?: boolean;
+};
+
+interface Props {
+  clientIp?: string;
+  userValues?: UserValues;
+}
+
+const MyApp: AppTypeWithLayout<Props> = ({ Component, pageProps }) => {
   const router = useRouter();
 
   useEffect(() => {
     const handleRouteChange = (url: string): void => {
-      gaPageview(url);
-      uetPageview(url);
-      fbqPageview(url);
+      // uetPageview(url);
       try {
         const parsed = new URL(window.document.title);
         brevoPageview(window.document.title, url, parsed.pathname);
@@ -50,7 +70,7 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout): JSX.Element => {
   }, [ router.events ]);
 
   // Use the layout defined at the page level, if available
-  const getLayout = Component.getLayout ?? ((page): ReactNode => <DefaultLayout>{page}</DefaultLayout>);
+  const getLayout = Component.getLayout ?? (page => <DefaultLayout>{page}</DefaultLayout>);
 
   return (
     <ErrorBoundary fallback={<></>}>
@@ -64,3 +84,16 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout): JSX.Element => {
 };
 
 export default MyApp;
+
+MyApp.getInitialProps = async appContext => {
+
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-explicit-any
+  const initialProps = await App.getInitialProps(appContext as any);
+
+  const xVercelIpHeader = appContext.ctx.req?.headers['x-vercel-ip'];
+  const clientIp = Array.isArray(xVercelIpHeader) ? xVercelIpHeader[0] : xVercelIpHeader;
+
+  const userValues = await getUserValues(appContext.ctx);
+
+  return { ...initialProps, userValues, clientIp };
+};

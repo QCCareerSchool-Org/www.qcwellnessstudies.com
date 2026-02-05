@@ -1,6 +1,6 @@
 import * as HttpStatus from '@qccareerschool/http-status';
 
-import { isRawEnrollment, type RawEnrollment } from '../models/enrollment';
+import { isRawEnrollment, type RawEnrollment } from '../domain/enrollment';
 
 export const getEnrollment = async (enrollmentId: number, code: string): Promise<RawEnrollment> => {
   const url = `https://api.qccareerschool.com/enrollments/${enrollmentId}?code=${code}`;

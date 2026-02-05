@@ -1,4 +1,4 @@
-import type { School } from '../models/school';
+import type { School } from '../domain/school';
 
 export interface LeadPayload {
   school: School;

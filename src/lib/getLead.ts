@@ -1,8 +1,8 @@
 import type { Result } from 'generic-result-type';
 import { failure, success } from 'generic-result-type';
 
-import type { Lead } from '@/models/lead';
-import { isLead } from '@/models/lead';
+import type { Lead } from '@/domain/lead';
+import { isLead } from '@/domain/lead';
 
 export const getLead = async (leadId: string): Promise<Result<Lead>> => {
   const url = `https://leads.qccareerschool.com/leads/${leadId}`;
