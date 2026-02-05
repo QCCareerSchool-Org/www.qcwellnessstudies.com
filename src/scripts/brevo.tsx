@@ -1,4 +1,3 @@
-import Script from 'next/script';
 import type { FC } from 'react';
 
 import type { UserValues } from '@/domain/userValues';
@@ -9,7 +8,7 @@ interface Props {
 }
 
 export const Brevo: FC<Props> = ({ clientKey, userValues }) => (
-  <Script id="brevo" dangerouslySetInnerHTML={{ __html: getScript(clientKey, userValues?.emailAddress) }} />
+  <script id="brevo" dangerouslySetInnerHTML={{ __html: getScript(clientKey, userValues?.emailAddress) }} />
 );
 
 const getScript = (clientKey: string, emailAddress?: string): string => `

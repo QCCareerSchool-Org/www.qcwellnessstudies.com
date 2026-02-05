@@ -1,4 +1,3 @@
-import Script from 'next/script';
 import type { FC } from 'react';
 
 import type { UserValues } from '@/domain/userValues';
@@ -11,8 +10,8 @@ interface Props {
 
 export const Bing: FC<Props> = ({ id, userValues }) => (
   <>
-    <Script id="bing-uet" dangerouslySetInnerHTML={{ __html: getScript(id) }} />
-    {userValues && <Script id="bing-uet-enhanced" dangerouslySetInnerHTML={{ __html: getEnchancedScript(userValues) }} />}
+    <script id="bing-uet" dangerouslySetInnerHTML={{ __html: getScript(id) }} />
+    {userValues && <script id="bing-uet-enhanced" dangerouslySetInnerHTML={{ __html: getEnchancedScript(userValues) }} />}
   </>
 );
 

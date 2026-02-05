@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import type { AppInitialProps } from 'next/app';
 import App from 'next/app';
 import type { AppContextType, NextComponentType, NextPageContext } from 'next/dist/shared/lib/utils';
-import Head from 'next/head';
 import type { NextRouter } from 'next/router';
 import { useRouter } from 'next/router';
 import type { ComponentType, ReactElement, ReactNode } from 'react';
@@ -14,12 +13,6 @@ import { DefaultLayout } from '../layouts/DefaultLayout';
 import { Provider } from '../providers';
 import type { UserValues } from '@/domain/userValues';
 import { brevoPageview } from '@/lib/brevo';
-import { Bing } from '@/scripts/bing';
-import { Brevo } from '@/scripts/brevo';
-import { BrevoConversations } from '@/scripts/brevoCoversations';
-import { Facebook } from '@/scripts/facebook';
-import { GoogleAnalytics } from '@/scripts/googleAnalytics';
-import { Tiktok } from '@/scripts/tiktok';
 
 import '../styles/app.scss';
 
@@ -78,20 +71,14 @@ const MyApp: AppTypeWithLayout<Props> = ({ Component, pageProps }) => {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? (page => <DefaultLayout>{page}</DefaultLayout>);
 
+  console.log(process.env.NEXT_PUBLIC_FACEBOOK_ID);
+
   return (
     <ErrorBoundary fallback={<></>}>
-      <Head>
-        {process.env.GOOGLE_ANALYTICS_ID && <GoogleAnalytics id={process.env.GOOGLE_ANALYTICS_ID} adsId={process.env.GOOGLE_ADS_ID} userValues={pageProps.userValues} />}
-        {process.env.BREVO_CLIENT_KEY && <Brevo clientKey={process.env.BREVO_CLIENT_KEY} userValues={pageProps.userValues} />}
-        {process.env.NEXT_PUBLIC_FACEBOOK_ID && <Facebook id={process.env.NEXT_PUBLIC_FACEBOOK_ID} userValues={pageProps.userValues} />}
-        {process.env.TIKTOK_ID && <Tiktok id={process.env.TIKTOK_ID} />}
-        {process.env.BING_ID && <Bing id={process.env.BING_ID} userValues={pageProps.userValues} />}
-      </Head>
       <Provider>
         {/* <GoogleTagManager gtmId="GTM-P9J948Z" /> */}
         {getLayout(<Component {...pageProps} />)}
       </Provider>
-      {process.env.BREVO_CONVERSATIONS_ID && <BrevoConversations conversationsId={process.env.BREVO_CONVERSATIONS_ID} />}
     </ErrorBoundary>
   );
 };
@@ -99,7 +86,6 @@ const MyApp: AppTypeWithLayout<Props> = ({ Component, pageProps }) => {
 export default MyApp;
 
 MyApp.getInitialProps = async appContext => {
-
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-explicit-any
   const initialProps = await App.getInitialProps(appContext as any);
 
