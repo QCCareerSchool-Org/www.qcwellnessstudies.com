@@ -1,4 +1,3 @@
-import Script from 'next/script';
 import type { FC } from 'react';
 
 import type { UserValues } from '@/domain/userValues';
@@ -12,7 +11,7 @@ interface Props {
 
 export const Facebook: FC<Props> = ({ id, userValues }) => (
   <>
-    <Script id="facebook" dangerouslySetInnerHTML={{ __html: getScript(id, userValues) }} />
+    <script id="facebook" dangerouslySetInnerHTML={{ __html: getScript(id, userValues) }} />
     <noscript dangerouslySetInnerHTML={{ __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=${encodeURIComponent(id)}&ev=PageView&noscript=1" alt="" />` }} />
   </>
 );
