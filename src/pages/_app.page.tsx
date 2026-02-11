@@ -75,7 +75,7 @@ const MyApp: AppTypeWithLayout<Props> = ({ Component, pageProps }) => {
 
   return (
     <ErrorBoundary fallback={<></>}>
-      <Provider>
+      <Provider clientIp={pageProps.clientIp ?? null} userValues={pageProps.userValues}>
         {/* <GoogleTagManager gtmId="GTM-P9J948Z" /> */}
         {getLayout(<Component {...pageProps} />)}
       </Provider>
