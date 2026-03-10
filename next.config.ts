@@ -1,6 +1,7 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  reactCompiler: true,
   pageExtensions: [ 'page.tsx', 'page.ts', 'page.jsx', 'page.js' ],
   sassOptions: {
     quietDeps: true, // hide deprecation warnings from node_modules
