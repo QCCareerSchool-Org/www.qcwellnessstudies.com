@@ -41,7 +41,6 @@ const Page: NextPage<Props> = ({ emailAddress, lead, jwt, recent }) => {
           firstName={lead.firstName}
           lastName={lead.lastName}
           leadId={lead.leadId}
-          conversionId="AW-1071836607/Srl-CMns3JgBEL_bi_8D"
         />
       )}
       <section>

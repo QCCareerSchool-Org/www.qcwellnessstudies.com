@@ -31,7 +31,7 @@
     "react-phone-number-input": "^3.4.16",
     "react-schemaorg": "^2.0.1",
     "react-use-count-up": "^1.0.2",
-    "sass": "^1.97.3",
+    "sass": "^1.98.0",
     "schema-dts": "^1.1.5",
     "server-only": "^0.0.1",
     "uuid": "^13.0.0"
