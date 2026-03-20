@@ -1,3 +1,4 @@
+import type { GetServerSideProps } from 'next';
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -17,17 +18,26 @@ import { PaymentPlans } from '@/components/PaymentPlans';
 import { SEO } from '@/components/SEO';
 import { Subnav } from '@/components/Subnav';
 import { UnitOutline } from '@/components/UnitOutline';
+import type { CourseCode } from '@/domain/courseCode';
+import type { Price } from '@/domain/price';
 import DarkGreenNavyBackgroundImage from '@/images/bg-dark-green-navy.jpg';
 import WhiteGreenBackgroundImage from '@/images/bg-white-green-light.jpg';
 import WellnessLogo from '@/images/qc-wellness-logo.svg';
 import TutorAlyImage from '@/images/tutor-aly.jpg';
 import TutorSuzanneImage from '@/images/tutor-suzanne.jpg';
 import { DefaultLayout } from '@/layouts/DefaultLayout';
+import { fetchPrice } from '@/lib/fetchPrice';
+import { getHeader } from '@/lib/getHeader';
 import type { NextPageWithLayout } from '@/pages/_app.page';
 
-const doubleGuarantee = false;
+interface Props {
+  price: Price | null;
+}
 
-const Page: NextPageWithLayout = () => (
+const doubleGuarantee = false;
+const courses: CourseCode[] = [ 'ic' ];
+
+const Page: NextPageWithLayout<Props> = ({ price }) => (
   <>
     <SEO
       title="Personal Caregiving Course"
@@ -53,10 +63,12 @@ const Page: NextPageWithLayout = () => (
     </section>
 
     <a className="anchor" id="paymentPlans" />
-    <section id="paymentPlansSection" className="bg-light">
-      <BackgroundImage src={WhiteGreenBackgroundImage} />
-      <PaymentPlans courses={[ 'ic' ]} doubleGuarantee={doubleGuarantee} />
-    </section>
+    {price && (
+      <section id="paymentPlansSection" className="bg-light">
+        <BackgroundImage src={WhiteGreenBackgroundImage} />
+        <PaymentPlans price={price} courses={courses} doubleGuarantee={doubleGuarantee} />
+      </section>
+    )}
 
     <section id="whatSection" className="bg-light">
       <div className="container">
@@ -209,7 +221,7 @@ const Page: NextPageWithLayout = () => (
       />
     </section>
 
-    <EnrollmentSection courseCodes={[ 'ic' ]}>
+    <EnrollmentSection courseCodes={courses}>
       If you&apos;re ready to learn important skills to be the personal caregiver your loved one deserves, enroll today!<br />Complete the course in as little as one month!
     </EnrollmentSection>
 
@@ -243,3 +255,14 @@ Page.getLayout = function Layout(page): ReactNode {
 };
 
 export default Page;
+
+export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
+  const countryCodeHeader = getHeader(ctx, 'x-vercel-ip-country');
+  const provinceCodeHeader = getHeader(ctx, 'x-vercel-ip-country-region');
+  const [ countryCode, provinceCode ] = countryCodeHeader
+    ? [ countryCodeHeader, provinceCodeHeader ]
+    : [ 'US', 'MD' ];
+
+  const priceResult = await fetchPrice(courses, countryCode, provinceCode);
+  return { props: { price: priceResult.success ? priceResult.value : null } };
+};

@@ -1,3 +1,4 @@
+import type { GetServerSideProps } from 'next';
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -19,8 +20,8 @@ import { HowItWorks } from '@/components/HowItWorks';
 import { PriceCard } from '@/components/PriceCard';
 import { SEO } from '@/components/SEO';
 import { Subnav } from '@/components/Subnav';
-import { useLocation } from '@/hooks/useLocation';
-import { usePrice } from '@/hooks/usePrice';
+import type { CourseCode } from '@/domain/courseCode';
+import type { Price } from '@/domain/price';
 import { useToggle } from '@/hooks/useToggle';
 import A4Image from '@/images/A4.jpg';
 import B3Image from '@/images/B3.jpg';
@@ -32,16 +33,20 @@ import ChatIcon from '@/images/icon-live-chat.svg';
 import AdvisorImage from '@/images/student-advisor.jpg';
 import TutorImage from '@/images/tutor.jpg';
 import { MinimalLayout } from '@/layouts/MimimalLayout';
+import { fetchPrice } from '@/lib/fetchPrice';
 import { formatPrice } from '@/lib/functions';
+import { getHeader } from '@/lib/getHeader';
 import type { NextPageWithLayout } from '@/pages/_app.page';
 
-const courses = [ 'sl' ];
+interface Props {
+  price: Price | null;
+}
 
-const Page: NextPageWithLayout = () => {
+const courses: CourseCode[] = [ 'sl' ];
+
+const Page: NextPageWithLayout<Props> = ({ price }) => {
   const [ popup1, handleToggle1 ] = useToggle();
   const [ popup2, handleToggle2 ] = useToggle();
-  const location = useLocation();
-  const price = usePrice(courses, location?.countryCode, location?.provinceCode);
 
   return <>
     <SEO
@@ -221,29 +226,31 @@ const Page: NextPageWithLayout = () => {
     </section>
 
     <a className="anchor" id="tuition" />
-    <section id="tuitionSection">
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-4">
-            <PriceCard courses={[ 'sl' ]} />
+    {price && (
+      <section id="tuitionSection">
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-4">
+              <PriceCard price={price} courses={[ 'sl' ]} />
+            </div>
+            <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
+              <h2 className="text-dark">Tuition &amp; Payment Plans</h2>
+              <p>The sleep consultant course has a tuition of {price.currency.symbol}{formatPrice(price.discountedCost)}, or <mark>{price.currency.symbol}{formatPrice(price.plans.full.total)} with the pay-in-full discount</mark>. This cost includes everything that has to do with your training, tutorial, and certification!</p>
+              <h3>Choose Your Payment Date</h3>
+              <p>As an added level of convenience, if you choose to pay your tuition on an installment plan, you&apos;ll be able to select the date your payments start and on which of the month your tuition payments will be processed. If you&apos;re on a fixed budget or would like to sync your tuition payments with other monthly expenses, there&apos;s no easier way to do it!</p>
+            </div>
           </div>
-          <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
-            <h2 className="text-dark">Tuition &amp; Payment Plans</h2>
-            <p>The sleep consultant course has a tuition of {price?.currency.symbol}{formatPrice(price?.discountedCost)}, or <mark>{price?.currency.symbol}{formatPrice(price?.plans.full.total)} with the pay-in-full discount</mark>. This cost includes everything that has to do with your training, tutorial, and certification!</p>
-            <h3>Choose Your Payment Date</h3>
-            <p>As an added level of convenience, if you choose to pay your tuition on an installment plan, you&apos;ll be able to select the date your payments start and on which of the month your tuition payments will be processed. If you&apos;re on a fixed budget or would like to sync your tuition payments with other monthly expenses, there&apos;s no easier way to do it!</p>
+          <div className="row text-center">
+            <div className="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+              <hr className="my-4" />
+              <IoMdFiling size={40} />
+              <h3>Your Tuition Is Tax Deductible!</h3>
+              <p>Claim part or all of your tuition payments on your income taxes. If you need a receipt or help with a specific tax form, simply contact your student advisor for assistance.</p>
+            </div>
           </div>
         </div>
-        <div className="row text-center">
-          <div className="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
-            <hr className="my-4" />
-            <IoMdFiling size={40} />
-            <h3>Your Tuition Is Tax Deductible!</h3>
-            <p>Claim part or all of your tuition payments on your income taxes. If you need a receipt or help with a specific tax form, simply contact your student advisor for assistance.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    )}
 
     <a className="anchor" id="support" />
     <section id="supportSection">
@@ -335,6 +342,17 @@ Page.getLayout = function Layout(page): ReactNode {
       )}
     >{page}</MinimalLayout>
   );
+};
+
+export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
+  const countryCodeHeader = getHeader(ctx, 'x-vercel-ip-country');
+  const provinceCodeHeader = getHeader(ctx, 'x-vercel-ip-country-region');
+  const [ countryCode, provinceCode ] = countryCodeHeader
+    ? [ countryCodeHeader, provinceCodeHeader ]
+    : [ 'US', 'MD' ];
+
+  const priceResult = await fetchPrice(courses, countryCode, provinceCode);
+  return { props: { price: priceResult.success ? priceResult.value : null } };
 };
 
 export default Page;
