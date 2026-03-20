@@ -1,4 +1,4 @@
-import type { OutlineData } from '../../../components/UnitOutline';
+import type { OutlineData } from '@/components/UnitOutline';
 
 export const units: Record<string, OutlineData[]> = {
   a: [

@@ -2,7 +2,7 @@ import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import type { FC } from 'react';
 
-import FooterLogo from '../images/logo-footer.svg';
+import FooterLogo from '@/images/logo-footer.svg';
 
 interface Props {
   profession: string;

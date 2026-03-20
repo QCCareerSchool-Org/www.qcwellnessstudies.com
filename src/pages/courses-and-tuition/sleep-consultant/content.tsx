@@ -250,11 +250,6 @@ export const Content: FC<Props> = ({ price, enrollPath, heroPromotion }) => {
           </div>
           <div className="container">
             <div className="row my-5" id="unitE">
-              {/* <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <div className="mt-2">
-                <Image src={require('../../../images/sl-outline-e.jpg')} width={445} height={225} className="rounded" alt="" />
-              </div>
-            </div> */}
               <div className="col-12 col-md-10 offset-md-1 text-lg-left mb-4">
                 <h3 className="text-dark">Unit E: Business Training</h3>
                 <p className="mb-0">You&apos;ll learn essential skills to help you launch a successful sleep consulting business. You&apos;ll work on business startup and marketing your services and gain invaluable feedback from your tutor in the process!</p>
@@ -266,11 +261,6 @@ export const Content: FC<Props> = ({ price, enrollPath, heroPromotion }) => {
           </div>
           <div className="container">
             <div className="row my-5" id="unitF">
-              {/* <div className="col-12 col-md-10 offset-md-1 col-lg-4 text-lg-left mb-4">
-              <div className="mt-2">
-                <Image src={require('../../../images/sl-outline-e.jpg')} width={445} height={225} className="rounded" alt="" />
-              </div>
-            </div> */}
               <div className="col-12 col-md-10 offset-md-1 text-lg-left mb-4">
                 <h3 className="text-dark">Unit F: Final Project</h3>
                 <p className="mb-0">This unit is composed of a final project where you will create a full sleep plan for a real client. You&apos;ll practice interacting with new clients, filling out an intake questionnaire, and developing a full sleep plan with feedback from your tutor.</p>

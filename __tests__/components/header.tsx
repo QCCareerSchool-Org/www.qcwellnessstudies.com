@@ -7,7 +7,7 @@ import { axe, toHaveNoViolations } from 'jest-axe';
 import React from 'react';
 
 import { Header } from '../../src/components/Header';
-import { useScreenWidth } from '../../src/hooks/useScreenWidth';
+import { useScreenWidthContext } from '../../src/hooks/useScreenWidthContext';
 import * as breakpoints from '../../src/lib/breakpoints';
 
 jest.mock('../../src/hooks/useScreenWidth');
@@ -33,7 +33,7 @@ describe('<Header>', () => {
     // xs, md
     [ 0, breakpoints.xs.end, breakpoints.md.start, breakpoints.md.end ].forEach(screenWidth => {
       it(`should render the small logo when screen size is ${screenWidth}`, () => {
-        (useScreenWidth as jest.Mock<number>).mockImplementation(() => screenWidth);
+        (useScreenWidthContext as jest.Mock<number>).mockImplementation(() => screenWidth);
         const { queryByTestId } = render(<Header nav={true} />);
         expect(queryByTestId(/header-logo-sm/iu)).toBeTruthy();
         expect(queryByTestId(/header-logo-lg/iu)).toBeFalsy();
@@ -43,7 +43,7 @@ describe('<Header>', () => {
     // sm, lg, xl
     [ breakpoints.sm.start, breakpoints.sm.end, breakpoints.lg.start, breakpoints.lg.end, breakpoints.xl.start ].forEach(screenWidth => {
       it(`should render the large logo when screen size is ${screenWidth}`, () => {
-        (useScreenWidth as jest.Mock<number>).mockImplementation(() => breakpoints.lg.start);
+        (useScreenWidthContext as jest.Mock<number>).mockImplementation(() => breakpoints.lg.start);
         const { queryByTestId } = render(<Header nav={true} />);
         expect(queryByTestId(/header-logo-sm/iu)).toBeFalsy();
         expect(queryByTestId(/header-logo-lg/iu)).toBeTruthy();
@@ -67,7 +67,7 @@ describe('<Header>', () => {
     // xs, sm
     [ 0, breakpoints.xs.end, breakpoints.sm.start, breakpoints.sm.end ].forEach(screenWidth => {
       it(`should render the small logo when screen size is ${screenWidth}`, () => {
-        (useScreenWidth as jest.Mock<number>).mockImplementation(() => screenWidth);
+        (useScreenWidthContext as jest.Mock<number>).mockImplementation(() => screenWidth);
         const { queryByTestId } = render(<Header nav={false} />);
         expect(queryByTestId(/header-logo-sm/iu)).toBeTruthy();
         expect(queryByTestId(/header-logo-lg/iu)).toBeFalsy();
@@ -77,7 +77,7 @@ describe('<Header>', () => {
     // md, lg, xl
     [ breakpoints.md.start, breakpoints.md.end, breakpoints.lg.start, breakpoints.lg.end, breakpoints.xl.start ].forEach(screenWidth => {
       it(`should render the large logo when screen size is ${screenWidth}`, () => {
-        (useScreenWidth as jest.Mock<number>).mockImplementation(() => breakpoints.lg.start);
+        (useScreenWidthContext as jest.Mock<number>).mockImplementation(() => breakpoints.lg.start);
         const { queryByTestId } = render(<Header nav={false} />);
         expect(queryByTestId(/header-logo-sm/iu)).toBeFalsy();
         expect(queryByTestId(/header-logo-lg/iu)).toBeTruthy();

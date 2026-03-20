@@ -1,10 +1,10 @@
 import type { FC } from 'react';
 
 import { GuaranteeModal } from './GuaranteeModal';
-import { useToggle } from '../hooks/useToggle';
-import { formatPrice } from '../lib/functions';
 import type { CourseCode } from '@/domain/courseCode';
 import type { Price } from '@/domain/price';
+import { useToggle } from '@/hooks/useToggle';
+import { formatPrice } from '@/lib/functions';
 
 interface Props {
   price: Price;

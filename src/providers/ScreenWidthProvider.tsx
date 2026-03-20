@@ -1,30 +1,19 @@
 import type { FC, ReactNode } from 'react';
-import { createContext, useEffect, useState } from 'react';
+import { createContext } from 'react';
+import { useWindowListener } from 'use-window-listener';
 
-export const ScreenWidthStateContext = createContext<number | undefined>(undefined);
-export const ScreenWidthDispatchContext = createContext<((width: number) => void) | undefined>(undefined);
+export const ScreenWidthContext = createContext<number | undefined>(undefined);
 
 interface Props {
   children: ReactNode;
 }
 
 export const ScreenWidthProvider: FC<Props> = ({ children }) => {
-  const [ state, dispatch ] = useState<number>(0);
-  useEffect(() => {
-    const handler = (): void => {
-      dispatch(window.innerWidth);
-    };
-    window.addEventListener('resize', handler);
-    handler();
-    return (): void => {
-      window.removeEventListener('resize', handler);
-    };
-  }, []);
+  const state = useWindowListener('resize', w => w.innerWidth);
+
   return (
-    <ScreenWidthStateContext.Provider value={state}>
-      <ScreenWidthDispatchContext.Provider value={dispatch}>
-        {children}
-      </ScreenWidthDispatchContext.Provider>
-    </ScreenWidthStateContext.Provider>
+    <ScreenWidthContext.Provider value={state}>
+      {children}
+    </ScreenWidthContext.Provider>
   );
 };

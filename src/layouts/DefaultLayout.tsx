@@ -1,8 +1,8 @@
 import type { FC, PropsWithChildren, ReactNode } from 'react';
 
-import { Footer } from '../components/Footer';
-import { Header } from '../components/Header';
 import { CountDownTimer } from '@/components/CountDownTimer';
+import { Footer } from '@/components/Footer';
+import { Header } from '@/components/Header';
 import { useLocation } from '@/hooks/useLocation';
 import { isGBPCountry } from '@/lib/functions';
 

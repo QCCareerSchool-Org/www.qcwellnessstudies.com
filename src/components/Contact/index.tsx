@@ -2,11 +2,11 @@ import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import type { FC } from 'react';
 
-import { openLiveChat as handleClick } from '../../lib/livechat';
-import { TelephoneNumber } from '../TelephoneNumber';
+import { TelephoneNumber } from '@/components/TelephoneNumber';
 import EmailIcon from '@/images/icon-email.svg';
 import ChatIcon from '@/images/icon-live-chat.svg';
 import PhoneIcon from '@/images/icon-phone.svg';
+import { openLiveChat as handleClick } from '@/lib/livechat';
 
 export const Contact: FC = () => (
   <div className="container text-center">

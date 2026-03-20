@@ -1,7 +1,7 @@
 import type { FC, PropsWithChildren, ReactNode } from 'react';
 
-import { Header } from '../components/Header';
-import { LandingPageFooter } from '../components/LandingPageFooter';
+import { Header } from '@/components/Header';
+import { LandingPageFooter } from '@/components/LandingPageFooter';
 
 interface Props {
   secondaryNav?: ReactNode;

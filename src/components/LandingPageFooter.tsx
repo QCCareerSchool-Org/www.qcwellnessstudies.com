@@ -4,7 +4,7 @@ import Link from 'next/link';
 import type { FC } from 'react';
 
 import { TelephoneNumber } from './TelephoneNumber';
-import FooterLogoImage from '../images/logo-footer.svg';
+import FooterLogoImage from '@/images/logo-footer.svg';
 
 export const LandingPageFooter: FC = () => {
   return (

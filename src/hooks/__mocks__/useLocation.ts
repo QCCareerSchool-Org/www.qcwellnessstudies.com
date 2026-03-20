@@ -1,4 +1,4 @@
-import type { Location } from '../../providers/LocationProvider';
+import type { Location } from '@/providers/LocationProvider';
 
 const location: Location = { countryCode: 'CA', countryName: 'Canada', provinceCode: 'ON', provinceName: 'Ontario' };
 

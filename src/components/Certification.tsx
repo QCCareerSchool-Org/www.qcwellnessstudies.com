@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import type { FC, JSX } from 'react';
 
-import CertificateImage from '../images/certificate.png';
+import CertificateImage from '@/images/certificate.png';
 
 interface Props {
   shortName: string;

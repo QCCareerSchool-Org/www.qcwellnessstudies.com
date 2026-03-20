@@ -1,7 +1,7 @@
 import type { FC, PropsWithChildren, ReactNode } from 'react';
 
-import { Footer } from '../components/Footer';
-import { Header } from '../components/Header';
+import { Footer } from '@/components/Footer';
+import { Header } from '@/components/Header';
 
 interface Props {
   secondaryNav?: ReactNode;
