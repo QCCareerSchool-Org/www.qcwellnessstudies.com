@@ -1,13 +1,22 @@
-import type { NextPage } from 'next';
+import type { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
 
 import { BackgroundImage } from '@/components/BackgroundImage';
 import { EnrollmentSection } from '@/components/EnrollmentSection';
 import { PriceCard } from '@/components/PriceCard';
 import { SEO } from '@/components/SEO';
+import type { Price } from '@/domain/price';
 import HeroBackgroundImage from '@/images/bg-white-green-light.jpg';
+import { fetchPrice } from '@/lib/fetchPrice';
+import { getHeader } from '@/lib/getHeader';
 
-const Page: NextPage = () => (
+type Prices = Record<'ic' | 'sl' | 'sk' | 'ap', Price | null>;
+
+interface Props {
+  prices: Prices;
+}
+
+const Page: NextPage<Props> = ({ prices }) => (
   <>
     <SEO
       title="Courses & Tuition"
@@ -22,7 +31,7 @@ const Page: NextPage = () => (
         <hr className="mt-5" />
         <div className="row">
           <div className="col-12 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-4">
-            <PriceCard courses={[ 'ic' ]} />
+            {prices.ic && <PriceCard price={prices.ic} courses={[ 'ic' ]} />}
           </div>
           <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
             <h2 className="text-dark">Caregiver</h2>
@@ -39,7 +48,7 @@ const Page: NextPage = () => (
       <div className="container">
         <div className="row">
           <div className="col-12 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-4">
-            <PriceCard courses={[ 'sl' ]} />
+            {prices.sl && <PriceCard price={prices.sl} courses={[ 'sl' ]} />}
           </div>
           <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
             <h2 className="text-dark">Sleep Consultant Course</h2>
@@ -55,7 +64,7 @@ const Page: NextPage = () => (
       <div className="container">
         <div className="row">
           <div className="col-12 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-4">
-            <PriceCard courses={[ 'sk' ]} />
+            {prices.sk && <PriceCard price={prices.sk} courses={[ 'sk' ]} />}
           </div>
           <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
             <h2 className="text-dark">Skincare Consultant Course</h2>
@@ -71,7 +80,7 @@ const Page: NextPage = () => (
       <div className="container">
         <div className="row">
           <div className="col-12 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-4">
-            <PriceCard courses={[ 'ap' ]} />
+            {prices.ap && <PriceCard price={prices.ap} courses={[ 'ap' ]} />}
           </div>
           <div className="col-12 mb-5 col-md-12 col-lg-7 mb-lg-0 col-xl-8 text-center text-lg-left order-first order-lg-last">
             <h2 className="text-dark">Aging in Place Course</h2>
@@ -90,3 +99,27 @@ const Page: NextPage = () => (
 );
 
 export default Page;
+
+export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
+  const countryCodeHeader = getHeader(ctx, 'x-vercel-ip-country');
+  const provinceCodeHeader = getHeader(ctx, 'x-vercel-ip-country-region');
+  const [ countryCode, provinceCode ] = countryCodeHeader
+    ? [ countryCodeHeader, provinceCodeHeader ]
+    : [ 'US', 'MD' ];
+
+  const [ ic, sl, sk, ap ] = await Promise.all([
+    fetchPrice([ 'ic' ], countryCode, provinceCode),
+    fetchPrice([ 'sl' ], countryCode, provinceCode),
+    fetchPrice([ 'sk' ], countryCode, provinceCode),
+    fetchPrice([ 'ap' ], countryCode, provinceCode),
+  ]);
+
+  const prices: Prices = {
+    ic: ic.success ? ic.value : null,
+    sl: sl.success ? sl.value : null,
+    sk: sk.success ? sk.value : null,
+    ap: ap.success ? ap.value : null,
+  };
+
+  return { props: { prices } };
+};

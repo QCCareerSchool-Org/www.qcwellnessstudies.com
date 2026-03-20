@@ -1,14 +1,25 @@
+import type { GetServerSideProps } from 'next';
 import type { ReactNode } from 'react';
 
-import OriginalPage from './index.page';
-import { DeadlineFunnelScript } from '../../../components/DeadlineFunnelScript';
-import { LandingPageLayout } from '../../../layouts/LandingPageLayout';
-import type { NextPageWithLayout } from '../../_app.page';
+import { Content } from './content';
+import { DeadlineFunnelScript } from '@/components/DeadlineFunnelScript';
+import type { CourseCode } from '@/domain/courseCode';
+import type { Price } from '@/domain/price';
+import { LandingPageLayout } from '@/layouts/LandingPageLayout';
+import { fetchPrice } from '@/lib/fetchPrice';
+import { getHeader } from '@/lib/getHeader';
+import type { NextPageWithLayout } from '@/pages/_app.page';
 
-const Page: NextPageWithLayout = () => (
+interface Props {
+  price: Price | null;
+}
+
+const courses: CourseCode[] = [ 'sl' ];
+
+const Page: NextPageWithLayout<Props> = ({ price }) => (
   <>
     <DeadlineFunnelScript />
-    <OriginalPage enrollPath="https://enroll.qcwellnessstudies.com/100-off" />
+    <Content price={price} enrollPath="https://enroll.qcwellnessstudies.com/100-off" />
   </>
 );
 
@@ -17,3 +28,14 @@ Page.getLayout = function Layout(page): ReactNode {
 };
 
 export default Page;
+
+export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
+  const countryCodeHeader = getHeader(ctx, 'x-vercel-ip-country');
+  const provinceCodeHeader = getHeader(ctx, 'x-vercel-ip-country-region');
+  const [ countryCode, provinceCode ] = countryCodeHeader
+    ? [ countryCodeHeader, provinceCodeHeader ]
+    : [ 'US', 'MD' ];
+
+  const priceResult = await fetchPrice(courses, countryCode, provinceCode);
+  return { props: { price: priceResult.success ? priceResult.value : null } };
+};

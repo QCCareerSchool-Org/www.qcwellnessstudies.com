@@ -16,7 +16,7 @@ import { brevoIdentifyStudent } from '@/lib/brevo';
 import { createBrevoContact } from '@/lib/brevoAPI';
 import { fbPostPurchase } from '@/lib/facebookConversionAPI';
 import { fbqSale } from '@/lib/fbq';
-import { getEnrollment } from '@/lib/getEnrollment';
+import { fetchEnrollment } from '@/lib/fetchEnrollment';
 import { getHeader } from '@/lib/getHeader';
 import { gaSale } from '@/lib/gtag';
 import { createJwt } from '@/lib/jwt';
@@ -217,7 +217,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
       throw new HttpStatus.BadRequest();
     }
 
-    const rawEnrollment = await getEnrollment(enrollmentId, code);
+    const rawEnrollment = await fetchEnrollment(enrollmentId, code);
     const enrollment: Enrollment = {
       ...rawEnrollment,
       paymentDate: new Date(rawEnrollment.paymentDate),
@@ -236,10 +236,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
       const fbp = ctx.req.cookies._fbp;
 
       // send email
-      try {
-        await sendEnrollmentEmail(enrollmentId, code);
-      } catch (err) {
-        console.error(err);
+      const sendEmailResult = await sendEnrollmentEmail(enrollmentId, code);
+      if (!sendEmailResult.success) {
+        console.error(sendEmailResult.error);
       }
 
       // create Brevo contact

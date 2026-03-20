@@ -1,19 +1,34 @@
-import * as HttpStatus from '@qccareerschool/http-status';
+// import 'server-only';
 
-export const sendEnrollmentEmail = async (enrollmentId: number, code: string): Promise<void> => {
-  const url = `https://api.qccareerschool.com/enrollments/${enrollmentId}/email`;
-  const response = await fetch(url, {
-    method: 'post',
-    headers: {
+import type { Result } from 'generic-result-type';
+import { failure, success } from 'generic-result-type';
 
-      'X-API-Version': '2',
+const headers = {
+  'X-API-Version': '2',
+  'Content-Type': 'application/json',
+};
 
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ code }),
-  });
-  if (!response.ok) {
-    throw new HttpStatus.HttpResponse(response.status, response.statusText);
+export const sendEnrollmentEmail = async (
+  enrollmentId: number,
+  code: string,
+  signal?: AbortSignal,
+): Promise<Result> => {
+  try {
+    const url = `${process.env.ENROLLMENT_ENDPOINT}/${encodeURIComponent(enrollmentId)}/email`;
+    const body = JSON.stringify({ code });
+
+    const response = await fetch(url, { method: 'post', headers, body, signal });
+    if (!response.ok) {
+      throw Error(response.statusText);
+    }
+
+    await response.json();
+
+    return success();
+  } catch (err) {
+    if (!signal?.aborted) {
+      console.error(err);
+    }
+    return failure(err instanceof Error ? err : Error(String(err)));
   }
-  await response.json();
 };
