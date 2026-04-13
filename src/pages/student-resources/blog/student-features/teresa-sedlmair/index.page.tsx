@@ -1,7 +1,7 @@
+import { useIntersectionObserver } from '@davewelsh79/use-intersection-observer';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRef } from 'react';
 import { FaBook } from 'react-icons/fa';
 import { IoBarChart, IoSchool } from 'react-icons/io5';
 import { useCountUp } from 'react-use-count-up';
@@ -10,17 +10,13 @@ import Image1 from './image-1.jpg';
 import Image2 from './image-2.jpg';
 import Image3 from './image-3.jpg';
 import VideoPosterImage from './video-preview-cover.jpg';
-import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
 const iconSize = 64;
 const duration = 2_000; // 2 seconds
 
 const TeresaSedlmairPage: NextPage = () => {
-  const clientsRef = useRef<HTMLDivElement>(null);
-  const reviewsRef = useRef<HTMLDivElement>(null);
-
-  const clientsStart = useIntersectionObserver(clientsRef);
-  const reviewsStart = useIntersectionObserver(reviewsRef);
+  const [ clientsStart, clientsRef ] = useIntersectionObserver(true);
+  const [ reviewsStart, reviewsRef ] = useIntersectionObserver(true);
 
   const clients = useCountUp({ start: 0, end: 350, duration, started: clientsStart, easingFunction: 'easeOutCubic' });
   const reviews = useCountUp({ start: 0, end: 125, duration, started: reviewsStart, easingFunction: 'easeOutCubic' });

@@ -2,8 +2,8 @@ import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import type { FC, ReactElement } from 'react';
 
-import OneYearImage from '../images/1-year-guarentee.svg';
-import TwentyOneDayImage from '../images/21-day-guarentee.svg';
+import OneYearImage from '@/images/1-year-guarentee.svg';
+import TwentyOneDayImage from '@/images/21-day-guarentee.svg';
 
 interface Props {
   courseName: string;

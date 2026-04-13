@@ -7,7 +7,7 @@ import { Address } from './Address';
 import { ChatLink } from './ChatLink';
 import styles from './Footer.module.scss';
 import { TelephoneNumber } from './TelephoneNumber';
-import FooterLogo from '../images/logo-footer.svg';
+import FooterLogo from '@/images/logo-footer.svg';
 
 export const Footer = (): ReactElement => (
   <footer id="footer" className={`${styles.footer} footer bg-dark mt-auto`}>

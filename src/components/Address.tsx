@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
 
-import { useLocation } from '../hooks/useLocation';
-import { getAddress } from '../lib/functions';
+import { useLocation } from '@/hooks/useLocation';
+import { getAddress } from '@/lib/functions';
 
 export const Address = (): ReactElement | null => {
   const location = useLocation();

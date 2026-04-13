@@ -3,9 +3,9 @@ import { useId } from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 
-import { formatPrice } from '../lib/functions';
 import type { CourseCode } from '@/domain/courseCode';
 import type { Price } from '@/domain/price';
+import { formatPrice } from '@/lib/functions';
 
 interface Props {
   price: Price;

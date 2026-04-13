@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
-import { useLocation } from '../hooks/useLocation';
-import { getTelephoneNumber } from '../lib/functions';
+import { useLocation } from '@/hooks/useLocation';
+import { getTelephoneNumber } from '@/lib/functions';
 
 interface Props {
   link?: boolean;

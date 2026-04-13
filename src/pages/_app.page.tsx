@@ -8,11 +8,11 @@ import type { ComponentType, ReactElement, ReactNode } from 'react';
 import { useEffect } from 'react';
 
 import { getUserValues } from './getUserValues';
-import { ErrorBoundary } from '../components/ErrorBoundary';
-import { DefaultLayout } from '../layouts/DefaultLayout';
-import { Provider } from '../providers';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
 import type { UserValues } from '@/domain/userValues';
+import { DefaultLayout } from '@/layouts/DefaultLayout';
 import { brevoPageview } from '@/lib/brevo';
+import { Provider } from '@/providers';
 
 import '../styles/app.scss';
 

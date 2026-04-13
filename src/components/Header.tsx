@@ -9,11 +9,11 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import { showButton } from './ButtonWrapper';
 import { OptionalLink } from './OptionalLink';
-import { useScreenWidth } from '../hooks/useScreenWidth';
-import LogoLg from '../images/logo-lg.svg';
-import Logo from '../images/logo.svg';
-import * as breakpoints from '../lib/breakpoints';
-import { useScrollPosition } from '@/hooks/useScrollPosition';
+import { useScreenWidthContext } from '@/hooks/useScreenWidthContext';
+import { useScrollPositionContext } from '@/hooks/useScrollPositionContext';
+import LogoLg from '@/images/logo-lg.svg';
+import Logo from '@/images/logo.svg';
+import * as breakpoints from '@/lib/breakpoints';
 
 interface Props {
   enrollPath?: string;
@@ -26,8 +26,8 @@ interface Props {
 export const Header: FC<Props> = ({ nav, enrollPath = 'https://enroll.qcwellnessstudies.com/', buttonContent, onButtonOnClick: handleButtonClick, logoLink }) => {
   const [ key, setKey ] = useState(0);
 
-  const scrollPosition = useScrollPosition();
-  const screenWidth = useScreenWidth();
+  const scrollPosition = useScrollPositionContext();
+  const screenWidth = useScreenWidthContext();
 
   const handleClick = (): void => {
     setKey(k => (k < Number.MAX_SAFE_INTEGER ? k + 1 : 0));
