@@ -26,8 +26,8 @@ interface Props {
 export const Header: FC<Props> = ({ nav, enrollPath = 'https://enroll.qcwellnessstudies.com/', buttonContent, onButtonOnClick: handleButtonClick, logoLink }) => {
   const [ key, setKey ] = useState(0);
 
-  const scrollPosition = useScrollPositionContext();
-  const screenWidth = useScreenWidthContext();
+  const scrollPosition = useScrollPositionContext() ?? 0;
+  const screenWidth = useScreenWidthContext() ?? 0;
 
   const handleClick = (): void => {
     setKey(k => (k < Number.MAX_SAFE_INTEGER ? k + 1 : 0));
