@@ -1,10 +1,14 @@
+import Script from 'next/script';
 import type { FC } from 'react';
 
 interface Props {
   conversationsId: string;
 }
 
-export const BrevoConversations: FC<Props> = ({ conversationsId }) => <script id="brevoConversations" dangerouslySetInnerHTML={{ __html: getScript(conversationsId) }} />;
+export const BrevoConversations: FC<Props> = ({ conversationsId }) => (
+  <Script id="brevoConversations" strategy="lazyOnload" dangerouslySetInnerHTML={{ __html: getScript(conversationsId) }} />
+);
+
 const getScript = (conversationsId: string): string => `
 window.BrevoConversationsGroupID = 'RLJRpnPENeJjWyNR7';
 (function(d, w, c) {
