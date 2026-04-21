@@ -21,11 +21,11 @@ type DocumentComponent<P = {}> = NextComponentType<DocumentContext, DocumentInit
 const MyDocument: DocumentComponent<Props> = ({ userValues }) => (
   <Html lang="en" className="h-100" prefix="og: http://ogp.me/ns#">
     <Head>
-      {process.env.GOOGLE_ANALYTICS_ID && <GoogleAnalytics id={process.env.GOOGLE_ANALYTICS_ID} adsId={process.env.GOOGLE_ADS_ID} userValues={userValues} />}
-      {process.env.BREVO_CLIENT_KEY && <Brevo clientKey={process.env.BREVO_CLIENT_KEY} userValues={userValues} />}
+      {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} adsId={process.env.NEXT_PUBLIC_GOOGLE_ADS_ID} userValues={userValues} />}
+      {process.env.NEXT_PUBLIC_BREVO_CLIENT_KEY && <Brevo clientKey={process.env.NEXT_PUBLIC_BREVO_CLIENT_KEY} userValues={userValues} />}
       {process.env.NEXT_PUBLIC_FACEBOOK_ID && <Facebook id={process.env.NEXT_PUBLIC_FACEBOOK_ID} userValues={userValues} />}
-      {process.env.TIKTOK_ID && <Tiktok id={process.env.TIKTOK_ID} />}
-      {process.env.BING_ID && <Bing id={process.env.BING_ID} userValues={userValues} />}
+      {process.env.NEXT_PUBLIC_TIKTOK_ID && <Tiktok id={process.env.NEXT_PUBLIC_TIKTOK_ID} />}
+      {process.env.NEXT_PUBLIC_BING_ID && <Bing id={process.env.NEXT_PUBLIC_BING_ID} userValues={userValues} />}
       {/* eslint-disable-next-line @next/next/google-font-display */}
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Playfair+Display:400,700,900" />
     </Head>
@@ -34,7 +34,7 @@ const MyDocument: DocumentComponent<Props> = ({ userValues }) => (
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <noscript><img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=1725004270923176&ev=PageView&noscript=1" alt="" /></noscript>
       <Main />
-      {process.env.BREVO_CONVERSATIONS_ID && <BrevoConversations conversationsId={process.env.BREVO_CONVERSATIONS_ID} />}
+      {process.env.NEXT_PUBLIC_BREVO_CONVERSATIONS_ID && <BrevoConversations conversationsId={process.env.NEXT_PUBLIC_BREVO_CONVERSATIONS_ID} />}
       <NextScript />
     </body>
   </Html>
