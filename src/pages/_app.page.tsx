@@ -13,6 +13,12 @@ import type { UserValues } from '@/domain/userValues';
 import { DefaultLayout } from '@/layouts/DefaultLayout';
 import { brevoPageview } from '@/lib/brevo';
 import { Provider } from '@/providers';
+import { Bing } from '@/scripts/bing';
+import { Brevo } from '@/scripts/brevo';
+import { BrevoConversations } from '@/scripts/brevoCoversations';
+import { Facebook } from '@/scripts/facebook';
+import { GoogleAnalytics } from '@/scripts/googleAnalytics';
+import { Tiktok } from '@/scripts/tiktok';
 
 import '../styles/app.scss';
 
@@ -76,7 +82,12 @@ const MyApp: AppTypeWithLayout<Props> = ({ Component, pageProps }) => {
   return (
     <ErrorBoundary fallback={<></>}>
       <Provider clientIp={pageProps.clientIp ?? null} userValues={pageProps.userValues}>
-        {/* <GoogleTagManager gtmId="GTM-P9J948Z" /> */}
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} adsId={process.env.NEXT_PUBLIC_GOOGLE_ADS_ID} userValues={pageProps.userValues} />}
+        {process.env.NEXT_PUBLIC_BREVO_CLIENT_KEY && <Brevo clientKey={process.env.NEXT_PUBLIC_BREVO_CLIENT_KEY} userValues={pageProps.userValues} />}
+        {process.env.NEXT_PUBLIC_FACEBOOK_ID && <Facebook id={process.env.NEXT_PUBLIC_FACEBOOK_ID} userValues={pageProps.userValues} />}
+        {process.env.NEXT_PUBLIC_TIKTOK_ID && <Tiktok id={process.env.NEXT_PUBLIC_TIKTOK_ID} />}
+        {process.env.NEXT_PUBLIC_BING_ID && <Bing id={process.env.NEXT_PUBLIC_BING_ID} userValues={pageProps.userValues} />}
+        {process.env.NEXT_PUBLIC_BREVO_CONVERSATIONS_ID && <BrevoConversations conversationsId={process.env.NEXT_PUBLIC_BREVO_CONVERSATIONS_ID} />}
         {getLayout(<Component {...pageProps} />)}
       </Provider>
     </ErrorBoundary>
