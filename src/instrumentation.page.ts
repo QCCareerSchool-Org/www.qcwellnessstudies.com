@@ -1,4 +1,4 @@
-const isProd = process.env.NODE_MODE === 'production';
+const isProd = process.env.VERCEL_ENV === 'production';
 
 const expectedVariables = [
   // QC
@@ -11,7 +11,7 @@ const expectedVariables = [
   'NEXT_PUBLIC_FACEBOOK_ID',
   'FACEBOOK_ACCESS_TOKEN',
   // Tiktok
-  'TIKTOK_ID',
+  // 'TIKTOK_ID',
   // Microsoft Ads
   'BING_ID',
   // Brevo
@@ -23,6 +23,17 @@ const expectedVariables = [
   // network
   'FIREWALL_BYPASS_SECRET',
   'PROXY_SECRET',
+
+  // client variables needed for pages router
+  'NEXT_PUBLIC_PRICES_ENDPONT',
+  'NEXT_PUBLIC_ENROLLMENT_ENDPOINT',
+  'NEXT_PUBLIC_GOOGLE_ANALYTICS_ID',
+  'NEXT_PUBLIC_GOOGLE_ADS_ID',
+  // 'NEXT_PUBLIC_TIKTOK_ID',
+  'NEXT_PUBLIC_BING_ID',
+  'NEXT_PUBLIC_BREVO_CLIENT_KEY',
+  'NEXT_PUBLIC_BREVO_CONVERSATIONS_ID',
+  'NEXT_PUBLIC_BREVO_GROUP_ID',
 ] as const;
 
 // eslint-disable-next-line @typescript-eslint/require-await
