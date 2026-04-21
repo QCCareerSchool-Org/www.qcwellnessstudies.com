@@ -1,4 +1,4 @@
-const isProd = process.env.NODE_MODE === 'production';
+const isProd = process.env.VERCEL_ENV === 'production';
 
 const expectedVariables = [
   // QC
