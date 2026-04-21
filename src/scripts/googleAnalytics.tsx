@@ -1,12 +1,8 @@
-'use client';
-
-import { GoogleAnalytics as NextGoogleAnalytics } from '@next/third-parties/google';
 import Script from 'next/script';
 import type { FC } from 'react';
 
 import type { UserValues } from '@/domain/userValues';
 import type { GAUserData } from '@/lib/gtag';
-import { safeJSON } from '@/lib/safeJSON';
 
 interface Props {
   id: string;
@@ -16,14 +12,21 @@ interface Props {
 
 export const GoogleAnalytics: FC<Props> = ({ id, adsId, userValues }) => (
   <>
-    <NextGoogleAnalytics gaId={id} />
+    <Script id="google-analytics" dangerouslySetInnerHTML={{ __html: getScript(id) }} />
     {adsId && <Script id="google-analytics-google-ads" dangerouslySetInnerHTML={{ __html: getAdsScript(adsId) }} />}
     {userValues && <Script id="google-analytics-set" dangerouslySetInnerHTML={{ __html: getSetScript(userValues) }} />}
   </>
 );
 
+const getScript = (id: string) => `
+window['dataLayer'] = window['dataLayer'] || [];
+function gtag(){window['dataLayer'].push(arguments);}
+gtag('js', new Date());
+gtag('config', ${JSON.stringify(id)} );
+`;
+
 const getAdsScript = (adsId: string): string => {
-  return `gtag('config', ${safeJSON(adsId)}, { allow_enhanced_conversions: true });\n`;
+  return `gtag('config', \`${adsId.replace(/`/ug, '\\`')}\`, { allow_enhanced_conversions: true });\n`;
 };
 
 const getSetScript = (userValues: UserValues): string => {
@@ -60,5 +63,5 @@ const getSetScript = (userValues: UserValues): string => {
     }
   }
 
-  return `gtag('set', 'user_data', ${safeJSON(params)})\n`;
+  return `gtag('set', 'user_data', ${JSON.stringify(params)})`;
 };
