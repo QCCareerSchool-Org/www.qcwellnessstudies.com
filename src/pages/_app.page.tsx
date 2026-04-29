@@ -18,6 +18,7 @@ import { Brevo } from '@/scripts/brevo';
 import { BrevoConversations } from '@/scripts/brevoCoversations';
 import { Facebook } from '@/scripts/facebook';
 import { GoogleAnalytics } from '@/scripts/googleAnalytics';
+import { OptInMonster } from '@/scripts/optInMonster';
 import { Tiktok } from '@/scripts/tiktok';
 
 import '../styles/app.scss';
@@ -88,6 +89,7 @@ const MyApp: AppTypeWithLayout<Props> = ({ Component, pageProps }) => {
         {process.env.NEXT_PUBLIC_BREVO_CONVERSATIONS_ID && process.env.NEXT_PUBLIC_BREVO_GROUP_ID && <BrevoConversations conversationsId={process.env.NEXT_PUBLIC_BREVO_CONVERSATIONS_ID} groupId={process.env.NEXT_PUBLIC_BREVO_GROUP_ID} />}
         {getLayout(<Component {...pageProps} />)}
       </Provider>
+      <OptInMonster />
     </ErrorBoundary>
   );
 };
