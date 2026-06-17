@@ -42,7 +42,7 @@ const Page: NextPage = () => (
             <h3 className="h5">No start dates, no end dates, no deadlines. You can start your training whenever you&apos;re ready. Just head over to the online enrollment form and get started!</h3>
             <p>You&apos;ll get access to your online student center and course materials within 1 business day of enrolling online. Tour the online student center and start your studies right away! If your course comes with printed materials, you&apos;ll receive them within 10 business days.</p>
             <p><strong>Remember!</strong></p>
-            <p>QC&apos;s 21-day money back guarantee gives you a full three weeks to review your course guide and materials. So take the time to review everything and decide if the course is right for you. If it&apos;s not, that&apos;s ok! One size doesn&apos;t fit all. Simply contact the school to arrange a full tuition refund.</p>
+            <p>QC&apos;s 14-day money back guarantee gives you a full three weeks to review your course guide and materials. So take the time to review everything and decide if the course is right for you. If it&apos;s not, that&apos;s ok! One size doesn&apos;t fit all. Simply contact the school to arrange a full tuition refund.</p>
           </div>
         </div>
       </div>

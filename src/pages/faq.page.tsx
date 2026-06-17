@@ -47,9 +47,9 @@ const Page: NextPage = () => (
               <p><i>Yes! QC is a faculty of QC Career School, which is an accredited business with the Better Business Bureau, holding an A+ satisfaction rating. <a target="_blank" rel="noopener noreferrer" href="https://www.bbb.org/ca/on/ottawa/profile/correspondence-schools/qc-career-school-0117-4175">View more about QC&apos;s accreditation status</a>.</i></p>
             </QuestionAndAnswer>
             <QuestionAndAnswer header="How does the money back guarantee work?">
-              <p><i>QC&apos;s 21-day guarantee is there to help you make an informed decision about your education. From the day you receive your course materials, you have a full three weeks to review the course guides, books, and assignments in order to decide whether your course is right for you. If you decide that it&apos;s not a good fit, simply contact the school to arrange a refund of your tuition. You&apos;ll be asked to return any course material you have to the school, and these must be unused.</i></p>
+              <p><i>QC&apos;s 14-day guarantee is there to help you make an informed decision about your education. From the day you receive your course materials, you have a full three weeks to review the course guides, books, and assignments in order to decide whether your course is right for you. If you decide that it&apos;s not a good fit, simply contact the school to arrange a refund of your tuition. You&apos;ll be asked to return any course material you have to the school, and these must be unused.</i></p>
               <div className="alert alert-primary" role="alert">
-                Note that since the 21-day guarantee is made for you to decide whether to take the course or not, a full tuition refund cannot be granted if you&apos;ve already completed and submitted course work to your tutor.
+                Note that since the 14-day guarantee is made for you to decide whether to take the course or not, a full tuition refund cannot be granted if you&apos;ve already completed and submitted course work to your tutor.
               </div>
             </QuestionAndAnswer>
             <QuestionAndAnswer header="How do tuition payment plans work?">

@@ -10,8 +10,8 @@ const Page: NextPageWithLayout = () => (
       <h1>Enrollment Agreement</h1>
 
       <h2>1. Money-Back Guarantee</h2>
-      <h3>21-Day Money-Back Guarantee</h3>
-      <p>You have 21 days from the date of enrollment to examine the course. If you are not entirely satisfied or choose not to complete the course, please notify the School by emailing accounts@qccareerschool.com within 21 days of your date of enrollment. Within two business days the School will review your account and provide you with your options.</p>
+      <h3>14-Day Money-Back Guarantee</h3>
+      <p>You have 14 days from the date of enrollment to examine the course. If you are not entirely satisfied or choose not to complete the course, please notify the School by emailing accounts@qccareerschool.com within 14 days of your date of enrollment. Within two business days the School will review your account and provide you with your options.</p>
       <p>A full refund cannot be granted if you have already submitted course work to your tutor for grading. In this case, a partial tuition refund may be offered instead.</p>
 
       <h2>2. Tuition Payments &amp; Installment Plans</h2>
@@ -37,11 +37,11 @@ const Page: NextPageWithLayout = () => (
       <p>Student advisors will be your first point of contact for all communications with the School, including questions about your course and assignments or questions specifically for your tutor. Your student advisor may answer your questions directly, or may forward your request to your tutor and relay the answer back to you.</p>
 
       <h2>5. Withdrawal Policy</h2>
-      <p>Withdrawals after the 21-day guarantee period are evaluated on a case-by-case basis. If you wish to withdraw from your course(s) after the 21-day guarantee period, please notify the School by emailing accounts@qccareerschool.com. Within two business days the School will review your account and provide you with your options.</p>
+      <p>Withdrawals after the 14-day guarantee period are evaluated on a case-by-case basis. If you wish to withdraw from your course(s) after the 14-day guarantee period, please notify the School by emailing accounts@qccareerschool.com. Within two business days the School will review your account and provide you with your options.</p>
       <ul>
         <li>Automated tuition payments will continue to be processed, and you are responsible for meeting your tuition payment obligations until you have reached a withdrawal agreement with the School.</li>
         <li>Withdrawal fees are dependent on tuition fees paid to date, the course materials sent to you, and the amount of tutorial used. If you have completed more than half of your course, you may not be eligible to withdraw.</li>
-        <li>QC reserves the right to refuse any withdrawal request after the 21-day guarantee period. Refunds (if applicable) will only be processed within six months of your date of enrollment.</li>
+        <li>QC reserves the right to refuse any withdrawal request after the 14-day guarantee period. Refunds (if applicable) will only be processed within six months of your date of enrollment.</li>
       </ul>
 
       <h2>6. Code of Conduct</h2>

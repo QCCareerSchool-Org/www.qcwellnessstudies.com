@@ -302,7 +302,7 @@ export const Content: FC<Props> = ({ price, enrollPath, heroPromotion }) => {
           doubleGuarantee={doubleGuarantee}
           twentyOneDays={(
             <>
-              <p>Once your enrollment has been processed and you gain access to the online student center, you have 21 days to review the course materials and decide whether you want to take the course.</p>
+              <p>Once your enrollment has been processed and you gain access to the online student center, you have 14 days to review the course materials and decide whether you want to take the course.</p>
               <p>This is your chance to inspect the entire course, risk-free! If you decide this course isn&apos;t the right fit for you, simply contact your student advisor to withdraw from the course. As long as you haven&apos;t submitted any work to your tutor yet, your tuition will be refunded in full!</p>
             </>
           )}
