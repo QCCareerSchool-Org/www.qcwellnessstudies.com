@@ -4,7 +4,7 @@ import type { FC } from 'react';
 import Modal from 'react-bootstrap/Modal';
 
 import OneYearImage from '@/images/1-year-guarentee.svg';
-import TwentyOneDayImage from '@/images/21-day-guarentee.svg';
+import FourteenDayImage from '@/images/14-day-guarentee.svg';
 
 interface Props {
   show: boolean;
@@ -15,7 +15,7 @@ interface Props {
 export const GuaranteeModal: FC<Props> = ({ show, doubleGuarantee, onHide: handleHide }) => (
   <Modal show={show} onHide={handleHide} size={doubleGuarantee ? 'lg' : undefined}>
     <Modal.Header closeButton>
-      <Modal.Title>21-Day Money-Back Guarantee!</Modal.Title>
+      <Modal.Title>14-Day Money-Back Guarantee!</Modal.Title>
     </Modal.Header>
 
     <Modal.Body>
@@ -23,9 +23,9 @@ export const GuaranteeModal: FC<Props> = ({ show, doubleGuarantee, onHide: handl
         ? (
           <div className="row text-center">
             <div className="col-12 col-md-6">
-              <p><Image src={TwentyOneDayImage as StaticImageData} alt="21-day guarantee" /></p>
-              <h3 className="text-dark">21-Day Guarantee</h3>
-              <p>Once your enrollment has been processed, you have 21 days to review the course materials and decide whether you want to take the course. If you decide this course isn&apos;t the right course for you, simply contact the school for a refund! As long as you haven&apos;t submitted any work to your tutor yet, your tuition will be refunded in full!</p>
+              <p><Image src={FourteenDayImage as StaticImageData} alt="14-day guarantee" /></p>
+              <h3 className="text-dark">14-Day Guarantee</h3>
+              <p>Once your enrollment has been processed, you have 14 days to review the course materials and decide whether you want to take the course. If you decide this course isn&apos;t the right course for you, simply contact the school for a refund! As long as you haven&apos;t submitted any work to your tutor yet, your tuition will be refunded in full!</p>
             </div>
             <div className="col-12 col-md-6">
               <p><Image src={OneYearImage as StaticImageData} alt="1-year guarantee" /></p>
@@ -36,9 +36,9 @@ export const GuaranteeModal: FC<Props> = ({ show, doubleGuarantee, onHide: handl
         )
         : (
           <div className="text-center">
-            <p><Image src={TwentyOneDayImage as StaticImageData} alt="21-day guarantee" /></p>
-            <h3 className="text-dark">21-Day Guarantee</h3>
-            <p>Once your enrollment has been processed, you have 21 days to review the course materials and decide whether you want to take the course. If you decide this course isn&apos;t the right course for you, simply contact the school for a refund! As long as you haven&apos;t submitted any work to your tutor yet, your tuition will be refunded in full!</p>
+            <p><Image src={FourteenDayImage as StaticImageData} alt="14-day guarantee" /></p>
+            <h3 className="text-dark">14-Day Guarantee</h3>
+            <p>Once your enrollment has been processed, you have 14 days to review the course materials and decide whether you want to take the course. If you decide this course isn&apos;t the right course for you, simply contact the school for a refund! As long as you haven&apos;t submitted any work to your tutor yet, your tuition will be refunded in full!</p>
           </div>
         )
       }
