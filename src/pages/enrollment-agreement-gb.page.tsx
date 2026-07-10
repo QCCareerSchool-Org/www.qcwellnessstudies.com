@@ -10,8 +10,8 @@ const Page: NextPageWithLayout = () => (
       <h1>Enrollment Agreement</h1>
 
       <h2>1. Money-Back Guarantee</h2>
-      <h3>21-Day Money-Back Guarantee</h3>
-      <p>You have 21 days from the date of enrollment to examine the course. If you are not entirely satisfied or choose not to complete the course, please notify the School by emailing accounts@qccareerschool.com within 21 days of your date of enrollment. Within two business days the School will review your account and provide you with your options.</p>
+      <h3>14-Day Money-Back Guarantee</h3>
+      <p>You have 14 days from the date of enrollment to examine the course. If you are not entirely satisfied or choose not to complete the course, please notify the School by emailing accounts@qccareerschool.com within 21 days of your date of enrollment. Within two business days the School will review your account and provide you with your options.</p>
       <p>A full refund cannot be granted if you have already submitted course work to your tutor for grading. In this case, a partial tuition refund may be offered instead.</p>
 
       <h2>2. Tuition Payments &amp; Installment Plans</h2>
