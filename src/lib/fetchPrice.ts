@@ -20,7 +20,7 @@ export const fetchPrice = async (
   try {
     const priceQuery: PriceQuery = { countryCode, provinceCode: provinceCode ?? undefined, courses, options };
     const url = `${process.env.PRICES_ENDPOINT}?${qs.stringify(priceQuery)}`;
-
+    console.log(url);
     const response = await fetch(url, { headers, signal });
     if (!response.ok) {
       throw Error(response.statusText);
