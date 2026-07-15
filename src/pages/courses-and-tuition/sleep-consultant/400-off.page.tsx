@@ -27,10 +27,11 @@ const Page: NextPageWithLayout<Props> = ({ price, countryCode }) => (
       heroPromotion={(
         <SleepConsultantPromo
           countryCode={countryCode}
-          discountAmount={300}
+          discountAmount={400}
           enrollHref="https://enroll.qcwellnessstudies.com/400-off?c=sl"
         />
       )}
+      guarantee={false}
     />
   </>
 );
