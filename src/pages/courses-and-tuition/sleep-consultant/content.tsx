@@ -272,7 +272,7 @@ export const Content: FC<Props> = ({ price, enrollPath, heroPromotion, guarantee
         </div>
       </section>
 
-      <a className="anchor" id="tutors" />
+      <a className="anchor" id="expertmentors" />
       <section id="tutorsSection" className="bg-light">
         <div className="container text-center">
           <h2 className="text-dark text-center">Your Sleep Consulting Tutor</h2>
