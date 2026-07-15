@@ -32,12 +32,13 @@ interface Props {
   price: Price | null;
   enrollPath: string;
   heroPromotion?: ReactNode;
+  guarantee?: boolean;
 }
 
 const doubleGuarantee = false;
 const courses: CourseCode[] = [ 'sl' ];
 
-export const Content: FC<Props> = ({ price, enrollPath, heroPromotion }) => {
+export const Content: FC<Props> = ({ price, enrollPath, heroPromotion, guarantee }) => {
   return (
     <>
       <SEO
@@ -296,19 +297,21 @@ export const Content: FC<Props> = ({ price, enrollPath, heroPromotion }) => {
         />
       </section>
 
-      <section id="guaranteeSection">
-        <Guarantee
-          courseName="Sleep Consultant"
-          doubleGuarantee={doubleGuarantee}
-          twentyOneDays={(
-            <>
-              <p>Once your enrollment has been processed and you gain access to the online student center, you have 21 days to review the course materials and decide whether you want to take the course.</p>
-              <p>This is your chance to inspect the entire course, risk-free! If you decide this course isn&apos;t the right fit for you, simply contact your student advisor to withdraw from the course. As long as you haven&apos;t submitted any work to your tutor yet, your tuition will be refunded in full!</p>
-            </>
-          )}
+      {guarantee && (
+        <section id="guaranteeSection">
+          <Guarantee
+            courseName="Sleep Consultant"
+            doubleGuarantee={doubleGuarantee}
+            twentyOneDays={(
+              <>
+                <p>Once your enrollment has been processed and you gain access to the online student center, you have 21 days to review the course materials and decide whether you want to take the course.</p>
+                <p>This is your chance to inspect the entire course, risk-free! If you decide this course isn&apos;t the right fit for you, simply contact your student advisor to withdraw from the course. As long as you haven&apos;t submitted any work to your tutor yet, your tuition will be refunded in full!</p>
+              </>
+            )}
 
-        />
-      </section>
+          />
+        </section>
+      )}
 
       <EnrollmentSection courseCodes={courses}>
         Start your online sleep consultant training today<br />and launch an exciting, rewarding career!
