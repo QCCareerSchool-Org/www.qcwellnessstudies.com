@@ -5,8 +5,8 @@ import Link from 'next/link';
 import type { ReactNode } from 'react';
 
 import HeroBackgroundImage from './hero-bg.jpg';
+import { ActiveCampaignForm } from '@/components/ActiveCampaignForm';
 import { BackgroundImage } from '@/components/BackgroundImage';
-import { BrevoForm } from '@/components/BrevoForm';
 import DownloadIcon from '@/components/download.svg';
 import { GuaranteeSection } from '@/components/GuaranteeSection';
 import { Header } from '@/components/Header';
@@ -34,8 +34,6 @@ interface Props {
   countryCode?: string;
 }
 
-const brevoListId = 24;
-const brevoEmailTemplateId = 59;
 const courses = [ 'sl' ];
 
 const Page: NextPageWithLayout<Props> = props => {
@@ -69,11 +67,10 @@ const Page: NextPageWithLayout<Props> = props => {
               <div className="card-body">
                 <h2 className="h5 sans-serif">Get a <strong className="text-dark">free course preview</strong> and find out how you can get certified!</h2>
                 <hr className="border-secondary" />
-                <BrevoForm
+                <ActiveCampaignForm
                   successLocation={`${process.env.NEXT_PUBLIC_HOST ?? 'https://www.qcwellnessstudies.com'}/courses-and-tuition/sleep-consultant/thank-you`}
-                  listId={brevoListId}
-                  telephoneListId={67}
-                  emailTemplateId={brevoEmailTemplateId}
+                  requiredIds={[ 61n ]}
+                  optionalIds={[ 58n ]}
                   gclid={props.gclid}
                   msclkid={props.msclkid}
                   utmSource={props.utmSource}
