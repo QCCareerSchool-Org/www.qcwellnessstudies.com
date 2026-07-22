@@ -88,7 +88,6 @@ const MyApp: AppTypeWithLayout<Props> = ({ Component, pageProps }) => {
         {process.env.NEXT_PUBLIC_TIKTOK_ID && <Tiktok id={process.env.NEXT_PUBLIC_TIKTOK_ID} />}
         {process.env.NEXT_PUBLIC_BING_ID && <Bing id={process.env.NEXT_PUBLIC_BING_ID} userValues={pageProps.userValues} />}
         {process.env.LIVECHAT_LICENSE && <LiveChat group={process.env.LIVECHAT_GROUP_ID} license={process.env.LIVECHAT_LICENSE} userValues={pageProps.userValues} />}
-        {process.env.NEXT_PUBLIC_BREVO_CONVERSATIONS_ID && process.env.NEXT_PUBLIC_BREVO_GROUP_ID && <BrevoConversations conversationsId={process.env.NEXT_PUBLIC_BREVO_CONVERSATIONS_ID} groupId={process.env.NEXT_PUBLIC_BREVO_GROUP_ID} />}
         {getLayout(<Component {...pageProps} />)}
       </Provider>
       <OptInMonster />
