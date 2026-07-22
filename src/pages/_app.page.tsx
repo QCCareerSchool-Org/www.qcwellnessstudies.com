@@ -15,7 +15,6 @@ import { brevoPageview } from '@/lib/brevo';
 import { Provider } from '@/providers';
 import { Bing } from '@/scripts/bing';
 import { Brevo } from '@/scripts/brevo';
-import { BrevoConversations } from '@/scripts/brevoCoversations';
 import { Facebook } from '@/scripts/facebook';
 import { GoogleAnalytics } from '@/scripts/googleAnalytics';
 import { LiveChat } from '@/scripts/liveChat';
